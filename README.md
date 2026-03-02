@@ -1,6 +1,6 @@
-# File Format Token Efficiency Benchmark Results
+# File Format Token Accuracy Benchmark Results
 
-Archive of benchmark results measuring token efficiency and accuracy across file formats for LLM consumption.
+Archive of benchmark results measuring token usage and retrieval accuracy across file formats for LLM consumption to find the most efficient format.
 
 ## Overview
 
@@ -115,7 +115,3 @@ See root [LICENSE](./LICENSE) for details.
 
 - **Benchmark Plugin**: [file-format-token-accuracy-benchmark](https://github.com/thoeltig/file-format-token-accuracy-benchmark)
 - **Author**: [Thore Höltig](https://github.com/thoeltig)
-
----
-
-**Latest Update**: January 25, 2026
