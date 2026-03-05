@@ -1,0 +1,5 @@
+{
+  "enabledPlugins": {
+    "file-format-benchmark@file-format-token-accuracy-benchmark": true
+  }
+}
