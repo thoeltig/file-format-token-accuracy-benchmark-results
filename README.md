@@ -44,7 +44,6 @@ Each benchmark run directory contains:
 
 ```
 benchmark/
-├── BENCHMARK_REPORT.md              # Comprehensive analysis and findings
 ├── data/                            # Raw test data files in all formats
 │   └── {format}/
 │       ├── *.csv, *.json, *.yaml    # Data files tested
@@ -54,15 +53,18 @@ benchmark/
 ├── results/                         # Validation results per format
 ├── metadata.json                    # Dataset characteristics
 ├── metrics.json                     # Token and accuracy metrics
-└── analytics_results.json           # Final rankings and insights
+├── analytics_results.json           # Final rankings and insights
+└── BENCHMARK_REPORT.md              # Comprehensive analysis and findings
 ```
 
 **Key Files per Benchmark**:
-- `BENCHMARK_REPORT.md` - Complete analysis, recommendations, and methodology
-- `metrics.json` - Token efficiency and accuracy metrics (all formats)
-- `analytics_results.json` - Efficiency rankings and comparative insights
 - `data/` - Raw data files used in testing
 - `subagent_outputs/` - Raw LLM responses for reproducibility
+- `metadata.json`: Dataset characteristics and generation parameters
+- `agent_ids.json`: Contains testConfiguration (formats, variants, model, thinking) and all readonly and full test agent IDs for metrics extraction
+- `metrics.json`: Combines input and output metrics extracted from agent transcripts
+- `analytics_results.json`: Final analysis output with efficiency rankings and key insights
+- `BENCHMARK_REPORT.md` - Complete analysis, recommendations, and methodology
 
 ## Running Benchmarks
 
@@ -77,7 +79,7 @@ To generate new benchmark results:
 
 Each benchmark generates standardized test data:
 
-- **60 records** (standardized across benchmarks)
+- **31 records** (standardized across benchmarks)
 - **22 fields** (19 mandatory + 3 optional)
 - **Product dataset** (consistent across formats for fair comparison)
 - **Multiple variants**:
