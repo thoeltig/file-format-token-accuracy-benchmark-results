@@ -1,0 +1,3363 @@
+{
+    "format": "yaml",
+    "structure": "nested",
+    "variant": "optional",
+    "recordCount": 31,
+    "testRuns": 3,
+    "totalQuestions": 124,
+    "accuracy": {
+        "correct": 82.33,
+        "incorrect": 41.67,
+        "accuracyPercent": 66.4,
+        "weightedAccuracyPercent": 67.37
+    },
+    "perRunAccuracy": [
+        {
+            "run": 1,
+            "correct": 83,
+            "incorrect": 41,
+            "accuracyPercent": 66.94,
+            "weightedAccuracyPercent": 69.9,
+            "accuracyPerCategory": [
+                {
+                    "category": "field_retrieval",
+                    "correct": 37,
+                    "incorrect": 18,
+                    "unanswered": 0,
+                    "accuracyPercent": 67.27,
+                    "weightedAccuracyPercent": 25.23
+                },
+                {
+                    "category": "filtering",
+                    "correct": 13,
+                    "incorrect": 8,
+                    "unanswered": 0,
+                    "accuracyPercent": 61.9,
+                    "weightedAccuracyPercent": 12.9
+                },
+                {
+                    "category": "aggregation",
+                    "correct": 8,
+                    "incorrect": 13,
+                    "unanswered": 0,
+                    "accuracyPercent": 38.1,
+                    "weightedAccuracyPercent": 4.76
+                },
+                {
+                    "category": "structure_awareness",
+                    "correct": 25,
+                    "incorrect": 2,
+                    "unanswered": 0,
+                    "accuracyPercent": 92.59,
+                    "weightedAccuracyPercent": 27.01
+                }
+            ]
+        },
+        {
+            "run": 2,
+            "correct": 92,
+            "incorrect": 32,
+            "accuracyPercent": 74.19,
+            "weightedAccuracyPercent": 75.56,
+            "accuracyPerCategory": [
+                {
+                    "category": "field_retrieval",
+                    "correct": 37,
+                    "incorrect": 18,
+                    "unanswered": 0,
+                    "accuracyPercent": 67.27,
+                    "weightedAccuracyPercent": 25.23
+                },
+                {
+                    "category": "filtering",
+                    "correct": 15,
+                    "incorrect": 6,
+                    "unanswered": 0,
+                    "accuracyPercent": 71.43,
+                    "weightedAccuracyPercent": 14.88
+                },
+                {
+                    "category": "aggregation",
+                    "correct": 16,
+                    "incorrect": 5,
+                    "unanswered": 0,
+                    "accuracyPercent": 76.19,
+                    "weightedAccuracyPercent": 9.52
+                },
+                {
+                    "category": "structure_awareness",
+                    "correct": 24,
+                    "incorrect": 3,
+                    "unanswered": 0,
+                    "accuracyPercent": 88.89,
+                    "weightedAccuracyPercent": 25.93
+                }
+            ]
+        },
+        {
+            "run": 3,
+            "correct": 72,
+            "incorrect": 52,
+            "accuracyPercent": 58.06,
+            "weightedAccuracyPercent": 56.64,
+            "accuracyPerCategory": [
+                {
+                    "category": "field_retrieval",
+                    "correct": 37,
+                    "incorrect": 18,
+                    "unanswered": 0,
+                    "accuracyPercent": 67.27,
+                    "weightedAccuracyPercent": 25.23
+                },
+                {
+                    "category": "filtering",
+                    "correct": 12,
+                    "incorrect": 9,
+                    "unanswered": 0,
+                    "accuracyPercent": 57.14,
+                    "weightedAccuracyPercent": 11.9
+                },
+                {
+                    "category": "aggregation",
+                    "correct": 11,
+                    "incorrect": 10,
+                    "unanswered": 0,
+                    "accuracyPercent": 52.38,
+                    "weightedAccuracyPercent": 6.55
+                },
+                {
+                    "category": "structure_awareness",
+                    "correct": 12,
+                    "incorrect": 15,
+                    "unanswered": 0,
+                    "accuracyPercent": 44.44,
+                    "weightedAccuracyPercent": 12.96
+                }
+            ]
+        }
+    ],
+    "questionsAndProvidedAnswers": [
+        {
+            "questionId": 2,
+            "category": "field_retrieval",
+            "question": "What is the fragile of product PROD-000013?",
+            "expectedAnswer": "false",
+            "answers": [
+                {
+                    "givenAnswer": "false",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "false",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "false",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 3,
+            "category": "field_retrieval",
+            "question": "What is the description of product PROD-000001?",
+            "expectedAnswer": "Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
+            "answers": [
+                {
+                    "givenAnswer": "Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 4,
+            "category": "field_retrieval",
+            "question": "What is the sku of product PROD-000011?",
+            "expectedAnswer": "CHE-000010",
+            "answers": [
+                {
+                    "givenAnswer": "CHE-000010",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "CHE-000010",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "CHE-000010",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 5,
+            "category": "field_retrieval",
+            "question": "What is the stock quantity of product PROD-000007?",
+            "expectedAnswer": "7106",
+            "answers": [
+                {
+                    "givenAnswer": "7106",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "7106",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "7106",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 6,
+            "category": "field_retrieval",
+            "question": "What is the category of product PROD-000009?",
+            "expectedAnswer": "Office Supplies",
+            "answers": [
+                {
+                    "givenAnswer": "Office Supplies",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Office Supplies",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Office Supplies",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 7,
+            "category": "field_retrieval",
+            "question": "What is the reorder point of product PROD-000023?",
+            "expectedAnswer": "317",
+            "answers": [
+                {
+                    "givenAnswer": "317",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "317",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "317",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 8,
+            "category": "field_retrieval",
+            "question": "What is the supplier name of product PROD-000021?",
+            "expectedAnswer": "Tech Components Group",
+            "answers": [
+                {
+                    "givenAnswer": "Tech Components Group",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Tech Components Group",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Tech Components Group",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 9,
+            "category": "field_retrieval",
+            "question": "What is the hazardous of product PROD-000008?",
+            "expectedAnswer": "true",
+            "answers": [
+                {
+                    "givenAnswer": "true",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "true",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "true",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 10,
+            "category": "field_retrieval",
+            "question": "What is the manufacturer code of product PROD-000015?",
+            "expectedAnswer": "MFR-940181",
+            "answers": [
+                {
+                    "givenAnswer": "MFR-940181",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "MFR-940181",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "MFR-940181",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 11,
+            "category": "field_retrieval",
+            "question": "What is the dimensions of product PROD-000017?",
+            "expectedAnswer": "36x41x59cm",
+            "answers": [
+                {
+                    "givenAnswer": "36x41x59cm",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "36x41x59cm",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "36x41x59cm",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 12,
+            "category": "field_retrieval",
+            "question": "What is the warehouse location of product PROD-000031?",
+            "expectedAnswer": "D-70-8",
+            "answers": [
+                {
+                    "givenAnswer": "D-70-8",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "D-70-8",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "D-70-8",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 13,
+            "category": "field_retrieval",
+            "question": "What is the last restocked of product PROD-000010?",
+            "expectedAnswer": "2026-01-20",
+            "answers": [
+                {
+                    "givenAnswer": "2026-01-20",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "2026-01-20",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "2026-01-20",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 14,
+            "category": "field_retrieval",
+            "question": "What is the price of product PROD-000006?",
+            "expectedAnswer": "4929.92",
+            "answers": [
+                {
+                    "givenAnswer": "4929.92",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "4929.92",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "4929.92",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 15,
+            "category": "field_retrieval",
+            "question": "What is the avg rating of product PROD-000026?",
+            "expectedAnswer": "1.8",
+            "answers": [
+                {
+                    "givenAnswer": "1.8",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1.8",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1.8",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 16,
+            "category": "field_retrieval",
+            "question": "What is the weight of product PROD-000019?",
+            "expectedAnswer": "133.22",
+            "answers": [
+                {
+                    "givenAnswer": "133.22",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "133.22",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "133.22",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 17,
+            "category": "field_retrieval",
+            "question": "What is the cost price of product PROD-000030?",
+            "expectedAnswer": "1053.79",
+            "answers": [
+                {
+                    "givenAnswer": "1053.79",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1053.79",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1053.79",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 18,
+            "category": "field_retrieval",
+            "question": "What is the units shipped of product PROD-000020?",
+            "expectedAnswer": "33933",
+            "answers": [
+                {
+                    "givenAnswer": "33933",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "33933",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "33933",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 19,
+            "category": "field_retrieval",
+            "question": "What is the product name of product PROD-000029?",
+            "expectedAnswer": "Industrial Switch 2960",
+            "answers": [
+                {
+                    "givenAnswer": "Industrial Switch 2960",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Industrial Switch 2960",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Industrial Switch 2960",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 20,
+            "category": "field_retrieval",
+            "question": "What is the shelf life of product PROD-000004?",
+            "expectedAnswer": "1001",
+            "answers": [
+                {
+                    "givenAnswer": "1001",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1001",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1001",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 21,
+            "category": "field_retrieval",
+            "question": "What is the supplier location of product PROD-000028?",
+            "expectedAnswer": "Dubai (UAE)",
+            "answers": [
+                {
+                    "givenAnswer": "Dubai (UAE)",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Dubai (UAE)",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Dubai (UAE)",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 22,
+            "category": "field_retrieval",
+            "question": "What are the stock quantity, reorder point, units shipped, product name, weight of product PROD-000029?",
+            "expectedAnswer": [
+                "1244",
+                "174",
+                "3837",
+                "Industrial Switch 2960",
+                "144.17"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "1244,174,3837,Industrial Switch 2960,144.17",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1244,174,3837,Industrial Switch 2960,144.17",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1244,174,3837,Industrial Switch 2960,144.17",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 23,
+            "category": "field_retrieval",
+            "question": "What are the sku, supplier name, units shipped, warehouse location of product PROD-000016?",
+            "expectedAnswer": [
+                "IND-000015",
+                "Industrial Solutions Inc",
+                "32974",
+                "F-69-14"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "IND-000015,Industrial Solutions Inc,32974,F-69-14",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "IND-000015,Industrial Solutions Inc,32974,F-69-14",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "IND-000015,Industrial Solutions Inc,32974,F-69-14",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 24,
+            "category": "field_retrieval",
+            "question": "What are the hazardous, category, price, sku of product PROD-000003?",
+            "expectedAnswer": [
+                "",
+                "Electronics",
+                "2999.1",
+                "ELE-000002"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "false,Electronics,2999.1,ELE-000002",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "false,Electronics,2999.1,ELE-000002",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "false,Electronics,2999.1,ELE-000002",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 25,
+            "category": "field_retrieval",
+            "question": "What are the shelf life, manufacturer code of product PROD-000025?",
+            "expectedAnswer": [
+                "41",
+                "MFR-678086"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "41,MFR-678086",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "41,MFR-678086",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "41,MFR-678086",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 26,
+            "category": "field_retrieval",
+            "question": "What are the supplier name, last restocked, shelf life of product PROD-000018?",
+            "expectedAnswer": [
+                "Factory Direct Inc",
+                "2025-12-08",
+                "2560"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "Factory Direct Inc,2025-12-08,2560",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Factory Direct Inc,2025-12-08,2560",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Factory Direct Inc,2025-12-08,2560",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 27,
+            "category": "field_retrieval",
+            "question": "What are the price, description, sku, last restocked, fragile, shelf life of product PROD-000001?",
+            "expectedAnswer": [
+                "1333.01",
+                "Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
+                "MAT-000000",
+                "2026-03-05",
+                "true",
+                "2195"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "1333.01,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,MAT-000000,2026-03-05,true,2195",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1333.01,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,MAT-000000,2026-03-05,true,2195",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1333.01,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,MAT-000000,2026-03-05,true,2195",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 28,
+            "category": "field_retrieval",
+            "question": "What are the supplier location, dimensions, reorder point, fragile, price, hazardous, description of product PROD-000012?",
+            "expectedAnswer": [
+                "Dubai (UAE)",
+                "128x115x58cm",
+                "34",
+                "",
+                "2852.32",
+                "",
+                "Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality."
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "Dubai (UAE),128x115x58cm,34,false,2852.32,false,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "Dubai (UAE),128x115x58cm,34,false,2852.32,false,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "Dubai (UAE),128x115x58cm,34,false,2852.32,false,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 29,
+            "category": "field_retrieval",
+            "question": "What are the dimensions, hazardous, last restocked, manufacturer code, product name of product PROD-000017?",
+            "expectedAnswer": [
+                "36x41x59cm",
+                "true",
+                "2026-01-18",
+                "MFR-913915",
+                "Professional Motor 8220"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "36x41x59cm,true,2026-01-18,MFR-913915,Professional Motor 8220",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "36x41x59cm,true,2026-01-18,MFR-913915,Professional Motor 8220",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "36x41x59cm,true,2026-01-18,MFR-913915,Professional Motor 8220",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 30,
+            "category": "field_retrieval",
+            "question": "What are the weight, hazardous, sku, reorder point, last restocked, price, units shipped of product PROD-000019?",
+            "expectedAnswer": [
+                "133.22",
+                "",
+                "PAC-000018",
+                "101",
+                "2026-01-29",
+                "2910.99",
+                "82512"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "133.22,false,PAC-000018,101,2026-01-29,2910.99,82512",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "133.22,false,PAC-000018,101,2026-01-29,2910.99,82512",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "133.22,false,PAC-000018,101,2026-01-29,2910.99,82512",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 31,
+            "category": "field_retrieval",
+            "question": "What are the warehouse location, product name of product PROD-000024?",
+            "expectedAnswer": [
+                "I-70-19",
+                "Premium Compressor 5381"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "I-70-19,Premium Compressor 5381",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "I-70-19,Premium Compressor 5381",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "I-70-19,Premium Compressor 5381",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 32,
+            "category": "field_retrieval",
+            "question": "What are the stock quantity, category, description, supplier name, price of product PROD-000009?",
+            "expectedAnswer": [
+                "7535",
+                "Office Supplies",
+                "Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
+                "Tech Components Group",
+                "168.12"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "7535,Office Supplies,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,Tech Components Group,168.12",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "7535,Office Supplies,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,Tech Components Group,168.12",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "7535,Office Supplies,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,Tech Components Group,168.12",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 33,
+            "category": "field_retrieval",
+            "question": "What are the hazardous, dimensions, stock quantity, warehouse location, last restocked, weight, description of product PROD-000011?",
+            "expectedAnswer": [
+                "",
+                "46x138x127cm",
+                "3848",
+                "B-63-46",
+                "2026-02-09",
+                "251.69",
+                "Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality."
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "false,46x138x127cm,3848,B-63-46,2026-02-09,251.69,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "false,46x138x127cm,3848,B-63-46,2026-02-09,251.69,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "false,46x138x127cm,3848,B-63-46,2026-02-09,251.69,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 34,
+            "category": "field_retrieval",
+            "question": "What are the dimensions, hazardous, supplier name, fragile of product PROD-000021?",
+            "expectedAnswer": [
+                "162x90x128cm",
+                "",
+                "Tech Components Group",
+                ""
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "162x90x128cm,false,Tech Components Group,false",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "162x90x128cm,false,Tech Components Group,false",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "162x90x128cm,false,Tech Components Group,false",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 35,
+            "category": "field_retrieval",
+            "question": "What are the reorder point, cost price, warehouse location, hazardous, description, manufacturer code of product PROD-000014?",
+            "expectedAnswer": [
+                "107",
+                "2123.56",
+                "B-8-21",
+                "",
+                "Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.",
+                "MFR-958869"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "107,2123.56,B-8-21,false,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,MFR-958869",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "107,2123.56,B-8-21,false,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,MFR-958869",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "107,2123.56,B-8-21,false,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,MFR-958869",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 36,
+            "category": "field_retrieval",
+            "question": "What are the price, category, last restocked, cost price, product name, units shipped, dimensions of product PROD-000022?",
+            "expectedAnswer": [
+                "1000.79",
+                "Tools",
+                "2026-01-23",
+                "2437.5",
+                "Premium Drill 3674",
+                "85975",
+                "50x191x137cm"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "1000.79,Tools,2026-01-23,2437.5,Premium Drill 3674,85975,50x191x137cm",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1000.79,Tools,2026-01-23,2437.5,Premium Drill 3674,85975,50x191x137cm",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1000.79,Tools,2026-01-23,2437.5,Premium Drill 3674,85975,50x191x137cm",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 37,
+            "category": "field_retrieval",
+            "question": "What are the cost price, supplier location of product PROD-000007?",
+            "expectedAnswer": [
+                "2316.65",
+                "Singapore"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "2316.65,Singapore",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "2316.65,Singapore",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "2316.65,Singapore",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 38,
+            "category": "field_retrieval",
+            "question": "What are the stock quantity, fragile, manufacturer code, description, price, hazardous of product PROD-000008?",
+            "expectedAnswer": [
+                "3399",
+                "",
+                "MFR-792793",
+                "Professional-grade equipment meeting international standards. Extensively tested for performance and safety.",
+                "1187.32",
+                "true"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "3399,false,MFR-792793,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,1187.32,true",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "3399,false,MFR-792793,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,1187.32,true",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "3399,false,MFR-792793,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,1187.32,true",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 39,
+            "category": "field_retrieval",
+            "question": "What are the avg rating, stock quantity, description of product PROD-000020?",
+            "expectedAnswer": [
+                "2.9",
+                "2813",
+                "High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications."
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "2.9,2813,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "2.9,2813,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "2.9,2813,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 40,
+            "category": "field_retrieval",
+            "question": "What are the description, stock quantity, supplier location of product PROD-000023?",
+            "expectedAnswer": [
+                "Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.",
+                "1439",
+                "Dubai (UAE)"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,1439,Dubai (UAE)",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,1439,Dubai (UAE)",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,1439,Dubai (UAE)",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 41,
+            "category": "field_retrieval",
+            "question": "What are the dimensions, price, reorder point, sku, last restocked, manufacturer code of product PROD-000013?",
+            "expectedAnswer": [
+                "45x85x151cm",
+                "2902.72",
+                "165",
+                "OFF-000012",
+                "2026-02-18",
+                "MFR-281350"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "45x85x151cm,2902.72,165,OFF-000012,2026-02-18,MFR-281350",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "45x85x151cm,2902.72,165,OFF-000012,2026-02-18,MFR-281350",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "45x85x151cm,2902.72,165,OFF-000012,2026-02-18,MFR-281350",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 42,
+            "category": "field_retrieval",
+            "question": "What are the sku, hazardous, reorder point, manufacturer code, weight, supplier location of product PROD-000016 and the cost price, fragile, supplier location of product PROD-000001?",
+            "expectedAnswer": [
+                "IND-000015",
+                "",
+                "151",
+                "MFR-795567",
+                "393.19",
+                "Singapore",
+                "514.81",
+                "true",
+                "Hong Kong"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "IND-000015,false,151,MFR-795567,393.19,Singapore,514.81,true,Hong Kong",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "IND-000015,false,151,MFR-795567,393.19,Singapore,514.81,true,Hong Kong",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "IND-000015,false,151,MFR-795567,393.19,Singapore,514.81,true,Hong Kong",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 43,
+            "category": "field_retrieval",
+            "question": "What are the price, supplier location, shelf life, units shipped of product PROD-000020 and the product name, reorder point, last restocked, cost price, units shipped of product PROD-000022?",
+            "expectedAnswer": [
+                "4896.81",
+                "Los Angeles (USA)",
+                "3259",
+                "33933",
+                "Premium Drill 3674",
+                "330",
+                "2026-01-23",
+                "2437.5",
+                "85975"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "4896.81,Los Angeles (USA),3259,33933,Premium Drill 3674,330,2026-01-23,2437.5,85975",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "4896.81,Los Angeles (USA),3259,33933,Premium Drill 3674,330,2026-01-23,2437.5,85975",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "4896.81,Los Angeles (USA),3259,33933,Premium Drill 3674,330,2026-01-23,2437.5,85975",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 44,
+            "category": "field_retrieval",
+            "question": "What are the hazardous, cost price of product PROD-000003 and the last restocked, description, cost price of product PROD-000027?",
+            "expectedAnswer": [
+                "",
+                "1704.01",
+                "2026-02-27",
+                "Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.",
+                "409.88"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "false,1704.01,2026-02-27,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,409.88",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "false,1704.01,2026-02-27,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,409.88",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "false,1704.01,2025-09-19,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,409.88",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 45,
+            "category": "field_retrieval",
+            "question": "What are the stock quantity, supplier location, dimensions of product PROD-000017 and the reorder point, supplier location, warehouse location, stock quantity, dimensions, fragile of product PROD-000029?",
+            "expectedAnswer": [
+                "8966",
+                "Los Angeles (USA)",
+                "36x41x59cm",
+                "174",
+                "Shanghai (China)",
+                "J-74-8",
+                "1244",
+                "135x20x37cm",
+                ""
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "8966,Los Angeles (USA),36x41x59cm,174,Shanghai (China),J-74-8,1244,135x20x37cm,false",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "8966,Los Angeles (USA),36x41x59cm,174,Shanghai (China),J-74-8,1244,135x20x37cm,false",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "8966,Los Angeles (USA),36x41x59cm,174,Shanghai (China),J-74-8,1244,135x20x37cm,false",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 46,
+            "category": "field_retrieval",
+            "question": "What are the price, description, category, fragile, units shipped, cost price, last restocked of product PROD-000021 and the weight, units shipped, dimensions, avg rating, price of product PROD-000014?",
+            "expectedAnswer": [
+                "4909",
+                "Professional-grade equipment meeting international standards. Extensively tested for performance and safety.",
+                "Furniture",
+                "",
+                "59332",
+                "1507.08",
+                "2026-03-05",
+                "179.43",
+                "43299",
+                "173x98x197cm",
+                "1.4",
+                "340.83"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "4909,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,Furniture,false,59332,1507.08,2026-03-05,179.43,43299,173x98x197cm,1.4,340.83",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "4909,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,Furniture,false,59332,1507.08,2026-03-05,179.43,43299,173x98x197cm,1.4,340.83",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "4909,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,Furniture,false,59332,1507.08,2026-03-05,179.43,43299,173x98x197cm,1.4,340.83",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 47,
+            "category": "field_retrieval",
+            "question": "What are the supplier name, last restocked of product PROD-000030 and the description, shelf life, sku, supplier location, price, cost price, product name of product PROD-000025?",
+            "expectedAnswer": [
+                "Industrial Solutions Inc",
+                "2025-12-14",
+                "Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.",
+                "41",
+                "ACC-000024",
+                "New York (USA)",
+                "320.31",
+                "1535.11",
+                "Industrial Cable 6785"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "Industrial Solutions Inc,2025-12-14,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,41,ACC-000024,New York (USA),320.31,1535.11,Industrial Cable 6785",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Industrial Solutions Inc,2025-12-14,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,41,ACC-000024,New York (USA),320.31,1535.11,Industrial Cable 6785",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Industrial Solutions Inc,2025-12-14,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,41,ACC-000024,New York (USA),320.31,1535.11,Industrial Cable 6785",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 48,
+            "category": "field_retrieval",
+            "question": "What are the units shipped, supplier name, sku of product PROD-000002 and the dimensions, shelf life, description, avg rating, product name, units shipped, hazardous of product PROD-000010?",
+            "expectedAnswer": [
+                "30361",
+                "Industrial Solutions Inc",
+                "IND-000001",
+                "172x110x185cm",
+                "2361",
+                "Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
+                "4.2",
+                "Compact Valve 1351",
+                "96466",
+                ""
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "30361,Industrial Solutions Inc,IND-000001,172x110x185cm,2361,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,4.2,Compact Valve 1351,96466,false",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "30361,Industrial Solutions Inc,IND-000001,172x110x185cm,2361,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,4.2,Compact Valve 1351,96466,false",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "30361,Industrial Solutions Inc,IND-000001,172x110x185cm,2361,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,4.2,Compact Valve 1351,96466,false",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 49,
+            "category": "field_retrieval",
+            "question": "What are the avg rating, cost price, reorder point of product PROD-000019 and the warehouse location, manufacturer code, last restocked, sku, supplier location of product PROD-000013?",
+            "expectedAnswer": [
+                "1.4",
+                "1138.24",
+                "101",
+                "D-48-10",
+                "MFR-281350",
+                "2026-02-18",
+                "OFF-000012",
+                "New York (USA)"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "1.4,1138.24,101,D-48-10,MFR-281350,2026-02-18,OFF-000012,New York (USA)",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1.4,1138.24,101,D-48-10,MFR-281350,2026-02-18,OFF-000012,New York (USA)",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1.4,1138.24,101,D-48-10,MFR-281350,2026-02-18,OFF-000012,New York (USA)",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 50,
+            "category": "field_retrieval",
+            "question": "What are the last restocked, supplier name, description, weight of product PROD-000028 and the reorder point, fragile, last restocked, stock quantity, dimensions of product PROD-000012?",
+            "expectedAnswer": [
+                "2026-02-23",
+                "Industrial Solutions Inc",
+                "Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.",
+                "36.56",
+                "34",
+                "",
+                "2026-01-12",
+                "8742",
+                "128x115x58cm"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "2026-02-23,Industrial Solutions Inc,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,36.56,34,false,2026-01-12,8742,128x115x58cm",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "2026-02-23,Industrial Solutions Inc,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,36.56,34,false,2026-01-12,8742,128x115x58cm",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "2026-02-23,Industrial Solutions Inc,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,36.56,34,false,2026-01-12,8742,128x115x58cm",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 51,
+            "category": "field_retrieval",
+            "question": "What are the warehouse location, stock quantity, dimensions, product name, price of product PROD-000009 and the weight, fragile, last restocked, category, dimensions of product PROD-000008?",
+            "expectedAnswer": [
+                "E-14-39",
+                "7535",
+                "174x179x43cm",
+                "Industrial Pump 346",
+                "168.12",
+                "91.82",
+                "",
+                "2026-01-22",
+                "Textiles",
+                "136x130x41cm"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "E-14-39,7535,174x179x43cm,Industrial Pump 346,168.12,91.82,false,2026-01-22,Textiles,136x130x41cm",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "E-14-39,7535,174x179x43cm,Industrial Pump 346,168.12,91.82,false,2026-01-22,Textiles,136x130x41cm",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "E-14-39,7535,174x179x43cm,Industrial Pump 346,168.12,91.82,false,2026-01-22,Textiles,136x130x41cm",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 52,
+            "category": "field_retrieval",
+            "question": "What are the warehouse location, stock quantity, reorder point, hazardous of product PROD-000015 and the supplier name, shelf life, units shipped, category, sku, hazardous, dimensions of product PROD-000006?",
+            "expectedAnswer": [
+                "A-93-44",
+                "5286",
+                "445",
+                "",
+                "Trade Partners Ltd",
+                "1901",
+                "89227",
+                "Office Supplies",
+                "MAT-000005",
+                "",
+                "195x179x95cm"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "A-93-44,5286,445,false,Trade Partners Ltd,1901,89227,Office Supplies,MAT-000005,false,195x179x95cm",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "A-93-44,5286,445,false,Trade Partners Ltd,1901,89227,Office Supplies,MAT-000005,false,195x179x95cm",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "A-93-44,5286,445,false,Trade Partners Ltd,1901,89227,Office Supplies,MAT-000005,false,195x179x95cm",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 53,
+            "category": "field_retrieval",
+            "question": "What are the category, fragile, sku, price, cost price, reorder point, dimensions of product PROD-000007 and the cost price, supplier location of product PROD-000023?",
+            "expectedAnswer": [
+                "Chemicals",
+                "",
+                "CHE-000006",
+                "57.06",
+                "2316.65",
+                "358",
+                "127x57x19cm",
+                "1140.76",
+                "Dubai (UAE)"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "Chemicals,false,CHE-000006,57.06,2316.65,358,127x57x19cm,1140.76,Dubai (UAE)",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "Chemicals,false,CHE-000006,57.06,2316.65,358,127x57x19cm,1140.76,Dubai (UAE)",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "Chemicals,false,CHE-000006,57.06,2316.65,358,127x57x19cm,1140.76,Dubai (UAE)",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 54,
+            "category": "field_retrieval",
+            "question": "What are the shelf life, description, fragile of product PROD-000031 and the reorder point, supplier name of product PROD-000005?",
+            "expectedAnswer": [
+                "2555",
+                "Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.",
+                "",
+                "464",
+                "Factory Direct Inc"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "2555,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,false,464,Factory Direct Inc",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "2555,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,false,464,Factory Direct Inc",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "2555,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,false,464,Factory Direct Inc",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 55,
+            "category": "field_retrieval",
+            "question": "What are the last restocked, product name, shelf life, weight, dimensions, units shipped, reorder point of product PROD-000004 and the last restocked, discontinued date, units shipped, cost price, supplier name, fragile, description of product PROD-000018?",
+            "expectedAnswer": [
+                "2026-02-17",
+                "Professional Connector 3440",
+                "1001",
+                "244.43",
+                "22x158x118cm",
+                "52751",
+                "254",
+                "2025-12-08",
+                "2025-12-01",
+                "61347",
+                "760.34",
+                "Factory Direct Inc",
+                "",
+                "Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan."
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "2026-02-17,Professional Connector 3440,1001,244.43,22x158x118cm,52751,254,2025-12-08,2025-12-01,61347,760.34,Factory Direct Inc,false,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "2026-02-17,Professional Connector 3440,1001,244.43,22x158x118cm,52751,254,2025-12-08,2025-12-01,61347,760.34,Factory Direct Inc,false,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "2026-02-17,Professional Connector 3440,1001,244.43,22x158x118cm,52751,254,2025-12-08,2025-12-01,61347,760.34,Factory Direct Inc,false,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 56,
+            "category": "field_retrieval",
+            "question": "What are the category, dimensions, weight, avg rating, sku of product PROD-000011 and the reorder point, last restocked, manufacturer code, supplier location of product PROD-000024?",
+            "expectedAnswer": [
+                "Materials",
+                "46x138x127cm",
+                "251.69",
+                "4.5",
+                "CHE-000010",
+                "83",
+                "2026-02-18",
+                "MFR-693996",
+                "Hong Kong"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "Materials,46x138x127cm,251.69,4.5,CHE-000010,83,2026-02-18,MFR-693996,Hong Kong",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Materials,46x138x127cm,251.69,4.5,CHE-000010,83,2026-02-18,MFR-693996,Hong Kong",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Materials,46x138x127cm,251.69,4.5,CHE-000010,83,2026-02-18,MFR-693996,Hong Kong",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 57,
+            "category": "filtering",
+            "question": "How many products have 'Industrial Cable 6785' in product name?",
+            "expectedAnswer": 1,
+            "answers": [
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 58,
+            "category": "filtering",
+            "question": "How many products have 'Trade Partners Ltd' in supplier name?",
+            "expectedAnswer": 3,
+            "answers": [
+                {
+                    "givenAnswer": "3",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "3",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "3",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 59,
+            "category": "filtering",
+            "question": "How many products have '165' in reorder point?",
+            "expectedAnswer": 1,
+            "answers": [
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 60,
+            "category": "filtering",
+            "question": "How many products have '1766.06' in price?",
+            "expectedAnswer": 1,
+            "answers": [
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 61,
+            "category": "filtering",
+            "question": "How many products have '8966' in stock quantity?",
+            "expectedAnswer": 1,
+            "answers": [
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 62,
+            "category": "filtering",
+            "question": "How many products have 'PROD-000019' in product id?",
+            "expectedAnswer": 1,
+            "answers": [
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 63,
+            "category": "filtering",
+            "question": "How many products have 'MFR-257376' in manufacturer code?",
+            "expectedAnswer": 1,
+            "answers": [
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 64,
+            "category": "filtering",
+            "question": "How many products have a value above the average of 43430.26 in units shipped?",
+            "expectedAnswer": 13,
+            "answers": [
+                {
+                    "givenAnswer": "12",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "14",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "14",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 65,
+            "category": "filtering",
+            "question": "How many products have a value belowe the average of 236.75 in weight?",
+            "expectedAnswer": 16,
+            "answers": [
+                {
+                    "givenAnswer": "13",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "17",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "13",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 66,
+            "category": "filtering",
+            "question": "How many products have a value above the average of 1.63 in avg rating?",
+            "expectedAnswer": 15,
+            "answers": [
+                {
+                    "givenAnswer": "13",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "16",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "9",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 67,
+            "category": "filtering",
+            "question": "How many products have a value belowe the average of 1446.06 in cost price?",
+            "expectedAnswer": 14,
+            "answers": [
+                {
+                    "givenAnswer": "10",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "15",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "13",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 68,
+            "category": "filtering",
+            "question": "How many products have a value above the average of 909.9 in shelf life?",
+            "expectedAnswer": 14,
+            "answers": [
+                {
+                    "givenAnswer": "15",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "16",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "12",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 69,
+            "category": "filtering",
+            "question": "How many products have a value belowe the average of 239.94 in reorder point?",
+            "expectedAnswer": 18,
+            "answers": [
+                {
+                    "givenAnswer": "14",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "18",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "15",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 70,
+            "category": "filtering",
+            "question": "How many products have a value above the average of 2426.89 in price?",
+            "expectedAnswer": 15,
+            "answers": [
+                {
+                    "givenAnswer": "14",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "15",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "16",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 71,
+            "category": "filtering",
+            "question": "How many products have '1.8' in avg rating and a value belowe the average of 7438 in reorder point?",
+            "expectedAnswer": 1,
+            "answers": [
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 72,
+            "category": "filtering",
+            "question": "How many products have '2574.48' in price and a value above the average of 1346338 in units shipped?",
+            "expectedAnswer": 0,
+            "answers": [
+                {
+                    "givenAnswer": "0",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "0",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "0",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 73,
+            "category": "filtering",
+            "question": "How many products have 'MFR-257376' in manufacturer code and a value belowe the average of 75233.69 in price?",
+            "expectedAnswer": 1,
+            "answers": [
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 74,
+            "category": "filtering",
+            "question": "How many products have 'Professional Connector 3440' in product name and a value above the average of 50.4 in avg rating?",
+            "expectedAnswer": 0,
+            "answers": [
+                {
+                    "givenAnswer": "0",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "0",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "0",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 75,
+            "category": "filtering",
+            "question": "How many products have 'MFR-780594' in manufacturer code and a value belowe the average of 167012 in stock quantity?",
+            "expectedAnswer": 1,
+            "answers": [
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 76,
+            "category": "filtering",
+            "question": "How many products have 'false' in hazardous and a value above the average of 262.12 in weight?",
+            "expectedAnswer": 10,
+            "answers": [
+                {
+                    "givenAnswer": "11",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "11",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "13",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 77,
+            "category": "filtering",
+            "question": "How many products have 'Material Distributors AB' in supplier name and a value belowe the average of 11206.98 in cost price?",
+            "expectedAnswer": 4,
+            "answers": [
+                {
+                    "givenAnswer": "4",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "4",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "3",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 78,
+            "category": "aggregation",
+            "question": "How much is the sum of all values in price across all products?",
+            "expectedAnswer": 75233.69,
+            "answers": [
+                {
+                    "givenAnswer": "75283.91",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "75233.69",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "75393.15",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 79,
+            "category": "aggregation",
+            "question": "How much is the sum of all values in cost price across all products?",
+            "expectedAnswer": 44827.91,
+            "answers": [
+                {
+                    "givenAnswer": "44686.93",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "44826.88",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "45817.98",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 80,
+            "category": "aggregation",
+            "question": "How much is the sum of all values in stock quantity across all products?",
+            "expectedAnswer": 167012,
+            "answers": [
+                {
+                    "givenAnswer": "195139",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "173839",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "185269",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 81,
+            "category": "aggregation",
+            "question": "How much is the sum of all values in avg rating across all products?",
+            "expectedAnswer": 50.39999999999999,
+            "answers": [
+                {
+                    "givenAnswer": "49.1",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "50.3",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "60.8",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 82,
+            "category": "aggregation",
+            "question": "How much is the sum of all values in units shipped across all products?",
+            "expectedAnswer": 1346338,
+            "answers": [
+                {
+                    "givenAnswer": "1346338",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1346338",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1346338",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 83,
+            "category": "aggregation",
+            "question": "How much is the sum of all values in reorder point across all products?",
+            "expectedAnswer": 7438,
+            "answers": [
+                {
+                    "givenAnswer": "7381",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "7438",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "7428",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 84,
+            "category": "aggregation",
+            "question": "How much is the sum of all values in weight across all products?",
+            "expectedAnswer": 7339.320000000001,
+            "answers": [
+                {
+                    "givenAnswer": "7354.18",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "7339.25",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "7339.25",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 85,
+            "category": "aggregation",
+            "question": "What is the highest value in units shipped across all products?",
+            "expectedAnswer": 96951,
+            "answers": [
+                {
+                    "givenAnswer": "96951",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "96951",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "96951",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 86,
+            "category": "aggregation",
+            "question": "What is the lowest value in reorder point across all products?",
+            "expectedAnswer": 16,
+            "answers": [
+                {
+                    "givenAnswer": "16",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "16",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "34",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 87,
+            "category": "aggregation",
+            "question": "What is the highest value in stock quantity across all products?",
+            "expectedAnswer": 9566,
+            "answers": [
+                {
+                    "givenAnswer": "9566",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "9566",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "9566",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 88,
+            "category": "aggregation",
+            "question": "What is the lowest value in cost price across all products?",
+            "expectedAnswer": 65.64,
+            "answers": [
+                {
+                    "givenAnswer": "65.64",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "65.64",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "65.64",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 89,
+            "category": "aggregation",
+            "question": "What is the highest value in weight across all products?",
+            "expectedAnswer": 455.92,
+            "answers": [
+                {
+                    "givenAnswer": "455.92",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "455.92",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "455.92",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 90,
+            "category": "aggregation",
+            "question": "What is the lowest value in avg rating across all products?",
+            "expectedAnswer": 0,
+            "answers": [
+                {
+                    "givenAnswer": "1.2",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "1.2",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "1.2",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 91,
+            "category": "aggregation",
+            "question": "What is the highest value in price across all products?",
+            "expectedAnswer": 4929.92,
+            "answers": [
+                {
+                    "givenAnswer": "4929.92",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "4929.92",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "4929.92",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 92,
+            "category": "aggregation",
+            "question": "What is the average value in price across all products?",
+            "expectedAnswer": 2426.89,
+            "answers": [
+                {
+                    "givenAnswer": "2427.22",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "2426.89",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "2426.89",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 93,
+            "category": "aggregation",
+            "question": "What is the average value in weight across all products?",
+            "expectedAnswer": 236.75,
+            "answers": [
+                {
+                    "givenAnswer": "237.23",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "236.75",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "236.75",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 94,
+            "category": "aggregation",
+            "question": "What is the average value in units shipped across all products?",
+            "expectedAnswer": 43430.26,
+            "answers": [
+                {
+                    "givenAnswer": "43430.26",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "43430.26",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "43430.26",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 95,
+            "category": "aggregation",
+            "question": "What is the average value in stock quantity across all products?",
+            "expectedAnswer": 5387.48,
+            "answers": [
+                {
+                    "givenAnswer": "6295.45",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "5604.48",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "5976.42",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 96,
+            "category": "aggregation",
+            "question": "What is the average value in reorder point across all products?",
+            "expectedAnswer": 239.94,
+            "answers": [
+                {
+                    "givenAnswer": "238.10",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "239.94",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "239.94",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 97,
+            "category": "aggregation",
+            "question": "What is the average value in cost price across all products?",
+            "expectedAnswer": 1446.06,
+            "answers": [
+                {
+                    "givenAnswer": "1441.51",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "1446.06",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1478.32",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 98,
+            "category": "aggregation",
+            "question": "What is the average value in shelf life across all products?",
+            "expectedAnswer": 909.9,
+            "answers": [
+                {
+                    "givenAnswer": "906.32",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "1514.89",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "1498.19",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 99,
+            "category": "structure_awareness",
+            "question": "How many entries are in the data in total?",
+            "expectedAnswer": 31,
+            "answers": [
+                {
+                    "givenAnswer": "31",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "31",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "31",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 100,
+            "category": "structure_awareness",
+            "question": "How many values are in the data in total?",
+            "expectedAnswer": 682,
+            "answers": [
+                {
+                    "givenAnswer": "682",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "589",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "961",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 101,
+            "category": "structure_awareness",
+            "question": "How many values are set in the data in total?",
+            "expectedAnswer": 631,
+            "answers": [
+                {
+                    "givenAnswer": "598",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "566",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "923",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 102,
+            "category": "structure_awareness",
+            "question": "How many values are not set in the data in total?",
+            "expectedAnswer": 51,
+            "answers": [
+                {
+                    "givenAnswer": "84",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "23",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "38",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 103,
+            "category": "structure_awareness",
+            "question": "How many unique fields names are in the data in total?",
+            "expectedAnswer": 22,
+            "answers": [
+                {
+                    "givenAnswer": "22",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "22",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "17",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 104,
+            "category": "structure_awareness",
+            "question": "What are all the unique field names across all products?",
+            "expectedAnswer": [
+                "productId",
+                "productName",
+                "category",
+                "price",
+                "costPrice",
+                "stockQuantity",
+                "reorderPoint",
+                "lastRestocked",
+                "supplierName",
+                "supplierLocation",
+                "description",
+                "sku",
+                "manufacturerCode",
+                "warehouseLocation",
+                "weight",
+                "dimensions",
+                "hazardous",
+                "fragile",
+                "unitsShipped",
+                "avgRating",
+                "shelfLife",
+                "discontinuedDate"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "productId,discontinuedDate,productName,description,category,sku,manufacturerCode,avgRating,price,costPrice,stockQuantity,warehouseLocation,reorderPoint,lastRestocked,unitsShipped,supplierName,supplierLocation,weight,dimensions,hazardous,fragile,shelfLife",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "productId,discontinuedDate,productName,description,category,sku,manufacturerCode,avgRating,price,costPrice,stockQuantity,warehouseLocation,reorderPoint,lastRestocked,unitsShipped,supplierName,supplierLocation,weight,dimensions,hazardous,fragile,shelfLife",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "productId,discontinuedDate,productName,description,category,sku,manufacturerCode,avgRating,price,costPrice,stockQuantity,warehouseLocation,reorderPoint,lastRestocked,unitsShipped,supplierName,supplierLocation,weight,dimensions,hazardous,fragile,shelfLife",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 105,
+            "category": "structure_awareness",
+            "question": "What are all the optional field names across all products?",
+            "expectedAnswer": [
+                "avgRating",
+                "shelfLife",
+                "discontinuedDate"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "discontinuedDate,avgRating,shelfLife",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "discontinuedDate,avgRating,shelfLife",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "discontinuedDate,avgRating,shelfLife",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 106,
+            "category": "structure_awareness",
+            "question": "What are all the mandatory field names across all products?",
+            "expectedAnswer": [
+                "productId",
+                "productName",
+                "category",
+                "price",
+                "costPrice",
+                "stockQuantity",
+                "reorderPoint",
+                "lastRestocked",
+                "supplierName",
+                "supplierLocation",
+                "description",
+                "sku",
+                "manufacturerCode",
+                "warehouseLocation",
+                "weight",
+                "dimensions",
+                "hazardous",
+                "fragile",
+                "unitsShipped"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "productId,productName,description,category,sku,manufacturerCode,price,costPrice,stockQuantity,warehouseLocation,reorderPoint,lastRestocked,unitsShipped,supplierName,supplierLocation,weight,dimensions,hazardous,fragile",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "productId,productName,description,category,sku,manufacturerCode,price,costPrice,stockQuantity,warehouseLocation,reorderPoint,lastRestocked,unitsShipped,supplierName,supplierLocation,weight,dimensions,hazardous,fragile",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "productId,productName,description,category,sku,manufacturerCode,price,costPrice,stockQuantity,warehouseLocation,reorderPoint,lastRestocked,unitsShipped,supplierName,supplierLocation,weight,dimensions,hazardous,fragile",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 107,
+            "category": "structure_awareness",
+            "question": "What are all the unique values in product id across all products?",
+            "expectedAnswer": [
+                "PROD-000001",
+                "PROD-000002",
+                "PROD-000003",
+                "PROD-000004",
+                "PROD-000005",
+                "PROD-000006",
+                "PROD-000007",
+                "PROD-000008",
+                "PROD-000009",
+                "PROD-000010",
+                "PROD-000011",
+                "PROD-000012",
+                "PROD-000013",
+                "PROD-000014",
+                "PROD-000015",
+                "PROD-000016",
+                "PROD-000017",
+                "PROD-000018",
+                "PROD-000019",
+                "PROD-000020",
+                "PROD-000021",
+                "PROD-000022",
+                "PROD-000023",
+                "PROD-000024",
+                "PROD-000025",
+                "PROD-000026",
+                "PROD-000027",
+                "PROD-000028",
+                "PROD-000029",
+                "PROD-000030",
+                "PROD-000031"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "PROD-000001,PROD-000002,PROD-000003,PROD-000004,PROD-000005,PROD-000006,PROD-000007,PROD-000008,PROD-000009,PROD-000010,PROD-000011,PROD-000012,PROD-000013,PROD-000014,PROD-000015,PROD-000016,PROD-000017,PROD-000018,PROD-000019,PROD-000020,PROD-000021,PROD-000022,PROD-000023,PROD-000024,PROD-000025,PROD-000026,PROD-000027,PROD-000028,PROD-000029,PROD-000030,PROD-000031",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "PROD-000001,PROD-000002,PROD-000003,PROD-000004,PROD-000005,PROD-000006,PROD-000007,PROD-000008,PROD-000009,PROD-000010,PROD-000011,PROD-000012,PROD-000013,PROD-000014,PROD-000015,PROD-000016,PROD-000017,PROD-000018,PROD-000019,PROD-000020,PROD-000021,PROD-000022,PROD-000023,PROD-000024,PROD-000025,PROD-000026,PROD-000027,PROD-000028,PROD-000029,PROD-000030,PROD-000031",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "PROD-000001,PROD-000002,PROD-000003,PROD-000004,PROD-000005,PROD-000006,PROD-000007,PROD-000008,PROD-000009,PROD-000010,PROD-000011,PROD-000012,PROD-000013,PROD-000014,PROD-000015,PROD-000016,PROD-000017,PROD-000018,PROD-000019,PROD-000020,PROD-000021,PROD-000022,PROD-000023,PROD-000024,PROD-000025,PROD-000026,PROD-000027,PROD-000028,PROD-000029,PROD-000030,PROD-000031",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 108,
+            "category": "structure_awareness",
+            "question": "What are all the unique values in warehouse location across all products?",
+            "expectedAnswer": [
+                "C-54-21",
+                "E-22-40",
+                "C-16-37",
+                "I-42-47",
+                "F-22-16",
+                "F-34-6",
+                "J-11-32",
+                "I-67-14",
+                "E-14-39",
+                "A-64-35",
+                "B-63-46",
+                "H-53-41",
+                "D-48-10",
+                "B-8-21",
+                "A-93-44",
+                "F-69-14",
+                "F-6-46",
+                "D-32-50",
+                "E-33-8",
+                "D-93-11",
+                "B-59-1",
+                "I-73-34",
+                "B-10-16",
+                "I-70-19",
+                "E-41-31",
+                "H-95-41",
+                "G-14-39",
+                "H-72-37",
+                "J-74-8",
+                "J-46-5",
+                "D-70-8"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "C-54-21,E-22-40,C-16-37,I-42-47,F-22-16,F-34-6,J-11-32,I-67-14,E-14-39,A-64-35,B-63-46,H-53-41,D-48-10,B-8-21,A-93-44,F-69-14,F-6-46,D-32-50,E-33-8,D-93-11,B-59-1,I-73-34,B-10-16,I-70-19,E-41-31,H-95-41,G-14-39,H-72-37,J-74-8,J-46-5,D-70-8",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "C-54-21,E-22-40,C-16-37,I-42-47,F-22-16,F-34-6,J-11-32,I-67-14,E-14-39,A-64-35,B-63-46,H-53-41,D-48-10,B-8-21,A-93-44,F-69-14,F-6-46,D-32-50,E-33-8,D-93-11,B-59-1,I-73-34,B-10-16,I-70-19,E-41-31,H-95-41,G-14-39,H-72-37,J-74-8,J-46-5,D-70-8",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "A-64-35,A-93-44,B-10-16,B-59-1,B-63-46,B-8-21,C-16-37,C-54-21,D-32-50,D-48-10,D-70-8,D-93-11,E-14-39,E-22-40,E-33-8,E-41-31,F-22-16,F-34-6,F-6-46,F-69-14,G-14-39,H-53-41,H-72-37,H-95-41,I-42-47,I-67-14,I-70-19,I-73-34,J-11-32,J-46-5,J-74-8",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 109,
+            "category": "structure_awareness",
+            "question": "What are all the unique values in dimensions across all products?",
+            "expectedAnswer": [
+                "195x67x73cm",
+                "114x146x22cm",
+                "117x188x194cm",
+                "22x158x118cm",
+                "11x46x146cm",
+                "195x179x95cm",
+                "127x57x19cm",
+                "136x130x41cm",
+                "174x179x43cm",
+                "172x110x185cm",
+                "46x138x127cm",
+                "128x115x58cm",
+                "45x85x151cm",
+                "173x98x197cm",
+                "49x195x39cm",
+                "9x31x120cm",
+                "36x41x59cm",
+                "41x80x162cm",
+                "6x54x123cm",
+                "154x107x13cm",
+                "162x90x128cm",
+                "50x191x137cm",
+                "173x52x18cm",
+                "29x58x164cm",
+                "160x68x188cm",
+                "33x87x22cm",
+                "47x46x28cm",
+                "132x112x57cm",
+                "135x20x37cm",
+                "28x190x120cm",
+                "62x71x64cm"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "195x67x73cm,114x146x22cm,117x188x194cm,22x158x118cm,11x46x146cm,195x179x95cm,127x57x19cm,136x130x41cm,174x179x43cm,172x110x185cm,46x138x127cm,128x115x58cm,45x85x151cm,173x98x197cm,49x195x39cm,9x31x120cm,36x41x59cm,41x80x162cm,6x54x123cm,154x107x13cm,162x90x128cm,50x191x137cm,173x52x18cm,29x58x164cm,160x68x188cm,33x87x22cm,47x46x28cm,132x112x57cm,135x20x37cm,28x190x120cm,62x71x64cm",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "195x67x73cm,114x146x22cm,117x188x194cm,22x158x118cm,11x46x146cm,195x179x95cm,127x57x19cm,136x130x41cm,174x179x43cm,172x110x185cm,46x138x127cm,128x115x58cm,45x85x151cm,173x98x197cm,49x195x39cm,9x31x120cm,36x41x59cm,41x80x162cm,6x54x123cm,154x107x13cm,162x90x128cm,50x191x137cm,173x52x18cm,29x58x164cm,160x68x188cm,33x87x22cm,47x46x28cm,132x112x57cm,135x20x37cm,28x190x120cm,62x71x64cm",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "11x46x146cm,127x57x19cm,128x115x58cm,132x112x57cm,135x20x37cm,136x130x41cm,154x107x13cm,160x68x188cm,162x90x128cm,172x110x185cm,173x52x18cm,173x98x197cm,174x179x43cm,195x179x95cm,195x67x73cm,22x158x118cm,28x190x120cm,29x58x164cm,33x87x22cm,36x41x59cm,45x85x151cm,46x138x127cm,47x46x28cm,49x195x39cm,50x191x137cm,6x54x123cm,62x71x64cm,9x31x120cm",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 110,
+            "category": "structure_awareness",
+            "question": "What are all the unique values in category across all products?",
+            "expectedAnswer": [
+                "Industrial Equipment",
+                "Chemicals",
+                "Electronics",
+                "Packaging",
+                "Furniture",
+                "Office Supplies",
+                "Textiles",
+                "Materials",
+                "Tools",
+                "Accessories"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "Industrial Equipment,Chemicals,Electronics,Packaging,Furniture,Office Supplies,Textiles,Materials,Tools,Accessories",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Industrial Equipment,Chemicals,Electronics,Packaging,Furniture,Office Supplies,Tools,Textiles,Materials,Accessories",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Accessories,Chemicals,Electronics,Furniture,Industrial Equipment,Materials,Office Supplies,Packaging,TextTools",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 111,
+            "category": "structure_awareness",
+            "question": "What are all the unique values in product name across all products?",
+            "expectedAnswer": [
+                "Basic Wrench 3584",
+                "Standard Sensor 9229",
+                "Deluxe Sensor 1588",
+                "Professional Connector 3440",
+                "Compact Generator 5895",
+                "Premium Drill 5699",
+                "Compact Switch 3141",
+                "Professional Cable 7996",
+                "Industrial Pump 346",
+                "Compact Valve 1351",
+                "Industrial Valve 6067",
+                "Standard Drill 4180",
+                "Professional Generator 9067",
+                "Standard Connector 1412",
+                "Basic Generator 219",
+                "Basic Compressor 3384",
+                "Professional Motor 8220",
+                "Premium Motor 4016",
+                "Basic Motor 3079",
+                "Compact Sensor 9850",
+                "Deluxe Motor 494",
+                "Premium Drill 3674",
+                "Basic Switch 3326",
+                "Premium Compressor 5381",
+                "Industrial Cable 6785",
+                "Premium Wrench 815",
+                "Professional Wrench 2381",
+                "Standard Controller 729",
+                "Industrial Switch 2960",
+                "Compact Generator 727",
+                "Compact Pump 3587"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "Basic Wrench 3584,Standard Sensor 9229,Deluxe Sensor 1588,Professional Connector 3440,Compact Generator 5895,Premium Drill 5699,Compact Switch 3141,Professional Cable 7996,Industrial Pump 346,Compact Valve 1351,Industrial Valve 6067,Standard Drill 4180,Professional Generator 9067,Standard Connector 1412,Basic Generator 219,Basic Compressor 3384,Professional Motor 8220,Premium Motor 4016,Basic Motor 3079,Compact Sensor 9850,Deluxe Motor 494,Premium Drill 3674,Basic Switch 3326,Premium Compressor 5381,Industrial Cable 6785,Premium Wrench 815,Professional Wrench 2381,Standard Controller 729,Industrial Switch 2960,Compact Generator 727,Compact Pump 3587",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Basic Wrench 3584,Standard Sensor 9229,Deluxe Sensor 1588,Professional Connector 3440,Compact Generator 5895,Premium Drill 5699,Compact Switch 3141,Professional Cable 7996,Industrial Pump 346,Compact Valve 1351,Industrial Valve 6067,Standard Drill 4180,Professional Generator 9067,Standard Connector 1412,Basic Generator 219,Basic Compressor 3384,Professional Motor 8220,Premium Motor 4016,Basic Motor 3079,Compact Sensor 9850,Deluxe Motor 494,Premium Drill 3674,Basic Switch 3326,Premium Compressor 5381,Industrial Cable 6785,Premium Wrench 815,Professional Wrench 2381,Standard Controller 729,Industrial Switch 2960,Compact Generator 727,Compact Pump 3587",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Basic Compressor 3384,Basic Generator 219,Basic Motor 3079,Basic Switch 3326,Basic Wrench 3584,Compact Generator 219,Compact Generator 727,Compact Pump 3587,Compact Sensor 9850,Compact Switch 3141,Compact Valve 1351,Deluxe Motor 494,Deluxe Sensor 1588,Industrial Cable 6785,Industrial Pump 346,Industrial Switch 2960,Industrial Valve 6067,Premium Compressor 5381,Premium Drill 3674,Premium Drill 5699,Premium Motor 4016,Premium Wrench 815,Professional Cable 7996,Professional Connector 3440,Professional Generator 9067,Professional Motor 8220,Professional Wrench 2381,Standard Cable 1,Standard Connector 1412,Standard Controller 729,Standard Drill 4180,Standard Sensor 9229",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 112,
+            "category": "structure_awareness",
+            "question": "What are all the unique values in discontinued date across all products?",
+            "expectedAnswer": [
+                "2025-12-01",
+                "2025-09-22",
+                "2025-09-19"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "null,2025-12-01,2025-09-22,2025-09-19",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "null,2025-12-01,2025-09-22,2025-09-19",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "2025-09-19,2025-09-22,2025-12-01,null",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 113,
+            "category": "structure_awareness",
+            "question": "What are all the unique values in avg rating across all products?",
+            "expectedAnswer": [
+                "2.2",
+                "1.9",
+                "1.3",
+                "3.7",
+                "3.5",
+                "4.2",
+                "4.5",
+                "2.1",
+                "1.4",
+                "2.3",
+                "2",
+                "2.9",
+                "1.5",
+                "2.7",
+                "3.8",
+                "1.8",
+                "1.2"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "2.2,1.9,1.3,3.7,3.5,4.2,4.5,2.1,1.4,2.3,1.8,2,2.9,1.5,2.7,3.8,1.2,null",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "null,2.2,1.9,1.3,3.7,3.5,4.2,4.5,2.1,1.4,2.3,2,2.9,2.7,3.8,1.8,1.5,1.2",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1.2,1.3,1.4,1.5,1.8,1.9,2,2.1,2.3,2.7,2.9,3.5,3.7,3.8,4.2,4.5,null",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 114,
+            "category": "structure_awareness",
+            "question": "What are all the unique values in last restocked across all products?",
+            "expectedAnswer": [
+                "2026-03-05",
+                "2026-01-17",
+                "2026-02-27",
+                "2026-02-17",
+                "2026-01-08",
+                "2026-02-07",
+                "2025-12-25",
+                "2026-01-22",
+                "2026-01-20",
+                "2026-02-09",
+                "2026-01-12",
+                "2026-02-18",
+                "2025-12-30",
+                "2025-12-18",
+                "2026-01-18",
+                "2025-12-08",
+                "2026-01-29",
+                "2026-01-25",
+                "2026-01-23",
+                "2026-02-03",
+                "2026-02-26",
+                "2026-02-23",
+                "2025-12-14"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "2026-03-05,2026-01-17,2026-02-27,2026-02-17,2026-01-08,2026-02-07,2025-12-25,2026-01-22,2026-02-17,2026-01-20,2026-02-09,2026-01-12,2026-02-18,2026-02-07,2025-12-30,2025-12-18,2026-01-18,2025-12-08,2026-01-29,2026-01-25,2026-03-05,2026-01-23,2026-02-03,2026-02-18,2026-02-26,2026-02-17,2026-02-27,2026-02-23,2026-01-23,2025-12-14,2026-01-25",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "2026-03-05,2026-01-17,2026-02-27,2026-02-17,2026-01-08,2026-02-07,2025-12-25,2026-01-22,2026-01-20,2026-02-09,2026-01-12,2026-02-18,2025-12-30,2025-12-18,2026-01-18,2025-12-08,2026-01-29,2026-01-25,2026-01-23,2026-02-03,2026-02-26,2026-02-23,2025-12-14",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "2025-12-14,2025-12-18,2025-12-25,2025-12-30,2026-01-08,2026-01-12,2026-01-17,2026-01-18,2026-01-20,2026-01-22,2026-01-23,2026-01-25,2026-01-29,2026-02-03,2026-02-07,2026-02-09,2026-02-17,2026-02-18,2026-02-23,2026-02-26,2026-02-27,2026-03-05",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 115,
+            "category": "structure_awareness",
+            "question": "What are all the unique values in weight across all products?",
+            "expectedAnswer": [
+                "239.74",
+                "311.47",
+                "417.84",
+                "244.43",
+                "455.92",
+                "401.31",
+                "23.72",
+                "91.82",
+                "163.42",
+                "37.11",
+                "251.69",
+                "137.5",
+                "98.83",
+                "179.43",
+                "389.17",
+                "393.19",
+                "444.53",
+                "426.26",
+                "133.22",
+                "263.76",
+                "302.78",
+                "231.54",
+                "446.93",
+                "413.41",
+                "32.22",
+                "185.9",
+                "16.6",
+                "36.56",
+                "144.17",
+                "190.36",
+                "234.49"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "239.74,311.47,417.84,244.43,455.92,401.31,23.72,91.82,163.42,37.11,251.69,137.5,98.83,179.43,389.17,393.19,444.53,426.26,133.22,263.76,302.78,231.54,446.93,413.41,32.22,185.9,16.6,36.56,144.17,190.36,234.49",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "239.74,311.47,417.84,244.43,455.92,401.31,23.72,91.82,163.42,37.11,251.69,137.5,98.83,179.43,389.17,393.19,444.53,426.26,133.22,263.76,302.78,231.54,446.93,413.41,32.22,185.9,16.6,36.56,144.17,190.36,234.49",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "16.6,23.72,32.22,36.56,37.11,91.82,98.83,133.22,137.5,144.17,163.42,179.43,185.9,190.36,231.54,234.49,244.43,251.69,263.76,302.78,311.47,313.21,389.17,393.19,401.31,413.41,417.84,426.26,444.53,446.93,455.92",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 116,
+            "category": "structure_awareness",
+            "question": "What are all the unique values in price across all products?",
+            "expectedAnswer": [
+                "1333.01",
+                "576.92",
+                "2999.1",
+                "1766.06",
+                "2574.48",
+                "4929.92",
+                "57.06",
+                "1187.32",
+                "168.12",
+                "2684.49",
+                "4817.41",
+                "2852.32",
+                "2902.72",
+                "340.83",
+                "4718.97",
+                "2300.04",
+                "1893.53",
+                "1594.34",
+                "2910.99",
+                "4896.81",
+                "4909",
+                "1000.79",
+                "1985.53",
+                "2580.1",
+                "320.31",
+                "4754.93",
+                "1961.23",
+                "2227.24",
+                "27.28",
+                "4066.6",
+                "3896.24"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "1333.01,576.92,2999.1,1766.06,2574.48,4929.92,57.06,1187.32,168.12,2684.49,4817.41,2852.32,2902.72,340.83,4718.97,2300.04,1893.53,1594.34,2910.99,4896.81,4909,1000.79,1985.53,2580.1,320.31,4754.93,1961.23,2227.24,27.28,4066.6,3896.24",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1333.01,576.92,2999.1,1766.06,2574.48,4929.92,57.06,1187.32,168.12,2684.49,4817.41,2852.32,2902.72,340.83,4718.97,2300.04,1893.53,1594.34,2910.99,4896.81,4909,1000.79,1985.53,2580.1,320.31,4754.93,1961.23,2227.24,27.28,4066.6,3896.24",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "27.28,57.06,168.12,320.31,340.83,576.92,1000.79,1187.32,1333.01,1594.34,1766.06,1893.53,1961.23,1985.53,2227.24,2300.04,2574.48,2580.1,2684.49,2852.32,2902.72,2910.99,2999.1,3896.24,4066.6,4718.97,4754.93,4809,4896.81,4909,4929.92",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 117,
+            "category": "structure_awareness",
+            "question": "What are all the unique values in cost price across all products?",
+            "expectedAnswer": [
+                "514.81",
+                "2251.23",
+                "1704.01",
+                "961.72",
+                "531.05",
+                "1490.59",
+                "2316.65",
+                "1616.95",
+                "2336.24",
+                "666.27",
+                "2191.56",
+                "227.83",
+                "65.64",
+                "2123.56",
+                "983.4",
+                "1681.11",
+                "2430.17",
+                "760.34",
+                "1138.24",
+                "2190.19",
+                "1507.08",
+                "2437.5",
+                "1140.76",
+                "1743.5",
+                "1535.11",
+                "1039.24",
+                "409.88",
+                "2480.88",
+                "1069.66",
+                "1053.79",
+                "2228.95"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "514.81,2251.23,1704.01,961.72,531.05,1490.59,2316.65,1616.95,2336.24,666.27,2191.56,227.83,65.64,2123.56,983.4,1681.11,2430.17,760.34,1138.24,2190.19,1507.08,2437.5,1140.76,1743.5,1535.11,1039.24,409.88,2480.88,1069.66,1053.79,2228.95",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "514.81,2251.23,1704.01,961.72,531.05,1490.59,2316.65,1616.95,2336.24,666.27,2191.56,227.83,65.64,2123.56,983.4,1681.11,2430.17,760.34,1138.24,2190.19,1507.08,2437.5,1140.76,1743.5,1535.11,1039.24,409.88,2480.88,1069.66,1053.79,2228.95",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "65.64,227.83,409.88,514.81,531.05,666.27,760.34,961.72,983.4,1039.24,1053.79,1069.66,1138.24,1140.76,1490.59,1507.08,1535.11,1616.95,1681.11,1704.01,1743.5,2123.56,2191.56,2228.95,2251.23,2316.65,2336.24,2430.17,2437.5,2480.88",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 118,
+            "category": "structure_awareness",
+            "question": "What are all the unique values in fragile across all products?",
+            "expectedAnswer": [
+                "true"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "true,false",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "true,false",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "false,true",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 119,
+            "category": "structure_awareness",
+            "question": "What are all the unique values in stock quantity across all products?",
+            "expectedAnswer": [
+                "7205",
+                "8226",
+                "8862",
+                "7111",
+                "2439",
+                "2694",
+                "7106",
+                "3399",
+                "7535",
+                "3272",
+                "3848",
+                "8742",
+                "2773",
+                "8879",
+                "5286",
+                "5233",
+                "8966",
+                "284",
+                "7744",
+                "2813",
+                "7499",
+                "2078",
+                "1439",
+                "881",
+                "2505",
+                "6927",
+                "5506",
+                "9228",
+                "1244",
+                "9566",
+                "7722"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "7205,8226,8862,7111,2439,2694,7106,3399,7535,3272,3848,8742,2773,8879,5286,5233,8966,284,7744,2813,7499,2078,1439,881,2505,6927,5506,9228,1244,9566,7722",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "7205,8226,8862,7111,2439,2694,7106,3399,7535,3272,3848,8742,2773,8879,5286,5233,8966,284,7744,2813,7499,2078,1439,881,2505,6927,5506,9228,1244,9566,7722",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1244,1439,2078,2439,2505,2694,2773,2813,3272,3399,3848,5233,5286,5506,6927,7106,7111,7205,7499,7535,7544,7722,8226,8742,8862,8879,8966,9228,9566",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 120,
+            "category": "structure_awareness",
+            "question": "What are all the unique values in hazardous across all products?",
+            "expectedAnswer": [
+                "true"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "false,true",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "true,false",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "false,true",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 121,
+            "category": "structure_awareness",
+            "question": "What are all the unique values in supplier name across all products?",
+            "expectedAnswer": [
+                "Industrial Solutions Inc",
+                "Factory Direct Inc",
+                "Premier Parts Ltd",
+                "Trade Partners Ltd",
+                "Material Distributors AB",
+                "Tech Components Group",
+                "Reliable Vendors LLC",
+                "Global Supply Co"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "Industrial Solutions Inc,Factory Direct Inc,Premier Parts Ltd,Material Distributors AB,Tech Components Group,Trade Partners Ltd,Global Supply Co,Reliable Vendors LLC",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Industrial Solutions Inc,Factory Direct Inc,Premier Parts Ltd,Tech Components Group,Material Distributors AB,Trade Partners Ltd,Reliable Vendors LLC,Global Supply Co",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Factory Direct Inc,Global Supply Co,Industrial Solutions Inc,Material Distributors AB,Premier Parts Ltd,Reliable Vendors LLC,Tech Components Group,Trade Partners Ltd",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 122,
+            "category": "structure_awareness",
+            "question": "What are all the unique values in description across all products?",
+            "expectedAnswer": [
+                "Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
+                "Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.",
+                "High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.",
+                "Professional-grade equipment meeting international standards. Extensively tested for performance and safety.",
+                "Designed for efficiency and long-term reliability. Built with premium materials and strict quality control."
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 123,
+            "category": "structure_awareness",
+            "question": "What are all the unique values in units shipped across all products?",
+            "expectedAnswer": [
+                "26969",
+                "30361",
+                "6576",
+                "52751",
+                "41508",
+                "89227",
+                "42705",
+                "27161",
+                "50898",
+                "96466",
+                "96951",
+                "18707",
+                "43688",
+                "43299",
+                "62417",
+                "32974",
+                "16699",
+                "61347",
+                "82512",
+                "33933",
+                "59332",
+                "85975",
+                "9927",
+                "21122",
+                "44251",
+                "33636",
+                "28782",
+                "76603",
+                "3837",
+                "1349",
+                "24375"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "26969,30361,6576,52751,41508,89227,42705,27161,50898,96466,96951,18707,43688,43299,62417,32974,16699,61347,82512,33933,59332,85975,9927,21122,44251,33636,28782,76603,3837,1349,24375",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "26969,30361,6576,52751,41508,89227,42705,27161,50898,96466,96951,18707,43688,43299,62417,32974,16699,61347,82512,33933,59332,85975,9927,21122,44251,33636,28782,76603,3837,1349,24375",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1349,3837,6576,9927,16699,18707,21122,24375,27161,28782,32974,33636,33933,41508,43299,43688,44251,50898,52751,59332,61347,62417,82512,85975,89227,96466,96951",
+                    "correct": false
+                }
+            ]
+        },
+        {
+            "questionId": 124,
+            "category": "structure_awareness",
+            "question": "What are all the unique values in sku across all products?",
+            "expectedAnswer": [
+                "MAT-000000",
+                "IND-000001",
+                "ELE-000002",
+                "CHE-000003",
+                "CHE-000004",
+                "MAT-000005",
+                "CHE-000006",
+                "TOO-000007",
+                "PAC-000008",
+                "CHE-000009",
+                "CHE-000010",
+                "ACC-000011",
+                "OFF-000012",
+                "TEX-000013",
+                "ACC-000014",
+                "IND-000015",
+                "ELE-000016",
+                "IND-000017",
+                "PAC-000018",
+                "PAC-000019",
+                "IND-000020",
+                "CHE-000021",
+                "OFF-000022",
+                "TOO-000023",
+                "ACC-000024",
+                "IND-000025",
+                "TEX-000026",
+                "MAT-000027",
+                "MAT-000028",
+                "TOO-000029",
+                "IND-000030"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "MAT-000000,IND-000001,ELE-000002,CHE-000003,CHE-000004,MAT-000005,CHE-000006,TOO-000007,PAC-000008,CHE-000009,CHE-000010,ACC-000011,OFF-000012,TEX-000013,ACC-000014,IND-000015,ELE-000016,IND-000017,PAC-000018,PAC-000019,IND-000020,CHE-000021,OFF-000022,TOO-000023,ACC-000024,IND-000025,TEX-000026,MAT-000027,MAT-000028,TOO-000029,IND-000030",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "MAT-000000,IND-000001,ELE-000002,CHE-000003,CHE-000004,MAT-000005,CHE-000006,TOO-000007,PAC-000008,CHE-000009,CHE-000010,ACC-000011,OFF-000012,TEX-000013,ACC-000014,IND-000015,ELE-000016,IND-000017,PAC-000018,PAC-000019,IND-000020,CHE-000021,OFF-000022,TOO-000023,ACC-000024,IND-000025,TEX-000026,MAT-000027,MAT-000028,TOO-000029,IND-000030",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "ACC-000011,ACC-000014,ACC-000024,CHE-000003,CHE-000004,CHE-000006,CHE-000009,CHE-000010,CHE-000021,ELE-000002,ELE-000016,IND-000001,IND-000015,IND-000017,IND-000020,IND-000025,IND-000030,MAT-000000,MAT-000005,MAT-000027,MAT-000028,OFF-000012,OFF-000022,PAC-000008,PAC-000018,PAC-000019,TEX-000013,TEX-000026,TOO-000007,TOO-000023,TOO-000029",
+                    "correct": true
+                }
+            ]
+        },
+        {
+            "questionId": 125,
+            "category": "structure_awareness",
+            "question": "What are all the unique values in reorder point across all products?",
+            "expectedAnswer": [
+                "16",
+                "231",
+                "486",
+                "254",
+                "464",
+                "203",
+                "358",
+                "337",
+                "57",
+                "172",
+                "457",
+                "34",
+                "165",
+                "107",
+                "445",
+                "151",
+                "37",
+                "496",
+                "101",
+                "459",
+                "189",
+                "330",
+                "317",
+                "83",
+                "150",
+                "94",
+                "454",
+                "60",
+                "174",
+                "424",
+                "133"
+            ],
+            "answers": [
+                {
+                    "givenAnswer": "16,231,486,254,464,203,358,337,57,172,457,34,165,107,445,151,37,496,101,459,189,330,317,83,150,94,454,60,174,424,133",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "16,231,486,254,464,203,358,337,57,172,457,34,165,107,445,151,37,496,101,459,189,330,317,83,150,94,454,60,174,424,133",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "16,17,34,37,57,60,83,94,101,107,133,150,151,165,172,174,189,203,231,254,317,330,337,358,424,445,457,459,464,486,496",
+                    "correct": false
+                }
+            ]
+        }
+    ]
+}
