@@ -1,0 +1,344 @@
+{
+    "read": {
+        "files": [
+            {
+                "file": "yaml_with_optional_31_flat_records.yaml",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data/yaml/yaml_with_optional_31_flat_records.yaml",
+                "agentId": "a09f000aae835eb91",
+                "format": "yaml",
+                "structure": "flat",
+                "variant": "optional",
+                "recordCount": 31,
+                "readTokens": 11742,
+                "readDurationMs": 31
+            },
+            {
+                "file": "json_pretty_with_optional_31_flat_records.json",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data/json_pretty/json_pretty_with_optional_31_flat_records.json",
+                "agentId": "a0e3a70b1def9b70a",
+                "format": "json_pretty",
+                "structure": "flat",
+                "variant": "optional",
+                "recordCount": 31,
+                "readTokens": 13346,
+                "readDurationMs": 36
+            },
+            {
+                "file": "xml_pretty_with_mandatory_31_flat_records.xml",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data/xml_pretty/xml_pretty_with_mandatory_31_flat_records.xml",
+                "agentId": "a2101c3f4ba20492b",
+                "format": "xml_pretty",
+                "structure": "flat",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "readTokens": 16137,
+                "readDurationMs": 18
+            },
+            {
+                "file": "yaml_with_mandatory_31_flat_records.yaml",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data/yaml/yaml_with_mandatory_31_flat_records.yaml",
+                "agentId": "a2bcdc0edbd1154e5",
+                "format": "yaml",
+                "structure": "flat",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "readTokens": 12533,
+                "readDurationMs": 21
+            },
+            {
+                "file": "csv_with_mandatory_31_flat_records.csv",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data/csv/csv_with_mandatory_31_flat_records.csv",
+                "agentId": "a37233fc2e31aeb2c",
+                "format": "csv",
+                "structure": "flat",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "readTokens": 6968,
+                "readDurationMs": 23
+            },
+            {
+                "file": "toon_safe_with_optional_31_flat_records.toon",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data/toon_safe/toon_safe_with_optional_31_flat_records.toon",
+                "agentId": "a40fbc04027a56e03",
+                "format": "toon_safe",
+                "structure": "flat",
+                "variant": "optional",
+                "recordCount": 31,
+                "readTokens": 11540,
+                "readDurationMs": 21
+            },
+            {
+                "file": "xml_compact_with_mandatory_31_flat_records.xml",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data/xml_compact/xml_compact_with_mandatory_31_flat_records.xml",
+                "agentId": "a428ec66aa172677f",
+                "format": "xml_compact",
+                "structure": "flat",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "readTokens": 11672,
+                "readDurationMs": 19
+            },
+            {
+                "file": "csv_with_optional_31_flat_records.csv",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data/csv/csv_with_optional_31_flat_records.csv",
+                "agentId": "a6c47a8a5ffc29fa3",
+                "format": "csv",
+                "structure": "flat",
+                "variant": "optional",
+                "recordCount": 31,
+                "readTokens": 6687,
+                "readDurationMs": 14
+            },
+            {
+                "file": "xml_compact_with_optional_31_flat_records.xml",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data/xml_compact/xml_compact_with_optional_31_flat_records.xml",
+                "agentId": "a74f4a8d6d317ce89",
+                "format": "xml_compact",
+                "structure": "flat",
+                "variant": "optional",
+                "recordCount": 31,
+                "readTokens": 10909,
+                "readDurationMs": 23
+            },
+            {
+                "file": "json_compact_with_optional_31_flat_records.json",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data/json_compact/json_compact_with_optional_31_flat_records.json",
+                "agentId": "a8b27821e0a47ddfe",
+                "format": "json_compact",
+                "structure": "flat",
+                "variant": "optional",
+                "recordCount": 31,
+                "readTokens": 8727,
+                "readDurationMs": 13
+            },
+            {
+                "file": "xml_pretty_with_optional_31_flat_records.xml",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data/xml_pretty/xml_pretty_with_optional_31_flat_records.xml",
+                "agentId": "ab9d999d7640ca89a",
+                "format": "xml_pretty",
+                "structure": "flat",
+                "variant": "optional",
+                "recordCount": 31,
+                "readTokens": 15076,
+                "readDurationMs": 17
+            },
+            {
+                "file": "toon_safe_with_mandatory_31_flat_records.toon",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data/toon_safe/toon_safe_with_mandatory_31_flat_records.toon",
+                "agentId": "ac78ef4bca4f4199c",
+                "format": "toon_safe",
+                "structure": "flat",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "readTokens": 7029,
+                "readDurationMs": 18
+            },
+            {
+                "file": "json_pretty_with_mandatory_31_flat_records.json",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data/json_pretty/json_pretty_with_mandatory_31_flat_records.json",
+                "agentId": "ace9f9ece8c155bce",
+                "format": "json_pretty",
+                "structure": "flat",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "readTokens": 14254,
+                "readDurationMs": 30
+            },
+            {
+                "file": "toon_unsafe_with_optional_31_flat_records.toon",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data/toon_unsafe/toon_unsafe_with_optional_31_flat_records.toon",
+                "agentId": "aec6dddf98141a4ce",
+                "format": "toon_unsafe",
+                "structure": "flat",
+                "variant": "optional",
+                "recordCount": 31,
+                "readTokens": 11540,
+                "readDurationMs": 20
+            },
+            {
+                "file": "json_compact_with_mandatory_31_flat_records.json",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data/json_compact/json_compact_with_mandatory_31_flat_records.json",
+                "agentId": "afdcadab54ad6ac43",
+                "format": "json_compact",
+                "structure": "flat",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "readTokens": 9255,
+                "readDurationMs": 24
+            },
+            {
+                "file": "toon_unsafe_with_mandatory_31_flat_records.toon",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data/toon_unsafe/toon_unsafe_with_mandatory_31_flat_records.toon",
+                "agentId": "afea81e28ccb2020c",
+                "format": "toon_unsafe",
+                "structure": "flat",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "readTokens": 7018,
+                "readDurationMs": 26
+            }
+        ],
+        "summary": {
+            "totalFiles": 16,
+            "totalReadTokens": 174433,
+            "totalReadDurationMs": 354,
+            "averageReadTokens": 10902.063,
+            "averageDurationMs": 22.125
+        }
+    },
+    "reasoning": {
+        "files": [
+            {
+                "format": "csv",
+                "structure": "flat",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 126926,
+                "outputTokens": 204
+            },
+            {
+                "format": "json_compact",
+                "structure": "flat",
+                "variant": "optional",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 76264.667,
+                "outputTokens": 208.333
+            },
+            {
+                "format": "csv",
+                "structure": "flat",
+                "variant": "optional",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 76722.667,
+                "outputTokens": 301
+            },
+            {
+                "format": "json_pretty",
+                "structure": "flat",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 108072.667,
+                "outputTokens": 308
+            },
+            {
+                "format": "toon_unsafe",
+                "structure": "flat",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "testRuns": 2,
+                "durationMs": 115857.5,
+                "outputTokens": 308.5
+            },
+            {
+                "format": "toon_unsafe",
+                "structure": "flat",
+                "variant": "optional",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 98823,
+                "outputTokens": 314
+            },
+            {
+                "format": "yaml",
+                "structure": "flat",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 92165.333,
+                "outputTokens": 303.667
+            },
+            {
+                "format": "xml_compact",
+                "structure": "flat",
+                "variant": "optional",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 92319.333,
+                "outputTokens": 308.667
+            },
+            {
+                "format": "toon_safe",
+                "structure": "flat",
+                "variant": "optional",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 90754.333,
+                "outputTokens": 309.333
+            },
+            {
+                "format": "xml_pretty",
+                "structure": "flat",
+                "variant": "optional",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 87746.667,
+                "outputTokens": 209.333
+            },
+            {
+                "format": "xml_pretty",
+                "structure": "flat",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 84963.667,
+                "outputTokens": 303.667
+            },
+            {
+                "format": "xml_compact",
+                "structure": "flat",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 111045,
+                "outputTokens": 208.667
+            },
+            {
+                "format": "json_compact",
+                "structure": "flat",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 94209.333,
+                "outputTokens": 212.667
+            },
+            {
+                "format": "json_pretty",
+                "structure": "flat",
+                "variant": "optional",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 86112,
+                "outputTokens": 303.333
+            },
+            {
+                "format": "yaml",
+                "structure": "flat",
+                "variant": "optional",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 69344.333,
+                "outputTokens": 307.667
+            },
+            {
+                "format": "toon_safe",
+                "structure": "flat",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 84813,
+                "outputTokens": 309.333
+            }
+        ],
+        "summary": {
+            "totalTestCases": 16,
+            "totalDurationMs": 1496139.5,
+            "totalOutputTokens": 4420.167,
+            "averageDurationMs": 93508.719,
+            "averageOutputTokens": 276.26
+        }
+    }
+}
