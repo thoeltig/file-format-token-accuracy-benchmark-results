@@ -1,8 +1,8 @@
 {
     "metadata": {
         "format": "yaml",
-        "dataFile": "yaml_with_optional_31_flat_records.yaml",
-        "questionnaireFile": "questions_with_optional_31_records.json"
+        "dataFilePath": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\data\\yaml\\yaml_with_optional_31_flat_records.yaml",
+        "questionsFilePath": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\questions\\questions_with_optional_31_records.json"
     },
     "answers": [
         {

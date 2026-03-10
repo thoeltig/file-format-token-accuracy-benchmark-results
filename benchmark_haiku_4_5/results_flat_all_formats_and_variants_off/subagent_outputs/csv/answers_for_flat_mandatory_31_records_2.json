@@ -1,8 +1,8 @@
 {
     "metadata": {
         "format": "csv",
-        "dataFile": "csv_with_mandatory_31_flat_records.csv",
-        "questionnaireFile": "questions_with_mandatory_31_records.json"
+        "dataFilePath": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\data\\csv\\csv_with_mandatory_31_flat_records.csv",
+        "questionsFilePath": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\questions\\questions_with_mandatory_31_records.json"
     },
     "answers": [
         {

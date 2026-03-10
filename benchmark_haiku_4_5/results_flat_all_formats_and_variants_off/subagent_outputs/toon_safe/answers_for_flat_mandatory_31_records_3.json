@@ -1,8 +1,8 @@
 {
     "metadata": {
         "format": "toon_safe",
-        "dataFile": "toon_safe_with_mandatory_31_flat_records.toon",
-        "questionnaireFile": "questions_with_mandatory_31_records.json"
+        "dataFilePath": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\data\\toon_safe\\toon_safe_with_mandatory_31_flat_records.toon",
+        "questionsFilePath": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\questions\\questions_with_mandatory_31_records.json"
     },
     "answers": [
         {
