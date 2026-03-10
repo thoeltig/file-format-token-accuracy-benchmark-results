@@ -3,7 +3,7 @@
         "files": [
             {
                 "file": "xml_pretty_with_optional_31_flat_records.xml",
-                "path": "benchmark_haiku_4_5_flat_all_formats_and_variants_off\\data\\xml_pretty\\xml_pretty_with_optional_31_flat_records.xml",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\data\\xml_pretty\\xml_pretty_with_optional_31_flat_records.xml",
                 "agentId": "a28601e599d42686d",
                 "format": "xml_pretty",
                 "structure": "flat",
@@ -14,7 +14,7 @@
             },
             {
                 "file": "xml_compact_with_mandatory_31_flat_records.xml",
-                "path": "benchmark_haiku_4_5_flat_all_formats_and_variants_off\\data\\xml_compact\\xml_compact_with_mandatory_31_flat_records.xml",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\data\\xml_compact\\xml_compact_with_mandatory_31_flat_records.xml",
                 "agentId": "a33777580d304de37",
                 "format": "xml_compact",
                 "structure": "flat",
@@ -25,7 +25,7 @@
             },
             {
                 "file": "csv_with_optional_31_flat_records.csv",
-                "path": "benchmark_haiku_4_5_flat_all_formats_and_variants_off\\data\\csv\\csv_with_optional_31_flat_records.csv",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\data\\csv\\csv_with_optional_31_flat_records.csv",
                 "agentId": "a3dce7265bbeb642e",
                 "format": "csv",
                 "structure": "flat",
@@ -36,7 +36,7 @@
             },
             {
                 "file": "xml_pretty_with_mandatory_31_flat_records.xml",
-                "path": "benchmark_haiku_4_5_flat_all_formats_and_variants_off\\data\\xml_pretty\\xml_pretty_with_mandatory_31_flat_records.xml",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\data\\xml_pretty\\xml_pretty_with_mandatory_31_flat_records.xml",
                 "agentId": "a48b7a6669ae5cd7c",
                 "format": "xml_pretty",
                 "structure": "flat",
@@ -47,7 +47,7 @@
             },
             {
                 "file": "toon_safe_with_mandatory_31_flat_records.toon",
-                "path": "benchmark_haiku_4_5_flat_all_formats_and_variants_off/data/toon_safe/toon_safe_with_mandatory_31_flat_records.toon",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off/data/toon_safe/toon_safe_with_mandatory_31_flat_records.toon",
                 "agentId": "a4b18c18b36891324",
                 "format": "toon_safe",
                 "structure": "flat",
@@ -58,7 +58,7 @@
             },
             {
                 "file": "toon_safe_with_optional_31_flat_records.toon",
-                "path": "benchmark_haiku_4_5_flat_all_formats_and_variants_off/data/toon_safe/toon_safe_with_optional_31_flat_records.toon",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off/data/toon_safe/toon_safe_with_optional_31_flat_records.toon",
                 "agentId": "a5d5ea4c16ab8399c",
                 "format": "toon_safe",
                 "structure": "flat",
@@ -69,7 +69,7 @@
             },
             {
                 "file": "json_compact_with_mandatory_31_flat_records.json",
-                "path": "benchmark_haiku_4_5_flat_all_formats_and_variants_off\\data\\json_compact\\json_compact_with_mandatory_31_flat_records.json",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\data\\json_compact\\json_compact_with_mandatory_31_flat_records.json",
                 "agentId": "a60c97441b9c0b77a",
                 "format": "json_compact",
                 "structure": "flat",
@@ -80,7 +80,7 @@
             },
             {
                 "file": "json_pretty_with_optional_31_flat_records.json",
-                "path": "benchmark_haiku_4_5_flat_all_formats_and_variants_off\\data\\json_pretty\\json_pretty_with_optional_31_flat_records.json",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\data\\json_pretty\\json_pretty_with_optional_31_flat_records.json",
                 "agentId": "a6963ba42cf541557",
                 "format": "json_pretty",
                 "structure": "flat",
@@ -91,7 +91,7 @@
             },
             {
                 "file": "toon_unsafe_with_optional_31_flat_records.toon",
-                "path": "benchmark_haiku_4_5_flat_all_formats_and_variants_off\\data\\toon_unsafe\\toon_unsafe_with_optional_31_flat_records.toon",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\data\\toon_unsafe\\toon_unsafe_with_optional_31_flat_records.toon",
                 "agentId": "a740c864d2f06e88c",
                 "format": "toon_unsafe",
                 "structure": "flat",
@@ -102,7 +102,7 @@
             },
             {
                 "file": "xml_compact_with_optional_31_flat_records.xml",
-                "path": "benchmark_haiku_4_5_flat_all_formats_and_variants_off\\data\\xml_compact\\xml_compact_with_optional_31_flat_records.xml",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\data\\xml_compact\\xml_compact_with_optional_31_flat_records.xml",
                 "agentId": "a78e4dbf745ae0ce8",
                 "format": "xml_compact",
                 "structure": "flat",
@@ -113,7 +113,7 @@
             },
             {
                 "file": "json_compact_with_optional_31_flat_records.json",
-                "path": "benchmark_haiku_4_5_flat_all_formats_and_variants_off\\data\\json_compact\\json_compact_with_optional_31_flat_records.json",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\data\\json_compact\\json_compact_with_optional_31_flat_records.json",
                 "agentId": "a97dedc1580bad1f8",
                 "format": "json_compact",
                 "structure": "flat",
@@ -124,7 +124,7 @@
             },
             {
                 "file": "csv_with_mandatory_31_flat_records.csv",
-                "path": "benchmark_haiku_4_5_flat_all_formats_and_variants_off\\data\\csv\\csv_with_mandatory_31_flat_records.csv",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\data\\csv\\csv_with_mandatory_31_flat_records.csv",
                 "agentId": "a9e4f4a02dfe5aa91",
                 "format": "csv",
                 "structure": "flat",
@@ -135,7 +135,7 @@
             },
             {
                 "file": "toon_unsafe_with_mandatory_31_flat_records.toon",
-                "path": "benchmark_haiku_4_5_flat_all_formats_and_variants_off/data/toon_unsafe/toon_unsafe_with_mandatory_31_flat_records.toon",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off/data/toon_unsafe/toon_unsafe_with_mandatory_31_flat_records.toon",
                 "agentId": "ad5d1833f043cdc02",
                 "format": "toon_unsafe",
                 "structure": "flat",
@@ -146,7 +146,7 @@
             },
             {
                 "file": "yaml_with_mandatory_31_flat_records.yaml",
-                "path": "benchmark_haiku_4_5_flat_all_formats_and_variants_off\\data\\yaml\\yaml_with_mandatory_31_flat_records.yaml",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\data\\yaml\\yaml_with_mandatory_31_flat_records.yaml",
                 "agentId": "ae808477cbe0755b5",
                 "format": "yaml",
                 "structure": "flat",
@@ -157,7 +157,7 @@
             },
             {
                 "file": "yaml_with_optional_31_flat_records.yaml",
-                "path": "benchmark_haiku_4_5_flat_all_formats_and_variants_off\\data\\yaml\\yaml_with_optional_31_flat_records.yaml",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\data\\yaml\\yaml_with_optional_31_flat_records.yaml",
                 "agentId": "afe0d381d8be0e7f9",
                 "format": "yaml",
                 "structure": "flat",
@@ -168,7 +168,7 @@
             },
             {
                 "file": "json_pretty_with_mandatory_31_flat_records.json",
-                "path": "benchmark_haiku_4_5_flat_all_formats_and_variants_off\\data\\json_pretty\\json_pretty_with_mandatory_31_flat_records.json",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\data\\json_pretty\\json_pretty_with_mandatory_31_flat_records.json",
                 "agentId": "afec75a3e20abbc31",
                 "format": "json_pretty",
                 "structure": "flat",

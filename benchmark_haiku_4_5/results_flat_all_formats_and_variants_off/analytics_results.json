@@ -1,9 +1,9 @@
 {
     "timestamp": "2026-03-07T14:52:35.867Z",
     "testConfigurations": {
-        "metadataFile": "benchmark_haiku_4_5_flat_all_formats_and_variants_off\\metadata.json",
-        "agentIdsFile": "benchmark_haiku_4_5_flat_all_formats_and_variants_off\\agent_ids.json",
-        "metricsFile": "benchmark_haiku_4_5_flat_all_formats_and_variants_off\\metrics.json",
+        "metadataFile": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\metadata.json",
+        "agentIdsFile": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\agent_ids.json",
+        "metricsFile": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\metrics.json",
         "model": "claude-haiku-4-5-20251001",
         "thinking": "off",
         "formats": [

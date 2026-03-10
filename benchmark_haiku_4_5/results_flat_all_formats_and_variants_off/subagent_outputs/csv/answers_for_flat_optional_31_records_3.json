@@ -1,8 +1,8 @@
 {
     "metadata": {
         "format": "csv",
-        "questionsFilePath": "benchmark_haiku_4_5_flat_all_formats_and_variants_off\\questions\\questions_with_optional_31_records.json",
-        "dataFilePath": "benchmark_haiku_4_5_flat_all_formats_and_variants_off\\data\\csv\\csv_with_optional_31_flat_records.csv"
+        "questionsFilePath": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\questions\\questions_with_optional_31_records.json",
+        "dataFilePath": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\data\\csv\\csv_with_optional_31_flat_records.csv"
     },
     "answers": [
         {
