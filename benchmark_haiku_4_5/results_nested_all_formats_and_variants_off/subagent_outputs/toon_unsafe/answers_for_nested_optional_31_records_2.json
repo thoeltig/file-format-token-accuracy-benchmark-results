@@ -1,8 +1,8 @@
 {
     "metadata": {
         "format": "toon_unsafe",
-        "dataFile": "toon_unsafe_with_optional_31_nested_records.toon",
-        "questionnaireFile": "questions_with_optional_31_records.json"
+        "dataFilePath": "benchmark_haiku_4_5\\results_nested_all_formats_and_variants_off\\data\\toon_unsafe\\toon_unsafe_with_optional_31_nested_records.toon",
+        "questionsFilePath": "benchmark_haiku_4_5\\results_nested_all_formats_and_variants_off\\questions\\questions_with_optional_31_records.json"
     },
     "answers": [
         {

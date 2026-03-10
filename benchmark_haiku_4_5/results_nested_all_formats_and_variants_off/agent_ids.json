@@ -13,8 +13,8 @@
       "mandatory",
       "optional"
     ],
-    "model": "Entered by user",
-    "thinking": "Entered by user",
+    "model": "claude-haiku-4-5-20251001",
+    "thinking": "off",
     "timestamp": "2026-03-09T19:27:49.733Z"
   },
   "readOnlyTests": [

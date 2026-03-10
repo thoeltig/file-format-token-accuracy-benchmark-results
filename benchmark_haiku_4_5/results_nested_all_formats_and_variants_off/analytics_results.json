@@ -1,11 +1,11 @@
 {
     "timestamp": "2026-03-09T19:27:50.948Z",
     "testConfigurations": {
-        "metadataFile": "benchmark_haiku_4_5_nested_all_formats_and_variants_off\\metadata.json",
-        "agentIdsFile": "benchmark_haiku_4_5_nested_all_formats_and_variants_off\\agent_ids.json",
-        "metricsFile": "benchmark_haiku_4_5_nested_all_formats_and_variants_off\\metrics.json",
-        "model": "Entered by user",
-        "thinking": "Entered by user",
+        "metadataFile": "benchmark_haiku_4_5\\results_nested_all_formats_and_variants_off\\metadata.json",
+        "agentIdsFile": "benchmark_haiku_4_5\\results_nested_all_formats_and_variants_off\\agent_ids.json",
+        "metricsFile": "benchmark_haiku_4_5\\results_nested_all_formats_and_variants_off\\metrics.json",
+        "model": "claude-haiku-4-5-20251001",
+        "thinking": "off",
         "formats": [
             "toon_unsafe",
             "xml_compact",

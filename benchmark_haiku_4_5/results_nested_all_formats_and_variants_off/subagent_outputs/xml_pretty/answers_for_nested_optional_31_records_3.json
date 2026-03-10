@@ -1,8 +1,8 @@
 {
     "metadata": {
         "format": "xml_pretty",
-        "dataFile": "xml_pretty_with_optional_31_nested_records.xml",
-        "questionsFilePath": "questions_with_optional_31_records.json"
+        "dataFilePath": "benchmark_haiku_4_5\\results_nested_all_formats_and_variants_off\\data\\xml_pretty\\xml_pretty_with_optional_31_nested_records.xml",
+        "questionsFilePath": "benchmark_haiku_4_5\\results_nested_all_formats_and_variants_off\\questions\\questionswith_optional_31_records.json"
     },
     "answers": [
         {

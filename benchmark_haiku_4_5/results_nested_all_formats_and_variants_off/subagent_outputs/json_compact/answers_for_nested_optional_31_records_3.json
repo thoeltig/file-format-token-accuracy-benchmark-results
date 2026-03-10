@@ -1,8 +1,8 @@
 {
     "metadata": {
         "format": "json_compact",
-        "dataFile": "json_compact_with_optional_31_nested_records.json",
-        "questionnaireFile": "questions_with_optional_31_records.json"
+        "dataFilePath": "benchmark_haiku_4_5\\results_nested_all_formats_and_variants_off\\data\\json_compact\\json_compact_with_optional_31_nested_records.json",
+        "questionsFilePath": "benchmark_haiku_4_5\\results_nested_all_formats_and_variants_off\\questions\\questions_with_optional_31_records.json"
     },
     "answers": [
         {
