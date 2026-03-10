@@ -15,7 +15,7 @@
       "mandatory"
     ],
     "model": "claude-haiku-4-5-20251001",
-    "thinking": "off",
+    "thinking": "on",
     "timestamp": "2026-03-07T14:52:34.729Z"
   },
   "readOnlyTests": [

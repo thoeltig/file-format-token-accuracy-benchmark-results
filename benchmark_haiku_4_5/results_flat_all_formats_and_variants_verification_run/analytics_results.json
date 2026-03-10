@@ -5,7 +5,7 @@
         "agentIdsFile": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_verification_run\\agent_ids.json",
         "metricsFile": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_verification_run\\metrics.json",
         "model": "claude-haiku-4-5-20251001",
-        "thinking": "off",
+        "thinking": "on",
         "formats": [
             "csv",
             "json_compact",

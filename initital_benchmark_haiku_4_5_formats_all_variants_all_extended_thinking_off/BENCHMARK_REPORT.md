@@ -2,7 +2,7 @@
 
 - **Date**: 2025-12-19
 - **Model**: Claude 4.5 Haiku
-- **Extended Thinking**: Off
+- **Thinking**: On
 - **Formats**: CSV, JSON (pretty & compact), JSONL, TOON, Markdown, YAML
 - **Data**: 40 & 80 product records as flat arrays
 - **Status**: First iteration - findings published to inform future test methodology
@@ -69,7 +69,7 @@ Most benchmarks focus on token efficiency (chars/token). This research also high
 
 **Execution Strategy:**
 - Phase 1: Readonly test to establish read token per file format
-- Phase 2: 3 independent full tests per combination with extended thinking disabled
+- Phase 2: 3 independent full tests per combination with thinking disabled
 - Metrics: read tokens, reasoning tokens, output tokens, accuracy, duration
 
 ### 1.3 Metrics Definition
@@ -545,7 +545,7 @@ Lower values = less wasted tokens on inaccurate output
 
 **What to Change:**
 
-1. **Extended Thinking Impact**: Current benchmark runs with extended thinking OFF, providing lower-bound token costs. Future: test with extended thinking ON to understand reasoning overhead impact.
+1. **Thinking Impact**: Current benchmark runs with thinking ON, providing higher-bound token costs. Future: test with thinking OFF to understand reasoning overhead impact.
 
 2. **Larger Record Counts**: 40 and 80 records don't amortize reasoning cost sufficiently. Future: test 160+ records to show scaling at realistic API payload sizes.
 
@@ -568,14 +568,14 @@ Lower values = less wasted tokens on inaccurate output
 ### 6.3 Future Test Focus
 
 **Iteration 2 Goals:**
-1. Test extended thinking enabled (measure reasoning cost multiplication)
+1. Test thinking disabled (measure reasoning cost multiplication)
 2. Larger record counts (160, 320) to validate linear scaling at realistic scale
 3. Test with Claude 4.5 Sonnet (compare Haiku efficiency across model sizes)
 4. Measure impact of optional field density (0%, 25%, 50%, 75% sparsity)
 5. Real-world datasets: financial records, system logs, code repositories
 
 **Expected Discoveries:**
-- Extended thinking may favor structured formats (better logical decomposition)
+- Thinking may favor structured formats (better logical decomposition)
 - Sonnet may show different accuracy/efficiency trade-offs
 - Sparsity impact may change format recommendations
 - Real-world data complexity may expose edge cases in synthetic testing
@@ -640,9 +640,9 @@ This benchmark reveals **chars/token measures tokenization, but total tokens mea
 
 ### 7.3 Open Research Questions
 
-This iteration answers "which format for Haiku with thinking OFF?" but raises:
+This iteration answers "which format for Haiku with thinking ON?" but raises:
 
-1. Does extended thinking change format rankings? (JSON/YAML overhead may justify more with complex reasoning)
+1. Does thinking change format rankings? (JSON/YAML overhead may justify more with complex reasoning)
 2. How do format recommendations change across Claude model family?
 3. What record count maximally amortizes reasoning overhead?
 4. Do real-world datasets (non-uniform value distribution) change rankings?
@@ -681,7 +681,7 @@ This iteration answers "which format for Haiku with thinking OFF?" but raises:
 ## Appendix B: Test Infrastructure
 
 **Model**: Claude 4.5 Haiku (claude-haiku-4-5-20251001)
-**Extended Thinking**: Disabled
+**Thinking**: Enabled
 **Cache Configuration**: Prompt caching enabled (data file cached after first read)
 
 **Test Execution:**
@@ -715,6 +715,6 @@ Multi-step questions excluded (0% weight) as they represent edge case reasoning,
 - **Written by**: [Thore Höltig](https://github.com/thoeltig)
 - **With the help of**: Claude 4.5 Sonnet
 - **Data Source**: `benchmark_format_all_variant_all_haiku_off/analytics_results.json`
-- **Next Iteration**: Extended thinking impact analysis and nested objects (Iteration 2)
+- **Next Iteration**: Thinking impact analysis and nested objects (Iteration 2)
 - **Publication**: Open source research in [GitHub repository](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results)
 - **Benchmark Tool**: Claude Code Plugin in [GitHub repository](https://github.com/thoeltig/file-format-token-accuracy-benchmark)
