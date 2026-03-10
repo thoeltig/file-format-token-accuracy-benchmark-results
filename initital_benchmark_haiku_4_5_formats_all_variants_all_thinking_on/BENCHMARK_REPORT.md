@@ -714,7 +714,7 @@ Multi-step questions excluded (0% weight) as they represent edge case reasoning,
 - **Report Generated**: 2026-01-25
 - **Written by**: [Thore Höltig](https://github.com/thoeltig)
 - **With the help of**: Claude 4.5 Sonnet
-- **Data Source**: `benchmark_format_all_variant_all_haiku_off/analytics_results.json`
+- **Data Source**: `initital_benchmark_haiku_4_5_formats_all_variants_all_thinking_on/analytics_results.json`
 - **Next Iteration**: Thinking impact analysis and nested objects (Iteration 2)
 - **Publication**: Open source research in [GitHub repository](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results)
 - **Benchmark Tool**: Claude Code Plugin in [GitHub repository](https://github.com/thoeltig/file-format-token-accuracy-benchmark)
