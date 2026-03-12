@@ -195,7 +195,11 @@
                 "recordCount": 31,
                 "testRuns": 3,
                 "durationMs": 110859.333,
-                "outputTokens": 341.667
+                "durationMsMin": 104580,
+                "durationMsMax": 119969,
+                "outputTokens": 341.667,
+                "outputTokensMin": 335,
+                "outputTokensMax": 346
             },
             {
                 "format": "toon_safe",
@@ -204,7 +208,11 @@
                 "recordCount": 31,
                 "testRuns": 3,
                 "durationMs": 111018.667,
-                "outputTokens": 343.333
+                "durationMsMin": 96831,
+                "durationMsMax": 122539,
+                "outputTokens": 343.333,
+                "outputTokensMin": 342,
+                "outputTokensMax": 345
             },
             {
                 "format": "yaml",
@@ -213,7 +221,11 @@
                 "recordCount": 31,
                 "testRuns": 3,
                 "durationMs": 88278.333,
-                "outputTokens": 231
+                "durationMsMin": 74611,
+                "durationMsMax": 95947,
+                "outputTokens": 231,
+                "outputTokensMin": 14,
+                "outputTokensMax": 343
             },
             {
                 "format": "json_pretty",
@@ -222,7 +234,11 @@
                 "recordCount": 31,
                 "testRuns": 2,
                 "durationMs": 73161.5,
-                "outputTokens": 336
+                "durationMsMin": 53591,
+                "durationMsMax": 92732,
+                "outputTokens": 336,
+                "outputTokensMin": 334,
+                "outputTokensMax": 338
             },
             {
                 "format": "xml_pretty",
@@ -231,7 +247,11 @@
                 "recordCount": 31,
                 "testRuns": 3,
                 "durationMs": 78965,
-                "outputTokens": 232.333
+                "durationMsMin": 72448,
+                "durationMsMax": 88846,
+                "outputTokens": 232.333,
+                "outputTokensMin": 13,
+                "outputTokensMax": 348
             },
             {
                 "format": "xml_compact",
@@ -240,7 +260,11 @@
                 "recordCount": 31,
                 "testRuns": 3,
                 "durationMs": 95202,
-                "outputTokens": 335.333
+                "durationMsMin": 71900,
+                "durationMsMax": 116266,
+                "outputTokens": 335.333,
+                "outputTokensMin": 332,
+                "outputTokensMax": 338
             },
             {
                 "format": "csv",
@@ -249,7 +273,11 @@
                 "recordCount": 31,
                 "testRuns": 3,
                 "durationMs": 78261.667,
-                "outputTokens": 329.333
+                "durationMsMin": 54212,
+                "durationMsMax": 94351,
+                "outputTokens": 329.333,
+                "outputTokensMin": 329,
+                "outputTokensMax": 330
             },
             {
                 "format": "xml_compact",
@@ -258,7 +286,11 @@
                 "recordCount": 31,
                 "testRuns": 3,
                 "durationMs": 75333.667,
-                "outputTokens": 342.667
+                "durationMsMin": 54715,
+                "durationMsMax": 89910,
+                "outputTokens": 342.667,
+                "outputTokensMin": 334,
+                "outputTokensMax": 352
             },
             {
                 "format": "json_compact",
@@ -267,7 +299,11 @@
                 "recordCount": 31,
                 "testRuns": 3,
                 "durationMs": 109802,
-                "outputTokens": 227.667
+                "durationMsMin": 99987,
+                "durationMsMax": 114989,
+                "outputTokens": 227.667,
+                "outputTokensMin": 9,
+                "outputTokensMax": 339
             },
             {
                 "format": "json_pretty",
@@ -276,7 +312,11 @@
                 "recordCount": 31,
                 "testRuns": 3,
                 "durationMs": 106025.667,
-                "outputTokens": 341
+                "durationMsMin": 98973,
+                "durationMsMax": 112746,
+                "outputTokens": 341,
+                "outputTokensMin": 340,
+                "outputTokensMax": 343
             },
             {
                 "format": "yaml",
@@ -285,7 +325,11 @@
                 "recordCount": 31,
                 "testRuns": 3,
                 "durationMs": 88549,
-                "outputTokens": 333.333
+                "durationMsMin": 77043,
+                "durationMsMax": 111149,
+                "outputTokens": 333.333,
+                "outputTokensMin": 331,
+                "outputTokensMax": 335
             },
             {
                 "format": "toon_unsafe",
@@ -294,7 +338,11 @@
                 "recordCount": 31,
                 "testRuns": 3,
                 "durationMs": 80913.667,
-                "outputTokens": 230.667
+                "durationMsMin": 69065,
+                "durationMsMax": 103346,
+                "outputTokens": 230.667,
+                "outputTokensMin": 9,
+                "outputTokensMax": 342
             },
             {
                 "format": "csv",
@@ -303,7 +351,11 @@
                 "recordCount": 31,
                 "testRuns": 3,
                 "durationMs": 109799.667,
-                "outputTokens": 231
+                "durationMsMin": 106533,
+                "durationMsMax": 115610,
+                "outputTokens": 231,
+                "outputTokensMin": 13,
+                "outputTokensMax": 344
             },
             {
                 "format": "toon_safe",
@@ -312,7 +364,11 @@
                 "recordCount": 31,
                 "testRuns": 3,
                 "durationMs": 77811.333,
-                "outputTokens": 338.667
+                "durationMsMin": 54561,
+                "durationMsMax": 120777,
+                "outputTokens": 338.667,
+                "outputTokensMin": 335,
+                "outputTokensMax": 343
             },
             {
                 "format": "json_compact",
@@ -321,7 +377,11 @@
                 "recordCount": 31,
                 "testRuns": 3,
                 "durationMs": 82813.333,
-                "outputTokens": 337.667
+                "durationMsMin": 54867,
+                "durationMsMax": 117436,
+                "outputTokens": 337.667,
+                "outputTokensMin": 334,
+                "outputTokensMax": 341
             },
             {
                 "format": "xml_pretty",
@@ -330,7 +390,11 @@
                 "recordCount": 31,
                 "testRuns": 3,
                 "durationMs": 102619,
-                "outputTokens": 342.667
+                "durationMsMin": 80686,
+                "durationMsMax": 113962,
+                "outputTokens": 342.667,
+                "outputTokensMin": 336,
+                "outputTokensMax": 347
             }
         ],
         "summary": {
