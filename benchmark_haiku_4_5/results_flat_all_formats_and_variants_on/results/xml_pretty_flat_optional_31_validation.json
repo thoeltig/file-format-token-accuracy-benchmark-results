@@ -9,7 +9,11 @@
         "correct": 82.33,
         "incorrect": 41.67,
         "accuracyPercent": 66.4,
-        "weightedAccuracyPercent": 66.69
+        "accuracyDriftPercMin": -4.05,
+        "accuracyDriftPercMax": 3.24,
+        "weightedAccuracyPercent": 66.69,
+        "weightedAccuracyDriftPercMin": -5.31,
+        "weightedAccuracyDriftPercMax": 3.27
     },
     "perRunAccuracy": [
         {
