@@ -1,0 +1,505 @@
+{
+    "metadata": {
+        "format": "toon_safe",
+        "dataFile": "benchmark_haiku_4_5\\data\\toon_safe_with_mandatory_31_flat_records.toon",
+        "questionsFilePath": "benchmark_haiku_4_5\\questions\\questions_with_mandatory_31_records.json"
+    },
+    "answers": [
+        {
+            "questionId": 2,
+            "answer": "19607"
+        },
+        {
+            "questionId": 3,
+            "answer": "Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality."
+        },
+        {
+            "questionId": 4,
+            "answer": "MFR-711778"
+        },
+        {
+            "questionId": 5,
+            "answer": "264"
+        },
+        {
+            "questionId": 6,
+            "answer": "Industrial Equipment"
+        },
+        {
+            "questionId": 7,
+            "answer": "Premier Parts Ltd"
+        },
+        {
+            "questionId": 8,
+            "answer": "TOO-000020"
+        },
+        {
+            "questionId": 9,
+            "answer": "5351"
+        },
+        {
+            "questionId": 10,
+            "answer": "true"
+        },
+        {
+            "questionId": 11,
+            "answer": "357.31"
+        },
+        {
+            "questionId": 12,
+            "answer": "false"
+        },
+        {
+            "questionId": 13,
+            "answer": "105x63x105cm"
+        },
+        {
+            "questionId": 14,
+            "answer": "D-32-46"
+        },
+        {
+            "questionId": 15,
+            "answer": "2026-01-05"
+        },
+        {
+            "questionId": 16,
+            "answer": "2.9"
+        },
+        {
+            "questionId": 17,
+            "answer": "1916.23"
+        },
+        {
+            "questionId": 18,
+            "answer": "2025-11-19"
+        },
+        {
+            "questionId": 19,
+            "answer": "1446.21"
+        },
+        {
+            "questionId": 20,
+            "answer": "Standard Pump 5568"
+        },
+        {
+            "questionId": 21,
+            "answer": "149"
+        },
+        {
+            "questionId": 22,
+            "answer": "Furniture,false,54,Industrial Solutions Inc,70x98x81cm"
+        },
+        {
+            "questionId": 23,
+            "answer": "J-11-30,123x162x90cm,TEX-000021,6020"
+        },
+        {
+            "questionId": 24,
+            "answer": "2540,301.25,false"
+        },
+        {
+            "questionId": 25,
+            "answer": "2026-01-05,I-2-32"
+        },
+        {
+            "questionId": 26,
+            "answer": "J-92-6,3542,2025-12-12,2679"
+        },
+        {
+            "questionId": 27,
+            "answer": "5351,false"
+        },
+        {
+            "questionId": 28,
+            "answer": "MFR-351257,Dubai (UAE),3590,52x194x95cm"
+        },
+        {
+            "questionId": 29,
+            "answer": "48034,Packaging,1413.87,MFR-944070"
+        },
+        {
+            "questionId": 30,
+            "answer": "2025-09-27,D-32-46"
+        },
+        {
+            "questionId": 31,
+            "answer": "Dubai (UAE),2026-03-04,561"
+        },
+        {
+            "questionId": 32,
+            "answer": "1089.47,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,MFR-711778,IND-000010,Material Distributors AB,3244.69"
+        },
+        {
+            "questionId": 33,
+            "answer": "2025-09-11,4.9,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,false,2025-12-09,1567.97"
+        },
+        {
+            "questionId": 34,
+            "answer": "OFF-000022,false,2025-12-09,C-50-24,Standard Drill 2248,2662"
+        },
+        {
+            "questionId": 35,
+            "answer": "90x88x73cm,false,MFR-687299,437,2025-12-27,4668.34"
+        },
+        {
+            "questionId": 36,
+            "answer": "733.52,283.83,Basic Switch 3220,264,Packaging,MFR-933861,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control."
+        },
+        {
+            "questionId": 37,
+            "answer": "6681,MFR-932403,869.43,2025-10-28"
+        },
+        {
+            "questionId": 38,
+            "answer": "false,5635,452.9,Tech Components Group,PAC-000012,Shanghai (China)"
+        },
+        {
+            "questionId": 39,
+            "answer": "false,Hong Kong,true,12246,134x169x142cm,271"
+        },
+        {
+            "questionId": 40,
+            "answer": "195x67x73cm,239.74,514.81"
+        },
+        {
+            "questionId": 41,
+            "answer": "350,CHE-000016,I-33-5,83821,1933.27,Tools"
+        },
+        {
+            "questionId": 42,
+            "answer": "2025-12-25,438.2,1721,225,G-41-49,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,1089.47,3555,CHE-000005,8113,34x95x110cm,385.84"
+        },
+        {
+            "questionId": 43,
+            "answer": "7205,2025-11-08,C-54-21,3.3,1088,16,2026-02-22,1446.21"
+        },
+        {
+            "questionId": 44,
+            "answer": "TOO-000023,MFR-693132,Chemicals,1.3,G-22-29,MFR-228549"
+        },
+        {
+            "questionId": 45,
+            "answer": "Reliable Vendors LLC,2025-11-14,false,true,MFR-933861,10788,264,MFR-687299,437,90x88x73cm,Dubai (UAE),51.33"
+        },
+        {
+            "questionId": 46,
+            "answer": "true,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,2141,Los Angeles (USA),694,67467"
+        },
+        {
+            "questionId": 47,
+            "answer": "Deluxe Pump 7944,461,2026-01-05,2997,1199,27999,9044"
+        },
+        {
+            "questionId": 48,
+            "answer": "Tech Components Group,CHE-000014,196.58,6681,Hamburg (Germany),false"
+        },
+        {
+            "questionId": 49,
+            "answer": "2026-03-04,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,55.87,68,170x55x41cm,7554,4.1,3469.35,TOO-000027,Tools,13531,5236"
+        },
+        {
+            "questionId": 50,
+            "answer": "FUR-000013,176x30x100cm,1164,2025-11-01,766.91,Office Supplies,Hong Kong,Factory Direct Inc,1"
+        },
+        {
+            "questionId": 51,
+            "answer": "2026-02-13,MFR-354174,J-11-30,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,798.2,905.81,OFF-000022,Standard Drill 2248"
+        },
+        {
+            "questionId": 52,
+            "answer": "508,Singapore,MFR-260320,false,2025-09-26,CHE-000016,3549,Deluxe Compressor 2613,2.5,true"
+        },
+        {
+            "questionId": 53,
+            "answer": "2026-01-12,1798.7,2025-12-14,301.25,MFR-240216,2026-01-13,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,New York (USA)"
+        },
+        {
+            "questionId": 54,
+            "answer": "2026-01-05,Trade Partners Ltd,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,35x149x168cm,2025-12-23,4.3,Premier Parts Ltd,65,false"
+        },
+        {
+            "questionId": 55,
+            "answer": "70x98x81cm,54,true,Compact Controller 2751,982.44,158x127x114cm,71147,2025-12-23,Furniture,false"
+        },
+        {
+            "questionId": 56,
+            "answer": "452.9,144,2026-01-03,19607,Material Distributors AB,2025-09-11,4.9,Industrial Equipment,MFR-234382,56680,false"
+        },
+        {
+            "questionId": 57,
+            "answer": "1"
+        },
+        {
+            "questionId": 58,
+            "answer": "1"
+        },
+        {
+            "questionId": 59,
+            "answer": "6"
+        },
+        {
+            "questionId": 60,
+            "answer": "1"
+        },
+        {
+            "questionId": 61,
+            "answer": "1"
+        },
+        {
+            "questionId": 62,
+            "answer": "5"
+        },
+        {
+            "questionId": 63,
+            "answer": "3"
+        },
+        {
+            "questionId": 64,
+            "answer": "10"
+        },
+        {
+            "questionId": 65,
+            "answer": "16"
+        },
+        {
+            "questionId": 66,
+            "answer": "17"
+        },
+        {
+            "questionId": 67,
+            "answer": "11"
+        },
+        {
+            "questionId": 68,
+            "answer": "16"
+        },
+        {
+            "questionId": 69,
+            "answer": "13"
+        },
+        {
+            "questionId": 70,
+            "answer": "10"
+        },
+        {
+            "questionId": 71,
+            "answer": "1"
+        },
+        {
+            "questionId": 72,
+            "answer": "0"
+        },
+        {
+            "questionId": 73,
+            "answer": "1"
+        },
+        {
+            "questionId": 74,
+            "answer": "0"
+        },
+        {
+            "questionId": 75,
+            "answer": "1"
+        },
+        {
+            "questionId": 76,
+            "answer": "0"
+        },
+        {
+            "questionId": 77,
+            "answer": "1"
+        },
+        {
+            "questionId": 78,
+            "answer": "36265.74"
+        },
+        {
+            "questionId": 79,
+            "answer": "7181.70"
+        },
+        {
+            "questionId": 80,
+            "answer": "97.1"
+        },
+        {
+            "questionId": 81,
+            "answer": "73569.44"
+        },
+        {
+            "questionId": 82,
+            "answer": "8169"
+        },
+        {
+            "questionId": 83,
+            "answer": "163204"
+        },
+        {
+            "questionId": 84,
+            "answer": "57618"
+        },
+        {
+            "questionId": 85,
+            "answer": "452.9"
+        },
+        {
+            "questionId": 86,
+            "answer": "6424"
+        },
+        {
+            "questionId": 87,
+            "answer": "9975"
+        },
+        {
+            "questionId": 88,
+            "answer": "733.52"
+        },
+        {
+            "questionId": 89,
+            "answer": "478"
+        },
+        {
+            "questionId": 90,
+            "answer": "79"
+        },
+        {
+            "questionId": 91,
+            "answer": "5"
+        },
+        {
+            "questionId": 92,
+            "answer": "2373.21"
+        },
+        {
+            "questionId": 93,
+            "answer": "1170.51"
+        },
+        {
+            "questionId": 94,
+            "answer": "5265.29"
+        },
+        {
+            "questionId": 95,
+            "answer": "1859.29"
+        },
+        {
+            "questionId": 96,
+            "answer": "48937.13"
+        },
+        {
+            "questionId": 97,
+            "answer": "263.52"
+        },
+        {
+            "questionId": 98,
+            "answer": "231.67"
+        },
+        {
+            "questionId": 99,
+            "answer": "31"
+        },
+        {
+            "questionId": 100,
+            "answer": "682"
+        },
+        {
+            "questionId": 101,
+            "answer": "682"
+        },
+        {
+            "questionId": 102,
+            "answer": "0"
+        },
+        {
+            "questionId": 103,
+            "answer": "22"
+        },
+        {
+            "questionId": 104,
+            "answer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped,avgRating,shelfLife,discontinuedDate"
+        },
+        {
+            "questionId": 105,
+            "answer": ""
+        },
+        {
+            "questionId": 106,
+            "answer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped,avgRating,shelfLife,discontinuedDate"
+        },
+        {
+            "questionId": 107,
+            "answer": "1,1.1,1.3,1.8,2.1,2.3,2.5,2.6,2.7,2.9,3.1,3.3,3.4,3.5,3.7,3.9,4.1,4.2,4.3,4.7,4.9,5"
+        },
+        {
+            "questionId": 108,
+            "answer": "6424,10360,10788,12246,13531,19607,24318,25001,26969,27999,35105,39214,45638,48034,49573,53427,55395,56680,67212,67467,67640,71147,76460,78254,81853,83821,88786,91182,96067,96576"
+        },
+        {
+            "questionId": 109,
+            "answer": "692,1136,1282,2030,2066,2997,3077,3259,3374,3542,4065,4123,5090,5112,5170,5236,5351,5635,6020,6158,6681,7205,7328,7554,8113,8601,9044,9306,9647,9975"
+        },
+        {
+            "questionId": 110,
+            "answer": "Basic Wrench 3584,Heavy-Duty Pump 9402,Deluxe Valve 988,Standard Pump 5568,Heavy-Duty Sensor 866,Basic Controller 4209,Basic Switch 3220,Industrial Wrench 5325,Compact Pump 8049,Industrial Connector 8916,Premium Connector 5452,Compact Connector 5082,Deluxe Switch 5331,Professional Pump 3723,Compact Cable 7684,Standard Valve 4839,Deluxe Compressor 2613,Premium Controller 8430,Industrial Wrench 9916,Industrial Controller 4596,Standard Cable 9795,Standard Connector 3237,Standard Drill 2248,Compact Generator 4353,Premium Controller 7077,Deluxe Pump 7944,Heavy-Duty Pump 4480,Premium Motor 4110,Professional Drill 4359,Compact Controller 2751,Professional Motor 6712"
+        },
+        {
+            "questionId": 111,
+            "answer": "Accessories,Chemicals,Electronics,Furniture,Industrial Equipment,Materials,Office Supplies,Packaging,Textiles,Tools"
+        },
+        {
+            "questionId": 112,
+            "answer": "ACC-000028,CHE-000005,CHE-000014,CHE-000016,ELE-000001,ELE-000006,ELE-000008,FUR-000013,FUR-000030,IND-000003,IND-000004,IND-000007,IND-000010,IND-000011,IND-000015,IND-000025,MAT-000000,MAT-000026,OFF-000009,OFF-000017,OFF-000022,OFF-000024,PAC-000012,PAC-000018,TEX-000002,TEX-000021,TEX-000029,TOO-000019,TOO-000020,TOO-000023,TOO-000027"
+        },
+        {
+            "questionId": 113,
+            "answer": "10x90x157cm,13x152x98cm,34x95x110cm,35x149x168cm,36x24x63cm,44x101x161cm,52x194x95cm,58x68x114cm,58x186x186cm,63x154x166cm,70x98x81cm,80x183x61cm,89x135x53cm,90x88x73cm,102x102x7cm,105x63x105cm,116x22x176cm,120x84x117cm,123x162x90cm,125x21x149cm,134x169x142cm,143x152x83cm,147x136x95cm,158x127x114cm,165x118x9cm,169x86x185cm,170x55x41cm,176x30x100cm,192x170x184cm,195x130x86cm,195x67x73cm"
+        },
+        {
+            "questionId": 114,
+            "answer": "Factory Direct Inc,Global Supply Co,Industrial Solutions Inc,Material Distributors AB,Premier Parts Ltd,Reliable Vendors LLC,Tech Components Group,Trade Partners Ltd"
+        },
+        {
+            "questionId": 115,
+            "answer": "16,28,44,54,65,68,107,108,113,127,144,146,186,211,223,225,264,270,271,275,294,304,350,378,429,432,437,441,452,461,478"
+        },
+        {
+            "questionId": 116,
+            "answer": "765.86,798.2,830.54,877.32,917.75,942.01,982.44,1333.01,1349.18,1365.35,1381.52,1397.69,1413.87,1430.04,1446.21,1733.52,2141,2149.08,2205.68,2213.77,3212.34,3244.69,3277.03,3309.37,3380.41,3404.67,3445.1,3469.35,4611.74,4668.34,4676.42"
+        },
+        {
+            "questionId": 117,
+            "answer": "12.93,51.33,147.49,196.58,228.64,380.24,491.42,497.78,502.11,514.81,589.61,766.91,869.43,905.81,1029.7,1036.05,1089.47,1224.04,1305.19,1567.97,1578.65,1615.04,1798.7,1916.23,1933.27,1982.36,2008.06,2106.24,2185.37,2287.88,2454.5"
+        },
+        {
+            "questionId": 118,
+            "answer": "A-89-41,A-93-38,B-20-33,B-6-1,C-1-13,C-1-22,C-50-24,C-53-39,C-54-21,D-32-46,D-66-25,D-80-16,E-11-7,E-14-22,F-27-17,F-90-5,G-22-29,G-22-38,G-41-49,G-56-17,G-72-22,G-73-5,H-71-40,I-16-9,I-2-32,I-33-5,J-11-30,J-12-21,J-46-9,J-92-6"
+        },
+        {
+            "questionId": 119,
+            "answer": "Dubai (UAE),Hamburg (Germany),Hong Kong,Los Angeles (USA),New York (USA),Rotterdam (Netherlands),Shanghai (China),Singapore"
+        },
+        {
+            "questionId": 120,
+            "answer": "2025-10-18,2025-10-24,2025-10-28,2025-11-01,2025-11-06,2025-11-14,2025-12-05,2025-12-09,2025-12-12,2025-12-14,2025-12-19,2025-12-23,2025-12-25,2025-12-27,2025-12-29,2025-12-30,2026-01-03,2026-01-05,2026-01-13,2026-01-14,2026-01-26,2026-02-01,2026-02-02,2026-02-03,2026-02-12,2026-02-17,2026-02-21,2026-02-22,2026-02-24,2026-03-02,2026-03-04"
+        },
+        {
+            "questionId": 121,
+            "answer": "3.51,48.58,55.87,62.29,70.57,92.67,106.5,129.47,144.16,165.28,166.15,183.68,210.24,213.07,224.06,239.74,242.46,247.03,261.73,271.86,282.85,283.83,301.25,330.64,357.31,360.03,385.84,401.4,438.2,444.62,452.9"
+        },
+        {
+            "questionId": 122,
+            "answer": "false,true"
+        },
+        {
+            "questionId": 123,
+            "answer": "PROD-000001,PROD-000002,PROD-000003,PROD-000004,PROD-000005,PROD-000006,PROD-000007,PROD-000008,PROD-000009,PROD-000010,PROD-000011,PROD-000012,PROD-000013,PROD-000014,PROD-000015,PROD-000016,PROD-000017,PROD-000018,PROD-000019,PROD-000020,PROD-000021,PROD-000022,PROD-000023,PROD-000024,PROD-000025,PROD-000026,PROD-000027,PROD-000028,PROD-000029,PROD-000030,PROD-000031"
+        },
+        {
+            "questionId": 124,
+            "answer": "79,149,201,218,508,561,694,798,1088,1129,1141,1164,1199,1309,1721,1924,2081,2301,2359,2395,2540,2662,2679,3155,3242,3259,3549,3590,3625,3555"
+        },
+        {
+            "questionId": 125,
+            "answer": "MFR-228549,MFR-234382,MFR-240216,MFR-246049,MFR-255945,MFR-260320,MFR-267611,MFR-271986,MFR-339591,MFR-342507,MFR-345424,MFR-348341,MFR-351257,MFR-354174,MFR-357091,MFR-360007,MFR-489695,MFR-488236,MFR-499903,MFR-501361,MFR-693132,MFR-704486,MFR-711778,MFR-716153,MFR-723445,MFR-932403,MFR-933861,MFR-944070,MFR-945528,MFR-687299,MFR-681466"
+        }
+    ]
+}
