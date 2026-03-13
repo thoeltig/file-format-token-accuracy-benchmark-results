@@ -398,7 +398,7 @@
             }
         ],
         "summary": {
-            "totalTestCases": 30,
+            "totalTestCases": 16,
             "totalDurationMs": 2539186.133,
             "totalOutputTokens": 8632.252,
             "averageDurationMs": 84639.538,
