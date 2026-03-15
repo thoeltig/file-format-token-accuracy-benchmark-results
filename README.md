@@ -12,7 +12,8 @@ This repository contains **benchmark results and raw data** from experiments eva
 
 - **Date**: December 19, 2025
 - **Model**: Claude 4.5 Haiku
-- **Extended Thinking**: Off
+- **Thinking**: on
+- **Structure**: flat
 - **Tested Formats**: 7 (CSV, JSON Compact/Pretty, JSONL, TOON, Markdown, YAML)
 - **Data Variants**: Mandatory and optional fields, 40 & 80 record datasets
 
