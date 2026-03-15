@@ -89,6 +89,23 @@ Each benchmark generates standardized test data:
 
 All data is formatted identically in each file format to ensure apples-to-apples comparison.
 
+### Formats Tested
+
+| Format | Description |
+|--------|-------------|
+| **CSV** | Comma-separated values (tabular, row-per-record) |
+| **JSON Pretty** | Standard indented JSON |
+| **JSON Compact** | Minified JSON (no whitespace or newlines) |
+| **XML Pretty** | Standard indented XML |
+| **XML Compact** | Minified XML (no whitespace or indentation) |
+| **TOON Unsafe** | [Token-Oriented Object Notation](https://toonformat.dev/) with key folding disabled which expands the nested structures fully (default) |
+| **TOON Safe** | [Token-Oriented Object Notation](https://toonformat.dev/) with key folding enabled which collapses single-key object chains into dotted paths (`a.b.c: value`) |
+| **YAML** | Standard YAML with hierarchical indentation |
+
+*Note: All formats are tested in both flat and nested structures except CSV which is flat only.*
+
+Format implementation details can be found in ["Format Specifics" section in the benchmark plugin README](https://github.com/thoeltig/file-format-token-accuracy-benchmark#format-specifics).
+
 ## Methodology
 
 ### Evaluation Criteria
