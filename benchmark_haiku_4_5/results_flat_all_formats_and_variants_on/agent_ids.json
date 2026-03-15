@@ -14,8 +14,9 @@
       "optional",
       "mandatory"
     ],
-    "model": "claude-haiku-4-5-20251001",
+    "model": "Claude Haiku 4.5 (claude-haiku-4-5-20251001)",
     "thinking": "on",
+    "structure": "flat",
     "timestamp": "2026-03-07T14:52:34.729Z"
   },
   "readOnlyTests": [

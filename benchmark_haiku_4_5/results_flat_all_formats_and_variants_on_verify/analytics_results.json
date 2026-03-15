@@ -4,8 +4,9 @@
         "metadataFile": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\metadata.json",
         "agentIdsFile": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\agent_ids.json",
         "metricsFile": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\metrics.json",
-        "model": "claude-haiku-4-5-20251001",
+        "model": "Claude Haiku 4.5 (claude-haiku-4-5-20251001)",
         "thinking": "on",
+        "structure": "flat",
         "formats": [
             "csv",
             "json_compact",
