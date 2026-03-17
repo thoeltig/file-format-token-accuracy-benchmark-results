@@ -1,8 +1,8 @@
 {
     "metadata": {
-        "format": "toon_safe",
-        "dataFilePath": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data\\toon_safe\\toon_safe_with_optional_31_flat_records.toon",
-        "questionsFilePath": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\questions\\questions_with_optional_31_records.json"
+        "format": "toon_default",
+        "questionsFilePath": "benchmark_haiku_4_5_flat_all_formats_and_variants_off\\questions\\questions_with_optional_31_records.json",
+        "dataFilePath": "benchmark_haiku_4_5_flat_all_formats_and_variants_off\\data\\toon_default\\toon_default_with_optional_31_flat_records.toon"
     },
     "answers": [
         {
@@ -111,7 +111,7 @@
         },
         {
             "questionId": 28,
-            "answer": "Dubai (UAE),128x115x58cm,34,false,2852.32,false,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality."
+            "answer": "Dubai (UAE),Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,34,false,2852.32"
         },
         {
             "questionId": 29,
@@ -131,7 +131,7 @@
         },
         {
             "questionId": 33,
-            "answer": "false,46x138x127cm,3848,B-63-46,2026-02-09,251.69,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality."
+            "answer": "false,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,3848,B-63-46,2026-02-09,251.69"
         },
         {
             "questionId": 34,
@@ -163,7 +163,7 @@
         },
         {
             "questionId": 41,
-            "answer": "45x85x151cm,2902.72,165,OFF-000012,2026-02-18,MFR-281350"
+            "answer": "45x85x151cm,2902.72,165,MFR-281350,2026-02-18,OFF-000012"
         },
         {
             "questionId": 42,
@@ -199,11 +199,11 @@
         },
         {
             "questionId": 50,
-            "answer": "2026-02-23,Industrial Solutions Inc,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,36.56,34,false,2026-01-12,8742,128x115x58cm"
+            "answer": "H-72-37,Industrial Solutions Inc,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,36.56,34,true,2026-01-12,8742,128x115x58cm"
         },
         {
             "questionId": 51,
-            "answer": "E-14-39,7535,174x179x43cm,Industrial Pump 346,168.12,91.82,false,2026-01-22,Textiles,136x130x41cm"
+            "answer": "E-14-39,7535,174x179x43cm,Industrial Pump 346,91.82,false,2026-01-22,Textiles,136x130x41cm"
         },
         {
             "questionId": 52,
@@ -219,7 +219,7 @@
         },
         {
             "questionId": 55,
-            "answer": "2026-02-17,Professional Connector 3440,1001,244.43,22x158x118cm,52751,254,2025-12-08,2025-12-01,61347,760.34,Factory Direct Inc,false,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan."
+            "answer": "2026-02-17,Professional Connector 3440,1001,98.83,45x85x151cm,43688,254,2025-12-08,2025-12-01,61347,760.34,Factory Direct Inc,false,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan."
         },
         {
             "questionId": 56,
@@ -255,31 +255,31 @@
         },
         {
             "questionId": 64,
-            "answer": "16"
+            "answer": "13"
         },
         {
             "questionId": 65,
-            "answer": "4"
+            "answer": "18"
         },
         {
             "questionId": 66,
-            "answer": "12"
-        },
-        {
-            "questionId": 67,
-            "answer": "10"
-        },
-        {
-            "questionId": 68,
             "answer": "16"
         },
         {
+            "questionId": 67,
+            "answer": "16"
+        },
+        {
+            "questionId": 68,
+            "answer": "14"
+        },
+        {
             "questionId": 69,
-            "answer": "23"
+            "answer": "19"
         },
         {
             "questionId": 70,
-            "answer": "12"
+            "answer": "16"
         },
         {
             "questionId": 71,
@@ -303,7 +303,7 @@
         },
         {
             "questionId": 76,
-            "answer": "14"
+            "answer": "11"
         },
         {
             "questionId": 77,
@@ -311,19 +311,19 @@
         },
         {
             "questionId": 78,
-            "answer": "75233.69"
+            "answer": "75233.71"
         },
         {
             "questionId": 79,
-            "answer": "35233.37"
+            "answer": "44961.68"
         },
         {
             "questionId": 80,
-            "answer": "174570"
+            "answer": "184929"
         },
         {
             "questionId": 81,
-            "answer": "36.2"
+            "answer": "46.2"
         },
         {
             "questionId": 82,
@@ -331,11 +331,11 @@
         },
         {
             "questionId": 83,
-            "answer": "7438"
+            "answer": "7428"
         },
         {
             "questionId": 84,
-            "answer": "7335.26"
+            "answer": "7338.26"
         },
         {
             "questionId": 85,
@@ -371,7 +371,7 @@
         },
         {
             "questionId": 93,
-            "answer": "236.62"
+            "answer": "236.75"
         },
         {
             "questionId": 94,
@@ -379,19 +379,19 @@
         },
         {
             "questionId": 95,
-            "answer": "5631.29"
+            "answer": "5965.13"
         },
         {
             "questionId": 96,
-            "answer": "239.94"
+            "answer": "239.61"
         },
         {
             "questionId": 97,
-            "answer": "1304.20"
+            "answer": "1450.70"
         },
         {
             "questionId": 98,
-            "answer": "1416.94"
+            "answer": "1561.59"
         },
         {
             "questionId": 99,
@@ -399,11 +399,11 @@
         },
         {
             "questionId": 100,
-            "answer": "837"
+            "answer": "682"
         },
         {
             "questionId": 101,
-            "answer": "806"
+            "answer": "651"
         },
         {
             "questionId": 102,
@@ -411,7 +411,7 @@
         },
         {
             "questionId": 103,
-            "answer": "26"
+            "answer": "22"
         },
         {
             "questionId": 104,
@@ -435,11 +435,11 @@
         },
         {
             "questionId": 109,
-            "answer": "11x46x146cm,114x146x22cm,117x188x194cm,128x115x58cm,132x112x57cm,135x20x37cm,136x130x41cm,154x107x13cm,160x68x188cm,162x90x128cm,172x110x185cm,173x52x18cm,173x98x197cm,174x179x43cm,195x179x95cm,195x67x73cm,22x158x118cm,28x190x120cm,29x58x164cm,33x87x22cm,36x41x59cm,45x85x151cm,46x138x127cm,47x46x28cm,49x195x39cm,50x191x137cm,6x54x123cm,62x71x64cm,9x31x120cm"
+            "answer": "11x46x146cm,114x146x22cm,117x188x194cm,127x57x19cm,128x115x58cm,132x112x57cm,135x20x37cm,136x130x41cm,154x107x13cm,160x68x188cm,162x90x128cm,172x110x185cm,173x52x18cm,173x98x197cm,174x179x43cm,195x179x95cm,195x67x73cm,22x158x118cm,28x190x120cm,29x58x164cm,33x87x22cm,36x41x59cm,45x85x151cm,45x195x39cm,46x138x127cm,47x46x28cm,49x195x39cm,50x191x137cm,6x54x123cm,62x71x64cm,9x31x120cm"
         },
         {
             "questionId": 110,
-            "answer": "Accessories,Chemicals,Electronics,Furniture,Industrial Equipment,Materials,Office Supplies,Packaging,Textiles,Tools"
+            "answer": "Accessories,Chemicals,Electronics,Furniture,Industrial Equipment,Materials,Office Supplies,Packaging,Tools,Textiles"
         },
         {
             "questionId": 111,
@@ -455,19 +455,19 @@
         },
         {
             "questionId": 114,
-            "answer": "2025-12-08,2025-12-18,2025-12-25,2025-12-30,2026-01-08,2026-01-12,2026-01-17,2026-01-18,2026-01-20,2026-01-22,2026-01-23,2026-01-25,2026-01-29,2026-02-03,2026-02-07,2026-02-09,2026-02-17,2026-02-18,2026-02-23,2026-02-26,2026-02-27,2026-03-05"
+            "answer": "2025-12-08,2025-12-14,2025-12-18,2025-12-25,2025-12-30,2026-01-08,2026-01-12,2026-01-17,2026-01-18,2026-01-20,2026-01-22,2026-01-23,2026-01-25,2026-01-29,2026-02-03,2026-02-07,2026-02-09,2026-02-17,2026-02-18,2026-02-23,2026-02-26,2026-02-27,2026-03-05"
         },
         {
             "questionId": 115,
-            "answer": "16.6,23.72,32.22,36.56,37.11,91.82,98.83,133.22,137.5,163.42,179.43,185.9,190.36,197.5,231.54,234.49,239.74,244.43,251.69,263.76,302.78,311.47,313.59,320.31,326.51,389.17,393.19,401.31,413.41,417.84,426.26,444.53,446.93,455.92"
+            "answer": "16.6,23.72,32.22,36.56,37.11,91.82,98.83,133.22,137.5,144.17,163.42,179.43,185.9,190.36,197.31,231.54,234.49,239.74,244.43,251.69,263.76,302.78,311.47,320.21,326.26,389.17,393.19,401.31,413.41,417.84,426.26,444.53,446.93,455.92"
         },
         {
             "questionId": 116,
-            "answer": "27.28,57.06,168.12,320.31,340.83,576.92,1000.79,1187.32,1333.01,1594.34,1766.06,1893.53,1961.23,1985.53,2227.24,2300.04,2574.48,2580.1,2684.49,2852.32,2902.72,2910.99,2999.1,3896.24,4066.6,4718.97,4754.93,4817.41,4896.81,4909,4929.92"
+            "answer": "27.28,57.06,168.12,320.31,340.83,576.92,1000.79,1187.32,1333.01,1594.34,1766.06,1893.53,1961.23,1985.53,2227.24,2300.04,2574.48,2580.1,2684.49,2852.32,2902.72,2910.99,2999.1,4066.6,4717.97,4754.93,4809,4896.81,4909,4929.92"
         },
         {
             "questionId": 117,
-            "answer": "65.64,227.83,409.88,514.81,531.05,666.27,760.34,961.72,1039.24,1053.79,1069.66,1138.24,1140.76,1490.59,1507.08,1535.11,1616.95,1681.11,1704.01,1743.5,2123.56,2191.56,2228.95,2251.23,2316.65,2336.24,2430.17,2437.5,2480.88"
+            "answer": "65.64,227.83,409.88,514.81,531.05,666.27,760.34,961.72,983.4,1039.24,1053.79,1069.66,1138.24,1140.76,1490.59,1507.08,1535.11,1616.95,1681.11,1704.01,1743.5,2123.56,2190.19,2191.56,2228.95,2251.23,2316.65,2336.24,2430.17,2437.5,2480.88"
         },
         {
             "questionId": 118,
@@ -475,7 +475,7 @@
         },
         {
             "questionId": 119,
-            "answer": "284,1244,1439,2078,2439,2505,2773,2813,3272,3399,5233,5286,5506,6927,7106,7111,7205,7499,7535,7722,7744,8226,8742,8862,8879,8966,9228,9566"
+            "answer": "284,1244,1439,2078,2439,2505,2694,2773,2813,3272,3399,3848,5233,5286,5506,6927,7106,7111,7205,7499,7535,7544,7722,8226,8742,8862,8879,8966,9228,9566"
         },
         {
             "questionId": 120,
@@ -491,15 +491,15 @@
         },
         {
             "questionId": 123,
-            "answer": "1349,3837,6576,9927,16699,18707,21122,24375,26969,27161,28782,30361,32974,33636,33933,41508,42705,43299,43688,50898,52751,59332,61347,62417,76603,82512,85975,89227,96466,96951"
+            "answer": "1349,3837,6576,9927,16699,18707,21122,24375,26969,27161,28782,30361,32974,33636,33933,41508,42705,43299,43688,44251,50898,52751,59332,61347,62417,76603,82512,85975,89227,96466,96951"
         },
         {
             "questionId": 124,
-            "answer": "ACC-000011,ACC-000014,ACC-000024,CHE-000001,CHE-000002,CHE-000003,CHE-000004,CHE-000006,CHE-000009,CHE-000010,CHE-000021,ELE-000002,ELE-000016,IND-000001,IND-000015,IND-000017,IND-000020,IND-000025,IND-000030,MAT-000000,MAT-000005,MAT-000027,MAT-000028,OFF-000012,OFF-000022,PAC-000008,PAC-000018,PAC-000019,TEX-000013,TEX-000026,TOO-000007,TOO-000023,TOO-000029"
+            "answer": "ACC-000011,ACC-000014,ACC-000024,CHE-000003,CHE-000004,CHE-000006,CHE-000009,CHE-000010,CHE-000021,ELE-000002,ELE-000016,IND-000001,IND-000015,IND-000017,IND-000020,IND-000025,IND-000030,MAT-000000,MAT-000005,MAT-000027,MAT-000028,OFF-000012,OFF-000022,PAC-000008,PAC-000018,PAC-000019,TEX-000013,TEX-000026,TOO-000007,TOO-000023,TOO-000029"
         },
         {
             "questionId": 125,
-            "answer": "16,34,37,57,60,83,94,101,107,133,150,151,165,172,174,189,203,231,254,317,330,337,358,424,445,454,457,459,464,486,496"
+            "answer": "16,17,34,37,57,60,83,94,101,107,133,150,151,165,172,174,189,203,231,254,317,330,337,358,424,445,454,457,459,464,486"
         }
     ]
 }

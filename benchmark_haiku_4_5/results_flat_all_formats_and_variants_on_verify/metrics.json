@@ -57,10 +57,10 @@
                 "readDurationMs": 23
             },
             {
-                "file": "toon_safe_with_optional_31_flat_records.toon",
-                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data/toon_safe/toon_safe_with_optional_31_flat_records.toon",
+                "file": "toon_default_with_optional_31_flat_records.toon",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data/toon_default/toon_default_with_optional_31_flat_records.toon",
                 "agentId": "a40fbc04027a56e03",
-                "format": "toon_safe",
+                "format": "toon_default",
                 "structure": "flat",
                 "variant": "optional",
                 "recordCount": 31,
@@ -123,10 +123,10 @@
                 "readDurationMs": 17
             },
             {
-                "file": "toon_safe_with_mandatory_31_flat_records.toon",
-                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data/toon_safe/toon_safe_with_mandatory_31_flat_records.toon",
+                "file": "toon_default_with_mandatory_31_flat_records.toon",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data/toon_default/toon_default_with_mandatory_31_flat_records.toon",
                 "agentId": "ac78ef4bca4f4199c",
-                "format": "toon_safe",
+                "format": "toon_default",
                 "structure": "flat",
                 "variant": "mandatory",
                 "recordCount": 31,
@@ -145,10 +145,10 @@
                 "readDurationMs": 30
             },
             {
-                "file": "toon_unsafe_with_optional_31_flat_records.toon",
-                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data/toon_unsafe/toon_unsafe_with_optional_31_flat_records.toon",
+                "file": "toon_default_with_optional_31_flat_records.toon",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data/toon_default/toon_default_with_optional_31_flat_records.toon",
                 "agentId": "aec6dddf98141a4ce",
-                "format": "toon_unsafe",
+                "format": "toon_default",
                 "structure": "flat",
                 "variant": "optional",
                 "recordCount": 31,
@@ -167,10 +167,10 @@
                 "readDurationMs": 24
             },
             {
-                "file": "toon_unsafe_with_mandatory_31_flat_records.toon",
-                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data/toon_unsafe/toon_unsafe_with_mandatory_31_flat_records.toon",
+                "file": "toon_default_with_mandatory_31_flat_records.toon",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on_verify\\data/toon_default/toon_default_with_mandatory_31_flat_records.toon",
                 "agentId": "afea81e28ccb2020c",
-                "format": "toon_unsafe",
+                "format": "toon_default",
                 "structure": "flat",
                 "variant": "mandatory",
                 "recordCount": 31,
@@ -241,7 +241,7 @@
                 "outputTokensMax": 312
             },
             {
-                "format": "toon_unsafe",
+                "format": "toon_default",
                 "structure": "flat",
                 "variant": "mandatory",
                 "recordCount": 31,
@@ -254,7 +254,7 @@
                 "outputTokensMax": 311
             },
             {
-                "format": "toon_unsafe",
+                "format": "toon_default",
                 "structure": "flat",
                 "variant": "optional",
                 "recordCount": 31,
@@ -293,7 +293,7 @@
                 "outputTokensMax": 312
             },
             {
-                "format": "toon_safe",
+                "format": "toon_default",
                 "structure": "flat",
                 "variant": "optional",
                 "recordCount": 31,
@@ -384,7 +384,7 @@
                 "outputTokensMax": 309
             },
             {
-                "format": "toon_safe",
+                "format": "toon_default",
                 "structure": "flat",
                 "variant": "mandatory",
                 "recordCount": 31,
