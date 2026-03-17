@@ -1,8 +1,8 @@
 {
     "metadata": {
-        "format": "toon_safe",
-        "dataFilePath": "benchmark_haiku_4_5\\results_nested_all_formats_and_variants_on\\data\\toon_safe\\toon_safe_with_optional_31_nested_records.toon",
-        "questionsFilePath": "benchmark_haiku_4_5\\results_nested_all_formats_and_variants_on\\questions\\questions_with_optional_31_records.json"
+        "format": "toon_default",
+        "questionsFilePath": "benchmark_haiku_4_5\\results_nested_all_formats_and_variants_on\\questions\\questionswith_optional_31_records.json",
+        "dataFilePath": "benchmark_haiku_4_5\\results_nested_all_formats_and_variants_on\\data\\toon_default\\toon_default_with_optional_31_nested_records.toon"
     },
     "answers": [
         {
@@ -255,23 +255,23 @@
         },
         {
             "questionId": 64,
-            "answer": "9"
+            "answer": "11"
         },
         {
             "questionId": 65,
-            "answer": "8"
+            "answer": "17"
         },
         {
             "questionId": 66,
-            "answer": "12"
+            "answer": "15"
         },
         {
             "questionId": 67,
-            "answer": "8"
+            "answer": "16"
         },
         {
             "questionId": 68,
-            "answer": "14"
+            "answer": "16"
         },
         {
             "questionId": 69,
@@ -279,7 +279,7 @@
         },
         {
             "questionId": 70,
-            "answer": "13"
+            "answer": "16"
         },
         {
             "questionId": 71,
@@ -303,7 +303,7 @@
         },
         {
             "questionId": 76,
-            "answer": "12"
+            "answer": "10"
         },
         {
             "questionId": 77,
@@ -311,31 +311,31 @@
         },
         {
             "questionId": 78,
-            "answer": "75188.47"
+            "answer": "75281.51"
         },
         {
             "questionId": 79,
-            "answer": "45232.72"
+            "answer": "43557.88"
         },
         {
             "questionId": 80,
-            "answer": "173308"
+            "answer": "180939"
         },
         {
             "questionId": 81,
-            "answer": "50.4"
+            "answer": "51.1"
         },
         {
             "questionId": 82,
-            "answer": "1348230"
+            "answer": "1346338"
         },
         {
             "questionId": 83,
-            "answer": "7398"
+            "answer": "7438"
         },
         {
             "questionId": 84,
-            "answer": "7341.09"
+            "answer": "7340.27"
         },
         {
             "questionId": 85,
@@ -367,31 +367,31 @@
         },
         {
             "questionId": 92,
-            "answer": "2425.11"
+            "answer": "2427.79"
         },
         {
             "questionId": 93,
-            "answer": "236.81"
+            "answer": "236.79"
         },
         {
             "questionId": 94,
-            "answer": "43491.94"
+            "answer": "43430.26"
         },
         {
             "questionId": 95,
-            "answer": "5590.58"
+            "answer": "5835.13"
         },
         {
             "questionId": 96,
-            "answer": "238.65"
+            "answer": "239.94"
         },
         {
             "questionId": 97,
-            "answer": "1459.12"
+            "answer": "1405.09"
         },
         {
             "questionId": 98,
-            "answer": "1677.47"
+            "answer": "1503.25"
         },
         {
             "questionId": 99,
@@ -399,15 +399,15 @@
         },
         {
             "questionId": 100,
-            "answer": "682"
+            "answer": "589"
         },
         {
             "questionId": 101,
-            "answer": "635"
+            "answer": "541"
         },
         {
             "questionId": 102,
-            "answer": "47"
+            "answer": "48"
         },
         {
             "questionId": 103,
@@ -439,7 +439,7 @@
         },
         {
             "questionId": 110,
-            "answer": "Industrial Equipment,Chemicals,Electronics,Packaging,Furniture,Office Supplies,Textiles,Materials,Tools,Accessories"
+            "answer": "Industrial Equipment,Chemicals,Electronics,Packaging,Furniture,Office Supplies,Materials,Textiles,Tools,Accessories"
         },
         {
             "questionId": 111,
@@ -447,11 +447,11 @@
         },
         {
             "questionId": 112,
-            "answer": "2025-12-01,2025-09-22,2025-09-19"
+            "answer": "null,2025-12-01,2025-09-22,2025-09-19"
         },
         {
             "questionId": 113,
-            "answer": "2.2,1.9,1.3,3.7,3.5,4.2,4.5,2.1,1.4,2.3,2,1.5,2.7,3.8,1.8,1.2"
+            "answer": "null,2.2,1.9,1.3,3.7,3.5,4.2,4.5,2.1,1.4,2.3,2,2.7,3.8,1.8,1.5,2.9,1.2"
         },
         {
             "questionId": 114,
@@ -483,7 +483,7 @@
         },
         {
             "questionId": 121,
-            "answer": "Industrial Solutions Inc,Factory Direct Inc,Premier Parts Ltd,Trade Partners Ltd,Material Distributors AB,Tech Components Group,Global Supply Co,Reliable Vendors LLC"
+            "answer": "Industrial Solutions Inc,Factory Direct Inc,Premier Parts Ltd,Material Distributors AB,Tech Components Group,Trade Partners Ltd,Reliable Vendors LLC,Global Supply Co"
         },
         {
             "questionId": 122,

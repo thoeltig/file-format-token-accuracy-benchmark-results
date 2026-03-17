@@ -1,7 +1,7 @@
 {
     "metadata": {
-        "format": "toon_safe",
-        "dataFilePath": "benchmark_haiku_4_5\\results_nested_all_formats_and_variants_on\\data\\toon_safe\\toon_safe_with_optional_31_nested_records.toon",
+        "format": "toon_default",
+        "dataFilePath": "benchmark_haiku_4_5\\results_nested_all_formats_and_variants_on\\data\\toon_default\\toon_default_with_optional_31_nested_records.toon",
         "questionsFilePath": "benchmark_haiku_4_5\\results_nested_all_formats_and_variants_on\\questions\\questions_with_optional_31_records.json"
     },
     "answers": [

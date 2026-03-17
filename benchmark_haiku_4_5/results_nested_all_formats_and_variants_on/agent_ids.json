@@ -2,9 +2,9 @@
   "testConfiguration": {
     "formats": [
       "json_compact",
-      "toon_safe",
+      "toon_default",
       "yaml",
-      "toon_unsafe",
+      "toon_default",
       "json_pretty",
       "xml_compact",
       "xml_pretty"
@@ -37,7 +37,7 @@
     },
     {
       "agentId": "a263b5f348ee6f715",
-      "format": "toon_safe",
+      "format": "toon_default",
       "structure": "nested",
       "variant": "optional",
       "recordCount": 31,
@@ -53,7 +53,7 @@
     },
     {
       "agentId": "a3adad51013257304",
-      "format": "toon_unsafe",
+      "format": "toon_default",
       "structure": "nested",
       "variant": "optional",
       "recordCount": 31,
@@ -109,7 +109,7 @@
     },
     {
       "agentId": "ab99f0197930a72af",
-      "format": "toon_unsafe",
+      "format": "toon_default",
       "structure": "nested",
       "variant": "mandatory",
       "recordCount": 31,
@@ -117,7 +117,7 @@
     },
     {
       "agentId": "ac45776192a0bc404",
-      "format": "toon_safe",
+      "format": "toon_default",
       "structure": "nested",
       "variant": "mandatory",
       "recordCount": 31,
@@ -135,7 +135,7 @@
   "fullTests": [
     {
       "agentId": "a02abcf88af0e39ce",
-      "format": "toon_unsafe",
+      "format": "toon_default",
       "structure": "nested",
       "variant": "optional",
       "recordCount": 31,
@@ -144,7 +144,7 @@
     },
     {
       "agentId": "a3a40f9b7e347a417",
-      "format": "toon_unsafe",
+      "format": "toon_default",
       "structure": "nested",
       "variant": "optional",
       "recordCount": 31,
@@ -153,7 +153,7 @@
     },
     {
       "agentId": "a6fd972ef26bec30c",
-      "format": "toon_unsafe",
+      "format": "toon_default",
       "structure": "nested",
       "variant": "optional",
       "recordCount": 31,
@@ -243,7 +243,7 @@
     },
     {
       "agentId": "a3318c7ca17b0fa95",
-      "format": "toon_safe",
+      "format": "toon_default",
       "structure": "nested",
       "variant": "mandatory",
       "recordCount": 31,
@@ -252,7 +252,7 @@
     },
     {
       "agentId": "a6b18714228402784",
-      "format": "toon_safe",
+      "format": "toon_default",
       "structure": "nested",
       "variant": "mandatory",
       "recordCount": 31,
@@ -261,7 +261,7 @@
     },
     {
       "agentId": "adc48597746e8f020",
-      "format": "toon_safe",
+      "format": "toon_default",
       "structure": "nested",
       "variant": "mandatory",
       "recordCount": 31,
@@ -369,7 +369,7 @@
     },
     {
       "agentId": "a7a5a381a05ab755d",
-      "format": "toon_safe",
+      "format": "toon_default",
       "structure": "nested",
       "variant": "optional",
       "recordCount": 31,
@@ -378,7 +378,7 @@
     },
     {
       "agentId": "a8e88788f91491a9b",
-      "format": "toon_safe",
+      "format": "toon_default",
       "structure": "nested",
       "variant": "optional",
       "recordCount": 31,
@@ -441,7 +441,7 @@
     },
     {
       "agentId": "a980f4aa3ac423c87",
-      "format": "toon_unsafe",
+      "format": "toon_default",
       "structure": "nested",
       "variant": "mandatory",
       "recordCount": 31,
@@ -450,7 +450,7 @@
     },
     {
       "agentId": "acac0484d4de81987",
-      "format": "toon_unsafe",
+      "format": "toon_default",
       "structure": "nested",
       "variant": "mandatory",
       "recordCount": 31,
@@ -459,7 +459,7 @@
     },
     {
       "agentId": "ad76967424f75d6d5",
-      "format": "toon_unsafe",
+      "format": "toon_default",
       "structure": "nested",
       "variant": "mandatory",
       "recordCount": 31,
