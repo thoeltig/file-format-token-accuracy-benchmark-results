@@ -1,12 +1,12 @@
 {
     "timestamp": "2026-03-17T22:25:15.048Z",
     "testConfigurations": {
-        "metadataFile": "C:\\Users\\ThoreHöltig\\Documents\\file-format-token-accuracy-benchmark-results\\benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\metadata.json",
-        "agentIdsFile": "C:\\Users\\ThoreHöltig\\Documents\\file-format-token-accuracy-benchmark-results\\benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\agent_ids.json",
-        "metricsFile": "C:\\Users\\ThoreHöltig\\Documents\\file-format-token-accuracy-benchmark-results\\benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\metrics.json",
-        "model": "Entered by user",
-        "thinking": "Entered by user",
-        "structure": "Entered by user",
+        "metadataFile": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\metadata.json",
+        "agentIdsFile": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\agent_ids.json",
+        "metricsFile": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_off\\metrics.json",
+        "model": "Claude Haiku 4.5 (claude-haiku-4-5-20251001)",
+        "thinking": "off",
+        "structure": "flat",
         "formats": [
             "xml_compact",
             "toon_default",
@@ -26,7 +26,7 @@
         "questionDistribution": [
             [
                 "field_retrieval",
-                60
+                55
             ],
             [
                 "filtering",

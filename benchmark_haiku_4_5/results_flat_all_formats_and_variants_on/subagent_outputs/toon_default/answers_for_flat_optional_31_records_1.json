@@ -1,8 +1,8 @@
 {
     "metadata": {
-        "format": "toon_unsafe",
-        "questionsFilePath": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on\\questions\\questions_with_optional_31_records.json",
-        "dataFilePath": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on\\data\\toon_unsafe\\toon_unsafe_with_optional_31_flat_records.toon"
+        "format": "toon_default",
+        "dataFilePath": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on\\data\\toon_default\\toon_default_with_optional_31_flat_records.toon",
+        "questionsFilePath": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on\\questions\\questions_with_optional_31_records.json"
     },
     "answers": [
         {
@@ -111,7 +111,7 @@
         },
         {
             "questionId": 28,
-            "answer": "Dubai (UAE),128x115x58cm,34,false,2852.32,false,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality."
+            "answer": "Hong Kong,128x115x58cm,34,false,2852.32,false,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality."
         },
         {
             "questionId": 29,
@@ -179,31 +179,31 @@
         },
         {
             "questionId": 45,
-            "answer": "8966,Los Angeles (USA),36x41x59cm,174,Shanghai (China),J-74-8,1244,135x20x37cm,false"
+            "answer": "8966,Los Angeles (USA),36x41x59cm,424,New York (USA),J-46-5,9566,173x52x18cm,true"
         },
         {
             "questionId": 46,
-            "answer": "4909,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,Furniture,false,59332,1507.08,2026-03-05,179.43,43299,173x98x197cm,1.4,340.83"
+            "answer": "4909,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,Furniture,false,59332,1507.08,2026-03-05,179.43,43299,173x98x197cm,1.4,340.83"
         },
         {
             "questionId": 47,
-            "answer": "Industrial Solutions Inc,2025-12-14,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,41,ACC-000024,New York (USA),320.31,1535.11,Industrial Cable 6785"
+            "answer": "Industrial Solutions Inc,2025-12-14,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,41,ACC-000024,New York (USA),320.31,320.31"
         },
         {
             "questionId": 48,
-            "answer": "30361,Industrial Solutions Inc,IND-000001,172x110x185cm,2361,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,4.2,Compact Valve 1351,96466,false"
+            "answer": "30361,Industrial Solutions Inc,IND-000001,172x110x185cm,2361,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,4.2,Compact Valve 1351,96466,false"
         },
         {
             "questionId": 49,
-            "answer": "1.4,1138.24,101,D-48-10,MFR-281350,2026-02-18,OFF-000012,New York (USA)"
+            "answer": "1.4,1138.24,101,I-48-10,MFR-281350,2026-02-18,OFF-000012,New York (USA)"
         },
         {
             "questionId": 50,
-            "answer": "2026-02-23,Industrial Solutions Inc,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,36.56,34,false,2026-01-12,8742,128x115x58cm"
+            "answer": "2026-02-23,Industrial Solutions Inc,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,36.56,34,true,2026-01-12,8742,128x115x58cm"
         },
         {
             "questionId": 51,
-            "answer": "E-14-39,7535,174x179x43cm,Industrial Pump 346,168.12,91.82,false,2026-01-22,Textiles,136x130x41cm"
+            "answer": "E-14-39,7535,174x179x43cm,Industrial Pump 346,168.12,91.82,true,2026-01-22,Textiles,136x130x41cm"
         },
         {
             "questionId": 52,
@@ -219,11 +219,11 @@
         },
         {
             "questionId": 55,
-            "answer": "2026-02-17,Professional Connector 3440,1001,244.43,22x158x118cm,52751,254,2025-12-08,2025-12-01,61347,760.34,Factory Direct Inc,false,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan."
+            "answer": "2026-02-17,Professional Connector 3440,1001,244.43,22x158x118cm,52751,254,2025-12-08,2025-12-01,61347,2560,760.34,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan."
         },
         {
             "questionId": 56,
-            "answer": "Materials,46x138x127cm,251.69,4.5,CHE-000010,83,2026-02-18,MFR-693996,Hong Kong"
+            "answer": "Materials,46x138x127cm,251.69,4.5,CHE-000010,83,2026-02-18,MFR-693996,Hamburg (Germany)"
         },
         {
             "questionId": 57,
@@ -259,23 +259,23 @@
         },
         {
             "questionId": 65,
-            "answer": "12"
+            "answer": "11"
         },
         {
             "questionId": 66,
-            "answer": "14"
+            "answer": "8"
         },
         {
             "questionId": 67,
-            "answer": "14"
+            "answer": "12"
         },
         {
             "questionId": 68,
-            "answer": "13"
+            "answer": "15"
         },
         {
             "questionId": 69,
-            "answer": "14"
+            "answer": "13"
         },
         {
             "questionId": 70,
@@ -303,39 +303,39 @@
         },
         {
             "questionId": 76,
-            "answer": "9"
+            "answer": "19"
         },
         {
             "questionId": 77,
-            "answer": "4"
+            "answer": "3"
         },
         {
             "questionId": 78,
-            "answer": "75392.42"
+            "answer": "75233.69"
         },
         {
             "questionId": 79,
-            "answer": "41525.48"
+            "answer": "43430.26"
         },
         {
             "questionId": 80,
-            "answer": "190809"
+            "answer": "167012"
         },
         {
             "questionId": 81,
-            "answer": "44.1"
+            "answer": "50.4"
         },
         {
             "questionId": 82,
-            "answer": "1348262"
+            "answer": "1346338"
         },
         {
             "questionId": 83,
-            "answer": "7432"
+            "answer": "7438"
         },
         {
             "questionId": 84,
-            "answer": "7343.18"
+            "answer": "7338.75"
         },
         {
             "questionId": 85,
@@ -367,31 +367,31 @@
         },
         {
             "questionId": 92,
-            "answer": "2432.01"
+            "answer": "2426.89"
         },
         {
             "questionId": 93,
-            "answer": "236.88"
+            "answer": "236.75"
         },
         {
             "questionId": 94,
-            "answer": "43491.68"
+            "answer": "43430.26"
         },
         {
             "questionId": 95,
-            "answer": "6155.13"
+            "answer": "5387.16"
         },
         {
             "questionId": 96,
-            "answer": "239.74"
+            "answer": "239.94"
         },
         {
             "questionId": 97,
-            "answer": "1339.53"
+            "answer": "1401.62"
         },
         {
             "questionId": 98,
-            "answer": "1881.38"
+            "answer": "1446.06"
         },
         {
             "questionId": 99,
@@ -399,19 +399,19 @@
         },
         {
             "questionId": 100,
-            "answer": "682"
+            "answer": "961"
         },
         {
             "questionId": 101,
-            "answer": "622"
+            "answer": "915"
         },
         {
             "questionId": 102,
-            "answer": "60"
+            "answer": "46"
         },
         {
             "questionId": 103,
-            "answer": "22"
+            "answer": "31"
         },
         {
             "questionId": 104,
@@ -451,7 +451,7 @@
         },
         {
             "questionId": 113,
-            "answer": "2.2,1.9,1.3,3.7,4.2,4.5,2.1,1.4,2.3,1.4,2.9,1.5,2.7,3.8,2.3,1.8,2,1.2"
+            "answer": "2.2,1.9,1.3,3.7,4.2,4.5,2.1,1.4,2.3,2.9,1.5,2.7,3.8,1.8,2,2.3,1.2"
         },
         {
             "questionId": 114,
@@ -479,7 +479,7 @@
         },
         {
             "questionId": 120,
-            "answer": "true,false"
+            "answer": "false,true"
         },
         {
             "questionId": 121,

@@ -46,10 +46,10 @@
                 "readDurationMs": 11
             },
             {
-                "file": "toon_safe_with_mandatory_31_flat_records.toon",
-                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on/data/toon_safe/toon_safe_with_mandatory_31_flat_records.toon",
+                "file": "toon_default_with_mandatory_31_flat_records.toon",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on/data/toon_default/toon_default_with_mandatory_31_flat_records.toon",
                 "agentId": "a4b18c18b36891324",
-                "format": "toon_safe",
+                "format": "toon_default",
                 "structure": "flat",
                 "variant": "mandatory",
                 "recordCount": 31,
@@ -57,10 +57,10 @@
                 "readDurationMs": 4
             },
             {
-                "file": "toon_safe_with_optional_31_flat_records.toon",
-                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on/data/toon_safe/toon_safe_with_optional_31_flat_records.toon",
+                "file": "toon_default_with_optional_31_flat_records.toon",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on/data/toon_default/toon_default_with_optional_31_flat_records.toon",
                 "agentId": "a5d5ea4c16ab8399c",
-                "format": "toon_safe",
+                "format": "toon_default",
                 "structure": "flat",
                 "variant": "optional",
                 "recordCount": 31,
@@ -90,10 +90,10 @@
                 "readDurationMs": 13
             },
             {
-                "file": "toon_unsafe_with_optional_31_flat_records.toon",
-                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on\\data\\toon_unsafe\\toon_unsafe_with_optional_31_flat_records.toon",
+                "file": "toon_default_with_optional_31_flat_records.toon",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on\\data\\toon_default\\toon_default_with_optional_31_flat_records.toon",
                 "agentId": "a740c864d2f06e88c",
-                "format": "toon_unsafe",
+                "format": "toon_default",
                 "structure": "flat",
                 "variant": "optional",
                 "recordCount": 31,
@@ -134,10 +134,10 @@
                 "readDurationMs": 20
             },
             {
-                "file": "toon_unsafe_with_mandatory_31_flat_records.toon",
-                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on/data/toon_unsafe/toon_unsafe_with_mandatory_31_flat_records.toon",
+                "file": "toon_default_with_mandatory_31_flat_records.toon",
+                "path": "benchmark_haiku_4_5\\results_flat_all_formats_and_variants_on/data/toon_default/toon_default_with_mandatory_31_flat_records.toon",
                 "agentId": "ad5d1833f043cdc02",
-                "format": "toon_unsafe",
+                "format": "toon_default",
                 "structure": "flat",
                 "variant": "mandatory",
                 "recordCount": 31,
@@ -189,7 +189,7 @@
     "reasoning": {
         "files": [
             {
-                "format": "toon_unsafe",
+                "format": "toon_default",
                 "structure": "flat",
                 "variant": "optional",
                 "recordCount": 31,
@@ -202,7 +202,7 @@
                 "outputTokensMax": 346
             },
             {
-                "format": "toon_safe",
+                "format": "toon_default",
                 "structure": "flat",
                 "variant": "mandatory",
                 "recordCount": 31,
@@ -332,7 +332,7 @@
                 "outputTokensMax": 335
             },
             {
-                "format": "toon_unsafe",
+                "format": "toon_default",
                 "structure": "flat",
                 "variant": "mandatory",
                 "recordCount": 31,
@@ -358,7 +358,7 @@
                 "outputTokensMax": 344
             },
             {
-                "format": "toon_safe",
+                "format": "toon_default",
                 "structure": "flat",
                 "variant": "optional",
                 "recordCount": 31,
