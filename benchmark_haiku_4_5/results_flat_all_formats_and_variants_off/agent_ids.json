@@ -2,13 +2,12 @@
   "testConfiguration": {
     "formats": [
       "json_compact",
-      "toon_safe",
+      "toon_default",
       "xml_compact",
       "csv",
       "xml_pretty",
       "yaml",
-      "json_pretty",
-      "toon_unsafe"
+      "json_pretty"
     ],
     "variants": [
       "mandatory",
@@ -30,7 +29,7 @@
     },
     {
       "agentId": "a04793fb9e1c0b614",
-      "format": "toon_safe",
+      "format": "toon_default",
       "structure": "flat",
       "variant": "mandatory",
       "recordCount": 31,
@@ -78,7 +77,7 @@
     },
     {
       "agentId": "a61d03012ad3bb068",
-      "format": "toon_unsafe",
+      "format": "toon_default",
       "structure": "flat",
       "variant": "optional",
       "recordCount": 31,
@@ -94,7 +93,7 @@
     },
     {
       "agentId": "a6bf4dd50b7e78abf",
-      "format": "toon_unsafe",
+      "format": "toon_default",
       "structure": "flat",
       "variant": "mandatory",
       "recordCount": 31,
@@ -126,7 +125,7 @@
     },
     {
       "agentId": "aaf32a713bcafcab9",
-      "format": "toon_safe",
+      "format": "toon_default",
       "structure": "flat",
       "variant": "optional",
       "recordCount": 31,
@@ -179,7 +178,7 @@
     },
     {
       "agentId": "a0687517f7cc333d4",
-      "format": "toon_safe",
+      "format": "toon_default",
       "structure": "flat",
       "variant": "mandatory",
       "recordCount": 31,
@@ -188,7 +187,7 @@
     },
     {
       "agentId": "a0e1c238e9116f19e",
-      "format": "toon_safe",
+      "format": "toon_default",
       "structure": "flat",
       "variant": "mandatory",
       "recordCount": 31,
@@ -197,7 +196,7 @@
     },
     {
       "agentId": "a0f78bc7ef2cbfa1d",
-      "format": "toon_safe",
+      "format": "toon_default",
       "structure": "flat",
       "variant": "mandatory",
       "recordCount": 31,
@@ -206,7 +205,7 @@
     },
     {
       "agentId": "a123cdfe3c2063a86",
-      "format": "toon_safe",
+      "format": "toon_default",
       "structure": "flat",
       "variant": "mandatory",
       "recordCount": 31,
@@ -215,7 +214,7 @@
     },
     {
       "agentId": "a54eca942f34678d2",
-      "format": "toon_safe",
+      "format": "toon_default",
       "structure": "flat",
       "variant": "mandatory",
       "recordCount": 31,
@@ -224,7 +223,7 @@
     },
     {
       "agentId": "abe05efef2c888ff1",
-      "format": "toon_safe",
+      "format": "toon_default",
       "structure": "flat",
       "variant": "mandatory",
       "recordCount": 31,
@@ -314,7 +313,7 @@
     },
     {
       "agentId": "a171c89a774f1e4f3",
-      "format": "toon_safe",
+      "format": "toon_default",
       "structure": "flat",
       "variant": "optional",
       "recordCount": 31,
@@ -323,7 +322,7 @@
     },
     {
       "agentId": "a528c28d862083df2",
-      "format": "toon_safe",
+      "format": "toon_default",
       "structure": "flat",
       "variant": "optional",
       "recordCount": 31,
@@ -332,7 +331,7 @@
     },
     {
       "agentId": "aa0e95d2b14144371",
-      "format": "toon_safe",
+      "format": "toon_default",
       "structure": "flat",
       "variant": "optional",
       "recordCount": 31,
@@ -341,7 +340,7 @@
     },
     {
       "agentId": "ad40a219cc725fdf4",
-      "format": "toon_safe",
+      "format": "toon_default",
       "structure": "flat",
       "variant": "optional",
       "recordCount": 31,
@@ -350,7 +349,7 @@
     },
     {
       "agentId": "ad43af6e21e6e5115",
-      "format": "toon_safe",
+      "format": "toon_default",
       "structure": "flat",
       "variant": "optional",
       "recordCount": 31,
@@ -359,7 +358,7 @@
     },
     {
       "agentId": "ae65c87787deeb6ed",
-      "format": "toon_safe",
+      "format": "toon_default",
       "structure": "flat",
       "variant": "optional",
       "recordCount": 31,
@@ -584,7 +583,7 @@
     },
     {
       "agentId": "a3ba03d10aa42482d",
-      "format": "toon_unsafe",
+      "format": "toon_default",
       "structure": "flat",
       "variant": "mandatory",
       "recordCount": 31,
@@ -593,7 +592,7 @@
     },
     {
       "agentId": "a7ac83952f1d3d61f",
-      "format": "toon_unsafe",
+      "format": "toon_default",
       "structure": "flat",
       "variant": "mandatory",
       "recordCount": 31,
@@ -602,7 +601,7 @@
     },
     {
       "agentId": "ac6b17a12cd181154",
-      "format": "toon_unsafe",
+      "format": "toon_default",
       "structure": "flat",
       "variant": "mandatory",
       "recordCount": 31,
@@ -638,7 +637,7 @@
     },
     {
       "agentId": "a47126f9e4f8f6c6b",
-      "format": "toon_unsafe",
+      "format": "toon_default",
       "structure": "flat",
       "variant": "optional",
       "recordCount": 31,
@@ -647,7 +646,7 @@
     },
     {
       "agentId": "a48aa098ea1f13630",
-      "format": "toon_unsafe",
+      "format": "toon_default",
       "structure": "flat",
       "variant": "optional",
       "recordCount": 31,
@@ -656,7 +655,7 @@
     },
     {
       "agentId": "afd71dcfe0278de85",
-      "format": "toon_unsafe",
+      "format": "toon_default",
       "structure": "flat",
       "variant": "optional",
       "recordCount": 31,

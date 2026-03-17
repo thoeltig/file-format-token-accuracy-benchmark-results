@@ -1,7 +1,7 @@
 {
     "metadata": {
-        "format": "toon_safe",
-        "dataFile": "benchmark_haiku_4_5\\data\\toon_safe_with_optional_31_flat_records.toon",
+        "format": "toon_default",
+        "dataFile": "benchmark_haiku_4_5\\data\\toon_default_with_optional_31_flat_records.toon",
         "questionsFilePath": "benchmark_haiku_4_5\\questions\\questions_with_optional_31_records.json"
     },
     "answers": [
@@ -111,7 +111,7 @@
         },
         {
             "questionId": 28,
-            "answer": "Dubai (UAE),128x115x58cm,34,false,2852.32,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality."
+            "answer": "Dubai (UAE),128x115x58cm,34,false,2852.32,false,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality."
         },
         {
             "questionId": 29,
@@ -123,7 +123,7 @@
         },
         {
             "questionId": 31,
-            "answer": "I-73-34,Premium Drill 3674"
+            "answer": "I-70-19,Premium Compressor 5381"
         },
         {
             "questionId": 32,
@@ -171,7 +171,7 @@
         },
         {
             "questionId": 43,
-            "answer": "4896.81,Los Angeles (USA),3259,33933,Standard Drill 4180,330,2026-01-23,2437.5,85975"
+            "answer": "4896.81,Los Angeles (USA),3259,33933,Premium Drill 3674,330,2026-01-23,2437.5,85975"
         },
         {
             "questionId": 44,
@@ -179,7 +179,7 @@
         },
         {
             "questionId": 45,
-            "answer": "8966,Los Angeles (USA),36x41x59cm,424,Dubai (UAE),J-46-5,9566,45x85x151cm,true"
+            "answer": "8966,Los Angeles (USA),36x41x59cm,174,Shanghai (China),J-74-8,1244,135x20x37cm,false"
         },
         {
             "questionId": 46,
@@ -191,7 +191,7 @@
         },
         {
             "questionId": 48,
-            "answer": "30361,Industrial Solutions Inc,IND-000001,172x110x185cm,2361,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,2.2,Compact Valve 1351,96466,false"
+            "answer": "30361,Industrial Solutions Inc,IND-000001,172x110x185cm,2361,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,4.2,Compact Valve 1351,96466,false"
         },
         {
             "questionId": 49,
@@ -199,11 +199,11 @@
         },
         {
             "questionId": 50,
-            "answer": "2026-02-23,Industrial Solutions Inc,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,36.56,34,true,2026-01-12,8742,128x115x58cm"
+            "answer": "2026-02-23,Industrial Solutions Inc,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,36.56,34,false,2026-01-12,8742,128x115x58cm"
         },
         {
             "questionId": 51,
-            "answer": "E-14-39,7535,174x179x43cm,Industrial Pump 346,168.12,91.82,true,2026-01-22,Textiles,136x130x41cm"
+            "answer": "E-14-39,7535,174x179x43cm,Industrial Pump 346,168.12,91.82,false,2026-01-22,Textiles,136x130x41cm"
         },
         {
             "questionId": 52,
@@ -219,7 +219,7 @@
         },
         {
             "questionId": 55,
-            "answer": "2026-02-17,Professional Connector 3440,1001,244.43,22x158x118cm,52751,254,2025-12-08,2025-12-01,61347,760.34,Factory Direct Inc,true,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan."
+            "answer": "2026-02-17,Professional Connector 3440,1001,244.43,22x158x118cm,52751,254,2025-12-08,2025-12-01,61347,760.34,Factory Direct Inc,false,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan."
         },
         {
             "questionId": 56,
@@ -255,35 +255,35 @@
         },
         {
             "questionId": 64,
-            "answer": "10"
+            "answer": "14"
         },
         {
             "questionId": 65,
-            "answer": "9"
+            "answer": "18"
         },
         {
             "questionId": 66,
-            "answer": "8"
+            "answer": "18"
         },
         {
             "questionId": 67,
-            "answer": "13"
+            "answer": "15"
         },
         {
             "questionId": 68,
-            "answer": "10"
+            "answer": "16"
         },
         {
             "questionId": 69,
-            "answer": "11"
+            "answer": "20"
         },
         {
             "questionId": 70,
-            "answer": "13"
+            "answer": "16"
         },
         {
             "questionId": 71,
-            "answer": "0"
+            "answer": "1"
         },
         {
             "questionId": 72,
@@ -291,7 +291,7 @@
         },
         {
             "questionId": 73,
-            "answer": "0"
+            "answer": "1"
         },
         {
             "questionId": 74,
@@ -303,39 +303,39 @@
         },
         {
             "questionId": 76,
-            "answer": "16"
+            "answer": "11"
         },
         {
             "questionId": 77,
-            "answer": "3"
+            "answer": "4"
         },
         {
             "questionId": 78,
-            "answer": "72633.21"
+            "answer": "75268.52"
         },
         {
             "questionId": 79,
-            "answer": "44224.97"
+            "answer": "44626.88"
         },
         {
             "questionId": 80,
-            "answer": "186646"
+            "answer": "184538"
         },
         {
             "questionId": 81,
-            "answer": "74.4"
+            "answer": "50.6"
         },
         {
             "questionId": 82,
-            "answer": "1346338"
+            "answer": "1348329"
         },
         {
             "questionId": 83,
-            "answer": "7428"
+            "answer": "7429"
         },
         {
             "questionId": 84,
-            "answer": "7339.36"
+            "answer": "7342.27"
         },
         {
             "questionId": 85,
@@ -367,31 +367,31 @@
         },
         {
             "questionId": 92,
-            "answer": "2426.89"
+            "answer": "2427.37"
         },
         {
             "questionId": 93,
-            "answer": "236.75"
+            "answer": "236.85"
         },
         {
             "questionId": 94,
-            "answer": "43430.26"
+            "answer": "43494.81"
         },
         {
             "questionId": 95,
-            "answer": "6021.48"
+            "answer": "5953.81"
         },
         {
             "questionId": 96,
-            "answer": "239.94"
+            "answer": "239.65"
         },
         {
             "questionId": 97,
-            "answer": "1428.03"
+            "answer": "1439.58"
         },
         {
             "questionId": 98,
-            "answer": "1497.67"
+            "answer": "863.03"
         },
         {
             "questionId": 99,
@@ -399,19 +399,19 @@
         },
         {
             "questionId": 100,
-            "answer": "1891"
+            "answer": "868"
         },
         {
             "questionId": 101,
-            "answer": "1796"
+            "answer": "836"
         },
         {
             "questionId": 102,
-            "answer": "95"
+            "answer": "32"
         },
         {
             "questionId": 103,
-            "answer": "29"
+            "answer": "22"
         },
         {
             "questionId": 104,
@@ -451,7 +451,7 @@
         },
         {
             "questionId": 113,
-            "answer": "2.2,1.9,1.3,3.7,4.2,4.5,2.1,1.4,3.5,2,2.3,2.9,1.5,2.7,3.8,1.8,1.2"
+            "answer": "2.2,1.9,1.3,3.7,3.5,4.2,4.5,2.1,1.4,2.3,2,1.8,2.7,3.8,2.9,1.2"
         },
         {
             "questionId": 114,
@@ -483,7 +483,7 @@
         },
         {
             "questionId": 121,
-            "answer": "Industrial Solutions Inc,Factory Direct Inc,Premier Parts Ltd,Trade Partners Ltd,Material Distributors AB,Tech Components Group,Reliable Vendors LLC,Global Supply Co"
+            "answer": "Industrial Solutions Inc,Factory Direct Inc,Premier Parts Ltd,Trade Partners Ltd,Material Distributors AB,Tech Components Group,Global Supply Co,Reliable Vendors LLC"
         },
         {
             "questionId": 122,
@@ -499,7 +499,7 @@
         },
         {
             "questionId": 125,
-            "answer": "16,34,37,57,60,83,101,107,133,150,151,165,172,174,189,203,231,254,317,330,337,358,424,445,454,457,459,464,486,496"
+            "answer": "16,231,486,254,464,203,358,337,57,172,457,34,165,107,445,151,37,496,101,459,189,330,317,83,150,94,454,60,174,424,133"
         }
     ]
 }

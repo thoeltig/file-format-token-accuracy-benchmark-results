@@ -13,10 +13,10 @@
                 "readDurationMs": 36
             },
             {
-                "file": "toon_safe_with_mandatory_31_flat_records.toon",
-                "path": "benchmark_haiku_4_5\\data\\toon_safe\\toon_safe_with_mandatory_31_flat_records.toon",
+                "file": "toon_default_with_mandatory_31_flat_records.toon",
+                "path": "benchmark_haiku_4_5\\data\\toon_default\\toon_default_with_mandatory_31_flat_records.toon",
                 "agentId": "a04793fb9e1c0b614",
-                "format": "toon_safe",
+                "format": "toon_default",
                 "structure": "flat",
                 "variant": "mandatory",
                 "recordCount": 31,
@@ -79,10 +79,10 @@
                 "readDurationMs": 15
             },
             {
-                "file": "toon_unsafe_with_optional_31_flat_records.toon",
-                "path": "benchmark_haiku_4_5\\data\\toon_unsafe\\toon_unsafe_with_optional_31_flat_records.toon",
+                "file": "toon_default_with_optional_31_flat_records.toon",
+                "path": "benchmark_haiku_4_5\\data\\toon_default\\toon_default_with_optional_31_flat_records.toon",
                 "agentId": "a61d03012ad3bb068",
-                "format": "toon_unsafe",
+                "format": "toon_default",
                 "structure": "flat",
                 "variant": "optional",
                 "recordCount": 31,
@@ -101,10 +101,10 @@
                 "readDurationMs": 13
             },
             {
-                "file": "toon_unsafe_with_mandatory_31_flat_records.toon",
-                "path": "benchmark_haiku_4_5\\data\\toon_unsafe\\toon_unsafe_with_mandatory_31_flat_records.toon",
+                "file": "toon_default_with_mandatory_31_flat_records.toon",
+                "path": "benchmark_haiku_4_5\\data\\toon_default\\toon_default_with_mandatory_31_flat_records.toon",
                 "agentId": "a6bf4dd50b7e78abf",
-                "format": "toon_unsafe",
+                "format": "toon_default",
                 "structure": "flat",
                 "variant": "mandatory",
                 "recordCount": 31,
@@ -145,10 +145,10 @@
                 "readDurationMs": 15
             },
             {
-                "file": "toon_safe_with_optional_31_flat_records.toon",
-                "path": "benchmark_haiku_4_5\\data\\toon_safe\\toon_safe_with_optional_31_flat_records.toon",
+                "file": "toon_default_with_optional_31_flat_records.toon",
+                "path": "benchmark_haiku_4_5\\data\\toon_default\\toon_default_with_optional_31_flat_records.toon",
                 "agentId": "aaf32a713bcafcab9",
-                "format": "toon_safe",
+                "format": "toon_default",
                 "structure": "flat",
                 "variant": "optional",
                 "recordCount": 31,
@@ -202,7 +202,7 @@
                 "outputTokensMax": 308
             },
             {
-                "format": "toon_safe",
+                "format": "toon_default",
                 "structure": "flat",
                 "variant": "mandatory",
                 "recordCount": 31,
@@ -241,7 +241,7 @@
                 "outputTokensMax": 314
             },
             {
-                "format": "toon_safe",
+                "format": "toon_default",
                 "structure": "flat",
                 "variant": "optional",
                 "recordCount": 31,
@@ -345,7 +345,7 @@
                 "outputTokensMax": 304
             },
             {
-                "format": "toon_unsafe",
+                "format": "toon_default",
                 "structure": "flat",
                 "variant": "mandatory",
                 "recordCount": 31,
@@ -371,7 +371,7 @@
                 "outputTokensMax": 307
             },
             {
-                "format": "toon_unsafe",
+                "format": "toon_default",
                 "structure": "flat",
                 "variant": "optional",
                 "recordCount": 31,
