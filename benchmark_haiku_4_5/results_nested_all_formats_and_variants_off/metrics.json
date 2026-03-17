@@ -24,10 +24,10 @@
                 "readDurationMs": 12
             },
             {
-                "file": "toon_safe_with_optional_31_nested_records.toon",
-                "path": "benchmark_haiku_4_5\\data\\toon_safe\\toon_safe_with_optional_31_nested_records.toon",
+                "file": "toon_default_with_optional_31_nested_records.toon",
+                "path": "benchmark_haiku_4_5\\data\\toon_default\\toon_default_with_optional_31_nested_records.toon",
                 "agentId": "a0b98e656a25254cd",
-                "format": "toon_safe",
+                "format": "toon_default",
                 "structure": "nested",
                 "variant": "optional",
                 "recordCount": 31,
@@ -68,10 +68,10 @@
                 "readDurationMs": 3
             },
             {
-                "file": "toon_safe_with_mandatory_31_nested_records.toon",
-                "path": "benchmark_haiku_4_5\\data\\toon_safe\\toon_safe_with_mandatory_31_nested_records.toon",
+                "file": "toon_default_with_mandatory_31_nested_records.toon",
+                "path": "benchmark_haiku_4_5\\data\\toon_default\\toon_default_with_mandatory_31_nested_records.toon",
                 "agentId": "a341982ada2503e13",
-                "format": "toon_safe",
+                "format": "toon_default",
                 "structure": "nested",
                 "variant": "mandatory",
                 "recordCount": 31,
@@ -101,10 +101,10 @@
                 "readDurationMs": 262
             },
             {
-                "file": "toon_unsafe_with_optional_31_nested_records.toon",
-                "path": "benchmark_haiku_4_5\\data\\toon_unsafe\\toon_unsafe_with_optional_31_nested_records.toon",
+                "file": "toon_default_with_optional_31_nested_records.toon",
+                "path": "benchmark_haiku_4_5\\data\\toon_default\\toon_default_with_optional_31_nested_records.toon",
                 "agentId": "a41121780a8e39d3d",
-                "format": "toon_unsafe",
+                "format": "toon_default",
                 "structure": "nested",
                 "variant": "optional",
                 "recordCount": 31,
@@ -112,10 +112,10 @@
                 "readDurationMs": 45
             },
             {
-                "file": "toon_unsafe_with_mandatory_31_nested_records.toon",
-                "path": "benchmark_haiku_4_5\\data\\toon_unsafe\\toon_unsafe_with_mandatory_31_nested_records.toon",
+                "file": "toon_default_with_mandatory_31_nested_records.toon",
+                "path": "benchmark_haiku_4_5\\data\\toon_default\\toon_default_with_mandatory_31_nested_records.toon",
                 "agentId": "a455b0bbd2a4d375e",
-                "format": "toon_unsafe",
+                "format": "toon_default",
                 "structure": "nested",
                 "variant": "mandatory",
                 "recordCount": 31,
@@ -237,7 +237,7 @@
                 "outputTokensMax": 306
             },
             {
-                "format": "toon_safe",
+                "format": "toon_default",
                 "structure": "nested",
                 "variant": "optional",
                 "recordCount": 31,
@@ -263,7 +263,7 @@
                 "outputTokensMax": 314
             },
             {
-                "format": "toon_safe",
+                "format": "toon_default",
                 "structure": "nested",
                 "variant": "mandatory",
                 "recordCount": 31,
@@ -289,7 +289,7 @@
                 "outputTokensMax": 306
             },
             {
-                "format": "toon_unsafe",
+                "format": "toon_default",
                 "structure": "nested",
                 "variant": "optional",
                 "recordCount": 31,
@@ -302,7 +302,7 @@
                 "outputTokensMax": 310
             },
             {
-                "format": "toon_unsafe",
+                "format": "toon_default",
                 "structure": "nested",
                 "variant": "mandatory",
                 "recordCount": 31,

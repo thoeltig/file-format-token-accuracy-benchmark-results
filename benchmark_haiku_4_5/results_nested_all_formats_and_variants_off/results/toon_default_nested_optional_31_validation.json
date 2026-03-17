@@ -1,19 +1,19 @@
 {
-    "format": "toon_safe",
+    "format": "toon_default",
     "structure": "nested",
     "variant": "optional",
     "recordCount": 31,
-    "testRuns": 4,
+    "testRuns": 7,
     "totalQuestions": 124,
     "accuracy": {
-        "correct": 78.5,
-        "incorrect": 45.5,
-        "accuracyPercent": 63.31,
-        "accuracyDriftPercMin": -3.19,
-        "accuracyDriftPercMax": 4.45,
-        "weightedAccuracyPercent": 65.16,
-        "weightedAccuracyDriftPercMin": -3.87,
-        "weightedAccuracyDriftPercMax": 3.44
+        "correct": 80.57,
+        "incorrect": 43.43,
+        "accuracyPercent": 64.98,
+        "accuracyDriftPercMin": -5.68,
+        "accuracyDriftPercMax": 6.73,
+        "weightedAccuracyPercent": 66.84,
+        "weightedAccuracyDriftPercMin": -6.28,
+        "weightedAccuracyDriftPercMax": 5.8
     },
     "perRunAccuracy": [
         {
@@ -179,6 +179,129 @@
                     "weightedAccuracyPercent": 21.61
                 }
             ]
+        },
+        {
+            "run": 5,
+            "correct": 80,
+            "incorrect": 44,
+            "accuracyPercent": 64.52,
+            "weightedAccuracyPercent": 66.09,
+            "accuracyPerCategory": [
+                {
+                    "category": "field_retrieval",
+                    "correct": 37,
+                    "incorrect": 18,
+                    "unanswered": 0,
+                    "accuracyPercent": 67.27,
+                    "weightedAccuracyPercent": 25.23
+                },
+                {
+                    "category": "filtering",
+                    "correct": 14,
+                    "incorrect": 7,
+                    "unanswered": 0,
+                    "accuracyPercent": 66.67,
+                    "weightedAccuracyPercent": 13.89
+                },
+                {
+                    "category": "aggregation",
+                    "correct": 9,
+                    "incorrect": 12,
+                    "unanswered": 0,
+                    "accuracyPercent": 42.86,
+                    "weightedAccuracyPercent": 5.36
+                },
+                {
+                    "category": "structure_awareness",
+                    "correct": 20,
+                    "incorrect": 7,
+                    "unanswered": 0,
+                    "accuracyPercent": 74.07,
+                    "weightedAccuracyPercent": 21.61
+                }
+            ]
+        },
+        {
+            "run": 6,
+            "correct": 86,
+            "incorrect": 38,
+            "accuracyPercent": 69.35,
+            "weightedAccuracyPercent": 70.72,
+            "accuracyPerCategory": [
+                {
+                    "category": "field_retrieval",
+                    "correct": 37,
+                    "incorrect": 18,
+                    "unanswered": 0,
+                    "accuracyPercent": 67.27,
+                    "weightedAccuracyPercent": 25.23
+                },
+                {
+                    "category": "filtering",
+                    "correct": 13,
+                    "incorrect": 8,
+                    "unanswered": 0,
+                    "accuracyPercent": 61.9,
+                    "weightedAccuracyPercent": 12.9
+                },
+                {
+                    "category": "aggregation",
+                    "correct": 13,
+                    "incorrect": 8,
+                    "unanswered": 0,
+                    "accuracyPercent": 61.9,
+                    "weightedAccuracyPercent": 7.74
+                },
+                {
+                    "category": "structure_awareness",
+                    "correct": 23,
+                    "incorrect": 4,
+                    "unanswered": 0,
+                    "accuracyPercent": 85.19,
+                    "weightedAccuracyPercent": 24.85
+                }
+            ]
+        },
+        {
+            "run": 7,
+            "correct": 84,
+            "incorrect": 40,
+            "accuracyPercent": 67.74,
+            "weightedAccuracyPercent": 70.41,
+            "accuracyPerCategory": [
+                {
+                    "category": "field_retrieval",
+                    "correct": 37,
+                    "incorrect": 18,
+                    "unanswered": 0,
+                    "accuracyPercent": 67.27,
+                    "weightedAccuracyPercent": 25.23
+                },
+                {
+                    "category": "filtering",
+                    "correct": 14,
+                    "incorrect": 7,
+                    "unanswered": 0,
+                    "accuracyPercent": 66.67,
+                    "weightedAccuracyPercent": 13.89
+                },
+                {
+                    "category": "aggregation",
+                    "correct": 9,
+                    "incorrect": 12,
+                    "unanswered": 0,
+                    "accuracyPercent": 42.86,
+                    "weightedAccuracyPercent": 5.36
+                },
+                {
+                    "category": "structure_awareness",
+                    "correct": 24,
+                    "incorrect": 3,
+                    "unanswered": 0,
+                    "accuracyPercent": 88.89,
+                    "weightedAccuracyPercent": 25.93
+                }
+            ]
         }
     ],
     "questionsAndProvidedAnswers": [
@@ -188,6 +311,18 @@
             "question": "What is the fragile of product PROD-000013?",
             "expectedAnswer": "false",
             "answers": [
+                {
+                    "givenAnswer": "false",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "false",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "false",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "false",
                     "correct": true
@@ -227,6 +362,18 @@
                 {
                     "givenAnswer": "Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
+                    "correct": true
                 }
             ]
         },
@@ -236,6 +383,18 @@
             "question": "What is the sku of product PROD-000011?",
             "expectedAnswer": "CHE-000010",
             "answers": [
+                {
+                    "givenAnswer": "CHE-000010",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "CHE-000010",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "CHE-000010",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "CHE-000010",
                     "correct": true
@@ -275,6 +434,18 @@
                 {
                     "givenAnswer": "7106",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "7106",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "7106",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "7106",
+                    "correct": true
                 }
             ]
         },
@@ -284,6 +455,18 @@
             "question": "What is the category of product PROD-000009?",
             "expectedAnswer": "Office Supplies",
             "answers": [
+                {
+                    "givenAnswer": "Office Supplies",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Office Supplies",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Office Supplies",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "Office Supplies",
                     "correct": true
@@ -323,6 +506,18 @@
                 {
                     "givenAnswer": "317",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "317",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "317",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "317",
+                    "correct": true
                 }
             ]
         },
@@ -332,6 +527,18 @@
             "question": "What is the supplier name of product PROD-000021?",
             "expectedAnswer": "Tech Components Group",
             "answers": [
+                {
+                    "givenAnswer": "Tech Components Group",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Tech Components Group",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Tech Components Group",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "Tech Components Group",
                     "correct": true
@@ -371,6 +578,18 @@
                 {
                     "givenAnswer": "true",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "true",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "true",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "true",
+                    "correct": true
                 }
             ]
         },
@@ -380,6 +599,18 @@
             "question": "What is the manufacturer code of product PROD-000015?",
             "expectedAnswer": "MFR-940181",
             "answers": [
+                {
+                    "givenAnswer": "MFR-940181",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "MFR-940181",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "MFR-940181",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "MFR-940181",
                     "correct": true
@@ -419,6 +650,18 @@
                 {
                     "givenAnswer": "36x41x59cm",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "36x41x59cm",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "36x41x59cm",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "36x41x59cm",
+                    "correct": true
                 }
             ]
         },
@@ -428,6 +671,18 @@
             "question": "What is the warehouse location of product PROD-000031?",
             "expectedAnswer": "D-70-8",
             "answers": [
+                {
+                    "givenAnswer": "D-70-8",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "D-70-8",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "D-70-8",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "D-70-8",
                     "correct": true
@@ -467,6 +722,18 @@
                 {
                     "givenAnswer": "2026-01-20",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "2026-01-20",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "2026-01-20",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "2026-01-20",
+                    "correct": true
                 }
             ]
         },
@@ -476,6 +743,18 @@
             "question": "What is the price of product PROD-000006?",
             "expectedAnswer": "4929.92",
             "answers": [
+                {
+                    "givenAnswer": "4929.92",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "4929.92",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "4929.92",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "4929.92",
                     "correct": true
@@ -515,6 +794,18 @@
                 {
                     "givenAnswer": "1.8",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "1.8",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1.8",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1.8",
+                    "correct": true
                 }
             ]
         },
@@ -524,6 +815,18 @@
             "question": "What is the weight of product PROD-000019?",
             "expectedAnswer": "133.22",
             "answers": [
+                {
+                    "givenAnswer": "133.22",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "133.22",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "133.22",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "133.22",
                     "correct": true
@@ -563,6 +866,18 @@
                 {
                     "givenAnswer": "1053.79",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "1053.79",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1053.79",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1053.79",
+                    "correct": true
                 }
             ]
         },
@@ -572,6 +887,18 @@
             "question": "What is the units shipped of product PROD-000020?",
             "expectedAnswer": "33933",
             "answers": [
+                {
+                    "givenAnswer": "33933",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "33933",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "33933",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "33933",
                     "correct": true
@@ -611,6 +938,18 @@
                 {
                     "givenAnswer": "Industrial Switch 2960",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "Industrial Switch 2960",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Industrial Switch 2960",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Industrial Switch 2960",
+                    "correct": true
                 }
             ]
         },
@@ -635,6 +974,18 @@
                 {
                     "givenAnswer": "1001",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "1001",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1001",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1001",
+                    "correct": true
                 }
             ]
         },
@@ -644,6 +995,18 @@
             "question": "What is the supplier location of product PROD-000028?",
             "expectedAnswer": "Dubai (UAE)",
             "answers": [
+                {
+                    "givenAnswer": "Dubai (UAE)",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Dubai (UAE)",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Dubai (UAE)",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "Dubai (UAE)",
                     "correct": true
@@ -689,6 +1052,18 @@
                 {
                     "givenAnswer": "1244,174,3837,Industrial Switch 2960,144.17",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "1244,174,3837,Industrial Switch 2960,144.17",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1244,174,3837,Industrial Switch 2960,144.17",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1244,174,3837,Industrial Switch 2960,144.17",
+                    "correct": true
                 }
             ]
         },
@@ -703,6 +1078,18 @@
                 "F-69-14"
             ],
             "answers": [
+                {
+                    "givenAnswer": "IND-000015,Industrial Solutions Inc,32974,F-69-14",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "IND-000015,Industrial Solutions Inc,32974,F-69-14",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "IND-000015,Industrial Solutions Inc,32974,F-69-14",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "IND-000015,Industrial Solutions Inc,32974,F-69-14",
                     "correct": true
@@ -747,6 +1134,18 @@
                 {
                     "givenAnswer": "false,Electronics,2999.1,ELE-000002",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "false,Electronics,2999.1,ELE-000002",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "false,Electronics,2999.1,ELE-000002",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "false,Electronics,2999.1,ELE-000002",
+                    "correct": false
                 }
             ]
         },
@@ -759,6 +1158,18 @@
                 "MFR-678086"
             ],
             "answers": [
+                {
+                    "givenAnswer": "41,MFR-678086",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "41,MFR-678086",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "41,MFR-678086",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "41,MFR-678086",
                     "correct": true
@@ -802,6 +1213,18 @@
                 {
                     "givenAnswer": "Factory Direct Inc,2025-12-08,2560",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "Factory Direct Inc,2025-12-08,2560",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Factory Direct Inc,2025-12-08,2560",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Factory Direct Inc,2025-12-08,2560",
+                    "correct": true
                 }
             ]
         },
@@ -818,6 +1241,18 @@
                 "2195"
             ],
             "answers": [
+                {
+                    "givenAnswer": "1333.01,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,MAT-000000,2026-03-05,true,2195",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1333.01,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,MAT-000000,2026-03-05,true,2195",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1333.01,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,MAT-000000,2026-03-05,true,2195",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "1333.01,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,MAT-000000,2026-03-05,true,2195",
                     "correct": true
@@ -865,6 +1300,18 @@
                 {
                     "givenAnswer": "Dubai (UAE),128x115x58cm,34,false,2852.32,false,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "Dubai (UAE),128x115x58cm,34,false,2852.32,false,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "Dubai (UAE),128x115x58cm,34,false,2852.32,false,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "Dubai (UAE),128x115x58cm,34,false,2852.32,false,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
+                    "correct": false
                 }
             ]
         },
@@ -880,6 +1327,18 @@
                 "Professional Motor 8220"
             ],
             "answers": [
+                {
+                    "givenAnswer": "36x41x59cm,true,2026-01-18,MFR-913915,Professional Motor 8220",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "36x41x59cm,true,2026-01-18,MFR-913915,Professional Motor 8220",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "36x41x59cm,true,2026-01-18,MFR-913915,Professional Motor 8220",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "36x41x59cm,true,2026-01-18,MFR-913915,Professional Motor 8220",
                     "correct": true
@@ -927,6 +1386,18 @@
                 {
                     "givenAnswer": "133.22,false,PAC-000018,101,2026-01-29,2910.99,82512",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "133.22,false,PAC-000018,101,2026-01-29,2910.99,82512",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "133.22,false,PAC-000018,101,2026-01-29,2910.99,82512",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "133.22,false,PAC-000018,101,2026-01-29,2910.99,82512",
+                    "correct": false
                 }
             ]
         },
@@ -939,6 +1410,18 @@
                 "Premium Compressor 5381"
             ],
             "answers": [
+                {
+                    "givenAnswer": "I-70-19,Premium Compressor 5381",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "I-70-19,Premium Compressor 5381",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "I-70-19,Premium Compressor 5381",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "I-70-19,Premium Compressor 5381",
                     "correct": true
@@ -969,6 +1452,18 @@
                 "168.12"
             ],
             "answers": [
+                {
+                    "givenAnswer": "7535,Office Supplies,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,Tech Components Group,168.12",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "7535,Office Supplies,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,Tech Components Group,168.12",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "7535,Office Supplies,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,Tech Components Group,168.12",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "7535,Office Supplies,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,Tech Components Group,168.12",
                     "correct": true
@@ -1016,6 +1511,18 @@
                 {
                     "givenAnswer": "false,46x138x127cm,3848,B-63-46,2026-02-09,251.69,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "false,46x138x127cm,3848,B-63-46,2026-02-09,251.69,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "false,46x138x127cm,3848,B-63-46,2026-02-09,251.69,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "false,46x138x127cm,3848,B-63-46,2026-02-09,251.69,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.",
+                    "correct": false
                 }
             ]
         },
@@ -1045,6 +1552,18 @@
                 {
                     "givenAnswer": "162x90x128cm,false,Tech Components Group,false",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "162x90x128cm,false,Tech Components Group,false",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "162x90x128cm,false,Tech Components Group,false",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "162x90x128cm,false,Tech Components Group,false",
+                    "correct": false
                 }
             ]
         },
@@ -1061,6 +1580,18 @@
                 "MFR-958869"
             ],
             "answers": [
+                {
+                    "givenAnswer": "107,2123.56,B-8-21,false,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,MFR-958869",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "107,2123.56,B-8-21,false,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,MFR-958869",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "107,2123.56,B-8-21,false,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,MFR-958869",
+                    "correct": false
+                },
                 {
                     "givenAnswer": "107,2123.56,B-8-21,false,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,MFR-958869",
                     "correct": false
@@ -1108,6 +1639,18 @@
                 {
                     "givenAnswer": "1000.79,Tools,2026-01-23,2437.5,Premium Drill 3674,85975,50x191x137cm",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "1000.79,Tools,2026-01-23,2437.5,Premium Drill 3674,85975,50x191x137cm",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1000.79,Tools,2026-01-23,2437.5,Premium Drill 3674,85975,50x191x137cm",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1000.79,Tools,2026-01-23,2437.5,Premium Drill 3674,85975,50x191x137cm",
+                    "correct": true
                 }
             ]
         },
@@ -1120,6 +1663,18 @@
                 "Singapore"
             ],
             "answers": [
+                {
+                    "givenAnswer": "2316.65,Singapore",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "2316.65,Singapore",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "2316.65,Singapore",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "2316.65,Singapore",
                     "correct": true
@@ -1166,6 +1721,18 @@
                 {
                     "givenAnswer": "3399,false,MFR-792793,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,1187.32,true",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "3399,false,MFR-792793,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,1187.32,true",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "3399,false,MFR-792793,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,1187.32,true",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "3399,false,MFR-792793,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,1187.32,true",
+                    "correct": false
                 }
             ]
         },
@@ -1179,6 +1746,18 @@
                 "High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications."
             ],
             "answers": [
+                {
+                    "givenAnswer": "2.9,2813,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "2.9,2813,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "2.9,2813,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "2.9,2813,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.",
                     "correct": true
@@ -1222,6 +1801,18 @@
                 {
                     "givenAnswer": "Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,1439,Dubai (UAE)",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,1439,Dubai (UAE)",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,1439,Dubai (UAE)",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,1439,Dubai (UAE)",
+                    "correct": true
                 }
             ]
         },
@@ -1238,6 +1829,18 @@
                 "MFR-281350"
             ],
             "answers": [
+                {
+                    "givenAnswer": "45x85x151cm,2902.72,165,OFF-000012,2026-02-18,MFR-281350",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "45x85x151cm,2902.72,165,OFF-000012,2026-02-18,MFR-281350",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "45x85x151cm,2902.72,165,OFF-000012,2026-02-18,MFR-281350",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "45x85x151cm,2902.72,165,OFF-000012,2026-02-18,MFR-281350",
                     "correct": true
@@ -1287,6 +1890,18 @@
                 {
                     "givenAnswer": "IND-000015,false,151,MFR-795567,393.19,Singapore,1039.24,true,Hong Kong",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "IND-000015,false,151,MFR-795567,393.19,Singapore,514.81,true,Hong Kong",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "IND-000015,false,151,MFR-795567,393.19,Singapore,514.81,true,Hong Kong",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "IND-000015,false,151,MFR-795567,393.19,Singapore,514.81,true,Hong Kong",
+                    "correct": false
                 }
             ]
         },
@@ -1321,6 +1936,18 @@
                 {
                     "givenAnswer": "4896.81,Los Angeles (USA),3259,33933,Premium Drill 3674,330,2026-01-23,2437.5,85975",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "4896.81,Los Angeles (USA),3259,33933,Premium Drill 3674,330,2026-01-23,2437.5,85975",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "4896.81,Los Angeles (USA),3259,33933,Premium Drill 3674,330,2026-01-23,2437.5,85975",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "4896.81,Los Angeles (USA),3259,33933,Premium Drill 3674,330,2026-01-23,2437.5,85975",
+                    "correct": true
                 }
             ]
         },
@@ -1351,6 +1978,18 @@
                 {
                     "givenAnswer": "false,1704.01,2026-02-27,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,409.88",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "false,1704.01,2025-09-19,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,409.88",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "false,1704.01,2025-09-19,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,409.88",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "false,1704.01,2025-09-19,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,409.88",
+                    "correct": false
                 }
             ]
         },
@@ -1380,6 +2019,18 @@
                 },
                 {
                     "givenAnswer": "8966,Los Angeles (USA),36x41x59cm,174,Dubai (UAE),J-74-8,1244,135x20x37cm,false",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "8966,Los Angeles (USA),36x41x59cm,174,Shanghai (China),J-74-8,1244,135x20x37cm,false",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "8966,Los Angeles (USA),36x41x59cm,174,Shanghai (China),J-74-8,1244,135x20x37cm,false",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "8966,Los Angeles (USA),36x41x59cm,174,Shanghai (China),J-74-8,1244,135x20x37cm,false",
                     "correct": false
                 },
                 {
@@ -1422,6 +2073,18 @@
                 {
                     "givenAnswer": "4909,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,Furniture,false,59332,1507.08,2026-03-05,185.9,43299,173x98x197cm,1.4,340.83",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "4909,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,Furniture,false,59332,1507.08,2026-03-05,179.43,43299,173x98x197cm,1.4,340.83",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "4909,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,Furniture,false,59332,1507.08,2026-03-05,179.43,43299,173x98x197cm,1.4,340.83",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "4909,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,Furniture,false,59332,1507.08,2026-03-05,179.43,43299,173x98x197cm,1.4,340.83",
+                    "correct": false
                 }
             ]
         },
@@ -1456,6 +2119,18 @@
                 {
                     "givenAnswer": "Industrial Solutions Inc,2026-03-05,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,41,ACC-000024,New York (USA),320.31,1535.11,Industrial Cable 6785",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "Industrial Solutions Inc,2025-12-14,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,41,ACC-000024,New York (USA),320.31,1535.11,Industrial Cable 6785",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Industrial Solutions Inc,2025-12-14,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,41,ACC-000024,New York (USA),320.31,1535.11,Industrial Cable 6785",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Industrial Solutions Inc,2025-12-14,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,41,ACC-000024,New York (USA),320.31,1535.11,Industrial Cable 6785",
+                    "correct": true
                 }
             ]
         },
@@ -1491,6 +2166,18 @@
                 {
                     "givenAnswer": "30361,Industrial Solutions Inc,IND-000001,172x110x185cm,2361,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,4.2,Compact Valve 1351,96466,false",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "30361,Industrial Solutions Inc,IND-000001,172x110x185cm,2361,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,4.2,Compact Valve 1351,96466,false",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "30361,Industrial Solutions Inc,IND-000001,172x110x185cm,2361,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,4.2,Compact Valve 1351,96466,false",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "30361,Industrial Solutions Inc,IND-000001,172x110x185cm,2361,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,4.2,Compact Valve 1351,96466,false",
+                    "correct": false
                 }
             ]
         },
@@ -1512,6 +2199,18 @@
                 {
                     "givenAnswer": "1.4,1138.24,101,E-14-39,MFR-281350,2026-02-18,OFF-000012,New York (USA)",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "1.4,1138.24,101,D-48-10,MFR-281350,2026-02-18,OFF-000012,New York (USA)",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1.4,1138.24,101,D-48-10,MFR-281350,2026-02-18,OFF-000012,New York (USA)",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1.4,1138.24,101,D-48-10,MFR-281350,2026-02-18,OFF-000012,New York (USA)",
+                    "correct": true
                 },
                 {
                     "givenAnswer": "1.4,1138.24,101,D-48-10,MFR-281350,2026-02-18,OFF-000012,New York (USA)",
@@ -1558,6 +2257,18 @@
                 {
                     "givenAnswer": "H-72-37,9228,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,36.56,34,false,2026-01-12,8742,128x115x58cm",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "2026-02-23,Industrial Solutions Inc,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,36.56,34,false,2026-01-12,8742,128x115x58cm",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "2026-02-23,Industrial Solutions Inc,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,36.56,34,false,2026-01-12,8742,128x115x58cm",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "2026-02-23,Industrial Solutions Inc,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,36.56,34,false,2026-01-12,8742,128x115x58cm",
+                    "correct": false
                 }
             ]
         },
@@ -1580,6 +2291,18 @@
             "answers": [
                 {
                     "givenAnswer": "E-14-39,7535,174x179x43cm,Industrial Pump 346,168.12,91.82,true,2026-01-22,Textiles,136x130x41cm",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "E-14-39,7535,174x179x43cm,Industrial Pump 346,168.12,91.82,false,2026-01-22,Textiles,136x130x41cm",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "E-14-39,7535,174x179x43cm,Industrial Pump 346,168.12,91.82,false,2026-01-22,Textiles,136x130x41cm",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "E-14-39,7535,174x179x43cm,Industrial Pump 346,168.12,91.82,false,2026-01-22,Textiles,136x130x41cm",
                     "correct": false
                 },
                 {
@@ -1629,6 +2352,18 @@
                 {
                     "givenAnswer": "A-93-44,5286,49x195x39cm,2.3,Trade Partners Ltd,1901,89227,Office Supplies,MAT-000005,false,195x179x95cm",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "A-93-44,5286,445,false,Trade Partners Ltd,1901,89227,Office Supplies,MAT-000005,false,195x179x95cm",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "A-93-44,5286,445,false,Trade Partners Ltd,1901,89227,Office Supplies,MAT-000005,false,195x179x95cm",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "A-93-44,5286,445,false,Trade Partners Ltd,1901,89227,Office Supplies,MAT-000005,false,195x179x95cm",
+                    "correct": false
                 }
             ]
         },
@@ -1663,6 +2398,18 @@
                 {
                     "givenAnswer": "Chemicals,false,CHE-000006,57.06,2316.65,358,127x57x19cm,true,1985.53",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "Chemicals,false,CHE-000006,57.06,2316.65,358,127x57x19cm,1140.76,Dubai (UAE)",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "Chemicals,false,CHE-000006,57.06,2316.65,358,127x57x19cm,1140.76,Dubai (UAE)",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "Chemicals,false,CHE-000006,57.06,2316.65,358,127x57x19cm,1140.76,Dubai (UAE)",
+                    "correct": false
                 }
             ]
         },
@@ -1678,6 +2425,18 @@
                 "Factory Direct Inc"
             ],
             "answers": [
+                {
+                    "givenAnswer": "2555,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,false,464,Factory Direct Inc",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "2555,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,false,464,Factory Direct Inc",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "2555,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,false,464,Factory Direct Inc",
+                    "correct": false
+                },
                 {
                     "givenAnswer": "2555,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,false,464,Factory Direct Inc",
                     "correct": false
@@ -1732,6 +2491,18 @@
                 {
                     "givenAnswer": "2026-02-17,Professional Connector 3440,1001,244.43,22x158x118cm,52751,254,2025-12-08,2025-12-01,61347,760.34,Factory Direct Inc,false,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "2026-02-17,Professional Connector 3440,1001,244.43,22x158x118cm,52751,254,2025-12-08,2025-12-01,61347,760.34,Factory Direct Inc,false,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "2026-02-17,Professional Connector 3440,1001,244.43,22x158x118cm,52751,254,2025-12-08,2025-12-01,61347,760.34,Factory Direct Inc,false,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "2026-02-17,Professional Connector 3440,1001,244.43,22x158x118cm,52751,254,2025-12-08,2025-12-01,61347,760.34,Factory Direct Inc,false,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.",
+                    "correct": false
                 }
             ]
         },
@@ -1751,6 +2522,18 @@
                 "Hong Kong"
             ],
             "answers": [
+                {
+                    "givenAnswer": "Materials,46x138x127cm,251.69,4.5,CHE-000010,83,2026-02-18,MFR-693996,Hong Kong",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Materials,46x138x127cm,251.69,4.5,CHE-000010,83,2026-02-18,MFR-693996,Hong Kong",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Materials,46x138x127cm,251.69,4.5,CHE-000010,83,2026-02-18,MFR-693996,Hong Kong",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "Materials,46x138x127cm,251.69,4.5,CHE-000010,83,2026-02-18,MFR-693996,Hong Kong",
                     "correct": true
@@ -1790,6 +2573,18 @@
                 {
                     "givenAnswer": "1",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
                 }
             ]
         },
@@ -1799,6 +2594,18 @@
             "question": "How many products have 'Trade Partners Ltd' in supplier name?",
             "expectedAnswer": 3,
             "answers": [
+                {
+                    "givenAnswer": "3",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "3",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "3",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "3",
                     "correct": true
@@ -1838,6 +2645,18 @@
                 {
                     "givenAnswer": "1",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
                 }
             ]
         },
@@ -1847,6 +2666,18 @@
             "question": "How many products have '1766.06' in price?",
             "expectedAnswer": 1,
             "answers": [
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "1",
                     "correct": true
@@ -1886,6 +2717,18 @@
                 {
                     "givenAnswer": "1",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
                 }
             ]
         },
@@ -1895,6 +2738,18 @@
             "question": "How many products have 'PROD-000019' in product id?",
             "expectedAnswer": 1,
             "answers": [
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "1",
                     "correct": true
@@ -1934,6 +2789,18 @@
                 {
                     "givenAnswer": "1",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
                 }
             ]
         },
@@ -1953,6 +2820,18 @@
                 },
                 {
                     "givenAnswer": "16",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "11",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "12",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "14",
                     "correct": false
                 },
                 {
@@ -1982,6 +2861,18 @@
                 {
                     "givenAnswer": "14",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "8",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "14",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "17",
+                    "correct": false
                 }
             ]
         },
@@ -2006,6 +2897,18 @@
                 {
                     "givenAnswer": "13",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "11",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "7",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "18",
+                    "correct": false
                 }
             ]
         },
@@ -2025,6 +2928,18 @@
                 },
                 {
                     "givenAnswer": "15",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "15",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "14",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "16",
                     "correct": false
                 },
                 {
@@ -2054,6 +2969,18 @@
                 {
                     "givenAnswer": "15",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "12",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "13",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "16",
+                    "correct": false
                 }
             ]
         },
@@ -2078,6 +3005,18 @@
                 {
                     "givenAnswer": "18",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "15",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "11",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "19",
+                    "correct": false
                 }
             ]
         },
@@ -2102,6 +3041,18 @@
                 {
                     "givenAnswer": "14",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "16",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "15",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "15",
+                    "correct": true
                 }
             ]
         },
@@ -2126,6 +3077,18 @@
                 {
                     "givenAnswer": "1",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
                 }
             ]
         },
@@ -2135,6 +3098,18 @@
             "question": "How many products have '2574.48' in price and a value above the average of 1346338 in units shipped?",
             "expectedAnswer": 0,
             "answers": [
+                {
+                    "givenAnswer": "0",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "0",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "0",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "0",
                     "correct": true
@@ -2174,6 +3149,18 @@
                 {
                     "givenAnswer": "1",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
                 }
             ]
         },
@@ -2183,6 +3170,18 @@
             "question": "How many products have 'Professional Connector 3440' in product name and a value above the average of 50.4 in avg rating?",
             "expectedAnswer": 0,
             "answers": [
+                {
+                    "givenAnswer": "0",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "0",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "0",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "0",
                     "correct": true
@@ -2222,6 +3221,18 @@
                 {
                     "givenAnswer": "1",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1",
+                    "correct": true
                 }
             ]
         },
@@ -2246,6 +3257,18 @@
                 {
                     "givenAnswer": "12",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "4",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "13",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "11",
+                    "correct": false
                 }
             ]
         },
@@ -2265,6 +3288,18 @@
                 },
                 {
                     "givenAnswer": "2",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "4",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "4",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "3",
                     "correct": false
                 },
                 {
@@ -2294,6 +3329,18 @@
                 {
                     "givenAnswer": "75284.85",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "75247.48",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "73431.49",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "75241.57",
+                    "correct": false
                 }
             ]
         },
@@ -2317,6 +3364,18 @@
                 },
                 {
                     "givenAnswer": "45626.74",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "45825.06",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "44826.86",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "46237.71",
                     "correct": false
                 }
             ]
@@ -2342,6 +3401,18 @@
                 {
                     "givenAnswer": "192639",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "182838",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "189733",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "182606",
+                    "correct": false
                 }
             ]
         },
@@ -2365,6 +3436,18 @@
                 },
                 {
                     "givenAnswer": "46.8",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "45.5",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "57.1",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "49.2",
                     "correct": false
                 }
             ]
@@ -2390,6 +3473,18 @@
                 {
                     "givenAnswer": "1347557",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "1346338",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1346338",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1346373",
+                    "correct": false
                 }
             ]
         },
@@ -2414,6 +3509,18 @@
                 {
                     "givenAnswer": "7429",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "7426",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "7438",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "7438",
+                    "correct": true
                 }
             ]
         },
@@ -2438,6 +3545,18 @@
                 {
                     "givenAnswer": "7344.27",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "7339.22",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "7339.26",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "7356.32",
+                    "correct": false
                 }
             ]
         },
@@ -2447,6 +3566,18 @@
             "question": "What is the highest value in units shipped across all products?",
             "expectedAnswer": 96951,
             "answers": [
+                {
+                    "givenAnswer": "96951",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "96951",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "96951",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "96951",
                     "correct": true
@@ -2486,6 +3617,18 @@
                 {
                     "givenAnswer": "16",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "16",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "16",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "16",
+                    "correct": true
                 }
             ]
         },
@@ -2495,6 +3638,18 @@
             "question": "What is the highest value in stock quantity across all products?",
             "expectedAnswer": 9566,
             "answers": [
+                {
+                    "givenAnswer": "9566",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "9566",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "9566",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "9566",
                     "correct": true
@@ -2534,6 +3689,18 @@
                 {
                     "givenAnswer": "65.64",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "65.64",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "65.64",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "65.64",
+                    "correct": true
                 }
             ]
         },
@@ -2543,6 +3710,18 @@
             "question": "What is the highest value in weight across all products?",
             "expectedAnswer": 455.92,
             "answers": [
+                {
+                    "givenAnswer": "455.92",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "455.92",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "455.92",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "455.92",
                     "correct": true
@@ -2582,6 +3761,18 @@
                 {
                     "givenAnswer": "1.2",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "1.2",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "1.2",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "1.2",
+                    "correct": false
                 }
             ]
         },
@@ -2591,6 +3782,18 @@
             "question": "What is the highest value in price across all products?",
             "expectedAnswer": 4929.92,
             "answers": [
+                {
+                    "givenAnswer": "4929.92",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "4929.92",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "4929.92",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "4929.92",
                     "correct": true
@@ -2630,6 +3833,18 @@
                 {
                     "givenAnswer": "2428.55",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "2427.01",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "2368.82",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "2426.83",
+                    "correct": true
                 }
             ]
         },
@@ -2653,6 +3868,18 @@
                 },
                 {
                     "givenAnswer": "236.91",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "236.75",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "236.75",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "237.30",
                     "correct": false
                 }
             ]
@@ -2678,6 +3905,18 @@
                 {
                     "givenAnswer": "43469.90",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "43430.26",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "43430.26",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "43430.74",
+                    "correct": false
                 }
             ]
         },
@@ -2701,6 +3940,18 @@
                 },
                 {
                     "givenAnswer": "6214.81",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "5898.65",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "6116.55",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "5890.52",
                     "correct": false
                 }
             ]
@@ -2726,6 +3977,18 @@
                 {
                     "givenAnswer": "239.65",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "239.55",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "239.94",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "239.94",
+                    "correct": true
                 }
             ]
         },
@@ -2749,6 +4012,18 @@
                 },
                 {
                     "givenAnswer": "1471.83",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "1478.23",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "1446.06",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1491.54",
                     "correct": false
                 }
             ]
@@ -2774,6 +4049,18 @@
                 {
                     "givenAnswer": "1465.4",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "1594.94",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "1502.77",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "1572.67",
+                    "correct": false
                 }
             ]
         },
@@ -2783,6 +4070,18 @@
             "question": "How many entries are in the data in total?",
             "expectedAnswer": 31,
             "answers": [
+                {
+                    "givenAnswer": "31",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "31",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "31",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "31",
                     "correct": true
@@ -2822,6 +4121,18 @@
                 {
                     "givenAnswer": "682",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "682",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "651",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "837",
+                    "correct": false
                 }
             ]
         },
@@ -2845,6 +4156,18 @@
                 },
                 {
                     "givenAnswer": "664",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "649",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "609",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "786",
                     "correct": false
                 }
             ]
@@ -2870,6 +4193,18 @@
                 {
                     "givenAnswer": "18",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "33",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "42",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "51",
+                    "correct": true
                 }
             ]
         },
@@ -2894,6 +4229,18 @@
                 {
                     "givenAnswer": "22",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "22",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "20",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "28",
+                    "correct": false
                 }
             ]
         },
@@ -2941,6 +4288,18 @@
                 {
                     "givenAnswer": "productId,discontinuedDate,productName,description,category,sku,manufacturerCode,avgRating,price,costPrice,stockQuantity,warehouseLocation,reorderPoint,lastRestocked,unitsShipped,supplierName,supplierLocation,weight,dimensions,hazardous,fragile,shelfLife",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "productId,discontinuedDate,productName,description,category,sku,manufacturerCode,avgRating,price,costPrice,stockQuantity,warehouseLocation,reorderPoint,lastRestocked,unitsShipped,supplierName,supplierLocation,weight,dimensions,hazardous,fragile,shelfLife",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "productId,discontinuedDate,productName,description,category,sku,manufacturerCode,avgRating,price,costPrice,stockQuantity,warehouseLocation,reorderPoint,lastRestocked,unitsShipped,supplierName,supplierLocation,weight,dimensions,hazardous,fragile,shelfLife",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "productId,discontinuedDate,identity,productName,description,searchMetadata,category,sku,manufacturerCode,avgRating,pricing,price,costPrice,inventory,stockQuantity,warehouseLocation,stats,reorderPoint,lastRestocked,unitsShipped,supplier,supplierName,supplierLocation,physical,weight,dimensions,hazardous,fragile,shelfLife",
+                    "correct": true
                 }
             ]
         },
@@ -2954,6 +4313,18 @@
                 "discontinuedDate"
             ],
             "answers": [
+                {
+                    "givenAnswer": "discontinuedDate,avgRating,shelfLife",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "discontinuedDate,avgRating,shelfLife",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "discontinuedDate,avgRating,shelfLife",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "discontinuedDate,avgRating,shelfLife",
                     "correct": true
@@ -3013,6 +4384,18 @@
                 {
                     "givenAnswer": "productId,productName,description,category,sku,manufacturerCode,price,costPrice,stockQuantity,warehouseLocation,reorderPoint,lastRestocked,unitsShipped,supplierName,supplierLocation,weight,dimensions,hazardous,fragile",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "productId,productName,description,category,sku,manufacturerCode,price,costPrice,stockQuantity,warehouseLocation,reorderPoint,lastRestocked,unitsShipped,supplierName,supplierLocation,weight,dimensions,hazardous,fragile",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "productId,productName,description,category,sku,manufacturerCode,price,costPrice,stockQuantity,warehouseLocation,reorderPoint,lastRestocked,unitsShipped,supplierName,supplierLocation,weight,dimensions,hazardous,fragile",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "productId,identity,productName,description,searchMetadata,category,sku,manufacturerCode,pricing,price,costPrice,inventory,stockQuantity,warehouseLocation,stats,reorderPoint,lastRestocked,unitsShipped,supplier,supplierName,supplierLocation,physical,weight,dimensions,hazardous,fragile",
+                    "correct": true
                 }
             ]
         },
@@ -3054,6 +4437,18 @@
                 "PROD-000031"
             ],
             "answers": [
+                {
+                    "givenAnswer": "PROD-000001,PROD-000002,PROD-000003,PROD-000004,PROD-000005,PROD-000006,PROD-000007,PROD-000008,PROD-000009,PROD-000010,PROD-000011,PROD-000012,PROD-000013,PROD-000014,PROD-000015,PROD-000016,PROD-000017,PROD-000018,PROD-000019,PROD-000020,PROD-000021,PROD-000022,PROD-000023,PROD-000024,PROD-000025,PROD-000026,PROD-000027,PROD-000028,PROD-000029,PROD-000030,PROD-000031",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "PROD-000001,PROD-000002,PROD-000003,PROD-000004,PROD-000005,PROD-000006,PROD-000007,PROD-000008,PROD-000009,PROD-000010,PROD-000011,PROD-000012,PROD-000013,PROD-000014,PROD-000015,PROD-000016,PROD-000017,PROD-000018,PROD-000019,PROD-000020,PROD-000021,PROD-000022,PROD-000023,PROD-000024,PROD-000025,PROD-000026,PROD-000027,PROD-000028,PROD-000029,PROD-000030,PROD-000031",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "PROD-000001,PROD-000002,PROD-000003,PROD-000004,PROD-000005,PROD-000006,PROD-000007,PROD-000008,PROD-000009,PROD-000010,PROD-000011,PROD-000012,PROD-000013,PROD-000014,PROD-000015,PROD-000016,PROD-000017,PROD-000018,PROD-000019,PROD-000020,PROD-000021,PROD-000022,PROD-000023,PROD-000024,PROD-000025,PROD-000026,PROD-000027,PROD-000028,PROD-000029,PROD-000030,PROD-000031",
+                    "correct": true
+                },
                 {
                     "givenAnswer": "PROD-000001,PROD-000002,PROD-000003,PROD-000004,PROD-000005,PROD-000006,PROD-000007,PROD-000008,PROD-000009,PROD-000010,PROD-000011,PROD-000012,PROD-000013,PROD-000014,PROD-000015,PROD-000016,PROD-000017,PROD-000018,PROD-000019,PROD-000020,PROD-000021,PROD-000022,PROD-000023,PROD-000024,PROD-000025,PROD-000026,PROD-000027,PROD-000028,PROD-000029,PROD-000030,PROD-000031",
                     "correct": true
@@ -3125,6 +4520,18 @@
                 {
                     "givenAnswer": "A-64-35,A-93-44,B-10-16,B-59-1,B-63-46,B-8-21,C-16-37,C-54-21,D-32-50,D-48-10,D-70-8,D-93-11,E-14-39,E-22-40,E-33-8,E-41-31,F-22-16,F-34-6,F-6-46,F-69-14,G-14-39,H-53-41,H-72-37,H-95-41,I-42-47,I-67-14,I-70-19,I-73-34,J-11-32,J-46-5,J-74-8",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "A-64-35,A-93-44,B-10-16,B-59-1,B-63-46,B-8-21,C-16-37,C-54-21,D-32-50,D-48-10,D-70-8,D-93-11,E-14-39,E-22-40,E-33-8,E-41-31,F-22-16,F-34-6,F-6-46,F-69-14,G-14-39,H-53-41,H-72-37,H-95-41,I-42-47,I-67-14,I-70-19,I-73-34,J-11-32,J-46-5,J-74-8",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "C-54-21,E-22-40,C-16-37,I-42-47,F-22-16,F-34-6,J-11-32,I-67-14,E-14-39,A-64-35,B-63-46,H-53-41,D-48-10,B-8-21,A-93-44,F-69-14,F-6-46,D-32-50,E-33-8,D-93-11,B-59-1,I-73-34,B-10-16,I-70-19,E-41-31,H-95-41,G-14-39,H-72-37,J-74-8,J-46-5,D-70-8",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "C-54-21,E-22-40,C-16-37,I-42-47,F-22-16,F-34-6,J-11-32,I-67-14,E-14-39,A-64-35,B-63-46,H-53-41,D-48-10,B-8-21,A-93-44,F-69-14,F-6-46,D-32-50,E-33-8,D-93-11,B-59-1,I-73-34,B-10-16,I-70-19,E-41-31,H-95-41,G-14-39,H-72-37,J-74-8,J-46-5,D-70-8",
+                    "correct": true
                 }
             ]
         },
@@ -3181,6 +4588,18 @@
                 {
                     "givenAnswer": "6x54x123cm,9x31x120cm,11x46x146cm,114x146x22cm,117x188x194cm,127x57x19cm,128x115x58cm,132x112x57cm,135x20x37cm,136x130x41cm,154x107x13cm,160x68x188cm,162x90x128cm,172x110x185cm,173x52x18cm,173x98x197cm,174x179x43cm,195x67x73cm,195x179x95cm,22x158x118cm,28x190x120cm,29x58x164cm,33x87x22cm,36x41x59cm,41x80x162cm,45x85x151cm,45x195x39cm,46x138x127cm,47x46x28cm,49x195x39cm,50x191x137cm",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "11x46x146cm,114x146x22cm,117x188x194cm,127x57x19cm,128x115x58cm,132x112x57cm,135x20x37cm,136x130x41cm,154x107x13cm,160x68x188cm,162x90x128cm,172x110x185cm,173x52x18cm,173x98x197cm,174x179x43cm,195x179x95cm,195x67x73cm,22x158x118cm,28x190x120cm,29x58x164cm,33x87x22cm,36x41x59cm,45x85x151cm,45x195x39cm,46x138x127cm,47x46x28cm,49x195x39cm,50x191x137cm,6x54x123cm,62x71x64cm,9x31x120cm",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "195x67x73cm,114x146x22cm,117x188x194cm,22x158x118cm,11x46x146cm,195x179x95cm,127x57x19cm,136x130x41cm,174x179x43cm,172x110x185cm,46x138x127cm,128x115x58cm,45x85x151cm,173x98x197cm,49x195x39cm,9x31x120cm,36x41x59cm,41x80x162cm,6x54x123cm,154x107x13cm,162x90x128cm,50x191x137cm,173x52x18cm,29x58x164cm,160x68x188cm,33x87x22cm,47x46x28cm,132x112x57cm,135x20x37cm,28x190x120cm,62x71x64cm",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "195x67x73cm,114x146x22cm,117x188x194cm,22x158x118cm,11x46x146cm,195x179x95cm,127x57x19cm,136x130x41cm,174x179x43cm,172x110x185cm,46x138x127cm,128x115x58cm,45x85x151cm,173x98x197cm,49x195x39cm,9x31x120cm,36x41x59cm,41x80x162cm,6x54x123cm,154x107x13cm,162x90x128cm,50x191x137cm,173x52x18cm,29x58x164cm,160x68x188cm,33x87x22cm,47x46x28cm,132x112x57cm,135x20x37cm,28x190x120cm,62x71x64cm",
+                    "correct": true
                 }
             ]
         },
@@ -3215,6 +4634,18 @@
                 },
                 {
                     "givenAnswer": "Accessories,Chemicals,Electronics,Furniture,Industrial Equipment,Materials,Office Supplies,Packaging,Textiles,Tools",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Accessories,Chemicals,Electronics,Furniture,Industrial Equipment,Materials,Office Supplies,Packaging,Textiles,Tools",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Industrial Equipment,Chemicals,Electronics,Packaging,Furniture,Office Supplies,Materials,Textiles,Tools,Accessories",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Industrial Equipment,Chemicals,Electronics,Packaging,Furniture,Office Supplies,Textiles,Tools,Materials,Accessories",
                     "correct": true
                 }
             ]
@@ -3272,6 +4703,18 @@
                 {
                     "givenAnswer": "Basic Cable 2788,Basic Compressor 3384,Basic Generator 219,Basic Motor 3079,Basic Switch 3326,Basic Wrench 3584,Compact Generator 727,Compact Generator 5895,Compact Pump 3587,Compact Sensor 9850,Compact Switch 3141,Compact Valve 1351,Deluxe Motor 494,Deluxe Sensor 1588,Industrial Cable 6785,Industrial Pump 346,Industrial Switch 2960,Industrial Valve 6067,Premium Cable 9999,Premium Compressor 5381,Premium Drill 3674,Premium Drill 5699,Premium Motor 4016,Premium Wrench 815,Professional Cable 7996,Professional Connector 3440,Professional Generator 9067,Professional Motor 8220,Professional Wrench 2381,Standard Cable 7878,Standard Connector 1412,Standard Controller 729,Standard Drill 4180,Standard Sensor 9229",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "Basic Compressor 3384,Basic Generator 219,Basic Motor 3079,Basic Switch 3326,Basic Wrench 3584,Compact Generator 5895,Compact Generator 727,Compact Pump 3587,Compact Sensor 9850,Compact Switch 3141,Compact Valve 1351,Deluxe Motor 494,Deluxe Sensor 1588,Industrial Cable 6785,Industrial Pump 346,Industrial Switch 2960,Industrial Valve 6067,Premium Compressor 5381,Premium Drill 3674,Premium Drill 5699,Premium Motor 4016,Premium Wrench 815,Professional Cable 7996,Professional Connector 3440,Professional Generator 9067,Professional Motor 8220,Professional Wrench 2381,Standard Connector 1412,Standard Drill 4180,Standard Sensor 9229",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "Basic Wrench 3584,Standard Sensor 9229,Deluxe Sensor 1588,Professional Connector 3440,Compact Generator 5895,Premium Drill 5699,Compact Switch 3141,Professional Cable 7996,Industrial Pump 346,Compact Valve 1351,Industrial Valve 6067,Standard Drill 4180,Professional Generator 9067,Standard Connector 1412,Basic Generator 219,Basic Compressor 3384,Professional Motor 8220,Premium Motor 4016,Basic Motor 3079,Compact Sensor 9850,Deluxe Motor 494,Premium Drill 3674,Basic Switch 3326,Premium Compressor 5381,Industrial Cable 6785,Premium Wrench 815,Professional Wrench 2381,Standard Controller 729,Industrial Switch 2960,Compact Generator 727,Compact Pump 3587",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Basic Wrench 3584,Standard Sensor 9229,Deluxe Sensor 1588,Professional Connector 3440,Compact Generator 5895,Premium Drill 5699,Compact Switch 3141,Professional Cable 7996,Industrial Pump 346,Compact Valve 1351,Industrial Valve 6067,Standard Drill 4180,Professional Generator 9067,Standard Connector 1412,Basic Generator 219,Basic Compressor 3384,Professional Motor 8220,Premium Motor 4016,Basic Motor 3079,Compact Sensor 9850,Deluxe Motor 494,Premium Drill 3674,Basic Switch 3326,Premium Compressor 5381,Industrial Cable 6785,Premium Wrench 815,Professional Wrench 2381,Standard Controller 729,Industrial Switch 2960,Compact Generator 727,Compact Pump 3587",
+                    "correct": true
                 }
             ]
         },
@@ -3299,6 +4742,18 @@
                 },
                 {
                     "givenAnswer": "2025-09-19,2025-09-22,2025-12-01",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "null,2025-09-19,2025-09-22,2025-12-01",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "null,2025-12-01,2025-09-22,2025-09-19",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "null,2025-12-01,2025-09-22,2025-09-19",
                     "correct": true
                 }
             ]
@@ -3341,6 +4796,18 @@
                 },
                 {
                     "givenAnswer": "null,1.2,1.3,1.4,1.5,1.8,1.9,2,2.1,2.2,2.3,2.7,2.9,3.5,3.7,3.8,4.2,4.5",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "null,1.2,1.3,1.4,1.5,1.8,1.9,2,2.1,2.2,2.3,2.7,2.9,3.5,3.7,3.8,4.2,4.5",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "2.2,null,1.9,1.3,3.7,null,null,3.5,null,4.2,4.5,null,2.1,1.4,2.3,null,2,null,1.4,2.9,1.5,2.7,3.8,2.3,null,1.8,null,1.4,null,2.3,1.2",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "2.2,null,1.9,1.3,3.7,3.5,4.2,4.5,2.1,1.4,2.3,2.7,3.8,1.8,2,2.9,1.5,1.2",
                     "correct": true
                 }
             ]
@@ -3390,6 +4857,18 @@
                 {
                     "givenAnswer": "2025-12-18,2025-12-25,2025-12-30,2026-01-08,2026-01-12,2026-01-17,2026-01-18,2026-01-20,2026-01-22,2026-01-23,2026-01-25,2026-01-29,2026-02-03,2026-02-07,2026-02-09,2026-02-17,2026-02-18,2026-02-23,2026-02-26,2026-02-27,2026-03-05",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "2025-12-08,2025-12-14,2025-12-18,2025-12-25,2025-12-30,2026-01-08,2026-01-12,2026-01-17,2026-01-18,2026-01-20,2026-01-22,2026-01-23,2026-01-25,2026-01-29,2026-02-03,2026-02-07,2026-02-09,2026-02-17,2026-02-18,2026-02-23,2026-02-26,2026-02-27,2026-03-05",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "2026-03-05,2026-01-17,2026-02-27,2026-02-17,2026-01-08,2026-02-07,2025-12-25,2026-01-22,2026-02-17,2026-01-20,2026-02-09,2026-01-12,2026-02-18,2026-02-07,2025-12-30,2025-12-18,2026-01-18,2025-12-08,2026-01-29,2026-01-25,2026-03-05,2026-01-23,2026-02-03,2026-02-18,2026-02-26,2026-02-17,2026-02-27,2026-02-23,2026-01-23,2025-12-14,2026-01-25",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "2026-03-05,2026-01-17,2026-02-27,2026-02-17,2026-01-08,2026-02-07,2025-12-25,2026-01-22,2026-01-20,2026-02-09,2026-01-12,2026-02-18,2026-02-03,2025-12-30,2025-12-18,2026-01-18,2025-12-08,2026-01-29,2026-01-25,2026-01-23,2026-02-26,2026-02-23,2025-12-14",
+                    "correct": true
                 }
             ]
         },
@@ -3446,6 +4925,18 @@
                 {
                     "givenAnswer": "16.6,23.72,32.22,36.56,37.11,91.82,98.83,133.22,137.5,144.17,163.42,179.43,185.9,190.36,190.36,234.49,239.74,244.43,251.69,263.76,302.78,311.47,313.42,393.19,401.31,413.41,417.84,426.26,444.53,446.93,455.92",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "16.6,23.72,32.22,36.56,37.11,91.82,98.83,133.22,137.5,144.17,163.42,179.43,185.9,190.36,231.54,234.49,239.74,244.43,251.69,263.76,302.78,311.47,393.19,401.31,413.41,417.84,426.26,444.53,446.93,455.92",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "239.74,311.47,417.84,244.43,455.92,401.31,23.72,91.82,163.42,37.11,251.69,137.5,98.83,179.43,389.17,393.19,444.53,426.26,133.22,263.76,302.78,231.54,446.93,413.41,32.22,185.9,16.6,36.56,144.17,190.36,234.49",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "239.74,311.47,417.84,244.43,455.92,401.31,23.72,91.82,163.42,37.11,251.69,137.5,98.83,179.43,389.17,393.19,444.53,426.26,133.22,263.76,302.78,231.54,446.93,413.41,32.22,185.9,16.6,36.56,144.17,190.36,234.49",
+                    "correct": true
                 }
             ]
         },
@@ -3502,6 +4993,18 @@
                 {
                     "givenAnswer": "27.28,57.06,168.12,320.31,340.83,576.92,1000.79,1187.32,1333.01,1594.34,1766.06,1893.53,1961.23,1985.53,2227.24,2300.04,2574.48,2580.1,2684.49,2852.32,2902.72,2910.99,2999.1,4066.6,4718.97,4754.93,4817.41,4896.81,4909,4929.92",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "27.28,57.06,168.12,320.31,340.83,576.92,1000.79,1187.32,1333.01,1594.34,1766.06,1893.53,1961.23,1985.53,2227.24,2300.04,2580.1,2684.49,2852.32,2902.72,2910.99,2999.1,4066.6,4718.97,4754.93,4817.41,4896.81,4909,4929.92",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "1333.01,576.92,2999.1,1766.06,2574.48,4929.92,57.06,1187.32,168.12,2684.49,4817.41,2852.32,2902.72,340.83,4718.97,2300.04,1893.53,1594.34,2910.99,4896.81,4909,1000.79,1985.53,2580.1,320.31,4754.93,1961.23,2227.24,27.28,4066.6,3896.24",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "1333.01,576.92,2999.1,1766.06,2574.48,4929.92,57.06,1187.32,168.12,2684.49,4817.41,2852.32,2902.72,340.83,4718.97,2300.04,1893.53,1594.34,2910.99,4896.81,4909,1000.79,1985.53,2580.1,320.31,4754.93,1961.23,2227.24,27.28,4066.6,3896.24",
+                    "correct": true
                 }
             ]
         },
@@ -3558,6 +5061,18 @@
                 {
                     "givenAnswer": "65.64,227.83,409.88,514.81,531.05,666.27,760.34,961.72,983.4,1039.24,1053.79,1069.66,1138.24,1140.76,1490.59,1507.08,1535.11,1616.95,1681.11,1704.01,1743.5,2123.56,2190.19,2191.56,2228.95,2251.23,2316.65,2336.24,2430.17,2437.5,2480.88",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "65.64,227.83,409.88,514.81,531.05,666.27,760.34,961.72,983.4,1039.24,1053.79,1069.66,1138.24,1140.76,1490.59,1507.08,1535.11,1616.95,1681.11,1704.01,1743.5,2123.56,2190.19,2191.56,2228.95,2251.23,2316.65,2336.24,2430.17,2437.5,2480.88",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "514.81,2251.23,1704.01,961.72,531.05,1490.59,2316.65,1616.95,2336.24,666.27,2191.56,227.83,65.64,2123.56,983.4,1681.11,2430.17,760.34,1138.24,2190.19,1507.08,2437.5,1140.76,1743.5,1535.11,1039.24,409.88,2480.88,1069.66,1053.79,2228.95",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "514.81,2251.23,1704.01,961.72,531.05,1490.59,2316.65,1616.95,2336.24,666.27,2191.56,227.83,65.64,2123.56,983.4,1681.11,2430.17,760.34,1138.24,2190.19,1507.08,2437.5,1140.76,1743.5,1535.11,1039.24,409.88,2480.88,1069.66,1053.79,2228.95",
+                    "correct": true
                 }
             ]
         },
@@ -3579,6 +5094,18 @@
                 },
                 {
                     "givenAnswer": "false,true",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "true,false",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "false,true",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "true,false",
                     "correct": true
                 },
                 {
@@ -3640,6 +5167,18 @@
                 {
                     "givenAnswer": "284,881,1244,1439,2078,2439,2505,2773,2813,3272,3399,5233,5286,6927,7106,7111,7205,7499,7535,7722,7744,8226,8742,8862,8879,8966,9228,9566",
                     "correct": false
+                },
+                {
+                    "givenAnswer": "1244,1439,2078,2439,2505,2694,2773,2813,3272,3399,3848,5233,5286,5506,6927,7106,7111,7205,7499,7535,7544,7722,8226,8742,8862,8879,8966,9228,9566",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "7205,8226,8862,7111,2439,2694,7106,3399,7535,3272,3848,8742,2773,8879,5286,5233,8966,284,7744,2813,7499,2078,1439,881,2505,6927,5506,9228,1244,9566,7722",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "7205,8226,8862,7111,2439,2694,7106,3399,7535,3272,3848,8742,2773,8879,5286,5233,8966,284,7744,2813,7499,2078,1439,881,2505,6927,5506,9228,1244,9566,7722",
+                    "correct": true
                 }
             ]
         },
@@ -3665,6 +5204,18 @@
                 },
                 {
                     "givenAnswer": "true,false",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "false,true",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "false,true",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "false,true",
                     "correct": true
                 }
             ]
@@ -3699,6 +5250,18 @@
                 {
                     "givenAnswer": "Factory Direct Inc,Global Supply Co,Industrial Solutions Inc,Material Distributors AB,Premier Parts Ltd,Reliable Vendors LLC,Tech Components Group,Trade Partners Ltd",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "Factory Direct Inc,Global Supply Co,Industrial Solutions Inc,Material Distributors AB,Premier Parts Ltd,Reliable Vendors LLC,Tech Components Group,Trade Partners Ltd",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Industrial Solutions Inc,Factory Direct Inc,Premier Parts Ltd,Material Distributors AB,Tech Components Group,Trade Partners Ltd,Reliable Vendors LLC,Global Supply Co",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Industrial Solutions Inc,Factory Direct Inc,Premier Parts Ltd,Tech Components Group,Material Distributors AB,Trade Partners Ltd,Reliable Vendors LLC,Global Supply Co",
+                    "correct": true
                 }
             ]
         },
@@ -3728,6 +5291,18 @@
                 },
                 {
                     "givenAnswer": "Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.",
                     "correct": true
                 }
             ]
@@ -3785,6 +5360,18 @@
                 {
                     "givenAnswer": "1349,3837,6576,9927,16699,18707,21122,24375,26969,27161,28782,30361,32974,33636,33933,41508,42705,43299,43688,44251,50898,52751,59332,61347,62417,76603,82512,85975,89227,96466,96951",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "1349,3837,6576,9927,16699,18707,21122,24375,26969,27161,28782,30361,32974,33636,33933,41508,42705,43299,43688,44251,50898,52751,59332,61347,62417,76603,82512,85975,89227,96466,96951",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "26969,30361,6576,52751,41508,89227,42705,27161,50898,96466,96951,18707,43688,43299,62417,32974,16699,61347,82512,33933,59332,85975,9927,21122,44251,33636,28782,76603,3837,1349,24375",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "26969,30361,6576,52751,41508,89227,42705,27161,50898,96466,96951,18707,43688,43299,62417,32974,16699,61347,82512,33933,59332,85975,9927,21122,44251,33636,28782,76603,3837,1349,24375",
+                    "correct": true
                 }
             ]
         },
@@ -3841,6 +5428,18 @@
                 {
                     "givenAnswer": "ACC-000011,ACC-000014,ACC-000024,CHE-000003,CHE-000004,CHE-000006,CHE-000009,CHE-000010,CHE-000021,ELE-000002,ELE-000016,IND-000001,IND-000015,IND-000017,IND-000020,IND-000025,IND-000030,MAT-000000,MAT-000005,MAT-000027,MAT-000028,OFF-000012,OFF-000022,PAC-000008,PAC-000018,PAC-000019,TEX-000013,TEX-000026,TOO-000007,TOO-000023,TOO-000029",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "ACC-000011,ACC-000014,ACC-000024,CHE-000003,CHE-000004,CHE-000006,CHE-000009,CHE-000010,CHE-000021,ELE-000002,ELE-000016,IND-000001,IND-000015,IND-000017,IND-000020,IND-000025,IND-000030,MAT-000000,MAT-000005,MAT-000027,MAT-000028,OFF-000012,OFF-000022,PAC-000008,PAC-000018,PAC-000019,TEX-000013,TEX-000026,TOO-000007,TOO-000023,TOO-000029",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "MAT-000000,IND-000001,ELE-000002,CHE-000003,CHE-000004,MAT-000005,CHE-000006,TOO-000007,PAC-000008,CHE-000009,CHE-000010,ACC-000011,OFF-000012,TEX-000013,ACC-000014,IND-000015,ELE-000016,IND-000017,PAC-000018,PAC-000019,IND-000020,CHE-000021,OFF-000022,TOO-000023,ACC-000024,IND-000025,TEX-000026,MAT-000027,MAT-000028,TOO-000029,IND-000030",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "MAT-000000,IND-000001,ELE-000002,CHE-000003,CHE-000004,MAT-000005,CHE-000006,TOO-000007,PAC-000008,CHE-000009,CHE-000010,ACC-000011,OFF-000012,TEX-000013,ACC-000014,IND-000015,ELE-000016,IND-000017,PAC-000018,PAC-000019,IND-000020,CHE-000021,OFF-000022,TOO-000023,ACC-000024,IND-000025,TEX-000026,MAT-000027,MAT-000028,TOO-000029,IND-000030",
+                    "correct": true
                 }
             ]
         },
@@ -3896,6 +5495,18 @@
                 },
                 {
                     "givenAnswer": "16,34,37,57,60,83,94,101,107,133,150,151,165,172,174,189,203,231,254,317,330,337,358,424,445,454,457,459,464,486,496",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "16,34,37,57,60,83,94,101,107,133,150,151,165,172,174,189,203,231,254,317,330,337,358,424,445,454,457,459,464,486,496",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "16,231,486,254,464,203,358,337,57,172,457,34,165,107,445,151,37,496,101,459,189,330,317,83,150,94,454,60,174,424,133",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "16,231,486,254,464,203,358,337,57,172,457,34,165,107,445,151,37,496,101,459,189,330,317,83,150,94,454,60,174,424,133",
                     "correct": true
                 }
             ]
