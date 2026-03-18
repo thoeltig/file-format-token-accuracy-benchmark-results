@@ -37,6 +37,36 @@ This repository contains **benchmark results and raw data** from experiments eva
 
 **See [Full Report](./initital_benchmark_haiku_4_5_formats_all_variants_all_extended_thinking_off/BENCHMARK_REPORT.md) for detailed decision framework and trade-off analysis.**
 
+## Benchmark Results: Haiku 4.5 — Flat & Nested, Thinking On & Off
+
+- **Date**: 2026-03-18
+- **Model**: Claude Haiku 4.5 (claude-haiku-4-5-20251001)
+- **Thinking**: on & off
+- **Structure**: flat & nested
+- **Tested Formats**: 7 (CSV, JSON Compact/Pretty, TOON Default, XML Compact/Pretty, YAML)
+- **Data Variants**: Mandatory (22 fields, dense) and optional (19 mandatory + 3 optional, sparse), 31 records
+
+### Key Findings
+
+- **Structure is the dominant variable.** Flat vs nested changes which format wins more than thinking mode or data variant does.
+- **JSON Compact**: Most consistent format across all configurations. Wins all nested configurations and flat optional data. Smallest performance delta between mandatory and optional variants.
+- **TOON Default**: Flat mandatory specialist — highest efficiency on dense flat data, lowest processing duration. Degrades ~62% in token cost on optional data; no advantage on nested structures.
+- **CSV**: Lowest raw token count but worst accuracy (54–63%). High wasted tokens in most configurations — token savings are negated by inaccurate output.
+- **XML Pretty**: Lowest efficiency score in every configuration without exception. No use case where it is the right choice for LLM context consumption.
+
+### Format Recommendations (Summary)
+
+| Scenario | Format | Alternative |
+|----------|--------|-------------|
+| **Dense data, flat structure** | TOON Default | CSV |
+| **Dense data, nested structure** | JSON Compact | XML Compact |
+| **Sparse / optional data (any structure)** | JSON Compact | XML Compact |
+| **Minimize token cost** | CSV | TOON Default (flat mandatory only) |
+| **Minimize wasted tokens** | JSON Compact | TOON Default (flat mandatory only) |
+| **Never use** | XML Pretty | — |
+
+**See [Benchmark Report Summary](./benchmark_haiku_4_5/Benchmark_Report_Summary.md) for the full decision matrix and cross-configuration analysis.**
+
 ## Repository Structure
 
 ### Benchmark Runs
