@@ -147,24 +147,24 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
 
 | ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Accuracy | ↓ Wtd Accuracy | ↓ Eff Score | ↓ Wtd Eff Score |
 |---|---|---|---|---|---|---|
-| toon_default ≈ 40225s | json_compact ≈ 10468 | json_compact ≈ 3579 | xml_compact ≈ 68% | xml_compact ≈ 67% | json_compact ≈ 75 | json_compact ≈ 74  |
-| json_pretty (+91.4%) | xml_compact (+24.3%) | xml_compact (+17.3%) | toon_default (-1.4%) | yaml (-0.4%) | xml_compact (-7.9%) | xml_compact (-7.7%) |
-| xml_compact (+98.2%) | yaml (+37.3%) | yaml (+36.0%) | yaml (-1.6%) | toon_default (-1.0%) | yaml (-14.5%) | yaml (-13.2%) |
-| xml_pretty (+102.4%) | toon_default (+38.4%) | toon_default (+36.3%) | json_compact (-1.9%) | json_pretty (-1.6%) | toon_default (-14.8%) | toon_default (-14.3%) |
-| json_compact (+103.3%) | json_pretty (+71.8%) | json_pretty (+75.9%) | json_pretty (-2.7%) | json_compact (-2.2%) | json_pretty (-29.4%) | json_pretty (-28.3%) |
-| yaml (+113.3%) | xml_pretty (+95.9%) | xml_pretty (+118.7%) | xml_pretty (-5.9%) | xml_pretty (-5.4%) | xml_pretty (-41.9%) | xml_pretty (-41.6%) |
+| TOON_DEFAULT ≈ 40225s | JSON_COMPACT ≈ 10468 | JSON_COMPACT ≈ 3579 | XML_COMPACT ≈ 68% | XML_COMPACT ≈ 67% | JSON_COMPACT ≈ 75 | JSON_COMPACT ≈ 74  |
+| JSON_PRETTY (+91.4%) | XML_COMPACT (+24.3%) | XML_COMPACT (+17.3%) | TOON_DEFAULT (-1.4%) | YAML (-0.4%) | XML_COMPACT (-7.9%) | XML_COMPACT (-7.7%) |
+| XML_COMPACT (+98.2%) | YAML (+37.3%) | YAML (+36.0%) | YAML (-1.6%) | TOON_DEFAULT (-1.0%) | YAML (-14.5%) | YAML (-13.2%) |
+| XML_PRETTY (+102.4%) | TOON_DEFAULT (+38.4%) | TOON_DEFAULT (+36.3%) | JSON_COMPACT (-1.9%) | JSON_PRETTY (-1.6%) | TOON_DEFAULT (-14.8%) | TOON_DEFAULT (-14.3%) |
+| JSON_COMPACT (+103.3%) | JSON_PRETTY (+71.8%) | JSON_PRETTY (+75.9%) | JSON_PRETTY (-2.7%) | JSON_COMPACT (-2.2%) | JSON_PRETTY (-29.4%) | JSON_PRETTY (-28.3%) |
+| YAML (+113.3%) | XML_PRETTY (+95.9%) | XML_PRETTY (+118.7%) | XML_PRETTY (-5.9%) | XML_PRETTY (-5.4%) | XML_PRETTY (-41.9%) | XML_PRETTY (-41.6%) |
 
 
 ##### Optional
 
 | ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Accuracy | ↓ Wtd Accuracy | ↓ Eff Score | ↓ Wtd Eff Score |
 |---|---|---|---|---|---|---|
-| toon_default ≈ 53833s | json_compact ≈ 9950 | json_compact ≈ 3547 | toon_default ≈ 65% | toon_default ≈ 67% | json_compact ≈ 75 | json_compact ≈ 75  |
-| yaml (+24.9%) | xml_compact (+28.3%) | xml_compact (+39.3%) | json_compact (-0.6%) | json_compact (-2.0%) | xml_compact (-13.5%) | xml_compact (-12.3%) |
-| xml_pretty (+27.7%) | toon_default (+42.8%) | toon_default (+40.3%) | xml_compact (-3.7%) | xml_compact (-3.8%) | toon_default (-15.5%) | toon_default (-14.2%) |
-| xml_compact (+41.8%) | yaml (+45.2%) | yaml (+67.6%) | json_pretty (-4.0%) | json_pretty (-4.9%) | yaml (-22.1%) | yaml (-21.6%) |
-| json_pretty (+75.3%) | json_pretty (+71.5%) | json_pretty (+87.5%) | xml_pretty (-4.2%) | xml_pretty (-5.0%) | json_pretty (-30.0%) | json_pretty (-29.5%) |
-| json_compact (+75.9%) | xml_pretty (+99.8%) | xml_pretty (+119.9%) | yaml (-6.1%) | yaml (-7.0%) | xml_pretty (-40.9%) | xml_pretty (-40.2%) |
+| TOON_DEFAULT ≈ 53833s | JSON_COMPACT ≈ 9950 | JSON_COMPACT ≈ 3547 | TOON_DEFAULT ≈ 65% | TOON_DEFAULT ≈ 67% | JSON_COMPACT ≈ 75 | JSON_COMPACT ≈ 75  |
+| YAML (+24.9%) | XML_COMPACT (+28.3%) | XML_COMPACT (+39.3%) | JSON_COMPACT (-0.6%) | JSON_COMPACT (-2.0%) | XML_COMPACT (-13.5%) | XML_COMPACT (-12.3%) |
+| XML_PRETTY (+27.7%) | TOON_DEFAULT (+42.8%) | TOON_DEFAULT (+40.3%) | XML_COMPACT (-3.7%) | XML_COMPACT (-3.8%) | TOON_DEFAULT (-15.5%) | TOON_DEFAULT (-14.2%) |
+| XML_COMPACT (+41.8%) | YAML (+45.2%) | YAML (+67.6%) | JSON_PRETTY (-4.0%) | JSON_PRETTY (-4.9%) | YAML (-22.1%) | YAML (-21.6%) |
+| JSON_PRETTY (+75.3%) | JSON_PRETTY (+71.5%) | JSON_PRETTY (+87.5%) | XML_PRETTY (-4.2%) | XML_PRETTY (-5.0%) | JSON_PRETTY (-30.0%) | JSON_PRETTY (-29.5%) |
+| JSON_COMPACT (+75.9%) | XML_PRETTY (+99.8%) | XML_PRETTY (+119.9%) | YAML (-6.1%) | YAML (-7.0%) | XML_PRETTY (-40.9%) | XML_PRETTY (-40.2%) |
 
 
 #### 2.1.4 Category Accuracy Ranking
@@ -173,24 +173,24 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
 
 | ↓ Field Retrieval | ↓ Structure Awareness | ↓ Filtering | ↓ Aggregation |
 |---|---|---|---|
-| yaml ≈ 74% | yaml ≈ 70% | yaml ≈ 62% | xml_compact ≈ 68% |
-| json_compact (-0.5%) | json_pretty (-0.7%) | json_pretty (-1.9%) | json_compact (-8.3%) |
-| toon_default (-1.9%) | xml_compact (-1.2%) | json_compact (-3.8%) | toon_default (-10.5%) |
-| xml_compact (-2.4%) | toon_default (-2.3%) | toon_default (-4.2%) | xml_pretty (-19.0%) |
-| json_pretty (-3.0%) | xml_pretty (-7.4%) | xml_compact (-6.3%) | json_pretty (-19.7%) |
-| xml_pretty (-4.8%) | json_compact (-9.6%) | xml_pretty (-7.9%) | yaml (-23.8%) |
+| YAML ≈ 74% | YAML ≈ 70% | YAML ≈ 62% | XML_COMPACT ≈ 68% |
+| JSON_COMPACT (-0.5%) | JSON_PRETTY (-0.7%) | JSON_PRETTY (-1.9%) | JSON_COMPACT (-8.3%) |
+| TOON_DEFAULT (-1.9%) | XML_COMPACT (-1.2%) | JSON_COMPACT (-3.8%) | TOON_DEFAULT (-10.5%) |
+| XML_COMPACT (-2.4%) | TOON_DEFAULT (-2.3%) | TOON_DEFAULT (-4.2%) | XML_PRETTY (-19.0%) |
+| JSON_PRETTY (-3.0%) | XML_PRETTY (-7.4%) | XML_COMPACT (-6.3%) | JSON_PRETTY (-19.7%) |
+| XML_PRETTY (-4.8%) | JSON_COMPACT (-9.6%) | XML_PRETTY (-7.9%) | YAML (-23.8%) |
 
 
 ##### Optional
 
 | ↓ Field Retrieval | ↓ Structure Awareness | ↓ Filtering | ↓ Aggregation |
 |---|---|---|---|
-| json_compact ≈ 67% | toon_default ≈ 78% | json_pretty ≈ 68% | json_compact ≈ 53% |
-| json_pretty (-1.2%) | xml_compact (-4.9%) | toon_default (-1.6%) | toon_default (-8.4%) |
-| toon_default (-1.6%) | json_compact (-10.4%) | json_compact (-4.4%) | xml_pretty (-12.1%) |
-| xml_pretty (-2.4%) | xml_pretty (-11.1%) | xml_pretty (-6.3%) | yaml (-13.6%) |
-| xml_compact (-3.0%) | yaml (-14.8%) | yaml (-6.3%) | json_pretty (-13.7%) |
-| yaml (-4.2%) | json_pretty (-16.1%) | xml_compact (-6.4%) | xml_compact (-15.2%) |
+| JSON_COMPACT ≈ 67% | TOON_DEFAULT ≈ 78% | JSON_PRETTY ≈ 68% | JSON_COMPACT ≈ 53% |
+| JSON_PRETTY (-1.2%) | XML_COMPACT (-4.9%) | TOON_DEFAULT (-1.6%) | TOON_DEFAULT (-8.4%) |
+| TOON_DEFAULT (-1.6%) | JSON_COMPACT (-10.4%) | JSON_COMPACT (-4.4%) | XML_PRETTY (-12.1%) |
+| XML_PRETTY (-2.4%) | XML_PRETTY (-11.1%) | XML_PRETTY (-6.3%) | YAML (-13.6%) |
+| XML_COMPACT (-3.0%) | YAML (-14.8%) | YAML (-6.3%) | JSON_PRETTY (-13.7%) |
+| YAML (-4.2%) | JSON_PRETTY (-16.1%) | XML_COMPACT (-6.4%) | XML_COMPACT (-15.2%) |
 
 
 #### 2.1.5 Conclusion
@@ -642,7 +642,7 @@ The central finding is that **whitespace formatting adds substantial token cost 
 - **Model**: Claude Haiku 4.5 (claude-haiku-4-5-20251001)
 - **Extended Thinking**: off
 - **Structure**: nested
-- **Formats Tested**: json_compact, json_pretty, toon_default, xml_compact, xml_pretty, yaml
+- **Formats Tested**: JSON_COMPACT, JSON_PRETTY, TOON_DEFAULT, XML_COMPACT, XML_PRETTY, YAML
 - **Record Counts**: 31
 - **Total Test Cases**: 12
 
