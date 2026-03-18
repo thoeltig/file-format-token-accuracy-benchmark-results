@@ -66,7 +66,7 @@ This requires measuring:
 - `totalTokens`: readTokens + outputTokens
 
 **Accuracy Metrics:**
-- `rawAccuracy`: Correct answers / total questions
+- `accuracy`: Correct answers / total questions
 - `weightedAccuracy`: Accuracy weighted by question category importanc
 
 **Information Value Metrics:**
@@ -97,14 +97,14 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
    - Optional: JSON_COMPACT 9950 tokens
    - Mandatory: JSON_COMPACT 10468 tokens
 - Lowest output token cost drift:
-   - Optional: XML_COMPACT ↓ -0.33 % ↑ 0.33 %
-   - Mandatory: XML_COMPACT ↓ -0.33 % ↑ 0.33 %
+   - Optional: XML_COMPACT ↓ -0.33% ↑ 0.33%
+   - Mandatory: XML_COMPACT ↓ -0.33% ↑ 0.33%
 - Highest accuracy:
-   - Optional: TOON_DEFAULT 64.98 %
-   - Mandatory: XML_COMPACT 67.74 %
+   - Optional: TOON_DEFAULT 64.98%
+   - Mandatory: XML_COMPACT 67.74%
 - Lowest accuracy drift:
-   - Optional: YAML ↓ 0.00 % ↑ 0.00 %
-   - Mandatory: JSON_PRETTY ↓ -1.98 % ↑ 2.98 %
+   - Optional: YAML ↓ 0.00% ↑ 0.00%
+   - Mandatory: JSON_PRETTY ↓ -1.98% ↑ 2.98%
 - Most useful tokens:
    - Optional: XML_PRETTY 12075 / 19876 tokens
    - Mandatory: XML_PRETTY 12679 / 20506 tokens
@@ -113,7 +113,7 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
    - Mandatory: JSON_COMPACT 74.57
 - Lowest delta (optional-mandatory):
    - Total tokens: YAML 83 tokens
-   - Accuracy: XML_PRETTY -1.08 %
+   - Accuracy: XML_PRETTY -1.08%
    - Token efficiency: TOON_DEFAULT -0.13
 
 #### 2.1.2 Worst results
@@ -122,14 +122,14 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
    - Optional: XML_PRETTY 19876 tokens
    - Mandatory: XML_PRETTY 20506 tokens
 - Highest output token drift:
-   - Optional: XML_PRETTY ↓ -95.61 % ↑ 50.24 %
-   - Mandatory: YAML ↓ -93.89 % ↑ 49.06 %
+   - Optional: XML_PRETTY ↓ -95.61% ↑ 50.24%
+   - Mandatory: YAML ↓ -93.89% ↑ 49.06%
 - Lowest accuracy:
-   - Optional: YAML 58.87 %
-   - Mandatory: XML_PRETTY 61.83 %
+   - Optional: YAML 58.87%
+   - Mandatory: XML_PRETTY 61.83%
 - Highest accuracy drift:
-   - Optional: JSON_PRETTY ↓ -11.46 % ↑ 12.34 %
-   - Mandatory: XML_COMPACT ↓ -9.52 % ↑ 10.72 %
+   - Optional: JSON_PRETTY ↓ -11.46% ↑ 12.34%
+   - Mandatory: XML_COMPACT ↓ -9.52% ↑ 10.72%
 - Most wasted tokens:
    - Optional: XML_PRETTY 7801 / 19876 tokens
    - Mandatory: XML_PRETTY 7827 / 20506 tokens
@@ -138,59 +138,59 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
    - Mandatory: XML_PRETTY 43.31
 - Highest delta (optional-mandatory):
    - Total tokens: JSON_PRETTY -927 tokens
-   - Accuracy: YAML -7.26 %
+   - Accuracy: YAML -7.26%
    - Token efficiency: YAML -5.32
 
 #### 2.1.3 Format Ranking
 
 ##### Mandatory
 
-| ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Acc | ↓ Wtd Acc | ↓ Eff Score | ↓ Wtd Eff Score |
+| ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Accuracy | ↓ Wtd Accuracy | ↓ Eff Score | ↓ Wtd Eff Score |
 |---|---|---|---|---|---|---|
-| toon_default ≈ 40225 s | json_compact ≈ 10468  | json_compact ≈ 3579  | xml_compact ≈ 68 % | xml_compact ≈ 67 % | json_compact ≈ 75  | json_compact ≈ 74  |
-| json_pretty ( +91.4 %) | xml_compact ( +24.3 %) | xml_compact ( +17.3 %) | toon_default (-1.4 %) | yaml (-0.4 %) | xml_compact (-7.9 %) | xml_compact (-7.7 %) |
-| xml_compact ( +98.2 %) | yaml ( +37.3 %) | yaml ( +36.0 %) | yaml (-1.6 %) | toon_default (-1.0 %) | yaml (-14.5 %) | yaml (-13.2 %) |
-| xml_pretty ( +102.4 %) | toon_default ( +38.4 %) | toon_default ( +36.3 %) | json_compact (-1.9 %) | json_pretty (-1.6 %) | toon_default (-14.8 %) | toon_default (-14.3 %) |
-| json_compact ( +103.3 %) | json_pretty ( +71.8 %) | json_pretty ( +75.9 %) | json_pretty (-2.7 %) | json_compact (-2.2 %) | json_pretty (-29.4 %) | json_pretty (-28.3 %) |
-| yaml ( +113.3 %) | xml_pretty ( +95.9 %) | xml_pretty ( +118.7 %) | xml_pretty (-5.9 %) | xml_pretty (-5.4 %) | xml_pretty (-41.9 %) | xml_pretty (-41.6 %) |
+| toon_default ≈ 40225s | json_compact ≈ 10468 | json_compact ≈ 3579 | xml_compact ≈ 68% | xml_compact ≈ 67% | json_compact ≈ 75 | json_compact ≈ 74  |
+| json_pretty (+91.4%) | xml_compact (+24.3%) | xml_compact (+17.3%) | toon_default (-1.4%) | yaml (-0.4%) | xml_compact (-7.9%) | xml_compact (-7.7%) |
+| xml_compact (+98.2%) | yaml (+37.3%) | yaml (+36.0%) | yaml (-1.6%) | toon_default (-1.0%) | yaml (-14.5%) | yaml (-13.2%) |
+| xml_pretty (+102.4%) | toon_default (+38.4%) | toon_default (+36.3%) | json_compact (-1.9%) | json_pretty (-1.6%) | toon_default (-14.8%) | toon_default (-14.3%) |
+| json_compact (+103.3%) | json_pretty (+71.8%) | json_pretty (+75.9%) | json_pretty (-2.7%) | json_compact (-2.2%) | json_pretty (-29.4%) | json_pretty (-28.3%) |
+| yaml (+113.3%) | xml_pretty (+95.9%) | xml_pretty (+118.7%) | xml_pretty (-5.9%) | xml_pretty (-5.4%) | xml_pretty (-41.9%) | xml_pretty (-41.6%) |
 
 
 ##### Optional
 
-| ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Acc | ↓ Wtd Acc | ↓ Eff Score | ↓ Wtd Eff Score |
+| ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Accuracy | ↓ Wtd Accuracy | ↓ Eff Score | ↓ Wtd Eff Score |
 |---|---|---|---|---|---|---|
-| toon_default ≈ 53833 s | json_compact ≈ 9950  | json_compact ≈ 3547  | toon_default ≈ 65 % | toon_default ≈ 67 % | json_compact ≈ 75  | json_compact ≈ 75  |
-| yaml ( +24.9 %) | xml_compact ( +28.3 %) | xml_compact ( +39.3 %) | json_compact (-0.6 %) | json_compact (-2.0 %) | xml_compact (-13.5 %) | xml_compact (-12.3 %) |
-| xml_pretty ( +27.7 %) | toon_default ( +42.8 %) | toon_default ( +40.3 %) | xml_compact (-3.7 %) | xml_compact (-3.8 %) | toon_default (-15.5 %) | toon_default (-14.2 %) |
-| xml_compact ( +41.8 %) | yaml ( +45.2 %) | yaml ( +67.6 %) | json_pretty (-4.0 %) | json_pretty (-4.9 %) | yaml (-22.1 %) | yaml (-21.6 %) |
-| json_pretty ( +75.3 %) | json_pretty ( +71.5 %) | json_pretty ( +87.5 %) | xml_pretty (-4.2 %) | xml_pretty (-5.0 %) | json_pretty (-30.0 %) | json_pretty (-29.5 %) |
-| json_compact ( +75.9 %) | xml_pretty ( +99.8 %) | xml_pretty ( +119.9 %) | yaml (-6.1 %) | yaml (-7.0 %) | xml_pretty (-40.9 %) | xml_pretty (-40.2 %) |
+| toon_default ≈ 53833s | json_compact ≈ 9950 | json_compact ≈ 3547 | toon_default ≈ 65% | toon_default ≈ 67% | json_compact ≈ 75 | json_compact ≈ 75  |
+| yaml (+24.9%) | xml_compact (+28.3%) | xml_compact (+39.3%) | json_compact (-0.6%) | json_compact (-2.0%) | xml_compact (-13.5%) | xml_compact (-12.3%) |
+| xml_pretty (+27.7%) | toon_default (+42.8%) | toon_default (+40.3%) | xml_compact (-3.7%) | xml_compact (-3.8%) | toon_default (-15.5%) | toon_default (-14.2%) |
+| xml_compact (+41.8%) | yaml (+45.2%) | yaml (+67.6%) | json_pretty (-4.0%) | json_pretty (-4.9%) | yaml (-22.1%) | yaml (-21.6%) |
+| json_pretty (+75.3%) | json_pretty (+71.5%) | json_pretty (+87.5%) | xml_pretty (-4.2%) | xml_pretty (-5.0%) | json_pretty (-30.0%) | json_pretty (-29.5%) |
+| json_compact (+75.9%) | xml_pretty (+99.8%) | xml_pretty (+119.9%) | yaml (-6.1%) | yaml (-7.0%) | xml_pretty (-40.9%) | xml_pretty (-40.2%) |
 
 
 #### 2.1.4 Category Accuracy Ranking
 
 ##### Mandatory
 
-| ↓ Field Retrieval % | ↓ Structure Awareness % | ↓ Filtering % | ↓ Aggregation % |
+| ↓ Field Retrieval | ↓ Structure Awareness | ↓ Filtering | ↓ Aggregation |
 |---|---|---|---|
-| yaml ≈ 74 % | yaml ≈ 70 % | yaml ≈ 62 % | xml_compact ≈ 68 % |
-| json_compact (-0.5 %) | json_pretty (-0.7 %) | json_pretty (-1.9 %) | json_compact (-8.3 %) |
-| toon_default (-1.9 %) | xml_compact (-1.2 %) | json_compact (-3.8 %) | toon_default (-10.5 %) |
-| xml_compact (-2.4 %) | toon_default (-2.3 %) | toon_default (-4.2 %) | xml_pretty (-19.0 %) |
-| json_pretty (-3.0 %) | xml_pretty (-7.4 %) | xml_compact (-6.3 %) | json_pretty (-19.7 %) |
-| xml_pretty (-4.8 %) | json_compact (-9.6 %) | xml_pretty (-7.9 %) | yaml (-23.8 %) |
+| yaml ≈ 74% | yaml ≈ 70% | yaml ≈ 62% | xml_compact ≈ 68% |
+| json_compact (-0.5%) | json_pretty (-0.7%) | json_pretty (-1.9%) | json_compact (-8.3%) |
+| toon_default (-1.9%) | xml_compact (-1.2%) | json_compact (-3.8%) | toon_default (-10.5%) |
+| xml_compact (-2.4%) | toon_default (-2.3%) | toon_default (-4.2%) | xml_pretty (-19.0%) |
+| json_pretty (-3.0%) | xml_pretty (-7.4%) | xml_compact (-6.3%) | json_pretty (-19.7%) |
+| xml_pretty (-4.8%) | json_compact (-9.6%) | xml_pretty (-7.9%) | yaml (-23.8%) |
 
 
 ##### Optional
 
-| ↓ Field Retrieval % | ↓ Structure Awareness % | ↓ Filtering % | ↓ Aggregation % |
+| ↓ Field Retrieval | ↓ Structure Awareness | ↓ Filtering | ↓ Aggregation |
 |---|---|---|---|
-| json_compact ≈ 67 % | toon_default ≈ 78 % | json_pretty ≈ 68 % | json_compact ≈ 53 % |
-| json_pretty (-1.2 %) | xml_compact (-4.9 %) | toon_default (-1.6 %) | toon_default (-8.4 %) |
-| toon_default (-1.6 %) | json_compact (-10.4 %) | json_compact (-4.4 %) | xml_pretty (-12.1 %) |
-| xml_pretty (-2.4 %) | xml_pretty (-11.1 %) | xml_pretty (-6.3 %) | yaml (-13.6 %) |
-| xml_compact (-3.0 %) | yaml (-14.8 %) | yaml (-6.3 %) | json_pretty (-13.7 %) |
-| yaml (-4.2 %) | json_pretty (-16.1 %) | xml_compact (-6.4 %) | xml_compact (-15.2 %) |
+| json_compact ≈ 67% | toon_default ≈ 78% | json_pretty ≈ 68% | json_compact ≈ 53% |
+| json_pretty (-1.2%) | xml_compact (-4.9%) | toon_default (-1.6%) | toon_default (-8.4%) |
+| toon_default (-1.6%) | json_compact (-10.4%) | json_compact (-4.4%) | xml_pretty (-12.1%) |
+| xml_pretty (-2.4%) | xml_pretty (-11.1%) | xml_pretty (-6.3%) | yaml (-13.6%) |
+| xml_compact (-3.0%) | yaml (-14.8%) | yaml (-6.3%) | json_pretty (-13.7%) |
+| yaml (-4.2%) | json_pretty (-16.1%) | xml_compact (-6.4%) | xml_compact (-15.2%) |
 
 
 #### 2.1.5 Conclusion
@@ -206,7 +206,7 @@ Three distinct performance tiers emerge from this benchmark:
 The central finding is that **whitespace formatting adds substantial token cost with zero accuracy return for Haiku 4.5 on nested data.** The model extracts information equally well from compact and pretty-printed formats, but compact formats do so at half the token cost. For production use, JSON_COMPACT is the default recommendation; XML_COMPACT is justified only when mandatory-field aggregation accuracy is critical.
 
 ### 2.2 Comprehensive Benchmark Metrics
-| Format | Variant | Read Tokens | Output Tokens | Total | Tokens/Char | Info/Token | Token/Answer | Acc (%) | Wtd Acc (%) | Used Tokens | Wasted Tokens | Eff Score | Wtd Eff Score |
+| Format | Variant | Read Tokens | Output Tokens | Total | Tokens/Char | Info/Token | Token/Answer | Accuracy (%) | Wtd Accuracy (%) | Used Tokens | Wasted Tokens | Eff Score | Wtd Eff Score |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | man | 10163 | 305 | 10468 | 2.246 | 0.629 | 2.461 | 65.81 | 73.90 | 6889.122 | 3579.078 | 74.57 | 73.90 |
 | JSON_COMPACT | opt | 9645 | 305 | 9950 | 2.219 | 0.647 | 2.458 | 64.35 | 75.37 | 6402.696 | 3547.104 | 75.02 | 75.37 |
@@ -222,7 +222,7 @@ The central finding is that **whitespace formatting adds substantial token cost 
 | YAML | opt | 14148 | 303 | 14451 | 1.787 | 0.407 | 2.441 | 58.87 | 59.10 | 8507.108 | 5943.559 | 58.41 | 59.10 |
 
 ### 2.3 Format Robustness: Mandatory vs Optional
-| Format | Tokens Man | Tokens Opt | Diff | Diff (%) | Acc Man (%) | Acc Opt (%) | Diff (%) | Wtd Acc Man (%) | Wtd Acc Opt (%) | Diff (%) | Eff Score Man | Eff Score Opt | Diff | Wtd Eff Score Man | Wtd Eff Score Opt | Diff |
+| Format | Tokens Man | Tokens Opt | Diff | Diff (%) | Accuracy Man (%) | Accuracy Opt (%) | Diff (%) | Wtd Accuracy Man (%) | Wtd Accuracy Opt (%) | Diff (%) | Eff Score Man | Eff Score Opt | Diff | Wtd Eff Score Man | Wtd Eff Score Opt | Diff |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 10468 | 9950 | -518 | -4.95 | 65.81 | 64.35 | -1.46 | 64.86 | 64.85 | -0.01 | 74.57 | 75.02 |  +0.45 | 73.90 | 75.37 |  +1.46 |
 | JSON_PRETTY | 17989 | 17062 | -927 | -5.15 | 65.00 | 61.02 | -3.98 | 65.47 | 61.96 | -3.51 | 52.67 | 52.51 | -0.16 | 53.00 | 53.17 |  +0.17 |
@@ -287,7 +287,7 @@ The central finding is that **whitespace formatting adds substantial token cost 
 
 ### 2.6 Token Utilization Efficiency
 #### 2.6.1 Metrics
-| Format | Variant | Total Tokens | Useful Tokens | Wasted Tokens | Acc (%) | Wtd Acc (%) | Eff Score | Wtd Eff Score |
+| Format | Variant | Total Tokens | Useful Tokens | Wasted Tokens | Accuracy (%) | Wtd Accuracy (%) | Eff Score | Wtd Eff Score |
 |---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | man | 10468 | 6889 | 3579 | 65.81 | 64.86 | 74.57 | 73.90 |
 | JSON_COMPACT | opt | 9950 | 6403 | 3547 | 64.35 | 64.85 | 75.02 | 75.37 |
@@ -303,7 +303,7 @@ The central finding is that **whitespace formatting adds substantial token cost 
 | YAML | opt | 14451 | 8507 | 5944 | 58.87 | 59.85 | 58.41 | 59.10 |
 
 #### 2.6.2 Mandatory vs Optional Data
-| Format | Total Tokens Man | Total Tokens Opt | Diff | Diff (%) | Useful Tokens Man | Useful Tokens Opt | Diff | Diff (%) | Wasted Tokens Man | Wasted Tokens Opt | Diff | Diff (%) | Acc (%) Man | Acc (%) Opt | Diff (%) | Eff Score Man | Eff Score Opt | Diff | Diff (%) |
+| Format | Total Tokens Man | Total Tokens Opt | Diff | Diff (%) | Useful Tokens Man | Useful Tokens Opt | Diff | Diff (%) | Wasted Tokens Man | Wasted Tokens Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) | Eff Score Man | Eff Score Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 10468 | 9950 | -518 | -4.95 | 6889 | 6403 | -486 | -7.06 | 3579 | 3547 | -32 | -0.89 | 65.81 | 64.35 | -1.46 | 74.57 | 75.017 |  +0.45 |  +0.60 |
 | JSON_PRETTY | 17989 | 17062 | -927 | -5.15 | 11693 | 10412 | -1281 | -10.96 | 6296 | 6651 |  +355 |  +5.63 | 65.00 | 61.02 | -3.98 | 52.67 | 52.512 | -0.16 | -0.30 |
@@ -314,7 +314,7 @@ The central finding is that **whitespace formatting adds substantial token cost 
 
 ### 2.7 Answer Per Format Breakdown
 #### 2.7.1 Metrics
-| Format | Variant | Correct Answers | Incorrect Answers | No Answers | Acc (%) |
+| Format | Variant | Correct Answers | Incorrect Answers | No Answers | Accuracy (%) |
 |---|---|---|---|---|---|
 | JSON_COMPACT | man | 82 | 42 | 0 | 65.81 |
 | JSON_COMPACT | opt | 80 | 44 | 0 | 64.35 |
@@ -330,7 +330,7 @@ The central finding is that **whitespace formatting adds substantial token cost 
 | YAML | opt | 73 | 51 | 0 | 58.87 |
 
 #### 2.7.2 Mandatory vs Optional Data
-| Format | Correct Man | Correct Opt | Diff | Diff (%) | Incorrect Man | Incorrect Opt | Diff | Diff (%) | No Answers Man | No Answers Opt | Diff | Diff (%) | Acc (%) Man | Acc (%) Opt | Diff (%) |
+| Format | Correct Man | Correct Opt | Diff | Diff (%) | Incorrect Man | Incorrect Opt | Diff | Diff (%) | No Answers Man | No Answers Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 82 | 80 | -2 | -2.44 | 42 | 44 |  +2 |  +4.76 | 0 | 0 | 0 | 0.00 | 65.81 | 64.35 | -1.46 |
 | JSON_PRETTY | 81 | 76 | -5 | -6.17 | 43 | 48 |  +5 |  +11.63 | 0 | 0 | 0 | 0.00 | 65.00 | 61.02 | -3.98 |
@@ -341,7 +341,7 @@ The central finding is that **whitespace formatting adds substantial token cost 
 
 ### 2.8 Accuracy Per Question Category Analysis
 #### 2.8.1 Metrics
-| Format | Variant | Acc (%) | Field Retrieval (%) | Structure Awareness (%) | Filtering (%) | Aggregation (%) |
+| Format | Variant | Accuracy (%) | Field Retrieval (%) | Structure Awareness (%) | Filtering (%) | Aggregation (%) |
 |---|---|---|---|---|---|---|
 | JSON_COMPACT | man | 65.81 | 73.46 | 60.74 | 58.09 | 60.00 |
 | JSON_COMPACT | opt | 64.35 | 67.27 | 67.41 | 63.81 | 53.33 |
@@ -408,7 +408,7 @@ The central finding is that **whitespace formatting adds substantial token cost 
 - Token Duration Range: 82 - 95 seconds
 - Token Cost Range: 9950 - 10468 tokens
 - Wasted Token Range: 3547 - 3579 tokens
-- Accuracy Range: 64.35 - 65.81 %
+- Accuracy Range: 64.35 - 65.81%
 - Efficiency Score Range: 74.57 - 75.02
 
 #### 3.1.2 Strengths
@@ -447,7 +447,7 @@ The central finding is that **whitespace formatting adds substantial token cost 
 - Token Duration Range: 77 - 94 seconds
 - Token Cost Range: 17062 - 17989 tokens
 - Wasted Token Range: 6296 - 6651 tokens
-- Accuracy Range: 61.02 - 65.00 %
+- Accuracy Range: 61.02 - 65.00%
 - Efficiency Score Range: 52.51 - 52.67
 
 #### 3.2.2 Strengths
@@ -485,7 +485,7 @@ The central finding is that **whitespace formatting adds substantial token cost 
 - Token Duration Range: 40 - 54 seconds
 - Token Cost Range: 14206 - 14492 tokens
 - Wasted Token Range: 4879 - 4975 tokens
-- Accuracy Range: 64.98 - 66.33 %
+- Accuracy Range: 64.98 - 66.33%
 - Efficiency Score Range: 63.39 - 63.52
 
 #### 3.3.2 Strengths
@@ -523,7 +523,7 @@ The central finding is that **whitespace formatting adds substantial token cost 
 - Token Duration Range: 76 - 80 seconds
 - Token Cost Range: 12762 - 13010 tokens
 - Wasted Token Range: 4197 - 4940 tokens
-- Accuracy Range: 61.29 - 67.74 %
+- Accuracy Range: 61.29 - 67.74%
 - Efficiency Score Range: 64.90 - 68.71
 
 #### 3.4.2 Strengths
@@ -563,7 +563,7 @@ The central finding is that **whitespace formatting adds substantial token cost 
 - Token Duration Range: 69 - 81 seconds
 - Token Cost Range: 19876 - 20506 tokens
 - Wasted Token Range: 7801 - 7827 tokens
-- Accuracy Range: 60.75 - 61.83 %
+- Accuracy Range: 60.75 - 61.83%
 - Efficiency Score Range: 43.31 - 44.34
 
 #### 3.5.2 Strengths
@@ -602,7 +602,7 @@ The central finding is that **whitespace formatting adds substantial token cost 
 - Token Duration Range: 67 - 86 seconds
 - Token Cost Range: 14368 - 14451 tokens
 - Wasted Token Range: 4866 - 5944 tokens
-- Accuracy Range: 58.87 - 66.13 %
+- Accuracy Range: 58.87 - 66.13%
 - Efficiency Score Range: 58.41 - 63.73
 
 #### 3.6.2 Strengths

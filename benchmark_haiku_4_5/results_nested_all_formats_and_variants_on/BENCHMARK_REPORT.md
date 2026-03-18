@@ -66,7 +66,7 @@ This requires measuring:
 - `totalTokens`: readTokens + outputTokens
 
 **Accuracy Metrics:**
-- `rawAccuracy`: Correct answers / total questions
+- `accuracy`: Correct answers / total questions
 - `weightedAccuracy`: Accuracy weighted by question category importanc
 
 **Information Value Metrics:**
@@ -97,14 +97,14 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
    - Optional: JSON_COMPACT 10124 tokens
    - Mandatory: JSON_COMPACT 10651 tokens
 - Lowest output token cost drift:
-   - Optional: XML_COMPACT ↓ -0.39 % ↑ 0.48 %
-   - Mandatory: JSON_COMPACT ↓ -0.60 % ↑ 1.19 %
+   - Optional: XML_COMPACT ↓ -0.39% ↑ 0.48%
+   - Mandatory: JSON_COMPACT ↓ -0.60% ↑ 1.19%
 - Highest accuracy:
-   - Optional: TOON_DEFAULT 67.07 %
-   - Mandatory: JSON_COMPACT 68.82 %
+   - Optional: TOON_DEFAULT 67.07%
+   - Mandatory: JSON_COMPACT 68.82%
 - Lowest accuracy drift:
-   - Optional: JSON_COMPACT ↓ -2.02 % ↑ 2.82 %
-   - Mandatory: YAML ↓ -0.79 % ↑ 1.57 %
+   - Optional: JSON_COMPACT ↓ -2.02% ↑ 2.82%
+   - Mandatory: YAML ↓ -0.79% ↑ 1.57%
 - Most useful tokens:
    - Optional: XML_PRETTY 12428 / 19927 tokens
    - Mandatory: XML_PRETTY 13307 / 20456 tokens
@@ -113,7 +113,7 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
    - Mandatory: JSON_COMPACT 76.62
 - Lowest delta (optional-mandatory):
    - Total tokens: TOON_DEFAULT -227 tokens
-   - Accuracy: XML_COMPACT -1.35 %
+   - Accuracy: XML_COMPACT -1.35%
    - Token efficiency: JSON_COMPACT 0.02
 
 #### 2.1.2 Worst results
@@ -122,14 +122,14 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
    - Optional: XML_PRETTY 19927 tokens
    - Mandatory: XML_PRETTY 20456 tokens
 - Highest output token drift:
-   - Optional: JSON_PRETTY ↓ -96.05 % ↑ 49.34 %
-   - Mandatory: JSON_PRETTY ↓ -25.06 % ↑ 49.22 %
+   - Optional: JSON_PRETTY ↓ -96.05% ↑ 49.34%
+   - Mandatory: JSON_PRETTY ↓ -25.06% ↑ 49.22%
 - Lowest accuracy:
-   - Optional: JSON_PRETTY 61.02 %
-   - Mandatory: XML_PRETTY 65.05 %
+   - Optional: JSON_PRETTY 61.02%
+   - Mandatory: XML_PRETTY 65.05%
 - Highest accuracy drift:
-   - Optional: YAML ↓ -12.56 % ↑ 11.73 %
-   - Mandatory: XML_PRETTY ↓ -11.98 % ↑ 14.05 %
+   - Optional: YAML ↓ -12.56% ↑ 11.73%
+   - Mandatory: XML_PRETTY ↓ -11.98% ↑ 14.05%
 - Most wasted tokens:
    - Optional: XML_PRETTY 7499 / 19927 tokens
    - Mandatory: XML_PRETTY 7149 / 20456 tokens
@@ -138,59 +138,59 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
    - Mandatory: XML_PRETTY 45.56
 - Highest delta (optional-mandatory):
    - Total tokens: JSON_PRETTY -1148 tokens
-   - Accuracy: JSON_PRETTY -5.38 %
+   - Accuracy: JSON_PRETTY -5.38%
    - Token efficiency: TOON_DEFAULT 1.69
 
 #### 2.1.3 Format Ranking
 
 ##### Mandatory
 
-| ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Acc | ↓ Wtd Acc | ↓ Eff Score | ↓ Wtd Eff Score |
+| ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Accuracy | ↓ Wtd Accuracy | ↓ Eff Score | ↓ Wtd Eff Score |
 |---|---|---|---|---|---|---|
-| toon_default ≈ 37017 s | json_compact ≈ 10651  | json_compact ≈ 3321  | json_compact ≈ 69 % | json_compact ≈ 69 % | json_compact ≈ 77  | json_compact ≈ 76  |
-| json_compact ( +87.6 %) | xml_compact ( +23.9 %) | xml_compact ( +32.4 %) | yaml (-0.5 %) | yaml (-0.5 %) | xml_compact (-11.6 %) | xml_compact (-11.0 %) |
-| xml_pretty ( +91.7 %) | toon_default ( +35.6 %) | yaml ( +39.9 %) | xml_compact (-2.1 %) | xml_compact (-1.5 %) | yaml (-15.6 %) | yaml (-15.6 %) |
-| xml_compact ( +102.6 %) | yaml ( +37.5 %) | toon_default ( +49.6 %) | json_pretty (-2.4 %) | json_pretty (-1.7 %) | toon_default (-17.3 %) | toon_default (-18.1 %) |
-| yaml ( +147.2 %) | json_pretty ( +71.6 %) | json_pretty ( +84.9 %) | toon_default (-3.2 %) | xml_pretty (-3.7 %) | json_pretty (-31.0 %) | json_pretty (-30.4 %) |
-| json_pretty ( +153.7 %) | xml_pretty ( +92.1 %) | xml_pretty ( +115.3 %) | xml_pretty (-3.8 %) | toon_default (-4.1 %) | xml_pretty (-40.5 %) | xml_pretty (-40.5 %) |
+| toon_default ≈ 37017s | json_compact ≈ 10651 | json_compact ≈ 3321 | json_compact ≈ 69% | json_compact ≈ 69% | json_compact ≈ 77 | json_compact ≈ 76  |
+| json_compact (+87.6%) | xml_compact (+23.9%) | xml_compact (+32.4%) | yaml (-0.5%) | yaml (-0.5%) | xml_compact (-11.6%) | xml_compact (-11.0%) |
+| xml_pretty (+91.7%) | toon_default (+35.6%) | yaml (+39.9%) | xml_compact (-2.1%) | xml_compact (-1.5%) | yaml (-15.6%) | yaml (-15.6%) |
+| xml_compact (+102.6%) | yaml (+37.5%) | toon_default (+49.6%) | json_pretty (-2.4%) | json_pretty (-1.7%) | toon_default (-17.3%) | toon_default (-18.1%) |
+| yaml (+147.2%) | json_pretty (+71.6%) | json_pretty (+84.9%) | toon_default (-3.2%) | xml_pretty (-3.7%) | json_pretty (-31.0%) | json_pretty (-30.4%) |
+| json_pretty (+153.7%) | xml_pretty (+92.1%) | xml_pretty (+115.3%) | xml_pretty (-3.8%) | toon_default (-4.1%) | xml_pretty (-40.5%) | xml_pretty (-40.5%) |
 
 
 ##### Optional
 
-| ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Acc | ↓ Wtd Acc | ↓ Eff Score | ↓ Wtd Eff Score |
+| ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Accuracy | ↓ Wtd Accuracy | ↓ Eff Score | ↓ Wtd Eff Score |
 |---|---|---|---|---|---|---|
-| toon_default ≈ 39891 s | json_compact ≈ 10124  | json_compact ≈ 3374  | toon_default ≈ 67 % | toon_default ≈ 69 % | json_compact ≈ 77  | json_compact ≈ 78  |
-| xml_compact ( +60.3 %) | xml_compact ( +25.6 %) | xml_compact ( +30.7 %) | json_compact (-0.4 %) | json_compact (-1.1 %) | xml_compact (-11.0 %) | xml_compact (-11.2 %) |
-| xml_pretty ( +94.1 %) | toon_default ( +40.4 %) | toon_default ( +38.7 %) | yaml (-0.7 %) | yaml (-2.1 %) | toon_default (-15.1 %) | toon_default (-14.2 %) |
-| json_pretty ( +111.8 %) | yaml ( +42.1 %) | yaml ( +43.3 %) | xml_compact (-1.8 %) | xml_compact (-2.9 %) | yaml (-16.4 %) | yaml (-16.8 %) |
-| json_compact ( +120.4 %) | json_pretty ( +69.2 %) | json_pretty ( +97.9 %) | xml_pretty (-4.7 %) | xml_pretty (-6.4 %) | json_pretty (-31.6 %) | json_pretty (-31.8 %) |
-| yaml ( +136.8 %) | xml_pretty ( +96.8 %) | xml_pretty ( +122.2 %) | json_pretty (-6.0 %) | json_pretty (-7.5 %) | xml_pretty (-41.0 %) | xml_pretty (-41.2 %) |
+| toon_default ≈ 39891s | json_compact ≈ 10124 | json_compact ≈ 3374 | toon_default ≈ 67% | toon_default ≈ 69% | json_compact ≈ 77 | json_compact ≈ 78  |
+| xml_compact (+60.3%) | xml_compact (+25.6%) | xml_compact (+30.7%) | json_compact (-0.4%) | json_compact (-1.1%) | xml_compact (-11.0%) | xml_compact (-11.2%) |
+| xml_pretty (+94.1%) | toon_default (+40.4%) | toon_default (+38.7%) | yaml (-0.7%) | yaml (-2.1%) | toon_default (-15.1%) | toon_default (-14.2%) |
+| json_pretty (+111.8%) | yaml (+42.1%) | yaml (+43.3%) | xml_compact (-1.8%) | xml_compact (-2.9%) | yaml (-16.4%) | yaml (-16.8%) |
+| json_compact (+120.4%) | json_pretty (+69.2%) | json_pretty (+97.9%) | xml_pretty (-4.7%) | xml_pretty (-6.4%) | json_pretty (-31.6%) | json_pretty (-31.8%) |
+| yaml (+136.8%) | xml_pretty (+96.8%) | xml_pretty (+122.2%) | json_pretty (-6.0%) | json_pretty (-7.5%) | xml_pretty (-41.0%) | xml_pretty (-41.2%) |
 
 
 #### 2.1.4 Category Accuracy Ranking
 
 ##### Mandatory
 
-| ↓ Field Retrieval % | ↓ Structure Awareness % | ↓ Filtering % | ↓ Aggregation % |
+| ↓ Field Retrieval | ↓ Structure Awareness | ↓ Filtering | ↓ Aggregation |
 |---|---|---|---|
-| yaml ≈ 74 % | json_pretty ≈ 72 % | json_compact ≈ 67 % | json_compact ≈ 71 % |
-| json_pretty (-1.2 %) | xml_pretty (-2.5 %) | xml_compact (0.0 %) | toon_default (-5.6 %) |
-| toon_default (-2.7 %) | yaml (-2.5 %) | json_pretty (-6.4 %) | yaml (-11.1 %) |
-| xml_compact (-3.6 %) | xml_compact (-3.7 %) | yaml (-6.4 %) | xml_pretty (-12.7 %) |
-| xml_pretty (-4.2 %) | json_compact (-3.7 %) | toon_default (-7.1 %) | xml_compact (-15.9 %) |
-| json_compact (-4.9 %) | toon_default (-13.0 %) | xml_pretty (-12.7 %) | json_pretty (-22.2 %) |
+| yaml ≈ 74% | json_pretty ≈ 72% | json_compact ≈ 67% | json_compact ≈ 71% |
+| json_pretty (-1.2%) | xml_pretty (-2.5%) | xml_compact (0.0%) | toon_default (-5.6%) |
+| toon_default (-2.7%) | yaml (-2.5%) | json_pretty (-6.4%) | yaml (-11.1%) |
+| xml_compact (-3.6%) | xml_compact (-3.7%) | yaml (-6.4%) | xml_pretty (-12.7%) |
+| xml_pretty (-4.2%) | json_compact (-3.7%) | toon_default (-7.1%) | xml_compact (-15.9%) |
+| json_compact (-4.9%) | toon_default (-13.0%) | xml_pretty (-12.7%) | json_pretty (-22.2%) |
 
 
 ##### Optional
 
-| ↓ Field Retrieval % | ↓ Structure Awareness % | ↓ Filtering % | ↓ Aggregation % |
+| ↓ Field Retrieval | ↓ Structure Awareness | ↓ Filtering | ↓ Aggregation |
 |---|---|---|---|
-| yaml ≈ 67 % | json_compact ≈ 83 % | toon_default ≈ 71 % | yaml ≈ 56 % |
-| toon_default (-0.6 %) | toon_default (-0.0 %) | xml_pretty (-7.9 %) | xml_compact (-0.0 %) |
-| json_compact (-1.2 %) | xml_compact (-6.2 %) | yaml (-7.9 %) | json_compact (-3.2 %) |
-| xml_compact (-3.0 %) | yaml (-7.4 %) | xml_compact (-7.9 %) | xml_pretty (-3.2 %) |
-| json_pretty (-3.6 %) | xml_pretty (-16.0 %) | json_compact (-9.5 %) | json_pretty (-9.5 %) |
-| xml_pretty (-3.6 %) | json_pretty (-16.1 %) | json_pretty (-9.5 %) | toon_default (-11.9 %) |
+| yaml ≈ 67% | json_compact ≈ 83% | toon_default ≈ 71% | yaml ≈ 56% |
+| toon_default (-0.6%) | toon_default (-0.0%) | xml_pretty (-7.9%) | xml_compact (-0.0%) |
+| json_compact (-1.2%) | xml_compact (-6.2%) | yaml (-7.9%) | json_compact (-3.2%) |
+| xml_compact (-3.0%) | yaml (-7.4%) | xml_compact (-7.9%) | xml_pretty (-3.2%) |
+| json_pretty (-3.6%) | xml_pretty (-16.0%) | json_compact (-9.5%) | json_pretty (-9.5%) |
+| xml_pretty (-3.6%) | json_pretty (-16.1%) | json_pretty (-9.5%) | toon_default (-11.9%) |
 
 
 #### 2.1.5 Conclusion
@@ -206,7 +206,7 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
 A consistent cross-format pattern: optional/sparse data degrades raw accuracy for all formats (−1.35% to −5.38%), but improves structure awareness for compact formats. This suggests that when data is sparse, models better recognize the data's structural shape — but only in formats where absent fields are not obscured by verbose syntax.
 
 ### 2.2 Comprehensive Benchmark Metrics
-| Format | Variant | Read Tokens | Output Tokens | Total | Tokens/Char | Info/Token | Token/Answer | Acc (%) | Wtd Acc (%) | Used Tokens | Wasted Tokens | Eff Score | Wtd Eff Score |
+| Format | Variant | Read Tokens | Output Tokens | Total | Tokens/Char | Info/Token | Token/Answer | Accuracy (%) | Wtd Accuracy (%) | Used Tokens | Wasted Tokens | Eff Score | Wtd Eff Score |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | man | 10315 | 336 | 10651 | 2.213 | 0.646 | 2.710 | 68.82 | 76.41 | 7330.018 | 3320.982 | 76.62 | 76.41 |
 | JSON_COMPACT | opt | 9788 | 336 | 10124 | 2.186 | 0.659 | 2.707 | 66.67 | 77.82 | 6749.449 | 3374.218 | 76.64 | 77.82 |
@@ -222,7 +222,7 @@ A consistent cross-format pattern: optional/sparse data degrades raw accuracy fo
 | YAML | opt | 14053 | 336 | 14389 | 1.799 | 0.461 | 2.710 | 66.40 | 64.77 | 9554.296 | 4834.704 | 64.09 | 64.77 |
 
 ### 2.3 Format Robustness: Mandatory vs Optional
-| Format | Tokens Man | Tokens Opt | Diff | Diff (%) | Acc Man (%) | Acc Opt (%) | Diff (%) | Wtd Acc Man (%) | Wtd Acc Opt (%) | Diff (%) | Eff Score Man | Eff Score Opt | Diff | Wtd Eff Score Man | Wtd Eff Score Opt | Diff |
+| Format | Tokens Man | Tokens Opt | Diff | Diff (%) | Accuracy Man (%) | Accuracy Opt (%) | Diff (%) | Wtd Accuracy Man (%) | Wtd Accuracy Opt (%) | Diff (%) | Eff Score Man | Eff Score Opt | Diff | Wtd Eff Score Man | Wtd Eff Score Opt | Diff |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 10651 | 10124 | -527 | -4.95 | 68.82 | 66.67 | -2.15 | 68.53 | 68.35 | -0.18 | 76.62 | 76.64 |  +0.02 | 76.41 | 77.82 |  +1.40 |
 | JSON_PRETTY | 18275 | 17127 | -1148 | -6.28 | 66.40 | 61.02 | -5.38 | 66.87 | 61.96 | -4.91 | 52.83 | 52.39 | -0.44 | 53.16 | 53.05 | -0.11 |
@@ -287,7 +287,7 @@ A consistent cross-format pattern: optional/sparse data degrades raw accuracy fo
 
 ### 2.6 Token Utilization Efficiency
 #### 2.6.1 Metrics
-| Format | Variant | Total Tokens | Useful Tokens | Wasted Tokens | Acc (%) | Wtd Acc (%) | Eff Score | Wtd Eff Score |
+| Format | Variant | Total Tokens | Useful Tokens | Wasted Tokens | Accuracy (%) | Wtd Accuracy (%) | Eff Score | Wtd Eff Score |
 |---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | man | 10651 | 7330 | 3321 | 68.82 | 68.53 | 76.62 | 76.41 |
 | JSON_COMPACT | opt | 10124 | 6749 | 3374 | 66.67 | 68.35 | 76.64 | 77.82 |
@@ -303,7 +303,7 @@ A consistent cross-format pattern: optional/sparse data degrades raw accuracy fo
 | YAML | opt | 14389 | 9554 | 4835 | 66.40 | 67.37 | 64.09 | 64.77 |
 
 #### 2.6.2 Mandatory vs Optional Data
-| Format | Total Tokens Man | Total Tokens Opt | Diff | Diff (%) | Useful Tokens Man | Useful Tokens Opt | Diff | Diff (%) | Wasted Tokens Man | Wasted Tokens Opt | Diff | Diff (%) | Acc (%) Man | Acc (%) Opt | Diff (%) | Eff Score Man | Eff Score Opt | Diff | Diff (%) |
+| Format | Total Tokens Man | Total Tokens Opt | Diff | Diff (%) | Useful Tokens Man | Useful Tokens Opt | Diff | Diff (%) | Wasted Tokens Man | Wasted Tokens Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) | Eff Score Man | Eff Score Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 10651 | 10124 | -527 | -4.95 | 7330 | 6749 | -581 | -7.92 | 3321 | 3374 |  +53 |  +1.60 | 68.82 | 66.67 | -2.15 | 76.62 | 76.64 |  +0.02 |  +0.03 |
 | JSON_PRETTY | 18275 | 17127 | -1148 | -6.28 | 12135 | 10451 | -1684 | -13.88 | 6140 | 6676 |  +536 |  +8.72 | 66.40 | 61.02 | -5.38 | 52.83 | 52.392 | -0.44 | -0.83 |
@@ -314,7 +314,7 @@ A consistent cross-format pattern: optional/sparse data degrades raw accuracy fo
 
 ### 2.7 Answer Per Format Breakdown
 #### 2.7.1 Metrics
-| Format | Variant | Correct Answers | Incorrect Answers | No Answers | Acc (%) |
+| Format | Variant | Correct Answers | Incorrect Answers | No Answers | Accuracy (%) |
 |---|---|---|---|---|---|
 | JSON_COMPACT | man | 85 | 39 | 0 | 68.82 |
 | JSON_COMPACT | opt | 83 | 41 | 0 | 66.67 |
@@ -330,7 +330,7 @@ A consistent cross-format pattern: optional/sparse data degrades raw accuracy fo
 | YAML | opt | 82 | 42 | 0 | 66.40 |
 
 #### 2.7.2 Mandatory vs Optional Data
-| Format | Correct Man | Correct Opt | Diff | Diff (%) | Incorrect Man | Incorrect Opt | Diff | Diff (%) | No Answers Man | No Answers Opt | Diff | Diff (%) | Acc (%) Man | Acc (%) Opt | Diff (%) |
+| Format | Correct Man | Correct Opt | Diff | Diff (%) | Incorrect Man | Incorrect Opt | Diff | Diff (%) | No Answers Man | No Answers Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 85 | 83 | -2 | -2.35 | 39 | 41 |  +2 |  +5.13 | 0 | 0 | 0 | 0.00 | 68.82 | 66.67 | -2.15 |
 | JSON_PRETTY | 82 | 76 | -6 | -7.32 | 42 | 48 |  +6 |  +14.29 | 0 | 0 | 0 | 0.00 | 66.40 | 61.02 | -5.38 |
@@ -341,7 +341,7 @@ A consistent cross-format pattern: optional/sparse data degrades raw accuracy fo
 
 ### 2.8 Accuracy Per Question Category Analysis
 #### 2.8.1 Metrics
-| Format | Variant | Acc (%) | Field Retrieval (%) | Structure Awareness (%) | Filtering (%) | Aggregation (%) |
+| Format | Variant | Accuracy (%) | Field Retrieval (%) | Structure Awareness (%) | Filtering (%) | Aggregation (%) |
 |---|---|---|---|---|---|---|
 | JSON_COMPACT | man | 68.82 | 69.09 | 67.90 | 66.67 | 71.43 |
 | JSON_COMPACT | opt | 66.67 | 66.06 | 82.72 | 61.91 | 52.38 |
@@ -408,7 +408,7 @@ A consistent cross-format pattern: optional/sparse data degrades raw accuracy fo
 - Token Duration Range: 69 - 88 seconds
 - Token Cost Range: 10124 - 10651 tokens
 - Wasted Token Range: 3321 - 3374 tokens
-- Accuracy Range: 66.67 - 68.82 %
+- Accuracy Range: 66.67 - 68.82%
 - Efficiency Score Range: 76.62 - 76.64
 
 #### 3.1.2 Strengths
@@ -447,7 +447,7 @@ A consistent cross-format pattern: optional/sparse data degrades raw accuracy fo
 - Token Duration Range: 85 - 94 seconds
 - Token Cost Range: 17127 - 18275 tokens
 - Wasted Token Range: 6140 - 6676 tokens
-- Accuracy Range: 61.02 - 66.40 %
+- Accuracy Range: 61.02 - 66.40%
 - Efficiency Score Range: 52.39 - 52.83
 
 #### 3.2.2 Strengths
@@ -486,7 +486,7 @@ A consistent cross-format pattern: optional/sparse data degrades raw accuracy fo
 - Token Duration Range: 37 - 40 seconds
 - Token Cost Range: 14211 - 14438 tokens
 - Wasted Token Range: 4680 - 4968 tokens
-- Accuracy Range: 65.59 - 67.07 %
+- Accuracy Range: 65.59 - 67.07%
 - Efficiency Score Range: 63.38 - 65.08
 
 #### 3.3.2 Strengths
@@ -525,7 +525,7 @@ A consistent cross-format pattern: optional/sparse data degrades raw accuracy fo
 - Token Duration Range: 64 - 75 seconds
 - Token Cost Range: 12712 - 13193 tokens
 - Wasted Token Range: 4397 - 4409 tokens
-- Accuracy Range: 65.32 - 66.67 %
+- Accuracy Range: 65.32 - 66.67%
 - Efficiency Score Range: 67.75 - 68.19
 
 #### 3.4.2 Strengths
@@ -564,7 +564,7 @@ A consistent cross-format pattern: optional/sparse data degrades raw accuracy fo
 - Token Duration Range: 71 - 77 seconds
 - Token Cost Range: 19927 - 20456 tokens
 - Wasted Token Range: 7149 - 7499 tokens
-- Accuracy Range: 62.37 - 65.05 %
+- Accuracy Range: 62.37 - 65.05%
 - Efficiency Score Range: 45.22 - 45.56
 
 #### 3.5.2 Strengths
@@ -604,7 +604,7 @@ A consistent cross-format pattern: optional/sparse data degrades raw accuracy fo
 - Token Duration Range: 92 - 94 seconds
 - Token Cost Range: 14389 - 14644 tokens
 - Wasted Token Range: 4645 - 4835 tokens
-- Accuracy Range: 66.40 - 68.28 %
+- Accuracy Range: 66.40 - 68.28%
 - Efficiency Score Range: 64.09 - 64.67
 
 #### 3.6.2 Strengths

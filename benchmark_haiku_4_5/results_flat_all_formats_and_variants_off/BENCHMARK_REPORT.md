@@ -15,7 +15,7 @@ This benchmark evaluates token efficiency and information accuracy across 7 file
 
 1. **CSV is cheapest but least accurate**: CSV achieves the lowest token cost (7032–7263 tokens) but delivers the worst accuracy across both variants (55.65–61.45%). Its aggregation accuracy collapses to 36.19% with optional data — the single worst category score in the entire benchmark.
 
-2. **TOON_DEFAULT excels with mandatory data but collapses with optional fields**: Highest efficiency score (75.29) and fastest processing (~42–50 s) on mandatory data, but a +57.49% token spike with optional data destroys that advantage. It is the only format that gets significantly more expensive with sparser data.
+2. **TOON_DEFAULT excels with mandatory data but collapses with optional fields**: Highest efficiency score (75.29) and fastest processing (~42–50s) on mandatory data, but a +57.49% token spike with optional data destroys that advantage. It is the only format that gets significantly more expensive with sparser data.
 
 3. **JSON_PRETTY has the highest raw accuracy but the worst efficiency**: Leading on correctness (71.77% mandatory, 83.95% structure awareness) comes at nearly 2× the token cost of CSV (14,613 vs 7,263 tokens), pushing its efficiency score to 56.21 — near the bottom of the ranking.
 
@@ -64,7 +64,7 @@ This requires measuring:
 - `totalTokens`: readTokens + outputTokens
 
 **Accuracy Metrics:**
-- `rawAccuracy`: Correct answers / total questions
+- `accuracy`: Correct answers / total questions
 - `weightedAccuracy`: Accuracy weighted by question category importanc
 
 **Information Value Metrics:**
@@ -95,14 +95,14 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
    - Optional: CSV 7032 tokens
    - Mandatory: CSV 7263 tokens
 - Lowest output token cost drift:
-   - Optional: XML_COMPACT ↓ -0.32 % ↑ 0.32 %
-   - Mandatory: JSON_PRETTY ↓ -1.22 % ↑ 0.77 %
+   - Optional: XML_COMPACT ↓ -0.32% ↑ 0.32%
+   - Mandatory: JSON_PRETTY ↓ -1.22% ↑ 0.77%
 - Highest accuracy:
-   - Optional: YAML 66.13 %
-   - Mandatory: JSON_PRETTY 71.77 %
+   - Optional: YAML 66.13%
+   - Mandatory: JSON_PRETTY 71.77%
 - Lowest accuracy drift:
-   - Optional: YAML ↓ -3.66 % ↑ 3.66 %
-   - Mandatory: JSON_PRETTY ↓ -2.24 % ↑ 1.13 %
+   - Optional: YAML ↓ -3.66% ↑ 3.66%
+   - Mandatory: JSON_PRETTY ↓ -2.24% ↑ 1.13%
 - Most useful tokens:
    - Optional: XML_PRETTY 9990 / 15419 tokens
    - Mandatory: XML_PRETTY 10950 / 16490 tokens
@@ -111,7 +111,7 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
    - Mandatory: TOON_DEFAULT 75.29
 - Lowest delta (optional-mandatory):
    - Total tokens: CSV -231 tokens
-   - Accuracy: XML_COMPACT 0.26 %
+   - Accuracy: XML_COMPACT 0.26%
    - Token efficiency: JSON_COMPACT -0.73
 
 #### 2.1.2 Worst results
@@ -120,14 +120,14 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
    - Optional: XML_PRETTY 15419 tokens
    - Mandatory: XML_PRETTY 16490 tokens
 - Highest output token drift:
-   - Optional: JSON_PRETTY ↓ -97.84 % ↑ 34.20 %
-   - Mandatory: CSV ↓ -96.26 % ↑ 25.10 %
+   - Optional: JSON_PRETTY ↓ -97.84% ↑ 34.20%
+   - Mandatory: CSV ↓ -96.26% ↑ 25.10%
 - Lowest accuracy:
-   - Optional: CSV 55.65 %
-   - Mandatory: CSV 61.45 %
+   - Optional: CSV 55.65%
+   - Mandatory: CSV 61.45%
 - Highest accuracy drift:
-   - Optional: CSV ↓ -13.05 % ↑ 10.13 %
-   - Mandatory: TOON_DEFAULT ↓ -19.49 % ↑ 6.94 %
+   - Optional: CSV ↓ -13.05% ↑ 10.13%
+   - Mandatory: TOON_DEFAULT ↓ -19.49% ↑ 6.94%
 - Most wasted tokens:
    - Optional: XML_PRETTY 5429 / 15419 tokens
    - Mandatory: XML_PRETTY 5541 / 16490 tokens
@@ -136,7 +136,7 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
    - Mandatory: XML_PRETTY 46.51
 - Highest delta (optional-mandatory):
    - Total tokens: TOON_DEFAULT 4344 tokens
-   - Accuracy: JSON_PRETTY -6.45 %
+   - Accuracy: JSON_PRETTY -6.45%
    - Token efficiency: TOON_DEFAULT -16.19
 
 #### 2.1.3 Format Ranking
@@ -145,7 +145,7 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
 
 | ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Accuracy | ↓ Wtd Accuracy | ↓ Eff Score | ↓ Wtd Eff Score |
 |---|---|---|---|---|---|---|
-| toon_default ≈ 50392s | csv ≈ 7263  | toon_default ≈ 2485  | json_pretty ≈ 72% | json_pretty ≈ 73% | toon_default ≈ 75  | toon_default ≈ 76  |
+| toon_default ≈ 50392s | csv ≈ 7263 | toon_default ≈ 2485 | json_pretty ≈ 72% | json_pretty ≈ 73% | toon_default ≈ 75 | toon_default ≈ 76  |
 | yaml (+50.6%) | toon_default (+4.0%) | csv (+12.7%) | json_compact (-4.6%) | json_compact (-4.5%) | csv (-4.0%) | csv (-4.5%) |
 | xml_compact (+59.3%) | json_compact (+32.2%) | json_compact (+26.9%) | toon_default (-4.7%) | toon_default (-4.6%) | json_compact (-8.6%) | json_compact (-8.4%) |
 | csv (+60.6%) | xml_compact (+68.7%) | json_pretty (+66.0%) | xml_pretty (-5.4%) | xml_pretty (-6.0%) | xml_compact (-21.9%) | xml_compact (-22.8%) |
@@ -158,7 +158,7 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
 
 | ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Accuracy | ↓ Wtd Accuracy | ↓ Eff Score | ↓ Wtd Eff Score |
 |---|---|---|---|---|---|---|
-| toon_default ≈ 42037s | csv ≈ 7032  | csv ≈ 3119  | yaml ≈ 66% | yaml ≈ 68% | csv ≈ 69  | csv ≈ 70  |
+| toon_default ≈ 42037s | csv ≈ 7032 | csv ≈ 3119 | yaml ≈ 66% | yaml ≈ 68% | csv ≈ 69 | csv ≈ 70  |
 | xml_pretty (+76.7%) | json_compact (+29.0%) | json_compact (+5.6%) | json_pretty (-0.8%) | xml_compact (-0.7%) | json_compact (-1.2%) | json_compact (-2.0%) |
 | json_compact (+79.9%) | xml_compact (+63.4%) | xml_compact (+28.8%) | xml_compact (-1.1%) | json_pretty (-1.0%) | xml_compact (-10.9%) | xml_compact (-10.3%) |
 | json_pretty (+102.2%) | toon_default (+69.2%) | yaml (+31.4%) | xml_pretty (-1.3%) | xml_pretty (-1.5%) | yaml (-12.6%) | yaml (-12.3%) |
@@ -429,7 +429,7 @@ The data suggests a clear two-tier hierarchy: formats with low structural overhe
 - Token Duration Range: 81 - 87 seconds
 - Token Cost Range: 7032 - 7263 tokens
 - Wasted Token Range: 2800 - 3119 tokens
-- Accuracy Range: 55.65 - 61.45 %
+- Accuracy Range: 55.65 - 61.45%
 - Efficiency Score Range: 68.92 - 72.25
 
 #### 3.1.2 Strengths
@@ -466,7 +466,7 @@ The data suggests a clear two-tier hierarchy: formats with low structural overhe
 - Token Duration Range: 76 - 107 seconds
 - Token Cost Range: 9073 - 9600 tokens
 - Wasted Token Range: 3155 - 3293 tokens
-- Accuracy Range: 63.71 - 67.14 %
+- Accuracy Range: 63.71 - 67.14%
 - Efficiency Score Range: 68.11 - 68.84
 
 #### 3.2.2 Strengths
@@ -503,7 +503,7 @@ The data suggests a clear two-tier hierarchy: formats with low structural overhe
 - Token Duration Range: 85 - 96 seconds
 - Token Cost Range: 13626 - 14613 tokens
 - Wasted Token Range: 4125 - 4725 tokens
-- Accuracy Range: 65.32 - 71.77 %
+- Accuracy Range: 65.32 - 71.77%
 - Efficiency Score Range: 54.82 - 56.21
 
 #### 3.3.2 Strengths
@@ -541,7 +541,7 @@ The data suggests a clear two-tier hierarchy: formats with low structural overhe
 - Token Duration Range: 42 - 50 seconds
 - Token Cost Range: 7556 - 11899 tokens
 - Wasted Token Range: 2485 - 4329 tokens
-- Accuracy Range: 63.62 - 67.11 %
+- Accuracy Range: 63.62 - 67.11%
 - Efficiency Score Range: 59.10 - 75.29
 
 #### 3.4.2 Strengths
@@ -578,7 +578,7 @@ The data suggests a clear two-tier hierarchy: formats with low structural overhe
 - Token Duration Range: 80 - 88 seconds
 - Token Cost Range: 11490 - 12253 tokens
 - Wasted Token Range: 4016 - 4314 tokens
-- Accuracy Range: 64.79 - 65.05 %
+- Accuracy Range: 64.79 - 65.05%
 - Efficiency Score Range: 58.80 - 61.39
 
 #### 3.5.2 Strengths
@@ -616,7 +616,7 @@ The data suggests a clear two-tier hierarchy: formats with low structural overhe
 - Token Duration Range: 74 - 86 seconds
 - Token Cost Range: 15419 - 16490 tokens
 - Wasted Token Range: 5429 - 5541 tokens
-- Accuracy Range: 64.79 - 66.40 %
+- Accuracy Range: 64.79 - 66.40%
 - Efficiency Score Range: 46.51 - 48.77
 
 #### 3.6.2 Strengths
@@ -652,7 +652,7 @@ The data suggests a clear two-tier hierarchy: formats with low structural overhe
 - Token Duration Range: 76 - 104 seconds
 - Token Cost Range: 12095 - 12876 tokens
 - Wasted Token Range: 4097 - 4465 tokens
-- Accuracy Range: 65.32 - 66.13 %
+- Accuracy Range: 65.32 - 66.13%
 - Efficiency Score Range: 57.20 - 60.23
 
 #### 3.7.2 Strengths
