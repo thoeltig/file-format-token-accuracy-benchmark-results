@@ -143,7 +143,7 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
 
 ##### Mandatory
 
-| ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Acc | ↓ Wtd Acc | ↓ Eff Score | ↓ Wtd Eff Score |
+| ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Accuracy | ↓ Wtd Accuracy | ↓ Eff Score | ↓ Wtd Eff Score |
 |---|---|---|---|---|---|---|
 | toon_default ≈ 50392s | csv ≈ 7263  | toon_default ≈ 2485  | json_pretty ≈ 72% | json_pretty ≈ 73% | toon_default ≈ 75  | toon_default ≈ 76  |
 | yaml (+50.6%) | toon_default (+4.0%) | csv (+12.7%) | json_compact (-4.6%) | json_compact (-4.5%) | csv (-4.0%) | csv (-4.5%) |
@@ -156,7 +156,7 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
 
 ##### Optional
 
-| ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Acc | ↓ Wtd Acc | ↓ Eff Score | ↓ Wtd Eff Score |
+| ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Accuracy | ↓ Wtd Accuracy | ↓ Eff Score | ↓ Wtd Eff Score |
 |---|---|---|---|---|---|---|
 | toon_default ≈ 42037s | csv ≈ 7032  | csv ≈ 3119  | yaml ≈ 66% | yaml ≈ 68% | csv ≈ 69  | csv ≈ 70  |
 | xml_pretty (+76.7%) | json_compact (+29.0%) | json_compact (+5.6%) | json_pretty (-0.8%) | xml_compact (-0.7%) | json_compact (-1.2%) | json_compact (-2.0%) |
@@ -171,7 +171,7 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
 
 ##### Mandatory
 
-| ↓ Field Retrieval% | ↓ Structure Awareness% | ↓ Filtering% | ↓ Aggregation% |
+| ↓ Field Retrieval | ↓ Structure Awareness | ↓ Filtering | ↓ Aggregation |
 |---|---|---|---|
 | json_compact ≈ 74% | json_pretty ≈ 84% | json_pretty ≈ 67% | json_pretty ≈ 59% |
 | yaml (-0.3%) | toon_default (-4.1%) | xml_pretty (-3.2%) | xml_compact (-1.6%) |
@@ -184,7 +184,7 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
 
 ##### Optional
 
-| ↓ Field Retrieval% | ↓ Structure Awareness% | ↓ Filtering% | ↓ Aggregation% |
+| ↓ Field Retrieval | ↓ Structure Awareness | ↓ Filtering | ↓ Aggregation |
 |---|---|---|---|
 | xml_compact ≈ 67% | xml_compact ≈ 81% | yaml ≈ 73% | json_compact ≈ 52% |
 | yaml (0.0%) | xml_pretty (-1.2%) | json_pretty (-6.4%) | xml_pretty (0.0%) |
@@ -206,7 +206,7 @@ For **optional/sparse data**, the picture changes significantly. TOON_DEFAULT be
 The data suggests a clear two-tier hierarchy: formats with low structural overhead (CSV, TOON_DEFAULT, JSON_COMPACT) consume fewer tokens but their accuracy varies widely depending on data completeness. Formats with higher structural markup (XML, YAML) are more predictable across variants and better suited to production use cases where input data may be sparse or inconsistent.
 
 ### 2.2 Comprehensive Benchmark Metrics
-| Format | Variant | Read Tokens | Output Tokens | Total | Tokens/Char | Info/Token | Token/Answer | Acc (%) | Wtd Acc (%) | Used Tokens | Wasted Tokens | Eff Score | Wtd Eff Score |
+| Format | Variant | Read Tokens | Output Tokens | Total | Tokens/Char | Info/Token | Token/Answer | Accuracy (%) | Wtd Accuracy (%) | Used Tokens | Wasted Tokens | Eff Score | Wtd Eff Score |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | man | 7022 | 241 | 7263 | 1.438 | 0.846 | 1.940 | 61.45 | 72.77 | 4462.868 | 2799.732 | 72.25 | 72.77 |
 | CSV | opt | 6728 | 304 | 7032 | 1.423 | 0.791 | 2.448 | 55.65 | 69.99 | 3913.085 | 3118.515 | 68.92 | 69.99 |
@@ -224,7 +224,7 @@ The data suggests a clear two-tier hierarchy: formats with low structural overhe
 | YAML | opt | 11791 | 304 | 12095 | 1.646 | 0.547 | 2.452 | 66.13 | 61.40 | 7998.423 | 4096.577 | 60.23 | 61.40 |
 
 ### 2.3 Format Robustness: Mandatory vs Optional
-| Format | Tokens Man | Tokens Opt | Diff | Diff (%) | Acc Man (%) | Acc Opt (%) | Diff (%) | Wtd Acc Man (%) | Wtd Acc Opt (%) | Diff (%) | Eff Score Man | Eff Score Opt | Diff | Wtd Eff Score Man | Wtd Eff Score Opt | Diff |
+| Format | Tokens Man | Tokens Opt | Diff | Diff (%) | Accuracy Man (%) | Accuracy Opt (%) | Diff (%) | Wtd Accuracy Man (%) | Wtd Accuracy Opt (%) | Diff (%) | Eff Score Man | Eff Score Opt | Diff | Wtd Eff Score Man | Wtd Eff Score Opt | Diff |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 7263 | 7032 | -231 | -3.18 | 61.45 | 55.65 | -5.80 | 62.19 | 57.17 | -5.02 | 72.25 | 68.92 | -3.33 | 72.77 | 69.99 | -2.78 |
 | JSON_COMPACT | 9600 | 9073 | -527 | -5.49 | 67.14 | 63.71 | -3.43 | 68.50 | 64.44 | -4.06 | 68.84 | 68.11 | -0.73 | 69.79 | 68.62 | -1.17 |
@@ -296,7 +296,7 @@ The data suggests a clear two-tier hierarchy: formats with low structural overhe
 
 ### 2.6 Token Utilization Efficiency
 #### 2.6.1 Metrics
-| Format | Variant | Total Tokens | Useful Tokens | Wasted Tokens | Acc (%) | Wtd Acc (%) | Eff Score | Wtd Eff Score |
+| Format | Variant | Total Tokens | Useful Tokens | Wasted Tokens | Accuracy (%) | Wtd Accuracy (%) | Eff Score | Wtd Eff Score |
 |---|---|---|---|---|---|---|---|---|
 | CSV | man | 7263 | 4463 | 2800 | 61.45 | 62.19 | 72.25 | 72.77 |
 | CSV | opt | 7032 | 3913 | 3119 | 55.65 | 57.17 | 68.92 | 69.99 |
@@ -314,7 +314,7 @@ The data suggests a clear two-tier hierarchy: formats with low structural overhe
 | YAML | opt | 12095 | 7998 | 4097 | 66.13 | 67.80 | 60.23 | 61.40 |
 
 #### 2.6.2 Mandatory vs Optional Data
-| Format | Total Tokens Man | Total Tokens Opt | Diff | Diff (%) | Useful Tokens Man | Useful Tokens Opt | Diff | Diff (%) | Wasted Tokens Man | Wasted Tokens Opt | Diff | Diff (%) | Acc (%) Man | Acc (%) Opt | Diff (%) | Eff Score Man | Eff Score Opt | Diff | Diff (%) |
+| Format | Total Tokens Man | Total Tokens Opt | Diff | Diff (%) | Useful Tokens Man | Useful Tokens Opt | Diff | Diff (%) | Wasted Tokens Man | Wasted Tokens Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) | Eff Score Man | Eff Score Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 7263 | 7032 | -231 | -3.18 | 4463 | 3913 | -550 | -12.32 | 2800 | 3119 |  +319 |  +11.39 | 61.45 | 55.65 | -5.80 | 72.25 | 68.923 | -3.33 | -4.61 |
 | JSON_COMPACT | 9600 | 9073 | -527 | -5.49 | 6445 | 5780 | -665 | -10.32 | 3155 | 3293 |  +138 |  +4.37 | 67.14 | 63.71 | -3.43 | 68.84 | 68.105 | -0.73 | -1.06 |
@@ -326,7 +326,7 @@ The data suggests a clear two-tier hierarchy: formats with low structural overhe
 
 ### 2.7 Answer Per Format Breakdown
 #### 2.7.1 Metrics
-| Format | Variant | Correct Answers | Incorrect Answers | No Answers | Acc (%) |
+| Format | Variant | Correct Answers | Incorrect Answers | No Answers | Accuracy (%) |
 |---|---|---|---|---|---|
 | CSV | man | 76 | 48 | 0 | 61.45 |
 | CSV | opt | 69 | 55 | 0 | 55.65 |
@@ -344,7 +344,7 @@ The data suggests a clear two-tier hierarchy: formats with low structural overhe
 | YAML | opt | 82 | 42 | 0 | 66.13 |
 
 #### 2.7.2 Mandatory vs Optional Data
-| Format | Correct Man | Correct Opt | Diff | Diff (%) | Incorrect Man | Incorrect Opt | Diff | Diff (%) | No Answers Man | No Answers Opt | Diff | Diff (%) | Acc (%) Man | Acc (%) Opt | Diff (%) |
+| Format | Correct Man | Correct Opt | Diff | Diff (%) | Incorrect Man | Incorrect Opt | Diff | Diff (%) | No Answers Man | No Answers Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 76 | 69 | -7 | -9.21 | 48 | 55 |  +7 |  +14.58 | 0 | 0 | 0 | 0.00 | 61.45 | 55.65 | -5.80 |
 | JSON_COMPACT | 83 | 79 | -4 | -4.82 | 41 | 45 |  +4 |  +9.76 | 0 | 0 | 0 | 0.00 | 67.14 | 63.71 | -3.43 |
@@ -356,7 +356,7 @@ The data suggests a clear two-tier hierarchy: formats with low structural overhe
 
 ### 2.8 Accuracy Per Question Category Analysis
 #### 2.8.1 Metrics
-| Format | Variant | Acc (%) | Field Retrieval (%) | Structure Awareness (%) | Filtering (%) | Aggregation (%) |
+| Format | Variant | Accuracy (%) | Field Retrieval (%) | Structure Awareness (%) | Filtering (%) | Aggregation (%) |
 |---|---|---|---|---|---|---|
 | CSV | man | 61.45 | 61.82 | 66.67 | 61.90 | 53.33 |
 | CSV | opt | 55.65 | 57.09 | 62.22 | 62.86 | 36.19 |
