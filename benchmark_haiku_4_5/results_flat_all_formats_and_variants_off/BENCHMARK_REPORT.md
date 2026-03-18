@@ -23,9 +23,7 @@ This benchmark evaluates token efficiency and information accuracy across 7 file
 
 5. **XML_COMPACT and YAML are the most robust formats**: Both improve or hold accuracy when switching from mandatory to optional data (XML_COMPACT +0.26%, YAML +0.81%). XML_COMPACT shows a striking +13.58% gain in structure awareness with optional data — the opposite of what most formats experience.
 
-6. **The accuracy gap between formats is narrow relative to the token cost gap**: Raw accuracy spans ~16 pp (55.65–71.77%) while total token cost spans 2.3× (7,032–16,490 tokens). Choosing a more expensive format does not deliver proportional accuracy gains.
-
-7. **XML_PRETTY is the clear worst choice overall**: Highest token cost (15,419–16,490), most wasted tokens (5,429–5,541), and the lowest efficiency score (46.51–48.77) — without any compensating accuracy advantage over cheaper alternatives.
+6. **XML_PRETTY is the clear worst choice overall**: Highest token cost (15,419–16,490), most wasted tokens (5,429–5,541), and the lowest efficiency score (46.51–48.77) — without any compensating accuracy advantage over cheaper alternatives.
 
 ## 1. Methodology
 
@@ -148,12 +146,12 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
 | ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Acc | ↓ Wtd Acc | ↓ Eff Score | ↓ Wtd Eff Score |
 |---|---|---|---|---|---|---|
 | toon_default ≈ 50392 s | csv ≈ 7263  | toon_default ≈ 2485  | json_pretty ≈ 72 % | json_pretty ≈ 73 % | toon_default ≈ 75  | toon_default ≈ 76  |
-| yaml ( +50.6 %) | toon_default ( +4.0 %) | csv ( +12.7 %) | json_compact (-4.6 %) | json_compact (-4.5 %) | csv (-4.0 %) | csv (-4.5 %) |
-| xml_compact ( +59.3 %) | json_compact ( +32.2 %) | json_compact ( +26.9 %) | toon_default (-4.7 %) | toon_default (-4.6 %) | json_compact (-8.6 %) | json_compact (-8.4 %) |
-| csv ( +60.6 %) | xml_compact ( +68.7 %) | json_pretty ( +66.0 %) | xml_pretty (-5.4 %) | xml_pretty (-6.0 %) | xml_compact (-21.9 %) | xml_compact (-22.8 %) |
-| xml_pretty ( +71.6 %) | yaml ( +77.3 %) | xml_compact ( +73.6 %) | yaml (-6.5 %) | yaml (-7.7 %) | yaml (-24.0 %) | yaml (-25.0 %) |
-| json_pretty ( +91.0 %) | json_pretty ( +101.2 %) | yaml ( +79.7 %) | xml_compact (-7.0 %) | xml_compact (-8.2 %) | json_pretty (-25.3 %) | json_pretty (-25.1 %) |
-| json_compact ( +111.6 %) | xml_pretty ( +127.1 %) | xml_pretty ( +123.0 %) | csv (-10.3 %) | csv (-10.8 %) | xml_pretty (-38.2 %) | xml_pretty (-38.4 %) |
+| yaml (+50.6 %) | toon_default (+4.0 %) | csv (+12.7 %) | json_compact (-4.6 %) | json_compact (-4.5 %) | csv (-4.0 %) | csv (-4.5 %) |
+| xml_compact (+59.3 %) | json_compact (+32.2 %) | json_compact (+26.9 %) | toon_default (-4.7 %) | toon_default (-4.6 %) | json_compact (-8.6 %) | json_compact (-8.4 %) |
+| csv (+60.6 %) | xml_compact (+68.7 %) | json_pretty (+66.0 %) | xml_pretty (-5.4 %) | xml_pretty (-6.0 %) | xml_compact (-21.9 %) | xml_compact (-22.8 %) |
+| xml_pretty (+71.6 %) | yaml (+77.3 %) | xml_compact (+73.6 %) | yaml (-6.5 %) | yaml (-7.7 %) | yaml (-24.0 %) | yaml (-25.0 %) |
+| json_pretty (+91.0 %) | json_pretty (+101.2 %) | yaml (+79.7 %) | xml_compact (-7.0 %) | xml_compact (-8.2 %) | json_pretty (-25.3 %) | json_pretty (-25.1 %) |
+| json_compact (+111.6 %) | xml_pretty (+127.1 %) | xml_pretty (+123.0 %) | csv (-10.3 %) | csv (-10.8 %) | xml_pretty (-38.2 %) | xml_pretty (-38.4 %) |
 
 
 ##### Optional
@@ -161,12 +159,12 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
 | ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Acc | ↓ Wtd Acc | ↓ Eff Score | ↓ Wtd Eff Score |
 |---|---|---|---|---|---|---|
 | toon_default ≈ 42037 s | csv ≈ 7032  | csv ≈ 3119  | yaml ≈ 66 % | yaml ≈ 68 % | csv ≈ 69  | csv ≈ 70  |
-| xml_pretty ( +76.7 %) | json_compact ( +29.0 %) | json_compact ( +5.6 %) | json_pretty (-0.8 %) | xml_compact (-0.7 %) | json_compact (-1.2 %) | json_compact (-2.0 %) |
-| json_compact ( +79.9 %) | xml_compact ( +63.4 %) | xml_compact ( +28.8 %) | xml_compact (-1.1 %) | json_pretty (-1.0 %) | xml_compact (-10.9 %) | xml_compact (-10.3 %) |
-| json_pretty ( +102.2 %) | toon_default ( +69.2 %) | yaml ( +31.4 %) | xml_pretty (-1.3 %) | xml_pretty (-1.5 %) | yaml (-12.6 %) | yaml (-12.3 %) |
-| csv ( +105.9 %) | yaml ( +72.0 %) | toon_default ( +38.8 %) | json_compact (-2.4 %) | toon_default (-3.0 %) | toon_default (-14.3 %) | toon_default (-14.4 %) |
-| xml_compact ( +108.6 %) | json_pretty ( +93.8 %) | json_pretty ( +51.5 %) | toon_default (-2.5 %) | json_compact (-3.4 %) | json_pretty (-20.5 %) | json_pretty (-20.1 %) |
-| yaml ( +147.4 %) | xml_pretty ( +119.3 %) | xml_pretty ( +74.1 %) | csv (-10.5 %) | csv (-10.6 %) | xml_pretty (-29.2 %) | xml_pretty (-28.8 %) |
+| xml_pretty (+76.7 %) | json_compact (+29.0 %) | json_compact (+5.6 %) | json_pretty (-0.8 %) | xml_compact (-0.7 %) | json_compact (-1.2 %) | json_compact (-2.0 %) |
+| json_compact (+79.9 %) | xml_compact (+63.4 %) | xml_compact (+28.8 %) | xml_compact (-1.1 %) | json_pretty (-1.0 %) | xml_compact (-10.9 %) | xml_compact (-10.3 %) |
+| json_pretty (+102.2 %) | toon_default (+69.2 %) | yaml (+31.4 %) | xml_pretty (-1.3 %) | xml_pretty (-1.5 %) | yaml (-12.6 %) | yaml (-12.3 %) |
+| csv (+105.9 %) | yaml (+72.0 %) | toon_default (+38.8 %) | json_compact (-2.4 %) | toon_default (-3.0 %) | toon_default (-14.3 %) | toon_default (-14.4 %) |
+| xml_compact (+108.6 %) | json_pretty (+93.8 %) | json_pretty (+51.5 %) | toon_default (-2.5 %) | json_compact (-3.4 %) | json_pretty (-20.5 %) | json_pretty (-20.1 %) |
+| yaml (+147.4 %) | xml_pretty (+119.3 %) | xml_pretty (+74.1 %) | csv (-10.5 %) | csv (-10.6 %) | xml_pretty (-29.2 %) | xml_pretty (-28.8 %) |
 
 
 #### 2.1.4 Category Accuracy Ranking
