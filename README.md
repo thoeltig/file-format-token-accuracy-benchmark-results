@@ -50,8 +50,8 @@ This repository contains **benchmark results and raw data** from experiments eva
 
 - **Structure is the dominant variable.** Flat vs nested changes which format wins more than thinking mode or data variant does.
 - **JSON Compact**: Most consistent format across all configurations. Wins all nested configurations and flat optional data. Smallest performance delta between mandatory and optional variants.
-- **TOON Default**: Flat mandatory specialist — highest efficiency on dense flat data, lowest processing duration. Degrades ~62% in token cost on optional data; no advantage on nested structures.
-- **CSV**: Lowest raw token count but worst accuracy (54–63%). High wasted tokens in most configurations — token savings are negated by inaccurate output.
+- **TOON Default**: Flat mandatory specialist with the highest efficiency on dense flat data and lowest processing duration. Degrades ~62% in token cost on optional data; no advantage on nested structures.
+- **CSV**: Lowest raw token count but worst accuracy (54–63%). High wasted tokens in most configurations. Token savings are negated by inaccurate output.
 - **XML Pretty**: Lowest efficiency score in every configuration without exception. No use case where it is the right choice for LLM context consumption.
 
 ### Format Recommendations (Summary)
@@ -129,8 +129,8 @@ All data is formatted identically in each file format to ensure apples-to-apples
 | **JSON Compact** | Minified JSON (no whitespace or newlines) |
 | **XML Pretty** | Standard indented XML |
 | **XML Compact** | Minified XML (no whitespace or indentation) |
-| **TOON Unsafe** | [Token-Oriented Object Notation](https://toonformat.dev/) with key folding disabled which expands the nested structures fully (default) |
-| **TOON Safe** | [Token-Oriented Object Notation](https://toonformat.dev/) with key folding enabled which collapses single-key object chains into dotted paths (`a.b.c: value`) |
+| **TOON Default** | [Token-Oriented Object Notation](https://toonformat.dev/) with key folding disabled which expands the nested structures fully (default) |
+| **TOON Keyfold** | [Token-Oriented Object Notation](https://toonformat.dev/) with key folding enabled which collapses single-key object chains into dotted paths (`a.b.c: value`) |
 | **YAML** | Standard YAML with hierarchical indentation |
 
 *Note: All formats are tested in both flat and nested structures except CSV which is flat only.*
