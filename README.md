@@ -91,10 +91,10 @@ benchmark/
 **Key Files per Benchmark**:
 - `data/` - Raw data files used in testing
 - `subagent_outputs/` - Raw LLM responses for reproducibility
-- `metadata.json`: Dataset characteristics and generation parameters
-- `agent_ids.json`: Contains testConfiguration (formats, variants, model, thinking) and all readonly and full test agent IDs for metrics extraction
-- `metrics.json`: Combines input and output metrics extracted from agent transcripts
-- `analytics_results.json`: Final analysis output with efficiency rankings and key insights
+- `metadata.json` - Dataset characteristics and generation parameters
+- `agent_ids.json` - Contains testConfiguration (formats, variants, model, thinking) and all readonly and full test agent IDs for metrics extraction
+- `metrics.json` - Combines input and output metrics extracted from agent transcripts
+- `analytics_results.json` - Final analysis output with efficiency rankings and key insights
 - `BENCHMARK_REPORT.md` - Complete analysis, recommendations, and methodology
 
 ## Running Benchmarks
