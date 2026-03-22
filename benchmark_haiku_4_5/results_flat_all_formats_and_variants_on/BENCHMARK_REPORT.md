@@ -450,8 +450,11 @@ Critically no format exceeded 72% accuracy even with thinking enabled which indi
 
 #### 3.1.4 Use Case Recommendation
 
-- ✓ Use when: Token budget is extremely constrained and approximate answers are acceptable. Bulk tabular data where individual field precision is not required and read-only pipelines where overhead must be minimized.
-- ❌ Avoid when: Accuracy matters for any question category, data contains optional or sparse fields and aggregation or field retrieval precision is required.
+- ✓ Use when token budget is extremely constrained and approximate answers are acceptable
+- ✓ Use when bulk tabular data where individual field precision is not required
+- ❌ Avoid when accuracy matters for any question category
+- ❌ Avoid when data contains optional or sparse fields
+- ❌ Avoid when aggregation or field retrieval precision is required
 
 #### 3.1.5 Trade-offs
 
@@ -484,8 +487,11 @@ CSV's token savings (~48% cheaper than XML_PRETTY) come at the cost of ~12% lowe
 
 #### 3.2.4 Use Case Recommendation
 
-- ✓ Use when: Data has optional or sparse fields or structure awareness is critical.
-- ❌ Avoid when: Aggregation accuracy is critical on mandatory/dense data, token budget is the primary constraint or data is predictable and uniformly dense (TOON_DEFAULT beats it there).
+- ✓ Use when data has optional or sparse fields 
+- ✓ Use when structure awareness is critical
+- ❌ Avoid when aggregation accuracy is critical on mandatory/dense data
+- ❌ Avoid when token budget is the primary constraint
+- ❌ Avoid when data is predictable and uniformly dense (TOON_DEFAULT beats it there)
 
 #### 3.2.5 Trade-offs
 
@@ -518,8 +524,12 @@ JSON_COMPACT spends ~31% more tokens than CSV and gets ~13% better accuracy on o
 
 #### 3.3.4 Use Case Recommendation
 
-- ✓ Use when: Data is exclusively mandatory/dense (no optional fields), maximum accuracy on a single run is the priority or structure awareness or aggregation on dense data is the primary task.
-- ❌ Avoid when: Data contains optional fields, token efficiency matters or consistency across data variants is required.
+- ✓ Use when data is exclusively mandatory/dense (no optional fields)
+- ✓ Use when maximum accuracy on a single run is the priority 
+- ✓ Use when structure awareness or aggregation on dense data is the primary task
+- ❌ Avoid when data contains optional fields
+- ❌ Avoid when token efficiency matters
+- ❌ Avoid when consistency across data variants is required
 
 #### 3.3.5 Trade-offs
 
@@ -552,8 +562,10 @@ JSON_PRETTY is the highest-accuracy format but at nearly 2x the token cost of CS
 
 #### 3.4.4 Use Case Recommendation
 
-- ✓ Use when: Data is exclusively mandatory/dense with no optional fields, aggregation accuracy is important and inference speed matters.
-- ❌ Avoid when: Data schema includes optional or nullable fields.
+- ✓ Use when data is exclusively mandatory/dense with no optional fields
+- ✓ Use when aggregation accuracy is important 
+- ✓ Use when inference speed matters
+- ❌ Avoid when data schema includes optional or nullable fields
 
 #### 3.4.5 Trade-offs
 
@@ -585,8 +597,9 @@ On mandatory data TOON_DEFAULT is unambiguously the best format with similar tok
 
 #### 3.5.4 Use Case Recommendation
 
-- ✓ Use when: XML is mandated by system, tooling or protocol constraints or structure awareness consistency across dense and sparse data is needed.
-- ❌ Avoid when: Token efficiency matters because JSON formats are available as alternatives.
+- ✓ Use when XML is mandated by system, tooling or protocol constraints
+- ✓ Use when structure awareness consistency across dense and sparse data is needed
+- ❌ Avoid when Token efficiency matters because JSON formats are available as alternatives
 
 #### 3.5.5 Trade-offs
 
@@ -619,8 +632,11 @@ XML_COMPACT costs ~64% more tokens than CSV but delivers only ~10% better accura
 
 #### 3.6.4 Use Case Recommendation
 
-- ✓ Use when: XML schema compliance is mandatory or human readability alongside machine processing is required.
-- ❌ Avoid when: Token budget is any concern, any alternative format is available, token efficiency or information density matters.
+- ✓ Use when XML schema compliance is mandatory
+- ✓ Use when human readability alongside machine processing is required
+- ❌ Avoid when token budget is any concern
+- ❌ Avoid when any alternative format is available
+- ❌ Avoid when token efficiency or information density matters
 
 #### 3.6.5 Trade-offs
 
@@ -652,8 +668,12 @@ XML_PRETTY provides the worst token value of all tested formats. The pretty-prin
 
 #### 3.7.4 Use Case Recommendation
 
-- ✓ Use when: Filtering queries dominate the use case on mandatory/dense data, configuration-style data with clear human-readable field names or YAML is natively consumed by the target system.
-- ❌ Avoid when: Aggregation accuracy is required, token efficiency is a constraint or a more token-efficient format with better accuracy is available
+- ✓ Use when filtering queries dominate the use case on mandatory/dense data
+- ✓ Use if configuration-style data with clear human-readable field names 
+- ✓ Use when YAML is natively consumed by the target system
+- ❌ Avoid when aggregation accuracy is required
+- ❌ Avoid when token efficiency is a constraint
+- ❌ Avoid when a more token-efficient format with better accuracy is available
 
 #### 3.7.5 Trade-offs
 
