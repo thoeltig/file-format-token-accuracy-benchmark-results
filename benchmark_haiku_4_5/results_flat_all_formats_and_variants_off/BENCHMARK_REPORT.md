@@ -1,7 +1,7 @@
 # File Format Token Efficiency Benchmark: Comprehensive Report
-- **Date**: 2026-03-17
+- **Date**: 2026-03-22
 - **Model**: Claude Haiku 4.5 (claude-haiku-4-5-20251001)
-- **Extended Thinking**: off
+- **Thinking**: off
 - **Data Structure**: flat
 - **Formats Tested**: 7 (CSV, JSON_COMPACT, JSON_PRETTY, TOON_DEFAULT, XML_COMPACT, XML_PRETTY, YAML)
 - **Record Counts**: 31
@@ -13,15 +13,17 @@ This benchmark evaluates token efficiency and information accuracy across 7 file
 
 ### Key Findings
 
-1. **CSV is cheapest but least accurate**: CSV achieves the lowest token cost (7032–7263 tokens) but delivers the worst accuracy across both variants (55.65–61.45%). Its aggregation accuracy collapses to 36.19% with optional data which is the single worst category score in the entire benchmark.
+<ADD_CONTENT_HERE>Insert 5-7 key findings from analysis</ADD_CONTENT_HERE>
 
-2. **TOON_DEFAULT excels with mandatory data but collapses with optional fields**: Highest efficiency score (75.29) and fastest processing (~42–50s) on mandatory data but a +57.49% token spike with optional data destroys that advantage. It is the only format that gets significantly more expensive with sparser data.
+1. Finding 1
 
-3. **JSON_PRETTY has the highest accuracy but the worst efficiency**: Leading on correctness (71.77% mandatory, 83.95% structure awareness) comes at nearly 2× the token cost of CSV (14,613 vs 7,263 tokens) pushing its efficiency score to 56.21 which is near the bottom of the ranking.
+2. Finding 2
 
-4. **Aggregation is the weakest task category for all formats**: No format exceeds 58.73% aggregation accuracy; CSV drops to 36.19% (optional). The consistently low scores across all formats suggest aggregation is constrained by model capability more than format choice.
+3. Finding 3
 
-5. **XML_PRETTY is the clear worst choice overall**: Highest token cost (15,419–16,490), most wasted tokens (5,429–5,541), and the lowest efficiency score (46.51–48.77) without any compensating accuracy advantage over cheaper alternatives.
+4. Finding 4
+
+5. Finding 5
 
 ## 1. Methodology
 
@@ -96,21 +98,21 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
    - Optional: XML_COMPACT ↓ -0.32% ↑ 0.32%
    - Mandatory: JSON_PRETTY ↓ -1.22% ↑ 0.77%
 - Highest accuracy:
-   - Optional: YAML 66.13%
-   - Mandatory: JSON_PRETTY 71.77%
+   - Optional: YAML 80.38%
+   - Mandatory: JSON_PRETTY 82.53%
 - Lowest accuracy drift:
-   - Optional: YAML ↓ -3.66% ↑ 3.66%
-   - Mandatory: JSON_PRETTY ↓ -2.24% ↑ 1.13%
+   - Optional: YAML ↓ -3.68% ↑ 3.33%
+   - Mandatory: JSON_PRETTY ↓ -1.31% ↑ 1.62%
 - Most useful tokens:
-   - Optional: XML_PRETTY 9990 / 15419 tokens
-   - Mandatory: XML_PRETTY 10950 / 16490 tokens
+   - Optional: XML_PRETTY 11854 / 15419 tokens
+   - Mandatory: XML_PRETTY 12633 / 16490 tokens
 - Highest token efficiency (%/token):
-   - Optional: CSV 68.92
-   - Mandatory: TOON_DEFAULT 75.29
+   - Optional: JSON_COMPACT 77.14
+   - Mandatory: TOON_DEFAULT 82.13
 - Lowest delta (optional-mandatory):
    - Total tokens: CSV -231 tokens
-   - Accuracy: XML_COMPACT 0.26%
-   - Token efficiency: JSON_COMPACT -0.73
+   - Accuracy: XML_PRETTY 0.27%
+   - Token efficiency: JSON_PRETTY 0.45
 
 #### 2.1.2 Worst results
 
@@ -121,21 +123,21 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
    - Optional: JSON_PRETTY ↓ -97.84% ↑ 34.20%
    - Mandatory: CSV ↓ -96.26% ↑ 25.10%
 - Lowest accuracy:
-   - Optional: CSV 55.65%
-   - Mandatory: CSV 61.45%
+   - Optional: CSV 65.48%
+   - Mandatory: CSV 67.58%
 - Highest accuracy drift:
-   - Optional: CSV ↓ -13.05% ↑ 10.13%
-   - Mandatory: TOON_DEFAULT ↓ -19.49% ↑ 6.94%
+   - Optional: CSV ↓ -16.25% ↑ 13.30%
+   - Mandatory: TOON_DEFAULT ↓ -22.37% ↑ 8.04%
 - Most wasted tokens:
-   - Optional: XML_PRETTY 5429 / 15419 tokens
-   - Mandatory: XML_PRETTY 5541 / 16490 tokens
+   - Optional: XML_PRETTY 3565 / 15419 tokens
+   - Mandatory: XML_PRETTY 3857 / 16490 tokens
 - Lowest token efficiency (%/token):
-   - Optional: XML_PRETTY 48.77
-   - Mandatory: XML_PRETTY 46.51
+   - Optional: XML_PRETTY 57.24
+   - Mandatory: XML_PRETTY 53.66
 - Highest delta (optional-mandatory):
    - Total tokens: TOON_DEFAULT 4344 tokens
-   - Accuracy: JSON_PRETTY -6.45%
-   - Token efficiency: TOON_DEFAULT -16.19
+   - Accuracy: XML_COMPACT 5.11%
+   - Token efficiency: TOON_DEFAULT -14.43
 
 #### 2.1.3 Format Ranking
 
@@ -143,26 +145,26 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
 
 | ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Accuracy | ↓ Wtd Accuracy | ↓ Eff Score | ↓ Wtd Eff Score |
 |---|---|---|---|---|---|---|
-| TOON_DEFAULT ≈ 50392s | CSV ≈ 7263 | TOON_DEFAULT ≈ 2485 | JSON_PRETTY ≈ 72% | JSON_PRETTY ≈ 73% | TOON_DEFAULT ≈ 75 | TOON_DEFAULT ≈ 76  |
-| YAML (+50.6%) | TOON_DEFAULT (+4.0%) | CSV (+12.7%) | JSON_COMPACT (-4.6%) | JSON_COMPACT (-4.5%) | CSV (-4.0%) | CSV (-4.5%) |
-| XML_COMPACT (+59.3%) | JSON_COMPACT (+32.2%) | JSON_COMPACT (+26.9%) | TOON_DEFAULT (-4.7%) | TOON_DEFAULT (-4.6%) | JSON_COMPACT (-8.6%) | JSON_COMPACT (-8.4%) |
-| CSV (+60.6%) | XML_COMPACT (+68.7%) | JSON_PRETTY (+66.0%) | XML_PRETTY (-5.4%) | XML_PRETTY (-6.0%) | XML_COMPACT (-21.9%) | XML_COMPACT (-22.8%) |
-| XML_PRETTY (+71.6%) | YAML (+77.3%) | XML_COMPACT (+73.6%) | YAML (-6.5%) | YAML (-7.7%) | YAML (-24.0%) | YAML (-25.0%) |
-| JSON_PRETTY (+91.0%) | JSON_PRETTY (+101.2%) | YAML (+79.7%) | XML_COMPACT (-7.0%) | XML_COMPACT (-8.2%) | JSON_PRETTY (-25.3%) | JSON_PRETTY (-25.1%) |
-| JSON_COMPACT (+111.6%) | XML_PRETTY (+127.1%) | XML_PRETTY (+123.0%) | CSV (-10.3%) | CSV (-10.8%) | XML_PRETTY (-38.2%) | XML_PRETTY (-38.4%) |
+| TOON_DEFAULT ≈ 50s | CSV ≈ 7263 | TOON_DEFAULT ≈ 1747 | JSON_PRETTY ≈ 83% | JSON_PRETTY ≈ 82% | TOON_DEFAULT ≈ 82 | TOON_DEFAULT ≈ 82 |
+| YAML (+50.6%) | TOON_DEFAULT (+4.0%) | JSON_COMPACT (+20.7%) | JSON_COMPACT (-4.5%) | JSON_COMPACT (-4.4%) | CSV (-6.8%) | CSV (-6.8%) |
+| XML_COMPACT (+59.3%) | JSON_COMPACT (+32.2%) | CSV (+34.8%) | TOON_DEFAULT (-5.7%) | TOON_DEFAULT (-5.5%) | JSON_COMPACT (-6.9%) | JSON_COMPACT (-7.0%) |
+| CSV (+60.6%) | XML_COMPACT (+68.7%) | JSON_PRETTY (+46.1%) | XML_PRETTY (-5.9%) | XML_PRETTY (-6.5%) | XML_COMPACT (-21.1%) | XML_COMPACT (-22.1%) |
+| XML_PRETTY (+71.6%) | YAML (+77.3%) | YAML (+78.3%) | YAML (-6.7%) | YAML (-8.0%) | YAML (-21.4%) | JSON_PRETTY (-22.6%) |
+| JSON_PRETTY (+91.0%) | JSON_PRETTY (+101.2%) | XML_COMPACT (+86.6%) | XML_COMPACT (-9.1%) | XML_COMPACT (-10.0%) | JSON_PRETTY (-22.4%) | YAML (-22.7%) |
+| JSON_COMPACT (+111.6%) | XML_PRETTY (+127.1%) | XML_PRETTY (+120.8%) | CSV (-15.0%) | CSV (-14.7%) | XML_PRETTY (-34.7%) | XML_PRETTY (-35.4%) |
 
 
 ##### Optional
 
-| ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Accuracy | ↓ Wtd Accuracy | ↓ Eff Score | ↓ Wtd Eff Score |
+| ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Acc | ↓ Wtd Acc | ↓ Eff Score | ↓ Wtd Eff Score |
 |---|---|---|---|---|---|---|
-| TOON_DEFAULT ≈ 42037s | CSV ≈ 7032 | CSV ≈ 3119 | YAML ≈ 66% | YAML ≈ 68% | CSV ≈ 69 | CSV ≈ 70  |
-| XML_PRETTY (+76.7%) | JSON_COMPACT (+29.0%) | JSON_COMPACT (+5.6%) | JSON_PRETTY (-0.8%) | XML_COMPACT (-0.7%) | JSON_COMPACT (-1.2%) | JSON_COMPACT (-2.0%) |
-| JSON_COMPACT (+79.9%) | XML_COMPACT (+63.4%) | XML_COMPACT (+28.8%) | XML_COMPACT (-1.1%) | JSON_PRETTY (-1.0%) | XML_COMPACT (-10.9%) | XML_COMPACT (-10.3%) |
-| JSON_PRETTY (+102.2%) | TOON_DEFAULT (+69.2%) | YAML (+31.4%) | XML_PRETTY (-1.3%) | XML_PRETTY (-1.5%) | YAML (-12.6%) | YAML (-12.3%) |
-| CSV (+105.9%) | YAML (+72.0%) | TOON_DEFAULT (+38.8%) | JSON_COMPACT (-2.4%) | TOON_DEFAULT (-3.0%) | TOON_DEFAULT (-14.3%) | TOON_DEFAULT (-14.4%) |
-| XML_COMPACT (+108.6%) | JSON_PRETTY (+93.8%) | JSON_PRETTY (+51.5%) | TOON_DEFAULT (-2.5%) | JSON_COMPACT (-3.4%) | JSON_PRETTY (-20.5%) | JSON_PRETTY (-20.1%) |
-| YAML (+147.4%) | XML_PRETTY (+119.3%) | XML_PRETTY (+74.1%) | CSV (-10.5%) | CSV (-10.6%) | XML_PRETTY (-29.2%) | XML_PRETTY (-28.8%) |
+| TOON_DEFAULT ≈ 42s | CSV ≈ 7032 | JSON_COMPACT ≈ 2122 | YAML ≈ 80% | YAML ≈ 80% | JSON_COMPACT ≈ 77 | JSON_COMPACT ≈ 76 |
+| XML_PRETTY (+76.7%) | JSON_COMPACT (+29.0%) | YAML (+11.8%) | JSON_PRETTY (-1.7%) | XML_COMPACT (-1.4%) | CSV (-1.7%) | CSV (-0.6%) |
+| JSON_COMPACT (+79.9%) | XML_COMPACT (+63.4%) | CSV (+14.4%) | XML_COMPACT (-1.9%) | JSON_PRETTY (-1.7%) | XML_COMPACT (-8.2%) | XML_COMPACT (-7.2%) |
+| JSON_PRETTY (+102.2%) | TOON_DEFAULT (+69.2%) | XML_COMPACT (+16.4%) | XML_PRETTY (-3.5%) | XML_PRETTY (-3.3%) | YAML (-9.0%) | YAML (-8.4%) |
+| CSV (+105.9%) | YAML (+72.0%) | TOON_DEFAULT (+35.1%) | JSON_COMPACT (-3.8%) | JSON_COMPACT (-4.5%) | TOON_DEFAULT (-12.2%) | TOON_DEFAULT (-11.9%) |
+| XML_COMPACT (+108.6%) | JSON_PRETTY (+93.8%) | JSON_PRETTY (+36.7%) | TOON_DEFAULT (-4.5%) | TOON_DEFAULT (-4.7%) | JSON_PRETTY (-16.8%) | JSON_PRETTY (-16.3%) |
+| YAML (+147.4%) | XML_PRETTY (+119.3%) | XML_PRETTY (+68.0%) | CSV (-14.9%) | CSV (-14.4%) | XML_PRETTY (-25.8%) | XML_PRETTY (-25.3%) |
 
 
 #### 2.1.4 Category Accuracy Ranking
@@ -171,66 +173,60 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
 
 | ↓ Field Retrieval | ↓ Structure Awareness | ↓ Filtering | ↓ Aggregation |
 |---|---|---|---|
-| JSON_COMPACT ≈ 74% | JSON_PRETTY ≈ 84% | JSON_PRETTY ≈ 67% | JSON_PRETTY ≈ 59% |
-| YAML (-0.3%) | TOON_DEFAULT (-4.1%) | XML_PRETTY (-3.2%) | XML_COMPACT (-1.6%) |
-| JSON_PRETTY (-0.9%) | JSON_COMPACT (-6.2%) | JSON_COMPACT (-3.6%) | CSV (-5.4%) |
-| XML_PRETTY (-0.9%) | XML_PRETTY (-13.6%) | CSV (-4.8%) | TOON_DEFAULT (-9.5%) |
-| TOON_DEFAULT (-3.3%) | XML_COMPACT (-16.1%) | YAML (-4.8%) | YAML (-9.5%) |
-| XML_COMPACT (-4.6%) | CSV (-17.3%) | TOON_DEFAULT (-6.4%) | XML_PRETTY (-11.1%) |
-| CSV (-11.8%) | YAML (-19.8%) | XML_COMPACT (-9.5%) | JSON_COMPACT (-18.3%) |
+| JSON_COMPACT ≈ 98% | JSON_PRETTY ≈ 84% | JSON_PRETTY ≈ 67% | JSON_PRETTY ≈ 59% |
+| YAML (-1.2%) | TOON_DEFAULT (-4.1%) | XML_PRETTY (-3.2%) | XML_COMPACT (-1.6%) |
+| JSON_PRETTY (-1.2%) | JSON_COMPACT (-6.2%) | JSON_COMPACT (-3.6%) | CSV (-5.4%) |
+| XML_PRETTY (-2.4%) | XML_PRETTY (-13.6%) | CSV (-4.8%) | TOON_DEFAULT (-9.5%) |
+| TOON_DEFAULT (-5.9%) | XML_COMPACT (-16.1%) | YAML (-4.8%) | YAML (-9.5%) |
+| XML_COMPACT (-9.7%) | CSV (-17.3%) | TOON_DEFAULT (-6.4%) | XML_PRETTY (-11.1%) |
+| CSV (-22.5%) | YAML (-19.8%) | XML_COMPACT (-9.5%) | JSON_COMPACT (-18.3%) |
 
 
 ##### Optional
 
 | ↓ Field Retrieval | ↓ Structure Awareness | ↓ Filtering | ↓ Aggregation |
 |---|---|---|---|
-| XML_COMPACT ≈ 67% | XML_COMPACT ≈ 81% | YAML ≈ 73% | JSON_COMPACT ≈ 52% |
-| YAML (0.0%) | XML_PRETTY (-1.2%) | JSON_PRETTY (-6.4%) | XML_PRETTY (0.0%) |
-| JSON_PRETTY (-0.7%) | JSON_PRETTY (-5.9%) | CSV (-10.2%) | TOON_DEFAULT (-4.8%) |
-| TOON_DEFAULT (-1.4%) | YAML (-7.4%) | JSON_COMPACT (-11.1%) | JSON_PRETTY (-4.8%) |
-| JSON_COMPACT (-1.5%) | TOON_DEFAULT (-7.8%) | XML_COMPACT (-11.1%) | YAML (-6.3%) |
-| XML_PRETTY (-3.0%) | JSON_COMPACT (-11.9%) | TOON_DEFAULT (-12.2%) | XML_COMPACT (-11.1%) |
-| CSV (-10.2%) | CSV (-19.3%) | XML_PRETTY (-14.3%) | CSV (-16.2%) |
+| YAML ≈ 99% | XML_COMPACT ≈ 81% | YAML ≈ 73% | JSON_COMPACT ≈ 52% |
+| XML_COMPACT (-1.8%) | XML_PRETTY (-1.2%) | JSON_PRETTY (-6.4%) | XML_PRETTY (0.0%) |
+| JSON_PRETTY (-2.7%) | JSON_PRETTY (-5.9%) | CSV (-10.2%) | TOON_DEFAULT (-4.8%) |
+| JSON_COMPACT (-4.5%) | YAML (-7.4%) | JSON_COMPACT (-11.1%) | JSON_PRETTY (-4.8%) |
+| TOON_DEFAULT (-5.9%) | TOON_DEFAULT (-7.8%) | XML_COMPACT (-11.1%) | YAML (-6.3%) |
+| XML_PRETTY (-7.9%) | JSON_COMPACT (-11.9%) | TOON_DEFAULT (-12.2%) | XML_COMPACT (-11.1%) |
+| CSV (-20.1%) | CSV (-19.3%) | XML_PRETTY (-14.3%) | CSV (-16.2%) |
 
 
 #### 2.1.5 Conclusion
 
-For **mandatory/dense data**, TOON_DEFAULT is the best all-round choice (efficiency score 75.29, fastest at ~50 s), with JSON_PRETTY as the fallback when accuracy is the sole priority. CSV is competitive only when token budget is the primary constraint and accuracy requirements are low.
-
-For **optional/sparse data**, the picture changes significantly. TOON_DEFAULT becomes one of the worst options due to its token spike (+57.49%). CSV remains cheapest (7,032 tokens) but accuracy deteriorates further (55.65%). JSON_COMPACT and XML_COMPACT are the safest choices: both maintain 65-68% accuracy while keeping token cost moderate.
-
-**XML_PRETTY has no recommended use case.** It is the most expensive format in every scenario and does not outperform XML_COMPACT. The formatting overhead provides no measurable benefit to Claude Haiku 4.5.
-
-The data suggests formats with higher structural markup (JSON_PRETTY, XML_PRETTY, YAML) maintain their accuracy between mandatory and optional data but token cost is high. If data is known and mandatory TOON_DEFAULT is the clear choice but if data is unpredictable JSON_COMPACT or maybe XML_COMPACT are better suited because they archive a similar accuracy to the high structural markups for about half the token cost.
+<ADD_CONTENT_HERE>Analysis here</ADD_CONTENT_HERE>
 
 ### 2.2 Comprehensive Benchmark Metrics
 | Format | Variant | Read Tokens | Output Tokens | Total | Char/Token | Info/Token | Token/Answer | Accuracy (%) | Wtd Accuracy (%) | Used Tokens | Wasted Tokens | Eff Score | Wtd Eff Score |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| CSV | man | 7022 | 241 | 7263 | 1.438 | 0.846 | 1.940 | 61.45 | 72.77 | 4462.868 | 2799.732 | 72.25 | 72.77 |
-| CSV | opt | 6728 | 304 | 7032 | 1.423 | 0.791 | 2.448 | 55.65 | 69.99 | 3913.085 | 3118.515 | 68.92 | 69.99 |
-| JSON_COMPACT | man | 9296 | 304 | 9600 | 2.143 | 0.699 | 2.452 | 67.14 | 69.79 | 6445.440 | 3154.560 | 68.84 | 69.79 |
-| JSON_COMPACT | opt | 8768 | 305 | 9073 | 2.108 | 0.702 | 2.458 | 63.71 | 68.62 | 5780.281 | 3292.519 | 68.11 | 68.62 |
-| JSON_PRETTY | man | 14311 | 302 | 14613 | 1.691 | 0.491 | 2.433 | 71.77 | 57.07 | 10487.511 | 4125.156 | 56.21 | 57.07 |
-| JSON_PRETTY | opt | 13395 | 231 | 13626 | 1.677 | 0.479 | 1.863 | 65.32 | 55.88 | 8900.503 | 4725.497 | 54.82 | 55.88 |
-| TOON_DEFAULT | man | 7298 | 258 | 7556 | 1.393 | 0.888 | 2.076 | 67.11 | 76.17 | 5070.496 | 2485.004 | 75.29 | 76.17 |
-| TOON_DEFAULT | opt | 11590 | 309 | 11899 | 1.694 | 0.535 | 2.493 | 63.62 | 59.93 | 7570.251 | 4328.916 | 59.10 | 59.93 |
-| XML_COMPACT | man | 11950 | 303 | 12253 | 2.315 | 0.529 | 2.441 | 64.79 | 58.78 | 7938.503 | 4314.164 | 58.80 | 58.78 |
-| XML_COMPACT | opt | 11181 | 309 | 11490 | 2.288 | 0.566 | 2.492 | 65.05 | 62.80 | 7474.245 | 4015.755 | 61.39 | 62.80 |
-| XML_PRETTY | man | 16186 | 304 | 16490 | 1.931 | 0.403 | 2.454 | 66.40 | 46.91 | 10949.581 | 5540.752 | 46.51 | 46.91 |
-| XML_PRETTY | opt | 15117 | 302 | 15419 | 1.913 | 0.420 | 2.435 | 64.79 | 49.82 | 9989.970 | 5429.030 | 48.77 | 49.82 |
-| YAML | man | 12574 | 302 | 12876 | 1.661 | 0.507 | 2.433 | 65.32 | 57.15 | 8410.386 | 4465.281 | 57.20 | 57.15 |
-| YAML | opt | 11791 | 304 | 12095 | 1.646 | 0.547 | 2.452 | 66.13 | 61.40 | 7998.423 | 4096.577 | 60.23 | 61.40 |
+| CSV | man | 7022 | 241 | 7263 | 1.438 | 0.931 | 1.940 | 67.58 | 76.40 | 4908.065 | 2354.535 | 76.54 | 76.40 |
+| CSV | opt | 6728 | 304 | 7032 | 1.423 | 0.931 | 2.448 | 65.48 | 75.81 | 4604.292 | 2427.308 | 75.80 | 75.81 |
+| JSON_COMPACT | man | 9296 | 304 | 9600 | 2.143 | 0.813 | 2.452 | 78.03 | 76.24 | 7490.880 | 2109.120 | 76.46 | 76.24 |
+| JSON_COMPACT | opt | 8768 | 305 | 9073 | 2.108 | 0.844 | 2.458 | 76.61 | 76.25 | 6950.672 | 2122.128 | 77.14 | 76.25 |
+| JSON_PRETTY | man | 14311 | 302 | 14613 | 1.691 | 0.565 | 2.433 | 82.53 | 63.43 | 12059.834 | 2552.833 | 63.74 | 63.43 |
+| JSON_PRETTY | opt | 13395 | 231 | 13626 | 1.677 | 0.578 | 1.863 | 78.71 | 63.80 | 10725.025 | 2900.975 | 64.19 | 63.80 |
+| TOON_DEFAULT | man | 7298 | 258 | 7556 | 1.393 | 1.018 | 2.076 | 76.88 | 81.95 | 5808.668 | 1746.832 | 82.13 | 81.95 |
+| TOON_DEFAULT | opt | 11590 | 309 | 11899 | 1.694 | 0.638 | 2.493 | 75.90 | 67.20 | 9031.467 | 2867.700 | 67.69 | 67.20 |
+| XML_COMPACT | man | 11950 | 303 | 12253 | 2.315 | 0.599 | 2.441 | 73.39 | 63.87 | 8992.232 | 3260.435 | 64.82 | 63.87 |
+| XML_COMPACT | opt | 11181 | 309 | 11490 | 2.288 | 0.683 | 2.492 | 78.50 | 70.75 | 9019.650 | 2470.350 | 70.81 | 70.75 |
+| XML_PRETTY | man | 16186 | 304 | 16490 | 1.931 | 0.465 | 2.454 | 76.61 | 52.96 | 12633.244 | 3857.089 | 53.66 | 52.96 |
+| XML_PRETTY | opt | 15117 | 302 | 15419 | 1.913 | 0.499 | 2.435 | 76.88 | 56.98 | 11854.127 | 3564.873 | 57.24 | 56.98 |
+| YAML | man | 12574 | 302 | 12876 | 1.661 | 0.589 | 2.433 | 75.81 | 63.36 | 9761.043 | 3114.624 | 64.54 | 63.36 |
+| YAML | opt | 11791 | 304 | 12095 | 1.646 | 0.665 | 2.452 | 80.38 | 69.83 | 9721.961 | 2373.039 | 70.21 | 69.83 |
 
 ### 2.3 Format Robustness: Mandatory vs Optional
 | Format | Tokens Man | Tokens Opt | Diff | Diff (%) | Accuracy Man (%) | Accuracy Opt (%) | Diff (%) | Wtd Accuracy Man (%) | Wtd Accuracy Opt (%) | Diff (%) | Eff Score Man | Eff Score Opt | Diff | Wtd Eff Score Man | Wtd Eff Score Opt | Diff |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| CSV | 7263 | 7032 | -231 | -3.18 | 61.45 | 55.65 | -5.80 | 62.19 | 57.17 | -5.02 | 72.25 | 68.92 | -3.33 | 72.77 | 69.99 | -2.78 |
-| JSON_COMPACT | 9600 | 9073 | -527 | -5.49 | 67.14 | 63.71 | -3.43 | 68.50 | 64.44 | -4.06 | 68.84 | 68.11 | -0.73 | 69.79 | 68.62 | -1.17 |
-| JSON_PRETTY | 14613 | 13626 | -987 | -6.75 | 71.77 | 65.32 | -6.45 | 72.99 | 66.84 | -6.15 | 56.21 | 54.82 | -1.39 | 57.07 | 55.88 | -1.18 |
-| TOON_DEFAULT | 7556 | 11900 |  +4344 |  +57.49 | 67.11 | 63.62 | -3.49 | 68.37 | 64.81 | -3.56 | 75.29 | 59.10 | -16.19 | 76.17 | 59.93 | -16.24 |
-| XML_COMPACT | 12253 | 11490 | -763 | -6.23 | 64.79 | 65.05 |  +0.26 | 64.76 | 67.06 |  +2.30 | 58.80 | 61.39 |  +2.60 | 58.78 | 62.80 |  +4.02 |
-| XML_PRETTY | 16490 | 15419 | -1071 | -6.49 | 66.40 | 64.79 | -1.61 | 66.97 | 66.28 | -0.69 | 46.51 | 48.77 |  +2.26 | 46.91 | 49.82 |  +2.91 |
-| YAML | 12876 | 12095 | -781 | -6.07 | 65.32 | 66.13 |  +0.81 | 65.26 | 67.80 |  +2.54 | 57.20 | 60.23 |  +3.04 | 57.15 | 61.40 |  +4.25 |
+| CSV | 7263 | 7032 | -231 | -3.18 | 67.58 | 65.48 | -2.10 | 67.37 | 65.49 | -1.88 | 76.54 | 75.80 | -0.74 | 76.40 | 75.81 | -0.58 |
+| JSON_COMPACT | 9600 | 9073 | -527 | -5.49 | 78.03 | 76.61 | -1.42 | 77.71 | 75.34 | -2.37 | 76.46 | 77.14 |  +0.68 | 76.24 | 76.25 |  +0.01 |
+| JSON_PRETTY | 14613 | 13626 | -987 | -6.75 | 82.53 | 78.71 | -3.82 | 82.08 | 78.15 | -3.93 | 63.74 | 64.19 |  +0.45 | 63.43 | 63.80 |  +0.37 |
+| TOON_DEFAULT | 7556 | 11900 |  +4344 |  +57.49 | 76.88 | 75.90 | -0.98 | 76.63 | 75.19 | -1.44 | 82.13 | 67.69 | -14.43 | 81.95 | 67.20 | -14.75 |
+| XML_COMPACT | 12253 | 11490 | -763 | -6.23 | 73.39 | 78.50 |  +5.11 | 72.03 | 78.42 |  +6.39 | 64.82 | 70.81 |  +5.99 | 63.87 | 70.75 |  +6.89 |
+| XML_PRETTY | 16490 | 15419 | -1071 | -6.49 | 76.61 | 76.88 |  +0.27 | 75.61 | 76.51 |  +0.90 | 53.66 | 57.24 |  +3.58 | 52.96 | 56.98 |  +4.02 |
+| YAML | 12876 | 12095 | -781 | -6.07 | 75.81 | 80.38 |  +4.57 | 74.13 | 79.84 |  +5.71 | 64.54 | 70.21 |  +5.67 | 63.36 | 69.83 |  +6.47 |
 
 ### 2.4 Performance
 #### 2.4.1 Metrics
@@ -266,122 +262,122 @@ The data suggests formats with higher structural markup (JSON_PRETTY, XML_PRETTY
 #### 2.5.1 Metrics
 | Format | Variant | Char/Token | Token/Value | Token/Object | Info/Token |
 |---|---|---|---|---|---|
-| CSV | man | 1.438 | 10.296 | 226.516 | 0.846 |
-| CSV | opt | 1.423 | 10.662 | 217.032 | 0.791 |
-| JSON_COMPACT | man | 2.143 | 13.630 | 299.871 | 0.699 |
-| JSON_COMPACT | opt | 2.108 | 13.895 | 282.839 | 0.702 |
-| JSON_PRETTY | man | 1.691 | 20.984 | 461.645 | 0.491 |
-| JSON_PRETTY | opt | 1.677 | 21.228 | 432.097 | 0.479 |
-| TOON_DEFAULT | man | 1.393 | 10.701 | 235.419 | 0.888 |
-| TOON_DEFAULT | opt | 1.694 | 18.368 | 373.871 | 0.535 |
-| XML_COMPACT | man | 2.315 | 17.522 | 385.484 | 0.529 |
-| XML_COMPACT | opt | 2.288 | 17.719 | 360.677 | 0.566 |
-| XML_PRETTY | man | 1.931 | 23.733 | 522.129 | 0.403 |
-| XML_PRETTY | opt | 1.913 | 23.957 | 487.645 | 0.420 |
-| YAML | man | 1.661 | 18.437 | 405.613 | 0.507 |
-| YAML | opt | 1.646 | 18.686 | 380.355 | 0.547 |
+| CSV | man | 1.438 | 10.296 | 226.516 | 0.931 |
+| CSV | opt | 1.423 | 10.662 | 217.032 | 0.931 |
+| JSON_COMPACT | man | 2.143 | 13.630 | 299.871 | 0.813 |
+| JSON_COMPACT | opt | 2.108 | 13.895 | 282.839 | 0.844 |
+| JSON_PRETTY | man | 1.691 | 20.984 | 461.645 | 0.565 |
+| JSON_PRETTY | opt | 1.677 | 21.228 | 432.097 | 0.578 |
+| TOON_DEFAULT | man | 1.393 | 10.701 | 235.419 | 1.018 |
+| TOON_DEFAULT | opt | 1.694 | 18.368 | 373.871 | 0.638 |
+| XML_COMPACT | man | 2.315 | 17.522 | 385.484 | 0.599 |
+| XML_COMPACT | opt | 2.288 | 17.719 | 360.677 | 0.683 |
+| XML_PRETTY | man | 1.931 | 23.733 | 522.129 | 0.465 |
+| XML_PRETTY | opt | 1.913 | 23.957 | 487.645 | 0.499 |
+| YAML | man | 1.661 | 18.437 | 405.613 | 0.589 |
+| YAML | opt | 1.646 | 18.686 | 380.355 | 0.665 |
 
 #### 2.5.2 Mandatory vs Optional
 | Format | Char/Token Man | Char/Token Opt | Diff | Diff (%) | Token/Value Man | Token/Value Opt | Diff | Diff (%) | Token/Object Man | Token/Object Opt | Diff | Diff (%) | Info/Token Man | Info/Token Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| CSV | 1.438 | 1.423 | -0.015 | -1.04 | 10.296 | 10.662 |  +0.366 |  +3.55 | 226.516 | 217.032 | -9.484 | -4.19 | 0.846 | 0.791 | -0.055 | -6.50 |
-| JSON_COMPACT | 2.143 | 2.108 | -0.035 | -1.63 | 13.630 | 13.895 |  +0.265 |  +1.94 | 299.871 | 282.839 | -17.032 | -5.68 | 0.699 | 0.702 |  +0.003 |  +0.43 |
-| JSON_PRETTY | 1.691 | 1.677 | -0.014 | -0.83 | 20.984 | 21.228 |  +0.244 |  +1.16 | 461.645 | 432.097 | -29.548 | -6.40 | 0.491 | 0.479 | -0.012 | -2.44 |
-| TOON_DEFAULT | 1.393 | 1.694 |  +0.301 |  +21.61 | 10.701 | 18.368 |  +7.667 |  +71.65 | 235.419 | 373.871 |  +138.452 |  +58.81 | 0.888 | 0.535 | -0.353 | -39.75 |
-| XML_COMPACT | 2.315 | 2.288 | -0.027 | -1.17 | 17.522 | 17.719 |  +0.197 |  +1.12 | 385.484 | 360.677 | -24.807 | -6.44 | 0.529 | 0.566 |  +0.037 |  +6.99 |
-| XML_PRETTY | 1.931 | 1.913 | -0.018 | -0.93 | 23.733 | 23.957 |  +0.224 |  +0.94 | 522.129 | 487.645 | -34.484 | -6.60 | 0.403 | 0.420 |  +0.017 |  +4.22 |
-| YAML | 1.661 | 1.646 | -0.015 | -0.90 | 18.437 | 18.686 |  +0.249 |  +1.35 | 405.613 | 380.355 | -25.258 | -6.23 | 0.507 | 0.547 |  +0.040 |  +7.89 |
+| CSV | 1.438 | 1.423 | -0.015 | -1.04 | 10.296 | 10.662 |  +0.366 |  +3.55 | 226.516 | 217.032 | -9.484 | -4.19 | 0.931 | 0.931 | 0.000 | 0.00 |
+| JSON_COMPACT | 2.143 | 2.108 | -0.035 | -1.63 | 13.630 | 13.895 |  +0.265 |  +1.94 | 299.871 | 282.839 | -17.032 | -5.68 | 0.813 | 0.844 |  +0.031 |  +3.81 |
+| JSON_PRETTY | 1.691 | 1.677 | -0.014 | -0.83 | 20.984 | 21.228 |  +0.244 |  +1.16 | 461.645 | 432.097 | -29.548 | -6.40 | 0.565 | 0.578 |  +0.013 |  +2.30 |
+| TOON_DEFAULT | 1.393 | 1.694 |  +0.301 |  +21.61 | 10.701 | 18.368 |  +7.667 |  +71.65 | 235.419 | 373.871 |  +138.452 |  +58.81 | 1.018 | 0.638 | -0.380 | -37.30 |
+| XML_COMPACT | 2.315 | 2.288 | -0.027 | -1.17 | 17.522 | 17.719 |  +0.197 |  +1.12 | 385.484 | 360.677 | -24.807 | -6.44 | 0.599 | 0.683 |  +0.084 |  +14.02 |
+| XML_PRETTY | 1.931 | 1.913 | -0.018 | -0.93 | 23.733 | 23.957 |  +0.224 |  +0.94 | 522.129 | 487.645 | -34.484 | -6.60 | 0.465 | 0.499 |  +0.034 |  +7.31 |
+| YAML | 1.661 | 1.646 | -0.015 | -0.90 | 18.437 | 18.686 |  +0.249 |  +1.35 | 405.613 | 380.355 | -25.258 | -6.23 | 0.589 | 0.665 |  +0.076 |  +12.90 |
 
 ### 2.6 Token Utilization Efficiency
 #### 2.6.1 Metrics
 | Format | Variant | Total Tokens | Useful Tokens | Wasted Tokens | Accuracy (%) | Wtd Accuracy (%) | Eff Score | Wtd Eff Score |
 |---|---|---|---|---|---|---|---|---|
-| CSV | man | 7263 | 4463 | 2800 | 61.45 | 62.19 | 72.25 | 72.77 |
-| CSV | opt | 7032 | 3913 | 3119 | 55.65 | 57.17 | 68.92 | 69.99 |
-| JSON_COMPACT | man | 9600 | 6445 | 3155 | 67.14 | 68.50 | 68.84 | 69.79 |
-| JSON_COMPACT | opt | 9073 | 5780 | 3293 | 63.71 | 64.44 | 68.11 | 68.62 |
-| JSON_PRETTY | man | 14613 | 10488 | 4125 | 71.77 | 72.99 | 56.21 | 57.07 |
-| JSON_PRETTY | opt | 13626 | 8901 | 4725 | 65.32 | 66.84 | 54.82 | 55.88 |
-| TOON_DEFAULT | man | 7556 | 5070 | 2485 | 67.11 | 68.37 | 75.29 | 76.17 |
-| TOON_DEFAULT | opt | 11899 | 7570 | 4329 | 63.62 | 64.81 | 59.10 | 59.93 |
-| XML_COMPACT | man | 12253 | 7939 | 4314 | 64.79 | 64.76 | 58.80 | 58.78 |
-| XML_COMPACT | opt | 11490 | 7474 | 4016 | 65.05 | 67.06 | 61.39 | 62.80 |
-| XML_PRETTY | man | 16490 | 10950 | 5541 | 66.40 | 66.97 | 46.51 | 46.91 |
-| XML_PRETTY | opt | 15419 | 9990 | 5429 | 64.79 | 66.28 | 48.77 | 49.82 |
-| YAML | man | 12876 | 8410 | 4465 | 65.32 | 65.26 | 57.20 | 57.15 |
-| YAML | opt | 12095 | 7998 | 4097 | 66.13 | 67.80 | 60.23 | 61.40 |
+| CSV | man | 7263 | 4908 | 2355 | 67.58 | 67.37 | 76.54 | 76.40 |
+| CSV | opt | 7032 | 4604 | 2427 | 65.48 | 65.49 | 75.80 | 75.81 |
+| JSON_COMPACT | man | 9600 | 7491 | 2109 | 78.03 | 77.71 | 76.46 | 76.24 |
+| JSON_COMPACT | opt | 9073 | 6951 | 2122 | 76.61 | 75.34 | 77.14 | 76.25 |
+| JSON_PRETTY | man | 14613 | 12060 | 2553 | 82.53 | 82.08 | 63.74 | 63.43 |
+| JSON_PRETTY | opt | 13626 | 10725 | 2901 | 78.71 | 78.15 | 64.19 | 63.80 |
+| TOON_DEFAULT | man | 7556 | 5809 | 1747 | 76.88 | 76.63 | 82.13 | 81.95 |
+| TOON_DEFAULT | opt | 11899 | 9031 | 2868 | 75.90 | 75.19 | 67.69 | 67.20 |
+| XML_COMPACT | man | 12253 | 8992 | 3260 | 73.39 | 72.03 | 64.82 | 63.87 |
+| XML_COMPACT | opt | 11490 | 9020 | 2470 | 78.50 | 78.42 | 70.81 | 70.75 |
+| XML_PRETTY | man | 16490 | 12633 | 3857 | 76.61 | 75.61 | 53.66 | 52.96 |
+| XML_PRETTY | opt | 15419 | 11854 | 3565 | 76.88 | 76.51 | 57.24 | 56.98 |
+| YAML | man | 12876 | 9761 | 3115 | 75.81 | 74.13 | 64.54 | 63.36 |
+| YAML | opt | 12095 | 9722 | 2373 | 80.38 | 79.84 | 70.21 | 69.83 |
 
 #### 2.6.2 Mandatory vs Optional Data
 | Format | Total Tokens Man | Total Tokens Opt | Diff | Diff (%) | Useful Tokens Man | Useful Tokens Opt | Diff | Diff (%) | Wasted Tokens Man | Wasted Tokens Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) | Eff Score Man | Eff Score Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| CSV | 7263 | 7032 | -231 | -3.18 | 4463 | 3913 | -550 | -12.32 | 2800 | 3119 |  +319 |  +11.39 | 61.45 | 55.65 | -5.80 | 72.25 | 68.923 | -3.33 | -4.61 |
-| JSON_COMPACT | 9600 | 9073 | -527 | -5.49 | 6445 | 5780 | -665 | -10.32 | 3155 | 3293 |  +138 |  +4.37 | 67.14 | 63.71 | -3.43 | 68.84 | 68.105 | -0.73 | -1.06 |
-| JSON_PRETTY | 14613 | 13626 | -987 | -6.75 | 10488 | 8901 | -1587 | -15.13 | 4125 | 4725 |  +600 |  +14.55 | 71.77 | 65.32 | -6.45 | 56.21 | 54.821 | -1.39 | -2.48 |
-| TOON_DEFAULT | 7556 | 11900 |  +4344 |  +57.49 | 5070 | 7570 |  +2500 |  +49.30 | 2485 | 4329 |  +1844 |  +74.20 | 67.11 | 63.62 | -3.49 | 75.29 | 59.096999999999994 | -16.19 | -21.50 |
-| XML_COMPACT | 12253 | 11490 | -763 | -6.22 | 7939 | 7475 | -464 | -5.85 | 4314 | 4016 | -298 | -6.92 | 64.79 | 65.05 |  +0.26 | 58.80 | 61.393 |  +2.60 |  +4.42 |
-| XML_PRETTY | 16490 | 15419 | -1071 | -6.50 | 10950 | 9990 | -960 | -8.76 | 5541 | 5429 | -112 | -2.02 | 66.40 | 64.79 | -1.61 | 46.51 | 48.775 |  +2.26 |  +4.87 |
-| YAML | 12876 | 12095 | -781 | -6.06 | 8410 | 7998 | -412 | -4.90 | 4465 | 4096 | -369 | -8.26 | 65.32 | 66.13 |  +0.81 | 57.20 | 60.234 |  +3.04 |  +5.31 |
+| CSV | 7263 | 7032 | -231 | -3.18 | 4908 | 4604 | -304 | -6.19 | 2355 | 2428 |  +73 |  +3.09 | 67.58 | 65.48 | -2.10 | 76.54 | 75.804 | -0.74 | -0.97 |
+| JSON_COMPACT | 9600 | 9073 | -527 | -5.49 | 7491 | 6951 | -540 | -7.21 | 2109 | 2122 |  +13 |  +0.62 | 78.03 | 76.61 | -1.42 | 76.46 | 77.135 |  +0.68 |  +0.88 |
+| JSON_PRETTY | 14613 | 13626 | -987 | -6.75 | 12060 | 10725 | -1335 | -11.07 | 2553 | 2901 |  +348 |  +13.64 | 82.53 | 78.71 | -3.82 | 63.74 | 64.194 |  +0.45 |  +0.70 |
+| TOON_DEFAULT | 7556 | 11900 |  +4344 |  +57.49 | 5809 | 9032 |  +3223 |  +55.48 | 1747 | 2868 |  +1121 |  +64.16 | 76.88 | 75.90 | -0.98 | 82.13 | 67.693 | -14.43 | -17.57 |
+| XML_COMPACT | 12253 | 11490 | -763 | -6.22 | 8992 | 9019 |  +27 |  +0.30 | 3260 | 2470 | -790 | -24.24 | 73.39 | 78.50 |  +5.11 | 64.82 | 70.808 |  +5.99 |  +9.24 |
+| XML_PRETTY | 16490 | 15419 | -1071 | -6.50 | 12633 | 11854 | -779 | -6.17 | 3857 | 3565 | -292 | -7.58 | 76.61 | 76.88 |  +0.27 | 53.66 | 57.238 |  +3.58 |  +6.67 |
+| YAML | 12876 | 12095 | -781 | -6.06 | 9761 | 9722 | -39 | -0.40 | 3115 | 2373 | -742 | -23.81 | 75.81 | 80.38 |  +4.57 | 64.54 | 70.209 |  +5.67 |  +8.79 |
 
 ### 2.7 Answer Per Format Breakdown
 #### 2.7.1 Metrics
 | Format | Variant | Correct Answers | Incorrect Answers | No Answers | Accuracy (%) |
 |---|---|---|---|---|---|
-| CSV | man | 76 | 48 | 0 | 61.45 |
-| CSV | opt | 69 | 55 | 0 | 55.65 |
-| JSON_COMPACT | man | 83 | 41 | 0 | 67.14 |
-| JSON_COMPACT | opt | 79 | 45 | 0 | 63.71 |
-| JSON_PRETTY | man | 89 | 35 | 0 | 71.77 |
-| JSON_PRETTY | opt | 81 | 43 | 0 | 65.32 |
-| TOON_DEFAULT | man | 83 | 41 | 0 | 67.11 |
-| TOON_DEFAULT | opt | 79 | 45 | 0 | 63.62 |
-| XML_COMPACT | man | 80 | 44 | 0 | 64.79 |
-| XML_COMPACT | opt | 81 | 43 | 0 | 65.05 |
-| XML_PRETTY | man | 82 | 42 | 0 | 66.40 |
-| XML_PRETTY | opt | 80 | 44 | 0 | 64.79 |
-| YAML | man | 81 | 43 | 0 | 65.32 |
-| YAML | opt | 82 | 42 | 0 | 66.13 |
+| CSV | man | 84 | 40 | 0 | 67.58 |
+| CSV | opt | 81 | 43 | 0 | 65.48 |
+| JSON_COMPACT | man | 97 | 27 | 0 | 78.03 |
+| JSON_COMPACT | opt | 95 | 29 | 0 | 76.61 |
+| JSON_PRETTY | man | 102 | 22 | 0 | 82.53 |
+| JSON_PRETTY | opt | 98 | 26 | 0 | 78.71 |
+| TOON_DEFAULT | man | 95 | 29 | 0 | 76.88 |
+| TOON_DEFAULT | opt | 94 | 30 | 0 | 75.90 |
+| XML_COMPACT | man | 91 | 33 | 0 | 73.39 |
+| XML_COMPACT | opt | 97 | 27 | 0 | 78.50 |
+| XML_PRETTY | man | 95 | 29 | 0 | 76.61 |
+| XML_PRETTY | opt | 95 | 29 | 0 | 76.88 |
+| YAML | man | 94 | 30 | 0 | 75.81 |
+| YAML | opt | 100 | 24 | 0 | 80.38 |
 
 #### 2.7.2 Mandatory vs Optional Data
 | Format | Correct Man | Correct Opt | Diff | Diff (%) | Incorrect Man | Incorrect Opt | Diff | Diff (%) | No Answers Man | No Answers Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| CSV | 76 | 69 | -7 | -9.21 | 48 | 55 |  +7 |  +14.58 | 0 | 0 | 0 | 0.00 | 61.45 | 55.65 | -5.80 |
-| JSON_COMPACT | 83 | 79 | -4 | -4.82 | 41 | 45 |  +4 |  +9.76 | 0 | 0 | 0 | 0.00 | 67.14 | 63.71 | -3.43 |
-| JSON_PRETTY | 89 | 81 | -8 | -8.99 | 35 | 43 |  +8 |  +22.86 | 0 | 0 | 0 | 0.00 | 71.77 | 65.32 | -6.45 |
-| TOON_DEFAULT | 83 | 79 | -4 | -4.82 | 41 | 45 |  +4 |  +9.76 | 0 | 0 | 0 | 0.00 | 67.11 | 63.62 | -3.49 |
-| XML_COMPACT | 80 | 81 |  +1 |  +1.25 | 44 | 43 | -1 | -2.27 | 0 | 0 | 0 | 0.00 | 64.79 | 65.05 |  +0.26 |
-| XML_PRETTY | 82 | 80 | -2 | -2.44 | 42 | 44 |  +2 |  +4.76 | 0 | 0 | 0 | 0.00 | 66.40 | 64.79 | -1.61 |
-| YAML | 81 | 82 |  +1 |  +1.23 | 43 | 42 | -1 | -2.33 | 0 | 0 | 0 | 0.00 | 65.32 | 66.13 |  +0.81 |
+| CSV | 84 | 81 | -3 | -3.57 | 40 | 43 |  +3 |  +7.50 | 0 | 0 | 0 | 0.00 | 67.58 | 65.48 | -2.10 |
+| JSON_COMPACT | 97 | 95 | -2 | -2.06 | 27 | 29 |  +2 |  +7.41 | 0 | 0 | 0 | 0.00 | 78.03 | 76.61 | -1.42 |
+| JSON_PRETTY | 102 | 98 | -4 | -3.92 | 22 | 26 |  +4 |  +18.18 | 0 | 0 | 0 | 0.00 | 82.53 | 78.71 | -3.82 |
+| TOON_DEFAULT | 95 | 94 | -1 | -1.05 | 29 | 30 |  +1 |  +3.45 | 0 | 0 | 0 | 0.00 | 76.88 | 75.90 | -0.98 |
+| XML_COMPACT | 91 | 97 |  +6 |  +6.59 | 33 | 27 | -6 | -18.18 | 0 | 0 | 0 | 0.00 | 73.39 | 78.50 |  +5.11 |
+| XML_PRETTY | 95 | 95 | 0 | 0.00 | 29 | 29 | 0 | 0.00 | 0 | 0 | 0 | 0.00 | 76.61 | 76.88 |  +0.27 |
+| YAML | 94 | 100 |  +6 |  +6.38 | 30 | 24 | -6 | -20.00 | 0 | 0 | 0 | 0.00 | 75.81 | 80.38 |  +4.57 |
 
 ### 2.8 Accuracy Per Question Category Analysis
 #### 2.8.1 Metrics
 | Format | Variant | Accuracy (%) | Field Retrieval (%) | Structure Awareness (%) | Filtering (%) | Aggregation (%) |
 |---|---|---|---|---|---|---|
-| CSV | man | 61.45 | 61.82 | 66.67 | 61.90 | 53.33 |
-| CSV | opt | 55.65 | 57.09 | 62.22 | 62.86 | 36.19 |
-| JSON_COMPACT | man | 67.14 | 73.64 | 77.78 | 63.09 | 40.48 |
-| JSON_COMPACT | opt | 63.71 | 65.82 | 69.63 | 61.90 | 52.38 |
-| JSON_PRETTY | man | 71.77 | 72.73 | 83.95 | 66.67 | 58.73 |
-| JSON_PRETTY | opt | 65.32 | 66.54 | 75.56 | 66.67 | 47.62 |
-| TOON_DEFAULT | man | 67.11 | 70.31 | 79.84 | 60.32 | 49.21 |
-| TOON_DEFAULT | opt | 63.62 | 65.86 | 73.66 | 60.84 | 47.62 |
-| XML_COMPACT | man | 64.79 | 69.09 | 67.90 | 57.14 | 57.14 |
-| XML_COMPACT | opt | 65.05 | 67.27 | 81.48 | 61.90 | 41.27 |
-| XML_PRETTY | man | 66.40 | 72.73 | 70.37 | 63.49 | 47.62 |
-| XML_PRETTY | opt | 64.79 | 64.24 | 80.25 | 58.73 | 52.38 |
-| YAML | man | 65.32 | 73.34 | 64.20 | 61.90 | 49.21 |
-| YAML | opt | 66.13 | 67.27 | 74.08 | 73.02 | 46.03 |
+| CSV | man | 67.58 | 75.64 | 66.67 | 61.90 | 53.33 |
+| CSV | opt | 65.48 | 79.27 | 62.22 | 62.86 | 36.19 |
+| JSON_COMPACT | man | 78.03 | 98.18 | 77.78 | 63.09 | 40.48 |
+| JSON_COMPACT | opt | 76.61 | 94.91 | 69.63 | 61.90 | 52.38 |
+| JSON_PRETTY | man | 82.53 | 96.97 | 83.95 | 66.67 | 58.73 |
+| JSON_PRETTY | opt | 78.71 | 96.73 | 75.56 | 66.67 | 47.62 |
+| TOON_DEFAULT | man | 76.88 | 92.32 | 79.84 | 60.32 | 49.21 |
+| TOON_DEFAULT | opt | 75.90 | 93.53 | 73.66 | 60.84 | 47.62 |
+| XML_COMPACT | man | 73.39 | 88.49 | 67.90 | 57.14 | 57.14 |
+| XML_COMPACT | opt | 78.50 | 97.58 | 81.48 | 61.90 | 41.27 |
+| XML_PRETTY | man | 76.61 | 95.76 | 70.37 | 63.49 | 47.62 |
+| XML_PRETTY | opt | 76.88 | 91.51 | 80.25 | 58.73 | 52.38 |
+| YAML | man | 75.81 | 96.97 | 64.20 | 61.90 | 49.21 |
+| YAML | opt | 80.38 | 99.39 | 74.08 | 73.02 | 46.03 |
 
 #### 2.8.2 Field Retrieval: Mandatory vs Optional
 
 | Format | Mand (%) | Opt (%) | Diff (%) |
 |---|---|---|---|
-| CSV | 61.82 | 57.09 | -4.73 |
-| JSON_COMPACT | 73.64 | 65.82 | -7.82 |
-| JSON_PRETTY | 72.73 | 66.54 | -6.19 |
-| TOON_DEFAULT | 70.31 | 65.86 | -4.45 |
-| XML_COMPACT | 69.09 | 67.27 | -1.82 |
-| XML_PRETTY | 72.73 | 64.24 | -8.49 |
-| YAML | 73.34 | 67.27 | -6.07 |
+| CSV | 75.64 | 79.27 |  +3.64 |
+| JSON_COMPACT | 98.18 | 94.91 | -3.27 |
+| JSON_PRETTY | 96.97 | 96.73 | -0.24 |
+| TOON_DEFAULT | 92.32 | 93.53 |  +1.21 |
+| XML_COMPACT | 88.49 | 97.58 |  +9.09 |
+| XML_PRETTY | 95.76 | 91.51 | -4.24 |
+| YAML | 96.97 | 99.39 |  +2.42 |
 
 #### 2.8.3 Structure Awareness: Mandatory vs Optional
 
@@ -426,37 +422,33 @@ The data suggests formats with higher structural markup (JSON_PRETTY, XML_PRETTY
 
 - Token Duration Range: 81 - 87 seconds
 - Token Cost Range: 7032 - 7263 tokens
-- Wasted Token Range: 2800 - 3119 tokens
-- Accuracy Range: 55.65 - 61.45%
-- Efficiency Score Range: 68.92 - 72.25
+- Wasted Token Range: 2355 - 2427 tokens
+- Accuracy Range: 65.48 - 67.58%
+- Efficiency Score Range: 75.80 - 76.54
 
 #### 3.1.2 Strengths
 
-- Lowest token cost with 7,032–7,263 total tokens the cheapest format in both variants by a significant margin
-- Stable read overhead with 1.423–1.438 chars/token the most compact character-to-token ratio alongside TOON_DEFAULT
-- Competitive filtering accuracy holds steady at 61.90–62.86% across variants
-- Smallest mandatory–optional token delta with only −231 tokens difference (−3.18%) which means token cost is highly predictable regardless of data completeness
+- <ADD_CONTENT_HERE>List format strengths based on category and variant analysis</ADD_CONTENT_HERE>
+- 
+- 
 
 #### 3.1.3 Weaknesses
 
-- Worst overall accuracy in both mandatory (61.45%) and optional (55.65%) with the largest accuracy gap of any format at −5.80 pp
-- Aggregation drops from 53.33% (mandatory) to 36.19% (optional) which is a −17.14 pp fall and the worst single category/variant score in the benchmark
-- Poor structure awareness with 62.22–66.67% consistently the second-worst format for structure-related questions behind only YAML (mandatory)
-- Highest output token drift (mandatory) with a range from −96.26% to +25.10% around the average it has a highly unstable output token usage which suggests inconsistent reasoning paths
+- <ADD_CONTENT_HERE>List format weaknesses and failure modes</ADD_CONTENT_HERE>
+- 
+- 
 
 #### 3.1.4 Use Case Recommendation
 
-- ✓ Use when token budget is the hard constraint 
-- ✓ Use when questions are primarily filtering or simple field retrieval on dense, mandatory-only data
-- ✓ Use when data schema is fixed and complete with no optional fields expected
-- ❌ Avoid when aggregation queries are required (especially with sparse data)
-- ❌ Avoid when structure awareness or schema introspection questions are part of the task
-- ❌ Avoid when data contains optional/nullable fields that may be absent in some records
+- <ADD_CONTENT_HERE>When and why to use this format (✓ Use when, ❌ Avoid when)</ADD_CONTENT_HERE>
+- 
+- 
 
 #### 3.1.5 Trade-offs
 
-- CSV saves ~2,200–9,000 tokens compared to mid-to-high tier formats but the accuracy penalty is consistent and meaningful (up to −16 pp vs JSON_PRETTY). For applications where a wrong answer is costly the token savings do not justify the accuracy loss.
-- The mandatory variant is usable at 61.45% accuracy and 72.25 efficiency score. The optional variant degrades to a point (55.65% accuracy, 68.92 eff score) where even the token savings become questionable. This is roughly 1 in 3 tokens is informing a wrong answer when aggregation is included in the question set.
+- <ADD_CONTENT_HERE>Discuss accuracy vs token cost trade-offs specific to this format</ADD_CONTENT_HERE>
+- 
+- 
 
 ### 3.2 Detailed Analysis: JSON_COMPACT
 
@@ -464,36 +456,33 @@ The data suggests formats with higher structural markup (JSON_PRETTY, XML_PRETTY
 
 - Token Duration Range: 76 - 107 seconds
 - Token Cost Range: 9073 - 9600 tokens
-- Wasted Token Range: 3155 - 3293 tokens
-- Accuracy Range: 63.71 - 67.14%
-- Efficiency Score Range: 68.11 - 68.84
+- Wasted Token Range: 2109 - 2122 tokens
+- Accuracy Range: 76.61 - 78.03%
+- Efficiency Score Range: 76.46 - 77.14
 
 #### 3.2.2 Strengths
 
-- Best field retrieval accuracy (mandatory) with 73.64% the highest of all formats for this category on mandatory data
-- Strong structure awareness with 77.78% (mandatory) and 69.63% (optional) the second-best mandatory result after JSON_PRETTY
-- Highly stable efficiency score with 68.11–68.84 across variants the smallest efficiency score delta (−0.73) of any format
-- Moderate token cost with 9,073–9,600 tokens a reasonable middle ground between CSV and heavier formats
-- Best aggregation improvement with optional data jumps +11.90 pp in aggregation (40.48% → 52.38%) when switching to optional data which is a unique positive swing
+- <ADD_CONTENT_HERE>List format strengths based on category and variant analysis</ADD_CONTENT_HERE>
+- 
+- 
 
 #### 3.2.3 Weaknesses
 
-- Poor aggregation with mandatory data with 40.48% the second-worst aggregation score overall which suggests compact JSON struggles with numerical reasoning on dense records
-- Does not lead any optional-data category and field retrieval is only average (65.82%).
-- 32% more tokens than CSV (9,600 vs 7,263) without a proportional accuracy gain in all categories
+- <ADD_CONTENT_HERE>List format weaknesses and failure modes</ADD_CONTENT_HERE>
+- 
+- 
 
 #### 3.2.4 Use Case Recommendation
 
-- ✓ Use when field retrieval and structure queries dominate the workload on mandatory/dense data
-- ✓ Use when consistent, predictable performance across data variants is required because the stable efficiency delta makes it a safe default
-- ✓ Use when token budget allows ~9,000–9,600 tokens for a balanced accuracy/cost profile
-- ❌ Avoid when aggregation is the primary task on mandatory data (40.48% is too low)
-- ❌ Avoid when token budget is tight and accuracy requirements are also low (CSV is cheaper)
+- <ADD_CONTENT_HERE>When and why to use this format (✓ Use when, ❌ Avoid when)</ADD_CONTENT_HERE>
+- 
+- 
 
 #### 3.2.5 Trade-offs
 
-- JSON_COMPACT costs ~32% more tokens than CSV (mandatory) but delivers ~5.7 pp better accuracy (67.14% vs 61.45%). That is a reasonable trade-off for most use cases.
-- The mandatory–optional stability is its defining advantage: efficiency score drops only 0.73 points across variants compared to TOON_DEFAULT's −16.19 collapse. If data completeness is unpredictable JSON_COMPACT's consistency justifies its moderate cost premium over CSV.
+- <ADD_CONTENT_HERE>Discuss accuracy vs token cost trade-offs specific to this format</ADD_CONTENT_HERE>
+- 
+- 
 
 ### 3.3 Detailed Analysis: JSON_PRETTY
 
@@ -501,37 +490,33 @@ The data suggests formats with higher structural markup (JSON_PRETTY, XML_PRETTY
 
 - Token Duration Range: 85 - 96 seconds
 - Token Cost Range: 13626 - 14613 tokens
-- Wasted Token Range: 4125 - 4725 tokens
-- Accuracy Range: 65.32 - 71.77%
-- Efficiency Score Range: 54.82 - 56.21
+- Wasted Token Range: 2553 - 2901 tokens
+- Accuracy Range: 78.71 - 82.53%
+- Efficiency Score Range: 63.74 - 64.19
 
 #### 3.3.2 Strengths
 
-- Highest accuracy (mandatory) with 71.77% the best overall accuracy of all formats on mandatory data
-- Best structure awareness with 83.95% (mandatory) and 75.56% (optional) the highest structure awareness scores in the benchmark which suggests the whitespace and indentation significantly help the model parse hierarchical relationships
-- Consistent filtering accuracy (66.67%) in both mandatory and optional with zero driftwhich is the most stable filtering performance
-- Lowest output token drift (mandatory) with a range from −1.22% to +0.77% around the average it has the most stable output token usage of any mandatory variant
+- <ADD_CONTENT_HERE>List format strengths based on category and variant analysis</ADD_CONTENT_HERE>
+- 
+- 
 
 #### 3.3.3 Weaknesses
 
-- High token cost with 13,626–14,613 tokens the second most expensive format (~2× CSV)
-- Worst efficiency score with 54.82–56.21 the accuracy advantage does not compensate for the token overhead when balancing both
-- Significant accuracy drop with optional data with −6.45 pp accuracy (71.77% → 65.32%) the largest accuracy degradation of any format with optional data and also the highest weighted accuracy drift (−6.15 pp)
-- Poor aggregation with optional data drops from 58.73% to 47.62% (−11.11 pp) with optional data
-- Worst output token drift (optional) with a range from −97.84% to +34.20% around the average it has an extremely unstable inference behavior on sparse data which is contrary to the mandatory behavior
+- <ADD_CONTENT_HERE>List format weaknesses and failure modes</ADD_CONTENT_HERE>
+- 
+- 
 
 #### 3.3.4 Use Case Recommendation
 
-- ✓ Use when accuracy is the primary objective and token cost is secondary
-- ✓ Use when structure awareness and schema introspection are the dominant question types
-- ✓ Use when data is complete/mandatory with no optional fields because with optional data performance degrades significantly
-- ❌ Avoid when token efficiency matters because JSON_COMPACT delivers 67.14% accuracy at only 9,600 tokens vs 71.77% at 14,613 tokens
-- ❌ Avoid when data contains optional/sparse fields because the accuracy and output stability degrade sharply
+- <ADD_CONTENT_HERE>When and why to use this format (✓ Use when, ❌ Avoid when)</ADD_CONTENT_HERE>
+- 
+- 
 
 #### 3.3.5 Trade-offs
 
-- JSON_PRETTY achieves the highest accuracy (71.77%) but at a 52% token cost premium over JSON_COMPACT (14,613 vs 9,600 tokens) for only 4.6 pp more accuracy. That is a poor trade-off for most use cases.
-- Its only clear advantage is structure awareness (83.95% vs 77.78% for JSON_COMPACT). If the workload is predominantly structure/schema questions on mandatory data then the premium is justifiable. Otherwise JSON_COMPACT dominates on value per token.
+- <ADD_CONTENT_HERE>Discuss accuracy vs token cost trade-offs specific to this format</ADD_CONTENT_HERE>
+- 
+- 
 
 ### 3.4 Detailed Analysis: TOON_DEFAULT
 
@@ -539,36 +524,33 @@ The data suggests formats with higher structural markup (JSON_PRETTY, XML_PRETTY
 
 - Token Duration Range: 42 - 50 seconds
 - Token Cost Range: 7556 - 11899 tokens
-- Wasted Token Range: 2485 - 4329 tokens
-- Accuracy Range: 63.62 - 67.11%
-- Efficiency Score Range: 59.10 - 75.29
+- Wasted Token Range: 1747 - 2868 tokens
+- Accuracy Range: 75.90 - 76.88%
+- Efficiency Score Range: 67.69 - 82.13
 
 #### 3.4.2 Strengths
 
-- Highest efficiency score (mandatory) with 75.29 weighted efficiency score the best of all formats and variants on mandatory data
-- Fastest processing with ~42–50 seconds ~2× faster than most other fastest formats in the benchmark
-- Fewest wasted tokens (mandatory) with 2,485 wasted tokens the lowest wasted token count of all formats on mandatory data
-- Strong structure awareness (mandatory) with 79.84% the second best after JSON_PRETTY
-- Second lowest token cost for mandatory data with 7,556 tokens nearly as cheap as CSV while delivering better accuracy
+- <ADD_CONTENT_HERE>List format strengths based on category and variant analysis</ADD_CONTENT_HERE>
+- 
+- 
 
 #### 3.4.3 Weaknesses
 
-- The token count jumps +57.49% (7,556 → 11,899) with optional data which is by far the largest and only format with a positive mandatory-to-optional token delta while all other formats show a decrease
-- −16.19 efficiency score drop between variants (75.29 → 59.10) which is the largest delta in the benchmark
-- Worst accuracy drift (mandatory) with a range from −19.49% to +6.94% around the average the accuracy drift on mandatory is high across test runs
-- Token/value ratio explodes with optional data with a increase from 10.701 to 18.368 in tokens/value (+71.65%) the format encoding with sparse data inflats the token cost
+- <ADD_CONTENT_HERE>List format weaknesses and failure modes</ADD_CONTENT_HERE>
+- 
+- 
 
 #### 3.4.4 Use Case Recommendation
 
-- ✓ Use when data is guaranteed to be complete/dense with all mandatory fields populated because it delivers best efficiency in this scenario
-- ✓ Use when processing speed is a constraint
-- ❌ Avoid when data may contain optional or null fields because the token cost and efficiency penalty are severe and unpredictable
-- ❌ Avoid when robust, variant-stable performance is needed for production use
+- <ADD_CONTENT_HERE>When and why to use this format (✓ Use when, ❌ Avoid when)</ADD_CONTENT_HERE>
+- 
+- 
 
 #### 3.4.5 Trade-offs
 
-- TOON_DEFAULT is the high-risk, high-reward format. On mandatory data it beats every other format on efficiency by a meaningful margin (75.29 vs 72.25 for second-place CSV). On optional data it becomes one of the worst choices (59.10 eff score, 11,899 tokens).
-- The volatility makes it unsuitable as a default format unless data completeness can be guaranteed at the data pipeline level. When that guarantee exists it is the recommended choice.
+- <ADD_CONTENT_HERE>Discuss accuracy vs token cost trade-offs specific to this format</ADD_CONTENT_HERE>
+- 
+- 
 
 ### 3.5 Detailed Analysis: XML_COMPACT
 
@@ -576,36 +558,33 @@ The data suggests formats with higher structural markup (JSON_PRETTY, XML_PRETTY
 
 - Token Duration Range: 80 - 88 seconds
 - Token Cost Range: 11490 - 12253 tokens
-- Wasted Token Range: 4016 - 4314 tokens
-- Accuracy Range: 64.79 - 65.05%
-- Efficiency Score Range: 58.80 - 61.39
+- Wasted Token Range: 2470 - 3260 tokens
+- Accuracy Range: 73.39 - 78.50%
+- Efficiency Score Range: 64.82 - 70.81
 
 #### 3.5.2 Strengths
 
-- Only format with positive accuracy drift (+0.26 pp raw, +2.30 pp weighted) when switching to optional data.
-- Best structure awareness with 81.48% the highest structure awareness score of any optional variant even beating JSON_PRETTY optional (75.56%)
-- Most stable output token drift on optional data with a range from −0.32% to +0.32% around the average the smallest output token variance in the benchmark which indicats highly consistent inference behavior
-- Efficiency score improves with optional data with a +2.60 increase (58.80 → 61.39) one of only three formats to improve on this metric with optional data
+- <ADD_CONTENT_HERE>List format strengths based on category and variant analysis</ADD_CONTENT_HERE>
+- 
+- 
 
 #### 3.5.3 Weaknesses
 
-- High token cost with 11,490–12,253 tokens in the middle-to-high range (~68% more than CSV)
-- Highest chars/token ratio with 2.288–2.315 the most verbose character encoding relative to tokens which means structural overhead is proportionally high
-- Poor aggregation of 41.27% on optional data is a significant drop from mandatory (57.14%) which is the second-largest aggregation decline after CSV
-- Low efficiency score (mandatory) with 58.80 it is near the bottom for mandatory data where lighter formats outperform it
+- <ADD_CONTENT_HERE>List format weaknesses and failure modes</ADD_CONTENT_HERE>
+- 
+- 
 
 #### 3.5.4 Use Case Recommendation
 
-- ✓ Use when data has many optional/nullable fields and robustness across data completeness is critical
-- ✓ Use when structure awareness questions are frequent because it excels at schema comprehension with sparse data
-- ✓ Use when consistent, predictable inference behavior is needed (lowest output token variance)
-- ❌ Avoid when token budget is tight because it costs 63% more than CSV without proportional accuracy gains on mandatory data
-- ❌ Avoid when aggregation is the dominant task type on optional data
+- <ADD_CONTENT_HERE>When and why to use this format (✓ Use when, ❌ Avoid when)</ADD_CONTENT_HERE>
+- 
+- 
 
 #### 3.5.5 Trade-offs
 
-- XML_COMPACT costs ~67% more tokens than CSV but only delivers ~3–10 pp better accuracy depending on the variant. Its value is not in accuracy but in stability: it is the only format that does not degrade with optional data. For systems processing mixed data quality, that reliability has tangible value.
-- Compared to XML_PRETTY, XML_COMPACT delivers the same or better accuracy at ~25% fewer tokens (11,490 vs 15,419 optional). There is no scenario where XML_PRETTY is preferable to XML_COMPACT.
+- <ADD_CONTENT_HERE>Discuss accuracy vs token cost trade-offs specific to this format</ADD_CONTENT_HERE>
+- 
+- 
 
 ### 3.6 Detailed Analysis: XML_PRETTY
 
@@ -613,34 +592,33 @@ The data suggests formats with higher structural markup (JSON_PRETTY, XML_PRETTY
 
 - Token Duration Range: 74 - 86 seconds
 - Token Cost Range: 15419 - 16490 tokens
-- Wasted Token Range: 5429 - 5541 tokens
-- Accuracy Range: 64.79 - 66.40%
-- Efficiency Score Range: 46.51 - 48.77
+- Wasted Token Range: 3565 - 3857 tokens
+- Accuracy Range: 76.61 - 76.88%
+- Efficiency Score Range: 53.66 - 57.24
 
 #### 3.6.2 Strengths
 
-- Highest useful token count with 10,950 (mandatory) and 9,990 (optional) useful tokens it has the most absolute useful information delivered but it also has the highest total token cost
-- Efficiency score improves with optional data with a +2.26 increase (46.51 → 48.77) one of only three formats where optional data leads to better efficiency
-- Small accuracy delta across variants with −1.61 pp a relatively stable accuracy between mandatory and optional data
-- Competitive structure awareness with optional data with 80.25% second only to XML_COMPACT (81.48%) for optional variants
+- <ADD_CONTENT_HERE>List format strengths based on category and variant analysis</ADD_CONTENT_HERE>
+- 
+- 
 
 #### 3.6.3 Weaknesses
 
-- Highest token cost with 15,419–16,490 tokens the most expensive format (2.3× more than CSV and ~35% more than XML_COMPACT)
-- Most wasted tokens with 5,429–5,541 the highest absolute wasted token count in the benchmark
-- Worst efficiency score with 46.51–48.77 the bottom of the ranking in both variants
-- Despite costing ~34% more tokens XML_PRETTY delivers the same or worse accuracy than XML_COMPACT across all categories and the whitespace formatting provides no measurable benefit
-- Poor aggregation with 47.62–52.38% in the mid-to-low range
+- <ADD_CONTENT_HERE>List format weaknesses and failure modes</ADD_CONTENT_HERE>
+- 
+- 
 
 #### 3.6.4 Use Case Recommendation
 
-- ❌ Avoid when token budget is any consideration at all
-- ❌ Avoid when you are choosing between XML formats because XML_COMPACT strictly dominates XML_PRETTY in this benchmark
+- <ADD_CONTENT_HERE>When and why to use this format (✓ Use when, ❌ Avoid when)</ADD_CONTENT_HERE>
+- 
+- 
 
 #### 3.6.5 Trade-offs
 
-- XML_PRETTY spends ~35% more tokens than XML_COMPACT (optional: 15,419 vs 11,490) for either the same or worse accuracy. The only metric where it "leads" is total useful tokens which is an artifact of its high total token count and not efficiency.
-- The whitespace added by pretty-printing does not help Claude Haiku 4.5 parse XML better. If anything the padding dilutes signal density. XML_COMPACT should always be preferred over XML_PRETTY unless the format is externally mandated.
+- <ADD_CONTENT_HERE>Discuss accuracy vs token cost trade-offs specific to this format</ADD_CONTENT_HERE>
+- 
+- 
 
 ### 3.7 Detailed Analysis: YAML
 
@@ -648,43 +626,40 @@ The data suggests formats with higher structural markup (JSON_PRETTY, XML_PRETTY
 
 - Token Duration Range: 76 - 104 seconds
 - Token Cost Range: 12095 - 12876 tokens
-- Wasted Token Range: 4097 - 4465 tokens
-- Accuracy Range: 65.32 - 66.13%
-- Efficiency Score Range: 57.20 - 60.23
+- Wasted Token Range: 2373 - 3115 tokens
+- Accuracy Range: 75.81 - 80.38%
+- Efficiency Score Range: 64.54 - 70.21
 
 #### 3.7.2 Strengths
 
-- Best filtering accuracy with optional data with 73.02% the highest filtering score of any format/variant combination (11.12 pp improvement over mandatory)
-- Accuracy improves with optional data and with a +0.81 increase (65.32% → 66.13%) one of only three formats to improve overall
-- Efficiency score improves with optional data and with a +3.04 increase (57.20 → 60.23) the largest positive efficiency shift among formats that improve with optional data
-- Relatively even scores across field retrieval (67.27%), structure awareness (74.08%) and filtering (73.02%) on optional data
+- <ADD_CONTENT_HERE>List format strengths based on category and variant analysis</ADD_CONTENT_HERE>
+- 
+- 
 
 #### 3.7.3 Weaknesses
 
-- High token cost with 12,095–12,876 tokens in the mid-to-high range (~69–77% more than CSV)
-- The 65.32% accuracy and 57.20 efficiency score (mandatory) are unremarkable and outperformed by TOON_DEFAULT, CSV and JSON_COMPACT on efficiency
-- With 64.20% the worst structure awareness score of any mandatory variant including CSV (66.67%)
-- Optional YAML takes 104 seconds vs 76 seconds mandatory (+37%) which is the largest output timing variance of any format
+- <ADD_CONTENT_HERE>List format weaknesses and failure modes</ADD_CONTENT_HERE>
+- 
+- 
 
 #### 3.7.4 Use Case Recommendation
 
-- ✓ Use when data contains optional/sparse fields and filtering accuracy is the primary concern
-- ✓ Use when a balanced general-purpose format is needed for optional-heavy datasets where no single category dominates and token cost is secondary
-- ❌ Avoid when structure awareness on mandatory data is critical
-- ❌ Avoid when reliability in processing time matters
-- ❌ Avoid when aggregation tasks dominate because the performance is average at best (46–49%)
+- <ADD_CONTENT_HERE>When and why to use this format (✓ Use when, ❌ Avoid when)</ADD_CONTENT_HERE>
+- 
+- 
 
 #### 3.7.5 Trade-offs
 
-- YAML is the most context-dependent format in the benchmark. On mandatory data it is unremarkable (65.32% accuracy, 57.20 eff score) but on optional data it becomes one of the top performers for filtering-heavy workloads (73.02% filtering, 66.13% overall, 60.23 eff score).
-- Compared to XML_COMPACT on optional data: YAML is slightly cheaper (12,095 vs 11,490 tokens) with better filtering (73.02% vs 61.90%) but worse structure awareness (74.08% vs 81.48%). The choice between them depends on whether filtering or structural queries dominate the workload.
+- <ADD_CONTENT_HERE>Discuss accuracy vs token cost trade-offs specific to this format</ADD_CONTENT_HERE>
+- 
+- 
 
 ## 4. Appendices
 
 ### 4.1 Appendix A: Test Infrastructure
-- **Test Date**: 2026-03-17
+- **Test Date**: 2026-03-22
 - **Model**: Claude Haiku 4.5 (claude-haiku-4-5-20251001)
-- **Extended Thinking**: off
+- **Thinking**: off
 - **Structure**: flat
 - **Formats Tested**: CSV, JSON_COMPACT, JSON_PRETTY, TOON_DEFAULT, XML_COMPACT, XML_PRETTY, YAML
 - **Record Counts**: 31
@@ -698,14 +673,15 @@ The data suggests formats with higher structural markup (JSON_PRETTY, XML_PRETTY
 
 ---
 
-- **Report Generated**: 2026-03-17
+- **Report Generated**: 2026-03-22
 - **Written by**: [Thore Höltig](https://github.com/thoeltig)
 - **With the help of**: Claude Sonnet 4.6
 - **Data Source**: `analytics_results.json`
 - **Publication**: Open source research in [GitHub repository](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results)
-- **Related Benchmark Results**: 
-   - [Report - flat structure & thinking on](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/tree/feature/benchmark_haiku_4_5_flat_all_formats_and_variants_off/benchmark_haiku_4_5/results_flat_all_formats_and_variants_on/BENCHMARK_REPORT.md)
-   - [Report - nested structure & thinking on](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/tree/feature/benchmark_haiku_4_5_flat_all_formats_and_variants_off/benchmark_haiku_4_5/results_nested_all_formats_and_variants_on/BENCHMARK_REPORT.md)
-   - [Report - nested structure & thinking off](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/tree/feature/benchmark_haiku_4_5_flat_all_formats_and_variants_off/benchmark_haiku_4_5/results_nested_all_formats_and_variants_off/BENCHMARK_REPORT.md)
+- **Related Benchmark Results**:
+   - [Report - flat structure & thinking off](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results)
+   - [Report - flat structure & thinking on](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results)
+   - [Report - nested structure & thinking off](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results)
+   - [Report - nested structure & thinking on](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results)
 - **Format Specifics**: [README](https://github.com/thoeltig/file-format-token-accuracy-benchmark#format-specifics)
 - **Benchmark Tool**: Claude Code Plugin in [GitHub repository](https://github.com/thoeltig/file-format-token-accuracy-benchmark)
