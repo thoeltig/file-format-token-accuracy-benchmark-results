@@ -297,7 +297,7 @@
             "expectedAnswer": {
                 "value": [
                     "Furniture",
-                    "",
+                    "false",
                     "54",
                     "Industrial Solutions Inc",
                     "70x98x81cm"
@@ -344,7 +344,7 @@
                 "value": [
                     "2540",
                     "301.25",
-                    ""
+                    "false"
                 ],
                 "validationMethod": "array_set"
             },
@@ -403,7 +403,7 @@
             "expectedAnswer": {
                 "value": [
                     "5351",
-                    ""
+                    "false"
                 ],
                 "validationMethod": "array_set"
             },
@@ -531,7 +531,7 @@
                     "2025-09-11",
                     "4.9",
                     "Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.",
-                    "",
+                    "false",
                     "2025-12-09",
                     "1567.97"
                 ],
@@ -555,7 +555,7 @@
             "expectedAnswer": {
                 "value": [
                     "OFF-000022",
-                    "",
+                    "false",
                     "2025-12-09",
                     "C-50-24",
                     "Standard Drill 2248",
@@ -581,7 +581,7 @@
             "expectedAnswer": {
                 "value": [
                     "90x88x73cm",
-                    "",
+                    "false",
                     "MFR-687299",
                     "437",
                     "2025-12-27",
@@ -656,7 +656,7 @@
             "question": "What are the hazardous, stock quantity, weight, supplier name, sku, supplier location of product PROD-000013?",
             "expectedAnswer": {
                 "value": [
-                    "",
+                    "false",
                     "5635",
                     "452.9",
                     "Tech Components Group",
@@ -682,7 +682,7 @@
             "question": "What are the hazardous, supplier location, fragile, units shipped, dimensions, reorder point of product PROD-000025?",
             "expectedAnswer": {
                 "value": [
-                    "",
+                    "false",
                     "Hong Kong",
                     "true",
                     "12246",
@@ -846,7 +846,7 @@
                 "value": [
                     "Reliable Vendors LLC",
                     "2025-11-14",
-                    "",
+                    "false",
                     "true",
                     "MFR-933861",
                     "10788",
@@ -938,7 +938,7 @@
                     "196.58",
                     "6681",
                     "Hamburg (Germany)",
-                    ""
+                    "false"
                 ],
                 "validationMethod": "array_set"
             },
@@ -1061,7 +1061,7 @@
                     "508",
                     "Singapore",
                     "MFR-260320",
-                    "",
+                    "false",
                     "2025-09-26",
                     "CHE-000016",
                     "3549",
@@ -1128,7 +1128,7 @@
                     "4.3",
                     "Premier Parts Ltd",
                     "65",
-                    ""
+                    "false"
                 ],
                 "validationMethod": "array_set"
             },
@@ -1159,7 +1159,7 @@
                     "71147",
                     "2025-12-23",
                     "Furniture",
-                    ""
+                    "false"
                 ],
                 "validationMethod": "array_set"
             },
@@ -1193,7 +1193,7 @@
                     "Industrial Equipment",
                     "MFR-234382",
                     "56680",
-                    ""
+                    "false"
                 ],
                 "validationMethod": "array_set"
             },
