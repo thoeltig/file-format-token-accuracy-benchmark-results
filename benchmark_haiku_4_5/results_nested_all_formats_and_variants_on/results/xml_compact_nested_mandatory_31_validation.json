@@ -6,30 +6,30 @@
     "testRuns": 3,
     "totalQuestions": 124,
     "accuracy": {
-        "correct": 82.67,
-        "incorrect": 41.33,
-        "accuracyPercent": 66.67,
-        "accuracyDriftPercMin": -8.07,
-        "accuracyDriftPercMax": 13.71,
-        "weightedAccuracyPercent": 67,
-        "weightedAccuracyDriftPercMin": -8.42,
-        "weightedAccuracyDriftPercMax": 15.79
+        "correct": 92.33,
+        "incorrect": 31.67,
+        "accuracyPercent": 74.46,
+        "accuracyDriftPercMin": -10.1,
+        "accuracyDriftPercMax": 16.98,
+        "weightedAccuracyPercent": 73.59,
+        "weightedAccuracyDriftPercMin": -10.14,
+        "weightedAccuracyDriftPercMax": 18.4
     },
     "perRunAccuracy": [
         {
             "run": 1,
-            "correct": 76,
-            "incorrect": 48,
-            "accuracyPercent": 61.29,
-            "weightedAccuracyPercent": 61.36,
+            "correct": 83,
+            "incorrect": 41,
+            "accuracyPercent": 66.94,
+            "weightedAccuracyPercent": 66.13,
             "accuracyPerCategory": [
                 {
                     "category": "field_retrieval",
-                    "correct": 38,
-                    "incorrect": 17,
+                    "correct": 45,
+                    "incorrect": 10,
                     "unanswered": 0,
-                    "accuracyPercent": 69.09,
-                    "weightedAccuracyPercent": 25.91
+                    "accuracyPercent": 81.82,
+                    "weightedAccuracyPercent": 30.68
                 },
                 {
                     "category": "filtering",
@@ -59,18 +59,18 @@
         },
         {
             "run": 2,
-            "correct": 78,
-            "incorrect": 46,
-            "accuracyPercent": 62.9,
-            "weightedAccuracyPercent": 62.07000000000001,
+            "correct": 86,
+            "incorrect": 38,
+            "accuracyPercent": 69.35,
+            "weightedAccuracyPercent": 67.52,
             "accuracyPerCategory": [
                 {
                     "category": "field_retrieval",
-                    "correct": 37,
-                    "incorrect": 18,
+                    "correct": 45,
+                    "incorrect": 10,
                     "unanswered": 0,
-                    "accuracyPercent": 67.27,
-                    "weightedAccuracyPercent": 25.23
+                    "accuracyPercent": 81.82,
+                    "weightedAccuracyPercent": 30.68
                 },
                 {
                     "category": "filtering",
@@ -100,18 +100,18 @@
         },
         {
             "run": 3,
-            "correct": 94,
-            "incorrect": 30,
-            "accuracyPercent": 75.81,
-            "weightedAccuracyPercent": 77.58,
+            "correct": 108,
+            "incorrect": 16,
+            "accuracyPercent": 87.1,
+            "weightedAccuracyPercent": 87.13000000000001,
             "accuracyPerCategory": [
                 {
                     "category": "field_retrieval",
-                    "correct": 41,
-                    "incorrect": 14,
+                    "correct": 55,
+                    "incorrect": 0,
                     "unanswered": 0,
-                    "accuracyPercent": 74.55,
-                    "weightedAccuracyPercent": 27.95
+                    "accuracyPercent": 100,
+                    "weightedAccuracyPercent": 37.5
                 },
                 {
                     "category": "filtering",
@@ -547,7 +547,7 @@
             "question": "What are the category, hazardous, reorder point, supplier name, dimensions of product PROD-000030?",
             "expectedAnswer": [
                 "Furniture",
-                "",
+                "false",
                 "54",
                 "Industrial Solutions Inc",
                 "70x98x81cm"
@@ -555,15 +555,15 @@
             "answers": [
                 {
                     "givenAnswer": "Furniture,false,54,Industrial Solutions Inc,70x98x81cm",
-                    "correct": false
+                    "correct": true
                 },
                 {
                     "givenAnswer": "Furniture,false,54,Industrial Solutions Inc,70x98x81cm",
-                    "correct": false
+                    "correct": true
                 },
                 {
                     "givenAnswer": "Furniture,false,54,Industrial Solutions Inc,70x98x81cm",
-                    "correct": false
+                    "correct": true
                 }
             ]
         },
@@ -599,20 +599,20 @@
             "expectedAnswer": [
                 "2540",
                 "301.25",
-                ""
+                "false"
             ],
             "answers": [
                 {
                     "givenAnswer": "2540,301.25,false",
-                    "correct": false
+                    "correct": true
                 },
                 {
                     "givenAnswer": "2540,301.25,false",
-                    "correct": false
+                    "correct": true
                 },
                 {
                     "givenAnswer": "2540,301.25,false",
-                    "correct": false
+                    "correct": true
                 }
             ]
         },
@@ -670,7 +670,7 @@
             "question": "What are the stock quantity, hazardous of product PROD-000008?",
             "expectedAnswer": [
                 "5351",
-                ""
+                "false"
             ],
             "answers": [
                 {
@@ -683,7 +683,7 @@
                 },
                 {
                     "givenAnswer": "5351,false",
-                    "correct": false
+                    "correct": true
                 }
             ]
         },
@@ -819,22 +819,22 @@
                 "2025-09-11",
                 "4.9",
                 "Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.",
-                "",
+                "false",
                 "2025-12-09",
                 "1567.97"
             ],
             "answers": [
                 {
                     "givenAnswer": "2025-09-11,4.9,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,false,2025-12-09,1567.97",
-                    "correct": false
+                    "correct": true
                 },
                 {
                     "givenAnswer": "2025-09-11,4.9,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,false,2025-12-09,1567.97",
-                    "correct": false
+                    "correct": true
                 },
                 {
                     "givenAnswer": "2025-09-11,4.9,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,false,2025-12-09,1567.97",
-                    "correct": false
+                    "correct": true
                 }
             ]
         },
@@ -844,7 +844,7 @@
             "question": "What are the sku, hazardous, last restocked, warehouse location, product name, shelf life of product PROD-000023?",
             "expectedAnswer": [
                 "OFF-000022",
-                "",
+                "false",
                 "2025-12-09",
                 "C-50-24",
                 "Standard Drill 2248",
@@ -861,7 +861,7 @@
                 },
                 {
                     "givenAnswer": "OFF-000022,false,2025-12-09,C-50-24,Standard Drill 2248,2662",
-                    "correct": false
+                    "correct": true
                 }
             ]
         },
@@ -871,7 +871,7 @@
             "question": "What are the dimensions, fragile, manufacturer code, reorder point, last restocked, price of product PROD-000016?",
             "expectedAnswer": [
                 "90x88x73cm",
-                "",
+                "false",
                 "MFR-687299",
                 "437",
                 "2025-12-27",
@@ -880,15 +880,15 @@
             "answers": [
                 {
                     "givenAnswer": "90x88x73cm,false,MFR-687299,437,2025-12-27,4668.34",
-                    "correct": false
+                    "correct": true
                 },
                 {
                     "givenAnswer": "90x88x73cm,false,MFR-687299,437,2025-12-27,4668.34",
-                    "correct": false
+                    "correct": true
                 },
                 {
                     "givenAnswer": "90x88x73cm,false,MFR-687299,437,2025-12-27,4668.34",
-                    "correct": false
+                    "correct": true
                 }
             ]
         },
@@ -950,7 +950,7 @@
             "category": "field_retrieval",
             "question": "What are the hazardous, stock quantity, weight, supplier name, sku, supplier location of product PROD-000013?",
             "expectedAnswer": [
-                "",
+                "false",
                 "5635",
                 "452.9",
                 "Tech Components Group",
@@ -960,15 +960,15 @@
             "answers": [
                 {
                     "givenAnswer": "false,5635,452.9,Tech Components Group,PAC-000012,Shanghai (China)",
-                    "correct": false
+                    "correct": true
                 },
                 {
                     "givenAnswer": "false,5635,452.9,Tech Components Group,PAC-000012,Shanghai (China)",
-                    "correct": false
+                    "correct": true
                 },
                 {
                     "givenAnswer": "false,5635,452.9,Tech Components Group,PAC-000012,Shanghai (China)",
-                    "correct": false
+                    "correct": true
                 }
             ]
         },
@@ -977,7 +977,7 @@
             "category": "field_retrieval",
             "question": "What are the hazardous, supplier location, fragile, units shipped, dimensions, reorder point of product PROD-000025?",
             "expectedAnswer": [
-                "",
+                "false",
                 "Hong Kong",
                 "true",
                 "12246",
@@ -991,11 +991,11 @@
                 },
                 {
                     "givenAnswer": "false,Hong Kong,true,12246,134x169x142cm,271",
-                    "correct": false
+                    "correct": true
                 },
                 {
                     "givenAnswer": "false,Hong Kong,true,12246,134x169x142cm,271",
-                    "correct": false
+                    "correct": true
                 }
             ]
         },
@@ -1146,7 +1146,7 @@
             "expectedAnswer": [
                 "Reliable Vendors LLC",
                 "2025-11-14",
-                "",
+                "false",
                 "true",
                 "MFR-933861",
                 "10788",
@@ -1160,15 +1160,15 @@
             "answers": [
                 {
                     "givenAnswer": "Reliable Vendors LLC,2025-11-14,false,true,MFR-933861,10788,264,MFR-687299,437,90x88x73cm,Dubai (UAE),51.33",
-                    "correct": false
+                    "correct": true
                 },
                 {
                     "givenAnswer": "Reliable Vendors LLC,2025-11-14,false,true,MFR-933861,10788,264,MFR-687299,437,90x88x73cm,Dubai (UAE),51.33",
-                    "correct": false
+                    "correct": true
                 },
                 {
                     "givenAnswer": "Reliable Vendors LLC,2025-11-14,false,true,MFR-933861,10788,264,MFR-687299,437,90x88x73cm,Dubai (UAE),51.33",
-                    "correct": false
+                    "correct": true
                 }
             ]
         },
@@ -1237,7 +1237,7 @@
                 "196.58",
                 "6681",
                 "Hamburg (Germany)",
-                ""
+                "false"
             ],
             "answers": [
                 {
@@ -1246,11 +1246,11 @@
                 },
                 {
                     "givenAnswer": "Tech Components Group,CHE-000014,196.58,6681,Hamburg (Germany),false",
-                    "correct": false
+                    "correct": true
                 },
                 {
                     "givenAnswer": "Tech Components Group,CHE-000014,196.58,6681,Hamburg (Germany),false",
-                    "correct": false
+                    "correct": true
                 }
             ]
         },
@@ -1354,7 +1354,7 @@
                 "508",
                 "Singapore",
                 "MFR-260320",
-                "",
+                "false",
                 "2025-09-26",
                 "CHE-000016",
                 "3549",
@@ -1373,7 +1373,7 @@
                 },
                 {
                     "givenAnswer": "508,Singapore,MFR-260320,false,2025-09-26,CHE-000016,3549,Deluxe Compressor 2613,2.5,true",
-                    "correct": false
+                    "correct": true
                 }
             ]
         },
@@ -1419,12 +1419,12 @@
                 "4.3",
                 "Premier Parts Ltd",
                 "65",
-                ""
+                "false"
             ],
             "answers": [
                 {
                     "givenAnswer": "2026-01-05,Trade Partners Ltd,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,35x149x168cm,2025-12-23,4.3,Premier Parts Ltd,65,false",
-                    "correct": false
+                    "correct": true
                 },
                 {
                     "givenAnswer": "35x149x168cm,304,true,Deluxe Valve 988,3212.34,2025-12-23,5,Premier Parts Ltd,65,4.3",
@@ -1432,7 +1432,7 @@
                 },
                 {
                     "givenAnswer": "2026-01-05,Trade Partners Ltd,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,35x149x168cm,2025-12-23,4.3,Premier Parts Ltd,65,false",
-                    "correct": false
+                    "correct": true
                 }
             ]
         },
@@ -1450,7 +1450,7 @@
                 "71147",
                 "2025-12-23",
                 "Furniture",
-                ""
+                "false"
             ],
             "answers": [
                 {
@@ -1463,7 +1463,7 @@
                 },
                 {
                     "givenAnswer": "70x98x81cm,54,true,Compact Controller 2751,982.44,158x127x114cm,71147,2025-12-23,Furniture,false",
-                    "correct": false
+                    "correct": true
                 }
             ]
         },
@@ -1482,7 +1482,7 @@
                 "Industrial Equipment",
                 "MFR-234382",
                 "56680",
-                ""
+                "false"
             ],
             "answers": [
                 {
@@ -1495,7 +1495,7 @@
                 },
                 {
                     "givenAnswer": "452.9,144,2026-01-03,19607,Material Distributors AB,2025-09-11,4.9,Industrial Equipment,MFR-234382,56680,false",
-                    "correct": false
+                    "correct": true
                 }
             ]
         },
