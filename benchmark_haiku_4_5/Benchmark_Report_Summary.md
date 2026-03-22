@@ -166,11 +166,41 @@ This requires measuring:
 
 ### 3.1 Cross-Configuration Findings
 
-<ADD_FINDINGS_HERE>
+**Format efficiency leadership is structure-dependent, not universal.**
+TOON_DEFAULT and JSON_COMPACT do not compete in the same tier across data topologies. TOON_DEFAULT achieves the highest weighted efficiency score in every flat configuration, ranging from 82 to 83 for mandatory data and 76 to 80 for optional data. JSON_COMPACT holds that position in all four nested configurations, scoring between 80 and 85 across mandatory and optional variants with both thinking modes. No single format leads across both structures, which means the data topology must be resolved before selecting a format.
+
+**TOON_DEFAULT degrades significantly on sparse (optional) flat data.**
+For flat mandatory data TOON_DEFAULT requires approximately 7.3K read tokens. When the variant shifts to optional fields the read token count rises to approximately 11.6K, a 59% increase. Over the same transition JSON_COMPACT moves from approximately 9.3K to 9.1K, a negligible change. The weighted efficiency score of TOON_DEFAULT drops from 82 to 84 (mandatory) down to 67 to 70 (optional), while JSON_COMPACT holds in the 76 to 80 range. This behavior implies that TOON_DEFAULT encodes absent optional fields with non-trivial token overhead, and the deployment assumption of dense mandatory schemas should be validated before choosing it.
+
+**XML_PRETTY delivers the worst value proposition in every configuration.**
+XML_PRETTY produces the highest or second-highest total token counts and ranks last or second-to-last in weighted efficiency score across all four configurations. Nested mandatory XML_PRETTY consumes 20.1K to 20.5K read tokens compared to 10.2K to 10.7K for JSON_COMPACT, without delivering compensating accuracy gains. The weighted efficiency score for XML_PRETTY in nested configurations falls to 48 to 52, a gap of 28 to 33 points below JSON_COMPACT. The verbose indentation and repeated tag names add structural overhead that does not translate into measurable comprehension benefit.
+
+**JSON_PRETTY achieves peak raw accuracy in flat structures but pays a severe token penalty.**
+JSON_PRETTY scores 82.5% to 82.8% accuracy in flat configurations, the highest of any format in that structure. However, the total token count of approximately 14.6K for flat mandatory is 97% higher than TOON_DEFAULT and 52% higher than JSON_COMPACT. In nested structures the accuracy drops to 72% to 77% while the high token count persists, which drives the weighted efficiency score into the 59 to 63 range. JSON_PRETTY is the correct choice only when raw accuracy is the overriding constraint and token cost is secondary.
+
+**CSV is structurally unsuitable for accuracy-dependent workloads.**
+CSV achieves the lowest read token count for flat data but converts that advantage into poor efficiency outcomes. Accuracy ranges from 63% to 68% across all flat configurations, trailing the next worst format by 7 to 10 percentage points. The wasted token budget from incorrect responses offsets the savings on the read side. CSV is excluded from nested structures by design, and based on the accuracy floor observed, it should only be considered when a 63 to 68% accuracy rate is operationally acceptable.
+
+**Extended thinking improves accuracy marginally and at increasing token cost.**
+Comparing equivalent formats at the same structure and variant, enabling extended thinking shifts accuracy by at most 2 to 4 percentage points in most cases. For example, TOON_DEFAULT flat mandatory accuracy moves from 76.9% (thinking off) to 79.6% (thinking on), a gain of 2.7 points. Output tokens increase measurably with thinking enabled, particularly for formats like JSON_PRETTY and TOON_DEFAULT where output token variance is high. For latency-sensitive or cost-sensitive deployments the accuracy return on the added thinking tokens is consistently low across the formats and structures tested.
+
+**YAML is competitive on nested accuracy but cannot match JSON_COMPACT on efficiency.**
+YAML achieves the highest or joint-highest raw accuracy in three of the four nested configurations, peaking at 80.6% for nested optional data with thinking on. The weighted efficiency score remains in the 70 to 73 range for nested YAML because it consumes approximately 14K to 14.6K tokens, 35% to 44% more than JSON_COMPACT. The accuracy premium that YAML provides over JSON_COMPACT in nested configurations is typically 1 to 5 percentage points, which does not offset the token volume difference under the 70/30 accuracy-cost weighting applied in the efficiency score formula.
+
+**XML_COMPACT occupies a consistent middle tier without excelling at any dimension.**
+XML_COMPACT is never the most accurate, the most efficient, or the cheapest format in any configuration. It sits between the compact formats (TOON_DEFAULT, JSON_COMPACT) and the verbose formats (XML_PRETTY, JSON_PRETTY) on both token cost and efficiency score. Its chars-per-token ratio of 2.3 to 2.6 is the highest across all formats, reflecting dense encoding, but the tag structure still results in higher total token counts than JSON_COMPACT for equivalent data.
 
 ### 3.2 Decision Matrix
 
-<ADD_DECISION_MATRIX_HERE>
+| Scenario | Recommended Format | Weighted Eff. Score | Accuracy | Rationale |
+|---|---|---|---|---|
+| Flat structure, dense mandatory fields | `TOON_DEFAULT` | 82–83 | 77–80% | Lowest flat read token count (~7.3K), highest flat efficiency score across both thinking modes |
+| Flat structure, sparse optional fields | `JSON_COMPACT` | 76–80 | 76–81% | TOON_DEFAULT token count rises 59% on optional schemas; JSON_COMPACT is stable at ~9K tokens |
+| Nested structure, any field density | `JSON_COMPACT` | 80–85 | 75–79% | Lowest nested token count (~10–10.7K), highest nested efficiency score across all four nested configurations |
+| Maximum accuracy required, flat structure | `JSON_PRETTY` | 63 | ~83% | Highest flat accuracy at 82.5–82.8%; accept a ~97% token cost premium over TOON_DEFAULT |
+| Maximum accuracy required, nested structure | `YAML` (thinking on) | 73 | ~79–81% | YAML achieves highest nested accuracy (78.8–80.6%) with thinking on; JSON_COMPACT is the best accuracy option if thinking is off |
+| Token budget critical, flat only | `CSV` | 75–76 | 63–68% | Lowest token count (~7K); only viable when an accuracy floor of 63–68% is operationally acceptable |
+| Avoid in all use cases | `XML_PRETTY` | 48–55 | 70–78% | Last or near-last weighted efficiency score in all four configurations; no accuracy advantage justifies the token overhead |
 
 ## 4. Appendices
 
