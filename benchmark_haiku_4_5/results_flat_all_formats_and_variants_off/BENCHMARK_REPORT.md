@@ -204,7 +204,7 @@ For **optional/sparse data**, the picture changes significantly. TOON_DEFAULT be
 The data suggests formats with higher structural markup (JSON_PRETTY, XML_PRETTY, YAML) maintain their accuracy between mandatory and optional data but token cost is high. If data is known and mandatory TOON_DEFAULT is the clear choice but if data is unpredictable JSON_COMPACT or maybe XML_COMPACT are better suited because they archive a similar accuracy to the high structural markups for about half the token cost.
 
 ### 2.2 Comprehensive Benchmark Metrics
-| Format | Variant | Read Tokens | Output Tokens | Total | Tokens/Char | Info/Token | Token/Answer | Accuracy (%) | Wtd Accuracy (%) | Used Tokens | Wasted Tokens | Eff Score | Wtd Eff Score |
+| Format | Variant | Read Tokens | Output Tokens | Total | Char/Token | Info/Token | Token/Answer | Accuracy (%) | Wtd Accuracy (%) | Used Tokens | Wasted Tokens | Eff Score | Wtd Eff Score |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | man | 7022 | 241 | 7263 | 1.438 | 0.846 | 1.940 | 61.45 | 72.77 | 4462.868 | 2799.732 | 72.25 | 72.77 |
 | CSV | opt | 6728 | 304 | 7032 | 1.423 | 0.791 | 2.448 | 55.65 | 69.99 | 3913.085 | 3118.515 | 68.92 | 69.99 |

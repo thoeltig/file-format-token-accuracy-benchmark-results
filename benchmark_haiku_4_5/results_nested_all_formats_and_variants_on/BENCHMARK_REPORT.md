@@ -206,7 +206,7 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
 A consistent cross-format pattern: optional/sparse data degrades raw accuracy for all formats (−1.35% to −5.38%), but improves structure awareness for compact formats. This suggests that when data is sparse, models better recognize the data's structural shape — but only in formats where absent fields are not obscured by verbose syntax.
 
 ### 2.2 Comprehensive Benchmark Metrics
-| Format | Variant | Read Tokens | Output Tokens | Total | Tokens/Char | Info/Token | Token/Answer | Accuracy (%) | Wtd Accuracy (%) | Used Tokens | Wasted Tokens | Eff Score | Wtd Eff Score |
+| Format | Variant | Read Tokens | Output Tokens | Total | Char/Token | Info/Token | Token/Answer | Accuracy (%) | Wtd Accuracy (%) | Used Tokens | Wasted Tokens | Eff Score | Wtd Eff Score |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | man | 10315 | 336 | 10651 | 2.213 | 0.646 | 2.710 | 68.82 | 76.41 | 7330.018 | 3320.982 | 76.62 | 76.41 |
 | JSON_COMPACT | opt | 9788 | 336 | 10124 | 2.186 | 0.659 | 2.707 | 66.67 | 77.82 | 6749.449 | 3374.218 | 76.64 | 77.82 |

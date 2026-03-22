@@ -206,7 +206,7 @@ Three distinct performance tiers emerge from this benchmark:
 The central finding is that **whitespace formatting adds substantial token cost with zero accuracy return for Haiku 4.5 on nested data.** The model extracts information equally well from compact and pretty-printed formats, but compact formats do so at half the token cost. For production use, JSON_COMPACT is the default recommendation; XML_COMPACT is justified only when mandatory-field aggregation accuracy is critical.
 
 ### 2.2 Comprehensive Benchmark Metrics
-| Format | Variant | Read Tokens | Output Tokens | Total | Tokens/Char | Info/Token | Token/Answer | Accuracy (%) | Wtd Accuracy (%) | Used Tokens | Wasted Tokens | Eff Score | Wtd Eff Score |
+| Format | Variant | Read Tokens | Output Tokens | Total | Char/Token | Info/Token | Token/Answer | Accuracy (%) | Wtd Accuracy (%) | Used Tokens | Wasted Tokens | Eff Score | Wtd Eff Score |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | man | 10163 | 305 | 10468 | 2.246 | 0.629 | 2.461 | 65.81 | 73.90 | 6889.122 | 3579.078 | 74.57 | 73.90 |
 | JSON_COMPACT | opt | 9645 | 305 | 9950 | 2.219 | 0.647 | 2.458 | 64.35 | 75.37 | 6402.696 | 3547.104 | 75.02 | 75.37 |

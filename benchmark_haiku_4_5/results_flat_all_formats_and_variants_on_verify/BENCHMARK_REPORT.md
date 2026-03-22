@@ -210,7 +210,7 @@ For **optional (sparse) data**, JSON_COMPACT offers the best balance: near-ident
 **Format choice should be driven by data sparsity**: use TOON_DEFAULT or CSV for dense mandatory data when efficiency matters; use JSON_COMPACT when optional fields are present; avoid XML_PRETTY and JSON_PRETTY unless token cost is not a constraint.
 
 ### 2.2 Comprehensive Benchmark Metrics
-| Format | Variant | Read Tokens | Output Tokens | Total | Tokens/Char | Info/Token | Token/Answer | Accuracy (%) | Wtd Accuracy (%) | Used Tokens | Wasted Tokens | Eff Score | Wtd Eff Score |
+| Format | Variant | Read Tokens | Output Tokens | Total | Char/Token | Info/Token | Token/Answer | Accuracy (%) | Wtd Accuracy (%) | Used Tokens | Wasted Tokens | Eff Score | Wtd Eff Score |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | man | 6968 | 204 | 7172 | 1.449 | 0.881 | 1.645 | 63.17 | 74.44 | 4530.552 | 2641.448 | 73.61 | 74.44 |
 | CSV | opt | 6687 | 301 | 6988 | 1.432 | 0.777 | 2.427 | 54.30 | 68.73 | 3794.484 | 3193.516 | 67.98 | 68.73 |
