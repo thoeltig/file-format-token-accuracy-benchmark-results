@@ -13,19 +13,19 @@ This benchmark evaluates token efficiency and information accuracy across 7 file
 
 ### Key Findings
 
-1. **TOON_DEFAULT dominates mandatory data** — highest weighted efficiency score (78.34), 2nd lowest token cost (7327), and fastest processing (~42s). However, optional data causes a +61.76% token explosion and -17.24 efficiency collapse, making it format-sensitive.
+1. **TOON_DEFAULT dominates mandatory data** with the highest weighted efficiency score (78.34), 2nd lowest token cost (7327) and fastest processing (~42s). However optional data causes a +61.76% token explosion and -17.24 efficiency collapse which makes it format-sensitive.
 
-2. **CSV minimizes tokens but not costs** — fewest tokens (6988-7172) yet lowest accuracy (54.30-63.17%). The token savings are partially cancelled by poor information quality; wasted tokens increase disproportionately on optional data (+20.90%).
+2. **CSV minimizes tokens but not costs.** Uses the fewest tokens (6988-7172) yet has the lowest accuracy (54.30-63.17%). The token savings are partially cancelled by poor information quality and wasted tokens increase disproportionately on optional data (+20.90%).
 
-3. **JSON_COMPACT is the most robust format** — accuracy delta of only +0.26% between mandatory and optional, consistent token count (-5.62%), and best optional efficiency score (69.53). Structure awareness actually improves with optional data (+12.35%).
+3. **JSON_COMPACT is the most robust format** with an accuracy delta of only +0.26% between mandatory and optional, consistent token count (-5.62%) and best optional efficiency score (69.53). Structure awareness actually improves with optional data (+12.35%).
 
-4. **Pretty-printed formats (XML_PRETTY, JSON_PRETTY) provide no accuracy return on their token investment** — XML_PRETTY uses 2.3x more tokens than CSV but achieves only ~7% higher accuracy. Efficiency scores (48.95-54.97) are the lowest in the benchmark.
+4. **Pretty-printed formats (XML_PRETTY, JSON_PRETTY) provide no accuracy return on their token investment.** XML_PRETTY uses 2.3x more tokens than CSV but achieves only ~7% higher accuracy. Efficiency scores (48.95-54.97) are the lowest in the benchmark.
 
-5. **Aggregation is universally the weakest category and collapses with optional data** — all formats drop 6-25% on aggregation when switching to optional data (CSV: -25.40%, XML_PRETTY: -23.81%, YAML: -19.04%). This suggests a model capability ceiling, not a format-specific issue.
+5. **Aggregation is universally the weakest category and collapses with optional data.** All formats drop 6-25% on aggregation when switching to optional data (CSV: -25.40%, XML_PRETTY: -23.81%, YAML: -19.04%). This suggests a model capability ceiling and not a format-specific issue.
 
-6. **Optional data degrades every format, but to very different degrees** — accuracy drops range from +0.26% (JSON_COMPACT, stable) to -8.87% (CSV, severe). TOON_DEFAULT shows the extreme case with +4525 additional tokens on optional data.
+6. **Optional data degrades every format but to very different degrees.** Accuracy drops range from +0.26% (JSON_COMPACT, stable) to -8.87% (CSV, severe). TOON_DEFAULT shows the extreme case with +4525 additional tokens on optional data.
 
-7. **Structure Awareness improves with optional data in JSON/XML formats** — JSON_PRETTY: +16.05%, JSON_COMPACT: +12.35%, XML_PRETTY: +11.11%. These formats communicate absent fields clearly via null values and missing keys, while CSV and YAML show no improvement or degradation.
+7. **Structure Awareness improves with optional data in JSON/XML formats.** JSON_PRETTY: +16.05%, JSON_COMPACT: +12.35%, XML_PRETTY: +11.11%. These formats communicate absent fields clearly via null values and missing keys, while CSV and YAML show no improvement or degradation.
 
 ## 1. Methodology
 
@@ -199,15 +199,11 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
 
 #### 2.1.5 Conclusion
 
-For **mandatory (dense) data**, TOON_DEFAULT is the clear winner: it combines the 2nd lowest token cost with the highest efficiency score (78.01/78.34) and fastest processing speed. CSV costs fewer tokens but sacrifices ~7% accuracy — a trade-off that rarely justifies itself in practice.
-
-For **optional (sparse) data**, JSON_COMPACT offers the best balance: near-identical performance to mandatory data (+0.26% accuracy, -5.62% tokens) and the highest efficiency score (69.53/70.70) in the optional variant. TOON_DEFAULT is disqualified for optional data due to its +61.76% token overhead.
-
-**Verbose formats (XML_PRETTY, JSON_PRETTY) are consistently inefficient** — spending 2-3x the tokens of compact alternatives without proportional accuracy gains. Their only niche is structure awareness on optional data, where the whitespace formatting appears to help the model recognize absent fields.
-
-**Aggregation accuracy remains weak across all formats** (~35-71%), indicating this reflects a model capability limit at the Haiku level rather than anything format-specific. Field retrieval and structure awareness are the most reliable categories for benchmarking format quality.
-
-**Format choice should be driven by data sparsity**: use TOON_DEFAULT or CSV for dense mandatory data when efficiency matters; use JSON_COMPACT when optional fields are present; avoid XML_PRETTY and JSON_PRETTY unless token cost is not a constraint.
+- For **mandatory (dense) data** TOON_DEFAULT is the clear winner: it combines the 2nd lowest token cost with a good accuracy to archieve the highest efficiency score (78.01/78.34) and fastest processing speed. CSV costs slightly fewer tokens but sacrifices ~7% accuracy which is a trade-off that rarely justifies itself in practice.
+- For **optional (sparse) data**, JSON_COMPACT offers the best balance: near-identical performance to mandatory data (+0.26% accuracy, -5.62% tokens) and the highest efficiency score (69.53/70.70) in the optional variant. TOON_DEFAULT is disqualified for optional data due to its +61.76% token overhead.
+- **Verbose formats (XML_PRETTY, JSON_PRETTY) are consistently inefficient** and spend 2-3x the tokens of compact alternatives without proportional accuracy gains. Their only niche is structure awareness on optional data where the whitespace formatting appears to help the model recognize absent fields.
+- **Aggregation accuracy remains weak across all formats** (~35-71%) which indicats a model capability limit at the Haiku level rather than anything format-specific. Field retrieval and structure awareness are the most reliable categories for benchmarking format quality.
+- **Format choice should be driven by data sparsity.** Use TOON_DEFAULT or CSV for dense mandatory data when efficiency matters, use JSON_COMPACT when optional fields are present and avoid XML_PRETTY and JSON_PRETTY unless token cost is not a constraint.
 
 ### 2.2 Comprehensive Benchmark Metrics
 | Format | Variant | Read Tokens | Output Tokens | Total | Char/Token | Info/Token | Token/Answer | Accuracy (%) | Wtd Accuracy (%) | Used Tokens | Wasted Tokens | Eff Score | Wtd Eff Score |
@@ -438,32 +434,33 @@ For **optional (sparse) data**, JSON_COMPACT offers the best balance: near-ident
 
 #### 3.1.2 Strengths
 
-- **Lowest token cost across all formats** (6988-7172 tokens) — 2.2x cheaper than XML_PRETTY; best for token-constrained environments with fully populated data
-- **Best structure awareness on mandatory data** (80.25%) — the header row provides a clear and compact field schema
-- **Most stable token count across variants** (only -2.57% optional vs mandatory) — predictable token budgeting
-- **Filtering improves with optional data** (+4.76%) — CSV handles sparse filtering questions slightly better
+- Lowest token cost across all formats with 6988-7172 tokens it's 2.2x cheaper than XML_PRETTY and best for token-constrained environments with fully populated data
+- Best structure awareness on mandatory data (80.25%)
+- Most stable token count across variants (only -2.57% optional vs mandatory)
+- Filtering improves slightly with optional data (+4.76%)
 
 #### 3.1.3 Weaknesses
 
-- **Lowest overall accuracy** across both variants (54.30-63.17%) — worst in the benchmark on both raw and weighted accuracy
-- **Structure awareness collapses on optional data** (-20.99%) — the header row cannot convey which fields are absent in individual records
-- **Aggregation on optional data is severely degraded** (34.92%) — missing values in sparse rows cause significant calculation errors
-- **Accuracy sensitivity to optional data is the worst** (-8.87% delta) — the flat row format fails to distinguish present vs absent optional fields
+- Lowest overall accuracy across both variants (54.30-63.17%)
+- Structure awareness collapses on optional data (-20.99%)
+- Aggregation on optional data is severely degraded (34.92%) most likely the missing values cause calculation errors
+- Accuracy sensitivity to optional data (-8.87% delta) reduces the accuracy even further
 
 #### 3.1.4 Use Case Recommendation
 
 - ✓ Use when token minimization is the primary constraint and data is fully populated (mandatory-only)
 - ✓ Use for simple field retrieval tasks on dense, complete datasets
 - ✓ Use when the downstream system consumes CSV natively and re-encoding would cost additional tokens
-- ❌ Avoid when optional or sparse fields are present — accuracy degrades severely
-- ❌ Avoid for aggregation tasks, especially with optional data
+- ❌ Avoid when optional or sparse fields are present because accuracy degrades severely
+- ❌ Avoid for aggregation tasks especially with optional data
 - ❌ Avoid when structure awareness of the data schema is important
 
 #### 3.1.5 Trade-offs
 
-- CSV saves ~5000-9000 tokens compared to verbose formats, but the accuracy cost is real: 9-19% below top performers
-- The information value per token (0.777-0.881) is the highest in the benchmark, but only because the token count is so low — absolute useful tokens (3794-4531) are the lowest
-- For mandatory data, the efficiency score (73.61) is strong enough to justify CSV if accuracy requirements are loose; for optional data, the efficiency score (67.98) no longer stands out against JSON_COMPACT (69.53)
+- CSV saves ~5000-9000 tokens compared to verbose formats but the accuracy cost is real (9-19% below top performers)
+- The information value per token (0.777-0.881) is the highest in the benchmark but only because the token count is so low
+- For mandatory data the efficiency score (73.61) is strong enough to justify CSV if accuracy requirements are loose
+- For optional data the efficiency score (67.98) no longer stands out against JSON_COMPACT (69.53)
 
 ### 3.2 Detailed Analysis: JSON_COMPACT
 
@@ -477,30 +474,30 @@ For **optional (sparse) data**, JSON_COMPACT offers the best balance: near-ident
 
 #### 3.2.2 Strengths
 
-- **Most robust format across variants** — accuracy delta of only +0.26% (mandatory 65.06% → optional 65.32%), identical correct/incorrect answer counts in both variants
-- **Best optional data efficiency score** (69.53/70.70 weighted) — the top performer when data includes optional fields
-- **Highest chars/token ratio** (2.118-2.152) — most characters encoded per token among all formats, indicating compact tokenization of the JSON syntax
-- **Structure awareness improves with optional data** (+12.35%) — absent keys in compact JSON are semantically unambiguous, helping the model understand schema gaps
+- Most robust format across variants with an accuracy delta of only +0.26% (mandatory 65.06% → optional 65.32%)
+- Best optional data efficiency score (69.53/70.70 weighted) and the top performer when data includes optional fields
+- Highest chars/token ratio (2.118-2.152) which indicats compact tokenization of the JSON syntax
+- Structure awareness improves with optional data (+12.35%) likely because absent keys in compact JSON are semantically unambiguous which helps the model understand schema gaps
 
 #### 3.2.3 Weaknesses
 
-- **Worst aggregation on mandatory data** (39.68%) — lowest aggregation score of all formats in that variant; bracket and delimiter noise appears to disrupt numerical extraction
-- **High output token variance between runs** (up to ↓-95.68% / ↑+49.76% on optional) — inference behavior is unstable, suggesting the compact format triggers variable reasoning paths
-- **28-35% more tokens than CSV** (8935-9468 vs 6988-7172) without a proportional accuracy gain over CSV on mandatory data
+- Worst aggregation on mandatory data (39.68%) of all formats most likely because bracket and delimiter noise appears to disrupt numerical extraction
+- High output token variance between runs (up to ↓-95.68% / ↑+49.76% on optional) likely due to unstable inference behavior which suggests the compact format triggers variable reasoning paths
+- 28-35% more tokens than CSV (8935-9468 vs 6988-7172) without a proportional accuracy gain over CSV on mandatory data
 
 #### 3.2.4 Use Case Recommendation
 
 - ✓ Use when data contains sparse optional fields and consistency across variants is required
 - ✓ Use when JSON is the native format of the consuming system and re-encoding would add overhead
-- ✓ Use as the default format when uncertain about data density — it degrades the least with optional fields
+- ✓ Use as the default format when uncertain about data density because it degrades the least with optional fields
 - ❌ Avoid for aggregation-heavy workloads, especially on mandatory data
 - ❌ Avoid when inference consistency between runs is critical (high output token variance)
 
 #### 3.2.5 Trade-offs
 
 - JSON_COMPACT pays ~28-35% more tokens than CSV to gain ~10% accuracy on mandatory data and near-perfect variant stability (+0.26% accuracy delta vs CSV's -8.87%)
-- The compact representation avoids the whitespace overhead of JSON_PRETTY while retaining the semantic clarity of JSON structure — a good middle ground between token cost and structural expressiveness
-- Aggregation weakness on mandatory data is the main caveat; if aggregation tasks dominate the workload, TOON_DEFAULT or YAML are stronger choices for mandatory data
+- The compact representation avoids the whitespace overhead of JSON_PRETTY while retaining the semantic clarity of JSON structure
+- If aggregation tasks dominate the workload TOON_DEFAULT or YAML are stronger choices for mandatory data
 
 ### 3.3 Detailed Analysis: JSON_PRETTY
 
