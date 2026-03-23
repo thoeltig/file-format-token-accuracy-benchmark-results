@@ -6,7 +6,13 @@ Archive of benchmark results measuring token usage and retrieval accuracy across
 
 This repository contains **benchmark results and raw data** from experiments evaluating which file formats deliver the most reliable information to LLMs with optimal token efficiency.
 
-**To run your own benchmarks**, see the [benchmark plugin repository](https://github.com/thoeltig/file-format-token-accuracy-benchmark).
+**To run your own benchmarks** see the [benchmark plugin repository](https://github.com/thoeltig/file-format-token-accuracy-benchmark).
+
+> [!NOTE]
+>
+> These benchmark results are specific to Claude Code using the Haiku 4.5 model and Sonnet 4.6 model. They serve as a rule of thumb for choosing the best file format for your use case.
+> However these values cannot be directly applied to models from other providers as token usage and latency depend on specific model architectures and tokenizers. While the relative ranking of file formats remains consistent the absolute number of tokens will vary.
+
 
 ## Initial Benchmark Results
 

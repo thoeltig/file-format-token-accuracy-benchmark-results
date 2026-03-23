@@ -43,8 +43,19 @@ This requires measuring:
 
 > [!NOTE]
 >
-> All columns ranked best-to-worst. ↑ = lower value is better (ascending). ↓ = higher value is better (descending).
-> Column abbreviations: **Wtd Accuracy** = Weighted Accuracy, **Eff Score** = Efficiency Score, **Wtd Eff Score** = Weighted Efficiency Score. See [§1.1](#11-metric-definitions) for formulas.
+> These benchmark results are specific to Claude Code using the Haiku 4.5 model. They serve as a rule of thumb for choosing the best file format for your use case.
+> However these values cannot be directly applied to models from other providers as token usage and latency depend on specific model architectures and tokenizers. While the relative ranking of file formats remains consistent the absolute number of tokens will vary.
+>
+> All columns ranked best-to-worst: 
+> - ↑ = lower value is better (ascending)
+> - ↓ = higher value is better (descending)
+>
+> Column abbreviations: 
+> - **Wtd Accuracy** = Weighted Accuracy
+> - **Eff Score** = Efficiency Score
+> - **Wtd Eff Score** = Weighted Efficiency Score 
+>
+> See [§1.1](#11-metric-definitions) for formulas
 
 ### 2.1 Flat Structure With Thinking On
 
