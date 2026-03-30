@@ -1,0 +1,393 @@
+{
+    "read": {
+        "files": [
+            {
+                "file": "xml_pretty_with_optional_31_nested_records.xml",
+                "path": "benchmark_sonnet_4_6\\data\\xml_pretty\\xml_pretty_with_optional_31_nested_records.xml",
+                "agentId": "a186a209ac452eb1e",
+                "format": "xml_pretty",
+                "structure": "nested",
+                "variant": "optional",
+                "recordCount": 31,
+                "readTokens": 17760,
+                "readDurationMs": 42
+            },
+            {
+                "file": "xml_compact_with_mandatory_31_nested_records.xml",
+                "path": "benchmark_sonnet_4_6\\data\\xml_compact\\xml_compact_with_mandatory_31_nested_records.xml",
+                "agentId": "a5e919494c60cf27b",
+                "format": "xml_compact",
+                "structure": "nested",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "readTokens": 10164,
+                "readDurationMs": 110
+            },
+            {
+                "file": "xml_compact_with_optional_31_nested_records.xml",
+                "path": "benchmark_sonnet_4_6\\data\\xml_compact\\xml_compact_with_optional_31_nested_records.xml",
+                "agentId": "a5fffd77a8e1bab8d",
+                "format": "xml_compact",
+                "structure": "nested",
+                "variant": "optional",
+                "recordCount": 31,
+                "readTokens": 12494,
+                "readDurationMs": 116
+            },
+            {
+                "file": "json_pretty_with_mandatory_31_nested_records.json",
+                "path": "benchmark_sonnet_4_6\\data\\json_pretty\\json_pretty_with_mandatory_31_nested_records.json",
+                "agentId": "a677aca3e8ae79195",
+                "format": "json_pretty",
+                "structure": "nested",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "readTokens": 1669,
+                "readDurationMs": 404
+            },
+            {
+                "file": "questions_with_mandatory_31_records.json",
+                "path": "benchmark_sonnet_4_6\\questions\\questions_with_mandatory_31_records.json",
+                "agentId": "a677aca3e8ae79195",
+                "format": "json_pretty",
+                "structure": "unknown",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "readTokens": 1669,
+                "readDurationMs": 12
+            },
+            {
+                "file": "answers_with_mandatory_31_records_template.json",
+                "path": "benchmark_sonnet_4_6\\answers_template\\answers_with_mandatory_31_records_template.json",
+                "agentId": "a677aca3e8ae79195",
+                "format": "json_pretty",
+                "structure": "unknown",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "readTokens": 20977,
+                "readDurationMs": 14
+            },
+            {
+                "file": "json_compact_with_mandatory_31_nested_records.json",
+                "path": "benchmark_sonnet_4_6\\data\\json_compact\\json_compact_with_mandatory_31_nested_records.json",
+                "agentId": "a7813a5cdf5a5ae01",
+                "format": "json_compact",
+                "structure": "nested",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "readTokens": 7498,
+                "readDurationMs": 35
+            },
+            {
+                "file": "xml_pretty_with_mandatory_31_nested_records.xml",
+                "path": "benchmark_sonnet_4_6\\data\\xml_pretty\\xml_pretty_with_mandatory_31_nested_records.xml",
+                "agentId": "a7f826a9576a5126b",
+                "format": "xml_pretty",
+                "structure": "nested",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "readTokens": 18291,
+                "readDurationMs": 37
+            },
+            {
+                "file": "toon_default_with_mandatory_31_nested_records.toon",
+                "path": "benchmark_sonnet_4_6\\data\\toon_default\\toon_default_with_mandatory_31_nested_records.toon",
+                "agentId": "a9aafc73b7cc78450",
+                "format": "toon_default",
+                "structure": "nested",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "readTokens": 11440,
+                "readDurationMs": 54
+            },
+            {
+                "file": "toon_keyfold_with_mandatory_31_nested_records.toon",
+                "path": "benchmark_sonnet_4_6\\data\\toon_keyfold\\toon_keyfold_with_mandatory_31_nested_records.toon",
+                "agentId": "aad277cb73bab61f0",
+                "format": "toon_keyfold",
+                "structure": "nested",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "readTokens": 11289,
+                "readDurationMs": 35
+            },
+            {
+                "file": "toon_keyfold_with_optional_31_nested_records.toon",
+                "path": "benchmark_sonnet_4_6\\data\\toon_keyfold\\toon_keyfold_with_optional_31_nested_records.toon",
+                "agentId": "ab18fbeec67fd0dfa",
+                "format": "toon_keyfold",
+                "structure": "nested",
+                "variant": "optional",
+                "recordCount": 31,
+                "readTokens": 11044,
+                "readDurationMs": 41
+            },
+            {
+                "file": "json_compact_with_optional_31_nested_records.json",
+                "path": "benchmark_sonnet_4_6\\data\\json_compact\\json_compact_with_optional_31_nested_records.json",
+                "agentId": "ab69f6b66bf37abe3",
+                "format": "json_compact",
+                "structure": "nested",
+                "variant": "optional",
+                "recordCount": 31,
+                "readTokens": 6970,
+                "readDurationMs": 19
+            },
+            {
+                "file": "json_pretty_with_mandatory_31_nested_records.json",
+                "path": "benchmark_sonnet_4_6\\data\\json_pretty\\json_pretty_with_mandatory_31_nested_records.json",
+                "agentId": "ac539f55bdc289b89",
+                "format": "json_pretty",
+                "structure": "nested",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "readTokens": 15787,
+                "readDurationMs": 319
+            },
+            {
+                "file": "json_pretty_with_optional_31_nested_records.json",
+                "path": "benchmark_sonnet_4_6\\data\\json_pretty\\json_pretty_with_optional_31_nested_records.json",
+                "agentId": "ac96f8ea7ac530f1f",
+                "format": "json_pretty",
+                "structure": "nested",
+                "variant": "optional",
+                "recordCount": 31,
+                "readTokens": 17688,
+                "readDurationMs": 331
+            },
+            {
+                "file": "yaml_with_mandatory_31_nested_records.yaml",
+                "path": "benchmark_sonnet_4_6\\data\\yaml\\yaml_with_mandatory_31_nested_records.yaml",
+                "agentId": "ad79512399c5ade6f",
+                "format": "yaml",
+                "structure": "nested",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "readTokens": 11649,
+                "readDurationMs": 85
+            },
+            {
+                "file": "toon_default_with_optional_31_nested_records.toon",
+                "path": "benchmark_sonnet_4_6\\data\\toon_default\\toon_default_with_optional_31_nested_records.toon",
+                "agentId": "adf72abc7327112e4",
+                "format": "toon_default",
+                "structure": "nested",
+                "variant": "optional",
+                "recordCount": 31,
+                "readTokens": 11195,
+                "readDurationMs": 40
+            },
+            {
+                "file": "yaml_with_optional_31_nested_records.yaml",
+                "path": "benchmark_sonnet_4_6\\data\\yaml\\yaml_with_optional_31_nested_records.yaml",
+                "agentId": "ae9f35c9b1b0d27cc",
+                "format": "yaml",
+                "structure": "nested",
+                "variant": "optional",
+                "recordCount": 31,
+                "readTokens": 11404,
+                "readDurationMs": 81
+            }
+        ],
+        "summary": {
+            "totalFiles": 17,
+            "totalReadTokens": 198988,
+            "totalReadDurationMs": 1775,
+            "averageReadTokens": 11705.176,
+            "averageDurationMs": 104.412
+        }
+    },
+    "reasoning": {
+        "files": [
+            {
+                "format": "xml_compact",
+                "structure": "nested",
+                "variant": "optional",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 330916.333,
+                "durationMsMin": 320618,
+                "durationMsMax": 341744,
+                "outputTokens": 203.667,
+                "outputTokensMin": 15,
+                "outputTokensMax": 301
+            },
+            {
+                "format": "yaml",
+                "structure": "nested",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 315629.667,
+                "durationMsMin": 242332,
+                "durationMsMax": 379565,
+                "outputTokens": 295,
+                "outputTokensMin": 291,
+                "outputTokensMax": 297
+            },
+            {
+                "format": "xml_pretty",
+                "structure": "nested",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 308772,
+                "durationMsMin": 278967,
+                "durationMsMax": 355056,
+                "outputTokens": 300.333,
+                "outputTokensMin": 295,
+                "outputTokensMax": 305
+            },
+            {
+                "format": "toon_keyfold",
+                "structure": "nested",
+                "variant": "optional",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 324478,
+                "durationMsMin": 273893,
+                "durationMsMax": 352109,
+                "outputTokens": 209.667,
+                "outputTokensMin": 13,
+                "outputTokensMax": 308
+            },
+            {
+                "format": "json_pretty",
+                "structure": "nested",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 291933.333,
+                "durationMsMin": 276940,
+                "durationMsMax": 321636,
+                "outputTokens": 296.667,
+                "outputTokensMin": 294,
+                "outputTokensMax": 298
+            },
+            {
+                "format": "json_compact",
+                "structure": "nested",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 363174.667,
+                "durationMsMin": 325296,
+                "durationMsMax": 410838,
+                "outputTokens": 294.333,
+                "outputTokensMin": 292,
+                "outputTokensMax": 297
+            },
+            {
+                "format": "yaml",
+                "structure": "nested",
+                "variant": "optional",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 323406.667,
+                "durationMsMin": 293932,
+                "durationMsMax": 338406,
+                "outputTokens": 293,
+                "outputTokensMin": 288,
+                "outputTokensMax": 296
+            },
+            {
+                "format": "toon_default",
+                "structure": "nested",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 328165.667,
+                "durationMsMin": 314422,
+                "durationMsMax": 345478,
+                "outputTokens": 205,
+                "outputTokensMin": 9,
+                "outputTokensMax": 304
+            },
+            {
+                "format": "toon_keyfold",
+                "structure": "nested",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 339495,
+                "durationMsMin": 319859,
+                "durationMsMax": 368033,
+                "outputTokens": 307.667,
+                "outputTokensMin": 307,
+                "outputTokensMax": 308
+            },
+            {
+                "format": "xml_pretty",
+                "structure": "nested",
+                "variant": "optional",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 338336.667,
+                "durationMsMin": 328254,
+                "durationMsMax": 346526,
+                "outputTokens": 301,
+                "outputTokensMin": 301,
+                "outputTokensMax": 301
+            },
+            {
+                "format": "toon_default",
+                "structure": "nested",
+                "variant": "optional",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 329621.667,
+                "durationMsMin": 288409,
+                "durationMsMax": 350291,
+                "outputTokens": 300.333,
+                "outputTokensMin": 298,
+                "outputTokensMax": 302
+            },
+            {
+                "format": "json_pretty",
+                "structure": "nested",
+                "variant": "optional",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 324103,
+                "durationMsMin": 286187,
+                "durationMsMax": 351850,
+                "outputTokens": 297,
+                "outputTokensMin": 293,
+                "outputTokensMax": 300
+            },
+            {
+                "format": "json_compact",
+                "structure": "nested",
+                "variant": "optional",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 330750.667,
+                "durationMsMin": 309689,
+                "durationMsMax": 342283,
+                "outputTokens": 295.667,
+                "outputTokensMin": 295,
+                "outputTokensMax": 297
+            },
+            {
+                "format": "xml_compact",
+                "structure": "nested",
+                "variant": "mandatory",
+                "recordCount": 31,
+                "testRuns": 3,
+                "durationMs": 337256,
+                "durationMsMin": 322778,
+                "durationMsMax": 366039,
+                "outputTokens": 301.667,
+                "outputTokensMin": 300,
+                "outputTokensMax": 304
+            }
+        ],
+        "summary": {
+            "totalTestCases": 14,
+            "totalDurationMs": 4586039.335,
+            "totalOutputTokens": 3901.001,
+            "averageDurationMs": 327574.238,
+            "averageOutputTokens": 278.643
+        }
+    }
+}
