@@ -1,0 +1,363 @@
+{
+    "generatedAt": "2026-03-18T19:25:03.413Z",
+    "filesPerRecordCount": [
+        {
+            "recordCount": 31,
+            "fieldCount": 22,
+            "totalValues": 682,
+            "questionCount": 124,
+            "answersAndQuestionsForValidationFilePath": "benchmark_sonnet_4_6\\answers_validation\\questions_and_answers_with_mandatory_31_records.json",
+            "questionnaireFilePath": "benchmark_sonnet_4_6\\questions\\questions_with_mandatory_31_records.json",
+            "answerTemplateFilePath": "benchmark_sonnet_4_6\\answers_template\\answers_with_mandatory_31_records_template.json",
+            "dataAndOutput": [
+                {
+                    "structure": "flat",
+                    "format": "csv",
+                    "allFieldsManadatory": true,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\csv\\csv_with_mandatory_31_flat_records.csv",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\csv\\answers_with_mandatory_31_flat_records.json",
+                    "metadata": {
+                        "characterCount": 10095,
+                        "avgCharacterCountPerRecord": 325.64516129032256,
+                        "avgCharacterCountPerValue": 14.802052785923754
+                    }
+                },
+                {
+                    "structure": "flat",
+                    "format": "json_pretty",
+                    "allFieldsManadatory": true,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\json_pretty\\json_pretty_with_mandatory_31_flat_records.json",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\json_pretty\\answers_with_mandatory_31_flat_records.json",
+                    "metadata": {
+                        "characterCount": 24196,
+                        "avgCharacterCountPerRecord": 780.516129032258,
+                        "avgCharacterCountPerValue": 35.47800586510264
+                    }
+                },
+                {
+                    "structure": "flat",
+                    "format": "json_compact",
+                    "allFieldsManadatory": true,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\json_compact\\json_compact_with_mandatory_31_flat_records.json",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\json_compact\\answers_with_mandatory_31_flat_records.json",
+                    "metadata": {
+                        "characterCount": 19917,
+                        "avgCharacterCountPerRecord": 642.483870967742,
+                        "avgCharacterCountPerValue": 29.203812316715542
+                    }
+                },
+                {
+                    "structure": "flat",
+                    "format": "toon_default",
+                    "allFieldsManadatory": true,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\toon_default\\toon_default_with_mandatory_31_flat_records.toon",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\toon_default\\answers_with_mandatory_31_flat_records.json",
+                    "metadata": {
+                        "characterCount": 10164,
+                        "avgCharacterCountPerRecord": 327.8709677419355,
+                        "avgCharacterCountPerValue": 14.903225806451612
+                    }
+                },
+                {
+                    "structure": "flat",
+                    "format": "xml_pretty",
+                    "allFieldsManadatory": true,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\xml_pretty\\xml_pretty_with_mandatory_31_flat_records.xml",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\xml_pretty\\answers_with_mandatory_31_flat_records.json",
+                    "metadata": {
+                        "characterCount": 31261,
+                        "avgCharacterCountPerRecord": 1008.4193548387096,
+                        "avgCharacterCountPerValue": 45.83724340175953
+                    }
+                },
+                {
+                    "structure": "flat",
+                    "format": "xml_compact",
+                    "allFieldsManadatory": true,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\xml_compact\\xml_compact_with_mandatory_31_flat_records.xml",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\xml_compact\\answers_with_mandatory_31_flat_records.json",
+                    "metadata": {
+                        "characterCount": 27663,
+                        "avgCharacterCountPerRecord": 892.3548387096774,
+                        "avgCharacterCountPerValue": 40.56158357771261
+                    }
+                },
+                {
+                    "structure": "flat",
+                    "format": "yaml",
+                    "allFieldsManadatory": true,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\yaml\\yaml_with_mandatory_31_flat_records.yaml",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\yaml\\answers_with_mandatory_31_flat_records.json",
+                    "metadata": {
+                        "characterCount": 20886,
+                        "avgCharacterCountPerRecord": 673.741935483871,
+                        "avgCharacterCountPerValue": 30.624633431085044
+                    }
+                },
+                {
+                    "structure": "nested",
+                    "format": "json_pretty",
+                    "allFieldsManadatory": true,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\json_pretty\\json_pretty_with_mandatory_31_nested_records.json",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\json_pretty\\answers_with_mandatory_31_nested_records.json",
+                    "metadata": {
+                        "characterCount": 33062,
+                        "avgCharacterCountPerRecord": 1066.516129032258,
+                        "avgCharacterCountPerValue": 48.47800586510264
+                    }
+                },
+                {
+                    "structure": "nested",
+                    "format": "json_compact",
+                    "allFieldsManadatory": true,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\json_compact\\json_compact_with_mandatory_31_nested_records.json",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\json_compact\\answers_with_mandatory_31_nested_records.json",
+                    "metadata": {
+                        "characterCount": 23916,
+                        "avgCharacterCountPerRecord": 771.483870967742,
+                        "avgCharacterCountPerValue": 35.06744868035191
+                    }
+                },
+                {
+                    "structure": "nested",
+                    "format": "toon_default",
+                    "allFieldsManadatory": true,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\toon_default\\toon_default_with_mandatory_31_nested_records.toon",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\toon_default\\answers_with_mandatory_31_nested_records.json",
+                    "metadata": {
+                        "characterCount": 27113,
+                        "avgCharacterCountPerRecord": 874.6129032258065,
+                        "avgCharacterCountPerValue": 39.75513196480939
+                    }
+                },
+                {
+                    "structure": "nested",
+                    "format": "toon_keyfold",
+                    "allFieldsManadatory": true,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\toon_keyfold\\toon_keyfold_with_mandatory_31_nested_records.toon",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\toon_keyfold\\answers_with_mandatory_31_nested_records.json",
+                    "metadata": {
+                        "characterCount": 26896,
+                        "avgCharacterCountPerRecord": 867.6129032258065,
+                        "avgCharacterCountPerValue": 39.43695014662757
+                    }
+                },
+                {
+                    "structure": "nested",
+                    "format": "xml_pretty",
+                    "allFieldsManadatory": true,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\xml_pretty\\xml_pretty_with_mandatory_31_nested_records.xml",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\xml_pretty\\answers_with_mandatory_31_nested_records.json",
+                    "metadata": {
+                        "characterCount": 42452,
+                        "avgCharacterCountPerRecord": 1369.4193548387098,
+                        "avgCharacterCountPerValue": 62.24633431085044
+                    }
+                },
+                {
+                    "structure": "nested",
+                    "format": "xml_compact",
+                    "allFieldsManadatory": true,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\xml_compact\\xml_compact_with_mandatory_31_nested_records.xml",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\xml_compact\\answers_with_mandatory_31_nested_records.json",
+                    "metadata": {
+                        "characterCount": 34266,
+                        "avgCharacterCountPerRecord": 1105.3548387096773,
+                        "avgCharacterCountPerValue": 50.24340175953079
+                    }
+                },
+                {
+                    "structure": "nested",
+                    "format": "yaml",
+                    "allFieldsManadatory": true,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\yaml\\yaml_with_mandatory_31_nested_records.yaml",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\yaml\\answers_with_mandatory_31_nested_records.json",
+                    "metadata": {
+                        "characterCount": 26559,
+                        "avgCharacterCountPerRecord": 856.741935483871,
+                        "avgCharacterCountPerValue": 38.942815249266864
+                    }
+                }
+            ]
+        },
+        {
+            "recordCount": 31,
+            "fieldCount": 21,
+            "totalValues": 631,
+            "questionCount": 124,
+            "answersAndQuestionsForValidationFilePath": "benchmark_sonnet_4_6\\answers_validation\\questions_and_answers_with_optional_31_records.json",
+            "questionnaireFilePath": "benchmark_sonnet_4_6\\questions\\questions_with_optional_31_records.json",
+            "answerTemplateFilePath": "benchmark_sonnet_4_6\\answers_template\\answers_with_optional_31_records_template.json",
+            "dataAndOutput": [
+                {
+                    "structure": "flat",
+                    "format": "csv",
+                    "allFieldsManadatory": false,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\csv\\csv_with_optional_31_flat_records.csv",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\csv\\answers_with_optional_31_flat_records.json",
+                    "metadata": {
+                        "characterCount": 9577,
+                        "avgCharacterCountPerRecord": 308.93548387096774,
+                        "avgCharacterCountPerValue": 15.177496038034866
+                    }
+                },
+                {
+                    "structure": "flat",
+                    "format": "json_pretty",
+                    "allFieldsManadatory": false,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\json_pretty\\json_pretty_with_optional_31_flat_records.json",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\json_pretty\\answers_with_optional_31_flat_records.json",
+                    "metadata": {
+                        "characterCount": 22457,
+                        "avgCharacterCountPerRecord": 724.4193548387096,
+                        "avgCharacterCountPerValue": 35.58954041204437
+                    }
+                },
+                {
+                    "structure": "flat",
+                    "format": "json_compact",
+                    "allFieldsManadatory": false,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\json_compact\\json_compact_with_optional_31_flat_records.json",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\json_compact\\answers_with_optional_31_flat_records.json",
+                    "metadata": {
+                        "characterCount": 18484,
+                        "avgCharacterCountPerRecord": 596.258064516129,
+                        "avgCharacterCountPerValue": 29.293185419968303
+                    }
+                },
+                {
+                    "structure": "flat",
+                    "format": "toon_default",
+                    "allFieldsManadatory": false,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\toon_default\\toon_default_with_optional_31_flat_records.toon",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\toon_default\\answers_with_optional_31_flat_records.json",
+                    "metadata": {
+                        "characterCount": 19631,
+                        "avgCharacterCountPerRecord": 633.258064516129,
+                        "avgCharacterCountPerValue": 31.11093502377179
+                    }
+                },
+                {
+                    "structure": "flat",
+                    "format": "xml_pretty",
+                    "allFieldsManadatory": false,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\xml_pretty\\xml_pretty_with_optional_31_flat_records.xml",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\xml_pretty\\answers_with_optional_31_flat_records.json",
+                    "metadata": {
+                        "characterCount": 28923,
+                        "avgCharacterCountPerRecord": 933,
+                        "avgCharacterCountPerValue": 45.83676703645008
+                    }
+                },
+                {
+                    "structure": "flat",
+                    "format": "xml_compact",
+                    "allFieldsManadatory": false,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\xml_compact\\xml_compact_with_optional_31_flat_records.xml",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\xml_compact\\answers_with_optional_31_flat_records.json",
+                    "metadata": {
+                        "characterCount": 25580,
+                        "avgCharacterCountPerRecord": 825.1612903225806,
+                        "avgCharacterCountPerValue": 40.538827258320126
+                    }
+                },
+                {
+                    "structure": "flat",
+                    "format": "yaml",
+                    "allFieldsManadatory": false,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\yaml\\yaml_with_optional_31_flat_records.yaml",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\yaml\\answers_with_optional_31_flat_records.json",
+                    "metadata": {
+                        "characterCount": 19407,
+                        "avgCharacterCountPerRecord": 626.0322580645161,
+                        "avgCharacterCountPerValue": 30.75594294770206
+                    }
+                },
+                {
+                    "structure": "nested",
+                    "format": "json_pretty",
+                    "allFieldsManadatory": false,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\json_pretty\\json_pretty_with_optional_31_nested_records.json",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\json_pretty\\answers_with_optional_31_nested_records.json",
+                    "metadata": {
+                        "characterCount": 31277,
+                        "avgCharacterCountPerRecord": 1008.9354838709677,
+                        "avgCharacterCountPerValue": 49.567353407290014
+                    }
+                },
+                {
+                    "structure": "nested",
+                    "format": "json_compact",
+                    "allFieldsManadatory": false,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\json_compact\\json_compact_with_optional_31_nested_records.json",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\json_compact\\answers_with_optional_31_nested_records.json",
+                    "metadata": {
+                        "characterCount": 22483,
+                        "avgCharacterCountPerRecord": 725.258064516129,
+                        "avgCharacterCountPerValue": 35.63074484944533
+                    }
+                },
+                {
+                    "structure": "nested",
+                    "format": "toon_default",
+                    "allFieldsManadatory": false,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\toon_default\\toon_default_with_optional_31_nested_records.toon",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\toon_default\\answers_with_optional_31_nested_records.json",
+                    "metadata": {
+                        "characterCount": 26799,
+                        "avgCharacterCountPerRecord": 864.483870967742,
+                        "avgCharacterCountPerValue": 42.47068145800317
+                    }
+                },
+                {
+                    "structure": "nested",
+                    "format": "toon_keyfold",
+                    "allFieldsManadatory": false,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\toon_keyfold\\toon_keyfold_with_optional_31_nested_records.toon",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\toon_keyfold\\answers_with_optional_31_nested_records.json",
+                    "metadata": {
+                        "characterCount": 26582,
+                        "avgCharacterCountPerRecord": 857.483870967742,
+                        "avgCharacterCountPerValue": 42.12678288431062
+                    }
+                },
+                {
+                    "structure": "nested",
+                    "format": "xml_pretty",
+                    "allFieldsManadatory": false,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\xml_pretty\\xml_pretty_with_optional_31_nested_records.xml",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\xml_pretty\\answers_with_optional_31_nested_records.json",
+                    "metadata": {
+                        "characterCount": 41177,
+                        "avgCharacterCountPerRecord": 1328.2903225806451,
+                        "avgCharacterCountPerValue": 65.25673534072901
+                    }
+                },
+                {
+                    "structure": "nested",
+                    "format": "xml_compact",
+                    "allFieldsManadatory": false,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\xml_compact\\xml_compact_with_optional_31_nested_records.xml",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\xml_compact\\answers_with_optional_31_nested_records.json",
+                    "metadata": {
+                        "characterCount": 32991,
+                        "avgCharacterCountPerRecord": 1064.225806451613,
+                        "avgCharacterCountPerValue": 52.28367670364501
+                    }
+                },
+                {
+                    "structure": "nested",
+                    "format": "yaml",
+                    "allFieldsManadatory": false,
+                    "dataFilePath": "benchmark_sonnet_4_6\\data\\yaml\\yaml_with_optional_31_nested_records.yaml",
+                    "expectedOutputFilePath": "benchmark_sonnet_4_6\\subagent_outputs\\yaml\\answers_with_optional_31_nested_records.json",
+                    "metadata": {
+                        "characterCount": 26245,
+                        "avgCharacterCountPerRecord": 846.6129032258065,
+                        "avgCharacterCountPerValue": 41.59270998415214
+                    }
+                }
+            ]
+        }
+    ]
+}
