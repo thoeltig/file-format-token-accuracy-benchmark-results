@@ -182,7 +182,7 @@
             "totalFiles": 16,
             "totalReadTokens": 174433,
             "totalReadDurationMs": 354,
-            "averageReadTokens": 10902.063,
+            "averageReadTokens": 10902.062,
             "averageDurationMs": 22.125
         }
     },
@@ -197,9 +197,9 @@
                 "durationMs": 126926,
                 "durationMsMin": 82668,
                 "durationMsMax": 187828,
-                "outputTokens": 204,
-                "outputTokensMin": 13,
-                "outputTokensMax": 302
+                "outputTokens": 4652.667,
+                "outputTokensMin": 109,
+                "outputTokensMax": 13436
             },
             {
                 "format": "json_compact",
@@ -210,9 +210,9 @@
                 "durationMs": 76264.667,
                 "durationMsMin": 51109,
                 "durationMsMax": 102778,
-                "outputTokens": 208.333,
-                "outputTokensMin": 9,
-                "outputTokensMax": 312
+                "outputTokens": 9159,
+                "outputTokensMin": 5153,
+                "outputTokensMax": 13193
             },
             {
                 "format": "csv",
@@ -223,9 +223,9 @@
                 "durationMs": 76722.667,
                 "durationMsMin": 48836,
                 "durationMsMax": 108398,
-                "outputTokens": 301,
-                "outputTokensMin": 299,
-                "outputTokensMax": 302
+                "outputTokens": 9240.333,
+                "outputTokensMin": 5355,
+                "outputTokensMax": 13184
             },
             {
                 "format": "json_pretty",
@@ -236,9 +236,9 @@
                 "durationMs": 108072.667,
                 "durationMsMin": 99622,
                 "durationMsMax": 122890,
-                "outputTokens": 308,
-                "outputTokensMin": 303,
-                "outputTokensMax": 312
+                "outputTokens": 13508.333,
+                "outputTokensMin": 12042,
+                "outputTokensMax": 16106
             },
             {
                 "format": "toon_default",
@@ -246,12 +246,12 @@
                 "variant": "mandatory",
                 "recordCount": 31,
                 "testRuns": 2,
-                "durationMs": 115857.5,
+                "durationMs": 139791.5,
                 "durationMsMin": 105480,
-                "durationMsMax": 126235,
-                "outputTokens": 308.5,
-                "outputTokensMin": 306,
-                "outputTokensMax": 311
+                "durationMsMax": 174103,
+                "outputTokens": 18243,
+                "outputTokensMin": 12776,
+                "outputTokensMax": 23710
             },
             {
                 "format": "toon_default",
@@ -262,9 +262,9 @@
                 "durationMs": 98823,
                 "durationMsMin": 77507,
                 "durationMsMax": 112597,
-                "outputTokens": 314,
-                "outputTokensMin": 309,
-                "outputTokensMax": 322
+                "outputTokens": 12728.667,
+                "outputTokensMin": 9467,
+                "outputTokensMax": 15575
             },
             {
                 "format": "yaml",
@@ -275,9 +275,9 @@
                 "durationMs": 92165.333,
                 "durationMsMin": 77070,
                 "durationMsMax": 112160,
-                "outputTokens": 303.667,
-                "outputTokensMin": 301,
-                "outputTokensMax": 305
+                "outputTokens": 11181.333,
+                "outputTokensMin": 9861,
+                "outputTokensMax": 13179
             },
             {
                 "format": "xml_compact",
@@ -288,9 +288,9 @@
                 "durationMs": 92319.333,
                 "durationMsMin": 77676,
                 "durationMsMax": 116340,
-                "outputTokens": 308.667,
-                "outputTokensMin": 307,
-                "outputTokensMax": 312
+                "outputTokens": 11539.333,
+                "outputTokensMin": 9940,
+                "outputTokensMax": 14291
             },
             {
                 "format": "toon_default",
@@ -301,9 +301,9 @@
                 "durationMs": 90754.333,
                 "durationMsMin": 72460,
                 "durationMsMax": 108807,
-                "outputTokens": 309.333,
-                "outputTokensMin": 306,
-                "outputTokensMax": 314
+                "outputTokens": 11145.333,
+                "outputTokensMin": 8933,
+                "outputTokensMax": 13272
             },
             {
                 "format": "xml_pretty",
@@ -314,9 +314,9 @@
                 "durationMs": 87746.667,
                 "durationMsMin": 72277,
                 "durationMsMax": 113864,
-                "outputTokens": 209.333,
-                "outputTokensMin": 13,
-                "outputTokensMax": 309
+                "outputTokens": 11604,
+                "outputTokensMin": 9173,
+                "outputTokensMax": 15838
             },
             {
                 "format": "xml_pretty",
@@ -327,9 +327,9 @@
                 "durationMs": 84963.667,
                 "durationMsMin": 68045,
                 "durationMsMax": 117409,
-                "outputTokens": 303.667,
-                "outputTokensMin": 303,
-                "outputTokensMax": 304
+                "outputTokens": 9923.333,
+                "outputTokensMin": 8648,
+                "outputTokensMax": 12050
             },
             {
                 "format": "xml_compact",
@@ -340,9 +340,9 @@
                 "durationMs": 111045,
                 "durationMsMin": 101395,
                 "durationMsMax": 127705,
-                "outputTokens": 208.667,
-                "outputTokensMin": 13,
-                "outputTokensMax": 307
+                "outputTokens": 13648,
+                "outputTokensMin": 11897,
+                "outputTokensMax": 15949
             },
             {
                 "format": "json_compact",
@@ -353,9 +353,9 @@
                 "durationMs": 94209.333,
                 "durationMsMin": 76046,
                 "durationMsMax": 106816,
-                "outputTokens": 212.667,
-                "outputTokensMin": 13,
-                "outputTokensMax": 313
+                "outputTokens": 11231.667,
+                "outputTokensMin": 9068,
+                "outputTokensMax": 12622
             },
             {
                 "format": "json_pretty",
@@ -366,9 +366,9 @@
                 "durationMs": 86112,
                 "durationMsMin": 52726,
                 "durationMsMax": 126126,
-                "outputTokens": 303.333,
-                "outputTokensMin": 301,
-                "outputTokensMax": 305
+                "outputTokens": 10821.333,
+                "outputTokensMin": 5480,
+                "outputTokensMax": 17528
             },
             {
                 "format": "yaml",
@@ -379,9 +379,9 @@
                 "durationMs": 69344.333,
                 "durationMsMin": 66714,
                 "durationMsMax": 71729,
-                "outputTokens": 307.667,
-                "outputTokensMin": 307,
-                "outputTokensMax": 309
+                "outputTokens": 9260,
+                "outputTokensMin": 9168,
+                "outputTokensMax": 9395
             },
             {
                 "format": "toon_default",
@@ -392,17 +392,17 @@
                 "durationMs": 84813,
                 "durationMsMin": 63389,
                 "durationMsMax": 110652,
-                "outputTokens": 309.333,
-                "outputTokensMin": 307,
-                "outputTokensMax": 312
+                "outputTokens": 10692,
+                "outputTokensMin": 7895,
+                "outputTokensMax": 13668
             }
         ],
         "summary": {
             "totalTestCases": 16,
-            "totalDurationMs": 1496139.5,
-            "totalOutputTokens": 4420.167,
-            "averageDurationMs": 93508.719,
-            "averageOutputTokens": 276.26
+            "totalDurationMs": 1520073.5,
+            "totalOutputTokens": 178578.332,
+            "averageDurationMs": 95004.594,
+            "averageOutputTokens": 11161.146
         }
     }
 }

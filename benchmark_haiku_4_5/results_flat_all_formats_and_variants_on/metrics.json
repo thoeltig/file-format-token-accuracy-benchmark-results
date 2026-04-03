@@ -182,7 +182,7 @@
             "totalFiles": 16,
             "totalReadTokens": 174785,
             "totalReadDurationMs": 191,
-            "averageReadTokens": 10924.063,
+            "averageReadTokens": 10924.062,
             "averageDurationMs": 11.938
         }
     },
@@ -197,9 +197,9 @@
                 "durationMs": 110859.333,
                 "durationMsMin": 104580,
                 "durationMsMax": 119969,
-                "outputTokens": 341.667,
-                "outputTokensMin": 335,
-                "outputTokensMax": 346
+                "outputTokens": 14556.333,
+                "outputTokensMin": 12967,
+                "outputTokensMax": 16217
             },
             {
                 "format": "toon_default",
@@ -210,9 +210,9 @@
                 "durationMs": 111018.667,
                 "durationMsMin": 96831,
                 "durationMsMax": 122539,
-                "outputTokens": 343.333,
-                "outputTokensMin": 342,
-                "outputTokensMax": 345
+                "outputTokens": 13800.333,
+                "outputTokensMin": 10874,
+                "outputTokensMax": 16532
             },
             {
                 "format": "yaml",
@@ -223,9 +223,9 @@
                 "durationMs": 88278.333,
                 "durationMsMin": 74611,
                 "durationMsMax": 95947,
-                "outputTokens": 231,
-                "outputTokensMin": 14,
-                "outputTokensMax": 343
+                "outputTokens": 10710.667,
+                "outputTokensMin": 8741,
+                "outputTokensMax": 11831
             },
             {
                 "format": "json_pretty",
@@ -236,9 +236,9 @@
                 "durationMs": 73161.5,
                 "durationMsMin": 53591,
                 "durationMsMax": 92732,
-                "outputTokens": 336,
-                "outputTokensMin": 334,
-                "outputTokensMax": 338
+                "outputTokens": 8508.5,
+                "outputTokensMin": 5562,
+                "outputTokensMax": 11455
             },
             {
                 "format": "xml_pretty",
@@ -249,9 +249,9 @@
                 "durationMs": 78965,
                 "durationMsMin": 72448,
                 "durationMsMax": 88846,
-                "outputTokens": 232.333,
-                "outputTokensMin": 13,
-                "outputTokensMax": 348
+                "outputTokens": 10161.333,
+                "outputTokensMin": 8863,
+                "outputTokensMax": 11139
             },
             {
                 "format": "xml_compact",
@@ -262,9 +262,9 @@
                 "durationMs": 95202,
                 "durationMsMin": 71900,
                 "durationMsMax": 116266,
-                "outputTokens": 335.333,
-                "outputTokensMin": 332,
-                "outputTokensMax": 338
+                "outputTokens": 11652,
+                "outputTokensMin": 9080,
+                "outputTokensMax": 14057
             },
             {
                 "format": "csv",
@@ -275,9 +275,9 @@
                 "durationMs": 78261.667,
                 "durationMsMin": 54212,
                 "durationMsMax": 94351,
-                "outputTokens": 329.333,
-                "outputTokensMin": 329,
-                "outputTokensMax": 330
+                "outputTokens": 9636.333,
+                "outputTokensMin": 5913,
+                "outputTokensMax": 12762
             },
             {
                 "format": "xml_compact",
@@ -288,9 +288,9 @@
                 "durationMs": 75333.667,
                 "durationMsMin": 54715,
                 "durationMsMax": 89910,
-                "outputTokens": 342.667,
-                "outputTokensMin": 334,
-                "outputTokensMax": 352
+                "outputTokens": 9555.333,
+                "outputTokensMin": 6074,
+                "outputTokensMax": 12195
             },
             {
                 "format": "json_compact",
@@ -301,9 +301,9 @@
                 "durationMs": 109802,
                 "durationMsMin": 99987,
                 "durationMsMax": 114989,
-                "outputTokens": 227.667,
-                "outputTokensMin": 9,
-                "outputTokensMax": 339
+                "outputTokens": 13355,
+                "outputTokensMin": 12049,
+                "outputTokensMax": 14374
             },
             {
                 "format": "json_pretty",
@@ -314,9 +314,9 @@
                 "durationMs": 106025.667,
                 "durationMsMin": 98973,
                 "durationMsMax": 112746,
-                "outputTokens": 341,
-                "outputTokensMin": 340,
-                "outputTokensMax": 343
+                "outputTokens": 13328,
+                "outputTokensMin": 12222,
+                "outputTokensMax": 14731
             },
             {
                 "format": "yaml",
@@ -327,9 +327,9 @@
                 "durationMs": 88549,
                 "durationMsMin": 77043,
                 "durationMsMax": 111149,
-                "outputTokens": 333.333,
-                "outputTokensMin": 331,
-                "outputTokensMax": 335
+                "outputTokens": 10702.333,
+                "outputTokensMin": 8719,
+                "outputTokensMax": 13964
             },
             {
                 "format": "toon_default",
@@ -340,9 +340,9 @@
                 "durationMs": 80913.667,
                 "durationMsMin": 69065,
                 "durationMsMax": 103346,
-                "outputTokens": 230.667,
-                "outputTokensMin": 9,
-                "outputTokensMax": 342
+                "outputTokens": 9886.667,
+                "outputTokensMin": 8460,
+                "outputTokensMax": 12447
             },
             {
                 "format": "csv",
@@ -353,9 +353,9 @@
                 "durationMs": 109799.667,
                 "durationMsMin": 106533,
                 "durationMsMax": 115610,
-                "outputTokens": 231,
-                "outputTokensMin": 13,
-                "outputTokensMax": 344
+                "outputTokens": 12999,
+                "outputTokensMin": 12575,
+                "outputTokensMax": 13304
             },
             {
                 "format": "toon_default",
@@ -366,9 +366,9 @@
                 "durationMs": 77811.333,
                 "durationMsMin": 54561,
                 "durationMsMax": 120777,
-                "outputTokens": 338.667,
-                "outputTokensMin": 335,
-                "outputTokensMax": 343
+                "outputTokens": 9289.667,
+                "outputTokensMin": 5573,
+                "outputTokensMax": 16310
             },
             {
                 "format": "json_compact",
@@ -379,9 +379,9 @@
                 "durationMs": 82813.333,
                 "durationMsMin": 54867,
                 "durationMsMax": 117436,
-                "outputTokens": 337.667,
-                "outputTokensMin": 334,
-                "outputTokensMax": 341
+                "outputTokens": 10136.333,
+                "outputTokensMin": 5866,
+                "outputTokensMax": 15097
             },
             {
                 "format": "xml_pretty",
@@ -392,17 +392,17 @@
                 "durationMs": 102619,
                 "durationMsMin": 80686,
                 "durationMsMax": 113962,
-                "outputTokens": 342.667,
-                "outputTokensMin": 336,
-                "outputTokensMax": 347
+                "outputTokens": 12871,
+                "outputTokensMin": 10201,
+                "outputTokensMax": 15226
             }
         ],
         "summary": {
             "totalTestCases": 16,
             "totalDurationMs": 1469413.834,
-            "totalOutputTokens": 4874.334,
+            "totalOutputTokens": 181148.832,
             "averageDurationMs": 91838.365,
-            "averageOutputTokens": 304.646
+            "averageOutputTokens": 11321.802
         }
     }
 }
