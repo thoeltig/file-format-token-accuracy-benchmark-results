@@ -82,6 +82,8 @@ This requires measuring:
 Tokens usage measured in this benchmark are no estimates but the real token usage the model used in this test. The token usage is reported to the user indirectly in the conversation transcript. Both read and output Tokens are directly extracted from the transcripts of the subagents:
 - **Read Tokens**: For each data file a single read subagent is invoked with the only prompt to read the file at the provided filepath and return "Done" once finished and do nothing more. The token extraction script searches for the read tool result and extracts only the read tokens of it.
 - **Output Tokens**: For each data file three "benchmark-full-test" subagent are invoked with data, questions and answers template files and the instructions to read everything and answer all questions in a single write tool use. The token extraction script aggregates all output tokens until and including the write tool result.
+   - **Output Before Write Tokens**: The output tokens which the model needed for reading the provided files and instructions.
+   - **Output Write Tokens**: The output tokens the model used to create the output and write the answers file.
 
 ## 2. Results
 
@@ -92,91 +94,107 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
 #### 2.1.1 Best results
 
 - Lowest total token cost:
-   - Optional: CSV 15927 tokens
-   - Mandatory: CSV 11621 tokens
+   - Optional: CSV 15867 tokens
+   - Mandatory: CSV 11525 tokens
 - Lowest read token cost:
    - Optional: CSV 6687 tokens
    - Mandatory: CSV 6968 tokens
 - Lowest output token cost:
-   - Optional: JSON_COMPACT 9159 tokens
-   - Mandatory: CSV 4653 tokens
+   - Optional: JSON_COMPACT 9070 tokens
+   - Mandatory: CSV 4557 tokens
 - Lowest output token cost drift:
-   - Optional: YAML ↓ -0.99% ↑ 1.46%
-   - Mandatory: YAML ↓ -11.81% ↑ 17.87%
+   - Optional: YAML ↓ -0.93% ↑ 1.21%
+   - Mandatory: YAML ↓ -12.04% ↑ 17.22%
 - Highest accuracy:
    - Optional: TOON_DEFAULT 79.84%
    - Mandatory: YAML 81.18%
 - Lowest accuracy drift:
    - Optional: TOON_DEFAULT ↓ -2.02% ↑ 4.03%
    - Mandatory: JSON_PRETTY ↓ -1.00% ↑ 0.99%
-- Most useful tokens:
-   - Optional: XML_PRETTY 21301 / 26680 tokens
-   - Mandatory: JSON_PRETTY 22390 / 27762 tokens
-- Highest token efficiency (%/token):
-   - Optional: JSON_COMPACT 72.55
-   - Mandatory: CSV 78.34
+- Most useful read tokens:
+   - Optional: XML_PRETTY 12037 / 15076 tokens
+   - Mandatory: XML_PRETTY 12753 / 16137 tokens
+- Most useful output tokens:
+   - Optional: TOON_DEFAULT 9438 / 11821 tokens
+   - Mandatory: JSON_PRETTY 10749 / 13328 tokens
+- Highest read efficiency (%/token):
+   - Optional: JSON_COMPACT 77.70
+   - Mandatory: TOON_DEFAULT 84.43
+- Highest output efficiency (%/token):
+   - Optional: JSON_COMPACT 77.70
+   - Mandatory: CSV 77.43
 - Lowest delta (optional-mandatory):
-   - Total tokens: XML_PRETTY 620 tokens
+   - Read tokens: CSV -281 tokens
+   - Output tokens: TOON_DEFAULT -464 tokens
    - Accuracy: TOON_DEFAULT 0.54%
-   - Token efficiency: YAML -0.04
+   - Read efficiency: JSON_PRETTY 1.18
+   - Output efficiency: YAML 1.18
 
 #### 2.1.2 Worst results
 
 - Highest total token cost:
-   - Optional: XML_PRETTY 26680 tokens
-   - Mandatory: JSON_PRETTY 27762 tokens
+   - Optional: XML_PRETTY 26555 tokens
+   - Mandatory: JSON_PRETTY 27582 tokens
 - Highest read token cost:
    - Optional: XML_PRETTY 15076 tokens
    - Mandatory: XML_PRETTY 16137 tokens
 - Highest output token cost:
-   - Optional: TOON_DEFAULT 11937 tokens
-   - Mandatory: TOON_DEFAULT 14468 tokens
+   - Optional: TOON_DEFAULT 11821 tokens
+   - Mandatory: XML_COMPACT 13453 tokens
 - Highest output token drift:
-   - Optional: JSON_PRETTY ↓ -49.36% ↑ 61.98%
-   - Mandatory: CSV ↓ -97.66% ↑ 188.78%
+   - Optional: JSON_PRETTY ↓ -50.40% ↑ 63.06%
+   - Mandatory: CSV ↓ -99.69% ↑ 193.15%
 - Lowest accuracy:
    - Optional: CSV 62.90%
    - Mandatory: CSV 69.08%
 - Highest accuracy drift:
    - Optional: JSON_COMPACT ↓ -9.38% ↑ 7.28%
    - Mandatory: TOON_DEFAULT ↓ -16.61% ↑ 10.84%
-- Most wasted tokens:
-   - Optional: CSV 5909 / 15927 tokens
-   - Mandatory: XML_PRETTY 5465 / 26060 tokens
-- Lowest token efficiency (%/token):
-   - Optional: XML_PRETTY 57.92
-   - Mandatory: JSON_PRETTY 56.47
+- Most wasted read tokens:
+   - Optional: YAML 3061 / 11742 tokens
+   - Mandatory: XML_PRETTY 3384 / 16137 tokens
+- Most wasted output tokens:
+   - Optional: CSV 3406 / 9180 tokens
+   - Mandatory: XML_COMPACT 2892 / 13453 tokens
+- Lowest read efficiency (%/token):
+   - Optional: XML_PRETTY 59.28
+   - Mandatory: XML_PRETTY 55.35
+- Lowest output efficiency (%/token):
+   - Optional: CSV 59.28
+   - Mandatory: XML_COMPACT 56.60
 - Highest delta (optional-mandatory):
-   - Total tokens: CSV 4307 tokens
+   - Read tokens: TOON_DEFAULT 4522 tokens
+   - Output tokens: CSV 4622 tokens
    - Accuracy: YAML -7.25%
-   - Token efficiency: CSV -12.32
+   - Read efficiency: TOON_DEFAULT -13.95
+   - Output efficiency: CSV -19.04
 
 #### 2.1.3 Format Ranking
 
 ##### Mandatory
 
-| ↑ Total Duration | ↑ Read Tokens | ↑ Output Tokens | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Accuracy | ↓ Wtd Accuracy | ↓ Eff Score | ↓ Wtd Eff Score |
-|---|---|---|---|---|---|---|---|---|
-| TOON_DEFAULT ≈ 42s | CSV ≈ 6968 | CSV ≈ 4653 | CSV ≈ 11621 | CSV ≈ 3593 | YAML ≈ 81% | YAML ≈ 79% | CSV ≈ 78 | CSV ≈ 79 |
-| XML_PRETTY (+100.3%) | TOON_DEFAULT (+0.7%) | XML_PRETTY (+113.3%) | JSON_COMPACT (+76.3%) | TOON_DEFAULT (+23.8%) | JSON_PRETTY (-0.5%) | JSON_PRETTY (-0.7%) | TOON_DEFAULT (-14.2%) | TOON_DEFAULT (-15.3%) |
-| YAML (+117.3%) | JSON_COMPACT (+32.8%) | YAML (+140.3%) | TOON_DEFAULT (+84.9%) | YAML (+24.2%) | TOON_DEFAULT (-1.9%) | TOON_DEFAULT (-1.1%) | JSON_COMPACT (-15.0%) | JSON_COMPACT (-16.2%) |
-| JSON_COMPACT (+122.1%) | XML_COMPACT (+67.5%) | JSON_COMPACT (+141.4%) | YAML (+104.1%) | JSON_COMPACT (+37.9%) | XML_PRETTY (-2.2%) | XML_PRETTY (-2.0%) | YAML (-17.8%) | YAML (-19.6%) |
-| JSON_PRETTY (+154.8%) | YAML (+79.9%) | JSON_PRETTY (+190.3%) | XML_COMPACT (+117.9%) | JSON_PRETTY (+49.5%) | XML_COMPACT (-2.7%) | XML_COMPACT (-2.4%) | XML_COMPACT (-24.0%) | XML_COMPACT (-25.5%) |
-| XML_COMPACT (+161.8%) | JSON_PRETTY (+104.6%) | XML_COMPACT (+193.3%) | XML_PRETTY (+124.3%) | XML_COMPACT (+51.5%) | JSON_COMPACT (-5.4%) | JSON_COMPACT (-4.8%) | XML_PRETTY (-25.3%) | XML_PRETTY (-26.9%) |
-| CSV (+199.3%) | XML_PRETTY (+131.6%) | TOON_DEFAULT (+211.0%) | JSON_PRETTY (+138.9%) | XML_PRETTY (+52.1%) | CSV (-12.1%) | CSV (-10.1%) | JSON_PRETTY (-27.9%) | JSON_PRETTY (-29.8%) |
+| ↑ Total Duration | ↑ Read Tokens | ↑ Output Before Write Tokens | ↑ Output Write Tokens | ↑ Output Tokens | ↑ Total Tokens | ↓ Accuracy | ↓ Eff Score Read | ↓ Eff Score Output | ↓ Eff Score Total |
+|---|---|---|---|---|---|---|---|---|---|
+| XML_PRETTY ≈ 85s | CSV ≈ 6968 | CSV ≈ 204 | CSV ≈ 4353 | CSV ≈ 4557 | CSV ≈ 11525 | YAML ≈ 81% | TOON_DEFAULT ≈ 84 | CSV ≈ 78 | CSV ≈ 78 |
+| YAML (+8.5%) | TOON_DEFAULT (+0.7%) | XML_COMPACT (+2.3%) | XML_PRETTY (+118.1%) | XML_PRETTY (+115.0%) | TOON_DEFAULT (+67.5%) | JSON_PRETTY (-0.5%) | CSV (-8.3%) | XML_PRETTY (-12.4%) | TOON_DEFAULT (-9.4%) |
+| JSON_COMPACT (+10.9%) | JSON_COMPACT (+32.8%) | JSON_COMPACT (+4.2%) | YAML (+147.5%) | YAML (+143.0%) | JSON_COMPACT (+76.7%) | TOON_DEFAULT (-1.9%) | JSON_COMPACT (-11.3%) | YAML (-15.7%) | JSON_COMPACT (-15.0%) |
+| TOON_DEFAULT (+18.1%) | XML_COMPACT (+67.5%) | XML_PRETTY (+48.9%) | JSON_COMPACT (+150.4%) | JSON_COMPACT (+143.8%) | YAML (+104.8%) | XML_PRETTY (-2.2%) | XML_COMPACT (-18.1%) | JSON_COMPACT (-20.6%) | YAML (-18.0%) |
+| JSON_PRETTY (+27.2%) | YAML (+79.9%) | YAML (+48.9%) | TOON_DEFAULT (+175.1%) | TOON_DEFAULT (+169.6%) | XML_COMPACT (+118.0%) | XML_COMPACT (-2.7%) | YAML (-19.1%) | TOON_DEFAULT (-22.3%) | XML_COMPACT (-24.0%) |
+| XML_COMPACT (+30.7%) | JSON_PRETTY (+104.6%) | JSON_PRETTY (+51.0%) | JSON_PRETTY (+199.1%) | JSON_PRETTY (+192.5%) | XML_PRETTY (+125.0%) | JSON_COMPACT (-5.4%) | JSON_PRETTY (-26.0%) | JSON_PRETTY (-25.3%) | XML_PRETTY (-25.4%) |
+| CSV (+49.4%) | XML_PRETTY (+131.6%) | TOON_DEFAULT (+51.4%) | XML_COMPACT (+204.2%) | XML_COMPACT (+195.2%) | JSON_PRETTY (+139.3%) | CSV (-12.1%) | XML_PRETTY (-34.4%) | XML_COMPACT (-27.7%) | JSON_PRETTY (-27.9%) |
 
 
 ##### Optional
 
-| ↑ Total Duration | ↑ Read Tokens | ↑ Output Tokens | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Acc | ↓ Wtd Acc | ↓ Eff Score | ↓ Wtd Eff Score |
-|---|---|---|---|---|---|---|---|---|
-| TOON_DEFAULT ≈ 45s | CSV ≈ 6687 | JSON_COMPACT ≈ 9159 | CSV ≈ 15927 | JSON_COMPACT ≈ 4039 | TOON_DEFAULT ≈ 80% | XML_PRETTY ≈ 80% | JSON_COMPACT ≈ 73 | JSON_COMPACT ≈ 72 |
-| YAML (+52.9%) | JSON_COMPACT (+30.5%) | CSV (+0.9%) | JSON_COMPACT (+12.3%) | TOON_DEFAULT (+17.2%) | XML_PRETTY (0.0%) | TOON_DEFAULT (-0.7%) | CSV (-9.0%) | CSV (-9.1%) |
-| JSON_COMPACT (+68.1%) | XML_COMPACT (+63.1%) | YAML (+1.1%) | YAML (+31.9%) | XML_COMPACT (+24.0%) | JSON_PRETTY (-1.6%) | JSON_PRETTY (-1.1%) | YAML (-11.3%) | YAML (-11.7%) |
-| CSV (+69.1%) | TOON_DEFAULT (+72.6%) | JSON_PRETTY (+18.1%) | XML_COMPACT (+40.9%) | JSON_PRETTY (+30.3%) | XML_COMPACT (-2.2%) | JSON_COMPACT (-2.5%) | XML_COMPACT (-11.4%) | XML_COMPACT (-12.3%) |
-| JSON_PRETTY (+89.8%) | YAML (+75.6%) | XML_COMPACT (+26.0%) | TOON_DEFAULT (+47.4%) | XML_PRETTY (+33.2%) | JSON_COMPACT (-2.4%) | XML_COMPACT (-3.1%) | TOON_DEFAULT (-12.0%) | TOON_DEFAULT (-12.6%) |
-| XML_PRETTY (+93.4%) | JSON_PRETTY (+99.6%) | XML_PRETTY (+26.7%) | JSON_PRETTY (+51.7%) | YAML (+35.6%) | YAML (-5.9%) | YAML (-6.3%) | JSON_PRETTY (-15.3%) | JSON_PRETTY (-14.8%) |
-| XML_COMPACT (+103.5%) | XML_PRETTY (+125.5%) | TOON_DEFAULT (+30.3%) | XML_PRETTY (+67.5%) | CSV (+46.3%) | CSV (-16.9%) | CSV (-17.1%) | XML_PRETTY (-20.2%) | XML_PRETTY (-20.2%) |
+| ↑ Total Benchmark Duration | ↑ Read Tokens | ↑ Output Before Write Tokens | ↑ Output Write Tokens | ↑ Output Tokens | ↑ Total Tokens | ↓ Accuracy | ↓ Eff Score Read | ↓ Eff Score Output | ↓ Eff Score Total |
+|---|---|---|---|---|---|---|---|---|---|
+| YAML ≈ 69s | CSV ≈ 6687 | JSON_COMPACT ≈ 208 | YAML ≈ 8803 | JSON_COMPACT ≈ 9070 | CSV ≈ 15867 | TOON_DEFAULT ≈ 80% | JSON_COMPACT ≈ 78 | JSON_COMPACT ≈ 70 | JSON_COMPACT ≈ 72 |
+| JSON_COMPACT (+10.0%) | JSON_COMPACT (+30.5%) | XML_PRETTY (+0.5%) | JSON_COMPACT (+0.7%) | YAML (+0.4%) | JSON_COMPACT (+12.2%) | XML_PRETTY (0.0%) | CSV (-4.8%) | YAML (-3.7%) | CSV (-9.1%) |
+| CSV (+10.6%) | XML_COMPACT (+63.1%) | CSV (+44.5%) | CSV (+0.9%) | CSV (+1.2%) | YAML (+31.4%) | JSON_PRETTY (-1.6%) | XML_COMPACT (-8.7%) | JSON_PRETTY (-6.3%) | YAML (-11.2%) |
+| JSON_PRETTY (+24.2%) | TOON_DEFAULT (+72.6%) | JSON_PRETTY (+45.6%) | JSON_PRETTY (+17.3%) | JSON_PRETTY (+17.2%) | XML_COMPACT (+40.6%) | XML_COMPACT (-2.2%) | TOON_DEFAULT (-9.3%) | XML_PRETTY (-8.6%) | XML_COMPACT (-11.4%) |
+| XML_PRETTY (+26.5%) | YAML (+75.6%) | YAML (+47.7%) | XML_COMPACT (+26.0%) | XML_COMPACT (+25.7%) | TOON_DEFAULT (+47.2%) | JSON_COMPACT (-2.4%) | YAML (-15.4%) | TOON_DEFAULT (-10.1%) | TOON_DEFAULT (-12.0%) |
+| XML_COMPACT (+33.1%) | JSON_PRETTY (+99.6%) | XML_COMPACT (+48.2%) | XML_PRETTY (+28.0%) | XML_PRETTY (+26.6%) | JSON_PRETTY (+51.1%) | YAML (-5.9%) | JSON_PRETTY (-18.1%) | XML_COMPACT (-10.4%) | JSON_PRETTY (-15.1%) |
+| TOON_DEFAULT (+36.7%) | XML_PRETTY (+125.5%) | TOON_DEFAULT (+49.6%) | TOON_DEFAULT (+30.7%) | TOON_DEFAULT (+30.3%) | XML_PRETTY (+67.4%) | CSV (-16.9%) | XML_PRETTY (-23.7%) | CSV (-15.1%) | XML_PRETTY (-20.2%) |
 
 
 #### 2.1.4 Category Accuracy Ranking
@@ -212,123 +230,145 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
 <ADD_CONTENT_HERE>Analysis here</ADD_CONTENT_HERE>
 
 ### 2.2 Comprehensive Benchmark Metrics
-| Format | Variant | Read Tokens | Output Tokens | Total | Char/Token | Info/Token | Token/Answer | Accuracy (%) | Wtd Accuracy (%) | Used Tokens | Wasted Tokens | Eff Score | Wtd Eff Score |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| CSV | man | 6968 | 4653 | 11621 | 1.449 | 0.594 | 37.522 | 69.08 | 78.53 | 8027.557 | 3593.110 | 78.34 | 78.53 |
-| CSV | opt | 6687 | 9240 | 15927 | 1.432 | 0.395 | 74.519 | 62.90 | 65.83 | 10018.292 | 5909.041 | 66.02 | 65.83 |
-| JSON_COMPACT | man | 9255 | 11232 | 20487 | 2.152 | 0.370 | 90.578 | 75.81 | 65.82 | 15530.942 | 4955.725 | 66.59 | 65.82 |
-| JSON_COMPACT | opt | 8727 | 9159 | 17886 | 2.118 | 0.433 | 73.863 | 77.42 | 72.41 | 13847.341 | 4038.659 | 72.55 | 72.41 |
-| JSON_PRETTY | man | 14254 | 13508 | 27762 | 1.697 | 0.291 | 108.938 | 80.65 | 55.13 | 22390.322 | 5372.011 | 56.47 | 55.13 |
-| JSON_PRETTY | opt | 13346 | 10821 | 24167 | 1.683 | 0.324 | 87.269 | 78.23 | 61.70 | 18906.105 | 5261.228 | 61.45 | 61.70 |
-| TOON_DEFAULT | man | 7018 | 14468 | 21486 | 1.448 | 0.381 | 116.674 | 79.30 | 66.52 | 17038.002 | 4447.498 | 67.18 | 66.52 |
-| TOON_DEFAULT | opt | 11540 | 11937 | 23477 | 1.701 | 0.341 | 96.267 | 79.84 | 63.29 | 18744.037 | 4732.963 | 63.86 | 63.29 |
-| XML_COMPACT | man | 11672 | 13648 | 25320 | 2.370 | 0.310 | 110.065 | 78.50 | 58.48 | 19876.200 | 5443.800 | 59.50 | 58.48 |
-| XML_COMPACT | opt | 10909 | 11539 | 22448 | 2.345 | 0.346 | 93.059 | 77.69 | 63.49 | 17440.110 | 5008.223 | 64.27 | 63.49 |
-| XML_PRETTY | man | 16137 | 9923 | 26060 | 1.937 | 0.303 | 80.027 | 79.03 | 57.42 | 20595.481 | 5464.852 | 58.50 | 57.42 |
-| XML_PRETTY | opt | 15076 | 11604 | 26680 | 1.918 | 0.299 | 93.581 | 79.84 | 57.82 | 21301.312 | 5378.688 | 57.92 | 57.82 |
-| YAML | man | 12533 | 11181 | 23714 | 1.666 | 0.342 | 90.172 | 81.18 | 63.16 | 19251.296 | 4463.037 | 64.36 | 63.16 |
-| YAML | opt | 11742 | 9260 | 21002 | 1.653 | 0.352 | 74.677 | 73.93 | 63.93 | 15526.779 | 5475.221 | 64.32 | 63.93 |
+| Format | Variant | Read Tokens | Output Tokens | Total Tokens | Char / Read Token | Output Write Tokens / Answer | Accuracy (%) | Useful Read Tokens | Wasted Read Tokens | Useful Output Tokens | Wasted Output Tokens | Eff Score Read | Eff Score Output | Eff Score Total |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| CSV | man | 6968 | 4557 | 11525 | 1.449 | 35.108 | 69.08 | 4813.494 | 2154.506 | 3148.206 | 1409.127 | 77.43 | 78.32 | 78.34 |
+| CSV | opt | 6687 | 9180 | 15867 | 1.432 | 71.602 | 62.90 | 4206.123 | 2480.877 | 5774.011 | 3405.656 | 74.00 | 59.28 | 65.91 |
+| JSON_COMPACT | man | 9255 | 11113 | 20368 | 2.152 | 87.903 | 75.81 | 7016.216 | 2238.785 | 8424.513 | 2688.154 | 74.90 | 62.16 | 66.55 |
+| JSON_COMPACT | opt | 8727 | 9070 | 17797 | 2.118 | 71.462 | 77.42 | 6756.443 | 1970.557 | 7021.736 | 2047.931 | 77.70 | 69.80 | 72.47 |
+| JSON_PRETTY | man | 14254 | 13328 | 27582 | 1.697 | 105.003 | 80.65 | 11495.851 | 2758.149 | 10749.301 | 2579.032 | 62.45 | 58.50 | 56.47 |
+| JSON_PRETTY | opt | 13346 | 10628 | 23974 | 1.683 | 83.261 | 78.23 | 10440.576 | 2905.424 | 8314.024 | 2313.643 | 63.63 | 65.40 | 61.51 |
+| TOON_DEFAULT | man | 7018 | 12285 | 19303 | 1.448 | 96.579 | 79.30 | 5565.274 | 1452.726 | 9741.807 | 2542.944 | 84.43 | 60.88 | 70.98 |
+| TOON_DEFAULT | opt | 11540 | 11821 | 23361 | 1.701 | 92.815 | 79.84 | 9213.536 | 2326.464 | 9437.620 | 2383.047 | 70.48 | 62.73 | 63.78 |
+| XML_COMPACT | man | 11672 | 13453 | 25125 | 2.370 | 106.812 | 78.50 | 9162.520 | 2509.480 | 10560.866 | 2892.467 | 69.13 | 56.60 | 59.55 |
+| XML_COMPACT | opt | 10909 | 11402 | 22311 | 2.345 | 89.460 | 77.69 | 8475.202 | 2433.798 | 8857.955 | 2543.712 | 70.98 | 62.56 | 64.24 |
+| XML_PRETTY | man | 16137 | 9799 | 25936 | 1.937 | 76.578 | 79.03 | 12753.071 | 3383.929 | 7744.413 | 2054.920 | 55.35 | 68.60 | 58.41 |
+| XML_PRETTY | opt | 15076 | 11479 | 26555 | 1.918 | 90.882 | 79.84 | 12036.678 | 3039.322 | 9164.568 | 2314.099 | 59.28 | 63.82 | 57.82 |
+| YAML | man | 12533 | 11076 | 23609 | 1.666 | 86.874 | 81.18 | 10174.289 | 2358.711 | 8991.497 | 2084.503 | 68.28 | 66.04 | 64.26 |
+| YAML | opt | 11742 | 9110 | 20852 | 1.653 | 70.989 | 73.93 | 8680.861 | 3061.139 | 6735.269 | 2375.064 | 65.71 | 67.22 | 64.33 |
 
 ### 2.3 Format Robustness: Mandatory vs Optional
-| Format | Read Tokens Man | Read Tokens Opt | Diff | Diff (%) | Output Tokens Man | Output Tokens Opt | Diff | Diff (%) | Total Tokens Man | Total Tokens Opt | Diff | Diff (%) | Wtd Accuracy Man (%) | Wtd Accuracy Opt (%) | Diff (%) | Wtd Eff Score Man | Wtd Eff Score Opt | Diff |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| CSV | 6968 | 6687 | -281 | -4.03 | 4653 | 9241 |  +4588 |  +98.60 | 11621 | 15928 |  +4307 |  +37.06 | 69.36 | 62.64 | -6.72 | 78.53 | 65.83 | -12.70 |
-| JSON_COMPACT | 9255 | 8727 | -528 | -5.71 | 11232 | 9159 | -2073 | -18.46 | 20487 | 17886 | -2601 | -12.70 | 74.71 | 77.23 |  +2.52 | 65.82 | 72.41 |  +6.59 |
-| JSON_PRETTY | 14254 | 13346 | -908 | -6.37 | 13508 | 10821 | -2687 | -19.89 | 27762 | 24167 | -3595 | -12.95 | 78.73 | 78.58 | -0.15 | 55.13 | 61.70 |  +6.57 |
-| TOON_DEFAULT | 7018 | 11540 |  +4522 |  +64.43 | 14468 | 11938 | -2530 | -17.49 | 21486 | 23478 |  +1992 |  +9.27 | 78.36 | 79.02 |  +0.66 | 66.52 | 63.29 | -3.23 |
-| XML_COMPACT | 11672 | 10909 | -763 | -6.54 | 13648 | 11539 | -2109 | -15.45 | 25320 | 22448 | -2872 | -11.34 | 77.04 | 76.58 | -0.46 | 58.48 | 63.49 |  +5.01 |
-| XML_PRETTY | 16137 | 15076 | -1061 | -6.57 | 9923 | 11604 |  +1681 |  +16.94 | 26060 | 26680 |  +620 |  +2.38 | 77.49 | 79.70 |  +2.21 | 57.42 | 57.82 |  +0.40 |
-| YAML | 12533 | 11742 | -791 | -6.31 | 11181 | 9260 | -1921 | -17.18 | 23714 | 21002 | -2712 | -11.44 | 79.47 | 73.38 | -6.09 | 63.16 | 63.93 |  +0.77 |
+| Format | Read Tokens Man | Read Tokens Opt | Diff | Diff (%) | Output Before Write Tokens Man | Output Before Write Tokens Opt | Diff | Diff (%) | Output Write Tokens Man | Output Write Tokens Opt | Diff | Diff (%) | Output Tokens Man | Output Tokens Opt | Diff | Diff (%) | Total Tokens Man | Total Tokens Opt | Diff | Diff (%) |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| CSV | 6968 | 6687 | -281 | -4.03 | 204 | 301 |  +4525 |  +2218.14 | 4353 | 8878 |  +4622 |  +106.18 | 4557 | 9179 |  +4622 |  +101.43 | 11525 | 15866 |  +4341 |  +37.67 |
+| JSON_COMPACT | 9255 | 8727 | -528 | -5.71 | 213 | 209 | -2039 | -957.28 | 10900 | 8861 | -2043 | -18.74 | 11113 | 9070 | -2043 | -18.38 | 20368 | 17797 | -2571 | -12.62 |
+| JSON_PRETTY | 14254 | 13346 | -908 | -6.37 | 308 | 303 | -2696 | -875.32 | 13020 | 10324 | -2701 | -20.75 | 13328 | 10627 | -2701 | -20.27 | 27582 | 23973 | -3609 | -13.08 |
+| TOON_DEFAULT | 7018 | 11540 |  +4522 |  +64.43 | 309 | 312 | -467 | -151.13 | 11976 | 11509 | -464 | -3.87 | 12285 | 11821 | -464 | -3.78 | 19303 | 23361 |  +4058 |  +21.02 |
+| XML_COMPACT | 11672 | 10909 | -763 | -6.54 | 209 | 309 | -2152 | -1029.67 | 13245 | 11093 | -2052 | -15.49 | 13453 | 11401 | -2052 | -15.25 | 25125 | 22310 | -2815 | -11.20 |
+| XML_PRETTY | 16137 | 15076 | -1061 | -6.57 | 304 | 210 |  +1774 |  +583.55 | 9496 | 11270 |  +1679 |  +17.68 | 9799 | 11478 |  +1679 |  +17.13 | 25936 | 26554 |  +618 |  +2.38 |
+| YAML | 12533 | 11742 | -791 | -6.31 | 304 | 308 | -1970 | -648.03 | 10772 | 8802 | -1966 | -18.25 | 11076 | 9110 | -1966 | -17.75 | 23609 | 20852 | -2757 | -11.68 |
 
 ### 2.4 Performance
 #### 2.4.1 Metrics
-| Format | Variant | Read (ms) | Read (tokens/ms) | Rate (ms/record) | Output (ms) | Output (tokens/ms) | Rate (ms/question) | Total (ms) | Total (tokens/ms) | Rate (ms/record+question) |
+| Format | Variant | Read (ms) | Read (tokens/ms) | Rate (ms/record) | Output Write (ms) | Output Write (tokens/ms) | Rate (ms/question) | Read + Output Write (ms) | Read + Output Write (tokens/ms) | Rate (ms/record+question) |
 |---|---|---|---|---|---|---|---|---|---|---|
-| CSV | man | 23 | 302.957 | 0.74 | 126926 | 0.037 | 1023.60 | 126949 | 302.994 | 819.03 |
-| CSV | opt | 14 | 477.643 | 0.45 | 76723 | 0.120 | 618.73 | 76737 | 477.763 | 495.08 |
-| JSON_COMPACT | man | 24 | 385.625 | 0.77 | 94209 | 0.119 | 759.75 | 94233 | 385.744 | 607.96 |
-| JSON_COMPACT | opt | 13 | 671.308 | 0.42 | 76265 | 0.120 | 615.04 | 76278 | 671.428 | 492.11 |
-| JSON_PRETTY | man | 30 | 475.133 | 0.97 | 108073 | 0.125 | 871.55 | 108103 | 475.258 | 697.44 |
-| JSON_PRETTY | opt | 36 | 370.722 | 1.16 | 86112 | 0.126 | 694.45 | 86148 | 370.848 | 555.79 |
-| TOON_DEFAULT | man | 26 | 269.923 | 0.84 | 112302 | 0.129 | 905.66 | 112328 | 270.051 | 724.70 |
-| TOON_DEFAULT | opt | 20 | 577.000 | 0.65 | 94789 | 0.126 | 764.42 | 94809 | 577.126 | 611.67 |
-| XML_COMPACT | man | 19 | 614.316 | 0.61 | 111045 | 0.123 | 895.52 | 111064 | 614.439 | 716.54 |
-| XML_COMPACT | opt | 23 | 474.304 | 0.74 | 92319 | 0.125 | 744.51 | 92342 | 474.429 | 595.76 |
-| XML_PRETTY | man | 18 | 896.500 | 0.58 | 84964 | 0.117 | 685.19 | 84982 | 896.617 | 548.27 |
-| XML_PRETTY | opt | 17 | 886.824 | 0.55 | 87747 | 0.132 | 707.63 | 87764 | 886.956 | 566.22 |
-| YAML | man | 21 | 596.810 | 0.68 | 92165 | 0.121 | 743.27 | 92186 | 596.931 | 594.75 |
-| YAML | opt | 31 | 378.774 | 1.00 | 69344 | 0.134 | 559.23 | 69375 | 378.908 | 447.58 |
+| CSV | man | 23 | 302.957 | 0.74 | 52278 | 0.083 | 421.59 | 52301 | 303.040 | 337.42 |
+| CSV | opt | 14 | 477.643 | 0.45 | 39364 | 0.226 | 317.45 | 39378 | 477.869 | 254.05 |
+| JSON_COMPACT | man | 24 | 385.625 | 0.77 | 39580 | 0.275 | 319.19 | 39604 | 385.900 | 255.51 |
+| JSON_COMPACT | opt | 13 | 671.308 | 0.42 | 37630 | 0.235 | 303.47 | 37643 | 671.543 | 242.86 |
+| JSON_PRETTY | man | 30 | 475.133 | 0.97 | 39401 | 0.330 | 317.75 | 39431 | 475.463 | 254.40 |
+| JSON_PRETTY | opt | 36 | 370.722 | 1.16 | 40232 | 0.257 | 324.45 | 40268 | 370.979 | 259.79 |
+| TOON_DEFAULT | man | 26 | 269.923 | 0.84 | 38099 | 0.313 | 307.25 | 38125 | 270.236 | 245.97 |
+| TOON_DEFAULT | opt | 20 | 577.000 | 0.65 | 37064 | 0.311 | 298.90 | 37084 | 577.312 | 239.25 |
+| XML_COMPACT | man | 19 | 614.316 | 0.61 | 37753 | 0.351 | 304.46 | 37772 | 614.667 | 243.69 |
+| XML_COMPACT | opt | 23 | 474.304 | 0.74 | 36545 | 0.304 | 294.72 | 36568 | 474.608 | 235.92 |
+| XML_PRETTY | man | 18 | 896.500 | 0.58 | 39623 | 0.240 | 319.54 | 39641 | 896.740 | 255.75 |
+| XML_PRETTY | opt | 17 | 886.824 | 0.55 | 30600 | 0.368 | 246.78 | 30617 | 887.192 | 197.53 |
+| YAML | man | 21 | 596.810 | 0.68 | 38458 | 0.280 | 310.15 | 38479 | 597.090 | 248.25 |
+| YAML | opt | 31 | 378.774 | 1.00 | 30155 | 0.292 | 243.19 | 30186 | 379.066 | 194.75 |
 
 #### 2.4.2 Mandatory vs Optional
-| Format | Read Man (ms) | Read Opt (ms) | Diff (ms) | Diff (%) | Output Man (s) | Output Opt (s) | Diff (s) | Diff (%) | Total Man (s) | Total Opt (s) | Diff (s) | Diff (%) |
+| Format | Read Man (ms) | Read Opt (ms) | Diff (ms) | Diff (%) | Output Write Man (s) | Output Write Opt (s) | Diff (s) | Diff (%) | Read + Output Write Man (s) | Read + Output Write Opt (s) | Diff (s) | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| CSV | 23 | 14 | -9 | -39.13 | 126.93 | 76.72 | -50.20 | -39.55 | 126.95 | 76.74 | -50.21 | -39.55 |
-| JSON_COMPACT | 24 | 13 | -11 | -45.83 | 94.21 | 76.26 | -17.94 | -19.05 | 94.23 | 76.28 | -17.96 | -19.05 |
-| JSON_PRETTY | 30 | 36 |  +6 |  +20.00 | 108.07 | 86.11 | -21.96 | -20.32 | 108.10 | 86.15 | -21.95 | -20.31 |
-| TOON_DEFAULT | 26 | 20 | -6 | -23.08 | 112.30 | 94.79 | -17.51 | -15.60 | 112.33 | 115.30 |  +2.97 |  +2.64 |
-| XML_COMPACT | 19 | 23 |  +4 |  +21.05 | 111.05 | 92.32 | -18.73 | -16.86 | 111.06 | 92.34 | -18.72 | -16.86 |
-| XML_PRETTY | 18 | 17 | -1 | -5.56 | 84.96 | 87.75 |  +2.78 |  +3.28 | 84.98 | 87.76 |  +2.78 |  +3.27 |
-| YAML | 21 | 31 |  +10 |  +47.62 | 92.17 | 69.34 | -22.82 | -24.76 | 92.19 | 69.38 | -22.81 | -24.74 |
+| CSV | 23 | 14 | -9 | -39.13 | 52.28 | 39.36 | -12.91 | -24.70 | 52.30 | 39.38 | -12.92 | -24.71 |
+| JSON_COMPACT | 24 | 13 | -11 | -45.83 | 39.58 | 37.63 | -1.95 | -4.93 | 39.60 | 37.64 | -1.96 | -4.95 |
+| JSON_PRETTY | 30 | 36 |  +6 |  +20.00 | 39.40 | 40.23 |  +0.83 |  +2.11 | 39.43 | 40.27 |  +0.84 |  +2.12 |
+| TOON_DEFAULT | 26 | 20 | -6 | -23.08 | 38.10 | 37.06 | -1.03 | -2.72 | 38.12 | 37.08 | -1.04 | -2.73 |
+| XML_COMPACT | 19 | 23 |  +4 |  +21.05 | 37.75 | 36.54 | -1.21 | -3.20 | 37.77 | 36.57 | -1.20 | -3.19 |
+| XML_PRETTY | 18 | 17 | -1 | -5.56 | 39.62 | 30.60 | -9.02 | -22.77 | 39.64 | 30.62 | -9.02 | -22.76 |
+| YAML | 21 | 31 |  +10 |  +47.62 | 38.46 | 30.15 | -8.30 | -21.59 | 38.48 | 30.19 | -8.29 | -21.55 |
 
 ### 2.5 Structural Efficiency
 #### 2.5.1 Metrics
-| Format | Variant | Char/Token | Token/Value | Token/Object | Info/Token |
-|---|---|---|---|---|---|
-| CSV | man | 1.449 | 10.217 | 224.774 | 0.594 |
-| CSV | opt | 1.432 | 10.597 | 215.710 | 0.395 |
-| JSON_COMPACT | man | 2.152 | 13.570 | 298.548 | 0.370 |
-| JSON_COMPACT | opt | 2.118 | 13.830 | 281.516 | 0.433 |
-| JSON_PRETTY | man | 1.697 | 20.900 | 459.806 | 0.291 |
-| JSON_PRETTY | opt | 1.683 | 21.151 | 430.516 | 0.324 |
-| TOON_DEFAULT | man | 1.448 | 10.290 | 226.387 | 0.381 |
-| TOON_DEFAULT | opt | 1.701 | 18.288 | 372.258 | 0.341 |
-| XML_COMPACT | man | 2.370 | 17.114 | 376.516 | 0.310 |
-| XML_COMPACT | opt | 2.345 | 17.288 | 351.903 | 0.346 |
-| XML_PRETTY | man | 1.937 | 23.661 | 520.548 | 0.303 |
-| XML_PRETTY | opt | 1.918 | 23.892 | 486.323 | 0.299 |
-| YAML | man | 1.666 | 18.377 | 404.290 | 0.342 |
-| YAML | opt | 1.653 | 18.609 | 378.774 | 0.352 |
+| Format | Variant | Chars / Read Token | Read Tokens / Value | Read Tokens / Object | Info / Read Token | Info / Output Token | Info / Total Token |
+|---|---|---|---|---|---|---|---|
+| CSV | man | 1.449 | 10.217 | 224.774 | 0.991 | 1.516 | 0.599 |
+| CSV | opt | 1.432 | 10.597 | 215.710 | 0.941 | 0.685 | 0.396 |
+| JSON_COMPACT | man | 2.152 | 13.570 | 298.548 | 0.819 | 0.682 | 0.372 |
+| JSON_COMPACT | opt | 2.118 | 13.830 | 281.516 | 0.887 | 0.854 | 0.435 |
+| JSON_PRETTY | man | 1.697 | 20.900 | 459.806 | 0.566 | 0.605 | 0.292 |
+| JSON_PRETTY | opt | 1.683 | 21.151 | 430.516 | 0.586 | 0.736 | 0.326 |
+| TOON_DEFAULT | man | 1.448 | 10.290 | 226.387 | 1.130 | 0.657 | 0.414 |
+| TOON_DEFAULT | opt | 1.701 | 18.288 | 372.258 | 0.692 | 0.678 | 0.342 |
+| XML_COMPACT | man | 2.370 | 17.114 | 376.516 | 0.673 | 0.583 | 0.312 |
+| XML_COMPACT | opt | 2.345 | 17.288 | 351.903 | 0.712 | 0.681 | 0.348 |
+| XML_PRETTY | man | 1.937 | 23.661 | 520.548 | 0.490 | 0.806 | 0.305 |
+| XML_PRETTY | opt | 1.918 | 23.892 | 486.323 | 0.530 | 0.696 | 0.301 |
+| YAML | man | 1.666 | 18.377 | 404.290 | 0.648 | 0.733 | 0.344 |
+| YAML | opt | 1.653 | 18.609 | 378.774 | 0.630 | 0.811 | 0.355 |
 
 #### 2.5.2 Mandatory vs Optional
-| Format | Char/Token Man | Char/Token Opt | Diff | Diff (%) | Token/Value Man | Token/Value Opt | Diff | Diff (%) | Token/Object Man | Token/Object Opt | Diff | Diff (%) | Info/Token Man | Info/Token Opt | Diff | Diff (%) |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| CSV | 1.449 | 1.432 | -0.017 | -1.17 | 10.217 | 10.597 |  +0.380 |  +3.72 | 224.774 | 215.710 | -9.064 | -4.03 | 0.594 | 0.395 | -0.199 | -33.50 |
-| JSON_COMPACT | 2.152 | 2.118 | -0.034 | -1.58 | 13.570 | 13.830 |  +0.260 |  +1.92 | 298.548 | 281.516 | -17.032 | -5.70 | 0.370 | 0.433 |  +0.063 |  +17.03 |
-| JSON_PRETTY | 1.697 | 1.683 | -0.014 | -0.82 | 20.900 | 21.151 |  +0.251 |  +1.20 | 459.806 | 430.516 | -29.290 | -6.37 | 0.291 | 0.324 |  +0.033 |  +11.34 |
-| TOON_DEFAULT | 1.448 | 1.701 |  +0.253 |  +17.47 | 10.290 | 18.288 |  +7.998 |  +77.73 | 226.387 | 372.258 |  +145.871 |  +64.43 | 0.381 | 0.341 | -0.040 | -10.63 |
-| XML_COMPACT | 2.370 | 2.345 | -0.025 | -1.05 | 17.114 | 17.288 |  +0.174 |  +1.02 | 376.516 | 351.903 | -24.613 | -6.54 | 0.310 | 0.346 |  +0.036 |  +11.61 |
-| XML_PRETTY | 1.937 | 1.918 | -0.019 | -0.98 | 23.661 | 23.892 |  +0.231 |  +0.98 | 520.548 | 486.323 | -34.225 | -6.57 | 0.303 | 0.299 | -0.004 | -1.32 |
-| YAML | 1.666 | 1.653 | -0.013 | -0.78 | 18.377 | 18.609 |  +0.232 |  +1.26 | 404.290 | 378.774 | -25.516 | -6.31 | 0.342 | 0.352 |  +0.010 |  +2.92 |
+| Format | Chars / Read Token Man | Chars / Read Token Opt | Diff | Diff (%) | Read Tokens / Value Man | Read Tokens / Value Opt | Diff | Diff (%) | Read Tokens / Object Man | Read Tokens / Object Opt | Diff | Diff (%) | Info / Read Token Man | Info / Read Token Opt | Diff | Diff (%) | Info / Output Token Man | Info / Output Token Opt | Diff | Diff (%) | Info / Total Token Man | Info / Total Token Opt | Diff | Diff (%) |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| CSV | 1.449 | 1.432 | -0.017 | -1.17 | 10.217 | 10.597 |  +0.380 |  +3.72 | 224.774 | 215.710 | -9.064 | -4.03 | 0.991 | 0.941 | -0.050 | -5.05 | 1.516 | 0.685 | -0.831 | -54.82 | 0.599 | 0.396 | -0.203 | -33.89 |
+| JSON_COMPACT | 2.152 | 2.118 | -0.034 | -1.58 | 13.570 | 13.830 |  +0.260 |  +1.92 | 298.548 | 281.516 | -17.032 | -5.70 | 0.819 | 0.887 |  +0.068 |  +8.30 | 0.682 | 0.854 |  +0.172 |  +25.22 | 0.372 | 0.435 |  +0.063 |  +16.94 |
+| JSON_PRETTY | 1.697 | 1.683 | -0.014 | -0.82 | 20.900 | 21.151 |  +0.251 |  +1.20 | 459.806 | 430.516 | -29.290 | -6.37 | 0.566 | 0.586 |  +0.020 |  +3.53 | 0.605 | 0.736 |  +0.131 |  +21.65 | 0.292 | 0.326 |  +0.034 |  +11.64 |
+| TOON_DEFAULT | 1.448 | 1.701 |  +0.253 |  +17.47 | 10.290 | 18.288 |  +7.998 |  +77.73 | 226.387 | 372.258 |  +145.871 |  +64.43 | 1.130 | 0.692 | -0.438 | -38.76 | 0.657 | 0.678 |  +0.021 |  +3.19 | 0.414 | 0.342 | -0.072 | -17.39 |
+| XML_COMPACT | 2.370 | 2.345 | -0.025 | -1.05 | 17.114 | 17.288 |  +0.174 |  +1.02 | 376.516 | 351.903 | -24.613 | -6.54 | 0.673 | 0.712 |  +0.039 |  +5.79 | 0.583 | 0.681 |  +0.098 |  +16.81 | 0.312 | 0.348 |  +0.036 |  +11.54 |
+| XML_PRETTY | 1.937 | 1.918 | -0.019 | -0.98 | 23.661 | 23.892 |  +0.231 |  +0.98 | 520.548 | 486.323 | -34.225 | -6.57 | 0.490 | 0.530 |  +0.040 |  +8.16 | 0.806 | 0.696 | -0.110 | -13.65 | 0.305 | 0.301 | -0.004 | -1.31 |
+| YAML | 1.666 | 1.653 | -0.013 | -0.78 | 18.377 | 18.609 |  +0.232 |  +1.26 | 404.290 | 378.774 | -25.516 | -6.31 | 0.648 | 0.630 | -0.018 | -2.78 | 0.733 | 0.811 |  +0.078 |  +10.64 | 0.344 | 0.355 |  +0.011 |  +3.20 |
 
 ### 2.6 Token Utilization Efficiency
 #### 2.6.1 Metrics
-| Format | Variant | Total Tokens | Useful Tokens | Wasted Tokens | Accuracy (%) | Wtd Accuracy (%) | Eff Score | Wtd Eff Score |
-|---|---|---|---|---|---|---|---|---|
-| CSV | man | 11621 | 8028 | 3593 | 69.08 | 69.36 | 78.34 | 78.53 |
-| CSV | opt | 15927 | 10018 | 5909 | 62.90 | 62.64 | 66.02 | 65.83 |
-| JSON_COMPACT | man | 20487 | 15531 | 4956 | 75.81 | 74.71 | 66.59 | 65.82 |
-| JSON_COMPACT | opt | 17886 | 13847 | 4039 | 77.42 | 77.23 | 72.55 | 72.41 |
-| JSON_PRETTY | man | 27762 | 22390 | 5372 | 80.65 | 78.73 | 56.47 | 55.13 |
-| JSON_PRETTY | opt | 24167 | 18906 | 5261 | 78.23 | 78.58 | 61.45 | 61.70 |
-| TOON_DEFAULT | man | 21486 | 17038 | 4447 | 79.30 | 78.36 | 67.18 | 66.52 |
-| TOON_DEFAULT | opt | 23477 | 18744 | 4733 | 79.84 | 79.02 | 63.86 | 63.29 |
-| XML_COMPACT | man | 25320 | 19876 | 5444 | 78.50 | 77.04 | 59.50 | 58.48 |
-| XML_COMPACT | opt | 22448 | 17440 | 5008 | 77.69 | 76.58 | 64.27 | 63.49 |
-| XML_PRETTY | man | 26060 | 20595 | 5465 | 79.03 | 77.49 | 58.50 | 57.42 |
-| XML_PRETTY | opt | 26680 | 21301 | 5379 | 79.84 | 79.70 | 57.92 | 57.82 |
-| YAML | man | 23714 | 19251 | 4463 | 81.18 | 79.47 | 64.36 | 63.16 |
-| YAML | opt | 21002 | 15527 | 5475 | 73.93 | 73.38 | 64.32 | 63.93 |
+| Format | Variant | Read Tokens | Useful Read Tokens | Wasted Read Tokens | Output Tokens | Useful Output Tokens | Wasted Output Tokens | Total Tokens | Useful Total Tokens | Wasted Total Tokens | Accuracy (%) | Eff Score Read | Eff Score Output | Eff Score Total | Wtd Accuracy (%) | Wtd Eff Score Read | Wtd Eff Score Output | Wtd Eff Score Total |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| CSV | man | 6968 | 4813 | 2155 | 4557 | 3148 | 1409 | 11525 | 7962 | 3564 | 69.08 | 77.43 | 78.32 | 78.34 | 69.36 | 77.63 | 78.52 | 78.53 |
+| CSV | opt | 6687 | 4206 | 2481 | 9180 | 5774 | 3406 | 15867 | 9980 | 5887 | 62.90 | 74.00 | 59.28 | 65.91 | 62.64 | 73.82 | 59.10 | 65.73 |
+| JSON_COMPACT | man | 9255 | 7016 | 2239 | 11113 | 8425 | 2688 | 20368 | 15441 | 4927 | 75.81 | 74.90 | 62.16 | 66.55 | 74.71 | 74.13 | 61.40 | 65.78 |
+| JSON_COMPACT | opt | 8727 | 6756 | 1971 | 9070 | 7022 | 2048 | 17797 | 13778 | 4018 | 77.42 | 77.70 | 69.80 | 72.47 | 77.23 | 77.57 | 69.66 | 72.34 |
+| JSON_PRETTY | man | 14254 | 11496 | 2758 | 13328 | 10749 | 2579 | 27582 | 22245 | 5337 | 80.65 | 62.45 | 58.50 | 56.47 | 78.73 | 61.11 | 57.16 | 55.13 |
+| JSON_PRETTY | opt | 13346 | 10441 | 2905 | 10628 | 8314 | 2314 | 23974 | 18755 | 5219 | 78.23 | 63.63 | 65.40 | 61.51 | 78.58 | 63.88 | 65.65 | 61.76 |
+| TOON_DEFAULT | man | 7018 | 5565 | 1453 | 12285 | 9742 | 2543 | 19303 | 15307 | 3996 | 79.30 | 84.43 | 60.88 | 70.98 | 78.36 | 83.77 | 60.22 | 70.32 |
+| TOON_DEFAULT | opt | 11540 | 9214 | 2326 | 11821 | 9438 | 2383 | 23361 | 18651 | 4710 | 79.84 | 70.48 | 62.73 | 63.78 | 79.02 | 69.91 | 62.16 | 63.21 |
+| XML_COMPACT | man | 11672 | 9163 | 2509 | 13453 | 10561 | 2892 | 25125 | 19723 | 5402 | 78.50 | 69.13 | 56.60 | 59.55 | 77.04 | 68.10 | 55.57 | 58.53 |
+| XML_COMPACT | opt | 10909 | 8475 | 2434 | 11402 | 8858 | 2544 | 22311 | 17333 | 4978 | 77.69 | 70.98 | 62.56 | 64.24 | 76.58 | 70.20 | 61.78 | 63.46 |
+| XML_PRETTY | man | 16137 | 12753 | 3384 | 9799 | 7744 | 2055 | 25936 | 20497 | 5439 | 79.03 | 55.35 | 68.60 | 58.41 | 77.49 | 54.27 | 67.52 | 57.33 |
+| XML_PRETTY | opt | 15076 | 12037 | 3039 | 11479 | 9165 | 2314 | 26555 | 21201 | 5353 | 79.84 | 59.28 | 63.82 | 57.82 | 79.70 | 59.18 | 63.72 | 57.73 |
+| YAML | man | 12533 | 10174 | 2359 | 11076 | 8991 | 2085 | 23609 | 19166 | 4443 | 81.18 | 68.28 | 66.04 | 64.26 | 79.47 | 67.08 | 64.84 | 63.06 |
+| YAML | opt | 11742 | 8681 | 3061 | 9110 | 6735 | 2375 | 20852 | 15416 | 5436 | 73.93 | 65.71 | 67.22 | 64.33 | 73.38 | 65.32 | 66.84 | 63.94 |
 
-#### 2.6.2 Mandatory vs Optional Data
-| Format | Total Tokens Man | Total Tokens Opt | Diff | Diff (%) | Useful Tokens Man | Useful Tokens Opt | Diff | Diff (%) | Wasted Tokens Man | Wasted Tokens Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) | Eff Score Man | Eff Score Opt | Diff | Diff (%) |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| CSV | 11621 | 15928 |  +4307 |  +37.06 | 8028 | 10019 |  +1991 |  +24.80 | 3593 | 5909 |  +2316 |  +64.46 | 69.08 | 62.90 | -6.18 | 78.34 | 66.017 | -12.32 | -15.73 |
-| JSON_COMPACT | 20487 | 17886 | -2601 | -12.69 | 15531 | 13847 | -1684 | -10.84 | 4956 | 4039 | -917 | -18.50 | 75.81 | 77.42 |  +1.61 | 66.59 | 72.545 |  +5.95 |  +8.94 |
-| JSON_PRETTY | 27762 | 24167 | -3595 | -12.95 | 22390 | 18906 | -3484 | -15.56 | 5372 | 5261 | -111 | -2.06 | 80.65 | 78.23 | -2.42 | 56.47 | 61.453 |  +4.98 |  +8.82 |
-| TOON_DEFAULT | 21486 | 23478 |  +1992 |  +9.27 | 17038 | 18744 |  +1706 |  +10.01 | 4447 | 4732 |  +285 |  +6.42 | 79.30 | 79.84 |  +0.54 | 67.18 | 63.86150000000001 | -3.32 | -4.94 |
-| XML_COMPACT | 25320 | 22448 | -2872 | -11.34 | 19876 | 17440 | -2436 | -12.26 | 5444 | 5008 | -436 | -8.00 | 78.50 | 77.69 | -0.81 | 59.50 | 64.266 |  +4.76 |  +8.01 |
-| XML_PRETTY | 26060 | 26680 |  +620 |  +2.38 | 20595 | 21301 |  +706 |  +3.43 | 5465 | 5379 | -86 | -1.58 | 79.03 | 79.84 |  +0.81 | 58.50 | 57.916 | -0.58 | -1.00 |
-| YAML | 23714 | 21002 | -2712 | -11.44 | 19251 | 15526 | -3725 | -19.35 | 4463 | 5475 |  +1012 |  +22.68 | 81.18 | 73.93 | -7.25 | 64.36 | 64.318 | -0.04 | -0.06 |
+#### 2.6.2 Read Tokens Mandatory vs Optional Data
+| Format | Read Tokens Man | Read Tokens Opt | Diff | Diff (%) | Useful Read Tokens Man | Useful Read Tokens Opt | Diff | Diff (%) | Wasted Read Tokens Man | Wasted Read Tokens Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) | Eff Score Read Man | Eff Score Read Opt | Diff | Diff (%) | Wtd Accuracy (%) Man | Wtd Accuracy (%) Opt | Diff (%) | Wtd Eff Score Read Man | Wtd Eff Score Read Opt | Diff | Diff (%) |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| CSV | 6968 | 6687 | -281 | -4.03 | 4813 | 4206 | -607 | -12.62 | 2155 | 2481 |  +326 |  +15.14 | 69.08 | 62.90 | -6.18 | -8.95 | 77.43 | 74.00 | -3.44 | -4.44 | 69.36 | 62.64 | -6.72 | -9.69 | 77.63 | 73.82 | -3.81 | -4.91 |
+| JSON_COMPACT | 9255 | 8727 | -528 | -5.71 | 7016 | 6756 | -260 | -3.70 | 2239 | 1971 | -268 | -11.98 | 75.81 | 77.42 |  +1.61 |  +2.12 | 74.90 | 77.70 |  +2.80 |  +3.74 | 74.71 | 77.23 |  +2.52 |  +3.37 | 74.13 | 77.57 |  +3.44 |  +4.64 |
+| JSON_PRETTY | 14254 | 13346 | -908 | -6.37 | 11496 | 10441 | -1055 | -9.18 | 2758 | 2905 |  +147 |  +5.34 | 80.65 | 78.23 | -2.42 | -3.00 | 62.45 | 63.63 |  +1.18 |  +1.89 | 78.73 | 78.58 | -0.15 | -0.19 | 61.11 | 63.88 |  +2.77 |  +4.53 |
+| TOON_DEFAULT | 7018 | 11540 |  +4522 |  +64.43 | 5565 | 9213 |  +3648 |  +65.56 | 1453 | 2327 |  +874 |  +60.13 | 79.30 | 79.84 |  +0.54 |  +0.68 | 84.43 | 70.48 | -13.95 | -16.52 | 78.36 | 79.02 |  +0.66 |  +0.84 | 83.77 | 69.91 | -13.86 | -16.55 |
+| XML_COMPACT | 11672 | 10909 | -763 | -6.54 | 9163 | 8476 | -687 | -7.50 | 2509 | 2433 | -76 | -3.02 | 78.50 | 77.69 | -0.81 | -1.03 | 69.13 | 70.98 |  +1.85 |  +2.68 | 77.04 | 76.58 | -0.46 | -0.60 | 68.10 | 70.20 |  +2.09 |  +3.08 |
+| XML_PRETTY | 16137 | 15076 | -1061 | -6.57 | 12753 | 12037 | -716 | -5.62 | 3384 | 3039 | -345 | -10.18 | 79.03 | 79.84 |  +0.81 |  +1.02 | 55.35 | 59.28 |  +3.93 |  +7.10 | 77.49 | 79.70 |  +2.21 |  +2.85 | 54.27 | 59.18 |  +4.91 |  +9.04 |
+| YAML | 12533 | 11742 | -791 | -6.31 | 10174 | 8681 | -1493 | -14.68 | 2359 | 3061 |  +702 |  +29.78 | 81.18 | 73.93 | -7.25 | -8.93 | 68.28 | 65.71 | -2.57 | -3.76 | 79.47 | 73.38 | -6.09 | -7.66 | 67.08 | 65.32 | -1.76 | -2.62 |
+
+#### 2.6.3 Output Tokens Mandatory vs Optional Data
+| Format | Output Tokens Man | Output Tokens Opt | Diff | Diff (%) | Useful Output Tokens Man | Useful Output Tokens Opt | Diff | Diff (%) | Wasted Output Tokens Man | Wasted Output Tokens Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) | Eff Score Output Man | Eff Score Output Opt | Diff | Diff (%) | Wtd Accuracy (%) Man | Wtd Accuracy (%) Opt | Diff (%) | Wtd Eff Score Output Man | Wtd Eff Score Output Opt | Diff | Diff (%) |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| CSV | 4557 | 9179 |  +4622 |  +101.43 | 3148 | 5774 |  +2626 |  +83.41 | 1409 | 3406 |  +1997 |  +141.70 | 69.08 | 62.90 | -6.18 | -8.95 | 78.32 | 59.28 | -19.04 | -24.31 | 69.36 | 62.64 | -6.72 | -9.69 | 78.52 | 59.10 | -19.42 | -24.73 |
+| JSON_COMPACT | 11113 | 9070 | -2043 | -18.38 | 8425 | 7022 | -1403 | -16.65 | 2688 | 2048 | -640 | -23.82 | 75.81 | 77.42 |  +1.61 |  +2.12 | 62.16 | 69.80 |  +7.63 |  +12.28 | 74.71 | 77.23 |  +2.52 |  +3.37 | 61.40 | 69.66 |  +8.27 |  +13.47 |
+| JSON_PRETTY | 13328 | 10627 | -2701 | -20.26 | 10749 | 8314 | -2435 | -22.66 | 2579 | 2314 | -265 | -10.29 | 80.65 | 78.23 | -2.42 | -3.00 | 58.50 | 65.40 |  +6.90 |  +11.80 | 78.73 | 78.58 | -0.15 | -0.19 | 57.16 | 65.65 |  +8.49 |  +14.86 |
+| TOON_DEFAULT | 12285 | 11821 | -464 | -3.78 | 9742 | 9438 | -304 | -3.12 | 2543 | 2383 | -160 | -6.29 | 79.30 | 79.84 |  +0.54 |  +0.68 | 60.88 | 62.73 |  +1.86 |  +3.05 | 78.36 | 79.02 |  +0.66 |  +0.84 | 60.22 | 62.16 |  +1.94 |  +3.22 |
+| XML_COMPACT | 13453 | 11401 | -2052 | -15.25 | 10561 | 8858 | -1703 | -16.12 | 2892 | 2543 | -349 | -12.06 | 78.50 | 77.69 | -0.81 | -1.03 | 56.60 | 62.56 |  +5.97 |  +10.54 | 77.04 | 76.58 | -0.46 | -0.60 | 55.57 | 61.78 |  +6.21 |  +11.17 |
+| XML_PRETTY | 9799 | 11478 |  +1679 |  +17.14 | 7744 | 9164 |  +1420 |  +18.34 | 2055 | 2314 |  +259 |  +12.61 | 79.03 | 79.84 |  +0.81 |  +1.02 | 68.60 | 63.82 | -4.78 | -6.97 | 77.49 | 79.70 |  +2.21 |  +2.85 | 67.52 | 63.72 | -3.80 | -5.63 |
+| YAML | 11076 | 9110 | -1966 | -17.75 | 8991 | 6735 | -2256 | -25.09 | 2085 | 2376 |  +291 |  +13.94 | 81.18 | 73.93 | -7.25 | -8.93 | 66.04 | 67.22 |  +1.18 |  +1.79 | 79.47 | 73.38 | -6.09 | -7.66 | 64.84 | 66.84 |  +2.00 |  +3.08 |
+
+#### 2.6.4 Total Tokens Mandatory vs Optional Data
+| Format | Total Tokens Man | Total Tokens Opt | Diff | Diff (%) | Useful Total Tokens Man | Useful Total Tokens Opt | Diff | Diff (%) | Wasted Total Tokens Man | Wasted Total Tokens Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) | Eff Score Total Man | Eff Score Total Opt | Diff | Diff (%) | Wtd Accuracy (%) Man | Wtd Accuracy (%) Opt | Diff (%) | Wtd Eff Score Total Man | Wtd Eff Score Total Opt | Diff | Diff (%) |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| CSV | 11525 | 15866 |  +4341 |  +37.67 | 7962 | 9980 |  +2018 |  +25.35 | 3564 | 5887 |  +2323 |  +65.18 | 69.08 | 62.90 | -6.18 | -8.95 | 78.34 | 65.91 | -12.43 | -15.86 | 69.36 | 62.64 | -6.72 | -9.69 | 78.53 | 65.73 | -12.81 | -16.31 |
+| JSON_COMPACT | 20368 | 17797 | -2571 | -12.62 | 15441 | 13778 | -1663 | -10.77 | 4927 | 4019 | -908 | -18.44 | 75.81 | 77.42 |  +1.61 |  +2.12 | 66.55 | 72.47 |  +5.92 |  +8.90 | 74.71 | 77.23 |  +2.52 |  +3.37 | 65.78 | 72.34 |  +6.56 |  +9.98 |
+| JSON_PRETTY | 27582 | 23973 | -3609 | -13.08 | 22245 | 18754 | -3491 | -15.69 | 5337 | 5219 | -118 | -2.21 | 80.65 | 78.23 | -2.42 | -3.00 | 56.47 | 61.51 |  +5.04 |  +8.92 | 78.73 | 78.58 | -0.15 | -0.19 | 55.13 | 61.76 |  +6.63 |  +12.02 |
+| TOON_DEFAULT | 19303 | 23361 |  +4058 |  +21.02 | 15307 | 18651 |  +3344 |  +21.85 | 3996 | 4710 |  +714 |  +17.86 | 79.30 | 79.84 |  +0.54 |  +0.68 | 70.98 | 63.78 | -7.19 | -10.14 | 78.36 | 79.02 |  +0.66 |  +0.84 | 70.32 | 63.21 | -7.11 | -10.11 |
+| XML_COMPACT | 25125 | 22310 | -2815 | -11.20 | 19723 | 17333 | -2390 | -12.12 | 5402 | 4978 | -424 | -7.86 | 78.50 | 77.69 | -0.81 | -1.03 | 59.55 | 64.24 |  +4.69 |  +7.87 | 77.04 | 76.58 | -0.46 | -0.60 | 58.53 | 63.46 |  +4.93 |  +8.42 |
+| XML_PRETTY | 25936 | 26554 |  +618 |  +2.38 | 20497 | 21201 |  +704 |  +3.43 | 5439 | 5354 | -85 | -1.57 | 79.03 | 79.84 |  +0.81 |  +1.02 | 58.41 | 57.82 | -0.59 | -1.00 | 77.49 | 79.70 |  +2.21 |  +2.85 | 57.33 | 57.73 |  +0.39 |  +0.69 |
+| YAML | 23609 | 20852 | -2757 | -11.68 | 19166 | 15416 | -3750 | -19.56 | 4443 | 5436 |  +993 |  +22.35 | 81.18 | 73.93 | -7.25 | -8.93 | 64.26 | 64.33 |  +0.07 |  +0.11 | 79.47 | 73.38 | -6.09 | -7.66 | 63.06 | 63.94 |  +0.88 |  +1.40 |
 
 ### 2.7 Answer Per Format Breakdown
 #### 2.7.1 Metrics
@@ -446,7 +486,7 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
 
 ---
 
-- **Report Generated**: 2026-04-03
+- **Report Generated**: 2026-04-09
 - **Written by**: [Thore Höltig](https://github.com/thoeltig)
 - **Test run in**: Claude Code < 2.1.86
 - **Data Source**: `analytics_results.json`
