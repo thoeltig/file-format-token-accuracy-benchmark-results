@@ -185,7 +185,7 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
 
 ##### Optional
 
-| ↑ Total Benchmark Duration | ↑ Read Tokens | ↑ Output Before Write Tokens | ↑ Output Write Tokens | ↑ Output Tokens | ↑ Total Tokens | ↓ Accuracy | ↓ Eff Score Read | ↓ Eff Score Output | ↓ Eff Score Total |
+| ↑ Total Duration | ↑ Read Tokens | ↑ Output Before Write Tokens | ↑ Output Write Tokens | ↑ Output Tokens | ↑ Total Tokens | ↓ Accuracy | ↓ Eff Score Read | ↓ Eff Score Output | ↓ Eff Score Total |
 |---|---|---|---|---|---|---|---|---|---|
 | XML_COMPACT ≈ 64s | JSON_COMPACT ≈ 9788 | JSON_PRETTY ≈ 228 | XML_COMPACT ≈ 7011 | XML_COMPACT ≈ 7356 | JSON_COMPACT ≈ 18250 | YAML ≈ 81% | JSON_COMPACT ≈ 85 | XML_COMPACT ≈ 83 | JSON_COMPACT ≈ 85 |
 | XML_PRETTY (+21.1%) | XML_COMPACT (+26.4%) | JSON_COMPACT (+47.4%) | JSON_COMPACT (+15.9%) | JSON_COMPACT (+15.0%) | XML_COMPACT (+8.1%) | TOON_DEFAULT (-0.4%) | XML_COMPACT (-11.6%) | JSON_COMPACT (-2.2%) | XML_COMPACT (-7.6%) |
