@@ -55,7 +55,10 @@
                     "accuracyPercent": 70.37,
                     "weightedAccuracyPercent": 20.52
                 }
-            ]
+            ],
+            "expectedAnswerCharacters": 7654,
+            "correctAnswerCharacters": 6831,
+            "incorrectAnswerCharacters": 1410
         },
         {
             "run": 2,
@@ -96,7 +99,10 @@
                     "accuracyPercent": 74.07,
                     "weightedAccuracyPercent": 21.61
                 }
-            ]
+            ],
+            "expectedAnswerCharacters": 7654,
+            "correctAnswerCharacters": 7519,
+            "incorrectAnswerCharacters": 837
         },
         {
             "run": 3,
@@ -137,7 +143,10 @@
                     "accuracyPercent": 59.26,
                     "weightedAccuracyPercent": 17.28
                 }
-            ]
+            ],
+            "expectedAnswerCharacters": 7654,
+            "correctAnswerCharacters": 6373,
+            "incorrectAnswerCharacters": 1831
         }
     ],
     "questionsAndProvidedAnswers": [

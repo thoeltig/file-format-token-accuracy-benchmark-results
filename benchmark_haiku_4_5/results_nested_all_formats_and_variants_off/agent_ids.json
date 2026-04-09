@@ -6,8 +6,7 @@
       "xml_compact",
       "xml_pretty",
       "yaml",
-      "json_pretty",
-      "toon_default"
+      "json_pretty"
     ],
     "variants": [
       "mandatory",
