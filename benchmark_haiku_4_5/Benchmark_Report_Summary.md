@@ -50,10 +50,13 @@ This requires measuring:
 > - ↑ = lower value is better (ascending)
 > - ↓ = higher value is better (descending)
 >
-> Column abbreviations: 
-> - **Wtd Accuracy** = Weighted Accuracy
-> - **Eff Score** = Efficiency Score
-> - **Wtd Eff Score** = Weighted Efficiency Score 
+> Columns: 
+> - **Total Duration** = The duration of the benchmark test
+> - **Read Tokens** = The tokens needed to read the data file
+> - **Output Before Write Tokens** = The output tokens before the write tool use
+> - **Output Write Tokens** = The output tokens used to write the answers
+> - **Output Tokens** = The total output tokens needed
+> - **Eff Score Total** = Efficiency score for total tokens needed
 >
 > See [§1.1](#11-metric-definitions) for formulas
 
@@ -63,27 +66,27 @@ This requires measuring:
 
 #### Mandatory
 
-| ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Accuracy | ↓ Wtd Accuracy | ↓ Eff Score | ↓ Wtd Eff Score |
-|---|---|---|---|---|---|---|
-| TOON_DEFAULT ≈ 40s | CSV ≈ 7318 | TOON_DEFAULT ≈ 1499 | JSON_PRETTY ≈ 83% | JSON_PRETTY ≈ 82% | TOON_DEFAULT ≈ 84 | TOON_DEFAULT ≈ 83 |
-| XML_COMPACT (+86.2%) | TOON_DEFAULT (+0.2%) | JSON_COMPACT (+61.8%) | TOON_DEFAULT (-3.2%) | TOON_DEFAULT (-4.1%) | JSON_COMPACT (-12.2%) | JSON_COMPACT (-11.9%) |
-| CSV (+93.5%) | JSON_COMPACT (+29.8%) | JSON_PRETTY (+67.9%) | XML_PRETTY (-4.8%) | XML_PRETTY (-4.2%) | CSV (-13.1%) | CSV (-12.2%) |
-| YAML (+118.2%) | XML_COMPACT (+64.5%) | CSV (+77.2%) | XML_COMPACT (-5.4%) | XML_COMPACT (-5.2%) | XML_COMPACT (-19.2%) | XML_COMPACT (-18.6%) |
-| XML_PRETTY (+153.7%) | YAML (+74.7%) | XML_COMPACT (+81.4%) | YAML (-5.6%) | YAML (-5.6%) | YAML (-22.2%) | YAML (-21.8%) |
-| JSON_PRETTY (+162.1%) | JSON_PRETTY (+99.8%) | YAML (+94.9%) | JSON_COMPACT (-8.3%) | JSON_COMPACT (-8.5%) | JSON_PRETTY (-24.3%) | JSON_PRETTY (-24.0%) |
-| JSON_COMPACT (+171.5%) | XML_PRETTY (+125.6%) | XML_PRETTY (+142.8%) | CSV (-19.1%) | CSV (-18.6%) | XML_PRETTY (-35.3%) | XML_PRETTY (-34.6%) |
+| ↑ Total Duration | ↑ Read Tokens | ↑ Output Before Write Tokens | ↑ Output Write Tokens | ↑ Output Tokens | ↑ Total Tokens | ↓ Accuracy | ↓ Eff Score Read | ↓ Eff Score Output | ↓ Eff Score Total |
+|---|---|---|---|---|---|---|---|---|---|
+| XML_COMPACT ≈ 75s | CSV ≈ 6989 | JSON_COMPACT ≈ 228 | XML_COMPACT ≈ 9086 | XML_COMPACT ≈ 9429 | CSV ≈ 16525 | JSON_PRETTY ≈ 83% | TOON_DEFAULT ≈ 85 | XML_COMPACT ≈ 79 | TOON_DEFAULT ≈ 80 |
+| CSV (+3.9%) | TOON_DEFAULT (+0.8%) | YAML (+1.5%) | CSV (+1.3%) | CSV (+1.1%) | TOON_DEFAULT (+13.3%) | TOON_DEFAULT (-3.2%) | JSON_COMPACT (-12.5%) | YAML (-7.5%) | CSV (-7.2%) |
+| YAML (+17.2%) | JSON_COMPACT (+32.6%) | TOON_DEFAULT (+26.1%) | YAML (+14.0%) | YAML (+12.3%) | XML_COMPACT (+27.8%) | XML_PRETTY (-4.8%) | CSV (-12.9%) | TOON_DEFAULT (-12.1%) | XML_COMPACT (-9.1%) |
+| TOON_DEFAULT (+27.4%) | XML_COMPACT (+67.3%) | CSV (+44.7%) | TOON_DEFAULT (+25.3%) | TOON_DEFAULT (+23.8%) | JSON_COMPACT (+35.7%) | XML_COMPACT (-5.4%) | XML_COMPACT (-19.2%) | CSV (-12.9%) | YAML (-15.4%) |
+| XML_PRETTY (+36.2%) | YAML (+79.6%) | JSON_PRETTY (+49.8%) | XML_PRETTY (+36.9%) | XML_PRETTY (+35.5%) | YAML (+40.0%) | YAML (-5.6%) | YAML (-22.6%) | JSON_PRETTY (-18.4%) | JSON_COMPACT (-15.6%) |
+| JSON_PRETTY (+40.7%) | JSON_PRETTY (+104.4%) | XML_COMPACT (+50.5%) | JSON_PRETTY (+40.8%) | JSON_PRETTY (+39.3%) | JSON_PRETTY (+65.9%) | JSON_COMPACT (-8.3%) | JSON_PRETTY (-24.4%) | XML_PRETTY (-20.4%) | JSON_PRETTY (-23.3%) |
+| JSON_COMPACT (+45.8%) | XML_PRETTY (+131.3%) | XML_PRETTY (+50.5%) | JSON_COMPACT (+42.3%) | JSON_COMPACT (+39.6%) | XML_PRETTY (+75.2%) | CSV (-19.1%) | XML_PRETTY (-35.4%) | JSON_COMPACT (-25.9%) | XML_PRETTY (-32.1%) |
 
 #### Optional
 
-| ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Acc | ↓ Wtd Acc | ↓ Eff Score | ↓ Wtd Eff Score |
-|---|---|---|---|---|---|---|
-| TOON_DEFAULT ≈ 39s | CSV ≈ 6931 | JSON_COMPACT ≈ 1856 | XML_PRETTY ≈ 80% | JSON_COMPACT ≈ 81% | JSON_COMPACT ≈ 79 | JSON_COMPACT ≈ 80 |
-| JSON_PRETTY (+88.1%) | JSON_COMPACT (+31.1%) | XML_COMPACT (+24.0%) | TOON_DEFAULT (-0.3%) | TOON_DEFAULT (-0.3%) | CSV (-6.0%) | CSV (-6.6%) |
-| XML_PRETTY (+103.0%) | XML_COMPACT (+62.5%) | TOON_DEFAULT (+29.3%) | JSON_COMPACT (-0.5%) | XML_COMPACT (-1.5%) | XML_COMPACT (-8.6%) | XML_COMPACT (-9.9%) |
-| JSON_COMPACT (+112.9%) | TOON_DEFAULT (+71.7%) | CSV (+37.5%) | XML_COMPACT (-0.5%) | YAML (-2.0%) | TOON_DEFAULT (-10.9%) | TOON_DEFAULT (-11.3%) |
-| YAML (+127.6%) | YAML (+74.6%) | YAML (+42.0%) | YAML (-1.9%) | XML_PRETTY (-2.2%) | YAML (-13.1%) | YAML (-13.6%) |
-| XML_COMPACT (+144.7%) | JSON_PRETTY (+97.7%) | XML_PRETTY (+64.2%) | JSON_PRETTY (-3.8%) | JSON_PRETTY (-4.6%) | JSON_PRETTY (-21.1%) | JSON_PRETTY (-22.2%) |
-| CSV (+182.2%) | XML_PRETTY (+121.1%) | JSON_PRETTY (+74.7%) | CSV (-16.9%) | CSV (-17.1%) | XML_PRETTY (-24.2%) | XML_PRETTY (-26.4%) |
+| ↑ Total Duration | ↑ Read Tokens | ↑ Output Before Write Tokens | ↑ Output Write Tokens | ↑ Output Tokens | ↑ Total Tokens | ↓ Accuracy | ↓ Eff Score Read | ↓ Eff Score Output | ↓ Eff Score Total |
+|---|---|---|---|---|---|---|---|---|---|
+| JSON_PRETTY ≈ 73s | CSV ≈ 6700 | CSV ≈ 231 | JSON_PRETTY ≈ 7966 | JSON_PRETTY ≈ 8302 | JSON_COMPACT ≈ 18753 | XML_PRETTY ≈ 80% | JSON_COMPACT ≈ 79 | JSON_PRETTY ≈ 83 | JSON_COMPACT ≈ 80 |
+| XML_PRETTY (+7.9%) | JSON_COMPACT (+30.6%) | XML_PRETTY (+0.6%) | JSON_COMPACT (+21.4%) | JSON_COMPACT (+20.5%) | CSV (+4.2%) | TOON_DEFAULT (-0.3%) | CSV (-6.3%) | XML_PRETTY (-7.0%) | XML_COMPACT (-11.0%) |
+| JSON_COMPACT (+13.2%) | XML_COMPACT (+63.1%) | YAML (+44.3%) | XML_PRETTY (+23.0%) | XML_PRETTY (+20.8%) | JSON_PRETTY (+15.5%) | JSON_COMPACT (-0.5%) | XML_COMPACT (-8.7%) | JSON_COMPACT (-7.3%) | JSON_PRETTY (-11.6%) |
+| YAML (+21.0%) | TOON_DEFAULT (+72.6%) | XML_COMPACT (+45.2%) | YAML (+27.7%) | YAML (+26.6%) | YAML (+18.8%) | XML_COMPACT (-0.5%) | TOON_DEFAULT (-11.0%) | YAML (-11.4%) | YAML (-11.8%) |
+| TOON_DEFAULT (+28.9%) | YAML (+75.7%) | JSON_PRETTY (+45.5%) | XML_COMPACT (+40.1%) | XML_COMPACT (+38.5%) | XML_COMPACT (+19.6%) | YAML (-1.9%) | YAML (-13.3%) | XML_COMPACT (-16.1%) | TOON_DEFAULT (-13.5%) |
+| XML_COMPACT (+30.1%) | JSON_PRETTY (+99.5%) | JSON_COMPACT (+46.2%) | TOON_DEFAULT (+43.5%) | TOON_DEFAULT (+41.7%) | TOON_DEFAULT (+24.4%) | JSON_PRETTY (-3.8%) | JSON_PRETTY (-21.3%) | TOON_DEFAULT (-17.5%) | CSV (-16.7%) |
+| CSV (+50.1%) | XML_PRETTY (+125.2%) | TOON_DEFAULT (+47.3%) | CSV (+58.3%) | CSV (+54.7%) | XML_PRETTY (+33.9%) | CSV (-16.9%) | XML_PRETTY (-24.8%) | CSV (-37.8%) | XML_PRETTY (-18.6%) |
 
 
 ### 2.2 Flat Structure With Thinking Off
@@ -92,27 +95,27 @@ This requires measuring:
 
 #### Mandatory
 
-| ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Accuracy | ↓ Wtd Accuracy | ↓ Eff Score | ↓ Wtd Eff Score |
-|---|---|---|---|---|---|---|
-| TOON_DEFAULT ≈ 50s | CSV ≈ 7263 | TOON_DEFAULT ≈ 1747 | JSON_PRETTY ≈ 83% | JSON_PRETTY ≈ 82% | TOON_DEFAULT ≈ 82 | TOON_DEFAULT ≈ 82 |
-| YAML (+50.6%) | TOON_DEFAULT (+4.0%) | JSON_COMPACT (+20.7%) | JSON_COMPACT (-4.5%) | JSON_COMPACT (-4.4%) | CSV (-6.8%) | CSV (-6.8%) |
-| XML_COMPACT (+59.3%) | JSON_COMPACT (+32.2%) | CSV (+34.8%) | TOON_DEFAULT (-5.7%) | TOON_DEFAULT (-5.5%) | JSON_COMPACT (-6.9%) | JSON_COMPACT (-7.0%) |
-| CSV (+60.6%) | XML_COMPACT (+68.7%) | JSON_PRETTY (+46.1%) | XML_PRETTY (-5.9%) | XML_PRETTY (-6.5%) | XML_COMPACT (-21.1%) | XML_COMPACT (-22.1%) |
-| XML_PRETTY (+71.6%) | YAML (+77.3%) | YAML (+78.3%) | YAML (-6.7%) | YAML (-8.0%) | YAML (-21.4%) | JSON_PRETTY (-22.6%) |
-| JSON_PRETTY (+91.0%) | JSON_PRETTY (+101.2%) | XML_COMPACT (+86.6%) | XML_COMPACT (-9.1%) | XML_COMPACT (-10.0%) | JSON_PRETTY (-22.4%) | YAML (-22.7%) |
-| JSON_COMPACT (+111.6%) | XML_PRETTY (+127.1%) | XML_PRETTY (+120.8%) | CSV (-15.0%) | CSV (-14.7%) | XML_PRETTY (-34.7%) | XML_PRETTY (-35.4%) |
+| ↑ Total Duration | ↑ Read Tokens | ↑ Output Before Write Tokens | ↑ Output Write Tokens | ↑ Output Tokens | ↑ Total Tokens | ↓ Accuracy | ↓ Eff Score Read | ↓ Eff Score Output | ↓ Eff Score Total |
+|---|---|---|---|---|---|---|---|---|---|
+| YAML ≈ 76s | CSV ≈ 7022 | CSV ≈ 241 | XML_COMPACT ≈ 6673 | XML_COMPACT ≈ 6976 | CSV ≈ 17340 | JSON_PRETTY ≈ 83% | TOON_DEFAULT ≈ 82 | XML_COMPACT ≈ 81 | TOON_DEFAULT ≈ 79 |
+| XML_COMPACT (+5.8%) | TOON_DEFAULT (+2.3%) | TOON_DEFAULT (+7.0%) | YAML (+35.9%) | YAML (+34.4%) | TOON_DEFAULT (+8.4%) | JSON_COMPACT (-4.5%) | JSON_COMPACT (-7.1%) | YAML (-11.5%) | CSV (-2.4%) |
+| CSV (+6.6%) | JSON_COMPACT (+32.4%) | JSON_PRETTY (+25.4%) | CSV (+51.0%) | CSV (+47.9%) | XML_COMPACT (+9.1%) | TOON_DEFAULT (-5.7%) | CSV (-7.3%) | XML_PRETTY (-17.7%) | XML_COMPACT (-3.6%) |
+| XML_PRETTY (+13.9%) | XML_COMPACT (+70.2%) | YAML (+25.4%) | XML_PRETTY (+54.3%) | XML_PRETTY (+52.0%) | YAML (+26.6%) | XML_PRETTY (-5.9%) | XML_COMPACT (-21.3%) | JSON_PRETTY (-20.4%) | YAML (-13.6%) |
+| TOON_DEFAULT (+25.2%) | YAML (+79.1%) | XML_COMPACT (+25.8%) | TOON_DEFAULT (+70.2%) | TOON_DEFAULT (+66.5%) | JSON_COMPACT (+31.4%) | YAML (-6.7%) | YAML (-21.6%) | TOON_DEFAULT (-23.2%) | JSON_COMPACT (-14.9%) |
+| JSON_PRETTY (+26.8%) | JSON_PRETTY (+103.8%) | JSON_COMPACT (+26.4%) | JSON_PRETTY (+75.0%) | JSON_PRETTY (+71.7%) | JSON_PRETTY (+51.6%) | XML_COMPACT (-9.1%) | JSON_PRETTY (-22.6%) | CSV (-23.9%) | JSON_PRETTY (-25.0%) |
+| JSON_COMPACT (+40.5%) | XML_PRETTY (+130.5%) | XML_PRETTY (+26.5%) | JSON_COMPACT (+97.6%) | JSON_COMPACT (+93.4%) | XML_PRETTY (+54.5%) | CSV (-15.0%) | XML_PRETTY (-34.8%) | JSON_COMPACT (-32.8%) | XML_PRETTY (-32.2%) |
 
 #### Optional
 
-| ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Acc | ↓ Wtd Acc | ↓ Eff Score | ↓ Wtd Eff Score |
-|---|---|---|---|---|---|---|
-| TOON_DEFAULT ≈ 42s | CSV ≈ 7032 | JSON_COMPACT ≈ 2122 | YAML ≈ 80% | YAML ≈ 80% | JSON_COMPACT ≈ 77 | JSON_COMPACT ≈ 76 |
-| XML_PRETTY (+76.7%) | JSON_COMPACT (+29.0%) | YAML (+11.8%) | JSON_PRETTY (-1.7%) | XML_COMPACT (-1.4%) | CSV (-1.7%) | CSV (-0.6%) |
-| JSON_COMPACT (+79.9%) | XML_COMPACT (+63.4%) | CSV (+14.4%) | XML_COMPACT (-1.9%) | JSON_PRETTY (-1.7%) | XML_COMPACT (-8.2%) | XML_COMPACT (-7.2%) |
-| JSON_PRETTY (+102.2%) | TOON_DEFAULT (+69.2%) | XML_COMPACT (+16.4%) | XML_PRETTY (-3.5%) | XML_PRETTY (-3.3%) | YAML (-9.0%) | YAML (-8.4%) |
-| CSV (+105.9%) | YAML (+72.0%) | TOON_DEFAULT (+35.1%) | JSON_COMPACT (-3.8%) | JSON_COMPACT (-4.5%) | TOON_DEFAULT (-12.2%) | TOON_DEFAULT (-11.9%) |
-| XML_COMPACT (+108.6%) | JSON_PRETTY (+93.8%) | JSON_PRETTY (+36.7%) | TOON_DEFAULT (-4.5%) | TOON_DEFAULT (-4.7%) | JSON_PRETTY (-16.8%) | JSON_PRETTY (-16.3%) |
-| YAML (+147.4%) | XML_PRETTY (+119.3%) | XML_PRETTY (+68.0%) | CSV (-14.9%) | CSV (-14.4%) | XML_PRETTY (-25.8%) | XML_PRETTY (-25.3%) |
+| ↑ Total Duration | ↑ Read Tokens | ↑ Output Before Write Tokens | ↑ Output Write Tokens | ↑ Output Tokens | ↑ Total Tokens | ↓ Accuracy | ↓ Eff Score Read | ↓ Eff Score Output | ↓ Eff Score Total |
+|---|---|---|---|---|---|---|---|---|---|
+| TOON_DEFAULT ≈ 74s | CSV ≈ 6728 | JSON_PRETTY ≈ 231 | TOON_DEFAULT ≈ 8675 | TOON_DEFAULT ≈ 8984 | CSV ≈ 17689 | YAML ≈ 80% | JSON_COMPACT ≈ 77 | TOON_DEFAULT ≈ 74 | JSON_COMPACT ≈ 80 |
+| XML_PRETTY (+0.3%) | JSON_COMPACT (+30.3%) | XML_PRETTY (+30.7%) | XML_PRETTY (+2.7%) | XML_PRETTY (+2.5%) | JSON_COMPACT (+3.6%) | JSON_PRETTY (-1.7%) | CSV (-1.7%) | XML_PRETTY (-0.5%) | CSV (-7.2%) |
+| JSON_COMPACT (+2.1%) | XML_COMPACT (+66.2%) | CSV (+31.4%) | JSON_COMPACT (+6.7%) | JSON_COMPACT (+6.4%) | TOON_DEFAULT (+17.0%) | XML_COMPACT (-1.9%) | XML_COMPACT (-8.2%) | JSON_COMPACT (-2.9%) | TOON_DEFAULT (-9.9%) |
+| JSON_PRETTY (+14.8%) | TOON_DEFAULT (+74.0%) | YAML (+31.6%) | JSON_PRETTY (+17.3%) | JSON_PRETTY (+15.9%) | XML_COMPACT (+26.9%) | XML_PRETTY (-3.5%) | YAML (-9.0%) | JSON_PRETTY (-6.2%) | XML_COMPACT (-14.6%) |
+| CSV (+16.9%) | YAML (+75.3%) | JSON_COMPACT (+31.9%) | CSV (+22.9%) | CSV (+22.0%) | JSON_PRETTY (+34.6%) | JSON_COMPACT (-3.8%) | TOON_DEFAULT (-12.7%) | XML_COMPACT (-11.7%) | JSON_PRETTY (-19.8%) |
+| XML_COMPACT (+18.4%) | JSON_PRETTY (+99.1%) | XML_COMPACT (+33.8%) | XML_COMPACT (+26.3%) | XML_COMPACT (+25.4%) | XML_PRETTY (+37.5%) | TOON_DEFAULT (-4.5%) | JSON_PRETTY (-17.1%) | YAML (-20.9%) | YAML (-22.3%) |
+| YAML (+40.4%) | XML_PRETTY (+124.7%) | TOON_DEFAULT (+33.8%) | YAML (+46.7%) | YAML (+45.0%) | YAML (+40.3%) | CSV (-14.9%) | XML_PRETTY (-25.8%) | CSV (-22.2%) | XML_PRETTY (-23.4%) |
 
 
 ### 2.3 Nested Structure With Thinking On
@@ -123,25 +126,25 @@ This requires measuring:
 
 #### Mandatory
 
-| ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Accuracy | ↓ Wtd Accuracy | ↓ Eff Score | ↓ Wtd Eff Score |
-|---|---|---|---|---|---|---|
-| TOON_DEFAULT ≈ 37s | JSON_COMPACT ≈ 10651 | JSON_COMPACT ≈ 2576 | YAML ≈ 79% | YAML ≈ 77% | JSON_COMPACT ≈ 82 | JSON_COMPACT ≈ 81 |
-| JSON_COMPACT (+87.6%) | XML_COMPACT (+23.9%) | YAML (+20.7%) | JSON_PRETTY (-1.9%) | JSON_PRETTY (-1.1%) | XML_COMPACT (-10.2%) | XML_COMPACT (-9.9%) |
-| XML_PRETTY (+91.7%) | TOON_DEFAULT (+35.6%) | XML_COMPACT (+30.8%) | JSON_COMPACT (-3.0%) | JSON_COMPACT (-2.4%) | YAML (-11.7%) | YAML (-12.3%) |
-| XML_COMPACT (+102.6%) | YAML (+37.5%) | TOON_DEFAULT (+43.1%) | TOON_DEFAULT (-4.3%) | XML_COMPACT (-3.3%) | TOON_DEFAULT (-14.6%) | TOON_DEFAULT (-15.8%) |
-| YAML (+147.2%) | JSON_PRETTY (+71.6%) | JSON_PRETTY (+64.0%) | XML_COMPACT (-4.3%) | TOON_DEFAULT (-4.9%) | JSON_PRETTY (-26.2%) | JSON_PRETTY (-26.3%) |
-| JSON_PRETTY (+153.7%) | XML_PRETTY (+92.1%) | XML_PRETTY (+111.3%) | XML_PRETTY (-5.4%) | XML_PRETTY (-4.9%) | XML_PRETTY (-36.9%) | XML_PRETTY (-37.5%) |
+| ↑ Total Duration | ↑ Read Tokens | ↑ Output Before Write Tokens | ↑ Output Write Tokens | ↑ Output Tokens | ↑ Total Tokens | ↓ Accuracy | ↓ Eff Score Read | ↓ Eff Score Output | ↓ Eff Score Total |
+|---|---|---|---|---|---|---|---|---|---|
+| JSON_COMPACT ≈ 69s | JSON_COMPACT ≈ 10315 | JSON_COMPACT ≈ 336 | XML_PRETTY ≈ 7175 | XML_PRETTY ≈ 7518 | JSON_COMPACT ≈ 18446 | YAML ≈ 79% | JSON_COMPACT ≈ 82 | XML_PRETTY ≈ 81 | JSON_COMPACT ≈ 83 |
+| XML_PRETTY (+2.2%) | XML_COMPACT (+24.6%) | YAML (+0.5%) | JSON_COMPACT (+8.6%) | JSON_COMPACT (+8.2%) | XML_COMPACT (+18.3%) | JSON_PRETTY (-1.9%) | XML_COMPACT (-10.2%) | JSON_COMPACT (-0.9%) | XML_COMPACT (-12.2%) |
+| TOON_DEFAULT (+7.0%) | TOON_DEFAULT (+36.7%) | TOON_DEFAULT (+1.7%) | TOON_DEFAULT (+16.3%) | TOON_DEFAULT (+15.5%) | TOON_DEFAULT (+23.5%) | JSON_COMPACT (-3.0%) | YAML (-11.7%) | TOON_DEFAULT (-4.7%) | TOON_DEFAULT (-15.4%) |
+| XML_COMPACT (+8.0%) | YAML (+38.7%) | XML_PRETTY (+1.9%) | XML_COMPACT (+20.2%) | XML_COMPACT (+19.3%) | YAML (+37.8%) | TOON_DEFAULT (-4.3%) | TOON_DEFAULT (-14.6%) | XML_COMPACT (-6.0%) | YAML (-20.4%) |
+| YAML (+31.8%) | JSON_PRETTY (+72.8%) | XML_COMPACT (+2.6%) | JSON_PRETTY (+43.9%) | JSON_PRETTY (+43.3%) | XML_PRETTY (+49.8%) | XML_COMPACT (-4.3%) | JSON_PRETTY (-25.8%) | YAML (-12.6%) | XML_PRETTY (-32.3%) |
+| JSON_PRETTY (+34.9%) | XML_PRETTY (+95.0%) | JSON_PRETTY (+33.0%) | YAML (+50.1%) | YAML (+47.7%) | JSON_PRETTY (+55.0%) | XML_PRETTY (-5.4%) | XML_PRETTY (-36.9%) | JSON_PRETTY (-12.6%) | JSON_PRETTY (-32.5%) |
 
 #### Optional
 
-| ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Acc | ↓ Wtd Acc | ↓ Eff Score | ↓ Wtd Eff Score |
-|---|---|---|---|---|---|---|
-| TOON_DEFAULT ≈ 40s | JSON_COMPACT ≈ 10124 | JSON_COMPACT ≈ 2123 | YAML ≈ 81% | TOON_DEFAULT ≈ 81% | JSON_COMPACT ≈ 85 | JSON_COMPACT ≈ 85 |
-| XML_COMPACT (+60.3%) | XML_COMPACT (+25.6%) | YAML (+31.2%) | TOON_DEFAULT (-0.4%) | YAML (-1.2%) | XML_COMPACT (-11.7%) | XML_COMPACT (-11.7%) |
-| XML_PRETTY (+94.1%) | TOON_DEFAULT (+40.4%) | TOON_DEFAULT (+32.3%) | JSON_COMPACT (-1.6%) | JSON_COMPACT (-1.8%) | TOON_DEFAULT (-12.9%) | TOON_DEFAULT (-12.4%) |
-| JSON_PRETTY (+111.8%) | YAML (+42.1%) | XML_COMPACT (+46.5%) | XML_COMPACT (-5.1%) | XML_COMPACT (-5.4%) | YAML (-13.2%) | YAML (-14.0%) |
-| JSON_COMPACT (+120.4%) | JSON_PRETTY (+69.2%) | JSON_PRETTY (+119.0%) | XML_PRETTY (-7.0%) | XML_PRETTY (-8.0%) | JSON_PRETTY (-28.9%) | JSON_PRETTY (-29.5%) |
-| YAML (+136.8%) | XML_PRETTY (+96.8%) | XML_PRETTY (+147.3%) | JSON_PRETTY (-7.8%) | JSON_PRETTY (-8.6%) | XML_PRETTY (-37.7%) | XML_PRETTY (-38.4%) |
+| ↑ Total Duration | ↑ Read Tokens | ↑ Output Before Write Tokens | ↑ Output Write Tokens | ↑ Output Tokens | ↑ Total Tokens | ↓ Accuracy | ↓ Eff Score Read | ↓ Eff Score Output | ↓ Eff Score Total |
+|---|---|---|---|---|---|---|---|---|---|
+| XML_COMPACT ≈ 64s | JSON_COMPACT ≈ 9788 | JSON_PRETTY ≈ 228 | XML_COMPACT ≈ 7011 | XML_COMPACT ≈ 7356 | JSON_COMPACT ≈ 18250 | YAML ≈ 81% | JSON_COMPACT ≈ 85 | XML_COMPACT ≈ 83 | JSON_COMPACT ≈ 85 |
+| XML_PRETTY (+21.1%) | XML_COMPACT (+26.4%) | JSON_COMPACT (+47.4%) | JSON_COMPACT (+15.9%) | JSON_COMPACT (+15.0%) | XML_COMPACT (+8.1%) | TOON_DEFAULT (-0.4%) | XML_COMPACT (-11.6%) | JSON_COMPACT (-2.2%) | XML_COMPACT (-7.6%) |
+| JSON_PRETTY (+31.7%) | TOON_DEFAULT (+41.6%) | YAML (+47.6%) | XML_PRETTY (+33.4%) | JSON_PRETTY (+31.3%) | TOON_DEFAULT (+42.7%) | JSON_COMPACT (-1.6%) | TOON_DEFAULT (-12.8%) | XML_PRETTY (-12.6%) | TOON_DEFAULT (-23.8%) |
+| JSON_COMPACT (+37.5%) | YAML (+43.6%) | XML_PRETTY (+51.1%) | JSON_PRETTY (+34.5%) | XML_PRETTY (+31.9%) | JSON_PRETTY (+45.5%) | XML_COMPACT (-5.1%) | YAML (-13.2%) | JSON_PRETTY (-13.1%) | YAML (-26.4%) |
+| YAML (+47.7%) | JSON_PRETTY (+72.7%) | XML_COMPACT (+51.2%) | TOON_DEFAULT (+68.9%) | TOON_DEFAULT (+65.7%) | YAML (+47.7%) | XML_PRETTY (-7.0%) | JSON_PRETTY (-29.2%) | TOON_DEFAULT (-18.7%) | JSON_PRETTY (-31.5%) |
+| TOON_DEFAULT (+51.2%) | XML_PRETTY (+100.1%) | TOON_DEFAULT (+54.5%) | YAML (+79.1%) | YAML (+75.3%) | XML_PRETTY (+60.5%) | JSON_PRETTY (-7.8%) | XML_PRETTY (-37.7%) | YAML (-21.7%) | XML_PRETTY (-39.5%) |
 
 
 ### 2.4 Nested Structure With Thinking Off
@@ -152,54 +155,32 @@ This requires measuring:
 
 #### Mandatory
 
-| ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Accuracy | ↓ Wtd Accuracy | ↓ Eff Score | ↓ Wtd Eff Score |
-|---|---|---|---|---|---|---|
-| TOON_DEFAULT ≈ 40s | JSON_COMPACT ≈ 10468 | JSON_COMPACT ≈ 2516 | YAML ≈ 77% | YAML ≈ 76% | JSON_COMPACT ≈ 82 | JSON_COMPACT ≈ 80 |
-| JSON_PRETTY (+91.4%) | XML_COMPACT (+24.3%) | XML_COMPACT (+22.4%) | XML_COMPACT (-1.1%) | XML_COMPACT (-1.9%) | XML_COMPACT (-8.5%) | XML_COMPACT (-8.2%) |
-| XML_COMPACT (+98.2%) | YAML (+37.3%) | YAML (+29.0%) | JSON_COMPACT (-1.5%) | TOON_DEFAULT (-2.0%) | YAML (-12.3%) | YAML (-11.4%) |
-| XML_PRETTY (+102.4%) | TOON_DEFAULT (+38.4%) | TOON_DEFAULT (+38.8%) | TOON_DEFAULT (-1.5%) | JSON_COMPACT (-2.8%) | TOON_DEFAULT (-14.0%) | TOON_DEFAULT (-13.6%) |
-| JSON_COMPACT (+103.3%) | JSON_PRETTY (+71.8%) | JSON_PRETTY (+84.6%) | JSON_PRETTY (-3.2%) | JSON_PRETTY (-3.0%) | JSON_PRETTY (-27.6%) | JSON_PRETTY (-26.9%) |
-| YAML (+113.3%) | XML_PRETTY (+95.9%) | XML_PRETTY (+141.1%) | XML_PRETTY (-7.0%) | XML_PRETTY (-7.3%) | XML_PRETTY (-39.6%) | XML_PRETTY (-39.6%) |
+| ↑ Total Duration | ↑ Read Tokens | ↑ Output Before Write Tokens | ↑ Output Write Tokens | ↑ Output Tokens | ↑ Total Tokens | ↓ Accuracy | ↓ Eff Score Read | ↓ Eff Score Output | ↓ Eff Score Total |
+|---|---|---|---|---|---|---|---|---|---|
+| JSON_PRETTY ≈ 77s | JSON_COMPACT ≈ 10163 | YAML ≈ 213 | XML_COMPACT ≈ 4990 | XML_COMPACT ≈ 5295 | XML_COMPACT ≈ 18000 | YAML ≈ 77% | JSON_COMPACT ≈ 82 | XML_COMPACT ≈ 83 | XML_COMPACT ≈ 83 |
+| XML_COMPACT (+3.9%) | XML_COMPACT (+25.0%) | XML_PRETTY (+42.1%) | TOON_DEFAULT (+72.5%) | TOON_DEFAULT (+68.4%) | JSON_COMPACT (+11.6%) | XML_COMPACT (-1.1%) | XML_COMPACT (-8.5%) | TOON_DEFAULT (-15.2%) | JSON_COMPACT (-6.5%) |
+| XML_PRETTY (+6.1%) | TOON_DEFAULT (+38.4%) | XML_COMPACT (+43.4%) | JSON_PRETTY (+79.1%) | JSON_PRETTY (+74.6%) | TOON_DEFAULT (+27.7%) | JSON_COMPACT (-1.5%) | YAML (-12.6%) | JSON_PRETTY (-18.0%) | TOON_DEFAULT (-15.1%) |
+| JSON_COMPACT (+6.6%) | YAML (+39.3%) | JSON_COMPACT (+43.5%) | JSON_COMPACT (+92.9%) | JSON_COMPACT (+87.5%) | YAML (+34.4%) | TOON_DEFAULT (-1.5%) | TOON_DEFAULT (-13.6%) | YAML (-18.5%) | YAML (-17.4%) |
+| TOON_DEFAULT (+7.9%) | JSON_PRETTY (+74.0%) | JSON_PRETTY (+44.2%) | XML_PRETTY (+93.2%) | XML_PRETTY (+87.8%) | JSON_PRETTY (+49.6%) | JSON_PRETTY (-3.2%) | JSON_PRETTY (-27.6%) | JSON_COMPACT (-19.3%) | JSON_PRETTY (-28.2%) |
+| YAML (+11.8%) | XML_PRETTY (+98.8%) | TOON_DEFAULT (+45.3%) | YAML (+96.8%) | YAML (+89.4%) | XML_PRETTY (+67.5%) | XML_PRETTY (-7.0%) | XML_PRETTY (-39.6%) | XML_PRETTY (-24.0%) | XML_PRETTY (-40.9%) |
 
 #### Optional
 
-| ↑ Total Duration | ↑ Total Tokens | ↑ Wasted Tokens | ↓ Acc | ↓ Wtd Acc | ↓ Eff Score | ↓ Wtd Eff Score |
-|---|---|---|---|---|---|---|
-| TOON_DEFAULT ≈ 54s | JSON_COMPACT ≈ 9950 | JSON_COMPACT ≈ 2182 | JSON_COMPACT ≈ 78% | TOON_DEFAULT ≈ 77% | JSON_COMPACT ≈ 85 | JSON_COMPACT ≈ 83 |
-| YAML (+24.9%) | XML_COMPACT (+28.3%) | TOON_DEFAULT (+47.8%) | TOON_DEFAULT (-0.8%) | JSON_COMPACT (-0.8%) | XML_COMPACT (-12.2%) | XML_COMPACT (-11.3%) |
-| XML_PRETTY (+27.7%) | TOON_DEFAULT (+42.8%) | XML_COMPACT (+47.8%) | XML_COMPACT (-3.3%) | XML_COMPACT (-2.9%) | TOON_DEFAULT (-14.9%) | TOON_DEFAULT (-13.8%) |
-| XML_COMPACT (+41.8%) | YAML (+45.2%) | JSON_PRETTY (+101.8%) | JSON_PRETTY (-3.9%) | JSON_PRETTY (-4.2%) | YAML (-23.9%) | YAML (-23.1%) |
-| JSON_PRETTY (+75.3%) | JSON_PRETTY (+71.5%) | YAML (+115.4%) | XML_PRETTY (-6.8%) | XML_PRETTY (-6.6%) | JSON_PRETTY (-27.1%) | JSON_PRETTY (-27.0%) |
-| JSON_COMPACT (+75.9%) | XML_PRETTY (+99.8%) | XML_PRETTY (+162.0%) | YAML (-10.6%) | YAML (-10.1%) | XML_PRETTY (-38.9%) | XML_PRETTY (-38.6%) |
+| ↑ Total Duration | ↑ Read Tokens | ↑ Output Before Write Tokens | ↑ Output Write Tokens | ↑ Output Tokens | ↑ Total Tokens | ↓ Accuracy | ↓ Eff Score Read | ↓ Eff Score Output | ↓ Eff Score Total |
+|---|---|---|---|---|---|---|---|---|---|
+| YAML ≈ 67s | JSON_COMPACT ≈ 9645 | XML_PRETTY ≈ 205 | YAML ≈ 7786 | YAML ≈ 8089 | JSON_COMPACT ≈ 21434 | JSON_COMPACT ≈ 78% | JSON_COMPACT ≈ 85 | XML_PRETTY ≈ 70 | JSON_COMPACT ≈ 76 |
+| XML_PRETTY (+2.2%) | XML_COMPACT (+29.1%) | TOON_DEFAULT (+25.7%) | XML_PRETTY (+4.0%) | XML_PRETTY (+2.6%) | XML_COMPACT (+1.4%) | TOON_DEFAULT (-0.8%) | XML_COMPACT (-12.2%) | XML_COMPACT (-1.3%) | XML_COMPACT (-4.1%) |
+| XML_COMPACT (+13.5%) | TOON_DEFAULT (+43.4%) | YAML (+47.6%) | XML_COMPACT (+15.3%) | XML_COMPACT (+14.8%) | YAML (+3.7%) | XML_COMPACT (-3.3%) | TOON_DEFAULT (-14.7%) | YAML (-2.7%) | YAML (-12.3%) |
+| JSON_PRETTY (+39.9%) | YAML (+46.7%) | JSON_COMPACT (+48.7%) | JSON_PRETTY (+46.8%) | JSON_PRETTY (+45.1%) | TOON_DEFAULT (+20.1%) | JSON_PRETTY (-3.9%) | YAML (-23.9%) | JSON_COMPACT (-10.3%) | TOON_DEFAULT (-14.7%) |
+| JSON_COMPACT (+40.8%) | JSON_PRETTY (+73.7%) | JSON_PRETTY (+48.8%) | JSON_COMPACT (+47.5%) | JSON_COMPACT (+45.8%) | XML_PRETTY (+30.5%) | XML_PRETTY (-6.8%) | JSON_PRETTY (-27.0%) | TOON_DEFAULT (-11.7%) | JSON_PRETTY (-26.4%) |
+| TOON_DEFAULT (+41.0%) | XML_PRETTY (+104.0%) | XML_COMPACT (+49.8%) | TOON_DEFAULT (+49.7%) | TOON_DEFAULT (+47.3%) | JSON_PRETTY (+32.9%) | YAML (-10.6%) | XML_PRETTY (-39.2%) | JSON_PRETTY (-13.9%) | XML_PRETTY (-27.4%) |
 
 
 ## 3. Conclusion & Decision Matrix
 
 ### 3.1 Cross-Configuration Findings
 
-**Format efficiency leadership is structure-dependent, not universal.**
-TOON_DEFAULT and JSON_COMPACT do not compete in the same tier across data topologies. TOON_DEFAULT achieves the highest weighted efficiency score in every flat configuration, ranging from 82 to 83 for mandatory data and 76 to 80 for optional data. JSON_COMPACT holds that position in all four nested configurations, scoring between 80 and 85 across mandatory and optional variants with both thinking modes. No single format leads across both structures, which means the data topology must be resolved before selecting a format.
-
-**TOON_DEFAULT degrades significantly on sparse (optional) flat data.**
-For flat mandatory data TOON_DEFAULT requires approximately 7.3K read tokens. When the variant shifts to optional fields the read token count rises to approximately 11.6K, a 59% increase. Over the same transition JSON_COMPACT moves from approximately 9.3K to 9.1K, a negligible change. The weighted efficiency score of TOON_DEFAULT drops from 82 to 84 (mandatory) down to 67 to 70 (optional), while JSON_COMPACT holds in the 76 to 80 range. This behavior implies that TOON_DEFAULT encodes absent optional fields with non-trivial token overhead, and the deployment assumption of dense mandatory schemas should be validated before choosing it.
-
-**XML_PRETTY delivers the worst value proposition in every configuration.**
-XML_PRETTY produces the highest or second-highest total token counts and ranks last or second-to-last in weighted efficiency score across all four configurations. Nested mandatory XML_PRETTY consumes 20.1K to 20.5K read tokens compared to 10.2K to 10.7K for JSON_COMPACT, without delivering compensating accuracy gains. The weighted efficiency score for XML_PRETTY in nested configurations falls to 48 to 52, a gap of 28 to 33 points below JSON_COMPACT. The verbose indentation and repeated tag names add structural overhead that does not translate into measurable comprehension benefit.
-
-**JSON_PRETTY achieves peak raw accuracy in flat structures but pays a severe token penalty.**
-JSON_PRETTY scores 82.5% to 82.8% accuracy in flat configurations, the highest of any format in that structure. However, the total token count of approximately 14.6K for flat mandatory is 97% higher than TOON_DEFAULT and 52% higher than JSON_COMPACT. In nested structures the accuracy drops to 72% to 77% while the high token count persists, which drives the weighted efficiency score into the 59 to 63 range. JSON_PRETTY is the correct choice only when raw accuracy is the overriding constraint and token cost is secondary.
-
-**CSV is structurally unsuitable for accuracy-dependent workloads.**
-CSV achieves the lowest read token count for flat data but converts that advantage into poor efficiency outcomes. Accuracy ranges from 63% to 68% across all flat configurations, trailing the next worst format by 7 to 10 percentage points. The wasted token budget from incorrect responses offsets the savings on the read side. CSV is excluded from nested structures by design, and based on the accuracy floor observed, it should only be considered when a 63 to 68% accuracy rate is operationally acceptable.
-
-**Extended thinking improves accuracy marginally and at increasing token cost.**
-Comparing equivalent formats at the same structure and variant, enabling extended thinking shifts accuracy by at most 2 to 4 percentage points in most cases. For example, TOON_DEFAULT flat mandatory accuracy moves from 76.9% (thinking off) to 79.6% (thinking on), a gain of 2.7 points. Output tokens increase measurably with thinking enabled, particularly for formats like JSON_PRETTY and TOON_DEFAULT where output token variance is high. For latency-sensitive or cost-sensitive deployments the accuracy return on the added thinking tokens is consistently low across the formats and structures tested.
-
-**YAML is competitive on nested accuracy but cannot match JSON_COMPACT on efficiency.**
-YAML achieves the highest or joint-highest raw accuracy in three of the four nested configurations, peaking at 80.6% for nested optional data with thinking on. The weighted efficiency score remains in the 70 to 73 range for nested YAML because it consumes approximately 14K to 14.6K tokens, 35% to 44% more than JSON_COMPACT. The accuracy premium that YAML provides over JSON_COMPACT in nested configurations is typically 1 to 5 percentage points, which does not offset the token volume difference under the 70/30 accuracy-cost weighting applied in the efficiency score formula.
-
-**XML_COMPACT occupies a consistent middle tier without excelling at any dimension.**
-XML_COMPACT is never the most accurate, the most efficient, or the cheapest format in any configuration. It sits between the compact formats (TOON_DEFAULT, JSON_COMPACT) and the verbose formats (XML_PRETTY, JSON_PRETTY) on both token cost and efficiency score. Its chars-per-token ratio of 2.3 to 2.6 is the highest across all formats, reflecting dense encoding, but the tag structure still results in higher total token counts than JSON_COMPACT for equivalent data.
+<ADD_CONTENT_HERE>Analysis here</ADD_CONTENT_HERE>
 
 ### 3.2 Decision Matrix
 
@@ -217,7 +198,7 @@ XML_COMPACT is never the most accurate, the most efficient, or the cheapest form
 
 ### 4.1 Appendix A: Test Infrastructure
 
-- **Test Date**: 2026-03-18
+- **Test Date**: 2026-03-22
 - **Model**: Claude Haiku 4.5 (claude-haiku-4-5-20251001)
 - **Extended Thinking**: on & off
 - **Structure**: flat & nested
@@ -243,16 +224,15 @@ XML_COMPACT is never the most accurate, the most efficient, or the cheapest form
 
 ---
 
-- **Report Generated**: 2026-03-18
+- **Report Generated**: 2026-04-09
 - **Written by**: [Thore Höltig](https://github.com/thoeltig)
-- **With the help of**: Claude Sonnet 4.6
-- **Data Source**: `analytics_results.json`
+- **Test run in**: Claude Code < 2.1.86
 - **Publication**: Open source research in [GitHub repository](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results)
+- **Licensed under**: [CC BY 4.0](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/LICENSE)
 - **Full Benchmark Reports**: 
    - [Report - flat structure & thinking on](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/tree/feature/benchmark_haiku_4_5_flat_all_formats_and_variants_off/benchmark_haiku_4_5/results_flat_all_formats_and_variants_on/BENCHMARK_REPORT.md)
    - [Report - flat structure & thinking off](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/tree/feature/benchmark_haiku_4_5_flat_all_formats_and_variants_off/benchmark_haiku_4_5/results_flat_all_formats_and_variants_off/BENCHMARK_REPORT.md)
    - [Report - nested structure & thinking on](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/tree/feature/benchmark_haiku_4_5_flat_all_formats_and_variants_off/benchmark_haiku_4_5/results_nested_all_formats_and_variants_on/BENCHMARK_REPORT.md)
    - [Report - nested structure & thinking off](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/tree/feature/benchmark_haiku_4_5_flat_all_formats_and_variants_off/benchmark_haiku_4_5/results_nested_all_formats_and_variants_off/BENCHMARK_REPORT.md)
-   - [Report - flat structure & thinking on - verification run](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/tree/feature/benchmark_haiku_4_5_flat_all_formats_and_variants_off/benchmark_haiku_4_5/results_flat_all_formats_and_variants_on_verify/BENCHMARK_REPORT.md)
 - **Format Specifics**: [README](https://github.com/thoeltig/file-format-token-accuracy-benchmark#format-specifics)
 - **Benchmark Tool**: Claude Code Plugin in [GitHub repository](https://github.com/thoeltig/file-format-token-accuracy-benchmark)
