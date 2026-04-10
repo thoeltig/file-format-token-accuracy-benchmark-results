@@ -9,7 +9,7 @@
 
 ## Executive Summary
 
-This benchmark evaluates token efficiency and information accuracy across 6 file formats using Claude Haiku 4.5 (claude-haiku-4-5-20251001) as the inference model. The research addresses a critical but underexplored problem: **not all tokens are equally useful**. A format that uses fewer tokens but produces inaccurate results wastes both tokens and context, while a format that accurately conveys information may justify higher token cost.
+This benchmark evaluates token efficiency and information accuracy across 6 file formats using Claude Haiku 4.5 (claude-haiku-4-5-20251001) as the inference model. The research addresses a critical but underexplored problem: **not all tokens are equally useful**. A format that uses fewer tokens but produces inaccurate results wastes both tokens and context while a format that accurately conveys information may justify higher token cost.
 
 ### Key Findings
 
@@ -40,52 +40,54 @@ This requires measuring:
 
 ### 1.2 Test Design
 
-**Data Generation:**
+#### 1.2.1 Data Generation
 - 6 formats tested: JSON_COMPACT, JSON_PRETTY, TOON_DEFAULT, XML_COMPACT, XML_PRETTY, YAML
 - 2 variants per format: mandatory (22 fields, dense) and optional (19 mandatory + 3 optional, sparse)
 - Record Counts: 31
 
-**Question Distribution:**
+#### 1.2.2 Question Distribution
 - 4 question categories reflecting practical use cases:
    - **Field Retrieval (55 questions, 37.50% weight):** Extract specific values from specific records
    - **Filtering (21 questions, 20.83% weight):** Count records matching criteria
    - **Aggregation (21 questions, 12.50% weight):** Sum, average, min/max calculations
    - **Structure Awareness (27 questions, 29.17% weight):** Understand data shape, organization, metadata
 
-**Weighting Rationale:**
-- Field retrieval + structure awareness = 66.67%
+#### 1.2.3 Weighting Rationale
+- **Field retrieval + structure awareness** = 66.67%
    - These represent the file format itself. Understanding "what data exists and how it's organized" which is fundamental to avoiding context confusion.
-- Filtering + aggregation = 33.33%
+- **Filtering + aggregation** = 33.33%
    - These represent more the "intellectual" aspect of the model and will differ greatly depending on the model. Also if done deterministic the model still needs to do field retrieval and structure awareness on the result.
 
 ### 1.3 Metrics Definition
 
-**Token Metrics:**
-- `readTokens`: Tokens consumed reading the data file
-- `outputTokens`: Tokens consumed during inference (answering questions + creating the file content)
-- `totalTokens`: readTokens + outputTokens
+#### 1.3.1 Token Metrics
+- **Read Tokens**: Tokens consumed reading the data file
+- **Output Tokens**: Tokens consumed during inference (answering questions and creating the file content)
+- **Total Tokens**: **Read Tokens** + **Output Tokens**
 
-**Accuracy Metrics:**
-- `accuracy`: Correct answers / total questions
-- `weightedAccuracy`: Accuracy weighted by question category importanc
+#### 1.3.2 Accuracy Metrics
+- **Accuracy**: Correct answers / total questions
+- **Weighted Accuracy**: Accuracy weighted by question category importanc
 
-**Information Value Metrics:**
-- `informationValuePerToken`: (accuracy% / totalTokens) × 100
-- `costOfInaccuracy`: totalTokens × (1 - accuracy% / 100) — tokens wasted on inaccurate output
-
-**Efficiency Score:**
-- Composite metric balancing accuracy with normalized token cost (favour towards accuracy)
-- normalizedTokenCost = (((maxTotalTokens+10)-currenTotalTokens)/((maxTotalTokens+10)-(minTotalTokens-10)))*100
-- `efficiencyScore`: (accuracy% x 0.7) + (normalizedTokenCost * 0.3)
-- `weightedEfficiencyScore`: (weightedAccuracy% x 0.7) + (normalizedTokenCost * 0.3)
+#### 1.3.3 Efficiency Score
+Composite metric balancing accuracy with normalized token count (favour towards accuracy). Each efficieny score has an indicator which token count was used in the calculation.
+- **Normalized Tokens** = (((**Max Tokens** + 10) - **Curren Tokens**) / ((**Max Tokens** + 10) - (**Min Tokens** - 10))) * 100
+- **Efficiency Score**: (**Accuracy** % x 0.7) + (**Normalized Tokens** * 0.3)
+- **Weighted Efficiency Score**: (**Weighted Accuracy** % x 0.7) + (**Normalized Tokens** * 0.3)
 
 ### 1.4 Token Usage Measurements
 
-Tokens usage measured in this benchmark are no estimates but the real token usage the model used in this test. The token usage is reported to the user indirectly in the conversation transcript. Both read and output Tokens are directly extracted from the transcripts of the subagents:
+Tokens usage measured in this benchmark are no estimates but the real token usage the model used in this test. The token usage is reported to the user indirectly in the conversation transcript. Both read and output tokens are directly extracted from the transcripts of the subagents:
 - **Read Tokens**: For each data file a single read subagent is invoked with the only prompt to read the file at the provided filepath and return "Done" once finished and do nothing more. The token extraction script searches for the read tool result and extracts only the read tokens of it.
-- **Output Tokens**: For each data file three "benchmark-full-test" subagent are invoked with data, questions and answers template files and the instructions to read everything and answer all questions in a single write tool use. The token extraction script aggregates all output tokens until and including the write tool result.
+- **Output Tokens**: For each data file multiple "benchmark-full-test" subagent are invoked with data, questions and answers template files and the instructions to read everything and answer all questions in a single write tool use. The token extraction script aggregates all output tokens until and including the write tool result.
    - **Output Before Write Tokens**: The output tokens which the model needed for reading the provided files and instructions.
    - **Output Write Tokens**: The output tokens the model used to create the output and write the answers file.
+
+### 1.5 Important Note
+
+These results are specific to Claude Code using the Claude Haiku 4.5 (claude-haiku-4-5-20251001) model. They serve as a rule of thumb for choosing the best file format depending on the use case.
+However these values cannot be exactly applied to models of the same family or from other providers as token usage, accuracy and latency depend on specific model architectures and tokenizers. While the relative ranking of file formats remains consistent the absolute numbers will vary.
+Especially the accuracy and output tokens results will vary because these values are bound to the model size and training, instruction interpretation and reasoning token budget.
 
 ## 2. Results
 

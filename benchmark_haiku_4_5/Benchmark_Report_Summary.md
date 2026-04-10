@@ -2,6 +2,8 @@
 
 ## 1. Methodology
 
+### 1.1 Research Purpose
+
 The underlying question: **Which file format delivers maximum information value per token consumed?**
 
 This requires measuring:
@@ -9,47 +11,69 @@ This requires measuring:
 - **Information Fidelity**: How accurately can the model understand and answer questions about the data?
 - **Robustness**: How consistent is performance across data variants (mandatory vs optional fields)?
 
-### 1.1 Metric Definitions
+### 1.2 Test Design
 
-**Token Metrics:**
-- `Read Tokens`: Tokens consumed reading the data file
-- `Output Tokens`: Tokens consumed during inference
-   - `Output Before Write Tokens` = The output tokens before the write tool was used (understanding instructions and files)
-   - `Output Write Tokens` = The output tokens used to write the answers (answering questions and creating the file content)
-- `Total Tokens`: Read tokens + output tokens
+#### 1.2.1 Data Generation
+- 2 variants per format: mandatory (22 fields, dense) and optional (19 mandatory + 3 optional, sparse)
+- Record Counts: 31
 
-**Accuracy Metrics:**
-- `Accuracy`: Correct answers / total questions
-
-**Efficiency Score:**
-- Composite metric balancing accuracy with normalized token cost (weighted towards accuracy)
-- `NormalizedTokenCost` = (((MaxTotalTokens + 10) − CurrentTotalTokens) / ((MaxTotalTokens + 10) − (MinTotalTokens − 10))) × 100
-- `EfficiencyScore` = (Accuracy% × 0.7) + (NormalizedTokenCost × 0.3)
-
-### 1.2 Formats Tested
-
-| Format ID | Description |
+| Formats | Description |
 |---|---|
 | **CSV** | Comma-separated values — flat structure only |
 | **JSON_COMPACT** | Minified JSON (no whitespace or newlines) |
 | **JSON_PRETTY** | Standard indented JSON |
+| **TOON_DEFAULT** | [Token-Oriented Object Notation](https://toonformat.dev/) with key folding disabled — nested structures expanded as-is |
 | **XML_COMPACT** | Minified XML (no whitespace or indentation) |
 | **XML_PRETTY** | Standard indented XML |
-| **TOON_DEFAULT** | [Token-Oriented Object Notation](https://toonformat.dev/) with key folding disabled — nested structures expanded as-is |
 | **YAML** | Standard YAML with hierarchical indentation |
+
+#### 1.2.2 Question Distribution
+- 4 question categories reflecting practical use cases:
+   - **Field Retrieval (55 questions, 37.50% weight):** Extract specific values from specific records
+   - **Filtering (21 questions, 20.83% weight):** Count records matching criteria
+   - **Aggregation (21 questions, 12.50% weight):** Sum, average, min/max calculations
+   - **Structure Awareness (27 questions, 29.17% weight):** Understand data shape, organization, metadata
+
+#### 1.2.3 Weighting Rationale
+- **Field retrieval + structure awareness** = 66.67%
+   - These represent the file format itself. Understanding "what data exists and how it's organized" which is fundamental to avoiding context confusion.
+- **Filtering + aggregation** = 33.33%
+   - These represent more the "intellectual" aspect of the model and will differ greatly depending on the model. Also if done deterministic the model still needs to do field retrieval and structure awareness on the result.
+
+### 1.3 Metrics Definition
+
+#### 1.3.1 Token Metrics
+- **Read Tokens**: Tokens consumed reading the data file
+- **Output Tokens**: Tokens consumed during inference (answering questions and creating the file content)
+- **Total Tokens**: **Read Tokens** + **Output Tokens**
+
+#### 1.3.2 Accuracy Metrics
+- **Accuracy**: Correct answers / total questions
+- **Weighted Accuracy**: Accuracy weighted by question category importanc
+
+#### 1.3.3 Efficiency Score
+Composite metric balancing accuracy with normalized token count (favour towards accuracy). Each efficieny score has an indicator which token count was used in the calculation.
+- **Normalized Tokens** = (((**Max Tokens** + 10) - **Curren Tokens**) / ((**Max Tokens** + 10) - (**Min Tokens** - 10))) * 100
+- **Efficiency Score**: (**Accuracy** % x 0.7) + (**Normalized Tokens** * 0.3)
+- **Weighted Efficiency Score**: (**Weighted Accuracy** % x 0.7) + (**Normalized Tokens** * 0.3)
+
+### 1.4 Token Usage Measurements
+
+Tokens usage measured in this benchmark are no estimates but the real token usage the model used in this test. The token usage is reported to the user indirectly in the conversation transcript. Both read and output tokens are directly extracted from the transcripts of the subagents:
+- **Read Tokens**: For each data file a single read subagent is invoked with the only prompt to read the file at the provided filepath and return "Done" once finished and do nothing more. The token extraction script searches for the read tool result and extracts only the read tokens of it.
+- **Output Tokens**: For each data file multiple "benchmark-full-test" subagent are invoked with data, questions and answers template files and the instructions to read everything and answer all questions in a single write tool use. The token extraction script aggregates all output tokens until and including the write tool result.
+   - **Output Before Write Tokens**: The output tokens which the model needed for reading the provided files and instructions.
+   - **Output Write Tokens**: The output tokens the model used to create the output and write the answers file.
+
+### 1.5 Important Note
+
+These results are specific to Claude Code using the Claude Haiku 4.5 (claude-haiku-4-5-20251001) model. They serve as a rule of thumb for choosing the best file format depending on the use case.
+However these values cannot be exactly applied to models of the same family or from other providers as token usage, accuracy and latency depend on specific model architectures and tokenizers. While the relative ranking of file formats remains consistent the absolute numbers will vary.
+Especially the accuracy and output tokens results will vary because these values are bound to the model size and training, instruction interpretation and reasoning token budget.
 
 ## 2. Simplified Results
 
-> [!NOTE]
->
-> These benchmark results are specific to Claude Code using the Haiku 4.5 model. They serve as a rule of thumb for choosing the best file format for your use case.
-> However these values cannot be directly applied to models from other providers as token usage and latency depend on specific model architectures and tokenizers. While the relative ranking of file formats remains consistent the absolute number of tokens will vary.
->
-> All columns ranked best-to-worst: 
-> - ↑ = lower value is better (ascending)
-> - ↓ = higher value is better (descending)
->
-> See [§1.1](#11-metric-definitions) for formulas
+*Note: All columns ranked best-to-worst. ↑ = lower value is better (ascending). ↓ = higher value is better (descending).*
 
 ### 2.1 Flat Structure With Thinking On
 
@@ -279,6 +303,23 @@ For one-off queries, small payloads or prototyping where the data fits comfortab
 - Filtering + aggregation = 33.33%
    - These represent more the "intellectual" aspect of the model and will differ greatly depending on the model. Also if done deterministic the model still needs to do field retrieval and structure awareness on the result.
 
+## 4. Appendices
+
+### 4.1 Appendix A: Test Infrastructure
+- **Test Date**: 2026-03-22
+- **Model**: Claude Haiku 4.5 (claude-haiku-4-5-20251001)
+- **Thinking**: off & on
+- **Structure**: flat & nested
+- **Formats Tested**: CSV, JSON_COMPACT, JSON_PRETTY, TOON_DEFAULT, XML_COMPACT, XML_PRETTY, YAML
+- **Record Counts**: 31
+- **Total Test Cases**: 14
+
+### 4.2 Appendix B: Benchmark Configuration
+- **Field Retrieval**: 55 questions (37.50% weight)
+- **Filtering**: 21 questions (20.83% weight)
+- **Aggregation**: 21 questions (12.50% weight)
+- **Structure Awareness**: 27 questions (29.17% weight)
+
 ---
 
 - **Report Generated**: 2026-04-09
@@ -287,9 +328,9 @@ For one-off queries, small payloads or prototyping where the data fits comfortab
 - **Publication**: Open source research in [GitHub repository](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results)
 - **Licensed under**: [CC BY 4.0](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/LICENSE)
 - **Full Benchmark Reports**: 
-   - [Report - flat structure & thinking on](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/tree/feature/benchmark_haiku_4_5_flat_all_formats_and_variants_off/benchmark_haiku_4_5/results_flat_all_formats_and_variants_on/BENCHMARK_REPORT.md)
-   - [Report - flat structure & thinking off](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/tree/feature/benchmark_haiku_4_5_flat_all_formats_and_variants_off/benchmark_haiku_4_5/results_flat_all_formats_and_variants_off/BENCHMARK_REPORT.md)
-   - [Report - nested structure & thinking on](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/tree/feature/benchmark_haiku_4_5_flat_all_formats_and_variants_off/benchmark_haiku_4_5/results_nested_all_formats_and_variants_on/BENCHMARK_REPORT.md)
-   - [Report - nested structure & thinking off](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/tree/feature/benchmark_haiku_4_5_flat_all_formats_and_variants_off/benchmark_haiku_4_5/results_nested_all_formats_and_variants_off/BENCHMARK_REPORT.md)
+   - [Report - flat structure & thinking on](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/benchmark_haiku_4_5/results_flat_all_formats_and_variants_on/BENCHMARK_REPORT.md)
+   - [Report - flat structure & thinking off](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/benchmark_haiku_4_5/results_flat_all_formats_and_variants_off/BENCHMARK_REPORT.md)
+   - [Report - nested structure & thinking on](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/benchmark_haiku_4_5/results_nested_all_formats_and_variants_on/BENCHMARK_REPORT.md)
+   - [Report - nested structure & thinking off](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/benchmark_haiku_4_5/results_nested_all_formats_and_variants_off/BENCHMARK_REPORT.md)
 - **Format Specifics**: [README](https://github.com/thoeltig/file-format-token-accuracy-benchmark#format-specifics)
 - **Benchmark Tool**: Claude Code Plugin in [GitHub repository](https://github.com/thoeltig/file-format-token-accuracy-benchmark)
