@@ -13,7 +13,15 @@
         "accuracyDriftPercMax": 11.97,
         "weightedAccuracyPercent": 74.35,
         "weightedAccuracyDriftPercMin": -9.5,
-        "weightedAccuracyDriftPercMax": 11.9
+        "weightedAccuracyDriftPercMax": 11.9,
+        "charactersOfAnswers": {
+            "expected": 7654,
+            "correct": 5620,
+            "incorrect": 2145.667,
+            "accuracyByCharPerc": 73.42,
+            "accuracyByCharDriftPercMin": -9.89,
+            "accuracyByCharDriftPercMax": 12
+        }
     },
     "perRunAccuracy": [
         {
@@ -56,9 +64,12 @@
                     "weightedAccuracyPercent": 23.77
                 }
             ],
-            "expectedAnswerCharacters": 7654,
-            "correctAnswerCharacters": 6830,
-            "incorrectAnswerCharacters": 1405
+            "charactersOfAnswers": {
+                "expected": 7654,
+                "correct": 6294,
+                "incorrect": 1405,
+                "accuracyByCharPerc": 82.23
+            }
         },
         {
             "run": 2,
@@ -100,9 +111,12 @@
                     "weightedAccuracyPercent": 19.44
                 }
             ],
-            "expectedAnswerCharacters": 7654,
-            "correctAnswerCharacters": 5609,
-            "incorrectAnswerCharacters": 2737
+            "charactersOfAnswers": {
+                "expected": 7654,
+                "correct": 5064,
+                "incorrect": 2737,
+                "accuracyByCharPerc": 66.16
+            }
         },
         {
             "run": 3,
@@ -144,9 +158,12 @@
                     "weightedAccuracyPercent": 17.28
                 }
             ],
-            "expectedAnswerCharacters": 7654,
-            "correctAnswerCharacters": 5920,
-            "incorrectAnswerCharacters": 2295
+            "charactersOfAnswers": {
+                "expected": 7654,
+                "correct": 5502,
+                "incorrect": 2295,
+                "accuracyByCharPerc": 71.88
+            }
         }
     ],
     "questionsAndProvidedAnswers": [

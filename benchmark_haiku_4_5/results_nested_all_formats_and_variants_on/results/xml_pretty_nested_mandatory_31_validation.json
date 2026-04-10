@@ -13,7 +13,15 @@
         "accuracyDriftPercMax": 15.38,
         "weightedAccuracyPercent": 71.93,
         "weightedAccuracyDriftPercMin": -12.79,
-        "weightedAccuracyDriftPercMax": 16.2
+        "weightedAccuracyDriftPercMax": 16.2,
+        "charactersOfAnswers": {
+            "expected": 7654,
+            "correct": 5708.333,
+            "incorrect": 2109,
+            "accuracyByCharPerc": 74.58,
+            "accuracyByCharDriftPercMin": -13.76,
+            "accuracyByCharDriftPercMax": 23.79
+        }
     },
     "perRunAccuracy": [
         {
@@ -56,9 +64,12 @@
                     "weightedAccuracyPercent": 16.2
                 }
             ],
-            "expectedAnswerCharacters": 7654,
-            "correctAnswerCharacters": 5301,
-            "incorrectAnswerCharacters": 3170
+            "charactersOfAnswers": {
+                "expected": 7654,
+                "correct": 4923,
+                "incorrect": 3170,
+                "accuracyByCharPerc": 64.32
+            }
         },
         {
             "run": 2,
@@ -100,9 +111,12 @@
                     "weightedAccuracyPercent": 18.36
                 }
             ],
-            "expectedAnswerCharacters": 7654,
-            "correctAnswerCharacters": 5644,
-            "incorrectAnswerCharacters": 2529
+            "charactersOfAnswers": {
+                "expected": 7654,
+                "correct": 5136,
+                "incorrect": 2529,
+                "accuracyByCharPerc": 67.1
+            }
         },
         {
             "run": 3,
@@ -144,9 +158,12 @@
                     "weightedAccuracyPercent": 25.93
                 }
             ],
-            "expectedAnswerCharacters": 7654,
-            "correctAnswerCharacters": 7708,
-            "incorrectAnswerCharacters": 628
+            "charactersOfAnswers": {
+                "expected": 7654,
+                "correct": 7066,
+                "incorrect": 628,
+                "accuracyByCharPerc": 92.32
+            }
         }
     ],
     "questionsAndProvidedAnswers": [

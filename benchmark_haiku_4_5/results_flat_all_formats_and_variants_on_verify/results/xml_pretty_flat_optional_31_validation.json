@@ -13,7 +13,15 @@
         "accuracyDriftPercMax": 4.03,
         "weightedAccuracyPercent": 79.7,
         "weightedAccuracyDriftPercMin": -4.89,
-        "weightedAccuracyDriftPercMax": 3.38
+        "weightedAccuracyDriftPercMax": 3.38,
+        "charactersOfAnswers": {
+            "expected": 8313,
+            "correct": 7844.667,
+            "incorrect": 443,
+            "accuracyByCharPerc": 94.37,
+            "accuracyByCharDriftPercMin": -4.03,
+            "accuracyByCharDriftPercMax": 2.11
+        }
     },
     "perRunAccuracy": [
         {
@@ -56,9 +64,12 @@
                     "weightedAccuracyPercent": 24.85
                 }
             ],
-            "expectedAnswerCharacters": 8313,
-            "correctAnswerCharacters": 8605,
-            "incorrectAnswerCharacters": 320
+            "charactersOfAnswers": {
+                "expected": 8313,
+                "correct": 7995,
+                "incorrect": 320,
+                "accuracyByCharPerc": 96.17
+            }
         },
         {
             "run": 2,
@@ -100,9 +111,12 @@
                     "weightedAccuracyPercent": 24.85
                 }
             ],
-            "expectedAnswerCharacters": 8313,
-            "correctAnswerCharacters": 8736,
-            "incorrectAnswerCharacters": 195
+            "charactersOfAnswers": {
+                "expected": 8313,
+                "correct": 8010,
+                "incorrect": 195,
+                "accuracyByCharPerc": 96.36
+            }
         },
         {
             "run": 3,
@@ -144,9 +158,12 @@
                     "weightedAccuracyPercent": 23.77
                 }
             ],
-            "expectedAnswerCharacters": 8313,
-            "correctAnswerCharacters": 8191,
-            "incorrectAnswerCharacters": 814
+            "charactersOfAnswers": {
+                "expected": 8313,
+                "correct": 7529,
+                "incorrect": 814,
+                "accuracyByCharPerc": 90.57
+            }
         }
     ],
     "questionsAndProvidedAnswers": [
