@@ -66,6 +66,7 @@ This requires measuring:
 - **Total Tokens**: **Read Tokens** + **Output Tokens**
 
 #### 1.3.2 Accuracy Metrics
+- **Accuracy By Char**: Correct char per answers / expected characters per answer
 - **Accuracy**: Correct answers / total questions
 - **Weighted Accuracy**: Accuracy weighted by question category importanc
 
@@ -127,12 +128,26 @@ Especially the accuracy and output tokens results will vary because these values
 - Highest output efficiency (%/token):
    - Optional: JSON_PRETTY 62.32
    - Mandatory: XML_COMPACT 68.37
+- Highest accuracy by char:
+   - Optional: YAML 93.27%
+   - Mandatory: JSON_PRETTY 89.96%
+- Lowest accuracy by char drift:
+   - Optional: YAML ↓ -1.93% ↑ 2.95%
+   - Mandatory: XML_PRETTY ↓ -4.49% ↑ 2.67%
+- Most useful output write tokens (Acc By Char):
+   - Optional: TOON_DEFAULT 10310 / 11427 tokens
+   - Mandatory: JSON_PRETTY 11512 / 12797 tokens
+- Highest output write efficiency (Acc By Char) (%/token):
+   - Optional: JSON_PRETTY 88.81
+   - Mandatory: XML_COMPACT 82.09
 - Lowest delta (optional-mandatory):
    - Read tokens: CSV -289 tokens
    - Output tokens: YAML -76 tokens
    - Accuracy: TOON_DEFAULT 0.27%
    - Read efficiency: CSV 0.54
    - Output efficiency: TOON_DEFAULT -0.29
+   - Accuracy by char: XML_PRETTY -2.72%
+   - Output write efficiency (Acc By Char): XML_COMPACT -5.26
 
 #### 2.1.2 Worst results
 
@@ -166,39 +181,53 @@ Especially the accuracy and output tokens results will vary because these values
 - Lowest output efficiency (%/token):
    - Optional: CSV 51.89
    - Mandatory: JSON_COMPACT 58.23
+- Lowest accuracy by char:
+   - Optional: CSV 61.68%
+   - Mandatory: CSV 57.86%
+- Highest accuracy by char drift:
+   - Optional: XML_PRETTY ↓ -11.48% ↑ 16.17%
+   - Mandatory: TOON_DEFAULT ↓ -24.68% ↑ 18.38%
+- Most wasted output write tokens (Acc By Char):
+   - Optional: CSV 7780 / 12614 tokens
+   - Mandatory: CSV 5327 / 9207 tokens
+- Lowest output write efficiency (Acc By Char) (%/token):
+   - Optional: CSV 50.30
+   - Mandatory: JSON_COMPACT 62.45
 - Highest delta (optional-mandatory):
    - Read tokens: TOON_DEFAULT 4513 tokens
    - Output tokens: JSON_PRETTY -4836 tokens
    - Accuracy: JSON_PRETTY -6.46%
    - Read efficiency: TOON_DEFAULT -14.08
    - Output efficiency: JSON_PRETTY 19.21
+   - Accuracy by char: TOON_DEFAULT 17.26%
+   - Output write efficiency (Acc By Char): JSON_COMPACT 23.16
 
 #### 2.1.3 Format Ranking
 
 ##### Mandatory
 
-| ↑ Total Duration | ↑ Read Tokens | ↑ Output Before Write Tokens | ↑ Output Write Tokens | ↑ Output Tokens | ↑ Total Tokens | ↓ Accuracy | ↓ Eff Score Read | ↓ Eff Score Output | ↓ Eff Score Total |
-|---|---|---|---|---|---|---|---|---|---|
-| XML_COMPACT ≈ 75s | CSV ≈ 6989 | JSON_COMPACT ≈ 228 | XML_COMPACT ≈ 9086 | XML_COMPACT ≈ 9429 | CSV ≈ 16525 | JSON_PRETTY ≈ 83% | TOON_DEFAULT ≈ 85 | XML_COMPACT ≈ 79 | TOON_DEFAULT ≈ 80 |
-| CSV (+3.9%) | TOON_DEFAULT (+0.8%) | YAML (+1.5%) | CSV (+1.3%) | CSV (+1.1%) | TOON_DEFAULT (+13.3%) | TOON_DEFAULT (-3.2%) | JSON_COMPACT (-12.5%) | YAML (-7.5%) | CSV (-7.2%) |
-| YAML (+17.2%) | JSON_COMPACT (+32.6%) | TOON_DEFAULT (+26.1%) | YAML (+14.0%) | YAML (+12.3%) | XML_COMPACT (+27.8%) | XML_PRETTY (-4.8%) | CSV (-12.9%) | TOON_DEFAULT (-12.1%) | XML_COMPACT (-9.1%) |
-| TOON_DEFAULT (+27.4%) | XML_COMPACT (+67.3%) | CSV (+44.7%) | TOON_DEFAULT (+25.3%) | TOON_DEFAULT (+23.8%) | JSON_COMPACT (+35.7%) | XML_COMPACT (-5.4%) | XML_COMPACT (-19.2%) | CSV (-12.9%) | YAML (-15.4%) |
-| XML_PRETTY (+36.2%) | YAML (+79.6%) | JSON_PRETTY (+49.8%) | XML_PRETTY (+36.9%) | XML_PRETTY (+35.5%) | YAML (+40.0%) | YAML (-5.6%) | YAML (-22.6%) | JSON_PRETTY (-18.4%) | JSON_COMPACT (-15.6%) |
-| JSON_PRETTY (+40.7%) | JSON_PRETTY (+104.4%) | XML_COMPACT (+50.5%) | JSON_PRETTY (+40.8%) | JSON_PRETTY (+39.3%) | JSON_PRETTY (+65.9%) | JSON_COMPACT (-8.3%) | JSON_PRETTY (-24.4%) | XML_PRETTY (-20.4%) | JSON_PRETTY (-23.3%) |
-| JSON_COMPACT (+45.8%) | XML_PRETTY (+131.3%) | XML_PRETTY (+50.5%) | JSON_COMPACT (+42.3%) | JSON_COMPACT (+39.6%) | XML_PRETTY (+75.2%) | CSV (-19.1%) | XML_PRETTY (-35.4%) | JSON_COMPACT (-25.9%) | XML_PRETTY (-32.1%) |
+| ↑ Total Duration | ↑ Read Tokens | ↑ Output Before Write Tokens | ↑ Output Write Tokens | ↑ Output Tokens | ↑ Total Tokens | ↓ Accuracy By Char | ↓ Eff Score Output Write (Acc By Char) | ↓ Accuracy | ↓ Eff Score Read | ↓ Eff Score Output | ↓ Eff Score Total |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| XML_COMPACT ≈ 75s | CSV ≈ 6989 | JSON_COMPACT ≈ 228 | XML_COMPACT ≈ 9086 | XML_COMPACT ≈ 9429 | CSV ≈ 16525 | JSON_PRETTY ≈ 90% | XML_COMPACT ≈ 82 | JSON_PRETTY ≈ 83% | TOON_DEFAULT ≈ 85 | XML_COMPACT ≈ 79 | TOON_DEFAULT ≈ 80 |
+| CSV (+3.9%) | TOON_DEFAULT (+0.8%) | YAML (+1.5%) | CSV (+1.3%) | CSV (+1.1%) | TOON_DEFAULT (+13.3%) | XML_PRETTY (-2.7%) | YAML (-10.5%) | TOON_DEFAULT (-3.2%) | JSON_COMPACT (-12.5%) | YAML (-7.5%) | CSV (-7.2%) |
+| YAML (+17.2%) | JSON_COMPACT (+32.6%) | TOON_DEFAULT (+26.1%) | YAML (+14.0%) | YAML (+12.3%) | XML_COMPACT (+27.8%) | XML_COMPACT (-7.6%) | JSON_PRETTY (-15.7%) | XML_PRETTY (-4.8%) | CSV (-12.9%) | TOON_DEFAULT (-12.1%) | XML_COMPACT (-9.1%) |
+| TOON_DEFAULT (+27.4%) | XML_COMPACT (+67.3%) | CSV (+44.7%) | TOON_DEFAULT (+25.3%) | TOON_DEFAULT (+23.8%) | JSON_COMPACT (+35.7%) | JSON_COMPACT (-8.7%) | XML_PRETTY (-15.8%) | XML_COMPACT (-5.4%) | XML_COMPACT (-19.2%) | CSV (-12.9%) | YAML (-15.4%) |
+| XML_PRETTY (+36.2%) | YAML (+79.6%) | JSON_PRETTY (+49.8%) | XML_PRETTY (+36.9%) | XML_PRETTY (+35.5%) | YAML (+40.0%) | YAML (-11.0%) | CSV (-21.6%) | YAML (-5.6%) | YAML (-22.6%) | JSON_PRETTY (-18.4%) | JSON_COMPACT (-15.6%) |
+| JSON_PRETTY (+40.7%) | JSON_PRETTY (+104.4%) | XML_COMPACT (+50.5%) | JSON_PRETTY (+40.8%) | JSON_PRETTY (+39.3%) | JSON_PRETTY (+65.9%) | TOON_DEFAULT (-17.0%) | TOON_DEFAULT (-21.7%) | JSON_COMPACT (-8.3%) | JSON_PRETTY (-24.4%) | XML_PRETTY (-20.4%) | JSON_PRETTY (-23.3%) |
+| JSON_COMPACT (+45.8%) | XML_PRETTY (+131.3%) | XML_PRETTY (+50.5%) | JSON_COMPACT (+42.3%) | JSON_COMPACT (+39.6%) | XML_PRETTY (+75.2%) | CSV (-32.1%) | JSON_COMPACT (-23.9%) | CSV (-19.1%) | XML_PRETTY (-35.4%) | JSON_COMPACT (-25.9%) | XML_PRETTY (-32.1%) |
 
 
 ##### Optional
 
-| ↑ Total Duration | ↑ Read Tokens | ↑ Output Before Write Tokens | ↑ Output Write Tokens | ↑ Output Tokens | ↑ Total Tokens | ↓ Accuracy | ↓ Eff Score Read | ↓ Eff Score Output | ↓ Eff Score Total |
-|---|---|---|---|---|---|---|---|---|---|
-| JSON_PRETTY ≈ 73s | CSV ≈ 6700 | CSV ≈ 231 | JSON_PRETTY ≈ 7966 | JSON_PRETTY ≈ 8302 | JSON_COMPACT ≈ 18753 | XML_PRETTY ≈ 80% | JSON_COMPACT ≈ 79 | JSON_PRETTY ≈ 83 | JSON_COMPACT ≈ 80 |
-| XML_PRETTY (+7.9%) | JSON_COMPACT (+30.6%) | XML_PRETTY (+0.6%) | JSON_COMPACT (+21.4%) | JSON_COMPACT (+20.5%) | CSV (+4.2%) | TOON_DEFAULT (-0.3%) | CSV (-6.3%) | XML_PRETTY (-7.0%) | XML_COMPACT (-11.0%) |
-| JSON_COMPACT (+13.2%) | XML_COMPACT (+63.1%) | YAML (+44.3%) | XML_PRETTY (+23.0%) | XML_PRETTY (+20.8%) | JSON_PRETTY (+15.5%) | JSON_COMPACT (-0.5%) | XML_COMPACT (-8.7%) | JSON_COMPACT (-7.3%) | JSON_PRETTY (-11.6%) |
-| YAML (+21.0%) | TOON_DEFAULT (+72.6%) | XML_COMPACT (+45.2%) | YAML (+27.7%) | YAML (+26.6%) | YAML (+18.8%) | XML_COMPACT (-0.5%) | TOON_DEFAULT (-11.0%) | YAML (-11.4%) | YAML (-11.8%) |
-| TOON_DEFAULT (+28.9%) | YAML (+75.7%) | JSON_PRETTY (+45.5%) | XML_COMPACT (+40.1%) | XML_COMPACT (+38.5%) | XML_COMPACT (+19.6%) | YAML (-1.9%) | YAML (-13.3%) | XML_COMPACT (-16.1%) | TOON_DEFAULT (-13.5%) |
-| XML_COMPACT (+30.1%) | JSON_PRETTY (+99.5%) | JSON_COMPACT (+46.2%) | TOON_DEFAULT (+43.5%) | TOON_DEFAULT (+41.7%) | TOON_DEFAULT (+24.4%) | JSON_PRETTY (-3.8%) | JSON_PRETTY (-21.3%) | TOON_DEFAULT (-17.5%) | CSV (-16.7%) |
-| CSV (+50.1%) | XML_PRETTY (+125.2%) | TOON_DEFAULT (+47.3%) | CSV (+58.3%) | CSV (+54.7%) | XML_PRETTY (+33.9%) | CSV (-16.9%) | XML_PRETTY (-24.8%) | CSV (-37.8%) | XML_PRETTY (-18.6%) |
+| ↑ Total Duration | ↑ Read Tokens | ↑ Output Before Write Tokens | ↑ Output Write Tokens | ↑ Output Tokens | ↑ Total Tokens | ↓ Accuracy By Char | ↓ Eff Score Output Write (Acc By Char) | ↓ Accuracy | ↓ Eff Score Read | ↓ Eff Score Output | ↓ Eff Score Total |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| JSON_PRETTY ≈ 73s | CSV ≈ 6700 | CSV ≈ 231 | JSON_PRETTY ≈ 7966 | JSON_PRETTY ≈ 8302 | JSON_COMPACT ≈ 18753 | YAML ≈ 93% | JSON_PRETTY ≈ 89 | XML_PRETTY ≈ 80% | JSON_COMPACT ≈ 79 | JSON_PRETTY ≈ 83 | JSON_COMPACT ≈ 80 |
+| XML_PRETTY (+7.9%) | JSON_COMPACT (+30.6%) | XML_PRETTY (+0.6%) | JSON_COMPACT (+21.4%) | JSON_COMPACT (+20.5%) | CSV (+4.2%) | JSON_COMPACT (-1.8%) | JSON_COMPACT (-3.6%) | TOON_DEFAULT (-0.3%) | CSV (-6.3%) | XML_PRETTY (-7.0%) | XML_COMPACT (-11.0%) |
+| JSON_COMPACT (+13.2%) | XML_COMPACT (+63.1%) | YAML (+44.3%) | XML_PRETTY (+23.0%) | XML_PRETTY (+20.8%) | JSON_PRETTY (+15.5%) | TOON_DEFAULT (-3.0%) | YAML (-5.0%) | JSON_COMPACT (-0.5%) | XML_COMPACT (-8.7%) | JSON_COMPACT (-7.3%) | JSON_PRETTY (-11.6%) |
+| YAML (+21.0%) | TOON_DEFAULT (+72.6%) | XML_COMPACT (+45.2%) | YAML (+27.7%) | YAML (+26.6%) | YAML (+18.8%) | XML_COMPACT (-3.9%) | XML_PRETTY (-9.7%) | XML_COMPACT (-0.5%) | TOON_DEFAULT (-11.0%) | YAML (-11.4%) | YAML (-11.8%) |
+| TOON_DEFAULT (+28.9%) | YAML (+75.7%) | JSON_PRETTY (+45.5%) | XML_COMPACT (+40.1%) | XML_COMPACT (+38.5%) | XML_COMPACT (+19.6%) | XML_PRETTY (-8.7%) | XML_COMPACT (-13.5%) | YAML (-1.9%) | YAML (-13.3%) | XML_COMPACT (-16.1%) | TOON_DEFAULT (-13.5%) |
+| XML_COMPACT (+30.1%) | JSON_PRETTY (+99.5%) | JSON_COMPACT (+46.2%) | TOON_DEFAULT (+43.5%) | TOON_DEFAULT (+41.7%) | TOON_DEFAULT (+24.4%) | JSON_PRETTY (-9.2%) | TOON_DEFAULT (-14.3%) | JSON_PRETTY (-3.8%) | JSON_PRETTY (-21.3%) | TOON_DEFAULT (-17.5%) | CSV (-16.7%) |
+| CSV (+50.1%) | XML_PRETTY (+125.2%) | TOON_DEFAULT (+47.3%) | CSV (+58.3%) | CSV (+54.7%) | XML_PRETTY (+33.9%) | CSV (-31.6%) | CSV (-43.4%) | CSV (-16.9%) | XML_PRETTY (-24.8%) | CSV (-37.8%) | XML_PRETTY (-18.6%) |
 
 
 #### 2.1.4 Category Accuracy Ranking
@@ -242,22 +271,22 @@ A notable asymmetry exists in how formats handle the mandatory-to-optional trans
 For practitioners using Haiku 4.5 with flat data structures and thinking enabled the recommendation is to prefer **TOON_DEFAULT** or **JSON_COMPACT** as they provide the best balance of token efficiency and accuracy. **CSV** should be avoided for LLM consumption despite its minimal token footprint and **XML_PRETTY** should be avoided due to its disproportionate token overhead relative to its accuracy gains.
 
 ### 2.2 Comprehensive Benchmark Metrics
-| Format | Variant | Read Tokens | Output Tokens | Total Tokens | Char / Read Token | Output Write Tokens / Answer | Accuracy (%) | Useful Read Tokens | Wasted Read Tokens | Useful Output Tokens | Wasted Output Tokens | Eff Score Read | Eff Score Output | Eff Score Total |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| CSV | man | 6989 | 9536 | 16525 | 1.444 | 74.250 | 63.71 | 4452.692 | 2536.308 | 6075.598 | 3460.735 | 73.65 | 68.49 | 74.57 |
-| CSV | opt | 6700 | 12845 | 19545 | 1.429 | 101.723 | 63.18 | 4233.060 | 2466.940 | 8115.261 | 4729.406 | 74.19 | 51.89 | 66.92 |
-| JSON_COMPACT | man | 9268 | 13161 | 22429 | 2.149 | 104.298 | 74.46 | 6900.953 | 2367.047 | 9799.433 | 3361.234 | 73.97 | 58.23 | 67.86 |
-| JSON_COMPACT | opt | 8748 | 10005 | 18753 | 2.113 | 77.965 | 79.57 | 6960.784 | 1787.216 | 7961.243 | 2044.090 | 79.19 | 77.29 | 80.30 |
-| JSON_PRETTY | man | 14283 | 13138 | 27421 | 1.694 | 103.204 | 82.80 | 11826.324 | 2456.676 | 10878.540 | 2259.793 | 63.95 | 64.18 | 61.66 |
-| JSON_PRETTY | opt | 13367 | 8302 | 21669 | 1.680 | 64.242 | 76.34 | 10204.368 | 3162.632 | 6337.747 | 1964.253 | 62.32 | 83.39 | 71.01 |
-| TOON_DEFAULT | man | 7048 | 11671 | 18719 | 1.442 | 91.805 | 79.57 | 5608.094 | 1439.906 | 9286.482 | 2384.351 | 84.57 | 69.12 | 80.39 |
-| TOON_DEFAULT | opt | 11561 | 11768 | 23329 | 1.698 | 92.155 | 79.84 | 9230.302 | 2330.698 | 9395.172 | 2372.328 | 70.48 | 68.83 | 69.46 |
-| XML_COMPACT | man | 11693 | 9429 | 21122 | 2.366 | 73.274 | 77.42 | 9052.721 | 2640.279 | 7299.674 | 2128.993 | 68.37 | 78.62 | 73.09 |
-| XML_COMPACT | opt | 10930 | 11498 | 22428 | 2.340 | 90.024 | 79.57 | 8697.001 | 2232.999 | 9149.224 | 2349.109 | 72.29 | 69.97 | 71.44 |
-| XML_PRETTY | man | 16166 | 12780 | 28946 | 1.934 | 100.304 | 77.96 | 12603.014 | 3562.986 | 9963.548 | 2816.785 | 54.60 | 62.55 | 54.60 |
-| XML_PRETTY | opt | 15089 | 10028 | 25117 | 1.917 | 79.000 | 80.11 | 12087.798 | 3001.202 | 8033.698 | 1994.635 | 59.52 | 77.56 | 65.33 |
-| YAML | man | 12554 | 10585 | 23139 | 1.664 | 83.500 | 77.15 | 9685.411 | 2868.589 | 8166.328 | 2418.672 | 65.46 | 72.75 | 68.03 |
-| YAML | opt | 11771 | 10509 | 22280 | 1.649 | 82.065 | 78.23 | 9208.453 | 2562.547 | 8221.451 | 2287.882 | 68.69 | 73.88 | 70.86 |
+| Format | Variant | Read Tokens | Output Tokens | Total Tokens | Char / Read Token | Output Write Tokens / Answer | Accuracy By Char (%) | Useful Output Write Tokens (Acc By Char) | Wasted Output Write Tokens (Acc By Char) | Eff Score Output Write (Acc By Char) | Accuracy (%) | Useful Read Tokens | Wasted Read Tokens | Useful Output Tokens | Wasted Output Tokens | Eff Score Read | Eff Score Output | Eff Score Total |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| CSV | man | 6989 | 9536 | 16525 | 1.444 | 74.250 | 57.86 | 5327.17 | 3879.83 | 64.36 | 63.71 | 4452.692 | 2536.308 | 6075.598 | 3460.735 | 73.65 | 68.49 | 74.57 |
+| CSV | opt | 6700 | 12845 | 19545 | 1.429 | 101.723 | 61.68 | 7780.11 | 4833.56 | 50.30 | 63.18 | 4233.060 | 2466.940 | 8115.261 | 4729.406 | 74.19 | 51.89 | 66.92 |
+| JSON_COMPACT | man | 9268 | 13161 | 22429 | 2.149 | 104.298 | 81.28 | 10511.94 | 2421.06 | 62.45 | 74.46 | 6900.953 | 2367.047 | 9799.433 | 3361.234 | 73.97 | 58.23 | 67.86 |
+| JSON_COMPACT | opt | 8748 | 10005 | 18753 | 2.113 | 77.965 | 91.46 | 8842.05 | 825.62 | 85.61 | 79.57 | 6960.784 | 1787.216 | 7961.243 | 2044.090 | 79.19 | 77.29 | 80.30 |
+| JSON_PRETTY | man | 14283 | 13138 | 27421 | 1.694 | 103.204 | 89.96 | 11512.48 | 1284.85 | 69.19 | 82.80 | 11826.324 | 2456.676 | 10878.540 | 2259.793 | 63.95 | 64.18 | 61.66 |
+| JSON_PRETTY | opt | 13367 | 8302 | 21669 | 1.680 | 64.242 | 84.09 | 6698.61 | 1267.39 | 88.81 | 76.34 | 10204.368 | 3162.632 | 6337.747 | 1964.253 | 62.32 | 83.39 | 71.01 |
+| TOON_DEFAULT | man | 7048 | 11671 | 18719 | 1.442 | 91.805 | 72.96 | 8305.64 | 3078.19 | 64.24 | 79.57 | 5608.094 | 1439.906 | 9286.482 | 2384.351 | 84.57 | 69.12 | 80.39 |
+| TOON_DEFAULT | opt | 11561 | 11768 | 23329 | 1.698 | 92.155 | 90.22 | 10309.74 | 1117.59 | 76.11 | 79.84 | 9230.302 | 2330.698 | 9395.172 | 2372.328 | 70.48 | 68.83 | 69.46 |
+| XML_COMPACT | man | 11693 | 9429 | 21122 | 2.366 | 73.274 | 82.34 | 7481.41 | 1604.59 | 82.09 | 77.42 | 9052.721 | 2640.279 | 7299.674 | 2128.993 | 68.37 | 78.62 | 73.09 |
+| XML_COMPACT | opt | 10930 | 11498 | 22428 | 2.340 | 90.024 | 89.40 | 9979.72 | 1183.28 | 76.83 | 79.57 | 8697.001 | 2232.999 | 9149.224 | 2349.109 | 72.29 | 69.97 | 71.44 |
+| XML_PRETTY | man | 16166 | 12780 | 28946 | 1.934 | 100.304 | 87.28 | 10855.60 | 1582.07 | 69.08 | 77.96 | 12603.014 | 3562.986 | 9963.548 | 2816.785 | 54.60 | 62.55 | 54.60 |
+| XML_PRETTY | opt | 15089 | 10028 | 25117 | 1.917 | 79.000 | 84.56 | 8283.50 | 1512.50 | 80.16 | 80.11 | 12087.798 | 3001.202 | 8033.698 | 1994.635 | 59.52 | 77.56 | 65.33 |
+| YAML | man | 12554 | 10585 | 23139 | 1.664 | 83.500 | 78.91 | 8170.34 | 2183.66 | 73.46 | 77.15 | 9685.411 | 2868.589 | 8166.328 | 2418.672 | 65.46 | 72.75 | 68.03 |
+| YAML | opt | 11771 | 10509 | 22280 | 1.649 | 82.065 | 93.27 | 9491.16 | 684.85 | 84.39 | 78.23 | 9208.453 | 2562.547 | 8221.451 | 2287.882 | 68.69 | 73.88 | 70.86 |
 
 ### 2.3 Format Robustness: Mandatory vs Optional
 | Format | Read Tokens Man | Read Tokens Opt | Diff | Diff (%) | Output Before Write Tokens Man | Output Before Write Tokens Opt | Diff | Diff (%) | Output Write Tokens Man | Output Write Tokens Opt | Diff | Diff (%) | Output Tokens Man | Output Tokens Opt | Diff | Diff (%) | Total Tokens Man | Total Tokens Opt | Diff | Diff (%) |
@@ -330,8 +359,38 @@ For practitioners using Haiku 4.5 with flat data structures and thinking enabled
 | XML_PRETTY | 1.934 | 1.917 | -0.017 | -0.88 | 23.704 | 23.913 |  +0.209 |  +0.88 | 521.484 | 486.742 | -34.742 | -6.66 | 0.482 | 0.531 |  +0.049 |  +10.17 | 0.610 | 0.799 |  +0.189 |  +30.98 | 0.269 | 0.319 |  +0.050 |  +18.59 |
 | YAML | 1.664 | 1.649 | -0.015 | -0.90 | 18.408 | 18.655 |  +0.247 |  +1.34 | 404.968 | 379.710 | -25.258 | -6.24 | 0.615 | 0.665 |  +0.050 |  +8.13 | 0.729 | 0.744 |  +0.015 |  +2.06 | 0.333 | 0.351 |  +0.018 |  +5.41 |
 
-### 2.6 Token Utilization Efficiency
+### 2.6 Output Write Token Utilization Efficiency (Accuracy By Char)
 #### 2.6.1 Metrics
+| Format | Variant | Output Write Tokens | Useful Output Write Tokens (Acc By Char) | Wasted Output Write Tokens (Acc By Char) | Accuracy by Char (%) | Eff Score Output Write (Acc By Char) |
+|---|---|---|---|---|---|---|
+| CSV | man | 9207 | 5327 | 3880 | 57.86 | 64.36 |
+| CSV | opt | 12614 | 7780 | 4834 | 61.68 | 50.30 |
+| JSON_COMPACT | man | 12933 | 10512 | 2421 | 81.28 | 62.45 |
+| JSON_COMPACT | opt | 9668 | 8842 | 826 | 91.46 | 85.61 |
+| JSON_PRETTY | man | 12797 | 11512 | 1285 | 89.96 | 69.19 |
+| JSON_PRETTY | opt | 7966 | 6699 | 1267 | 84.09 | 88.81 |
+| TOON_DEFAULT | man | 11384 | 8306 | 3078 | 72.96 | 64.24 |
+| TOON_DEFAULT | opt | 11427 | 10310 | 1118 | 90.22 | 76.11 |
+| XML_COMPACT | man | 9086 | 7481 | 1605 | 82.34 | 82.09 |
+| XML_COMPACT | opt | 11163 | 9980 | 1183 | 89.40 | 76.83 |
+| XML_PRETTY | man | 12438 | 10856 | 1582 | 87.28 | 69.08 |
+| XML_PRETTY | opt | 9796 | 8283 | 1513 | 84.56 | 80.16 |
+| YAML | man | 10354 | 8170 | 2184 | 78.91 | 73.46 |
+| YAML | opt | 10176 | 9491 | 685 | 93.27 | 84.39 |
+
+#### 2.6.2 Read Tokens Mandatory vs Optional Data
+| Format | Output Write Tokens Man | Output Write Tokens Opt | Diff | Diff (%) | Useful Output Write Tokens (Acc By Char) Man | Useful Output Write Tokens (Acc By Char) Opt | Diff | Diff (%) | Wasted Output Write Tokens (Acc By Char) Man | Wasted Output Write Tokens (Acc By Char) Opt | Diff | Diff (%) | Accuracy By Char (%) Man | Accuracy By Char (%) Opt | Diff (%) | Eff Score Output Write (Acc By Char) Man | Eff Score Output Write (Acc By Char) Opt | Diff | Diff (%) |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| CSV | 9207 | 12614 |  +3407 |  +37.00 | 5327 | 7780 |  +2453 |  +46.05 | 3880 | 4834 |  +954 |  +24.58 | 57.86 | 61.68 |  +3.82 |  +6.60 | 64.36 | 50.30 | -14.06 | -21.84 |
+| JSON_COMPACT | 12933 | 9668 | -3265 | -25.25 | 10512 | 8842 | -1670 | -15.89 | 2421 | 826 | -1595 | -65.90 | 81.28 | 91.46 |  +10.18 |  +12.52 | 62.45 | 85.61 |  +23.16 |  +37.09 |
+| JSON_PRETTY | 12797 | 7966 | -4831 | -37.75 | 11512 | 6698 | -4814 | -41.82 | 1285 | 1268 | -17 | -1.36 | 89.96 | 84.09 | -5.87 | -6.53 | 69.19 | 88.81 |  +19.62 |  +28.35 |
+| TOON_DEFAULT | 11384 | 11428 |  +44 |  +0.38 | 8306 | 10310 |  +2004 |  +24.13 | 3078 | 1117 | -1961 | -63.70 | 72.96 | 90.22 |  +17.26 |  +23.66 | 64.24 | 76.11 |  +11.87 |  +18.48 |
+| XML_COMPACT | 9086 | 11163 |  +2077 |  +22.86 | 7481 | 9979 |  +2498 |  +33.40 | 1605 | 1184 | -421 | -26.25 | 82.34 | 89.40 |  +7.06 |  +8.57 | 82.09 | 76.83 | -5.26 | -6.41 |
+| XML_PRETTY | 12438 | 9796 | -2642 | -21.24 | 10856 | 8284 | -2572 | -23.69 | 1582 | 1512 | -70 | -4.40 | 87.28 | 84.56 | -2.72 | -3.12 | 69.08 | 80.16 |  +11.07 |  +16.02 |
+| YAML | 10354 | 10176 | -178 | -1.72 | 8170 | 9491 |  +1321 |  +16.17 | 2184 | 685 | -1499 | -68.63 | 78.91 | 93.27 |  +14.36 |  +18.20 | 73.46 | 84.39 |  +10.93 |  +14.87 |
+
+### 2.7 Token Utilization Efficiency
+#### 2.7.1 Metrics
 | Format | Variant | Read Tokens | Useful Read Tokens | Wasted Read Tokens | Output Tokens | Useful Output Tokens | Wasted Output Tokens | Total Tokens | Useful Total Tokens | Wasted Total Tokens | Accuracy (%) | Eff Score Read | Eff Score Output | Eff Score Total | Wtd Accuracy (%) | Wtd Eff Score Read | Wtd Eff Score Output | Wtd Eff Score Total |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | man | 6989 | 4453 | 2536 | 9536 | 6076 | 3461 | 16525 | 10528 | 5997 | 63.71 | 73.65 | 68.49 | 74.57 | 63.32 | 73.38 | 68.22 | 74.30 |
@@ -349,7 +408,7 @@ For practitioners using Haiku 4.5 with flat data structures and thinking enabled
 | YAML | man | 12554 | 9685 | 2869 | 10585 | 8166 | 2419 | 23139 | 17852 | 5287 | 77.15 | 65.46 | 72.75 | 68.03 | 76.30 | 64.86 | 72.16 | 67.44 |
 | YAML | opt | 11771 | 9208 | 2563 | 10509 | 8221 | 2288 | 22280 | 17430 | 4850 | 78.23 | 68.69 | 73.88 | 70.86 | 78.55 | 68.92 | 74.11 | 71.08 |
 
-#### 2.6.2 Read Tokens Mandatory vs Optional Data
+#### 2.7.2 Read Tokens Mandatory vs Optional Data
 | Format | Read Tokens Man | Read Tokens Opt | Diff | Diff (%) | Useful Read Tokens Man | Useful Read Tokens Opt | Diff | Diff (%) | Wasted Read Tokens Man | Wasted Read Tokens Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) | Eff Score Read Man | Eff Score Read Opt | Diff | Diff (%) | Wtd Accuracy (%) Man | Wtd Accuracy (%) Opt | Diff (%) | Wtd Eff Score Read Man | Wtd Eff Score Read Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 6989 | 6700 | -289 | -4.14 | 4453 | 4233 | -220 | -4.93 | 2536 | 2467 | -69 | -2.74 | 63.71 | 63.18 | -0.53 | -0.83 | 73.65 | 74.19 |  +0.54 |  +0.74 | 63.32 | 63.41 |  +0.09 |  +0.14 | 73.38 | 74.36 |  +0.98 |  +1.33 |
@@ -360,7 +419,7 @@ For practitioners using Haiku 4.5 with flat data structures and thinking enabled
 | XML_PRETTY | 16166 | 15089 | -1077 | -6.66 | 12603 | 12088 | -515 | -4.09 | 3563 | 3001 | -562 | -15.77 | 77.96 | 80.11 |  +2.15 |  +2.76 | 54.60 | 59.52 |  +4.91 |  +8.99 | 77.74 | 78.28 |  +0.54 |  +0.69 | 54.45 | 58.23 |  +3.78 |  +6.95 |
 | YAML | 12554 | 11771 | -783 | -6.24 | 9685 | 9208 | -477 | -4.92 | 2869 | 2563 | -306 | -10.67 | 77.15 | 78.23 |  +1.08 |  +1.40 | 65.46 | 68.69 |  +3.23 |  +4.94 | 76.30 | 78.55 |  +2.25 |  +2.95 | 64.86 | 68.92 |  +4.05 |  +6.25 |
 
-#### 2.6.3 Output Tokens Mandatory vs Optional Data
+#### 2.7.3 Output Tokens Mandatory vs Optional Data
 | Format | Output Tokens Man | Output Tokens Opt | Diff | Diff (%) | Useful Output Tokens Man | Useful Output Tokens Opt | Diff | Diff (%) | Wasted Output Tokens Man | Wasted Output Tokens Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) | Eff Score Output Man | Eff Score Output Opt | Diff | Diff (%) | Wtd Accuracy (%) Man | Wtd Accuracy (%) Opt | Diff (%) | Wtd Eff Score Output Man | Wtd Eff Score Output Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 9536 | 12844 |  +3308 |  +34.69 | 6076 | 8116 |  +2040 |  +33.57 | 3461 | 4730 |  +1269 |  +36.66 | 63.71 | 63.18 | -0.53 | -0.83 | 68.49 | 51.89 | -16.60 | -24.24 | 63.32 | 63.41 |  +0.09 |  +0.14 | 68.22 | 52.05 | -16.17 | -23.70 |
@@ -371,7 +430,7 @@ For practitioners using Haiku 4.5 with flat data structures and thinking enabled
 | XML_PRETTY | 12780 | 10028 | -2752 | -21.53 | 9964 | 8034 | -1930 | -19.37 | 2817 | 1995 | -822 | -29.19 | 77.96 | 80.11 |  +2.15 |  +2.76 | 62.55 | 77.56 |  +15.01 |  +23.99 | 77.74 | 78.28 |  +0.54 |  +0.69 | 62.40 | 76.28 |  +13.88 |  +22.25 |
 | YAML | 10585 | 10509 | -76 | -0.71 | 8166 | 8221 |  +55 |  +0.68 | 2419 | 2288 | -131 | -5.41 | 77.15 | 78.23 |  +1.08 |  +1.40 | 72.75 | 73.88 |  +1.13 |  +1.55 | 76.30 | 78.55 |  +2.25 |  +2.95 | 72.16 | 74.11 |  +1.95 |  +2.70 |
 
-#### 2.6.4 Total Tokens Mandatory vs Optional Data
+#### 2.7.4 Total Tokens Mandatory vs Optional Data
 | Format | Total Tokens Man | Total Tokens Opt | Diff | Diff (%) | Useful Total Tokens Man | Useful Total Tokens Opt | Diff | Diff (%) | Wasted Total Tokens Man | Wasted Total Tokens Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) | Eff Score Total Man | Eff Score Total Opt | Diff | Diff (%) | Wtd Accuracy (%) Man | Wtd Accuracy (%) Opt | Diff (%) | Wtd Eff Score Total Man | Wtd Eff Score Total Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 16525 | 19544 |  +3019 |  +18.27 | 10528 | 12348 |  +1820 |  +17.29 | 5997 | 7196 |  +1199 |  +20.00 | 63.71 | 63.18 | -0.53 | -0.83 | 74.57 | 66.92 | -7.65 | -10.26 | 63.32 | 63.41 |  +0.09 |  +0.14 | 74.30 | 67.08 | -7.22 | -9.71 |
@@ -382,8 +441,8 @@ For practitioners using Haiku 4.5 with flat data structures and thinking enabled
 | XML_PRETTY | 28946 | 25117 | -3829 | -13.23 | 22567 | 20122 | -2445 | -10.83 | 6380 | 4996 | -1384 | -21.69 | 77.96 | 80.11 |  +2.15 |  +2.76 | 54.60 | 65.33 |  +10.74 |  +19.67 | 77.74 | 78.28 |  +0.54 |  +0.69 | 54.44 | 64.05 |  +9.61 |  +17.65 |
 | YAML | 23139 | 22280 | -859 | -3.71 | 17852 | 17430 | -422 | -2.36 | 5287 | 4850 | -437 | -8.26 | 77.15 | 78.23 |  +1.08 |  +1.40 | 68.03 | 70.86 |  +2.83 |  +4.15 | 76.30 | 78.55 |  +2.25 |  +2.95 | 67.44 | 71.08 |  +3.64 |  +5.40 |
 
-### 2.7 Answer Per Format Breakdown
-#### 2.7.1 Metrics
+### 2.8 Answer Per Format Breakdown
+#### 2.8.1 Metrics
 | Format | Variant | Correct Answers | Incorrect Answers | No Answers | Accuracy (%) |
 |---|---|---|---|---|---|
 | CSV | man | 79 | 45 | 0 | 63.71 |
@@ -401,7 +460,7 @@ For practitioners using Haiku 4.5 with flat data structures and thinking enabled
 | YAML | man | 96 | 28 | 0 | 77.15 |
 | YAML | opt | 97 | 27 | 0 | 78.23 |
 
-#### 2.7.2 Mandatory vs Optional Data
+#### 2.8.2 Mandatory vs Optional Data
 | Format | Correct Man | Correct Opt | Diff | Diff (%) | Incorrect Man | Incorrect Opt | Diff | Diff (%) | No Answers Man | No Answers Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 79 | 78 | -1 | -1.27 | 45 | 46 |  +1 |  +2.22 | 0 | 0 | 0 | 0.00 | 63.71 | 63.18 | -0.53 |
@@ -412,8 +471,8 @@ For practitioners using Haiku 4.5 with flat data structures and thinking enabled
 | XML_PRETTY | 97 | 99 |  +2 |  +2.06 | 27 | 25 | -2 | -7.41 | 0 | 0 | 0 | 0.00 | 77.96 | 80.11 |  +2.15 |
 | YAML | 96 | 97 |  +1 |  +1.04 | 28 | 27 | -1 | -3.57 | 0 | 0 | 0 | 0.00 | 77.15 | 78.23 |  +1.08 |
 
-### 2.8 Accuracy Per Question Category Analysis
-#### 2.8.1 Metrics
+### 2.9 Accuracy Per Question Category Analysis
+#### 2.9.1 Metrics
 | Format | Variant | Accuracy (%) | Field Retrieval (%) | Structure Awareness (%) | Filtering (%) | Aggregation (%) |
 |---|---|---|---|---|---|---|
 | CSV | man | 63.71 | 73.94 | 64.20 | 52.38 | 47.62 |
@@ -431,7 +490,7 @@ For practitioners using Haiku 4.5 with flat data structures and thinking enabled
 | YAML | man | 77.15 | 98.79 | 65.43 | 73.02 | 39.68 |
 | YAML | opt | 78.23 | 97.58 | 79.01 | 69.84 | 34.92 |
 
-#### 2.8.2 Field Retrieval: Mandatory vs Optional
+#### 2.9.2 Field Retrieval: Mandatory vs Optional
 
 | Format | Mand (%) | Opt (%) | Diff (%) |
 |---|---|---|---|
@@ -443,7 +502,7 @@ For practitioners using Haiku 4.5 with flat data structures and thinking enabled
 | XML_PRETTY | 97.57 | 98.18 |  +0.61 |
 | YAML | 98.79 | 97.58 | -1.21 |
 
-#### 2.8.3 Structure Awareness: Mandatory vs Optional
+#### 2.9.3 Structure Awareness: Mandatory vs Optional
 
 | Format | Mand (%) | Opt (%) | Diff (%) |
 |---|---|---|---|
@@ -455,7 +514,7 @@ For practitioners using Haiku 4.5 with flat data structures and thinking enabled
 | XML_PRETTY | 75.31 | 69.14 | -6.17 |
 | YAML | 65.43 | 79.01 |  +13.58 |
 
-#### 2.8.4 Filtering: Mandatory vs Optional
+#### 2.9.4 Filtering: Mandatory vs Optional
 
 | Format | Mand (%) | Opt (%) | Diff (%) |
 |---|---|---|---|
@@ -467,7 +526,7 @@ For practitioners using Haiku 4.5 with flat data structures and thinking enabled
 | XML_PRETTY | 68.26 | 65.08 | -3.18 |
 | YAML | 73.02 | 69.84 | -3.18 |
 
-#### 2.8.5 Aggregation: Mandatory vs Optional
+#### 2.9.5 Aggregation: Mandatory vs Optional
 
 | Format | Mand (%) | Opt (%) | Diff (%) |
 |---|---|---|---|
@@ -498,7 +557,7 @@ For practitioners using Haiku 4.5 with flat data structures and thinking enabled
 
 ---
 
-- **Report Generated**: 2026-04-09
+- **Report Generated**: 2026-04-10
 - **Written by**: [Thore Höltig](https://github.com/thoeltig)
 - **Test run in**: Claude Code < 2.1.86
 - **Data Source**: `analytics_results.json`
