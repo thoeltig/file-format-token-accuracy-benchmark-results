@@ -13,17 +13,19 @@ This benchmark evaluates token efficiency and information accuracy across 7 file
 
 ### Key Findings
 
-<ADD_CONTENT_HERE>Insert 5-7 key findings from analysis</ADD_CONTENT_HERE>
+1. **CSV** is the cheapest format but the least accurate. Despite consuming the fewest read tokens across both variants **CSV** consistently ranks last in accuracy (69.08% mandatory, 62.90% optional). Its output tokens more than double for optional data (+101.43%) while accuracy simultaneously drops which delivers the worst cost-to-value ratio when sparse data is involved.
 
-1. Finding 1
+2. **TOON_DEFAULT** is the most robust format across data variants with only a 0.54% accuracy difference between mandatory and optional. However its read tokens increase by 64.43% for optional data because the **TOON_DEFAULT** encoding switches from a collapsed tabular style (header row with comma-separated values) to expanded key-value pairs when the structure is sparsely filled and field presence varies between records.
 
-2. Finding 2
+3. **YAML** achieves the highest mandatory accuracy (81.18%) but suffers the steepest accuracy drop for optional data (-7.25%). This makes it an unreliable choice when data completeness cannot be guaranteed despite its strong performance on dense and uniform structures.
 
-3. Finding 3
+4. Output tokens correlate with accuracy which reveals that the model invests more reasoning effort into structured formats. **CSV** mandatory uses only 4,557 output tokens which is roughly half of any other format and this correlates with its lowest accuracy. The model appears to underinvest in reasoning when the format looks deceptively simple while explicitly structured formats like **JSON**, **XML** and **TOON_DEFAULT** elicit 9,800 to 13,400 output tokens of deeper analytical engagement that translates into higher accuracy.
 
-4. Finding 4
+5. **JSON_COMPACT** delivers the best overall efficiency for optional data (efficiency score 72.47) by combining moderate token cost with competitive accuracy (77.42%) while **JSON_PRETTY** leads mandatory accuracy after **YAML** at 80.65% but at the highest total token cost (27,582 tokens).
 
-5. Finding 5
+6. Aggregation is universally the hardest question category and degrades most severely for optional data. Accuracy drops an average of roughly 15 percentage points from mandatory to optional across all formats with some formats losing over 20 points (**CSV** -25.40%, **XML_PRETTY** -23.81%). This indicates that sparse data structures make mathematical reasoning significantly more difficult regardless of format.
+
+7. Most formats consume fewer output tokens for optional data (15-20% reduction) because fewer fields produce shorter answers. The two notable exceptions are **CSV** (+101.43%) and **XML_PRETTY** (+17.14%) which both expand their output when handling sparse data. **CSV**'s output explosion is particularly striking because it doubles its token expenditure without any accuracy benefit which suggests the model compensates for structural ambiguity with verbosity rather than precision.
 
 ## 1. Methodology
 
@@ -227,7 +229,17 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
 
 #### 2.1.5 Conclusion
 
-<ADD_CONTENT_HERE>Analysis here</ADD_CONTENT_HERE>
+The benchmark reveals that token cost and accuracy are not simply inversely correlated. **CSV** is the cheapest format to read but the least accurate and when data becomes sparse its output tokens double without any accuracy improvement. This pattern points to a deeper finding about how format structure influences model reasoning behavior.
+
+Formats with explicit structural markup (**JSON**, **XML**, **TOON**, **YAML**) consistently elicit higher output token counts which reflect the model's reasoning investment through thinking tokens. **CSV**'s mandatory output of only 4,557 tokens is roughly half of every other format and this shallow reasoning directly maps to its accuracy floor. The model appears to treat **CSV** as deceptively simple and fails to engage the deeper analysis that structured formats naturally prompt. When **CSV** encounters optional sparse data the model compensates by producing more verbose output (+101%) but this verbosity does not translate into better answers. The issue is insufficient structural cues for reliable data navigation.
+
+**TOON_DEFAULT** stands out as the most accuracy-robust format (0.54% mandatory-to-optional delta) but pays for this with a 64.43% read token increase on optional data. This happens because the **TOON_DEFAULT** encoding switches from a collapsed tabular representation where field names appear once as a header and records follow as comma-separated rows to expanded key-value pairs when the structure is sparsely filled and not every record contains the same fields. The encoding cannot collapse heterogeneous records into a uniform row format and must instead spell out each field name per record. Despite this token cost increase **TOON_DEFAULT** maintains near-identical accuracy which suggests its encoding is structurally clear enough for the model to parse reliably in both modes.
+
+**YAML** achieves the highest mandatory accuracy (81.18%) but drops the most for optional data (-7.25%) which makes it a strong choice only when data completeness is guaranteed. **JSON_COMPACT** emerges as the best all-around performer for optional data by balancing moderate token cost with solid accuracy (77.42%) and the highest efficiency score (72.47). **JSON_PRETTY** trades efficiency for accuracy on mandatory data (80.65%) but at a steep token premium (27,582 total tokens).
+
+Aggregation questions expose a universal weakness: all formats lose accuracy when data becomes sparse with an average drop of roughly 15 percentage points. This category-specific degradation suggests that the challenge lies not in the format itself but in the increased cognitive load of performing mathematical operations over incomplete data structures where null or missing values must be tracked.
+
+The core takeaway is that the cheapest format is not the most efficient one. Efficiency must account for information fidelity per token spent and by that measure formats that invest tokens in explicit structure consistently outperform the minimalist **CSV** approach. For Haiku 4.5 on flat data with thinking enabled **JSON_COMPACT** offers the best general-purpose efficiency while **TOON_DEFAULT** offers the most predictable accuracy across varying data completeness levels.
 
 ### 2.2 Comprehensive Benchmark Metrics
 | Format | Variant | Read Tokens | Output Tokens | Total Tokens | Char / Read Token | Output Write Tokens / Answer | Accuracy (%) | Useful Read Tokens | Wasted Read Tokens | Useful Output Tokens | Wasted Output Tokens | Eff Score Read | Eff Score Output | Eff Score Total |

@@ -9,21 +9,21 @@
 
 ## Executive Summary
 
-This benchmark evaluates token efficiency and information accuracy across 6 file formats using Claude Haiku 4.5 (claude-haiku-4-5-20251001) as the inference model. The research addresses a critical but underexplored problem: **not all tokens are equally useful**. A format that uses fewer tokens but produces inaccurate results wastes both tokens and context, while a format that accurately conveys information may justify higher token cost.
+This benchmark evaluates token efficiency and information accuracy across 6 file formats using Claude Haiku 4.5 (claude-haiku-4-5-20251001) as the inference model. The research addresses a critical but underexplored problem: **not all tokens are equally useful**. A format that uses fewer tokens but produces inaccurate results wastes both tokens and context while a format that accurately conveys information may justify higher token cost.
 
 ### Key Findings
 
-<ADD_CONTENT_HERE>Insert 5-7 key findings from analysis</ADD_CONTENT_HERE>
+1. **JSON_COMPACT** delivers the best overall efficiency by combining the lowest total token cost (18,250 opt / 18,446 man) with competitive accuracy (~76–79%) which results in the highest total efficiency score of 85.29 (optional). No other format comes close to this balance of cost and quality.
 
-1. Finding 1
+2. **YAML** achieves the highest accuracy across both variants (80.64% opt / 78.76% man) and dominates field retrieval at 97–99% but this comes at the cost of the highest output token consumption (12,896 opt / 11,104 man) which drags its total efficiency score down to 62–65.
 
-2. Finding 2
+3. Pretty-printed formats consistently underperform their compact counterparts in both token efficiency and accuracy. **XML_PRETTY** ranks last in total efficiency (51.58 opt / 55.88 man) and wastes the most read tokens (5,160–5,352) while **JSON_PRETTY** shows the lowest accuracy for optional data (72.85%). The added whitespace increases token cost without helping the model understand the data better.
 
-3. Finding 3
+4. Aggregation is the weakest category for all formats with accuracy ranging from 43% to 71% which suggests that Haiku 4.5 struggles with numerical computation regardless of how the data is presented. This contrasts sharply with field retrieval where most formats score above 85%.
 
-4. Finding 4
+5. **TOON_DEFAULT** exhibits the most unstable behavior between data variants. It shows the largest accuracy swing (+5.78%) alongside a dramatic output token increase of +40% when switching from mandatory to optional data. This makes it the least predictable format for production workloads despite achieving the second-highest optional accuracy (80.24%).
 
-5. Finding 5
+6. **XML_COMPACT** offers the densest character packing at ~2.52 characters per read token which makes it the most structurally efficient format for encoding information. Combined with the lowest output tokens (7,356 opt) and a respectable total efficiency score of 78.85 it represents a strong middle-ground choice between **JSON_COMPACT** and **YAML**.
 
 ## 1. Methodology
 
@@ -223,7 +223,19 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
 
 #### 2.1.5 Conclusion
 
-<ADD_CONTENT_HERE>Analysis here</ADD_CONTENT_HERE>
+The benchmark reveals a clear trade-off between token cost and accuracy.
+
+**JSON_COMPACT** dominates the efficiency rankings because it consumes 35–38% fewer total tokens than the next cheapest format while maintaining accuracy in the 76–79% range. **XML_COMPACT** occupies a similar niche with slightly higher read tokens but the lowest output token cost of any format which makes it particularly attractive when output tokens are more expensive. Both compact formats benefit from high character density per read token (2.2–2.5), meaning the tokenizer encodes their syntax more efficiently than verbose alternatives.
+
+**YAML** consistently tops the accuracy rankings across both variants and excels at field retrieval (97–99%) which is the highest-weighted category. However it pays for this accuracy with the highest output token consumption. The model appears to "think harder" when processing **YAML** which produces more output tokens to arrive at more correct answers. Whether this trade-off is worthwhile depends on whether accuracy or token cost matters more for a given use case.
+
+The pretty-printed formats add significant token overhead through whitespace and indentation without improving accuracy. **JSON_PRETTY** consumes 45–55% more total tokens than **JSON_COMPACT** while actually scoring lower on accuracy for optional data. **XML_PRETTY** is the worst performer overall which positions it last in total efficiency for both variants. **TOON_DEFAULT** is harder to categorize because it achieves strong optional accuracy (80.24%) but shows the most erratic behavior between variants with output tokens jumping 40% from mandatory to optional data.
+
+**YAML** dominates field retrieval across all conditions. **JSON_COMPACT** and **TOON_DEFAULT** lead structure awareness for optional data. Filtering results are mixed across formats with no clear winner. Aggregation is universally weak (43–71%) which indicates that Haiku 4.5's ability to perform numerical calculations is limited regardless of input format. This suggests that aggregation accuracy is more of a model capability constraint than a format readability issue.
+
+Robustness analysis shows that most formats handle optional fields gracefully and read tokens decrease slightly as expected due to fewer populated fields. The notable exception is **TOON_DEFAULT** where output tokens spike dramatically (+40%) for optional data. **JSON_COMPACT** is the most robust format overall with total token variance of just 1% between variants.
+
+For Haiku 4.5 with nested data and thinking enabled **JSON_COMPACT** is the recommended default format. It offers the best efficiency score, the most predictable token usage and accuracy that falls within 2 percentage points of **YAML**. If maximum accuracy is critical and token budget allows it then **YAML** is the better choice. **XML_COMPACT** serves as a viable alternative when output token cost is the primary concern. Pretty-printed formats should be avoided for machine consumption as they provide no accuracy benefit while substantially increasing cost.
 
 ### 2.2 Comprehensive Benchmark Metrics
 | Format | Variant | Read Tokens | Output Tokens | Total Tokens | Char / Read Token | Output Write Tokens / Answer | Accuracy (%) | Useful Read Tokens | Wasted Read Tokens | Useful Output Tokens | Wasted Output Tokens | Eff Score Read | Eff Score Output | Eff Score Total |

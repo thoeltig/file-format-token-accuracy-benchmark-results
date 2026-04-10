@@ -13,17 +13,19 @@ This benchmark evaluates token efficiency and information accuracy across 7 file
 
 ### Key Findings
 
-<ADD_CONTENT_HERE>Insert 5-7 key findings from analysis</ADD_CONTENT_HERE>
+1. **CSV** is the cheapest format but also the least accurate. Despite having the lowest read tokens (6700–6989) and the lowest total tokens for mandatory data (16525) **CSV** consistently ranks last in accuracy at roughly 63% in both variants. The tokens saved are offset by the highest proportion of wasted tokens which makes **CSV** a poor choice when information fidelity matters.
 
-1. Finding 1
+2. **TOON_DEFAULT** and **JSON_COMPACT** deliver the best overall efficiency. **TOON_DEFAULT** leads the mandatory efficiency score at 80.39 while **JSON_COMPACT** leads the optional efficiency score at 80.30. Both formats achieve strong accuracy (around 79–80%) at moderate token cost which places them at the top of the composite efficiency ranking.
 
-2. Finding 2
+3. **JSON_PRETTY** achieves the highest single-variant accuracy (82.80% mandatory) but pays a steep token premium. It consumes 27421 total tokens for mandatory data which is 66% more than the cheapest format and its efficiency score drops to 61.66 as a result. High accuracy alone does not guarantee high information value per token.
 
-3. Finding 3
+4. Aggregation is the universally weakest question category. No format exceeds 67% accuracy on aggregation for mandatory data and several drop below 40%. This indicates that Haiku 4.5 struggles with numerical reasoning regardless of how the data is formatted which suggests a model capability limitation rather than a format encoding issue.
 
-4. Finding 4
+5. **XML_PRETTY** is consistently the most expensive format across both variants (25117–28946 total tokens) while offering only mid-range accuracy. Its high read token cost (15089–16166) combined with moderate accuracy (78–80%) results in the lowest efficiency scores overall which makes it the least cost-effective choice.
 
-5. Finding 5
+6. Most formats improve slightly on optional (sparse) data but **JSON_PRETTY** degrades by 6.46 percentage points. This makes **JSON_PRETTY** the least robust format across data variants. In contrast **TOON_DEFAULT** shows near-zero accuracy variation (0.27%) between mandatory and optional data which makes it the most stable format. Its +64% read token increase for optional data is caused by the **TOON_DEFAULT** encoding itself: when data is sparse rather than uniformly filled the format cannot use its collapsed writing style and instead expands each record individually which inflates token cost without affecting accuracy.
+
+7. Field retrieval accuracy is high (90%+ for most formats) while structure awareness and filtering show much greater format sensitivity. This confirms that how well a format conveys structural relationships and enables record-level reasoning matters more than raw value extraction when differentiating format quality.
 
 ## 1. Methodology
 
@@ -227,7 +229,15 @@ Tokens usage measured in this benchmark are no estimates but the real token usag
 
 #### 2.1.5 Conclusion
 
-<ADD_CONTENT_HERE>Analysis here</ADD_CONTENT_HERE>
+The benchmark reveals a clear tension between token economy and information fidelity that makes naive "fewest tokens wins" reasoning misleading. **CSV** consumes the fewest read tokens but wastes the most output tokens due to consistently poor accuracy around 63% which results in roughly 36% of all tokens being spent on incorrect answers. On the other end **XML_PRETTY** delivers competitive accuracy (78–80%) but at such extreme token cost (up to 28946 total) that its efficiency score ranks last.
+
+The most effective formats occupy the middle ground. **TOON_DEFAULT** stands out for mandatory data with the highest efficiency score (80.39) which combines strong accuracy (79.57%) with the second-lowest total token cost (18719). It also demonstrates exceptional robustness with only a 0.27% accuracy shift between mandatory and optional variants. **JSON_COMPACT** dominates the optional data scenario with the highest efficiency score (80.30) and the lowest total token cost (18753) while achieving 79.57% accuracy. Both formats deliver approximately 80% of the information value of the best-accuracy format (**JSON_PRETTY** at 82.80%) while using 30–40% fewer tokens.
+
+The category-level analysis reveals that format choice primarily affects structure awareness and filtering performance where accuracy ranges span 20+ percentage points across formats. Field retrieval is largely format-insensitive above 90% for all structured formats and aggregation remains weak across the board regardless of format. This suggests that the practical impact of format selection is concentrated in how well a format communicates data relationships and record boundaries rather than individual field values.
+
+A notable asymmetry exists in how formats handle the mandatory-to-optional transition. Formats like **JSON_COMPACT** and **XML_PRETTY** improve in accuracy when moving to optional (sparse) data while **JSON_PRETTY** degrades significantly (−6.46%). This indicates that data density interacts with format structure in non-trivial ways and the best format for one data profile may not be optimal for another.
+
+For practitioners using Haiku 4.5 with flat data structures and thinking enabled the recommendation is to prefer **TOON_DEFAULT** or **JSON_COMPACT** as they provide the best balance of token efficiency and accuracy. **CSV** should be avoided for LLM consumption despite its minimal token footprint and **XML_PRETTY** should be avoided due to its disproportionate token overhead relative to its accuracy gains.
 
 ### 2.2 Comprehensive Benchmark Metrics
 | Format | Variant | Read Tokens | Output Tokens | Total Tokens | Char / Read Token | Output Write Tokens / Answer | Accuracy (%) | Useful Read Tokens | Wasted Read Tokens | Useful Output Tokens | Wasted Output Tokens | Eff Score Read | Eff Score Output | Eff Score Total |
