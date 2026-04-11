@@ -130,12 +130,12 @@
             "weightedEfficiencyScoreRead": 74.586,
             "weightedEfficiencyScoreOutput": 56.459,
             "weightedEfficiencyScoreTotal": 57.445,
-            "accuracyByCharPerc": 92.58,
-            "accuracyByCharDriftPercMin": -18.04,
-            "accuracyByCharDriftPercMax": 6.77,
-            "wastedOutputWriteTokensByCharAccuracy": 1090.789,
-            "usefulOutputWriteTokensByCharAccuracy": 13609.878,
-            "efficiencyScoreOutputWriteTokensByCharAccuracy": 64.845
+            "accuracyByCharPerc": 92.87,
+            "accuracyByCharDriftPercMin": -17.85,
+            "accuracyByCharDriftPercMax": 6.74,
+            "wastedOutputWriteTokensByCharAccuracy": 1048.158,
+            "usefulOutputWriteTokensByCharAccuracy": 13652.509,
+            "efficiencyScoreOutputWriteTokensByCharAccuracy": 65.048
         },
         {
             "testCase": "xml_compact_nested_31_optional",
@@ -207,12 +207,12 @@
             "weightedEfficiencyScoreRead": 75.151,
             "weightedEfficiencyScoreOutput": 82.622,
             "weightedEfficiencyScoreTotal": 78.634,
-            "accuracyByCharPerc": 80.39,
-            "accuracyByCharDriftPercMin": -12.27,
-            "accuracyByCharDriftPercMax": 12.31,
-            "wastedOutputWriteTokensByCharAccuracy": 1374.922,
-            "usefulOutputWriteTokensByCharAccuracy": 5636.411,
-            "efficiencyScoreOutputWriteTokensByCharAccuracy": 86.234
+            "accuracyByCharPerc": 79.93,
+            "accuracyByCharDriftPercMin": -13.84,
+            "accuracyByCharDriftPercMax": 13.45,
+            "wastedOutputWriteTokensByCharAccuracy": 1407.175,
+            "usefulOutputWriteTokensByCharAccuracy": 5604.158,
+            "efficiencyScoreOutputWriteTokensByCharAccuracy": 85.912
         },
         {
             "testCase": "json_compact_nested_31_optional",
@@ -284,12 +284,12 @@
             "weightedEfficiencyScoreRead": 85.131,
             "weightedEfficiencyScoreOutput": 80.822,
             "weightedEfficiencyScoreTotal": 85.133,
-            "accuracyByCharPerc": 90.63,
-            "accuracyByCharDriftPercMin": -10.48,
-            "accuracyByCharDriftPercMax": 5.94,
-            "wastedOutputWriteTokensByCharAccuracy": 761.437,
-            "usefulOutputWriteTokensByCharAccuracy": 7364.896,
-            "efficiencyScoreOutputWriteTokensByCharAccuracy": 89.063
+            "accuracyByCharPerc": 90.86,
+            "accuracyByCharDriftPercMin": -10.02,
+            "accuracyByCharDriftPercMax": 6.09,
+            "wastedOutputWriteTokensByCharAccuracy": 742.747,
+            "usefulOutputWriteTokensByCharAccuracy": 7383.586,
+            "efficiencyScoreOutputWriteTokensByCharAccuracy": 89.224
         },
         {
             "testCase": "json_pretty_nested_31_optional",
@@ -361,12 +361,12 @@
             "weightedEfficiencyScoreRead": 59.723,
             "weightedEfficiencyScoreOutput": 71.384,
             "weightedEfficiencyScoreTotal": 57.796,
-            "accuracyByCharPerc": 75.22,
-            "accuracyByCharDriftPercMin": -19.91,
-            "accuracyByCharDriftPercMax": 28.2,
-            "wastedOutputWriteTokensByCharAccuracy": 2337.084,
-            "usefulOutputWriteTokensByCharAccuracy": 7094.249,
-            "efficiencyScoreOutputWriteTokensByCharAccuracy": 73.198
+            "accuracyByCharPerc": 76.03,
+            "accuracyByCharDriftPercMin": -21.33,
+            "accuracyByCharDriftPercMax": 29.42,
+            "wastedOutputWriteTokensByCharAccuracy": 2260.691,
+            "usefulOutputWriteTokensByCharAccuracy": 7170.642,
+            "efficiencyScoreOutputWriteTokensByCharAccuracy": 73.765
         },
         {
             "testCase": "toon_default_nested_31_mandatory",
@@ -438,12 +438,12 @@
             "weightedEfficiencyScoreRead": 67.837,
             "weightedEfficiencyScoreOutput": 74.08,
             "weightedEfficiencyScoreTotal": 67.283,
-            "accuracyByCharPerc": 69.62,
-            "accuracyByCharDriftPercMin": -19.06,
-            "accuracyByCharDriftPercMax": 16.04,
-            "wastedOutputWriteTokensByCharAccuracy": 2619.06,
-            "usefulOutputWriteTokensByCharAccuracy": 6001.94,
-            "efficiencyScoreOutputWriteTokensByCharAccuracy": 72.431
+            "accuracyByCharPerc": 69.61,
+            "accuracyByCharDriftPercMin": -18.5,
+            "accuracyByCharDriftPercMax": 16.12,
+            "wastedOutputWriteTokensByCharAccuracy": 2619.922,
+            "usefulOutputWriteTokensByCharAccuracy": 6001.078,
+            "efficiencyScoreOutputWriteTokensByCharAccuracy": 72.424
         },
         {
             "testCase": "xml_pretty_nested_31_optional",
@@ -515,12 +515,12 @@
             "weightedEfficiencyScoreRead": 52.41,
             "weightedEfficiencyScoreOutput": 71.691,
             "weightedEfficiencyScoreTotal": 50.868,
-            "accuracyByCharPerc": 76.1,
-            "accuracyByCharDriftPercMin": -6.04,
-            "accuracyByCharDriftPercMax": 9.88,
-            "wastedOutputWriteTokensByCharAccuracy": 2236.204,
-            "usefulOutputWriteTokensByCharAccuracy": 7120.296,
-            "efficiencyScoreOutputWriteTokensByCharAccuracy": 74.105
+            "accuracyByCharPerc": 75.74,
+            "accuracyByCharDriftPercMin": -5.98,
+            "accuracyByCharDriftPercMax": 10.42,
+            "wastedOutputWriteTokensByCharAccuracy": 2269.887,
+            "usefulOutputWriteTokensByCharAccuracy": 7086.613,
+            "efficiencyScoreOutputWriteTokensByCharAccuracy": 73.853
         },
         {
             "testCase": "xml_compact_nested_31_mandatory",
@@ -592,12 +592,12 @@
             "weightedEfficiencyScoreRead": 72.611,
             "weightedEfficiencyScoreOutput": 75.216,
             "weightedEfficiencyScoreTotal": 71.812,
-            "accuracyByCharPerc": 72.88,
-            "accuracyByCharDriftPercMin": -19.48,
-            "accuracyByCharDriftPercMax": 28.68,
-            "wastedOutputWriteTokensByCharAccuracy": 2338.196,
-            "usefulOutputWriteTokensByCharAccuracy": 6283.471,
-            "efficiencyScoreOutputWriteTokensByCharAccuracy": 74.711
+            "accuracyByCharPerc": 73.42,
+            "accuracyByCharDriftPercMin": -19.18,
+            "accuracyByCharDriftPercMax": 28.23,
+            "wastedOutputWriteTokensByCharAccuracy": 2291.639,
+            "usefulOutputWriteTokensByCharAccuracy": 6330.028,
+            "efficiencyScoreOutputWriteTokensByCharAccuracy": 75.089
         },
         {
             "testCase": "json_compact_nested_31_mandatory",
@@ -669,12 +669,12 @@
             "weightedEfficiencyScoreRead": 80.551,
             "weightedEfficiencyScoreOutput": 79.055,
             "weightedEfficiencyScoreTotal": 81.548,
-            "accuracyByCharPerc": 69.53,
-            "accuracyByCharDriftPercMin": -8.57,
-            "accuracyByCharDriftPercMax": 12.25,
-            "wastedOutputWriteTokensByCharAccuracy": 2375.238,
-            "usefulOutputWriteTokensByCharAccuracy": 5420.095,
-            "efficiencyScoreOutputWriteTokensByCharAccuracy": 75.581
+            "accuracyByCharPerc": 70.21,
+            "accuracyByCharDriftPercMin": -9.7,
+            "accuracyByCharDriftPercMax": 13.42,
+            "wastedOutputWriteTokensByCharAccuracy": 2322.23,
+            "usefulOutputWriteTokensByCharAccuracy": 5473.103,
+            "efficiencyScoreOutputWriteTokensByCharAccuracy": 76.057
         },
         {
             "testCase": "json_pretty_nested_31_mandatory",
@@ -746,12 +746,12 @@
             "weightedEfficiencyScoreRead": 59.676,
             "weightedEfficiencyScoreOutput": 69.71,
             "weightedEfficiencyScoreTotal": 54.904,
-            "accuracyByCharPerc": 82.35,
-            "accuracyByCharDriftPercMin": -8.34,
-            "accuracyByCharDriftPercMax": 10.87,
-            "wastedOutputWriteTokensByCharAccuracy": 1822.127,
-            "usefulOutputWriteTokensByCharAccuracy": 8501.54,
-            "efficiencyScoreOutputWriteTokensByCharAccuracy": 74.717
+            "accuracyByCharPerc": 82.96,
+            "accuracyByCharDriftPercMin": -6.86,
+            "accuracyByCharDriftPercMax": 9.85,
+            "wastedOutputWriteTokensByCharAccuracy": 1759.153,
+            "usefulOutputWriteTokensByCharAccuracy": 8564.514,
+            "efficiencyScoreOutputWriteTokensByCharAccuracy": 75.144
         },
         {
             "testCase": "toon_default_nested_31_optional",
@@ -823,12 +823,12 @@
             "weightedEfficiencyScoreRead": 74.586,
             "weightedEfficiencyScoreOutput": 78.727,
             "weightedEfficiencyScoreTotal": 73,
-            "accuracyByCharPerc": 92.58,
-            "accuracyByCharDriftPercMin": -18.04,
-            "accuracyByCharDriftPercMax": 6.77,
-            "wastedOutputWriteTokensByCharAccuracy": 666.168,
-            "usefulOutputWriteTokensByCharAccuracy": 8311.832,
-            "efficiencyScoreOutputWriteTokensByCharAccuracy": 87.114
+            "accuracyByCharPerc": 92.87,
+            "accuracyByCharDriftPercMin": -17.85,
+            "accuracyByCharDriftPercMax": 6.74,
+            "wastedOutputWriteTokensByCharAccuracy": 640.131,
+            "usefulOutputWriteTokensByCharAccuracy": 8337.869,
+            "efficiencyScoreOutputWriteTokensByCharAccuracy": 87.317
         },
         {
             "testCase": "yaml_nested_31_optional",
@@ -900,12 +900,12 @@
             "weightedEfficiencyScoreRead": 73.191,
             "weightedEfficiencyScoreOutput": 64.02,
             "weightedEfficiencyScoreTotal": 61.949,
-            "accuracyByCharPerc": 89.18,
-            "accuracyByCharDriftPercMin": -22.03,
+            "accuracyByCharPerc": 89.16,
+            "accuracyByCharDriftPercMin": -22.44,
             "accuracyByCharDriftPercMax": 11.52,
-            "wastedOutputWriteTokensByCharAccuracy": 1359.028,
-            "usefulOutputWriteTokensByCharAccuracy": 11201.305,
-            "efficiencyScoreOutputWriteTokensByCharAccuracy": 70.794
+            "wastedOutputWriteTokensByCharAccuracy": 1361.54,
+            "usefulOutputWriteTokensByCharAccuracy": 11198.793,
+            "efficiencyScoreOutputWriteTokensByCharAccuracy": 70.78
         },
         {
             "testCase": "xml_pretty_nested_31_mandatory",
@@ -977,12 +977,12 @@
             "weightedEfficiencyScoreRead": 50.38,
             "weightedEfficiencyScoreOutput": 79.683,
             "weightedEfficiencyScoreTotal": 54.861,
-            "accuracyByCharPerc": 74.58,
-            "accuracyByCharDriftPercMin": -13.76,
+            "accuracyByCharPerc": 74.7,
+            "accuracyByCharDriftPercMin": -16.22,
             "accuracyByCharDriftPercMax": 23.79,
-            "wastedOutputWriteTokensByCharAccuracy": 1823.97,
-            "usefulOutputWriteTokensByCharAccuracy": 5351.363,
-            "efficiencyScoreOutputWriteTokensByCharAccuracy": 81.529
+            "wastedOutputWriteTokensByCharAccuracy": 1815.359,
+            "usefulOutputWriteTokensByCharAccuracy": 5359.974,
+            "efficiencyScoreOutputWriteTokensByCharAccuracy": 81.613
         },
         {
             "testCase": "toon_default_nested_31_mandatory",
@@ -1054,12 +1054,12 @@
             "weightedEfficiencyScoreRead": 67.837,
             "weightedEfficiencyScoreOutput": 76.23,
             "weightedEfficiencyScoreTotal": 68.785,
-            "accuracyByCharPerc": 69.62,
-            "accuracyByCharDriftPercMin": -19.06,
-            "accuracyByCharDriftPercMax": 16.04,
-            "wastedOutputWriteTokensByCharAccuracy": 2450.046,
-            "usefulOutputWriteTokensByCharAccuracy": 5614.621,
-            "efficiencyScoreOutputWriteTokensByCharAccuracy": 74.596
+            "accuracyByCharPerc": 69.61,
+            "accuracyByCharDriftPercMin": -18.5,
+            "accuracyByCharDriftPercMax": 16.12,
+            "wastedOutputWriteTokensByCharAccuracy": 2450.852,
+            "usefulOutputWriteTokensByCharAccuracy": 5613.815,
+            "efficiencyScoreOutputWriteTokensByCharAccuracy": 74.589
         },
         {
             "testCase": "yaml_nested_31_mandatory",
@@ -1131,12 +1131,12 @@
             "weightedEfficiencyScoreRead": 70.672,
             "weightedEfficiencyScoreOutput": 69.198,
             "weightedEfficiencyScoreTotal": 64.341,
-            "accuracyByCharPerc": 80.06,
-            "accuracyByCharDriftPercMin": -7.88,
-            "accuracyByCharDriftPercMax": 12.87,
-            "wastedOutputWriteTokensByCharAccuracy": 2146.873,
-            "usefulOutputWriteTokensByCharAccuracy": 8619.794,
-            "efficiencyScoreOutputWriteTokensByCharAccuracy": 71.39
+            "accuracyByCharPerc": 80.47,
+            "accuracyByCharDriftPercMin": -6.79,
+            "accuracyByCharDriftPercMax": 12.35,
+            "wastedOutputWriteTokensByCharAccuracy": 2102.73,
+            "usefulOutputWriteTokensByCharAccuracy": 8663.937,
+            "efficiencyScoreOutputWriteTokensByCharAccuracy": 71.677
         }
     ]
 }
