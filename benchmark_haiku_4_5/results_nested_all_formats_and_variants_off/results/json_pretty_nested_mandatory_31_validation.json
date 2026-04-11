@@ -16,11 +16,12 @@
         "weightedAccuracyDriftPercMax": 7.5,
         "charactersOfAnswers": {
             "expected": 7654,
-            "correct": 5540.6,
+            "given": 8274.2,
+            "correct": 6016.2,
             "incorrect": 2258,
-            "accuracyByCharPerc": 72.39,
-            "accuracyByCharDriftPercMin": -17.46,
-            "accuracyByCharDriftPercMax": 26.9
+            "accuracyByCharPerc": 72.7,
+            "accuracyByCharDriftPercMin": -18.97,
+            "accuracyByCharDriftPercMax": 27
         }
     },
     "perRunAccuracy": [
@@ -66,9 +67,10 @@
             ],
             "charactersOfAnswers": {
                 "expected": 7654,
-                "correct": 7031,
+                "given": 8280,
+                "correct": 7645,
                 "incorrect": 635,
-                "accuracyByCharPerc": 91.86
+                "accuracyByCharPerc": 92.33
             }
         },
         {
@@ -113,9 +115,10 @@
             ],
             "charactersOfAnswers": {
                 "expected": 7654,
-                "correct": 5457,
+                "given": 8225,
+                "correct": 5966,
                 "incorrect": 2259,
-                "accuracyByCharPerc": 71.3
+                "accuracyByCharPerc": 72.53
             }
         },
         {
@@ -160,9 +163,10 @@
             ],
             "charactersOfAnswers": {
                 "expected": 7654,
-                "correct": 5019,
+                "given": 8075,
+                "correct": 5414,
                 "incorrect": 2661,
-                "accuracyByCharPerc": 65.57
+                "accuracyByCharPerc": 67.05
             }
         },
         {
@@ -207,9 +211,10 @@
             ],
             "charactersOfAnswers": {
                 "expected": 7654,
-                "correct": 5623,
+                "given": 8454,
+                "correct": 6145,
                 "incorrect": 2309,
-                "accuracyByCharPerc": 73.46
+                "accuracyByCharPerc": 72.69
             }
         },
         {
@@ -254,9 +259,10 @@
             ],
             "charactersOfAnswers": {
                 "expected": 7654,
-                "correct": 4573,
+                "given": 8337,
+                "correct": 4911,
                 "incorrect": 3426,
-                "accuracyByCharPerc": 59.75
+                "accuracyByCharPerc": 58.91
             }
         }
     ],

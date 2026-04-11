@@ -16,11 +16,12 @@
         "weightedAccuracyDriftPercMax": 5.52,
         "charactersOfAnswers": {
             "expected": 7654,
-            "correct": 6594.75,
+            "given": 8269.5,
+            "correct": 7167.25,
             "incorrect": 1102.25,
-            "accuracyByCharPerc": 86.16,
-            "accuracyByCharDriftPercMin": -13.82,
-            "accuracyByCharDriftPercMax": 9.05
+            "accuracyByCharPerc": 86.68,
+            "accuracyByCharDriftPercMin": -14.92,
+            "accuracyByCharDriftPercMax": 8.63
         }
     },
     "perRunAccuracy": [
@@ -66,9 +67,10 @@
             ],
             "charactersOfAnswers": {
                 "expected": 7654,
-                "correct": 7192,
+                "given": 8328,
+                "correct": 7842,
                 "incorrect": 486,
-                "accuracyByCharPerc": 93.96
+                "accuracyByCharPerc": 94.16
             }
         },
         {
@@ -113,9 +115,10 @@
             ],
             "charactersOfAnswers": {
                 "expected": 7654,
-                "correct": 6881,
+                "given": 8203,
+                "correct": 7544,
                 "incorrect": 659,
-                "accuracyByCharPerc": 89.9
+                "accuracyByCharPerc": 91.97
             }
         },
         {
@@ -160,9 +163,10 @@
             ],
             "charactersOfAnswers": {
                 "expected": 7654,
-                "correct": 5683,
+                "given": 8294,
+                "correct": 6117,
                 "incorrect": 2177,
-                "accuracyByCharPerc": 74.25
+                "accuracyByCharPerc": 73.75
             }
         },
         {
@@ -207,9 +211,10 @@
             ],
             "charactersOfAnswers": {
                 "expected": 7654,
-                "correct": 6623,
+                "given": 8253,
+                "correct": 7166,
                 "incorrect": 1087,
-                "accuracyByCharPerc": 86.53
+                "accuracyByCharPerc": 86.83
             }
         }
     ],
