@@ -6,31 +6,31 @@
     "testRuns": 3,
     "totalQuestions": 124,
     "accuracy": {
-        "correct": 98.67,
-        "incorrect": 25.33,
-        "accuracyPercent": 79.57,
-        "accuracyDriftPercMin": -5.74,
-        "accuracyDriftPercMax": 5.4,
-        "weightedAccuracyPercent": 79.02,
-        "weightedAccuracyDriftPercMin": -7.68,
-        "weightedAccuracyDriftPercMax": 6.53,
+        "correct": 96,
+        "incorrect": 28,
+        "accuracyPercent": 77.42,
+        "accuracyDriftPercMin": -5.21,
+        "accuracyDriftPercMax": 5.21,
+        "weightedAccuracyPercent": 76.14,
+        "weightedAccuracyDriftPercMin": -7.03,
+        "weightedAccuracyDriftPercMax": 6.3,
         "charactersOfAnswers": {
-            "expected": 8313,
-            "given": 8983.667,
-            "correct": 8026.667,
-            "incorrect": 957,
-            "accuracyByCharPerc": 89.29,
-            "accuracyByCharDriftPercMin": -16.86,
-            "accuracyByCharDriftPercMax": 8.52
+            "expected": 8441,
+            "correct": 8347,
+            "incorrect": 186.667,
+            "total": 8533.667,
+            "accuracyByCharPerc": 92.19,
+            "accuracyByCharDriftPercMin": -0.67,
+            "accuracyByCharDriftPercMax": 0.55
         }
     },
     "perRunAccuracy": [
         {
             "run": 1,
-            "correct": 99,
-            "incorrect": 25,
-            "accuracyPercent": 79.84,
-            "weightedAccuracyPercent": 79.93,
+            "correct": 96,
+            "incorrect": 28,
+            "accuracyPercent": 77.42,
+            "weightedAccuracyPercent": 76.69,
             "accuracyPerCategory": [
                 {
                     "category": "field_retrieval",
@@ -38,7 +38,14 @@
                     "incorrect": 1,
                     "unanswered": 0,
                     "accuracyPercent": 98.18,
-                    "weightedAccuracyPercent": 36.82
+                    "weightedAccuracyPercent": 36.82,
+                    "charactersOfAnswers": {
+                        "expected": 3735,
+                        "correct": 3725,
+                        "incorrect": 20,
+                        "total": 3745,
+                        "accuracyByCharPerc": 99.75
+                    }
                 },
                 {
                     "category": "filtering",
@@ -46,7 +53,14 @@
                     "incorrect": 8,
                     "unanswered": 0,
                     "accuracyPercent": 61.9,
-                    "weightedAccuracyPercent": 12.9
+                    "weightedAccuracyPercent": 12.9,
+                    "charactersOfAnswers": {
+                        "expected": 113,
+                        "correct": 105,
+                        "incorrect": 8,
+                        "total": 113,
+                        "accuracyByCharPerc": 93.65
+                    }
                 },
                 {
                     "category": "aggregation",
@@ -54,31 +68,45 @@
                     "incorrect": 12,
                     "unanswered": 0,
                     "accuracyPercent": 42.86,
-                    "weightedAccuracyPercent": 5.36
+                    "weightedAccuracyPercent": 5.36,
+                    "charactersOfAnswers": {
+                        "expected": 164,
+                        "correct": 123,
+                        "incorrect": 42,
+                        "total": 165,
+                        "accuracyByCharPerc": 74.22
+                    }
                 },
                 {
                     "category": "structure_awareness",
-                    "correct": 23,
-                    "incorrect": 4,
+                    "correct": 20,
+                    "incorrect": 7,
                     "unanswered": 0,
-                    "accuracyPercent": 85.19,
-                    "weightedAccuracyPercent": 24.85
+                    "accuracyPercent": 74.07,
+                    "weightedAccuracyPercent": 21.61,
+                    "charactersOfAnswers": {
+                        "expected": 4429,
+                        "correct": 4418,
+                        "incorrect": 101,
+                        "total": 4519,
+                        "accuracyByCharPerc": 90.12
+                    }
                 }
             ],
             "charactersOfAnswers": {
-                "expected": 8313,
-                "given": 9020,
-                "correct": 8724,
-                "incorrect": 296,
-                "accuracyByCharPerc": 96.72
+                "expected": 8441,
+                "correct": 8371,
+                "incorrect": 171,
+                "total": 8542,
+                "accuracyByCharPerc": 92.3
             }
         },
         {
             "run": 2,
-            "correct": 104,
-            "incorrect": 20,
-            "accuracyPercent": 83.87,
-            "weightedAccuracyPercent": 84.18,
+            "correct": 101,
+            "incorrect": 23,
+            "accuracyPercent": 81.45,
+            "weightedAccuracyPercent": 80.94,
             "accuracyPerCategory": [
                 {
                     "category": "field_retrieval",
@@ -86,7 +114,14 @@
                     "incorrect": 1,
                     "unanswered": 0,
                     "accuracyPercent": 98.18,
-                    "weightedAccuracyPercent": 36.82
+                    "weightedAccuracyPercent": 36.82,
+                    "charactersOfAnswers": {
+                        "expected": 3735,
+                        "correct": 3725,
+                        "incorrect": 20,
+                        "total": 3745,
+                        "accuracyByCharPerc": 99.75
+                    }
                 },
                 {
                     "category": "filtering",
@@ -94,7 +129,14 @@
                     "incorrect": 6,
                     "unanswered": 0,
                     "accuracyPercent": 71.43,
-                    "weightedAccuracyPercent": 14.88
+                    "weightedAccuracyPercent": 14.88,
+                    "charactersOfAnswers": {
+                        "expected": 113,
+                        "correct": 101,
+                        "incorrect": 12,
+                        "total": 113,
+                        "accuracyByCharPerc": 90.48
+                    }
                 },
                 {
                     "category": "aggregation",
@@ -102,31 +144,45 @@
                     "incorrect": 10,
                     "unanswered": 0,
                     "accuracyPercent": 52.38,
-                    "weightedAccuracyPercent": 6.55
+                    "weightedAccuracyPercent": 6.55,
+                    "charactersOfAnswers": {
+                        "expected": 164,
+                        "correct": 125,
+                        "incorrect": 40,
+                        "total": 165,
+                        "accuracyByCharPerc": 75.96
+                    }
                 },
                 {
                     "category": "structure_awareness",
-                    "correct": 24,
-                    "incorrect": 3,
+                    "correct": 21,
+                    "incorrect": 6,
                     "unanswered": 0,
-                    "accuracyPercent": 88.89,
-                    "weightedAccuracyPercent": 25.93
+                    "accuracyPercent": 77.78,
+                    "weightedAccuracyPercent": 22.69,
+                    "charactersOfAnswers": {
+                        "expected": 4429,
+                        "correct": 4425,
+                        "incorrect": 94,
+                        "total": 4519,
+                        "accuracyByCharPerc": 93.09
+                    }
                 }
             ],
             "charactersOfAnswers": {
-                "expected": 8313,
-                "given": 9021,
-                "correct": 8741,
-                "incorrect": 280,
-                "accuracyByCharPerc": 96.9
+                "expected": 8441,
+                "correct": 8376,
+                "incorrect": 166,
+                "total": 8542,
+                "accuracyByCharPerc": 92.7
             }
         },
         {
             "run": 3,
-            "correct": 93,
-            "incorrect": 31,
-            "accuracyPercent": 75,
-            "weightedAccuracyPercent": 72.95,
+            "correct": 91,
+            "incorrect": 33,
+            "accuracyPercent": 73.39,
+            "weightedAccuracyPercent": 70.78999999999999,
             "accuracyPerCategory": [
                 {
                     "category": "field_retrieval",
@@ -134,7 +190,14 @@
                     "incorrect": 0,
                     "unanswered": 0,
                     "accuracyPercent": 100,
-                    "weightedAccuracyPercent": 37.5
+                    "weightedAccuracyPercent": 37.5,
+                    "charactersOfAnswers": {
+                        "expected": 3735,
+                        "correct": 3735,
+                        "incorrect": 0,
+                        "total": 3735,
+                        "accuracyByCharPerc": 100
+                    }
                 },
                 {
                     "category": "filtering",
@@ -142,7 +205,14 @@
                     "incorrect": 7,
                     "unanswered": 0,
                     "accuracyPercent": 66.67,
-                    "weightedAccuracyPercent": 13.89
+                    "weightedAccuracyPercent": 13.89,
+                    "charactersOfAnswers": {
+                        "expected": 113,
+                        "correct": 103,
+                        "incorrect": 10,
+                        "total": 113,
+                        "accuracyByCharPerc": 91.9
+                    }
                 },
                 {
                     "category": "aggregation",
@@ -150,23 +220,37 @@
                     "incorrect": 12,
                     "unanswered": 0,
                     "accuracyPercent": 42.86,
-                    "weightedAccuracyPercent": 5.36
+                    "weightedAccuracyPercent": 5.36,
+                    "charactersOfAnswers": {
+                        "expected": 164,
+                        "correct": 117,
+                        "incorrect": 48,
+                        "total": 165,
+                        "accuracyByCharPerc": 71.4
+                    }
                 },
                 {
                     "category": "structure_awareness",
-                    "correct": 15,
-                    "incorrect": 12,
+                    "correct": 13,
+                    "incorrect": 14,
                     "unanswered": 0,
-                    "accuracyPercent": 55.56,
-                    "weightedAccuracyPercent": 16.2
+                    "accuracyPercent": 48.15,
+                    "weightedAccuracyPercent": 14.04,
+                    "charactersOfAnswers": {
+                        "expected": 4429,
+                        "correct": 4339,
+                        "incorrect": 165,
+                        "total": 4504,
+                        "accuracyByCharPerc": 89.83
+                    }
                 }
             ],
             "charactersOfAnswers": {
-                "expected": 8313,
-                "given": 8910,
-                "correct": 6615,
-                "incorrect": 2295,
-                "accuracyByCharPerc": 74.24
+                "expected": 8441,
+                "correct": 8294,
+                "incorrect": 223,
+                "total": 8517,
+                "accuracyByCharPerc": 91.57
             }
         }
     ],
@@ -2918,11 +3002,11 @@
             "answers": [
                 {
                     "givenAnswer": "2026-03-05,2026-01-17,2026-02-27,2026-02-17,2026-01-08,2026-02-07,2025-12-25,2026-01-22,2026-02-17,2026-01-20,2026-02-09,2026-01-12,2026-02-18,2026-02-07,2025-12-30,2025-12-18,2026-01-18,2025-12-08,2026-01-29,2026-01-25,2026-03-05,2026-01-23,2026-02-03,2026-02-18,2026-02-26,2026-02-17,2026-02-27,2026-02-23,2026-01-23,2025-12-14,2026-01-25",
-                    "correct": true
+                    "correct": false
                 },
                 {
                     "givenAnswer": "2026-03-05,2026-01-17,2026-02-27,2026-02-17,2026-01-08,2026-02-07,2025-12-25,2026-01-22,2026-02-17,2026-01-20,2026-02-09,2026-01-12,2026-02-18,2026-02-07,2025-12-30,2025-12-18,2026-01-18,2025-12-08,2026-01-29,2026-01-25,2026-03-05,2026-01-23,2026-02-03,2026-02-18,2026-02-26,2026-02-17,2026-02-27,2026-02-23,2026-01-23,2025-12-14,2026-01-25",
-                    "correct": true
+                    "correct": false
                 },
                 {
                     "givenAnswer": "2025-12-08,2025-12-14,2025-12-18,2025-12-25,2025-12-30,2026-01-08,2026-01-12,2026-01-17,2026-01-18,2026-01-20,2026-01-22,2026-01-23,2026-01-25,2026-01-29,2026-02-03,2026-02-07,2026-02-09,2026-02-17,2026-02-18,2026-02-23,2026-02-26,2026-02-27,2026-03-05",
@@ -3096,15 +3180,15 @@
             "answers": [
                 {
                     "givenAnswer": "true,false",
-                    "correct": true
+                    "correct": false
                 },
                 {
                     "givenAnswer": "true,false",
-                    "correct": true
+                    "correct": false
                 },
                 {
                     "givenAnswer": "false,true",
-                    "correct": true
+                    "correct": false
                 }
             ]
         },
@@ -3170,15 +3254,15 @@
             "answers": [
                 {
                     "givenAnswer": "false,true",
-                    "correct": true
+                    "correct": false
                 },
                 {
                     "givenAnswer": "false,true",
-                    "correct": true
+                    "correct": false
                 },
                 {
                     "givenAnswer": "false,true",
-                    "correct": true
+                    "correct": false
                 }
             ]
         },
