@@ -67,7 +67,7 @@
         },
         {
             "questionId": 17,
-            "answer": "502.11"
+            "answer": "1916.23"
         },
         {
             "questionId": 18,
@@ -83,11 +83,11 @@
         },
         {
             "questionId": 21,
-            "answer": "561"
+            "answer": "149"
         },
         {
             "questionId": 22,
-            "answer": "Accessories,false,478,Trade Partners Ltd,58x186x186cm"
+            "answer": "Furniture,false,54,Industrial Solutions Inc,70x98x81cm"
         },
         {
             "questionId": 23,
@@ -123,7 +123,7 @@
         },
         {
             "questionId": 31,
-            "answer": "Shanghai (China),2026-01-05,149"
+            "answer": "Dubai (UAE),2026-03-04,561"
         },
         {
             "questionId": 32,
@@ -155,7 +155,7 @@
         },
         {
             "questionId": 39,
-            "answer": "true,Shanghai (China),true,24318,36x24x63cm,113"
+            "answer": "false,Hong Kong,true,12246,134x169x142cm,271"
         },
         {
             "questionId": 40,
@@ -171,7 +171,7 @@
         },
         {
             "questionId": 43,
-            "answer": "7205,2025-11-08,C-54-21,3.3,1088,16,2026-02-22,1446.21"
+            "answer": "7205,2025-11-08,C-54-21,3.3,1088,2026-02-22,1446.21"
         },
         {
             "questionId": 44,
@@ -183,7 +183,7 @@
         },
         {
             "questionId": 46,
-            "answer": "true,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,2141,Los Angeles (USA),694,67467"
+            "answer": "true,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,2141,Los Angeles (USA),694,67467"
         },
         {
             "questionId": 47,
@@ -195,7 +195,7 @@
         },
         {
             "questionId": 49,
-            "answer": "2026-01-05,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,282.85,461,195x130x86cm,2997,4.1,3309.37,MAT-000026,Electronics,81853,7554"
+            "answer": "2026-03-04,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,55.87,68,170x55x41cm,7554,4.1,3469.35,TOO-000027,Tools,13531,5236"
         },
         {
             "questionId": 50,
@@ -211,7 +211,7 @@
         },
         {
             "questionId": 53,
-            "answer": "2026-01-12,1798.7,2026-01-13,301.25,MFR-240216,2026-01-13,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,New York (USA)"
+            "answer": "2026-01-12,1798.7,2025-12-14,301.25,MFR-240216,2026-01-13,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,New York (USA)"
         },
         {
             "questionId": 54,
@@ -219,7 +219,7 @@
         },
         {
             "questionId": 55,
-            "answer": "58x186x186cm,478,false,Professional Drill 4359,1446.21,158x127x114cm,71147,2025-12-23,Furniture,false"
+            "answer": "70x98x81cm,54,true,Compact Controller 2751,982.44,158x127x114cm,71147,2025-12-23,Furniture,false"
         },
         {
             "questionId": 56,
@@ -235,7 +235,7 @@
         },
         {
             "questionId": 59,
-            "answer": "6"
+            "answer": "8"
         },
         {
             "questionId": 60,
@@ -243,11 +243,11 @@
         },
         {
             "questionId": 61,
-            "answer": "1"
+            "answer": "0"
         },
         {
             "questionId": 62,
-            "answer": "6"
+            "answer": "5"
         },
         {
             "questionId": 63,
@@ -255,19 +255,19 @@
         },
         {
             "questionId": 64,
-            "answer": "19"
+            "answer": "14"
         },
         {
             "questionId": 65,
-            "answer": "31"
+            "answer": "16"
         },
         {
             "questionId": 66,
-            "answer": "19"
+            "answer": "11"
         },
         {
             "questionId": 67,
-            "answer": "18"
+            "answer": "16"
         },
         {
             "questionId": 68,
@@ -275,11 +275,11 @@
         },
         {
             "questionId": 69,
-            "answer": "20"
+            "answer": "10"
         },
         {
             "questionId": 70,
-            "answer": "20"
+            "answer": "16"
         },
         {
             "questionId": 71,
@@ -311,15 +311,15 @@
         },
         {
             "questionId": 78,
-            "answer": "41463.54"
+            "answer": "35273.81"
         },
         {
             "questionId": 79,
-            "answer": "7484.56"
+            "answer": "7177.79"
         },
         {
             "questionId": 80,
-            "answer": "96.4"
+            "answer": "96.3"
         },
         {
             "questionId": 81,
@@ -335,7 +335,7 @@
         },
         {
             "questionId": 84,
-            "answer": "57863"
+            "answer": "57845"
         },
         {
             "questionId": 85,
@@ -371,7 +371,7 @@
         },
         {
             "questionId": 93,
-            "answer": "1337.54"
+            "answer": "1137.86"
         },
         {
             "questionId": 94,
@@ -383,7 +383,7 @@
         },
         {
             "questionId": 96,
-            "answer": "45802.23"
+            "answer": "49208.45"
         },
         {
             "questionId": 97,
@@ -391,7 +391,7 @@
         },
         {
             "questionId": 98,
-            "answer": "241.44"
+            "answer": "231.54"
         },
         {
             "questionId": 99,
@@ -415,7 +415,7 @@
         },
         {
             "questionId": 104,
-            "answer": "avgRating,category,costPrice,description,dimensions,discontinuedDate,fragile,hazardous,lastRestocked,manufacturerCode,price,productId,productName,reorderPoint,shelfLife,sku,stockQuantity,supplierLocation,supplierName,unitsShipped,warehouseLocation,weight"
+            "answer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped,avgRating,shelfLife,discontinuedDate"
         },
         {
             "questionId": 105,
@@ -423,23 +423,23 @@
         },
         {
             "questionId": 106,
-            "answer": "avgRating,category,costPrice,description,dimensions,discontinuedDate,fragile,hazardous,lastRestocked,manufacturerCode,price,productId,productName,reorderPoint,shelfLife,sku,stockQuantity,supplierLocation,supplierName,unitsShipped,warehouseLocation,weight"
+            "answer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped,avgRating,shelfLife,discontinuedDate"
         },
         {
             "questionId": 107,
-            "answer": "1,1.1,1.3,1.8,2.1,2.3,2.5,2.6,2.7,2.9,3.1,3.3,3.4,3.7,3.9,4.1,4.2,4.3,4.7,4.9,5"
+            "answer": "1,1.1,1.3,1.8,2.1,2.3,2.5,2.6,2.7,2.9,3.1,3.3,3.4,3.5,3.7,3.9,4.1,4.2,4.3,4.7,4.9,5"
         },
         {
             "questionId": 108,
-            "answer": "6424,10788,12246,13531,19607,24318,25001,27999,35105,39214,45638,45892,48034,49573,53427,55395,56680,67212,67467,71147,76460,81853,83821,88786,91182,96067,96576"
+            "answer": "6424,10360,10788,12246,13531,19607,24318,25001,26969,27999,35105,39214,45214,45638,45892,48034,49573,53427,55395,56680,67212,67467,67640,71147,76460,81853,83821,88786,91182,96067,96576"
         },
         {
             "questionId": 109,
-            "answer": "1136,1282,2030,2066,3077,3259,3374,3542,4065,4123,5090,5112,5170,5236,5351,5635,6020,6158,6681,7205,7328,7554,8113,8601,9044,9306,9647,9975"
+            "answer": "1136,1282,2030,2066,3077,3259,3374,3542,4065,4123,4589,5090,5112,5170,5236,5351,5635,6020,6158,6681,7205,7328,7554,8113,8601,9044,9306,9647,9975"
         },
         {
             "questionId": 110,
-            "answer": "Basic Controller 4209,Basic Switch 3220,Basic Wrench 3584,Compact Cable 7684,Compact Compressor 4353,Compact Connector 5082,Compact Controller 2751,Compact Generator 4353,Compact Pump 8049,Deluxe Compressor 2613,Deluxe Pump 7944,Deluxe Switch 5331,Deluxe Valve 988,Heavy-Duty Pump 4480,Heavy-Duty Pump 9402,Heavy-Duty Sensor 866,Industrial Connector 8916,Industrial Controller 4596,Industrial Solutions Inc,Industrial Wrench 5325,Industrial Wrench 9916,Premium Connector 5452,Premium Controller 7077,Premium Controller 8430,Premium Drill 4359,Premium Motor 4110,Professional Drill 4359,Professional Motor 6712,Professional Pump 3723,Standard Cable 9795,Standard Connector 3237,Standard Drill 2248,Standard Pump 5568,Standard Valve 4839"
+            "answer": "Basic Cable 1234,Basic Controller 4209,Basic Switch 3220,Basic Wrench 3584,Compact Cable 7684,Compact Compressor 4353,Compact Connector 5082,Compact Controller 2751,Compact Generator 4353,Compact Pump 8049,Deluxe Compressor 2613,Deluxe Pump 7944,Deluxe Switch 5331,Deluxe Valve 988,Heavy-Duty Pump 4480,Heavy-Duty Pump 9402,Heavy-Duty Sensor 866,Industrial Connector 8916,Industrial Controller 4596,Industrial Wrench 5325,Industrial Wrench 9916,Premium Connector 5452,Premium Controller 7077,Premium Controller 8430,Premium Motor 4110,Professional Drill 4359,Professional Motor 6712,Professional Pump 3723,Standard Cable 9795,Standard Connector 3237,Standard Drill 2248,Standard Pump 5568,Standard Valve 4839"
         },
         {
             "questionId": 111,
@@ -451,7 +451,7 @@
         },
         {
             "questionId": 113,
-            "answer": "10x90x157cm,102x102x7cm,105x63x105cm,120x84x117cm,123x162x90cm,125x21x149cm,134x169x142cm,143x152x83cm,147x136x95cm,158x127x114cm,165x118x9cm,169x86x185cm,170x55x41cm,176x30x100cm,195x130x86cm,195x67x73cm,13x152x98cm,34x95x110cm,35x149x168cm,36x24x63cm,44x101x161cm,52x194x95cm,58x186x186cm,58x68x114cm,63x154x166cm,70x98x81cm,80x183x61cm,89x135x53cm,90x88x73cm"
+            "answer": "10x90x157cm,102x102x7cm,105x63x105cm,116x22x176cm,120x84x117cm,123x162x90cm,125x21x149cm,134x169x142cm,143x152x83cm,147x136x95cm,158x127x114cm,165x118x9cm,169x86x185cm,170x55x41cm,176x30x100cm,192x170x184cm,195x67x73cm,195x130x86cm,34x95x110cm,35x149x168cm,36x24x63cm,44x101x161cm,52x194x95cm,58x68x114cm,58x186x186cm,63x154x166cm,70x98x81cm,80x183x61cm,89x135x53cm,90x88x73cm,13x152x98cm"
         },
         {
             "questionId": 114,
@@ -459,19 +459,19 @@
         },
         {
             "questionId": 115,
-            "answer": "16,28,44,54,65,68,107,108,113,127,144,146,186,211,223,225,270,271,275,294,304,350,378,429,432,437,441,452,461,478"
+            "answer": "16,28,44,54,65,68,107,108,113,127,144,146,186,211,225,238,264,270,271,275,294,304,307,350,378,429,432,437,441,452,461,478"
         },
         {
             "questionId": 116,
-            "answer": "733.52,765.86,798.2,830.54,877.32,917.75,942.01,982.44,1333.01,1349.18,1365.35,1381.52,1397.69,1413.87,1430.04,1446.21,2141,2149.08,2205.68,2213.77,3212.34,3244.69,3277.03,3309.37,3380.41,3404.67,3445.1,3469.35,4611.74,4668.34,4676.42"
+            "answer": "1333.01,1349.18,1365.35,1381.52,1397.69,1413.87,1430.04,1446.21,2141,2149.08,2205.68,2213.77,3212.34,3244.69,3277.03,3309.37,3380.41,3404.67,3445.1,3469.35,733.52,765.86,798.2,830.54,877.32,917.75,942.01,982.44,1333.01,4611.74,4668.34,4676.42"
         },
         {
             "questionId": 117,
-            "answer": "12.93,51.33,147.49,196.58,228.64,380.24,491.42,497.78,502.11,514.81,589.61,766.91,869.43,905.81,1029.7,1036.05,1089.47,1224.04,1305.19,1567.97,1578.65,1615.04,1798.7,1933.27,1982.36,2008.06,2106.24,2185.37,2287.88,2454.5"
+            "answer": "12.93,51.33,147.49,196.58,228.64,380.24,489.42,491.42,497.78,502.11,514.81,589.61,766.91,869.43,905.81,1029.7,1036.05,1089.47,1224.04,1305.19,1567.97,1578.65,1615.04,1798.7,1916.23,1933.27,2008.06,2106.24,2185.37,2287.88,2454.5"
         },
         {
             "questionId": 118,
-            "answer": "A-89-41,A-93-38,B-20-33,B-6-1,C-1-13,C-1-22,C-50-24,C-53-39,C-54-21,D-32-46,D-66-25,D-80-16,E-11-7,E-14-22,F-27-17,F-90-5,G-22-29,G-22-38,G-41-49,G-56-17,G-72-22,G-73-5,H-71-40,I-16-9,I-2-32,I-33-5,J-11-30,J-12-21,J-46-9,J-92-6"
+            "answer": "A-93-38,B-20-33,B-6-1,C-1-13,C-1-22,C-50-24,C-53-39,C-54-21,D-32-46,D-66-25,D-80-16,E-11-7,E-14-22,F-27-17,F-90-5,G-22-29,G-22-38,G-41-49,G-56-17,G-72-22,G-73-5,H-71-40,I-16-9,I-2-32,I-33-5,J-11-30,J-12-21,J-46-9,J-92-6"
         },
         {
             "questionId": 119,
@@ -479,11 +479,11 @@
         },
         {
             "questionId": 120,
-            "answer": "2025-12-02,2025-12-09,2025-12-12,2025-12-14,2025-12-19,2025-12-23,2025-12-25,2025-12-27,2025-12-29,2025-12-30,2026-01-03,2026-01-05,2026-01-13,2026-01-26,2026-02-01,2026-02-02,2026-02-12,2026-02-17,2026-02-21,2026-02-22,2026-02-24,2026-03-02,2026-03-04,2026-03-05"
+            "answer": "2025-12-08,2025-12-09,2025-12-12,2025-12-14,2025-12-19,2025-12-23,2025-12-25,2025-12-27,2025-12-29,2025-12-30,2026-01-03,2026-01-05,2026-01-13,2026-01-26,2026-02-01,2026-02-03,2026-02-12,2026-02-17,2026-02-21,2026-02-22,2026-02-24,2026-03-02,2026-03-04,2026-03-05"
         },
         {
             "questionId": 121,
-            "answer": "3.51,48.58,55.87,62.29,70.57,92.67,106.5,129.47,144.16,165.28,183.68,210.24,213.07,224.06,239.74,241.44,247.03,261.73,271.86,282.85,283.83,301.25,330.64,357.31,360.03,385.84,401.4,438.2,444.62,452.9"
+            "answer": "106.5,144.16,165.28,166.15,183.68,213.07,224.06,239.74,242.46,247.03,261.73,271.86,282.85,283.83,301.25,330.64,357.31,360.03,385.84,401.4,438.2,444.62,452.9,48.58,55.87,62.29,70.57,92.67,129.47,210.24,3.51"
         },
         {
             "questionId": 122,
@@ -495,11 +495,11 @@
         },
         {
             "questionId": 124,
-            "answer": "79,149,201,218,508,561,694,798,1088,1129,1164,1199,1309,1721,1924,2081,2301,2359,2395,2540,2662,2969,3155,3242,3259,3549,3590,3625"
+            "answer": "149,201,218,2081,2301,2359,2395,2540,2662,2679,3155,3242,3259,3549,3590,3625,3555,508,561,694,798,1088,1129,1141,1164,1199,1309,1721,1924,2969"
         },
         {
             "questionId": 125,
-            "answer": "MFR-228549,MFR-234382,MFR-240216,MFR-246049,MFR-255945,MFR-260320,MFR-267611,MFR-271986,MFR-342507,MFR-345424,MFR-348341,MFR-351257,MFR-354174,MFR-357091,MFR-360007,MFR-501361,MFR-499903,MFR-688299,MFR-693132,MFR-704486,MFR-711778,MFR-716153,MFR-723445,MFR-932403,MFR-933861,MFR-944070,MFR-945528"
+            "answer": "MFR-228549,MFR-234382,MFR-240216,MFR-246049,MFR-255945,MFR-260320,MFR-267611,MFR-271986,MFR-339591,MFR-342507,MFR-345424,MFR-348341,MFR-351257,MFR-354174,MFR-357091,MFR-360007,MFR-489695,MFR-488236,MFR-499903,MFR-501361,MFR-687299,MFR-693132,MFR-711778,MFR-716153,MFR-723445,MFR-932403,MFR-933861,MFR-944070,MFR-945528,MFR-704486,MFR-932403"
         }
     ]
 }

@@ -6,25 +6,25 @@
     "testRuns": 3,
     "totalQuestions": 124,
     "accuracy": {
-        "correct": 82.33,
-        "incorrect": 41.67,
-        "accuracyPercent": 66.4,
-        "accuracyDriftPercMin": -5.27,
-        "accuracyDriftPercMax": 3.24,
-        "weightedAccuracyPercent": 65.76,
-        "weightedAccuracyDriftPercMin": -6.63,
-        "weightedAccuracyDriftPercMax": 7.24,
+        "correct": 94.33,
+        "incorrect": 29.67,
+        "accuracyPercent": 76.08,
+        "accuracyDriftPercMin": -9.9,
+        "accuracyDriftPercMax": 6.01,
+        "weightedAccuracyPercent": 74,
+        "weightedAccuracyDriftPercMin": -10.35,
+        "weightedAccuracyDriftPercMax": 6.01,
         "charactersOfAnswers": {
             "expected": 7777,
-            "correct": 7113.333,
-            "incorrect": 1290,
-            "total": 8403.333,
-            "accuracyByCharPerc": 86.53,
-            "accuracyByCharPercDriftMin": -0.45,
-            "accuracyByCharPercDriftMax": 0.51,
-            "weightedAccuracyByCharPerc": 87.39,
-            "weightedAccuracyByCharPercDriftMin": 0.73,
-            "weightedAccuracyByCharPercDriftMax": 1.13
+            "correct": 7635,
+            "incorrect": 188.667,
+            "total": 7823.667,
+            "accuracyByCharPerc": 93.56,
+            "accuracyByCharPercDriftMin": -1.23,
+            "accuracyByCharPercDriftMax": 1.58,
+            "weightedAccuracyByCharPerc": 93.54,
+            "weightedAccuracyByCharPercDriftMin": -1.09,
+            "weightedAccuracyByCharPercDriftMax": 1.04
         }
     },
     "perRunAccuracy": [
@@ -33,200 +33,200 @@
             "correct": 85,
             "incorrect": 39,
             "accuracyPercent": 68.55,
-            "weightedAccuracyPercent": 70.52000000000001,
+            "weightedAccuracyPercent": 66.34,
             "accuracyPerCategory": [
                 {
                     "category": "field_retrieval",
-                    "correct": 37,
-                    "incorrect": 18,
+                    "correct": 53,
+                    "incorrect": 2,
                     "unanswered": 0,
-                    "accuracyPercent": 67.27,
-                    "weightedAccuracyPercent": 25.23,
+                    "accuracyPercent": 96.36,
+                    "weightedAccuracyPercent": 36.14,
                     "charactersOfAnswers": {
                         "expected": 3073,
-                        "correct": 2365,
-                        "incorrect": 1470,
-                        "total": 3835,
-                        "accuracyByCharPerc": 82.47,
-                        "weightedAccuracyByCharPerc": 30.93
+                        "correct": 3029,
+                        "incorrect": 76,
+                        "total": 3105,
+                        "accuracyByCharPerc": 98.99,
+                        "weightedAccuracyByCharPerc": 37.12
                     }
                 },
                 {
                     "category": "filtering",
-                    "correct": 14,
-                    "incorrect": 7,
-                    "unanswered": 0,
-                    "accuracyPercent": 66.67,
-                    "weightedAccuracyPercent": 13.89,
-                    "charactersOfAnswers": {
-                        "expected": 112,
-                        "correct": 105,
-                        "incorrect": 7,
-                        "total": 112,
-                        "accuracyByCharPerc": 94.13,
-                        "weightedAccuracyByCharPerc": 19.61
-                    }
-                },
-                {
-                    "category": "aggregation",
                     "correct": 11,
                     "incorrect": 10,
                     "unanswered": 0,
                     "accuracyPercent": 52.38,
-                    "weightedAccuracyPercent": 6.55,
+                    "weightedAccuracyPercent": 10.91,
+                    "charactersOfAnswers": {
+                        "expected": 112,
+                        "correct": 102,
+                        "incorrect": 10,
+                        "total": 112,
+                        "accuracyByCharPerc": 91.43,
+                        "weightedAccuracyByCharPerc": 19.05
+                    }
+                },
+                {
+                    "category": "aggregation",
+                    "correct": 7,
+                    "incorrect": 14,
+                    "unanswered": 0,
+                    "accuracyPercent": 33.33,
+                    "weightedAccuracyPercent": 4.17,
                     "charactersOfAnswers": {
                         "expected": 162,
-                        "correct": 126,
-                        "incorrect": 36,
+                        "correct": 123,
+                        "incorrect": 39,
                         "total": 162,
-                        "accuracyByCharPerc": 79.42,
-                        "weightedAccuracyByCharPerc": 9.93
+                        "accuracyByCharPerc": 77.19,
+                        "weightedAccuracyByCharPerc": 9.65
                     }
                 },
                 {
                     "category": "structure_awareness",
-                    "correct": 23,
-                    "incorrect": 4,
+                    "correct": 14,
+                    "incorrect": 13,
                     "unanswered": 0,
-                    "accuracyPercent": 85.19,
-                    "weightedAccuracyPercent": 24.85,
+                    "accuracyPercent": 51.85,
+                    "weightedAccuracyPercent": 15.12,
                     "charactersOfAnswers": {
                         "expected": 4430,
-                        "correct": 4430,
-                        "incorrect": 72,
-                        "total": 4502,
-                        "accuracyByCharPerc": 92.64,
-                        "weightedAccuracyByCharPerc": 27.02
+                        "correct": 4318,
+                        "incorrect": 159,
+                        "total": 4477,
+                        "accuracyByCharPerc": 91.62,
+                        "weightedAccuracyByCharPerc": 26.72
                     }
                 }
             ],
             "charactersOfAnswers": {
                 "expected": 7777,
-                "correct": 7026,
-                "incorrect": 1585,
-                "total": 8611,
-                "accuracyByCharPerc": 86.14,
-                "weightedAccuracyByCharPerc": 87.49
+                "correct": 7572,
+                "incorrect": 284,
+                "total": 7856,
+                "accuracyByCharPerc": 92.41,
+                "weightedAccuracyByCharPerc": 92.54
             }
         },
         {
             "run": 2,
-            "correct": 78,
-            "incorrect": 46,
-            "accuracyPercent": 62.9,
-            "weightedAccuracyPercent": 61.4,
+            "correct": 98,
+            "incorrect": 26,
+            "accuracyPercent": 79.03,
+            "weightedAccuracyPercent": 78.45,
             "accuracyPerCategory": [
                 {
                     "category": "field_retrieval",
-                    "correct": 42,
-                    "incorrect": 13,
+                    "correct": 55,
+                    "incorrect": 0,
                     "unanswered": 0,
-                    "accuracyPercent": 76.36,
-                    "weightedAccuracyPercent": 28.64,
+                    "accuracyPercent": 100,
+                    "weightedAccuracyPercent": 37.5,
                     "charactersOfAnswers": {
                         "expected": 3073,
-                        "correct": 2596,
-                        "incorrect": 937,
-                        "total": 3533,
-                        "accuracyByCharPerc": 85.1,
-                        "weightedAccuracyByCharPerc": 31.91
+                        "correct": 3073,
+                        "incorrect": 0,
+                        "total": 3073,
+                        "accuracyByCharPerc": 100,
+                        "weightedAccuracyByCharPerc": 37.5
                     }
                 },
                 {
                     "category": "filtering",
-                    "correct": 9,
-                    "incorrect": 12,
+                    "correct": 13,
+                    "incorrect": 8,
                     "unanswered": 0,
-                    "accuracyPercent": 42.86,
-                    "weightedAccuracyPercent": 8.93,
+                    "accuracyPercent": 61.9,
+                    "weightedAccuracyPercent": 12.9,
                     "charactersOfAnswers": {
                         "expected": 112,
-                        "correct": 97,
-                        "incorrect": 15,
+                        "correct": 104,
+                        "incorrect": 8,
                         "total": 112,
-                        "accuracyByCharPerc": 87.3,
-                        "weightedAccuracyByCharPerc": 18.19
+                        "accuracyByCharPerc": 93.02,
+                        "weightedAccuracyByCharPerc": 19.38
                     }
                 },
                 {
                     "category": "aggregation",
-                    "correct": 11,
-                    "incorrect": 10,
+                    "correct": 9,
+                    "incorrect": 12,
                     "unanswered": 0,
-                    "accuracyPercent": 52.38,
-                    "weightedAccuracyPercent": 6.55,
+                    "accuracyPercent": 42.86,
+                    "weightedAccuracyPercent": 5.36,
                     "charactersOfAnswers": {
                         "expected": 162,
-                        "correct": 133,
-                        "incorrect": 29,
+                        "correct": 120,
+                        "incorrect": 42,
                         "total": 162,
-                        "accuracyByCharPerc": 82.78,
-                        "weightedAccuracyByCharPerc": 10.35
+                        "accuracyByCharPerc": 75.6,
+                        "weightedAccuracyByCharPerc": 9.45
                     }
                 },
                 {
                     "category": "structure_awareness",
-                    "correct": 16,
-                    "incorrect": 11,
+                    "correct": 21,
+                    "incorrect": 6,
                     "unanswered": 0,
-                    "accuracyPercent": 59.26,
-                    "weightedAccuracyPercent": 17.28,
+                    "accuracyPercent": 77.78,
+                    "weightedAccuracyPercent": 22.69,
                     "charactersOfAnswers": {
                         "expected": 4430,
-                        "correct": 4334,
-                        "incorrect": 147,
-                        "total": 4481,
-                        "accuracyByCharPerc": 91.57,
-                        "weightedAccuracyByCharPerc": 26.71
+                        "correct": 4389,
+                        "incorrect": 51,
+                        "total": 4440,
+                        "accuracyByCharPerc": 93.31,
+                        "weightedAccuracyByCharPerc": 27.22
                     }
                 }
             ],
             "charactersOfAnswers": {
                 "expected": 7777,
-                "correct": 7160,
-                "incorrect": 1128,
-                "total": 8288,
-                "accuracyByCharPerc": 86.49,
-                "weightedAccuracyByCharPerc": 87.16
+                "correct": 7686,
+                "incorrect": 101,
+                "total": 7787,
+                "accuracyByCharPerc": 93.23,
+                "weightedAccuracyByCharPerc": 93.55
             }
         },
         {
             "run": 3,
-            "correct": 84,
-            "incorrect": 40,
-            "accuracyPercent": 67.74,
-            "weightedAccuracyPercent": 65.36,
+            "correct": 100,
+            "incorrect": 24,
+            "accuracyPercent": 80.65,
+            "weightedAccuracyPercent": 77.2,
             "accuracyPerCategory": [
                 {
                     "category": "field_retrieval",
-                    "correct": 42,
-                    "incorrect": 13,
+                    "correct": 55,
+                    "incorrect": 0,
                     "unanswered": 0,
-                    "accuracyPercent": 76.36,
-                    "weightedAccuracyPercent": 28.64,
+                    "accuracyPercent": 100,
+                    "weightedAccuracyPercent": 37.5,
                     "charactersOfAnswers": {
                         "expected": 3073,
-                        "correct": 2564,
-                        "incorrect": 1002,
-                        "total": 3566,
-                        "accuracyByCharPerc": 83.79,
-                        "weightedAccuracyByCharPerc": 31.42
+                        "correct": 3073,
+                        "incorrect": 0,
+                        "total": 3073,
+                        "accuracyByCharPerc": 100,
+                        "weightedAccuracyByCharPerc": 37.5
                     }
                 },
                 {
                     "category": "filtering",
-                    "correct": 10,
-                    "incorrect": 11,
+                    "correct": 13,
+                    "incorrect": 8,
                     "unanswered": 0,
-                    "accuracyPercent": 47.62,
-                    "weightedAccuracyPercent": 9.92,
+                    "accuracyPercent": 61.9,
+                    "weightedAccuracyPercent": 12.9,
                     "charactersOfAnswers": {
                         "expected": 112,
-                        "correct": 97,
-                        "incorrect": 15,
+                        "correct": 101,
+                        "incorrect": 11,
                         "total": 112,
-                        "accuracyByCharPerc": 87.46,
-                        "weightedAccuracyByCharPerc": 18.22
+                        "accuracyByCharPerc": 90.95,
+                        "weightedAccuracyByCharPerc": 18.95
                     }
                 },
                 {
@@ -238,11 +238,11 @@
                     "weightedAccuracyPercent": 9.52,
                     "charactersOfAnswers": {
                         "expected": 162,
-                        "correct": 141,
-                        "incorrect": 21,
+                        "correct": 144,
+                        "incorrect": 18,
                         "total": 162,
-                        "accuracyByCharPerc": 88.34,
-                        "weightedAccuracyByCharPerc": 11.04
+                        "accuracyByCharPerc": 90.08,
+                        "weightedAccuracyByCharPerc": 11.26
                     }
                 },
                 {
@@ -254,21 +254,21 @@
                     "weightedAccuracyPercent": 17.28,
                     "charactersOfAnswers": {
                         "expected": 4430,
-                        "correct": 4352,
-                        "incorrect": 119,
-                        "total": 4471,
-                        "accuracyByCharPerc": 91.99,
-                        "weightedAccuracyByCharPerc": 26.83
+                        "correct": 4329,
+                        "incorrect": 152,
+                        "total": 4481,
+                        "accuracyByCharPerc": 91.96,
+                        "weightedAccuracyByCharPerc": 26.82
                     }
                 }
             ],
             "charactersOfAnswers": {
                 "expected": 7777,
-                "correct": 7154,
-                "incorrect": 1157,
-                "total": 8311,
-                "accuracyByCharPerc": 86.97,
-                "weightedAccuracyByCharPerc": 87.50999999999999
+                "correct": 7647,
+                "incorrect": 181,
+                "total": 7828,
+                "accuracyByCharPerc": 95.04,
+                "weightedAccuracyByCharPerc": 94.53
             }
         }
     ],
@@ -584,12 +584,12 @@
                     "correct": true
                 },
                 {
-                    "givenAnswer": "502.11",
-                    "correct": false
+                    "givenAnswer": "1916.23",
+                    "correct": true
                 },
                 {
-                    "givenAnswer": "502.11",
-                    "correct": false
+                    "givenAnswer": "1916.23",
+                    "correct": true
                 }
             ]
         },
@@ -660,16 +660,16 @@
             "expectedAnswer": "149",
             "answers": [
                 {
-                    "givenAnswer": "561",
-                    "correct": false
+                    "givenAnswer": "149",
+                    "correct": true
                 },
                 {
-                    "givenAnswer": "561",
-                    "correct": false
+                    "givenAnswer": "149",
+                    "correct": true
                 },
                 {
-                    "givenAnswer": "561",
-                    "correct": false
+                    "givenAnswer": "149",
+                    "correct": true
                 }
             ]
         },
@@ -686,16 +686,16 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "Accessories,false,478,Trade Partners Ltd,58x186x186cm",
-                    "correct": false
+                    "givenAnswer": "Furniture,false,54,Industrial Solutions Inc,70x98x81cm",
+                    "correct": true
                 },
                 {
-                    "givenAnswer": "Accessories,false,478,Trade Partners Ltd,58x186x186cm",
-                    "correct": false
+                    "givenAnswer": "Furniture,false,54,Industrial Solutions Inc,70x98x81cm",
+                    "correct": true
                 },
                 {
-                    "givenAnswer": "Accessories,false,478,Trade Partners Ltd,58x186x186cm",
-                    "correct": false
+                    "givenAnswer": "Furniture,false,54,Industrial Solutions Inc,70x98x81cm",
+                    "correct": true
                 }
             ]
         },
@@ -810,12 +810,12 @@
                     "correct": true
                 },
                 {
-                    "givenAnswer": "5351,true",
-                    "correct": false
+                    "givenAnswer": "5351,false",
+                    "correct": true
                 },
                 {
-                    "givenAnswer": "5351,true",
-                    "correct": false
+                    "givenAnswer": "5351,false",
+                    "correct": true
                 }
             ]
         },
@@ -903,16 +903,16 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "Shanghai (China),2026-01-05,1199",
-                    "correct": false
+                    "givenAnswer": "Dubai (UAE),2026-03-04,561",
+                    "correct": true
                 },
                 {
-                    "givenAnswer": "Shanghai (China),2026-01-05,1199",
-                    "correct": false
+                    "givenAnswer": "Dubai (UAE),2026-03-04,561",
+                    "correct": true
                 },
                 {
-                    "givenAnswer": "Shanghai (China),2026-01-05,1199",
-                    "correct": false
+                    "givenAnswer": "Dubai (UAE),2026-03-04,561",
+                    "correct": true
                 }
             ]
         },
@@ -930,8 +930,8 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "1089.47,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,MFR-711778,IND-000010,Tech Components Group,3244.69",
-                    "correct": false
+                    "givenAnswer": "1089.47,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,MFR-711778,IND-000010,Material Distributors AB,3244.69",
+                    "correct": true
                 },
                 {
                     "givenAnswer": "1089.47,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,MFR-711778,IND-000010,Material Distributors AB,3244.69",
@@ -988,8 +988,8 @@
                     "correct": true
                 },
                 {
-                    "givenAnswer": "OFF-000022,true,2025-12-09,C-50-24,Standard Drill 2248,2662",
-                    "correct": false
+                    "givenAnswer": "OFF-000022,false,2025-12-09,C-50-24,Standard Drill 2248,2662",
+                    "correct": true
                 },
                 {
                     "givenAnswer": "OFF-000022,false,2025-12-09,C-50-24,Standard Drill 2248,2662",
@@ -1011,8 +1011,8 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "90x88x73cm,false,MFR-687299,437,2026-01-14,4668.34",
-                    "correct": false
+                    "givenAnswer": "90x88x73cm,false,MFR-687299,437,2025-12-27,4668.34",
+                    "correct": true
                 },
                 {
                     "givenAnswer": "90x88x73cm,false,MFR-687299,437,2025-12-27,4668.34",
@@ -1039,8 +1039,8 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "733.52,283.83,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,264,1982.36,Packaging,MFR-933861",
-                    "correct": false
+                    "givenAnswer": "733.52,283.83,Basic Switch 3220,264,Packaging,MFR-933861,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.",
+                    "correct": true
                 },
                 {
                     "givenAnswer": "733.52,283.83,Basic Switch 3220,264,Packaging,MFR-933861,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.",
@@ -1118,16 +1118,16 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "true,Shanghai (China),true,24318,36x24x63cm,113",
-                    "correct": false
+                    "givenAnswer": "false,Hong Kong,true,12246,134x169x142cm,271",
+                    "correct": true
                 },
                 {
-                    "givenAnswer": "true,Shanghai (China),true,12246,134x169x142cm,271",
-                    "correct": false
+                    "givenAnswer": "false,Hong Kong,true,12246,134x169x142cm,271",
+                    "correct": true
                 },
                 {
-                    "givenAnswer": "true,Shanghai (China),true,24318,36x24x63cm,113",
-                    "correct": false
+                    "givenAnswer": "false,Hong Kong,true,12246,134x169x142cm,271",
+                    "correct": true
                 }
             ]
         },
@@ -1202,12 +1202,12 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "2025-12-19,438.2,1721,437,G-41-49,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,1089.47,1721,CHE-000005,D-32-46,8113,385.84",
-                    "correct": false
+                    "givenAnswer": "2025-12-25,438.2,1721,225,G-41-49,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,1089.47,3555,CHE-000005,8113,34x95x110cm,385.84",
+                    "correct": true
                 },
                 {
-                    "givenAnswer": "2025-12-19,438.2,1721,225,G-41-49,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,1089.47,3555,CHE-000005,8113,34x95x110cm,385.84",
-                    "correct": false
+                    "givenAnswer": "2025-12-25,438.2,1721,225,G-41-49,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,1089.47,3555,CHE-000005,8113,34x95x110cm,385.84",
+                    "correct": true
                 },
                 {
                     "givenAnswer": "2025-12-25,438.2,1721,225,G-41-49,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,1089.47,3555,CHE-000005,8113,34x95x110cm,385.84",
@@ -1231,16 +1231,16 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "7205,2025-11-08,C-54-21,3.3,1088,2026-02-22,1446.21",
-                    "correct": false
+                    "givenAnswer": "7205,2025-11-08,C-54-21,3.3,1088,16,2026-02-22,1446.21",
+                    "correct": true
                 },
                 {
                     "givenAnswer": "7205,2025-11-08,C-54-21,3.3,1088,16,2026-02-22,1446.21",
                     "correct": true
                 },
                 {
-                    "givenAnswer": "7205,2025-11-08,C-54-21,3.3,1088,16,2025-12-12,1446.21",
-                    "correct": false
+                    "givenAnswer": "7205,2025-11-08,C-54-21,3.3,1088,16,2026-02-22,1446.21",
+                    "correct": true
                 }
             ]
         },
@@ -1291,12 +1291,12 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "Reliable Vendors LLC,2025-09-27,false,true,MFR-933861,10788,264,MFR-687299,437,90x88x73cm,Dubai (UAE),51.33",
-                    "correct": false
+                    "givenAnswer": "Reliable Vendors LLC,2025-11-14,false,true,MFR-933861,10788,264,MFR-687299,437,90x88x73cm,Dubai (UAE),51.33",
+                    "correct": true
                 },
                 {
-                    "givenAnswer": "Reliable Vendors LLC,2025-11-14,true,true,MFR-933861,10788,264,MFR-687299,437,90x88x73cm,Dubai (UAE),51.33",
-                    "correct": false
+                    "givenAnswer": "Reliable Vendors LLC,2025-11-14,false,true,MFR-933861,10788,264,MFR-687299,437,90x88x73cm,Dubai (UAE),51.33",
+                    "correct": true
                 },
                 {
                     "givenAnswer": "Reliable Vendors LLC,2025-11-14,false,true,MFR-933861,10788,264,MFR-687299,437,90x88x73cm,Dubai (UAE),51.33",
@@ -1318,16 +1318,16 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "true,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,2141,Los Angeles (USA),694,67467",
-                    "correct": false
+                    "givenAnswer": "true,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,2141,Los Angeles (USA),694,67467",
+                    "correct": true
                 },
                 {
-                    "givenAnswer": "true,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,2141,Los Angeles (USA),694,67467",
-                    "correct": false
+                    "givenAnswer": "true,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,2141,Los Angeles (USA),694,67467",
+                    "correct": true
                 },
                 {
-                    "givenAnswer": "true,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,2141,Los Angeles (USA),694,67467",
-                    "correct": false
+                    "givenAnswer": "true,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,2141,Los Angeles (USA),694,67467",
+                    "correct": true
                 }
             ]
         },
@@ -1406,16 +1406,16 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "2026-01-05,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,282.85,461,195x130x86cm,2997,4.1,3309.37,MAT-000026,Tools,81853,7554",
-                    "correct": false
+                    "givenAnswer": "2026-03-04,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,55.87,68,170x55x41cm,7554,4.1,3469.35,TOO-000027,Tools,13531,5236",
+                    "correct": true
                 },
                 {
-                    "givenAnswer": "2026-01-05,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,282.85,461,195x130x86cm,2997,4.1,3309.37,MAT-000026,Electronics,81853,7554",
-                    "correct": false
+                    "givenAnswer": "2026-03-04,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,55.87,68,170x55x41cm,7554,4.1,3469.35,TOO-000027,Tools,13531,5236",
+                    "correct": true
                 },
                 {
-                    "givenAnswer": "2026-01-05,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,282.85,461,195x130x86cm,2997,4.1,3309.37,MAT-000026,Electronics,81853,7554",
-                    "correct": false
+                    "givenAnswer": "2026-03-04,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,55.87,68,170x55x41cm,7554,4.1,3469.35,TOO-000027,Tools,13531,5236",
+                    "correct": true
                 }
             ]
         },
@@ -1436,16 +1436,16 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "FUR-000013,176x30x100cm,1164,2025-11-01,1224.04,Industrial Equipment,Hong Kong,Factory Direct Inc,2.9",
-                    "correct": false
+                    "givenAnswer": "FUR-000013,176x30x100cm,1164,2025-11-01,766.91,Office Supplies,Hong Kong,Factory Direct Inc,1",
+                    "correct": true
                 },
                 {
                     "givenAnswer": "FUR-000013,176x30x100cm,1164,2025-11-01,766.91,Office Supplies,Hong Kong,Factory Direct Inc,1",
                     "correct": true
                 },
                 {
-                    "givenAnswer": "FUR-000013,176x30x100cm,1164,2025-11-01,766.91,Office Supplies,Hong Kong,Factory Direct Inc,2.9",
-                    "correct": false
+                    "givenAnswer": "FUR-000013,176x30x100cm,1164,2025-11-01,766.91,Office Supplies,Hong Kong,Factory Direct Inc,1",
+                    "correct": true
                 }
             ]
         },
@@ -1465,8 +1465,8 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "2026-02-13,MFR-354174,J-11-30,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,798.2,905.81,OFF-000022,Standard Drill 2248",
-                    "correct": true
+                    "givenAnswer": "2026-02-13,J-11-30,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,798.2,905.81,OFF-000022,Standard Drill 2248",
+                    "correct": false
                 },
                 {
                     "givenAnswer": "2026-02-13,MFR-354174,J-11-30,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,798.2,905.81,OFF-000022,Standard Drill 2248",
@@ -1496,8 +1496,8 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "508,Hong Kong,MFR-260320,false,2025-09-26,CHE-000016,3549,Deluxe Compressor 2613,2.5,true",
-                    "correct": false
+                    "givenAnswer": "508,Singapore,MFR-260320,false,2025-09-26,CHE-000016,3549,Deluxe Compressor 2613,2.5,true",
+                    "correct": true
                 },
                 {
                     "givenAnswer": "508,Singapore,MFR-260320,false,2025-09-26,CHE-000016,3549,Deluxe Compressor 2613,2.5,true",
@@ -1525,16 +1525,16 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "2026-01-12,1798.7,2026-01-13,301.25,MFR-240216,2026-01-13,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,New York (USA)",
-                    "correct": false
+                    "givenAnswer": "2026-01-12,1798.7,2025-12-14,301.25,MFR-240216,2026-01-13,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,New York (USA)",
+                    "correct": true
                 },
                 {
                     "givenAnswer": "2026-01-12,1798.7,2025-12-14,301.25,MFR-240216,2026-01-13,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,New York (USA)",
                     "correct": true
                 },
                 {
-                    "givenAnswer": "2026-01-12,1798.7,2026-01-13,301.25,MFR-240216,2026-01-13,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,New York (USA)",
-                    "correct": false
+                    "givenAnswer": "2026-01-12,1798.7,2025-12-14,301.25,MFR-240216,2026-01-13,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.,New York (USA)",
+                    "correct": true
                 }
             ]
         },
@@ -1555,12 +1555,12 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "2026-01-05,304,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,35x149x168cm,2025-12-23,4.3,Reliable Vendors LLC,65,false",
-                    "correct": false
+                    "givenAnswer": "2026-01-05,Trade Partners Ltd,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,35x149x168cm,2025-12-23,4.3,Premier Parts Ltd,65,false",
+                    "correct": true
                 },
                 {
-                    "givenAnswer": "2026-01-05,Trade Partners Ltd,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,35x149x168cm,2026-01-13,4.3,Premier Parts Ltd,65,false",
-                    "correct": false
+                    "givenAnswer": "2026-01-05,Trade Partners Ltd,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,35x149x168cm,2025-12-23,4.3,Premier Parts Ltd,65,false",
+                    "correct": true
                 },
                 {
                     "givenAnswer": "2026-01-05,Trade Partners Ltd,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,35x149x168cm,2025-12-23,4.3,Premier Parts Ltd,65,false",
@@ -1586,16 +1586,16 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "58x186x186cm,478,false,Professional Drill 4359,1446.21,158x127x114cm,71147,2026-02-21,Furniture,false",
-                    "correct": false
+                    "givenAnswer": "70x98x81cm,54,true,Compact Controller 2751,982.44,158x127x114cm,71147,2025-12-23,Furniture,false",
+                    "correct": true
                 },
                 {
-                    "givenAnswer": "58x186x186cm,478,false,Professional Drill 4359,1446.21,158x127x114cm,71147,2025-12-23,Furniture,false",
-                    "correct": false
+                    "givenAnswer": "70x98x81cm,54,true,Compact Controller 2751,982.44,158x127x114cm,71147,2025-12-23,Furniture,false",
+                    "correct": true
                 },
                 {
-                    "givenAnswer": "58x186x186cm,478,false,Professional Drill 4359,1446.21,158x127x114cm,71147,2026-02-21,Furniture,false",
-                    "correct": false
+                    "givenAnswer": "70x98x81cm,54,true,Compact Controller 2751,982.44,158x127x114cm,71147,2025-12-23,Furniture,false",
+                    "correct": true
                 }
             ]
         },
@@ -1618,7 +1618,7 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "452.9,238,1088,19607,2025-10-07,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,4.7,Packaging,MFR-488236,56680,false",
+                    "givenAnswer": "452.9,144,2025-12-12,19607,Compact Connector 5082,2025-09-11,4.9,Industrial Equipment,MFR-234382,56680,false",
                     "correct": false
                 },
                 {
@@ -1626,8 +1626,8 @@
                     "correct": true
                 },
                 {
-                    "givenAnswer": "452.9,144,2025-10-07,19607,Material Distributors AB,2025-09-11,4.9,Industrial Equipment,MFR-234382,56680,false",
-                    "correct": false
+                    "givenAnswer": "452.9,144,2026-01-03,19607,Material Distributors AB,2025-09-11,4.9,Industrial Equipment,MFR-234382,56680,false",
+                    "correct": true
                 }
             ]
         },
@@ -1678,16 +1678,16 @@
             "expectedAnswer": 6,
             "answers": [
                 {
-                    "givenAnswer": "5",
-                    "correct": false
-                },
-                {
                     "givenAnswer": "7",
                     "correct": false
                 },
                 {
-                    "givenAnswer": "6",
-                    "correct": true
+                    "givenAnswer": "5",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "5",
+                    "correct": false
                 }
             ]
         },
@@ -1722,12 +1722,12 @@
                     "correct": true
                 },
                 {
-                    "givenAnswer": "0",
-                    "correct": false
+                    "givenAnswer": "1",
+                    "correct": true
                 },
                 {
-                    "givenAnswer": "0",
-                    "correct": false
+                    "givenAnswer": "1",
+                    "correct": true
                 }
             ]
         },
@@ -1746,8 +1746,8 @@
                     "correct": false
                 },
                 {
-                    "givenAnswer": "6",
-                    "correct": true
+                    "givenAnswer": "5",
+                    "correct": false
                 }
             ]
         },
@@ -1762,12 +1762,12 @@
                     "correct": true
                 },
                 {
-                    "givenAnswer": "4",
-                    "correct": false
+                    "givenAnswer": "3",
+                    "correct": true
                 },
                 {
-                    "givenAnswer": "4",
-                    "correct": false
+                    "givenAnswer": "3",
+                    "correct": true
                 }
             ]
         },
@@ -1778,11 +1778,11 @@
             "expectedAnswer": 16,
             "answers": [
                 {
-                    "givenAnswer": "16",
-                    "correct": true
+                    "givenAnswer": "15",
+                    "correct": false
                 },
                 {
-                    "givenAnswer": "15",
+                    "givenAnswer": "13",
                     "correct": false
                 },
                 {
@@ -1798,16 +1798,16 @@
             "expectedAnswer": 17,
             "answers": [
                 {
-                    "givenAnswer": "16",
+                    "givenAnswer": "15",
                     "correct": false
                 },
                 {
-                    "givenAnswer": "16",
-                    "correct": false
+                    "givenAnswer": "17",
+                    "correct": true
                 },
                 {
-                    "givenAnswer": "24",
-                    "correct": false
+                    "givenAnswer": "17",
+                    "correct": true
                 }
             ]
         },
@@ -1818,15 +1818,15 @@
             "expectedAnswer": 16,
             "answers": [
                 {
-                    "givenAnswer": "15",
+                    "givenAnswer": "16",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "18",
                     "correct": false
                 },
                 {
-                    "givenAnswer": "17",
-                    "correct": false
-                },
-                {
-                    "givenAnswer": "10",
+                    "givenAnswer": "12",
                     "correct": false
                 }
             ]
@@ -1838,15 +1838,15 @@
             "expectedAnswer": 17,
             "answers": [
                 {
-                    "givenAnswer": "16",
+                    "givenAnswer": "15",
                     "correct": false
                 },
                 {
-                    "givenAnswer": "11",
+                    "givenAnswer": "18",
                     "correct": false
                 },
                 {
-                    "givenAnswer": "11",
+                    "givenAnswer": "14",
                     "correct": false
                 }
             ]
@@ -1858,15 +1858,15 @@
             "expectedAnswer": 15,
             "answers": [
                 {
+                    "givenAnswer": "16",
+                    "correct": false
+                },
+                {
                     "givenAnswer": "15",
                     "correct": true
                 },
                 {
-                    "givenAnswer": "17",
-                    "correct": false
-                },
-                {
-                    "givenAnswer": "18",
+                    "givenAnswer": "16",
                     "correct": false
                 }
             ]
@@ -1882,11 +1882,11 @@
                     "correct": false
                 },
                 {
-                    "givenAnswer": "6",
-                    "correct": false
+                    "givenAnswer": "15",
+                    "correct": true
                 },
                 {
-                    "givenAnswer": "6",
+                    "givenAnswer": "7",
                     "correct": false
                 }
             ]
@@ -1898,15 +1898,15 @@
             "expectedAnswer": 13,
             "answers": [
                 {
+                    "givenAnswer": "16",
+                    "correct": false
+                },
+                {
                     "givenAnswer": "15",
                     "correct": false
                 },
                 {
                     "givenAnswer": "14",
-                    "correct": false
-                },
-                {
-                    "givenAnswer": "17",
                     "correct": false
                 }
             ]
@@ -1918,8 +1918,8 @@
             "expectedAnswer": 1,
             "answers": [
                 {
-                    "givenAnswer": "1",
-                    "correct": true
+                    "givenAnswer": "0",
+                    "correct": false
                 },
                 {
                     "givenAnswer": "1",
@@ -1982,8 +1982,8 @@
                     "correct": true
                 },
                 {
-                    "givenAnswer": "0",
-                    "correct": true
+                    "givenAnswer": "1",
+                    "correct": false
                 },
                 {
                     "givenAnswer": "0",
@@ -1998,16 +1998,16 @@
             "expectedAnswer": 1,
             "answers": [
                 {
+                    "givenAnswer": "0",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "0",
+                    "correct": false
+                },
+                {
                     "givenAnswer": "1",
                     "correct": true
-                },
-                {
-                    "givenAnswer": "0",
-                    "correct": false
-                },
-                {
-                    "givenAnswer": "0",
-                    "correct": false
                 }
             ]
         },
@@ -2046,8 +2046,8 @@
                     "correct": true
                 },
                 {
-                    "givenAnswer": "0",
-                    "correct": false
+                    "givenAnswer": "1",
+                    "correct": true
                 }
             ]
         },
@@ -2058,15 +2058,15 @@
             "expectedAnswer": 35273.810000000005,
             "answers": [
                 {
-                    "givenAnswer": "41235.31",
+                    "givenAnswer": "35299.93",
                     "correct": false
                 },
                 {
-                    "givenAnswer": "35274.01",
+                    "givenAnswer": "37571.53",
                     "correct": false
                 },
                 {
-                    "givenAnswer": "35270.32",
+                    "givenAnswer": "35173.37",
                     "correct": false
                 }
             ]
@@ -2078,15 +2078,15 @@
             "expectedAnswer": 7177.789999999999,
             "answers": [
                 {
-                    "givenAnswer": "7184.74",
+                    "givenAnswer": "7184.71",
                     "correct": false
                 },
                 {
-                    "givenAnswer": "7180.31",
+                    "givenAnswer": "7183.83",
                     "correct": false
                 },
                 {
-                    "givenAnswer": "7176.64",
+                    "givenAnswer": "7179.94",
                     "correct": false
                 }
             ]
@@ -2098,12 +2098,12 @@
             "expectedAnswer": 96.30000000000001,
             "answers": [
                 {
-                    "givenAnswer": "96.3",
-                    "correct": true
+                    "givenAnswer": "97.3",
+                    "correct": false
                 },
                 {
-                    "givenAnswer": "98.1",
-                    "correct": false
+                    "givenAnswer": "96.4",
+                    "correct": true
                 },
                 {
                     "givenAnswer": "96.3",
@@ -2118,15 +2118,15 @@
             "expectedAnswer": 67373.5,
             "answers": [
                 {
-                    "givenAnswer": "67374.37",
+                    "givenAnswer": "67274.55",
                     "correct": false
                 },
                 {
-                    "givenAnswer": "67373.50",
-                    "correct": true
+                    "givenAnswer": "67356.41",
+                    "correct": false
                 },
                 {
-                    "givenAnswer": "67373.49",
+                    "givenAnswer": "67373.5",
                     "correct": true
                 }
             ]
@@ -2138,11 +2138,11 @@
             "expectedAnswer": 7401,
             "answers": [
                 {
-                    "givenAnswer": "7394",
+                    "givenAnswer": "7473",
                     "correct": false
                 },
                 {
-                    "givenAnswer": "7382",
+                    "givenAnswer": "7396",
                     "correct": false
                 },
                 {
@@ -2158,12 +2158,12 @@
             "expectedAnswer": 163458,
             "answers": [
                 {
-                    "givenAnswer": "163458",
-                    "correct": true
+                    "givenAnswer": "163488",
+                    "correct": false
                 },
                 {
-                    "givenAnswer": "163456",
-                    "correct": false
+                    "givenAnswer": "163458",
+                    "correct": true
                 },
                 {
                     "givenAnswer": "163458",
@@ -2178,15 +2178,15 @@
             "expectedAnswer": 57844,
             "answers": [
                 {
-                    "givenAnswer": "57789",
+                    "givenAnswer": "57768",
                     "correct": false
                 },
                 {
-                    "givenAnswer": "57805",
+                    "givenAnswer": "63558",
                     "correct": false
                 },
                 {
-                    "givenAnswer": "57823",
+                    "givenAnswer": "57765",
                     "correct": false
                 }
             ]
@@ -2338,12 +2338,12 @@
             "expectedAnswer": 2173.34,
             "answers": [
                 {
-                    "givenAnswer": "2173.37",
-                    "correct": true
+                    "givenAnswer": "2170.47",
+                    "correct": false
                 },
                 {
-                    "givenAnswer": "2173.34",
-                    "correct": true
+                    "givenAnswer": "2172.79",
+                    "correct": false
                 },
                 {
                     "givenAnswer": "2173.34",
@@ -2358,15 +2358,15 @@
             "expectedAnswer": 1137.86,
             "answers": [
                 {
-                    "givenAnswer": "1329.85",
+                    "givenAnswer": "1138.06",
                     "correct": false
                 },
                 {
-                    "givenAnswer": "1137.87",
-                    "correct": true
+                    "givenAnswer": "1212.63",
+                    "correct": false
                 },
                 {
-                    "givenAnswer": "1137.75",
+                    "givenAnswer": "1135.27",
                     "correct": false
                 }
             ]
@@ -2378,11 +2378,11 @@
             "expectedAnswer": 5272.84,
             "answers": [
                 {
-                    "givenAnswer": "5272.84",
-                    "correct": true
+                    "givenAnswer": "5274.45",
+                    "correct": false
                 },
                 {
-                    "givenAnswer": "5272.13",
+                    "givenAnswer": "5272.19",
                     "correct": false
                 },
                 {
@@ -2398,15 +2398,15 @@
             "expectedAnswer": 1865.94,
             "answers": [
                 {
-                    "givenAnswer": "1864.81",
+                    "givenAnswer": "1863.48",
                     "correct": false
                 },
                 {
-                    "givenAnswer": "1865.65",
+                    "givenAnswer": "2050.9",
                     "correct": false
                 },
                 {
-                    "givenAnswer": "1865.90",
+                    "givenAnswer": "1865.94",
                     "correct": true
                 }
             ]
@@ -2418,15 +2418,15 @@
             "expectedAnswer": 50731.16,
             "answers": [
                 {
-                    "givenAnswer": "45270.32",
+                    "givenAnswer": "50618.32",
                     "correct": false
                 },
                 {
-                    "givenAnswer": "45806.13",
+                    "givenAnswer": "50731.81",
                     "correct": false
                 },
                 {
-                    "givenAnswer": "45405.90",
+                    "givenAnswer": "48706.71",
                     "correct": false
                 }
             ]
@@ -2438,11 +2438,11 @@
             "expectedAnswer": 238.74,
             "answers": [
                 {
-                    "givenAnswer": "238.52",
+                    "givenAnswer": "241.06",
                     "correct": false
                 },
                 {
-                    "givenAnswer": "238.13",
+                    "givenAnswer": "238.58",
                     "correct": false
                 },
                 {
@@ -2462,11 +2462,11 @@
                     "correct": false
                 },
                 {
-                    "givenAnswer": "231.61",
-                    "correct": true
+                    "givenAnswer": "231.74",
+                    "correct": false
                 },
                 {
-                    "givenAnswer": "231.50",
+                    "givenAnswer": "231.54",
                     "correct": true
                 }
             ]
@@ -2601,15 +2601,15 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "avgRating,category,costPrice,description,dimensions,discontinuedDate,fragile,hazardous,lastRestocked,manufacturerCode,price,productId,productName,reorderPoint,shelfLife,sku,stockQuantity,supplierLocation,supplierName,unitsShipped,warehouseLocation,weight",
+                    "givenAnswer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped,avgRating,shelfLife,discontinuedDate",
                     "correct": true
                 },
                 {
-                    "givenAnswer": "avgRating,category,costPrice,description,dimensions,discontinuedDate,fragile,hazardous,lastRestocked,manufacturerCode,price,productId,productName,reorderPoint,shelfLife,sku,stockQuantity,supplierLocation,supplierName,unitsShipped,warehouseLocation,weight",
+                    "givenAnswer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped,avgRating,shelfLife,discontinuedDate",
                     "correct": true
                 },
                 {
-                    "givenAnswer": "avgRating,category,costPrice,description,dimensions,discontinuedDate,fragile,hazardous,lastRestocked,manufacturerCode,price,productId,productName,reorderPoint,shelfLife,sku,stockQuantity,supplierLocation,supplierName,unitsShipped,warehouseLocation,weight",
+                    "givenAnswer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped,avgRating,shelfLife,discontinuedDate",
                     "correct": true
                 }
             ]
@@ -2664,15 +2664,15 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "avgRating,category,costPrice,description,dimensions,discontinuedDate,fragile,hazardous,lastRestocked,manufacturerCode,price,productId,productName,reorderPoint,shelfLife,sku,stockQuantity,supplierLocation,supplierName,unitsShipped,warehouseLocation,weight",
+                    "givenAnswer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped,avgRating,shelfLife,discontinuedDate",
                     "correct": true
                 },
                 {
-                    "givenAnswer": "avgRating,category,costPrice,description,dimensions,discontinuedDate,fragile,hazardous,lastRestocked,manufacturerCode,price,productId,productName,reorderPoint,shelfLife,sku,stockQuantity,supplierLocation,supplierName,unitsShipped,warehouseLocation,weight",
+                    "givenAnswer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped,avgRating,shelfLife,discontinuedDate",
                     "correct": true
                 },
                 {
-                    "givenAnswer": "avgRating,category,costPrice,description,dimensions,discontinuedDate,fragile,hazardous,lastRestocked,manufacturerCode,price,productId,productName,reorderPoint,shelfLife,sku,stockQuantity,supplierLocation,supplierName,unitsShipped,warehouseLocation,weight",
+                    "givenAnswer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped,avgRating,shelfLife,discontinuedDate",
                     "correct": true
                 }
             ]
@@ -2707,16 +2707,16 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "3.3,3.4,3.7,3.3,1.1,4.2,3.5,2.1,2.9,1,3.3,4.9,4.7,1.8,3.1,3.7,2.5,2.6,2.9,2.5,4.3,3.4,2.7,1.3,2.1,4.2,2.5,4.1,3.9,5,2.3",
+                    "givenAnswer": "1,1.1,1.3,1.8,2.1,2.3,2.5,2.6,2.7,2.9,3,3.1,3.3,3.4,3.7,3.9,4.1,4.2,4.3,4.7,4.9,5",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "1,1.1,1.3,1.8,2.1,2.3,2.5,2.6,2.7,2.9,3,3.1,3.3,3.4,3.5,3.7,3.9,4.1,4.2,4.3,4.7,4.9,5",
                     "correct": false
                 },
                 {
                     "givenAnswer": "1,1.1,1.3,1.8,2.1,2.3,2.5,2.6,2.7,2.9,3.1,3.3,3.4,3.5,3.7,3.9,4.1,4.2,4.3,4.7,4.9,5",
                     "correct": true
-                },
-                {
-                    "givenAnswer": "1,1.1,1.3,1.8,2.1,2.3,2.5,2.6,2.7,2.9,3,3.1,3.3,3.4,3.5,3.7,3.9,4.1,4.2,4.3,4.7,4.9,5",
-                    "correct": false
                 }
             ]
         },
@@ -2759,16 +2759,16 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "26969,71147,96576,78254,91182,10360,10788,67467,55395,49573,25001,56680,19607,88786,39214,45892,83821,27999,53427,35105,48034,67212,67640,24318,12246,6424,81853,13531,76460,45638,96067",
-                    "correct": true
-                },
-                {
-                    "givenAnswer": "6424,10360,10788,12246,12531,13531,19607,24318,25001,26969,27999,35105,39214,45638,45892,48034,49573,53427,55395,56680,67212,67467,67640,71147,76460,78254,81853,83821,88786,91182,96067,96576",
+                    "givenAnswer": "6424,10360,10788,12246,13531,19607,24318,25001,27999,35105,39214,45214,45638,45892,48034,49573,53427,55395,56680,67212,67467,71147,76460,81853,83821,88786,91182,96067,96576",
                     "correct": false
                 },
                 {
                     "givenAnswer": "6424,10360,10788,12246,13531,19607,24318,25001,26969,27999,35105,39214,45638,45892,48034,49573,53427,55395,56680,67212,67467,67640,71147,76460,78254,81853,83821,88786,91182,96067,96576",
                     "correct": true
+                },
+                {
+                    "givenAnswer": "6424,10360,10788,12246,13531,19607,24318,25001,26969,27999,35105,39214,45638,45892,48034,49573,53427,55395,56680,67212,67467,71147,76460,81853,83821,88786,91182,96067,96576",
+                    "correct": false
                 }
             ]
         },
@@ -2811,15 +2811,15 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "7205,1136,692,3374,6681,8113,5170,5351,6158,5090,9647,7328,5635,2066,4123,9306,5112,9044,8601,1282,4589,6020,3077,3259,4065,2997,7554,5236,3542,9975,2030",
-                    "correct": true
-                },
-                {
-                    "givenAnswer": "1136,1282,2030,2066,3077,3259,3374,3542,4065,4123,5090,5112,5170,5235,5351,5635,6020,6158,6681,7205,7328,7554,8113,8601,9044,9306,9647,9975",
+                    "givenAnswer": "1136,1282,2030,2066,3077,3259,3374,3542,4065,4123,5090,5112,5170,5236,5351,5635,6020,6158,6681,7205,7328,7554,8113,8601,9044,9306,9647,9975",
                     "correct": false
                 },
                 {
-                    "givenAnswer": "1136,1282,2030,2066,3077,3259,3374,3542,4065,4123,5090,5112,5170,5236,5351,5635,6020,6158,6681,7205,7328,7554,8113,8601,9044,9306,9647,9975",
+                    "givenAnswer": "1136,1282,2030,2066,2997,3077,3259,3374,3542,4065,4123,5090,5112,5170,5236,5351,5635,6020,6158,6681,7205,7328,7554,8113,8601,9044,9306,9647,9975",
+                    "correct": false
+                },
+                {
+                    "givenAnswer": "1136,1282,2030,2066,3077,3259,3374,3542,5090,5112,5170,5236,5351,5635,6020,6158,6681,7205,7328,7554,8113,8601,9044,9306,9647,9975",
                     "correct": false
                 }
             ]
@@ -2863,16 +2863,16 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "Basic Wrench 3584,Heavy-Duty Pump 9402,Deluxe Valve 988,Standard Pump 5568,Heavy-Duty Sensor 866,Basic Controller 4209,Basic Switch 3220,Industrial Wrench 5325,Compact Pump 8049,Industrial Connector 8916,Premium Connector 5452,Compact Connector 5082,Deluxe Switch 5331,Professional Pump 3723,Compact Cable 7684,Standard Valve 4839,Deluxe Compressor 2613,Premium Controller 8430,Industrial Wrench 9916,Industrial Controller 4596,Standard Cable 9795,Standard Connector 3237,Standard Drill 2248,Compact Generator 4353,Premium Controller 7077,Deluxe Pump 7944,Heavy-Duty Pump 4480,Premium Motor 4110,Professional Drill 4359,Compact Controller 2751,Professional Motor 6712",
-                    "correct": true
+                    "givenAnswer": "Basic Cable 9795,Basic Controller 4209,Basic Switch 3220,Basic Wrench 3584,Compact Cable 7684,Compact Connector 5082,Compact Controller 2751,Compact Generator 4353,Compact Pump 8049,Deluxe Compressor 2613,Deluxe Pump 7944,Deluxe Switch 5331,Deluxe Valve 988,Heavy-Duty Pump 4480,Heavy-Duty Pump 9402,Heavy-Duty Sensor 866,Industrial Connector 8916,Industrial Controller 4596,Industrial Wrench 5325,Industrial Wrench 9916,Premium Connector 5452,Premium Controller 7077,Premium Controller 8430,Premium Motor 4110,Professional Drill 4359,Professional Motor 6712,Professional Pump 3723,Standard Cable 9795,Standard Connector 3237,Standard Drill 2248,Standard Pump 5568,Standard Valve 4839",
+                    "correct": false
                 },
                 {
                     "givenAnswer": "Basic Wrench 3584,Heavy-Duty Pump 9402,Deluxe Valve 988,Standard Pump 5568,Heavy-Duty Sensor 866,Basic Controller 4209,Basic Switch 3220,Industrial Wrench 5325,Compact Pump 8049,Industrial Connector 8916,Premium Connector 5452,Compact Connector 5082,Deluxe Switch 5331,Professional Pump 3723,Compact Cable 7684,Standard Valve 4839,Deluxe Compressor 2613,Premium Controller 8430,Industrial Wrench 9916,Industrial Controller 4596,Standard Cable 9795,Standard Connector 3237,Standard Drill 2248,Compact Generator 4353,Premium Controller 7077,Deluxe Pump 7944,Heavy-Duty Pump 4480,Premium Motor 4110,Professional Drill 4359,Compact Controller 2751,Professional Motor 6712",
                     "correct": true
                 },
                 {
-                    "givenAnswer": "Basic Wrench 3584,Heavy-Duty Pump 9402,Deluxe Valve 988,Standard Pump 5568,Heavy-Duty Sensor 866,Basic Controller 4209,Basic Switch 3220,Industrial Wrench 5325,Compact Pump 8049,Industrial Connector 8916,Premium Connector 5452,Compact Connector 5082,Deluxe Switch 5331,Professional Pump 3723,Compact Cable 7684,Standard Valve 4839,Deluxe Compressor 2613,Premium Controller 8430,Industrial Wrench 9916,Industrial Controller 4596,Standard Cable 9795,Standard Connector 3237,Standard Drill 2248,Compact Generator 4353,Premium Controller 7077,Deluxe Pump 7944,Heavy-Duty Pump 4480,Premium Motor 4110,Professional Drill 4359,Compact Controller 2751,Professional Motor 6712",
-                    "correct": true
+                    "givenAnswer": "Basic Cable 6893,Basic Controller 4209,Basic Switch 3220,Basic Wrench 3584,Compact Cable 7684,Compact Connector 5082,Compact Controller 2751,Compact Generator 4353,Compact Pump 8049,Deluxe Compressor 2613,Deluxe Pump 7944,Deluxe Switch 5331,Deluxe Valve 988,Heavy-Duty Pump 4480,Heavy-Duty Pump 9402,Heavy-Duty Sensor 866,Industrial Connector 8916,Industrial Controller 4596,Industrial Wrench 5325,Industrial Wrench 9916,Premium Connector 5452,Premium Controller 7077,Premium Controller 8430,Premium Motor 4110,Professional Drill 4359,Professional Motor 6712,Professional Pump 3723,Standard Cable 9795,Standard Connector 3237,Standard Drill 2248,Standard Pump 5568,Standard Valve 4839",
+                    "correct": false
                 }
             ]
         },
@@ -2898,7 +2898,7 @@
                     "correct": true
                 },
                 {
-                    "givenAnswer": "Accessories,Chemicals,Electronics,Furniture,Industrial Equipment,Materials,Office Supplies,Packaging,Textiles,Tools",
+                    "givenAnswer": "Industrial Equipment,Furniture,Packaging,Textiles,Accessories,Tools,Materials,Electronics,Office Supplies,Chemicals",
                     "correct": true
                 },
                 {
@@ -2946,16 +2946,16 @@
             ],
             "answers": [
                 {
+                    "givenAnswer": "ACC-000028,CHE-000005,CHE-000014,CHE-000016,ELE-000001,ELE-000006,ELE-000008,FUR-000013,FUR-000030,IND-000000,IND-000001,IND-000003,IND-000004,IND-000007,IND-000010,IND-000011,IND-000015,IND-000025,MAT-000000,MAT-000026,OFF-000009,OFF-000017,OFF-000022,OFF-000024,PAC-000012,PAC-000018,TEX-000002,TEX-000021,TEX-000029,TOO-000019,TOO-000020,TOO-000023,TOO-000027",
+                    "correct": false
+                },
+                {
                     "givenAnswer": "MAT-000000,ELE-000001,TEX-000002,IND-000003,IND-000004,CHE-000005,ELE-000006,IND-000007,ELE-000008,OFF-000009,IND-000010,IND-000011,PAC-000012,FUR-000013,CHE-000014,IND-000015,CHE-000016,OFF-000017,PAC-000018,TOO-000019,TOO-000020,TEX-000021,OFF-000022,TOO-000023,OFF-000024,IND-000025,MAT-000026,TOO-000027,ACC-000028,TEX-000029,FUR-000030",
                     "correct": true
                 },
                 {
-                    "givenAnswer": "ACC-000028,CHE-000005,CHE-000014,CHE-000016,ELE-000001,ELE-000006,ELE-000008,FUR-000013,FUR-000030,IND-000003,IND-000004,IND-000007,IND-000010,IND-000011,IND-000015,IND-000025,MAT-000000,MAT-000026,OFF-000009,OFF-000017,OFF-000022,OFF-000024,PAC-000012,PAC-000018,TEX-000002,TEX-000021,TEX-000029,TOO-000019,TOO-000020,TOO-000023,TOO-000027",
-                    "correct": true
-                },
-                {
-                    "givenAnswer": "ACC-000028,CHE-000005,CHE-000014,CHE-000016,ELE-000001,ELE-000006,ELE-000008,FUR-000013,FUR-000030,IND-000003,IND-000004,IND-000007,IND-000010,IND-000011,IND-000015,IND-000025,MAT-000000,MAT-000026,OFF-000009,OFF-000017,OFF-000022,OFF-000024,PAC-000012,PAC-000018,TEX-000002,TEX-000021,TEX-000029,TOO-000019,TOO-000020,TOO-000023,TOO-000027",
-                    "correct": true
+                    "givenAnswer": "ACC-000028,CHE-000005,CHE-000014,CHE-000016,ELE-000001,ELE-000006,ELE-000008,FUR-000013,FUR-000030,IND-000000,IND-000001,IND-000003,IND-000004,IND-000007,IND-000010,IND-000011,IND-000015,IND-000025,MAT-000000,MAT-000026,OFF-000009,OFF-000017,OFF-000022,OFF-000024,PAC-000012,PAC-000018,TEX-000002,TEX-000021,TEX-000029,TOO-000019,TOO-000020,TOO-000023,TOO-000027",
+                    "correct": false
                 }
             ]
         },
@@ -2998,16 +2998,16 @@
             ],
             "answers": [
                 {
+                    "givenAnswer": "10x90x157cm,102x102x7cm,105x63x105cm,116x22x176cm,120x84x117cm,123x162x90cm,125x21x149cm,134x169x142cm,143x152x83cm,147x136x95cm,158x127x114cm,165x118x9cm,169x86x185cm,170x55x41cm,176x30x100cm,192x170x184cm,195x130x86cm,195x67x73cm,34x95x110cm,35x149x168cm,36x24x63cm,44x101x161cm,52x194x95cm,58x68x114cm,58x186x186cm,63x154x166cm,70x98x81cm,80x183x61cm,89x135x53cm,90x88x73cm,13x152x98cm",
+                    "correct": true
+                },
+                {
                     "givenAnswer": "195x67x73cm,158x127x114cm,35x149x168cm,169x86x185cm,120x84x117cm,34x95x110cm,58x68x114cm,143x152x83cm,44x101x161cm,105x63x105cm,80x183x61cm,116x22x176cm,165x118x9cm,176x30x100cm,102x102x7cm,90x88x73cm,89x135x53cm,52x194x95cm,125x21x149cm,63x154x166cm,13x152x98cm,123x162x90cm,147x136x95cm,36x24x63cm,134x169x142cm,195x130x86cm,170x55x41cm,10x90x157cm,58x186x186cm,70x98x81cm,192x170x184cm",
                     "correct": true
                 },
                 {
-                    "givenAnswer": "10x90x157cm,13x152x98cm,34x95x110cm,35x149x168cm,36x24x63cm,44x101x161cm,52x194x95cm,58x68x114cm,58x186x186cm,63x154x166cm,70x98x81cm,80x183x61cm,89x135x53cm,90x88x73cm,102x102x7cm,105x63x105cm,116x22x176cm,120x84x117cm,123x162x90cm,125x21x149cm,134x169x142cm,143x152x83cm,147x136x95cm,158x127x114cm,165x118x9cm,169x86x185cm,170x55x41cm,176x30x100cm,192x170x184cm,195x67x73cm,195x130x86cm",
-                    "correct": true
-                },
-                {
-                    "givenAnswer": "10x90x157cm,13x152x98cm,34x95x110cm,35x149x168cm,36x24x63cm,44x101x161cm,52x194x95cm,58x68x114cm,58x186x186cm,63x154x166cm,70x98x81cm,80x183x61cm,89x135x53cm,90x88x73cm,102x102x7cm,105x63x105cm,116x22x176cm,120x84x117cm,123x162x90cm,125x21x149cm,134x169x142cm,143x152x83cm,147x136x95cm,158x127x114cm,165x118x9cm,169x86x185cm,170x55x41cm,176x30x100cm,192x170x184cm,195x67x73cm,195x130x86cm",
-                    "correct": true
+                    "givenAnswer": "10x90x157cm,102x102x7cm,105x63x105cm,116x22x176cm,120x84x117cm,123x162x90cm,125x21x149cm,134x169x142cm,143x152x83cm,147x136x95cm,158x127x114cm,165x118x9cm,169x86x185cm,170x55x41cm,176x30x100cm,192x170x184cm,195x67x73cm,35x149x168cm,36x24x63cm,44x101x161cm,52x194x95cm,58x68x114cm,58x186x186cm,63x154x166cm,70x98x81cm,80x183x61cm,89x135x53cm,90x88x73cm,13x152x98cm,34x95x110cm",
+                    "correct": false
                 }
             ]
         },
@@ -3031,7 +3031,7 @@
                     "correct": true
                 },
                 {
-                    "givenAnswer": "Factory Direct Inc,Global Supply Co,Industrial Solutions Inc,Material Distributors AB,Premier Parts Ltd,Reliable Vendors LLC,Tech Components Group,Trade Partners Ltd",
+                    "givenAnswer": "Industrial Solutions Inc,Tech Components Group,Trade Partners Ltd,Factory Direct Inc,Material Distributors AB,Reliable Vendors LLC,Global Supply Co,Premier Parts Ltd",
                     "correct": true
                 },
                 {
@@ -3079,16 +3079,16 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "16,452,304,432,223,44,264,270,429,127,225,108,144,211,186,437,350,294,146,275,65,378,107,113,271,461,68,441,478,54,28",
+                    "givenAnswer": "16,28,44,54,65,68,107,108,113,127,144,146,186,211,223,225,264,270,271,275,294,304,350,378,429,432,437,441,452,461,478",
                     "correct": true
                 },
                 {
-                    "givenAnswer": "16,28,44,54,65,68,107,108,113,127,144,146,186,211,225,270,271,275,294,304,350,378,429,432,437,441,452,461,478",
-                    "correct": false
+                    "givenAnswer": "16,28,44,54,65,68,107,108,113,127,144,146,186,211,223,225,264,270,271,275,294,304,350,378,429,432,437,441,452,461,478",
+                    "correct": true
                 },
                 {
-                    "givenAnswer": "16,28,44,54,65,68,107,108,113,127,144,146,186,211,225,270,271,275,304,350,378,429,432,437,441,452,461,478",
-                    "correct": false
+                    "givenAnswer": "16,28,44,54,65,68,107,108,113,127,144,146,186,211,223,225,264,270,271,275,294,304,350,378,429,432,437,441,452,461,478",
+                    "correct": true
                 }
             ]
         },
@@ -3131,12 +3131,12 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "1333.01,4611.74,3212.34,877.32,1349.18,3380.41,733.52,2141,1365.35,2149.08,3244.69,3404.67,1381.52,917.75,765.86,4668.34,1397.69,4676.42,3277.03,942.01,1413.87,3445.1,798.2,2205.68,1430.04,2213.77,3309.37,3469.35,1446.21,982.44,830.54",
-                    "correct": true
+                    "givenAnswer": "765.86,798.2,830.54,877.32,917.75,942.01,982.44,1333.01,1349.18,1365.35,1381.52,1397.69,1413.87,1430.04,1446.21,2141,2149.08,2205.68,2213.77,3212.34,3244.69,3277.03,3309.37,3380.41,3404.67,3445.1,3469.35,4611.74,4668.34,4676.42",
+                    "correct": false
                 },
                 {
-                    "givenAnswer": "733.52,765.86,798.2,830.54,877.32,917.75,942.01,982.44,1333.01,1349.18,1381.52,1397.69,1413.87,1430.04,1446.21,2141,2149.08,2205.68,2213.77,3244.69,3277.03,3309.37,3380.41,3404.67,3445.1,3469.35,3612.34,4611.74,4668.34,4676.42",
-                    "correct": false
+                    "givenAnswer": "1333.01,4611.74,3212.34,877.32,1349.18,3380.41,733.52,2141,1365.35,2149.08,3244.69,3404.67,1381.52,917.75,765.86,4668.34,1397.69,4676.42,3277.03,942.01,1413.87,3445.1,798.2,2205.68,1430.04,2213.77,3309.37,3469.35,1446.21,982.44,830.54",
+                    "correct": true
                 },
                 {
                     "givenAnswer": "733.52,765.86,798.2,830.54,877.32,917.75,942.01,982.44,1333.01,1349.18,1365.35,1381.52,1397.69,1413.87,1430.04,1446.21,2141,2149.08,2205.68,2213.77,3212.34,3244.69,3277.03,3309.37,3380.41,3404.67,3445.1,3469.35,4611.74,4668.34,4676.42",
@@ -3183,16 +3183,16 @@
             ],
             "answers": [
                 {
+                    "givenAnswer": "12.93,51.33,147.49,196.58,228.64,380.24,491.42,497.78,502.11,514.81,589.61,766.91,869.43,905.81,1029.7,1036.05,1089.47,1224.04,1305.19,1567.97,1578.65,1615.04,1798.7,1933.27,1982.36,2008.06,2106.24,2185.37,2287.88,2454.5",
+                    "correct": false
+                },
+                {
                     "givenAnswer": "514.81,1305.19,380.24,2106.24,869.43,1036.05,1982.36,589.61,1224.04,766.91,1089.47,1567.97,1578.65,497.78,196.58,51.33,1933.27,228.64,1798.7,1029.7,2287.88,2454.5,905.81,2008.06,147.49,2185.37,12.93,491.42,502.11,1916.23,1615.04",
                     "correct": true
                 },
                 {
-                    "givenAnswer": "12.93,51.33,147.49,196.58,228.64,380.24,491.42,497.78,502.11,514.81,589.61,766.91,869.43,905.81,1029.7,1036.05,1089.47,1224.04,1305.19,1567.97,1578.65,1615.04,1798.7,1933.27,1982.36,2008.06,2106.24,2185.37,2287.88,2454.5",
-                    "correct": false
-                },
-                {
-                    "givenAnswer": "12.93,51.33,147.49,196.58,228.64,380.24,491.42,497.78,502.11,514.81,589.61,766.91,869.43,905.81,1029.7,1036.05,1089.47,1224.04,1305.19,1567.97,1578.65,1615.04,1798.7,1933.27,1982.36,2008.06,2106.24,2185.37,2287.88,2454.5",
-                    "correct": false
+                    "givenAnswer": "12.93,51.33,147.49,196.58,228.64,380.24,491.42,497.78,502.11,514.81,589.61,766.91,869.43,905.81,1029.7,1036.05,1089.47,1224.04,1305.19,1567.97,1578.65,1615.04,1798.7,1916.23,1933.27,1982.36,2008.06,2106.24,2185.37,2287.88,2454.5",
+                    "correct": true
                 }
             ]
         },
@@ -3235,15 +3235,15 @@
             ],
             "answers": [
                 {
+                    "givenAnswer": "A-93-38,B-20-33,B-6-1,C-1-13,C-1-22,C-50-24,C-53-39,C-54-21,D-32-46,D-66-25,D-80-16,E-11-7,E-14-22,F-27-17,F-90-5,G-22-29,G-22-38,G-41-49,G-56-17,G-72-22,G-73-5,H-71-40,I-16-9,I-2-32,I-33-5,J-11-30,J-12-21,J-46-9,J-92-6",
+                    "correct": false
+                },
+                {
                     "givenAnswer": "C-54-21,C-37-25,I-2-32,G-22-29,G-73-5,D-32-46,H-71-40,D-66-25,A-93-38,F-27-17,G-41-49,J-12-21,E-14-22,G-22-38,E-11-7,G-56-17,I-33-5,I-16-9,D-80-16,C-1-13,C-53-39,J-11-30,C-50-24,J-46-9,G-72-22,B-6-1,B-20-33,F-90-5,J-92-6,C-1-22,A-89-41",
                     "correct": true
                 },
                 {
-                    "givenAnswer": "A-89-41,A-93-38,B-20-33,B-6-1,C-1-13,C-1-22,C-37-25,C-50-24,C-53-39,C-54-21,D-32-46,D-66-25,D-80-16,E-11-7,E-14-22,F-27-17,F-90-5,G-22-29,G-22-38,G-41-49,G-56-17,G-72-22,G-73-5,H-71-40,I-16-9,I-2-32,I-33-5,J-11-30,J-12-21,J-46-9,J-92-6",
-                    "correct": true
-                },
-                {
-                    "givenAnswer": "A-89-41,A-93-38,B-20-33,B-6-1,C-1-13,C-1-22,C-50-24,C-53-39,C-54-21,D-32-46,D-66-25,D-80-16,E-11-7,E-14-22,F-27-17,F-90-5,G-22-29,G-22-38,G-41-49,G-56-17,G-72-22,G-73-5,H-71-40,I-2-32,I-16-9,I-33-5,J-11-30,J-12-21,J-46-9,J-92-6",
+                    "givenAnswer": "A-93-38,B-20-33,B-6-1,C-1-13,C-1-22,C-50-24,C-53-39,C-54-21,D-32-46,D-66-25,D-80-16,E-11-7,E-14-22,F-27-17,F-90-5,G-22-29,G-22-38,G-41-49,G-56-17,G-72-22,G-73-5,H-71-40,I-16-9,I-2-32,I-33-5,J-11-30,J-12-21,J-46-9,J-92-6",
                     "correct": false
                 }
             ]
@@ -3268,7 +3268,7 @@
                     "correct": true
                 },
                 {
-                    "givenAnswer": "Dubai (UAE),Hamburg (Germany),Hong Kong,Los Angeles (USA),New York (USA),Rotterdam (Netherlands),Shanghai (China),Singapore",
+                    "givenAnswer": "Hong Kong,Hamburg (Germany),Dubai (UAE),Shanghai (China),Singapore,New York (USA),Los Angeles (USA),Rotterdam (Netherlands)",
                     "correct": true
                 },
                 {
@@ -3312,15 +3312,15 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "2026-03-05,2025-12-23,2026-01-05,2026-02-03,2026-01-13,2026-02-24,2025-12-30,2026-02-21,2026-02-22,2026-01-26,2025-12-25,2025-12-09,2026-01-03,2025-12-29,2025-12-19,2025-12-27,2026-02-12,2026-03-02,2025-12-14,2026-01-13,2025-12-23,2026-02-02,2025-12-09,2026-01-30,2026-02-01,2026-01-05,2026-03-04,2026-02-17,2025-12-12,2025-12-08,2026-02-27",
+                    "givenAnswer": "2025-12-08,2025-12-09,2025-12-12,2025-12-14,2025-12-19,2025-12-23,2025-12-25,2025-12-27,2025-12-29,2025-12-30,2026-01-03,2026-01-05,2026-01-13,2026-01-26,2026-02-01,2026-02-02,2026-02-03,2026-02-12,2026-02-17,2026-02-21,2026-02-22,2026-03-02,2026-03-04,2026-03-05",
                     "correct": false
                 },
                 {
-                    "givenAnswer": "2025-12-08,2025-12-09,2025-12-12,2025-12-14,2025-12-19,2025-12-23,2025-12-25,2025-12-27,2025-12-29,2025-12-30,2026-01-01,2026-01-03,2026-01-05,2026-01-13,2026-01-26,2026-02-01,2026-02-02,2026-02-03,2026-02-12,2026-02-13,2026-02-17,2026-02-21,2026-02-22,2026-02-27,2026-03-02,2026-03-04,2026-03-05",
+                    "givenAnswer": "2025-12-08,2025-12-09,2025-12-12,2025-12-14,2025-12-19,2025-12-23,2025-12-25,2025-12-27,2025-12-29,2025-12-30,2026-01-03,2026-01-05,2026-01-13,2026-01-26,2026-02-01,2026-02-02,2026-02-03,2026-02-12,2026-02-17,2026-02-21,2026-02-22,2026-03-02,2026-03-04,2026-03-05",
                     "correct": false
                 },
                 {
-                    "givenAnswer": "2025-12-08,2025-12-09,2025-12-12,2025-12-14,2025-12-19,2025-12-23,2025-12-25,2025-12-27,2025-12-29,2025-12-30,2026-01-01,2026-01-03,2026-01-05,2026-01-12,2026-01-13,2026-01-14,2026-01-26,2026-01-30,2026-02-01,2026-02-02,2026-02-03,2026-02-12,2026-02-17,2026-02-21,2026-02-22,2026-03-02,2026-03-04,2026-03-05",
+                    "givenAnswer": "2025-12-09,2025-12-12,2025-12-14,2025-12-19,2025-12-23,2025-12-25,2025-12-27,2025-12-29,2025-12-30,2026-01-03,2026-01-05,2026-01-13,2026-01-26,2026-02-01,2026-02-02,2026-02-03,2026-02-12,2026-02-17,2026-02-21,2026-02-22,2026-02-24,2026-03-02,2026-03-04,2026-03-05",
                     "correct": false
                 }
             ]
@@ -3364,15 +3364,15 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "239.74,106.5,129.47,183.68,144.16,385.84,283.83,213.07,48.58,165.28,438.2,242.46,452.9,444.62,92.67,271.86,357.31,224.06,247.03,301.25,261.73,3.51,401.4,330.64,166.15,282.85,55.87,360.03,70.57,62.29,210.24",
-                    "correct": true
-                },
-                {
                     "givenAnswer": "3.51,48.58,55.87,62.29,70.57,92.67,106.5,129.47,144.16,165.28,183.68,210.24,213.07,224.06,239.74,242.46,247.03,261.73,271.86,282.85,283.83,301.25,330.64,357.31,360.03,385.84,401.4,438.2,444.62,452.9",
                     "correct": false
                 },
                 {
-                    "givenAnswer": "3.51,48.58,55.87,62.29,70.57,92.67,106.5,129.47,144.16,165.28,166.15,183.68,210.24,213.07,224.06,231.5,239.74,242.46,247.03,261.73,271.86,282.85,283.83,301.25,330.64,357.31,360.03,385.84,401.4,438.2,452.9",
+                    "givenAnswer": "239.74,106.5,129.47,183.68,144.16,385.84,283.83,213.07,48.58,165.28,438.2,242.46,452.9,444.62,92.67,271.86,357.31,224.06,247.03,301.25,261.73,3.51,401.4,330.64,166.15,282.85,55.87,360.03,70.57,62.29,210.24",
+                    "correct": true
+                },
+                {
+                    "givenAnswer": "3.51,48.58,55.87,62.29,70.57,92.67,106.5,129.47,144.16,165.28,166.15,183.68,210.24,213.07,224.06,239.74,242.46,247.03,261.73,271.86,282.85,283.83,301.25,330.64,357.31,360.03,385.84,401.4,438.2,452.9",
                     "correct": false
                 }
             ]
@@ -3386,7 +3386,7 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "true,false",
+                    "givenAnswer": "false,true",
                     "correct": false
                 },
                 {
@@ -3490,16 +3490,16 @@
             ],
             "answers": [
                 {
-                    "givenAnswer": "1088,1129,2301,79,798,3555,201,694,508,2359,1721,1309,218,1164,3242,1924,3549,3590,1141,2540,3259,2395,2662,3155,2969,1199,561,149,2679,3625,2081",
+                    "givenAnswer": "79,149,201,218,508,561,694,798,1088,1129,1141,1164,1199,1309,1721,1924,2081,2301,2359,2395,2540,2662,2679,2969,3155,3242,3259,3549,3590,3625,3555",
                     "correct": true
                 },
                 {
-                    "givenAnswer": "79,149,201,218,508,561,694,798,1088,1129,1141,1164,1199,1309,1721,1924,2301,2359,2395,2540,2662,2679,2969,3155,3242,3259,3549,3590,3625",
+                    "givenAnswer": "79,149,201,218,508,561,694,798,1088,1129,1141,1164,1199,1309,1721,1924,1988,2081,2301,2359,2395,2540,2662,2679,2969,3155,3242,3259,3549,3590,3625",
                     "correct": false
                 },
                 {
-                    "givenAnswer": "79,149,201,218,508,561,694,798,1129,1141,1164,1199,1309,1721,1924,2081,2301,2359,2395,2540,2662,2969,3155,3242,3259,3549,3555,3590,3625",
-                    "correct": false
+                    "givenAnswer": "79,149,201,218,508,561,694,798,1088,1129,1141,1164,1199,1309,1721,1924,2081,2301,2359,2395,2540,2662,2679,2969,3155,3242,3259,3549,3590,3625,3555",
+                    "correct": true
                 }
             ]
         },
@@ -3542,15 +3542,15 @@
             ],
             "answers": [
                 {
+                    "givenAnswer": "MFR-228549,MFR-234382,MFR-240216,MFR-246049,MFR-255945,MFR-260320,MFR-267611,MFR-271986,MFR-339591,MFR-342507,MFR-345424,MFR-348341,MFR-351257,MFR-354174,MFR-357091,MFR-360007,MFR-489695,MFR-488236,MFR-499903,MFR-501361,MFR-693132,MFR-704486,MFR-711778,MFR-716153,MFR-723445,MFR-933861,MFR-932403,MFR-944070,MFR-945528",
+                    "correct": false
+                },
+                {
                     "givenAnswer": "MFR-704486,MFR-339591,MFR-255945,MFR-228549,MFR-932403,MFR-342507,MFR-933861,MFR-681466,MFR-260320,MFR-345424,MFR-711778,MFR-234382,MFR-488236,MFR-348341,MFR-489695,MFR-687299,MFR-716153,MFR-351257,MFR-267611,MFR-240216,MFR-944070,MFR-354174,MFR-945528,MFR-693132,MFR-271986,MFR-357091,MFR-723445,MFR-246049,MFR-499903,MFR-360007,MFR-501361",
                     "correct": true
                 },
                 {
-                    "givenAnswer": "MFR-228549,MFR-234382,MFR-240216,MFR-246049,MFR-255945,MFR-260320,MFR-267611,MFR-271986,MFR-339591,MFR-342507,MFR-345424,MFR-348341,MFR-351257,MFR-354174,MFR-357091,MFR-360007,MFR-499903,MFR-501361,MFR-681466,MFR-687299,MFR-688499,MFR-693132,MFR-704486,MFR-711778,MFR-716153,MFR-723445,MFR-932403,MFR-933861,MFR-944070,MFR-945528",
-                    "correct": false
-                },
-                {
-                    "givenAnswer": "MFR-228549,MFR-234382,MFR-240216,MFR-246049,MFR-255945,MFR-260320,MFR-267611,MFR-271986,MFR-342507,MFR-345424,MFR-348341,MFR-351257,MFR-354174,MFR-357091,MFR-360007,MFR-499903,MFR-488236,MFR-489695,MFR-687299,MFR-681466,MFR-693132,MFR-704486,MFR-711778,MFR-716153,MFR-723445,MFR-932403,MFR-933861,MFR-944070,MFR-945528,MFR-501361",
+                    "givenAnswer": "MFR-228549,MFR-232382,MFR-234382,MFR-240216,MFR-246049,MFR-255945,MFR-260320,MFR-267611,MFR-271986,MFR-342507,MFR-345424,MFR-348341,MFR-351257,MFR-354174,MFR-357091,MFR-360007,MFR-488236,MFR-489695,MFR-499903,MFR-501361,MFR-704486,MFR-711778,MFR-716153,MFR-723445,MFR-932403,MFR-933861,MFR-944070,MFR-945528,MFR-681466,MFR-687299,MFR-693132",
                     "correct": false
                 }
             ]
