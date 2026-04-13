@@ -2381,7 +2381,8 @@
             "question": "What are all the unique values in fragile across all products?",
             "expectedAnswer": {
                 "value": [
-                    "true"
+                    "true",
+                    "false"
                 ],
                 "validationMethod": "array_set"
             },
@@ -2441,7 +2442,8 @@
             "question": "What are all the unique values in hazardous across all products?",
             "expectedAnswer": {
                 "value": [
-                    "true"
+                    "true",
+                    "false"
                 ],
                 "validationMethod": "array_set"
             },
