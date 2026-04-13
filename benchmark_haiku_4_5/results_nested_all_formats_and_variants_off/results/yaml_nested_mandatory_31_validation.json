@@ -20,8 +20,11 @@
             "incorrect": 286.667,
             "total": 7876.667,
             "accuracyByCharPerc": 92.07,
-            "accuracyByCharDriftPercMin": -0.84,
-            "accuracyByCharDriftPercMax": 0.89
+            "accuracyByCharPercDriftMin": -0.84,
+            "accuracyByCharPercDriftMax": 0.89,
+            "weightedAccuracyByCharPerc": 91.93,
+            "weightedAccuracyByCharPercDriftMin": -0.89,
+            "weightedAccuracyByCharPercDriftMax": 1.22
         }
     },
     "perRunAccuracy": [
@@ -44,7 +47,8 @@
                         "correct": 2952,
                         "incorrect": 121,
                         "total": 3073,
-                        "accuracyByCharPerc": 98.76
+                        "accuracyByCharPerc": 98.76,
+                        "weightedAccuracyByCharPerc": 37.04
                     }
                 },
                 {
@@ -59,7 +63,8 @@
                         "correct": 105,
                         "incorrect": 7,
                         "total": 112,
-                        "accuracyByCharPerc": 93.97
+                        "accuracyByCharPerc": 93.97,
+                        "weightedAccuracyByCharPerc": 19.58
                     }
                 },
                 {
@@ -74,7 +79,8 @@
                         "correct": 118,
                         "incorrect": 44,
                         "total": 162,
-                        "accuracyByCharPerc": 74.38
+                        "accuracyByCharPerc": 74.38,
+                        "weightedAccuracyByCharPerc": 9.3
                     }
                 },
                 {
@@ -89,7 +95,8 @@
                         "correct": 4350,
                         "incorrect": 184,
                         "total": 4534,
-                        "accuracyByCharPerc": 87.18
+                        "accuracyByCharPerc": 87.18,
+                        "weightedAccuracyByCharPerc": 25.43
                     }
                 }
             ],
@@ -98,7 +105,8 @@
                 "correct": 7525,
                 "incorrect": 356,
                 "total": 7881,
-                "accuracyByCharPerc": 91.3
+                "accuracyByCharPerc": 91.3,
+                "weightedAccuracyByCharPerc": 91.35
             }
         },
         {
@@ -120,7 +128,8 @@
                         "correct": 3073,
                         "incorrect": 0,
                         "total": 3073,
-                        "accuracyByCharPerc": 100
+                        "accuracyByCharPerc": 100,
+                        "weightedAccuracyByCharPerc": 37.5
                     }
                 },
                 {
@@ -135,7 +144,8 @@
                         "correct": 98,
                         "incorrect": 14,
                         "total": 112,
-                        "accuracyByCharPerc": 88.57
+                        "accuracyByCharPerc": 88.57,
+                        "weightedAccuracyByCharPerc": 18.45
                     }
                 },
                 {
@@ -150,7 +160,8 @@
                         "correct": 133,
                         "incorrect": 29,
                         "total": 162,
-                        "accuracyByCharPerc": 83.01
+                        "accuracyByCharPerc": 83.01,
+                        "weightedAccuracyByCharPerc": 10.38
                     }
                 },
                 {
@@ -165,7 +176,8 @@
                         "correct": 4263,
                         "incorrect": 297,
                         "total": 4560,
-                        "accuracyByCharPerc": 85.43
+                        "accuracyByCharPerc": 85.43,
+                        "weightedAccuracyByCharPerc": 24.92
                     }
                 }
             ],
@@ -174,7 +186,8 @@
                 "correct": 7567,
                 "incorrect": 340,
                 "total": 7907,
-                "accuracyByCharPerc": 92.02
+                "accuracyByCharPerc": 92.02,
+                "weightedAccuracyByCharPerc": 91.25
             }
         },
         {
@@ -196,7 +209,8 @@
                         "correct": 3073,
                         "incorrect": 0,
                         "total": 3073,
-                        "accuracyByCharPerc": 100
+                        "accuracyByCharPerc": 100,
+                        "weightedAccuracyByCharPerc": 37.5
                     }
                 },
                 {
@@ -211,7 +225,8 @@
                         "correct": 103,
                         "incorrect": 9,
                         "total": 112,
-                        "accuracyByCharPerc": 92.54
+                        "accuracyByCharPerc": 92.54,
+                        "weightedAccuracyByCharPerc": 19.28
                     }
                 },
                 {
@@ -226,7 +241,8 @@
                         "correct": 118,
                         "incorrect": 44,
                         "total": 162,
-                        "accuracyByCharPerc": 74.77
+                        "accuracyByCharPerc": 74.77,
+                        "weightedAccuracyByCharPerc": 9.35
                     }
                 },
                 {
@@ -241,7 +257,8 @@
                         "correct": 4384,
                         "incorrect": 111,
                         "total": 4495,
-                        "accuracyByCharPerc": 92.76
+                        "accuracyByCharPerc": 92.76,
+                        "weightedAccuracyByCharPerc": 27.06
                     }
                 }
             ],
@@ -250,7 +267,8 @@
                 "correct": 7678,
                 "incorrect": 164,
                 "total": 7842,
-                "accuracyByCharPerc": 92.89
+                "accuracyByCharPerc": 92.89,
+                "weightedAccuracyByCharPerc": 93.19
             }
         }
     ],
