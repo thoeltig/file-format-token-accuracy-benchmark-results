@@ -151,7 +151,7 @@
         },
         {
             "questionId": 38,
-            "answer": "false,5635,452.9,Tech Components Group,PAC-000012,Shanghai (China)"
+            "answer": "false,Shanghai (China),false,19607,165x118x9cm,144"
         },
         {
             "questionId": 39,
@@ -207,7 +207,7 @@
         },
         {
             "questionId": 52,
-            "answer": "508,Singapore,MFR-260320,false,2025-10-07,CHE-000016,3549,Deluxe Compressor 2613,2.5,true"
+            "answer": "508,MFR-260320,Singapore,false,2025-10-07,CHE-000016,3549,Deluxe Compressor 2613,2.5,true"
         },
         {
             "questionId": 53,
@@ -259,7 +259,7 @@
         },
         {
             "questionId": 65,
-            "answer": "18"
+            "answer": "17"
         },
         {
             "questionId": 66,
@@ -267,7 +267,7 @@
         },
         {
             "questionId": 67,
-            "answer": "16"
+            "answer": "17"
         },
         {
             "questionId": 68,
@@ -275,11 +275,11 @@
         },
         {
             "questionId": 69,
-            "answer": "14"
+            "answer": "15"
         },
         {
             "questionId": 70,
-            "answer": "13"
+            "answer": "15"
         },
         {
             "questionId": 71,
@@ -415,7 +415,7 @@
         },
         {
             "questionId": 104,
-            "answer": "avgRating,category,costPrice,description,dimensions,discontinuedDate,fragile,hazardous,lastRestocked,manufacturerCode,price,productId,productName,reorderPoint,shelfLife,sku,stockQuantity,supplierLocation,supplierName,unitsShipped,warehouseLocation,weight"
+            "answer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped,avgRating,shelfLife,discontinuedDate"
         },
         {
             "questionId": 105,
@@ -423,7 +423,7 @@
         },
         {
             "questionId": 106,
-            "answer": "avgRating,category,costPrice,description,dimensions,discontinuedDate,fragile,hazardous,lastRestocked,manufacturerCode,price,productId,productName,reorderPoint,shelfLife,sku,stockQuantity,supplierLocation,supplierName,unitsShipped,warehouseLocation,weight"
+            "answer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped,avgRating,shelfLife,discontinuedDate"
         },
         {
             "questionId": 107,
@@ -443,7 +443,7 @@
         },
         {
             "questionId": 111,
-            "answer": "Industrial Equipment,Furniture,Packaging,Textiles,Accessories,Materials,Tools,Office Supplies,Electronics,Chemicals"
+            "answer": "Industrial Equipment,Furniture,Packaging,Textiles,Accessories,Materials,Office Supplies,Tools,Electronics,Chemicals"
         },
         {
             "questionId": 112,
@@ -475,7 +475,7 @@
         },
         {
             "questionId": 119,
-            "answer": "Hong Kong,Hamburg (Germany),Dubai (UAE),Singapore,Los Angeles (USA),New York (USA),Shanghai (China),Rotterdam (Netherlands)"
+            "answer": "Hong Kong,Hamburg (Germany),Dubai (UAE),Singapore,Los Angeles (USA),Shanghai (China),New York (USA),Rotterdam (Netherlands)"
         },
         {
             "questionId": 120,

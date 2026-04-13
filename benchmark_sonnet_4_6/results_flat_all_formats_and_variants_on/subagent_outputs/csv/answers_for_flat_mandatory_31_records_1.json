@@ -151,7 +151,7 @@
         },
         {
             "questionId": 38,
-            "answer": "false,5635,452.9,Tech Components Group,PAC-000012,Shanghai (China)"
+            "answer": "false,Shanghai (China),452.9,Tech Components Group,PAC-000012,5635"
         },
         {
             "questionId": 39,
@@ -255,11 +255,11 @@
         },
         {
             "questionId": 64,
-            "answer": "17"
+            "answer": "16"
         },
         {
             "questionId": 65,
-            "answer": "17"
+            "answer": "16"
         },
         {
             "questionId": 66,
@@ -271,7 +271,7 @@
         },
         {
             "questionId": 68,
-            "answer": "15"
+            "answer": "14"
         },
         {
             "questionId": 69,
@@ -415,7 +415,7 @@
         },
         {
             "questionId": 104,
-            "answer": "avgRating,category,costPrice,description,dimensions,discontinuedDate,fragile,hazardous,lastRestocked,manufacturerCode,price,productId,productName,reorderPoint,shelfLife,sku,stockQuantity,supplierLocation,supplierName,unitsShipped,warehouseLocation,weight"
+            "answer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped,avgRating,shelfLife,discontinuedDate"
         },
         {
             "questionId": 105,
@@ -423,7 +423,7 @@
         },
         {
             "questionId": 106,
-            "answer": "avgRating,category,costPrice,description,dimensions,discontinuedDate,fragile,hazardous,lastRestocked,manufacturerCode,price,productId,productName,reorderPoint,shelfLife,sku,stockQuantity,supplierLocation,supplierName,unitsShipped,warehouseLocation,weight"
+            "answer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped,avgRating,shelfLife,discontinuedDate"
         },
         {
             "questionId": 107,

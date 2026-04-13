@@ -259,7 +259,7 @@
         },
         {
             "questionId": 65,
-            "answer": "15"
+            "answer": "16"
         },
         {
             "questionId": 66,
@@ -267,7 +267,7 @@
         },
         {
             "questionId": 67,
-            "answer": "13"
+            "answer": "14"
         },
         {
             "questionId": 68,
@@ -279,7 +279,7 @@
         },
         {
             "questionId": 70,
-            "answer": "14"
+            "answer": "15"
         },
         {
             "questionId": 71,
@@ -391,7 +391,7 @@
         },
         {
             "questionId": 98,
-            "answer": "1567.06"
+            "answer": "909.9"
         },
         {
             "questionId": 99,
@@ -403,11 +403,11 @@
         },
         {
             "questionId": 101,
-            "answer": "632"
+            "answer": "631"
         },
         {
             "questionId": 102,
-            "answer": "50"
+            "answer": "51"
         },
         {
             "questionId": 103,
@@ -415,15 +415,15 @@
         },
         {
             "questionId": 104,
-            "answer": "avgRating,category,costPrice,description,dimensions,discontinuedDate,fragile,hazardous,lastRestocked,manufacturerCode,price,productId,productName,reorderPoint,shelfLife,sku,stockQuantity,supplierLocation,supplierName,unitsShipped,warehouseLocation,weight"
+            "answer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped,avgRating,shelfLife,discontinuedDate"
         },
         {
             "questionId": 105,
-            "answer": "avgRating,discontinuedDate,shelfLife"
+            "answer": "avgRating,shelfLife,discontinuedDate"
         },
         {
             "questionId": 106,
-            "answer": "category,costPrice,description,dimensions,fragile,hazardous,lastRestocked,manufacturerCode,price,productId,productName,reorderPoint,sku,stockQuantity,supplierLocation,supplierName,unitsShipped,warehouseLocation,weight"
+            "answer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped"
         },
         {
             "questionId": 107,

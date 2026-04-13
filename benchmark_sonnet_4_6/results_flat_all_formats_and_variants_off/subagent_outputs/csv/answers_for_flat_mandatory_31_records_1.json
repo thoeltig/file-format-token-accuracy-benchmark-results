@@ -267,7 +267,7 @@
         },
         {
             "questionId": 67,
-            "answer": "18"
+            "answer": "17"
         },
         {
             "questionId": 68,
@@ -415,7 +415,7 @@
         },
         {
             "questionId": 104,
-            "answer": "avgRating,category,costPrice,description,dimensions,discontinuedDate,fragile,hazardous,lastRestocked,manufacturerCode,price,productId,productName,reorderPoint,shelfLife,sku,stockQuantity,supplierLocation,supplierName,unitsShipped,warehouseLocation,weight"
+            "answer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped,avgRating,shelfLife,discontinuedDate"
         },
         {
             "questionId": 105,
@@ -423,7 +423,7 @@
         },
         {
             "questionId": 106,
-            "answer": "avgRating,category,costPrice,description,dimensions,discontinuedDate,fragile,hazardous,lastRestocked,manufacturerCode,price,productId,productName,reorderPoint,shelfLife,sku,stockQuantity,supplierLocation,supplierName,unitsShipped,warehouseLocation,weight"
+            "answer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped,avgRating,shelfLife,discontinuedDate"
         },
         {
             "questionId": 107,
@@ -443,7 +443,7 @@
         },
         {
             "questionId": 111,
-            "answer": "Industrial Equipment,Furniture,Packaging,Textiles,Accessories,Materials,Tools,Electronics,Office Supplies,Chemicals"
+            "answer": "Industrial Equipment,Furniture,Packaging,Textiles,Accessories,Materials,Office Supplies,Tools,Electronics,Chemicals"
         },
         {
             "questionId": 112,
@@ -475,7 +475,7 @@
         },
         {
             "questionId": 119,
-            "answer": "Hong Kong,Hamburg (Germany),Dubai (UAE),Singapore,Los Angeles (USA),Shanghai (China),New York (USA),Rotterdam (Netherlands)"
+            "answer": "Hong Kong,Hamburg (Germany),Dubai (UAE),Singapore,Shanghai (China),Los Angeles (USA),New York (USA),Rotterdam (Netherlands)"
         },
         {
             "questionId": 120,

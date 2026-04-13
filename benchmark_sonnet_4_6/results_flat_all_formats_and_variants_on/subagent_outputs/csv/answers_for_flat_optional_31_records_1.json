@@ -367,7 +367,7 @@
         },
         {
             "questionId": 92,
-            "answer": "2426.89"
+            "answer": "2427.86"
         },
         {
             "questionId": 93,
@@ -391,7 +391,7 @@
         },
         {
             "questionId": 98,
-            "answer": "1656.82"
+            "answer": "1567.06"
         },
         {
             "questionId": 99,
@@ -403,11 +403,11 @@
         },
         {
             "questionId": 101,
-            "answer": "632"
+            "answer": "633"
         },
         {
             "questionId": 102,
-            "answer": "50"
+            "answer": "49"
         },
         {
             "questionId": 103,
@@ -415,15 +415,15 @@
         },
         {
             "questionId": 104,
-            "answer": "avgRating,category,costPrice,description,dimensions,discontinuedDate,fragile,hazardous,lastRestocked,manufacturerCode,price,productId,productName,reorderPoint,shelfLife,sku,stockQuantity,supplierLocation,supplierName,unitsShipped,warehouseLocation,weight"
+            "answer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped,avgRating,shelfLife,discontinuedDate"
         },
         {
             "questionId": 105,
-            "answer": "avgRating,discontinuedDate,shelfLife"
+            "answer": "avgRating,shelfLife,discontinuedDate"
         },
         {
             "questionId": 106,
-            "answer": "category,costPrice,description,dimensions,fragile,hazardous,lastRestocked,manufacturerCode,price,productId,productName,reorderPoint,sku,stockQuantity,supplierLocation,supplierName,unitsShipped,warehouseLocation,weight"
+            "answer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped"
         },
         {
             "questionId": 107,
@@ -455,7 +455,7 @@
         },
         {
             "questionId": 114,
-            "answer": "2026-03-16,2026-01-28,2026-03-10,2026-02-28,2026-01-19,2026-02-18,2026-01-05,2026-02-02,2026-01-31,2026-02-20,2026-01-23,2026-03-01,2026-01-10,2025-12-29,2026-01-29,2025-12-19,2026-02-09,2026-02-05,2026-02-03,2026-02-14,2026-03-09,2026-03-06,2025-12-25"
+            "answer": "2026-03-16,2026-01-28,2026-03-10,2026-02-28,2026-01-19,2026-02-18,2026-01-05,2026-02-02,2026-01-31,2026-02-20,2026-01-23,2026-03-01,2026-01-10,2025-12-29,2026-01-29,2025-12-19,2026-02-09,2026-02-05,2026-02-14,2026-03-09,2026-02-03,2026-03-06,2025-12-25"
         },
         {
             "questionId": 115,
@@ -471,7 +471,7 @@
         },
         {
             "questionId": 118,
-            "answer": "false,true"
+            "answer": "true,false"
         },
         {
             "questionId": 119,

@@ -415,15 +415,15 @@
         },
         {
             "questionId": 104,
-            "answer": "avgRating,category,costPrice,description,dimensions,discontinuedDate,fragile,hazardous,lastRestocked,manufacturerCode,price,productId,productName,reorderPoint,shelfLife,sku,stockQuantity,supplierLocation,supplierName,unitsShipped,warehouseLocation,weight"
+            "answer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped,avgRating,shelfLife,discontinuedDate"
         },
         {
             "questionId": 105,
-            "answer": "avgRating,discontinuedDate,shelfLife"
+            "answer": "avgRating,shelfLife,discontinuedDate"
         },
         {
             "questionId": 106,
-            "answer": "category,costPrice,description,dimensions,fragile,hazardous,lastRestocked,manufacturerCode,price,productId,productName,reorderPoint,sku,stockQuantity,supplierLocation,supplierName,unitsShipped,warehouseLocation,weight"
+            "answer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped"
         },
         {
             "questionId": 107,
@@ -439,7 +439,7 @@
         },
         {
             "questionId": 110,
-            "answer": "Industrial Equipment,Chemicals,Electronics,Packaging,Furniture,Office Supplies,Textiles,Materials,Accessories,Tools"
+            "answer": "Industrial Equipment,Chemicals,Electronics,Packaging,Furniture,Office Supplies,Textiles,Materials,Tools,Accessories"
         },
         {
             "questionId": 111,

@@ -255,7 +255,7 @@
         },
         {
             "questionId": 64,
-            "answer": "16"
+            "answer": "17"
         },
         {
             "questionId": 65,
@@ -263,7 +263,7 @@
         },
         {
             "questionId": 66,
-            "answer": "16"
+            "answer": "15"
         },
         {
             "questionId": 67,
@@ -279,7 +279,7 @@
         },
         {
             "questionId": 70,
-            "answer": "13"
+            "answer": "14"
         },
         {
             "questionId": 71,
@@ -379,7 +379,7 @@
         },
         {
             "questionId": 95,
-            "answer": "1865.94"
+            "answer": "1866.58"
         },
         {
             "questionId": 96,
@@ -415,7 +415,7 @@
         },
         {
             "questionId": 104,
-            "answer": "avgRating,category,costPrice,description,dimensions,discontinuedDate,fragile,hazardous,lastRestocked,manufacturerCode,price,productId,productName,reorderPoint,shelfLife,sku,stockQuantity,supplierLocation,supplierName,unitsShipped,warehouseLocation,weight"
+            "answer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped,avgRating,shelfLife,discontinuedDate"
         },
         {
             "questionId": 105,
@@ -423,7 +423,7 @@
         },
         {
             "questionId": 106,
-            "answer": "avgRating,category,costPrice,description,dimensions,discontinuedDate,fragile,hazardous,lastRestocked,manufacturerCode,price,productId,productName,reorderPoint,shelfLife,sku,stockQuantity,supplierLocation,supplierName,unitsShipped,warehouseLocation,weight"
+            "answer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped,avgRating,shelfLife,discontinuedDate"
         },
         {
             "questionId": 107,

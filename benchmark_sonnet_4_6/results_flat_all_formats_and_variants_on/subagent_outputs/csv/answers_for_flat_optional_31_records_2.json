@@ -303,7 +303,7 @@
         },
         {
             "questionId": 76,
-            "answer": "10"
+            "answer": "11"
         },
         {
             "questionId": 77,
@@ -367,7 +367,7 @@
         },
         {
             "questionId": 92,
-            "answer": "2427.22"
+            "answer": "2426.89"
         },
         {
             "questionId": 93,
@@ -415,15 +415,15 @@
         },
         {
             "questionId": 104,
-            "answer": "avgRating,category,costPrice,description,dimensions,discontinuedDate,fragile,hazardous,lastRestocked,manufacturerCode,price,productId,productName,reorderPoint,shelfLife,sku,stockQuantity,supplierLocation,supplierName,unitsShipped,warehouseLocation,weight"
+            "answer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped,avgRating,shelfLife,discontinuedDate"
         },
         {
             "questionId": 105,
-            "answer": "avgRating,discontinuedDate,shelfLife"
+            "answer": "avgRating,shelfLife,discontinuedDate"
         },
         {
             "questionId": 106,
-            "answer": "category,costPrice,description,dimensions,fragile,hazardous,lastRestocked,manufacturerCode,price,productId,productName,reorderPoint,sku,stockQuantity,supplierLocation,supplierName,unitsShipped,warehouseLocation,weight"
+            "answer": "productId,productName,category,price,costPrice,stockQuantity,reorderPoint,lastRestocked,supplierName,supplierLocation,description,sku,manufacturerCode,warehouseLocation,weight,dimensions,hazardous,fragile,unitsShipped"
         },
         {
             "questionId": 107,
@@ -439,7 +439,7 @@
         },
         {
             "questionId": 110,
-            "answer": "Industrial Equipment,Chemicals,Electronics,Packaging,Furniture,Office Supplies,Textiles,Materials,Accessories,Tools"
+            "answer": "Industrial Equipment,Chemicals,Electronics,Packaging,Furniture,Office Supplies,Textiles,Materials,Tools,Accessories"
         },
         {
             "questionId": 111,
@@ -455,7 +455,7 @@
         },
         {
             "questionId": 114,
-            "answer": "2026-03-16,2026-01-28,2026-03-10,2026-02-28,2026-01-19,2026-02-18,2026-01-05,2026-02-02,2026-01-31,2026-02-20,2026-01-23,2026-03-01,2026-01-10,2025-12-29,2026-01-29,2025-12-19,2026-02-09,2026-02-05,2026-02-03,2026-02-14,2026-03-09,2026-03-06,2025-12-25"
+            "answer": "2026-03-16,2026-01-28,2026-03-10,2026-02-28,2026-01-19,2026-02-18,2026-01-05,2026-02-02,2026-01-31,2026-02-20,2026-01-23,2026-03-01,2026-01-10,2025-12-29,2026-01-29,2025-12-19,2026-02-09,2026-02-05,2026-02-14,2025-12-25,2026-03-06,2026-02-03,2026-03-09"
         },
         {
             "questionId": 115,
@@ -479,7 +479,7 @@
         },
         {
             "questionId": 120,
-            "answer": "false,true"
+            "answer": "true,false"
         },
         {
             "questionId": 121,
@@ -487,7 +487,7 @@
         },
         {
             "questionId": 122,
-            "answer": "Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control."
+            "answer": "Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.,Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.,High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.,Professional-grade equipment meeting international standards. Extensively tested for performance and safety.,Designed for efficiency and long-term reliability. Built with premium materials and strict quality control."
         },
         {
             "questionId": 123,
