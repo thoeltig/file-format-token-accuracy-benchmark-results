@@ -10,9 +10,12 @@ This repository contains **benchmark results and raw data** from experiments eva
 
 > [!NOTE]
 >
-> These benchmark results are specific to Claude Code using the Haiku 4.5 model and Sonnet 4.6 model. They serve as a rule of thumb for choosing the best file format for your use case.
-> However these values cannot be directly applied to models from other providers as token usage and latency depend on specific model architectures and tokenizers. While the relative ranking of file formats remains consistent the absolute number of tokens will vary.
+> These benchmark results are specific to Claude Code using the Haiku 4.5 and Sonnet 4.6 model. They serve as a rule of thumb for choosing the best file format depending on the use case.
+> However these values cannot be exactly applied to models of the same family or from other providers as token usage, accuracy and latency depend on specific model architectures and tokenizers. Also file reads will produce different characters depending on the used harness because some add marker characters, line numbers or additional information. While the relative ranking of file formats remains consistent the absolute numbers will vary.
+> Especially the accuracy and output tokens results will vary because these values are bound to the model size and training, instruction interpretation and reasoning token budget.
 
+<!--
+Hidden because of wrong assumptions about the data especially accuracy (bug in CSV) and reasoning at the time of running the benchmark. Requieres re-evaluation of the data and rewrite of the report. Might only use the read token and scaling which is still beneficial.
 
 ## Initial Benchmark Results
 
@@ -23,25 +26,8 @@ This repository contains **benchmark results and raw data** from experiments eva
 - **Tested Formats**: 7 (CSV, JSON Compact/Pretty, JSONL, TOON, Markdown, YAML)
 - **Data Variants**: Mandatory and optional fields, 40 & 80 record datasets
 
-### Key Findings
-
-- **CSV**: Unbeatable for dense, mandatory data (70.98% weighted accuracy @ 9,008 tokens). Accuracy collapses ~15% with sparse data.
-- **JSON Compact**: Recommended baseline (70.12% weighted accuracy, 15,957 tokens). Only format that uses fewer tokens with optional fields.
-- **YAML**: Highest accuracy (71.96% weighted) but at 2.62x token cost compared to CSV.
-- **Markdown**: Catastrophic failure (24.67% weighted accuracy despite token efficiency). Unreliable format.
-- **TOON**: Competitive on dense data but token cost explodes 2.17x with optional fields.
-
-### Format Recommendations (Summary)
-
-| Scenario | Format | Notes |
-|----------|--------|-------|
-| **Default choice** | JSON Compact | Best balance of accuracy and token efficiency |
-| **Dense, complete data** | CSV | Unbeatable tokens/accuracy ratio (9,008 tokens @ 71% weighted) |
-| **Maximum accuracy** | YAML | 71.96% weighted, but 2.62x token cost vs CSV |
-| **Sparse/optional fields** | JSON Compact | Only format reducing tokens with optional data |
-| **Never use** | Markdown | 24.67% accuracy = 76% token waste |
-
 **See [Full Report](./initital_benchmark_haiku_4_5_formats_all_variants_all_extended_thinking_off/BENCHMARK_REPORT.md) for detailed decision framework and trade-off analysis.**
+-->
 
 ## Benchmark Results: Haiku 4.5 — Flat & Nested, Thinking On & Off
 
@@ -52,26 +38,22 @@ This repository contains **benchmark results and raw data** from experiments eva
 - **Tested Formats**: 7 (CSV, JSON Compact/Pretty, TOON Default, XML Compact/Pretty, YAML)
 - **Data Variants**: Mandatory (22 fields, dense) and optional (19 mandatory + 3 optional, sparse), 31 records
 
-### Key Findings
-
-- **Structure is the dominant variable.** Flat vs nested changes which format wins more than thinking mode or data variant does.
-- **JSON Compact**: Most consistent format across all configurations. Wins all nested configurations and flat optional data. Smallest performance delta between mandatory and optional variants.
-- **TOON Default**: Flat mandatory specialist with the highest efficiency on dense flat data and lowest processing duration. Degrades ~62% in token cost on optional data; no advantage on nested structures.
-- **CSV**: Lowest raw token count but worst accuracy (54–63%). High wasted tokens in most configurations. Token savings are negated by inaccurate output.
-- **XML Pretty**: Lowest efficiency score in every configuration without exception. No use case where it is the right choice for LLM context consumption.
-
 ### Format Recommendations (Summary)
 
-| Scenario | Format | Alternative |
-|----------|--------|-------------|
-| **Dense data, flat structure** | TOON Default | CSV |
-| **Dense data, nested structure** | JSON Compact | XML Compact |
-| **Sparse / optional data (any structure)** | JSON Compact | XML Compact |
-| **Minimize token cost** | CSV | TOON Default (flat mandatory only) |
-| **Minimize wasted tokens** | JSON Compact | TOON Default (flat mandatory only) |
-| **Never use** | XML Pretty | — |
+| Scenario | Recommended Format | Eff. Score Total | Accuracy | Rationale |
+|---|---|---|---|---|
+| Flat structure, dense mandatory fields | **CSV** | 84 to 85 | 76 to 77% | Lowest total tokens (~17k), top efficiency across thinking modes |
+| Flat structure, sparse optional fields | **JSON_COMPACT** | ~80 | 76 to 78% | Best efficiency when optional fields create sparsity, **CSV** accuracy drops to ~73% on sparse data |
+| Nested structure, dense mandatory fields | **JSON_COMPACT** | 78 to 82 | 74 to 75% | Fewest nested read tokens (~10k), top efficiency with thinking on |
+| Nested structure, sparse optional fields | **JSON_COMPACT** | 75 to 84 | 76% | Dominant efficiency leader, omits missing keys entirely to keep tokens low |
+| Maximum accuracy required, flat structure | **JSON_PRETTY** | 56 to 58 | ~81% | Highest flat accuracy at significant token cost (+64% total tokens over **CSV**) |
+| Maximum accuracy required, nested structure | **YAML** | 59 to 67 | 75 to 79% | Best nested accuracy with thinking on, indentation aids hierarchical parsing |
+| Token budget critical, flat structure | **CSV** | 84 to 85 | 76 to 77% | Fewest read tokens (~7k), fewest total tokens (~17k) |
+| Token budget critical, nested structure | **JSON_COMPACT** | 78 to 82 | 74 to 76% | Fewest nested read tokens (~10k), fewest nested total tokens (~18 to 20k) |
+| Avoid in flat structure | **XML_PRETTY** | 49 to 51 | 74 to 77% | Worst efficiency, 2x the read tokens of **CSV** for no accuracy advantage |
+| Avoid in nested structure | **XML_PRETTY** | 46 to 47 | 68 to 70% | Consistently last in efficiency and among the lowest in accuracy across nested configurations |
 
-**See [Benchmark Report Summary](./benchmark_haiku_4_5/Benchmark_Report_Summary.md) for the full decision matrix and cross-configuration analysis.**
+**See [Benchmark Report Summary](./benchmark_haiku_4_5/Benchmark_Report_Summary.md) for the full analysis.**
 
 ## Repository Structure
 
@@ -135,8 +117,8 @@ All data is formatted identically in each file format to ensure apples-to-apples
 | **JSON Compact** | Minified JSON (no whitespace or newlines) |
 | **XML Pretty** | Standard indented XML |
 | **XML Compact** | Minified XML (no whitespace or indentation) |
-| **TOON Default** | [Token-Oriented Object Notation](https://toonformat.dev/) with key folding disabled which expands the nested structures fully (default) |
-| **TOON Keyfold** | [Token-Oriented Object Notation](https://toonformat.dev/) with key folding enabled which collapses single-key object chains into dotted paths (`a.b.c: value`) |
+| **TOON Default** | [Token-Oriented Object Notation v2.1.0](https://toonformat.dev/) with key folding disabled which expands the nested structures fully (default) |
+| **TOON Keyfold** | [Token-Oriented Object Notation v2.1.0](https://toonformat.dev/) with key folding enabled which collapses single-key object chains into dotted paths (`a.b.c: value`) |
 | **YAML** | Standard YAML with hierarchical indentation |
 
 *Note: All formats are tested in both flat and nested structures except CSV which is flat only.*
