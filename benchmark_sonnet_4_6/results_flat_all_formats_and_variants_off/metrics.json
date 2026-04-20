@@ -64,8 +64,8 @@
                 "structure": "flat",
                 "variant": "mandatory",
                 "recordCount": 31,
-                "readTokens": 6756,
-                "readDurationMs": 18
+                "readTokens": 6748,
+                "readDurationMs": 31
             },
             {
                 "file": "yaml_with_mandatory_31_flat_records.yaml",

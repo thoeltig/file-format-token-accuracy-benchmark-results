@@ -31,8 +31,8 @@
                 "structure": "flat",
                 "variant": "mandatory",
                 "recordCount": 31,
-                "readTokens": 6756,
-                "readDurationMs": 18
+                "readTokens": 3922,
+                "readDurationMs": 17
             },
             {
                 "file": "toon_default_with_mandatory_31_flat_records.toon",
@@ -108,8 +108,8 @@
                 "structure": "flat",
                 "variant": "optional",
                 "recordCount": 31,
-                "readTokens": 6488,
-                "readDurationMs": 25
+                "readTokens": 3633,
+                "readDurationMs": 24
             },
             {
                 "file": "xml_pretty_with_optional_31_flat_records.xml",
