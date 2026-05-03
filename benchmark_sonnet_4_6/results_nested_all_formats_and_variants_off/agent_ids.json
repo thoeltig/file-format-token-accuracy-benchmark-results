@@ -1,0 +1,523 @@
+{
+  "testConfiguration": {
+    "formats": [
+      "xml_pretty",
+      "xml_compact",
+      "json_pretty",
+      "json_compact",
+      "toon_default",
+      "toon_keyfold",
+      "yaml"
+    ],
+    "variants": [
+      "optional",
+      "mandatory"
+    ],
+    "model": "Sonnet 4.6",
+    "thinking": "off",
+    "structure": "nested",
+    "timestamp": "2026-03-29T01:49:55.792Z"
+  },
+  "readOnlyTests": [
+    {
+      "agentId": "a186a209ac452eb1e",
+      "format": "xml_pretty",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "timestamp": "2026-03-29T01:49:55.701Z"
+    },
+    {
+      "agentId": "a5e919494c60cf27b",
+      "format": "xml_compact",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "timestamp": "2026-03-29T01:49:55.709Z"
+    },
+    {
+      "agentId": "a5fffd77a8e1bab8d",
+      "format": "xml_compact",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "timestamp": "2026-03-29T01:49:55.709Z"
+    },
+    {
+      "agentId": "a677aca3e8ae79195",
+      "format": "json_pretty",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "timestamp": "2026-03-29T01:49:55.710Z"
+    },
+    {
+      "agentId": "a7813a5cdf5a5ae01",
+      "format": "json_compact",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "timestamp": "2026-03-29T01:49:55.713Z"
+    },
+    {
+      "agentId": "a7f826a9576a5126b",
+      "format": "xml_pretty",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "timestamp": "2026-03-29T01:49:55.714Z"
+    },
+    {
+      "agentId": "a9aafc73b7cc78450",
+      "format": "toon_default",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "timestamp": "2026-03-29T01:49:55.716Z"
+    },
+    {
+      "agentId": "aad277cb73bab61f0",
+      "format": "toon_keyfold",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "timestamp": "2026-03-29T01:49:55.717Z"
+    },
+    {
+      "agentId": "ab18fbeec67fd0dfa",
+      "format": "toon_keyfold",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "timestamp": "2026-03-29T01:49:55.721Z"
+    },
+    {
+      "agentId": "ab69f6b66bf37abe3",
+      "format": "json_compact",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "timestamp": "2026-03-29T01:49:55.721Z"
+    },
+    {
+      "agentId": "ac539f55bdc289b89",
+      "format": "json_pretty",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "timestamp": "2026-03-29T01:49:55.724Z"
+    },
+    {
+      "agentId": "ac96f8ea7ac530f1f",
+      "format": "json_pretty",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "timestamp": "2026-03-29T01:49:55.725Z"
+    },
+    {
+      "agentId": "ad79512399c5ade6f",
+      "format": "yaml",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "timestamp": "2026-03-29T01:49:55.729Z"
+    },
+    {
+      "agentId": "adf72abc7327112e4",
+      "format": "toon_default",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "timestamp": "2026-03-29T01:49:55.729Z"
+    },
+    {
+      "agentId": "ae9f35c9b1b0d27cc",
+      "format": "yaml",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "timestamp": "2026-03-29T01:49:55.732Z"
+    }
+  ],
+  "fullTests": [
+    {
+      "agentId": "a0b6e81bd41017e34",
+      "format": "xml_compact",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "testRun": 1,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "acc3e8a9d4a686c11",
+      "format": "xml_compact",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "testRun": 2,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "ae8a165321faec194",
+      "format": "xml_compact",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "testRun": 3,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "a158074b4c1413493",
+      "format": "yaml",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "testRun": 1,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "a84cd6118b10c2518",
+      "format": "yaml",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "testRun": 2,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "a97f047930e788fe6",
+      "format": "yaml",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "testRun": 3,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "a1f68acb8f9334ad8",
+      "format": "xml_pretty",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "testRun": 1,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "a3b8c1848f4e98c30",
+      "format": "xml_pretty",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "testRun": 2,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "aa15e7348ca0f0ff3",
+      "format": "xml_pretty",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "testRun": 3,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "a2de1b4144a285138",
+      "format": "toon_keyfold",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "testRun": 1,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "ac5d84d85044e687f",
+      "format": "toon_keyfold",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "testRun": 2,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "af3465f4e1a42a422",
+      "format": "toon_keyfold",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "testRun": 3,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "a2f8fd037e7bffb3c",
+      "format": "json_pretty",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "testRun": 1,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "abe501b316a234934",
+      "format": "json_pretty",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "testRun": 2,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "afd9072befef27a6d",
+      "format": "json_pretty",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "testRun": 3,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "a30a5d7f73358b86c",
+      "format": "json_compact",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "testRun": 1,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "ad349889e46d7c6ce",
+      "format": "json_compact",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "testRun": 2,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "ad6ba9f57e462065f",
+      "format": "json_compact",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "testRun": 3,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "a32eb92ccbdb02041",
+      "format": "yaml",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "testRun": 1,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "a722d8f23b5422e1e",
+      "format": "yaml",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "testRun": 2,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "af12870a761c4e132",
+      "format": "yaml",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "testRun": 3,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "a390e141461b3e3d3",
+      "format": "toon_default",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "testRun": 1,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "a8b90a4b7f6e8e556",
+      "format": "toon_default",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "testRun": 2,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "ad76acfb0e035edee",
+      "format": "toon_default",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "testRun": 3,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "a3f70b74e87b9c271",
+      "format": "toon_keyfold",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "testRun": 1,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "a68ba0ccc93a975c5",
+      "format": "toon_keyfold",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "testRun": 2,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "ae852ca41908ce3ea",
+      "format": "toon_keyfold",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "testRun": 3,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "a475d03f040b4e055",
+      "format": "xml_pretty",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "testRun": 1,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "abafab0b6877d27ad",
+      "format": "xml_pretty",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "testRun": 2,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "afcbe77d9e417d4f7",
+      "format": "xml_pretty",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "testRun": 3,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "a4c84368f05626c75",
+      "format": "toon_default",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "testRun": 1,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "aadb29f6ad69010d1",
+      "format": "toon_default",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "testRun": 2,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "ac462a02b906feb9d",
+      "format": "toon_default",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "testRun": 3,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "a6bf1808385b00040",
+      "format": "json_pretty",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "testRun": 1,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "aaf155c84db637f78",
+      "format": "json_pretty",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "testRun": 2,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "afd0a9f6f5f1ea0e8",
+      "format": "json_pretty",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "testRun": 3,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "aade6201eec52c984",
+      "format": "json_compact",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "testRun": 1,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "ac496a21a507cd2b8",
+      "format": "json_compact",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "testRun": 2,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "afc45a24988a082c8",
+      "format": "json_compact",
+      "structure": "nested",
+      "variant": "optional",
+      "recordCount": 31,
+      "testRun": 3,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "ab101a92255bafcf3",
+      "format": "xml_compact",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "testRun": 1,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "ae2e159337763d99e",
+      "format": "xml_compact",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "testRun": 2,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    },
+    {
+      "agentId": "af95fda0371a584b4",
+      "format": "xml_compact",
+      "structure": "nested",
+      "variant": "mandatory",
+      "recordCount": 31,
+      "testRun": 3,
+      "timestamp": "2026-03-29T01:49:55.792Z"
+    }
+  ]
+}

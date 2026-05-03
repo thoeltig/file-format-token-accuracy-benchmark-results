@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="utf-8"?>
+<products>
+  <product>
+    <productId>PROD-000001</productId>
+    <productName>Basic Wrench 3584</productName>
+    <category>Industrial Equipment</category>
+    <price>1333.01</price>
+    <costPrice>514.81</costPrice>
+    <stockQuantity>7205</stockQuantity>
+    <reorderPoint>16</reorderPoint>
+    <lastRestocked>2026-03-16</lastRestocked>
+    <supplierName>Industrial Solutions Inc</supplierName>
+    <supplierLocation>Hong Kong</supplierLocation>
+    <description>Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.</description>
+    <sku>MAT-000000</sku>
+    <manufacturerCode>MFR-704486</manufacturerCode>
+    <warehouseLocation>C-54-21</warehouseLocation>
+    <weight>239.74</weight>
+    <dimensions>195x67x73cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>true</fragile>
+    <unitsShipped>26969</unitsShipped>
+    <avgRating>3.3</avgRating>
+    <shelfLife>1088</shelfLife>
+    <discontinuedDate>2025-11-19</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000002</productId>
+    <productName>Heavy-Duty Pump 9402</productName>
+    <category>Furniture</category>
+    <price>4611.74</price>
+    <costPrice>1305.19</costPrice>
+    <stockQuantity>1136</stockQuantity>
+    <reorderPoint>452</reorderPoint>
+    <lastRestocked>2026-01-03</lastRestocked>
+    <supplierName>Tech Components Group</supplierName>
+    <supplierLocation>Hamburg (Germany)</supplierLocation>
+    <description>Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.</description>
+    <sku>ELE-000001</sku>
+    <manufacturerCode>MFR-339591</manufacturerCode>
+    <warehouseLocation>C-37-25</warehouseLocation>
+    <weight>106.5</weight>
+    <dimensions>158x127x114cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>false</fragile>
+    <unitsShipped>71147</unitsShipped>
+    <avgRating>3.4</avgRating>
+    <shelfLife>1129</shelfLife>
+    <discontinuedDate>2026-03-04</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000003</productId>
+    <productName>Deluxe Valve 988</productName>
+    <category>Packaging</category>
+    <price>3212.34</price>
+    <costPrice>380.24</costPrice>
+    <stockQuantity>692</stockQuantity>
+    <reorderPoint>304</reorderPoint>
+    <lastRestocked>2026-01-16</lastRestocked>
+    <supplierName>Trade Partners Ltd</supplierName>
+    <supplierLocation>Dubai (UAE)</supplierLocation>
+    <description>High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.</description>
+    <sku>TEX-000002</sku>
+    <manufacturerCode>MFR-255945</manufacturerCode>
+    <warehouseLocation>I-2-32</warehouseLocation>
+    <weight>129.47</weight>
+    <dimensions>35x149x168cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>true</fragile>
+    <unitsShipped>96576</unitsShipped>
+    <avgRating>3.7</avgRating>
+    <shelfLife>2301</shelfLife>
+    <discontinuedDate>2026-03-07</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000004</productId>
+    <productName>Standard Pump 5568</productName>
+    <category>Furniture</category>
+    <price>877.32</price>
+    <costPrice>2106.24</costPrice>
+    <stockQuantity>3374</stockQuantity>
+    <reorderPoint>432</reorderPoint>
+    <lastRestocked>2026-02-14</lastRestocked>
+    <supplierName>Tech Components Group</supplierName>
+    <supplierLocation>Hong Kong</supplierLocation>
+    <description>Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.</description>
+    <sku>IND-000003</sku>
+    <manufacturerCode>MFR-228549</manufacturerCode>
+    <warehouseLocation>G-22-29</warehouseLocation>
+    <weight>183.68</weight>
+    <dimensions>169x86x185cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>false</fragile>
+    <unitsShipped>78254</unitsShipped>
+    <avgRating>3.3</avgRating>
+    <shelfLife>79</shelfLife>
+    <discontinuedDate>2026-01-12</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000005</productId>
+    <productName>Heavy-Duty Sensor 866</productName>
+    <category>Textiles</category>
+    <price>1349.18</price>
+    <costPrice>869.43</costPrice>
+    <stockQuantity>6681</stockQuantity>
+    <reorderPoint>223</reorderPoint>
+    <lastRestocked>2026-01-24</lastRestocked>
+    <supplierName>Factory Direct Inc</supplierName>
+    <supplierLocation>Hamburg (Germany)</supplierLocation>
+    <description>Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.</description>
+    <sku>IND-000004</sku>
+    <manufacturerCode>MFR-932403</manufacturerCode>
+    <warehouseLocation>G-73-5</warehouseLocation>
+    <weight>144.16</weight>
+    <dimensions>120x84x117cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>false</fragile>
+    <unitsShipped>91182</unitsShipped>
+    <avgRating>1.1</avgRating>
+    <shelfLife>798</shelfLife>
+    <discontinuedDate>2025-11-08</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000006</productId>
+    <productName>Basic Controller 4209</productName>
+    <category>Accessories</category>
+    <price>3380.41</price>
+    <costPrice>1036.05</costPrice>
+    <stockQuantity>8113</stockQuantity>
+    <reorderPoint>44</reorderPoint>
+    <lastRestocked>2026-03-07</lastRestocked>
+    <supplierName>Material Distributors AB</supplierName>
+    <supplierLocation>Shanghai (China)</supplierLocation>
+    <description>Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.</description>
+    <sku>CHE-000005</sku>
+    <manufacturerCode>MFR-342507</manufacturerCode>
+    <warehouseLocation>D-32-46</warehouseLocation>
+    <weight>385.84</weight>
+    <dimensions>34x95x110cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>false</fragile>
+    <unitsShipped>10360</unitsShipped>
+    <avgRating>4.2</avgRating>
+    <shelfLife>3555</shelfLife>
+    <discontinuedDate>2025-10-08</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000007</productId>
+    <productName>Basic Switch 3220</productName>
+    <category>Packaging</category>
+    <price>733.52</price>
+    <costPrice>1982.36</costPrice>
+    <stockQuantity>5170</stockQuantity>
+    <reorderPoint>264</reorderPoint>
+    <lastRestocked>2026-01-10</lastRestocked>
+    <supplierName>Reliable Vendors LLC</supplierName>
+    <supplierLocation>Singapore</supplierLocation>
+    <description>Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.</description>
+    <sku>ELE-000006</sku>
+    <manufacturerCode>MFR-933861</manufacturerCode>
+    <warehouseLocation>H-71-40</warehouseLocation>
+    <weight>283.83</weight>
+    <dimensions>58x68x114cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>true</fragile>
+    <unitsShipped>10788</unitsShipped>
+    <avgRating>3.5</avgRating>
+    <shelfLife>201</shelfLife>
+    <discontinuedDate>2025-11-25</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000008</productId>
+    <productName>Industrial Wrench 5325</productName>
+    <category>Materials</category>
+    <price>2141</price>
+    <costPrice>589.61</costPrice>
+    <stockQuantity>5351</stockQuantity>
+    <reorderPoint>270</reorderPoint>
+    <lastRestocked>2026-03-04</lastRestocked>
+    <supplierName>Trade Partners Ltd</supplierName>
+    <supplierLocation>Los Angeles (USA)</supplierLocation>
+    <description>Professional-grade equipment meeting international standards. Extensively tested for performance and safety.</description>
+    <sku>IND-000007</sku>
+    <manufacturerCode>MFR-681466</manufacturerCode>
+    <warehouseLocation>D-66-25</warehouseLocation>
+    <weight>213.07</weight>
+    <dimensions>143x152x83cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>true</fragile>
+    <unitsShipped>67467</unitsShipped>
+    <avgRating>2.1</avgRating>
+    <shelfLife>694</shelfLife>
+    <discontinuedDate>2025-11-17</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000009</productId>
+    <productName>Compact Pump 8049</productName>
+    <category>Industrial Equipment</category>
+    <price>1365.35</price>
+    <costPrice>1224.04</costPrice>
+    <stockQuantity>6158</stockQuantity>
+    <reorderPoint>429</reorderPoint>
+    <lastRestocked>2026-03-05</lastRestocked>
+    <supplierName>Global Supply Co</supplierName>
+    <supplierLocation>Singapore</supplierLocation>
+    <description>High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.</description>
+    <sku>ELE-000008</sku>
+    <manufacturerCode>MFR-260320</manufacturerCode>
+    <warehouseLocation>A-93-38</warehouseLocation>
+    <weight>48.58</weight>
+    <dimensions>44x101x161cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>true</fragile>
+    <unitsShipped>55395</unitsShipped>
+    <avgRating>2.9</avgRating>
+    <shelfLife>508</shelfLife>
+    <discontinuedDate>2025-10-29</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000010</productId>
+    <productName>Industrial Connector 8916</productName>
+    <category>Office Supplies</category>
+    <price>2149.08</price>
+    <costPrice>766.91</costPrice>
+    <stockQuantity>5090</stockQuantity>
+    <reorderPoint>127</reorderPoint>
+    <lastRestocked>2026-02-06</lastRestocked>
+    <supplierName>Factory Direct Inc</supplierName>
+    <supplierLocation>Hong Kong</supplierLocation>
+    <description>Professional-grade equipment meeting international standards. Extensively tested for performance and safety.</description>
+    <sku>OFF-000009</sku>
+    <manufacturerCode>MFR-345424</manufacturerCode>
+    <warehouseLocation>F-27-17</warehouseLocation>
+    <weight>165.28</weight>
+    <dimensions>105x63x105cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>false</fragile>
+    <unitsShipped>49573</unitsShipped>
+    <avgRating>1</avgRating>
+    <shelfLife>2359</shelfLife>
+    <discontinuedDate>2025-11-12</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000011</productId>
+    <productName>Premium Connector 5452</productName>
+    <category>Accessories</category>
+    <price>3244.69</price>
+    <costPrice>1089.47</costPrice>
+    <stockQuantity>9647</stockQuantity>
+    <reorderPoint>225</reorderPoint>
+    <lastRestocked>2026-01-05</lastRestocked>
+    <supplierName>Material Distributors AB</supplierName>
+    <supplierLocation>Hong Kong</supplierLocation>
+    <description>High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.</description>
+    <sku>IND-000010</sku>
+    <manufacturerCode>MFR-711778</manufacturerCode>
+    <warehouseLocation>G-41-49</warehouseLocation>
+    <weight>438.2</weight>
+    <dimensions>80x183x61cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>true</fragile>
+    <unitsShipped>25001</unitsShipped>
+    <avgRating>3.3</avgRating>
+    <shelfLife>1721</shelfLife>
+    <discontinuedDate>2026-02-13</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000012</productId>
+    <productName>Compact Connector 5082</productName>
+    <category>Industrial Equipment</category>
+    <price>3404.67</price>
+    <costPrice>1567.97</costPrice>
+    <stockQuantity>7328</stockQuantity>
+    <reorderPoint>108</reorderPoint>
+    <lastRestocked>2025-12-20</lastRestocked>
+    <supplierName>Material Distributors AB</supplierName>
+    <supplierLocation>Dubai (UAE)</supplierLocation>
+    <description>Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.</description>
+    <sku>IND-000011</sku>
+    <manufacturerCode>MFR-234382</manufacturerCode>
+    <warehouseLocation>J-12-21</warehouseLocation>
+    <weight>242.46</weight>
+    <dimensions>116x22x176cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>false</fragile>
+    <unitsShipped>56680</unitsShipped>
+    <avgRating>4.9</avgRating>
+    <shelfLife>1309</shelfLife>
+    <discontinuedDate>2025-09-22</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000013</productId>
+    <productName>Deluxe Switch 5331</productName>
+    <category>Packaging</category>
+    <price>1381.52</price>
+    <costPrice>1578.65</costPrice>
+    <stockQuantity>5635</stockQuantity>
+    <reorderPoint>144</reorderPoint>
+    <lastRestocked>2026-01-14</lastRestocked>
+    <supplierName>Tech Components Group</supplierName>
+    <supplierLocation>Shanghai (China)</supplierLocation>
+    <description>High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.</description>
+    <sku>PAC-000012</sku>
+    <manufacturerCode>MFR-488236</manufacturerCode>
+    <warehouseLocation>E-14-22</warehouseLocation>
+    <weight>452.9</weight>
+    <dimensions>165x118x9cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>false</fragile>
+    <unitsShipped>19607</unitsShipped>
+    <avgRating>4.7</avgRating>
+    <shelfLife>218</shelfLife>
+    <discontinuedDate>2025-10-18</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000014</productId>
+    <productName>Professional Pump 3723</productName>
+    <category>Materials</category>
+    <price>917.75</price>
+    <costPrice>497.78</costPrice>
+    <stockQuantity>2066</stockQuantity>
+    <reorderPoint>211</reorderPoint>
+    <lastRestocked>2026-01-09</lastRestocked>
+    <supplierName>Reliable Vendors LLC</supplierName>
+    <supplierLocation>Singapore</supplierLocation>
+    <description>Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.</description>
+    <sku>FUR-000013</sku>
+    <manufacturerCode>MFR-348341</manufacturerCode>
+    <warehouseLocation>G-22-38</warehouseLocation>
+    <weight>444.62</weight>
+    <dimensions>176x30x100cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>true</fragile>
+    <unitsShipped>88786</unitsShipped>
+    <avgRating>1.8</avgRating>
+    <shelfLife>1164</shelfLife>
+    <discontinuedDate>2025-12-16</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000015</productId>
+    <productName>Compact Cable 7684</productName>
+    <category>Accessories</category>
+    <price>765.86</price>
+    <costPrice>196.58</costPrice>
+    <stockQuantity>4123</stockQuantity>
+    <reorderPoint>186</reorderPoint>
+    <lastRestocked>2025-12-30</lastRestocked>
+    <supplierName>Tech Components Group</supplierName>
+    <supplierLocation>Dubai (UAE)</supplierLocation>
+    <description>Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.</description>
+    <sku>CHE-000014</sku>
+    <manufacturerCode>MFR-489695</manufacturerCode>
+    <warehouseLocation>E-11-7</warehouseLocation>
+    <weight>92.67</weight>
+    <dimensions>102x102x7cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>true</fragile>
+    <unitsShipped>39214</unitsShipped>
+    <avgRating>3.1</avgRating>
+    <shelfLife>3242</shelfLife>
+    <discontinuedDate>2025-11-04</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000016</productId>
+    <productName>Standard Valve 4839</productName>
+    <category>Accessories</category>
+    <price>4668.34</price>
+    <costPrice>51.33</costPrice>
+    <stockQuantity>9306</stockQuantity>
+    <reorderPoint>437</reorderPoint>
+    <lastRestocked>2026-01-07</lastRestocked>
+    <supplierName>Premier Parts Ltd</supplierName>
+    <supplierLocation>Dubai (UAE)</supplierLocation>
+    <description>High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.</description>
+    <sku>IND-000015</sku>
+    <manufacturerCode>MFR-687299</manufacturerCode>
+    <warehouseLocation>G-56-17</warehouseLocation>
+    <weight>271.86</weight>
+    <dimensions>90x88x73cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>false</fragile>
+    <unitsShipped>45892</unitsShipped>
+    <avgRating>3.7</avgRating>
+    <shelfLife>1924</shelfLife>
+    <discontinuedDate>2026-01-25</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000017</productId>
+    <productName>Deluxe Compressor 2613</productName>
+    <category>Tools</category>
+    <price>1397.69</price>
+    <costPrice>1933.27</costPrice>
+    <stockQuantity>5112</stockQuantity>
+    <reorderPoint>350</reorderPoint>
+    <lastRestocked>2026-02-23</lastRestocked>
+    <supplierName>Reliable Vendors LLC</supplierName>
+    <supplierLocation>New York (USA)</supplierLocation>
+    <description>High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.</description>
+    <sku>CHE-000016</sku>
+    <manufacturerCode>MFR-716153</manufacturerCode>
+    <warehouseLocation>I-33-5</warehouseLocation>
+    <weight>357.31</weight>
+    <dimensions>89x135x53cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>true</fragile>
+    <unitsShipped>83821</unitsShipped>
+    <avgRating>2.5</avgRating>
+    <shelfLife>3549</shelfLife>
+    <discontinuedDate>2025-10-07</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000018</productId>
+    <productName>Premium Controller 8430</productName>
+    <category>Textiles</category>
+    <price>4676.42</price>
+    <costPrice>228.64</costPrice>
+    <stockQuantity>9044</stockQuantity>
+    <reorderPoint>294</reorderPoint>
+    <lastRestocked>2026-03-13</lastRestocked>
+    <supplierName>Trade Partners Ltd</supplierName>
+    <supplierLocation>Dubai (UAE)</supplierLocation>
+    <description>High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.</description>
+    <sku>OFF-000017</sku>
+    <manufacturerCode>MFR-351257</manufacturerCode>
+    <warehouseLocation>I-16-9</warehouseLocation>
+    <weight>224.06</weight>
+    <dimensions>52x194x95cm</dimensions>
+    <hazardous>true</hazardous>
+    <fragile>false</fragile>
+    <unitsShipped>27999</unitsShipped>
+    <avgRating>2.6</avgRating>
+    <shelfLife>3590</shelfLife>
+    <discontinuedDate>2026-01-20</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000019</productId>
+    <productName>Industrial Wrench 9916</productName>
+    <category>Accessories</category>
+    <price>3277.03</price>
+    <costPrice>1798.7</costPrice>
+    <stockQuantity>8601</stockQuantity>
+    <reorderPoint>146</reorderPoint>
+    <lastRestocked>2025-12-25</lastRestocked>
+    <supplierName>Industrial Solutions Inc</supplierName>
+    <supplierLocation>Singapore</supplierLocation>
+    <description>Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.</description>
+    <sku>PAC-000018</sku>
+    <manufacturerCode>MFR-267611</manufacturerCode>
+    <warehouseLocation>D-80-16</warehouseLocation>
+    <weight>247.03</weight>
+    <dimensions>125x21x149cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>true</fragile>
+    <unitsShipped>53427</unitsShipped>
+    <avgRating>2.9</avgRating>
+    <shelfLife>1141</shelfLife>
+    <discontinuedDate>2026-01-23</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000020</productId>
+    <productName>Industrial Controller 4596</productName>
+    <category>Textiles</category>
+    <price>942.01</price>
+    <costPrice>1029.7</costPrice>
+    <stockQuantity>1282</stockQuantity>
+    <reorderPoint>275</reorderPoint>
+    <lastRestocked>2026-01-24</lastRestocked>
+    <supplierName>Reliable Vendors LLC</supplierName>
+    <supplierLocation>New York (USA)</supplierLocation>
+    <description>Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.</description>
+    <sku>TOO-000019</sku>
+    <manufacturerCode>MFR-240216</manufacturerCode>
+    <warehouseLocation>C-1-13</warehouseLocation>
+    <weight>301.25</weight>
+    <dimensions>63x154x166cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>false</fragile>
+    <unitsShipped>35105</unitsShipped>
+    <avgRating>2.5</avgRating>
+    <shelfLife>2540</shelfLife>
+    <discontinuedDate>2025-11-30</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000021</productId>
+    <productName>Standard Cable 9795</productName>
+    <category>Packaging</category>
+    <price>1413.87</price>
+    <costPrice>2287.88</costPrice>
+    <stockQuantity>4589</stockQuantity>
+    <reorderPoint>65</reorderPoint>
+    <lastRestocked>2026-01-03</lastRestocked>
+    <supplierName>Premier Parts Ltd</supplierName>
+    <supplierLocation>Los Angeles (USA)</supplierLocation>
+    <description>High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.</description>
+    <sku>TOO-000020</sku>
+    <manufacturerCode>MFR-944070</manufacturerCode>
+    <warehouseLocation>C-53-39</warehouseLocation>
+    <weight>261.73</weight>
+    <dimensions>13x152x98cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>false</fragile>
+    <unitsShipped>48034</unitsShipped>
+    <avgRating>4.3</avgRating>
+    <shelfLife>3259</shelfLife>
+    <discontinuedDate>2025-09-27</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000022</productId>
+    <productName>Standard Connector 3237</productName>
+    <category>Electronics</category>
+    <price>3445.1</price>
+    <costPrice>2454.5</costPrice>
+    <stockQuantity>6020</stockQuantity>
+    <reorderPoint>378</reorderPoint>
+    <lastRestocked>2026-02-13</lastRestocked>
+    <supplierName>Global Supply Co</supplierName>
+    <supplierLocation>Rotterdam (Netherlands)</supplierLocation>
+    <description>Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.</description>
+    <sku>TEX-000021</sku>
+    <manufacturerCode>MFR-354174</manufacturerCode>
+    <warehouseLocation>J-11-30</warehouseLocation>
+    <weight>3.51</weight>
+    <dimensions>123x162x90cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>false</fragile>
+    <unitsShipped>67212</unitsShipped>
+    <avgRating>3.4</avgRating>
+    <shelfLife>2395</shelfLife>
+    <discontinuedDate>2026-02-24</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000023</productId>
+    <productName>Standard Drill 2248</productName>
+    <category>Electronics</category>
+    <price>798.2</price>
+    <costPrice>905.81</costPrice>
+    <stockQuantity>3077</stockQuantity>
+    <reorderPoint>107</reorderPoint>
+    <lastRestocked>2025-12-20</lastRestocked>
+    <supplierName>Premier Parts Ltd</supplierName>
+    <supplierLocation>Hong Kong</supplierLocation>
+    <description>Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.</description>
+    <sku>OFF-000022</sku>
+    <manufacturerCode>MFR-945528</manufacturerCode>
+    <warehouseLocation>C-50-24</warehouseLocation>
+    <weight>401.4</weight>
+    <dimensions>147x136x95cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>true</fragile>
+    <unitsShipped>67640</unitsShipped>
+    <avgRating>2.7</avgRating>
+    <shelfLife>2662</shelfLife>
+    <discontinuedDate>2025-10-14</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000024</productId>
+    <productName>Compact Generator 4353</productName>
+    <category>Chemicals</category>
+    <price>2205.68</price>
+    <costPrice>2008.06</costPrice>
+    <stockQuantity>3259</stockQuantity>
+    <reorderPoint>113</reorderPoint>
+    <lastRestocked>2026-02-10</lastRestocked>
+    <supplierName>Tech Components Group</supplierName>
+    <supplierLocation>Shanghai (China)</supplierLocation>
+    <description>Professional-grade equipment meeting international standards. Extensively tested for performance and safety.</description>
+    <sku>TOO-000023</sku>
+    <manufacturerCode>MFR-693132</manufacturerCode>
+    <warehouseLocation>J-46-9</warehouseLocation>
+    <weight>330.64</weight>
+    <dimensions>36x24x63cm</dimensions>
+    <hazardous>true</hazardous>
+    <fragile>true</fragile>
+    <unitsShipped>24318</unitsShipped>
+    <avgRating>1.3</avgRating>
+    <shelfLife>3155</shelfLife>
+    <discontinuedDate>2025-10-06</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000025</productId>
+    <productName>Premium Controller 7077</productName>
+    <category>Materials</category>
+    <price>1430.04</price>
+    <costPrice>147.49</costPrice>
+    <stockQuantity>4065</stockQuantity>
+    <reorderPoint>271</reorderPoint>
+    <lastRestocked>2026-02-12</lastRestocked>
+    <supplierName>Material Distributors AB</supplierName>
+    <supplierLocation>Hong Kong</supplierLocation>
+    <description>High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.</description>
+    <sku>OFF-000024</sku>
+    <manufacturerCode>MFR-271986</manufacturerCode>
+    <warehouseLocation>G-72-22</warehouseLocation>
+    <weight>166.15</weight>
+    <dimensions>134x169x142cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>true</fragile>
+    <unitsShipped>12246</unitsShipped>
+    <avgRating>2.1</avgRating>
+    <shelfLife>2969</shelfLife>
+    <discontinuedDate>2026-03-16</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000026</productId>
+    <productName>Deluxe Pump 7944</productName>
+    <category>Tools</category>
+    <price>2213.77</price>
+    <costPrice>2185.37</costPrice>
+    <stockQuantity>2997</stockQuantity>
+    <reorderPoint>461</reorderPoint>
+    <lastRestocked>2026-01-16</lastRestocked>
+    <supplierName>Premier Parts Ltd</supplierName>
+    <supplierLocation>New York (USA)</supplierLocation>
+    <description>Professional-grade equipment meeting international standards. Extensively tested for performance and safety.</description>
+    <sku>IND-000025</sku>
+    <manufacturerCode>MFR-357091</manufacturerCode>
+    <warehouseLocation>B-6-1</warehouseLocation>
+    <weight>282.85</weight>
+    <dimensions>195x130x86cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>false</fragile>
+    <unitsShipped>6424</unitsShipped>
+    <avgRating>4.2</avgRating>
+    <shelfLife>1199</shelfLife>
+    <discontinuedDate>2025-09-30</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000027</productId>
+    <productName>Heavy-Duty Pump 4480</productName>
+    <category>Electronics</category>
+    <price>3309.37</price>
+    <costPrice>12.93</costPrice>
+    <stockQuantity>7554</stockQuantity>
+    <reorderPoint>68</reorderPoint>
+    <lastRestocked>2026-03-15</lastRestocked>
+    <supplierName>Global Supply Co</supplierName>
+    <supplierLocation>Dubai (UAE)</supplierLocation>
+    <description>Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.</description>
+    <sku>MAT-000026</sku>
+    <manufacturerCode>MFR-723445</manufacturerCode>
+    <warehouseLocation>B-20-33</warehouseLocation>
+    <weight>55.87</weight>
+    <dimensions>170x55x41cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>true</fragile>
+    <unitsShipped>81853</unitsShipped>
+    <avgRating>2.5</avgRating>
+    <shelfLife>561</shelfLife>
+    <discontinuedDate>2026-01-02</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000028</productId>
+    <productName>Premium Motor 4110</productName>
+    <category>Tools</category>
+    <price>3469.35</price>
+    <costPrice>491.42</costPrice>
+    <stockQuantity>5236</stockQuantity>
+    <reorderPoint>441</reorderPoint>
+    <lastRestocked>2026-02-28</lastRestocked>
+    <supplierName>Global Supply Co</supplierName>
+    <supplierLocation>Shanghai (China)</supplierLocation>
+    <description>Robust and versatile solution for demanding applications. Features enhanced capabilities and extended lifespan.</description>
+    <sku>TOO-000027</sku>
+    <manufacturerCode>MFR-246049</manufacturerCode>
+    <warehouseLocation>F-90-5</warehouseLocation>
+    <weight>360.03</weight>
+    <dimensions>10x90x157cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>false</fragile>
+    <unitsShipped>13531</unitsShipped>
+    <avgRating>4.1</avgRating>
+    <shelfLife>149</shelfLife>
+    <discontinuedDate>2026-02-08</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000029</productId>
+    <productName>Professional Drill 4359</productName>
+    <category>Accessories</category>
+    <price>1446.21</price>
+    <costPrice>502.11</costPrice>
+    <stockQuantity>3542</stockQuantity>
+    <reorderPoint>478</reorderPoint>
+    <lastRestocked>2025-12-23</lastRestocked>
+    <supplierName>Trade Partners Ltd</supplierName>
+    <supplierLocation>Hamburg (Germany)</supplierLocation>
+    <description>High-quality product with excellent durability and performance characteristics. Suitable for professional and industrial applications.</description>
+    <sku>ACC-000028</sku>
+    <manufacturerCode>MFR-499903</manufacturerCode>
+    <warehouseLocation>J-92-6</warehouseLocation>
+    <weight>70.57</weight>
+    <dimensions>58x186x186cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>false</fragile>
+    <unitsShipped>76460</unitsShipped>
+    <avgRating>3.9</avgRating>
+    <shelfLife>2679</shelfLife>
+    <discontinuedDate>2026-03-05</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000030</productId>
+    <productName>Compact Controller 2751</productName>
+    <category>Furniture</category>
+    <price>982.44</price>
+    <costPrice>1916.23</costPrice>
+    <stockQuantity>9975</stockQuantity>
+    <reorderPoint>54</reorderPoint>
+    <lastRestocked>2025-12-19</lastRestocked>
+    <supplierName>Industrial Solutions Inc</supplierName>
+    <supplierLocation>Hong Kong</supplierLocation>
+    <description>Engineered for reliability with precision manufacturing. Features advanced design for optimal functionality.</description>
+    <sku>TEX-000029</sku>
+    <manufacturerCode>MFR-360007</manufacturerCode>
+    <warehouseLocation>C-1-22</warehouseLocation>
+    <weight>62.29</weight>
+    <dimensions>70x98x81cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>true</fragile>
+    <unitsShipped>45638</unitsShipped>
+    <avgRating>5</avgRating>
+    <shelfLife>3625</shelfLife>
+    <discontinuedDate>2025-11-04</discontinuedDate>
+  </product>
+  <product>
+    <productId>PROD-000031</productId>
+    <productName>Professional Motor 6712</productName>
+    <category>Electronics</category>
+    <price>830.54</price>
+    <costPrice>1615.04</costPrice>
+    <stockQuantity>2030</stockQuantity>
+    <reorderPoint>28</reorderPoint>
+    <lastRestocked>2026-03-10</lastRestocked>
+    <supplierName>Trade Partners Ltd</supplierName>
+    <supplierLocation>Singapore</supplierLocation>
+    <description>Designed for efficiency and long-term reliability. Built with premium materials and strict quality control.</description>
+    <sku>FUR-000030</sku>
+    <manufacturerCode>MFR-501361</manufacturerCode>
+    <warehouseLocation>A-89-41</warehouseLocation>
+    <weight>210.24</weight>
+    <dimensions>192x170x184cm</dimensions>
+    <hazardous>false</hazardous>
+    <fragile>true</fragile>
+    <unitsShipped>96067</unitsShipped>
+    <avgRating>2.3</avgRating>
+    <shelfLife>2081</shelfLife>
+    <discontinuedDate>2025-09-23</discontinuedDate>
+  </product>
+</products>
