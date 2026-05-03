@@ -14,7 +14,11 @@ This benchmark measures read token cost across 6 file formats using Claude Haiku
 
 ### Key Findings
 
-<ADD_FINDINGS_HERE>Add 3-5 major findings as a quick overview, details come later</ADD_FINDINGS_HERE>
+1. **CSV** consumes the fewest read tokens in every cell of the matrix (4608 to 9672 tokens). It beats **JSON_COMPACT** by roughly 35% and **JSON_PRETTY** by roughly 65% for the same information.
+2. With dense mandatory fields **TOON** matches **CSV** at 9760 tokens for 80 records but with optional fields **TOON** jumps to 22119 tokens which is a 127% increase. Every other format becomes 7-9% cheaper with sparse data.
+3. Best tokens per character rate does not equal lowest absolute cost as **JSON_COMPACT** demonstrates. It only requires 304 tokens per 1K characters compared to **CSV** which requires 374 tokens per 1K characters but **CSV** still wins overall because it needs roughly half the characters to encode the same data.
+4. **JSON_PRETTY** is the most expensive format because it costs roughly 3x **CSV** and 2x **JSON_COMPACT** for identical data. Whitespace indentation actively burns tokens with no apparent retrieval benefit at this stage of the benchmark.
+5. Token cost scales near linearly with record count for all formats, structures and variants. Tokens increase between 1.94-2.04 and chars increase 1.97-2.00 from 40 to 80 records which reliably predicts that the same scale applies below and above these record counts.
 
 ## 1. Methodology
 
@@ -146,33 +150,45 @@ However these values cannot be exactly applied to models of the same family or f
 
 ## 3. Conclusion & Decision Matrix
 
-<ADD_CONTENT_HERE>
+For flat tabular data **CSV** is the best choice on raw token cost. **TOON** with mandatory data is competitive with **CSV** but its adaptive encoding breaks down sharply once optional fields enter the schema. The **JSON** family covers the middle ground with **JSON_COMPACT** and **JSONL** acting as token-efficient structured options and **JSON_PRETTY** as a format to avoid for read-heavy workloads. **YAML** sits in the expensive tier without offering a measurable token advantage over **JSON** variants.
 
 
 ### 3.1 Cross-Configuration Findings
 
-<ADD_CONTENT_HERE>
+- **TOON**'s adaptive encoding flips between a **CSV**-like layout for mandatory data with uniform fileds and a **YAML**-like layout for optional data with varying fields. In the tabular layout it uses ~14.7 characters per value and in the key-value layout it jumps to ~32.2 characters per value. The two layouts produce a 2.1x token gap on otherwise comparable data.
+- The format with the lowest tokens per 1K characters does not produce the lowest absolute token cost. **JSON_COMPACT** tokenizes 23% more efficiently per character than **CSV** (304 vs 374 tokens per 1K chars) but **CSV** files contain roughly half the characters of **JSON_COMPACT** files. **CSV** uses 38-41% fewer tokens overall.
+- **CSV**, **JSON_COMPACT**, **JSONL**, **JSON_PRETTY** and **YAML** all drop 7-9% in tokens when data becomes optional while characters drop 5-8% which is a 1-2 percentage point difference. **TOON** instead increases by 116-127% in tokens and 99-102% in characters which is a 17-25 percentage point divergence driven by the encoding switch.
+- Scaling from 40 to 80 records is essentially linear with **JSON_PRETTY** and **YAML** tokens slightly growing faster than characters (1.02 to 1.03 ratio) while **CSV**, **JSON_COMPACT** and **JSONL** scale slightly sub-linearly (0.98 to 0.99). The differences are small enough that format choice should not depend on dataset size.
+- Per-call latency varies between 1078 ms and 2536 ms but variance within a single format and variant is on the same order as variance between formats. Latency is not a reliable tiebreaker at the file sizes tested.
+- **JSONL** and **JSON_COMPACT** behave almost identically but **JSONL** adds a small overhead (~2% more tokens, ~0.1% more characters) from per-record line wrapping. The two formats are interchangeable from a token efficiency standpoint so the choice should be made on streaming or parsing requirements.
 
 
 ### 3.2 Decision Matrix
 
 | Scenario | Recommended Format | Rationale |
 |---|---|---|
-| Flat structure, dense mandatory fields |  |  |
-| Flat structure, sparse optional fields |  |  |
-| Nested structure, dense mandatory fields |  |  |
-| Nested structure, sparse optional fields |  |  |
-| Maximum accuracy required, flat structure |  |  |
-| Maximum accuracy required, nested structure |  |  |
-| Token budget critical, flat structure |  |  |
-| Token budget critical, nested structure |  |  |
-| Avoid in flat structure |  |  |
-| Avoid in nested structure |  |  |
+| Flat structure, dense mandatory fields | **CSV** or **TOON** (mandatory) | Both consume ~9700 tokens at 80 records which is roughly 38% of **JSON_COMPACT** and 33% of **JSON_PRETTY** for the same data |
+| Flat structure, sparse optional fields | **CSV** | **CSV** stays cheapest at 4608 to 8956 tokens but **TOON** must be avoided here because adaptive encoding more than doubles its cost |
+| Token budget critical, flat structure | **CSV** | Lowest absolute token cost |
+| Avoid in flat structure | **JSON_PRETTY** and **TOON** (optional) | **JSON_PRETTY** costs ~3x **CSV** with no observed benefit and **TOON**-optional doubles relative to **TOON**-mandatory due to the encoding fallback |
 
 
 ### 3.3 Real-World Impact
 
-<ADD_CONTENT_HERE>
+For a single read the token costs span almost a factor of three.
+
+| Format (mandatory, 80 records) | Read tokens | Multiplier vs CSV |
+|---|---|---|
+| CSV | 9672 | 1.00x |
+| TOON | 9760 | 1.01x |
+| JSON_COMPACT | 15661 | 1.62x |
+| JSONL | 15974 | 1.65x |
+| YAML | 24971 | 2.58x |
+| JSON_PRETTY | 29490 | 3.05x |
+
+- Format choice directly determines how much data the model can hold in context. A 200K context budget fits roughly 20 reads of a 10K token **CSV** file but only 6 reads of the equivalent **JSON_PRETTY** file. Furthermore as the token count increases the model becomes more likely to get lost in the middle and start hallucinating data.
+- A team benchmarking **TOON** on a dense schema will see **CSV**-like efficiency and might standardize on it. However should the schema gain even a single optional field the per-read cost can more than double without any code changes. Teams considering **TOON** should either commit to dense schemas or rigorously test both encoder branches before adoption.
+- With read durations ranging from 1.0 to 2.5 seconds per file the latency differences are too insignificant to justify a format recommendation based on speed alone. Instead the format choice should be driven by token efficiency.
 
 
 ## 4. Appendices
