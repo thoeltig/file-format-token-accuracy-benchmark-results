@@ -257,226 +257,200 @@
                 "variant": "mandatory",
                 "recordCount": 80,
                 "testRuns": 3,
-                "durationMs": 130868.667,
-                "reasoningTokens": 3333.667,
-                "outputTokens": 422.333
+                "durationTotalMs": 130868.667,
+                "outputTokensBeforeWrite": 422.333
             },
             {
                 "format": "csv",
                 "variant": "mandatory",
                 "recordCount": 40,
                 "testRuns": 3,
-                "durationMs": 93327,
-                "reasoningTokens": 19,
-                "outputTokens": 322
+                "durationTotalMs": 93327,
+                "outputTokensBeforeWrite": 322
             },
             {
                 "format": "csv",
                 "variant": "optional",
                 "recordCount": 80,
                 "testRuns": 3,
-                "durationMs": 79787,
-                "reasoningTokens": 19,
-                "outputTokens": 426.333
+                "durationTotalMs": 79787,
+                "outputTokensBeforeWrite": 426.333
             },
             {
                 "format": "csv",
                 "variant": "optional",
                 "recordCount": 40,
                 "testRuns": 3,
-                "durationMs": 73214,
-                "reasoningTokens": 19,
-                "outputTokens": 434.333
+                "durationTotalMs": 73214,
+                "outputTokensBeforeWrite": 434.333
             },
             {
                 "format": "json_compact",
                 "variant": "mandatory",
                 "recordCount": 80,
                 "testRuns": 3,
-                "durationMs": 81459,
-                "reasoningTokens": 3333.667,
-                "outputTokens": 327.333
+                "durationTotalMs": 81459,
+                "outputTokensBeforeWrite": 327.333
             },
             {
                 "format": "json_compact",
                 "variant": "mandatory",
                 "recordCount": 40,
                 "testRuns": 3,
-                "durationMs": 93741.667,
-                "reasoningTokens": 4972,
-                "outputTokens": 536
+                "durationTotalMs": 93741.667,
+                "outputTokensBeforeWrite": 536
             },
             {
                 "format": "json_compact",
                 "variant": "optional",
                 "recordCount": 80,
                 "testRuns": 3,
-                "durationMs": 106616.333,
-                "reasoningTokens": 4969,
-                "outputTokens": 327
+                "durationTotalMs": 106616.333,
+                "outputTokensBeforeWrite": 327
             },
             {
                 "format": "json_compact",
                 "variant": "optional",
                 "recordCount": 40,
                 "testRuns": 3,
-                "durationMs": 126127,
-                "reasoningTokens": 19,
-                "outputTokens": 432.333
+                "durationTotalMs": 126127,
+                "outputTokensBeforeWrite": 432.333
             },
             {
                 "format": "json_pretty",
                 "variant": "mandatory",
                 "recordCount": 80,
                 "testRuns": 3,
-                "durationMs": 95100.333,
-                "reasoningTokens": 4991,
-                "outputTokens": 330.667
+                "durationTotalMs": 95100.333,
+                "outputTokensBeforeWrite": 330.667
             },
             {
                 "format": "json_pretty",
                 "variant": "mandatory",
                 "recordCount": 40,
                 "testRuns": 3,
-                "durationMs": 84816.667,
-                "reasoningTokens": 4972,
-                "outputTokens": 541
+                "durationTotalMs": 84816.667,
+                "outputTokensBeforeWrite": 541
             },
             {
                 "format": "json_pretty",
                 "variant": "optional",
                 "recordCount": 80,
                 "testRuns": 3,
-                "durationMs": 84667.667,
-                "reasoningTokens": 4969,
-                "outputTokens": 426.667
+                "durationTotalMs": 84667.667,
+                "outputTokensBeforeWrite": 426.667
             },
             {
                 "format": "json_pretty",
                 "variant": "optional",
                 "recordCount": 40,
                 "testRuns": 3,
-                "durationMs": 112845,
-                "reasoningTokens": 4928,
-                "outputTokens": 430
+                "durationTotalMs": 112845,
+                "outputTokensBeforeWrite": 430
             },
             {
                 "format": "jsonl",
                 "variant": "mandatory",
                 "recordCount": 80,
                 "testRuns": 3,
-                "durationMs": 131735.667,
-                "reasoningTokens": 4991,
-                "outputTokens": 429
+                "durationTotalMs": 131735.667,
+                "outputTokensBeforeWrite": 429
             },
             {
                 "format": "jsonl",
                 "variant": "mandatory",
                 "recordCount": 40,
                 "testRuns": 3,
-                "durationMs": 104862,
-                "reasoningTokens": 4972,
-                "outputTokens": 438.667
+                "durationTotalMs": 104862,
+                "outputTokensBeforeWrite": 438.667
             },
             {
                 "format": "jsonl",
                 "variant": "optional",
                 "recordCount": 80,
                 "testRuns": 3,
-                "durationMs": 80706.667,
-                "reasoningTokens": 4969,
-                "outputTokens": 330.333
+                "durationTotalMs": 80706.667,
+                "outputTokensBeforeWrite": 330.333
             },
             {
                 "format": "jsonl",
                 "variant": "optional",
                 "recordCount": 40,
                 "testRuns": 3,
-                "durationMs": 87785.667,
-                "reasoningTokens": 19,
-                "outputTokens": 330.333
+                "durationTotalMs": 87785.667,
+                "outputTokensBeforeWrite": 330.333
             },
             {
                 "format": "toon",
                 "variant": "mandatory",
                 "recordCount": 80,
                 "testRuns": 3,
-                "durationMs": 94043.333,
-                "reasoningTokens": 4991,
-                "outputTokens": 332
+                "durationTotalMs": 94043.333,
+                "outputTokensBeforeWrite": 332
             },
             {
                 "format": "toon",
                 "variant": "mandatory",
                 "recordCount": 40,
                 "testRuns": 3,
-                "durationMs": 76236,
-                "reasoningTokens": 19,
-                "outputTokens": 331.333
+                "durationTotalMs": 76236,
+                "outputTokensBeforeWrite": 331.333
             },
             {
                 "format": "toon",
                 "variant": "optional",
                 "recordCount": 80,
                 "testRuns": 3,
-                "durationMs": 87918.667,
-                "reasoningTokens": 4969,
-                "outputTokens": 329.667
+                "durationTotalMs": 87918.667,
+                "outputTokensBeforeWrite": 329.667
             },
             {
                 "format": "toon",
                 "variant": "optional",
                 "recordCount": 40,
                 "testRuns": 3,
-                "durationMs": 74487.667,
-                "reasoningTokens": 4928,
-                "outputTokens": 330.333
+                "durationTotalMs": 74487.667,
+                "outputTokensBeforeWrite": 330.333
             },
             {
                 "format": "yaml",
                 "variant": "mandatory",
                 "recordCount": 80,
                 "testRuns": 3,
-                "durationMs": 102580,
-                "reasoningTokens": 4991,
-                "outputTokens": 318
+                "durationTotalMs": 102580,
+                "outputTokensBeforeWrite": 318
             },
             {
                 "format": "yaml",
                 "variant": "mandatory",
                 "recordCount": 40,
                 "testRuns": 3,
-                "durationMs": 96988,
-                "reasoningTokens": 4972,
-                "outputTokens": 325.333
+                "durationTotalMs": 96988,
+                "outputTokensBeforeWrite": 325.333
             },
             {
                 "format": "yaml",
                 "variant": "optional",
                 "recordCount": 80,
                 "testRuns": 3,
-                "durationMs": 86837.667,
-                "reasoningTokens": 4969,
-                "outputTokens": 528
+                "durationTotalMs": 86837.667,
+                "outputTokensBeforeWrite": 528
             },
             {
                 "format": "yaml",
                 "variant": "optional",
                 "recordCount": 40,
                 "testRuns": 3,
-                "durationMs": 110771.667,
-                "reasoningTokens": 4928,
-                "outputTokens": 329.333
+                "durationTotalMs": 110771.667,
+                "outputTokensBeforeWrite": 329.333
             }
         ],
         "summary": {
             "totalTestCases": 28,
-            "totalDurationMs": 2536379.003,
-            "totalReasoningTokens": 86342.334,
-            "totalOutputTokens": 11499.33,
-            "averageDurationMs": 90584.964,
-            "averageReasoningTokens": 3083.655,
-            "averageOutputTokens": 410.69
+            "totalDurationTotalMs": 2536379.003,
+            "totalOutputTokensBeforeWrite": 11499.33,
+            "averageDurationTotalMs": 90584.964,
+            "averageOutputTokensBeforeWrite": 410.69
         }
     }
 }
