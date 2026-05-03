@@ -13,17 +13,13 @@ This benchmark evaluates token efficiency and information accuracy across 7 file
 
 ### Key Findings
 
-<ADD_CONTENT_HERE>Insert 5-7 key findings from analysis</ADD_CONTENT_HERE>
-
-1. Finding 1
-
-2. Finding 2
-
-3. Finding 3
-
-4. Finding 4
-
-5. Finding 5
+1. **JSON_COMPACT** wins overall efficiency in both variants. It produces the lowest read token count (7498 mandatory, 6970 optional) and the lowest total token count while still reaching 98.65% accuracy on mandatory and 97.85% on optional data. Its total efficiency score of 91.33 (mandatory) and 98.54 (optional) is the best across the benchmark.
+2. **TOON_DEFAULT** is the accuracy leader on dense mandatory data. It reaches 99.19% answer accuracy and 99.99% character accuracy with only 1 wrong character out of 7782 expected. The tabular **CSV** like layout activated for uniform dense records appears to help the model retain structure awareness at 100%.
+3. **TOON_KEYFOLD** delivers almost no savings over **TOON_DEFAULT**. Read tokens drop by roughly 1.3% in both variants (11440 vs 11289 mandatory, 11195 vs 11044 optional) and accuracy drops by 1.34 percentage points in mandatory. Keyfolding single value objects compacts the source file but yields minimal token or accuracy benefit at this record count and shape because only one of the record fields has the requiered shape to perform the keyfolding.
+4. Pretty-printed formats cost a large token overhead without accuracy payoff. **JSON_PRETTY** consumes 110.55% more read tokens than **JSON_COMPACT** on mandatory data while scoring 3.22 percentage points lower on full answer accuracy (95.43% vs 98.65%). **XML_PRETTY** is 143.95% more expensive in read tokens than **JSON_COMPACT** on mandatory with no accuracy advantage.
+5. The optional variant degrades aggregation accuracy for every format. Aggregation drops between 4.04 and 9.52 percentage points when moving from mandatory to optional data with **JSON_COMPACT**, **TOON_DEFAULT** and **XML_COMPACT** each losing 9.52 points. This suggests that sparse fields introduce counting or summing errors regardless of format choice.
+6. **TOON**'s adaptive encoding advantage shrinks on sparse data. **TOON_DEFAULT** structure awareness collapses from 100% mandatory to 92.59% optional which is the largest drop of any format. The adaptive switch from tabular to key value layout on sparse records weakens the structural signal the model relies on.
+7. Character accuracy stays above 98.5% for every format and variant. Even the worst performer (**JSON_PRETTY** mandatory at 98.53%) has answers that are mostly correct at the character level. Full answer accuracy varies between 95.43% and 99.19% which means most errors are small numerical, spelling mismatches or missing words rather than completely wrong answers.
 
 ## 1. Methodology
 
@@ -183,7 +179,12 @@ Especially the accuracy and output tokens results will vary because these values
 
 #### 2.1.4 Conclusion
 
-<ADD_CONTENT_HERE>Analysis here</ADD_CONTENT_HERE>
+- **JSON_COMPACT** is the default recommendation because it ranks first on read tokens, total tokens and total efficiency score across both variants. The 35.56% to 143.95% token premium paid by competing formats on read cost is not justified by the accuracy numbers.
+- **TOON_DEFAULT** is the best pick when character level correctness is critical on dense uniform records. With 99.99% accuracy by character and only 1 wrong character on mandatory data it outperforms every other format on precision. The tradeoff is a 52.57% higher read token cost on the same data than **JSON_COMPACT** which is only 0.33% below **TOON_DEFAULT** in accuracy by character.
+- Pretty-printed **JSON** and **XML** are poor choices regardless of metric. **JSON_PRETTY** and **XML_PRETTY** land at the bottom of the efficiency ranking on both variants. On mandatory data they waste 721 and 344 read tokens respectively on formatting that the model does not convert into accuracy gains.
+- **TOON_KEYFOLD** does not justify its use over **TOON_DEFAULT** at this scale and object shape. The keyfolding feature saves only about 150 read tokens while losing 1.34 accuracy points on mandatory and 2.07 points on optional.  It's a feature for a special use case and the tested object shape is not the best fit for keyfolding.
+- Every format loses accuracy when moving from mandatory (22 dense fields) to optional (19 mandatory plus 3 optional) variants. **JSON_PRETTY** is an exception with a 3.23 point gain on optional but starts from the worst mandatory baseline. **TOON_DEFAULT** suffers the biggest structure awareness regression (-7.41 points) because the adaptive encoding shifts away from the tabular layout that benefits the model.
+- In a real world agentic workflow **JSON_COMPACT** should be used as the default data format. Even if other formats lead the accuracy rankings the difference is below half a percentage point and no other format can provide the same balance between token cost and accuracy.
 
 ### 2.2 Comprehensive Benchmark Metrics
 | Format | Variant | Read Tokens | Output Tokens | Total Tokens | Char / Read Token | Output Write Tokens / Answer | Accuracy (%) | Useful Read Tokens | Wasted Read Tokens | Useful Output Tokens | Wasted Output Tokens | Eff Score Read | Eff Score Output | Eff Score Total | Accuracy By Character (%) | Useful Read Tokens (Acc By Char) | Wasted Read Tokens (Acc By Char) | Useful Output Tokens (Acc By Char) | Wasted Output Tokens (Acc By Char) | Eff Score Read (Acc By Char) | Eff Score Output (Acc By Char) | Eff Score Total (Acc By Char) |

@@ -13,17 +13,13 @@ This benchmark evaluates token efficiency and information accuracy across 7 file
 
 ### Key Findings
 
-<ADD_CONTENT_HERE>Insert 5-7 key findings from analysis</ADD_CONTENT_HERE>
-
-1. Finding 1
-
-2. Finding 2
-
-3. Finding 3
-
-4. Finding 4
-
-5. Finding 5
+1. **TOON_DEFAULT** leads the dense mandatory variant with 32454 total tokens, 99.73% accuracy and a total efficiency score of 94.86. **JSON_COMPACT** leads the sparse optional variant with 30448 total tokens, 97.85% accuracy and a total efficiency score of 98.54. The adaptive encoding of **TOON** collapses into **YAML** style key value pairs when flat records become sparse or objects are nested which removes most of the tabular token advantage that makes **TOON** competitive on flat and dense data. But the **YAML** style nested structure seems to be easier to understand for the model which results in less output tokens even if the read tokens increased compared to **JSON_COMPACT**.
+2. **TOON_KEYFOLD** does not improve on **TOON_DEFAULT** in this benchmark because of the tested object shape which only has one field valid for keyfolding. On the optional variant it consumes 35425 total tokens (+7.05% vs its own mandatory run and +6.99% vs **TOON_DEFAULT** optional) while accuracy drops to 96.50%. Keyfolding compacts object wrappers but does not offset the output token growth the model produces when reasoning over sparse data.
+3. **XML_PRETTY** needs 43981 total tokens in mandatory (+35.52% vs **TOON_DEFAULT**) at 97.58% accuracy. **JSON_PRETTY** needs 39127 tokens at the same 97.58%. Both rank last or second last on every efficiency score column and should be avoided for LLM consumption.
+4. **JSON_COMPACT** delivers 3.19 to 3.23 characters per read token and wins the read ranking in both variants. **XML_COMPACT** reaches slightly higher raw density (3.37 to 3.41) but the overhead from the tags still pushes its total read tokens 35% above **JSON_COMPACT**.
+5. Aggregation accuracy collapses under sparsity for every format. Each format loses between 6.35 and 12.70 percentage points on aggregation questions when moving from mandatory to optional data. This is a model behaviour with sparse data not a format property and it dominates the overall accuracy drop observed on the optional variant.
+6. **YAML** is the most sparsity sensitive format on read tokens because it drops from 14475 to 11404 read tokens (21.22%) between mandatory and optional due to omitted null valued keys. The same sparsity costs **YAML** 3.22 percentage points of accuracy which is the largest accuracy regression in the benchmark.
+7. Every format and variant scores between 99.25% and 100.00% accuracy by character. The complete answer accuracy spread (96.50% to 99.73%) is therefore driven by a small number of answers with minor character errors rather than by fully wrong responses. The format choice should be based on token cost because accuracy alone is effectively a tiebreaker at this precision.
 
 ## 1. Methodology
 
@@ -183,7 +179,10 @@ Especially the accuracy and output tokens results will vary because these values
 
 #### 2.1.4 Conclusion
 
-<ADD_CONTENT_HERE>Analysis here</ADD_CONTENT_HERE>
+- For mandatory data **TOON_DEFAULT** is the strongest choice. It produces the lowest output tokens (21014), the lowest total tokens (32454), the highest accuracy (99.73%), a perfect 100.00% accuracy by character and the best combined total efficiency score (94.86). Its read cost is not the lowest but the output token savings dominate the total cost because output tokens outweigh read tokens by roughly 2 to 1 on every format in this benchmark. The total tokens difference between **JSON_COMPACT** and **TOON_DEFAULT** is only 2.92% because **JSON_COMAPCT** used 23.27% more output tokens and 52.57% less read tokens.
+- For optional data **JSON_COMPACT** wins because it used less output tokens for sparse data compared to dense data. It reaches the lowest read tokens (6970), the lowest total tokens (30448) and the best total efficiency score (98.54). **TOON_DEFAULT** falls to second on totals because its output tokens grow by 4.27% from mandatory to optional while its accuracy drops 2.96 percentage points. **TOON_DEFAULT** still uses the least output tokens overall but **JSON_COMPACT** used only 7.15% more than it comapred to 23.27% more on the dense data which results in **JSON_COMPACT** using the least total tokens while **TOON_DEFAULT** used 8.73% more total tokens.
+- **JSON_COMPACT** has the smallest accuracy regression between variants (0.80 percentage points) and therefore the most predictable behaviour across data shapes. **YAML** ties **TOON_DEFAULT** for highest mandatory accuracy (99.73%) but regresses the most in optional (3.22 points) which makes it the least robust of the top accuracy formats. **XML_PRETTY** is the only format whose accuracy improves slightly on the optional variant (+0.27 points) but it pays for this with the highest token cost in both variants and never reaches the top half of any efficiency score ranking. **TOON_KEYFOLD** is consistently worse than **TOON_DEFAULT** in this nested benchmark on both accuracy and output tokens which might be due to the format pattern breaking when single field objects are collapsed.
+- Use **TOON_DEFAULT** when records are uniformly populated and output token cost dominates. Use **JSON_COMPACT** when records contain optional fields, when read token cost dominates or when a single format must serve mixed data shapes. Avoid **JSON_PRETTY** and **XML_PRETTY** for LLM input because they add 20% to 36% total tokens with no accuracy return. Prefer **TOON_DEFAULT** over **TOON_KEYFOLD** because keyfolding did not pay off in either variant of this benchmark and the pattern break might hurt accuracy.
 
 ### 2.2 Comprehensive Benchmark Metrics
 | Format | Variant | Read Tokens | Output Tokens | Total Tokens | Char / Read Token | Output Write Tokens / Answer | Accuracy (%) | Useful Read Tokens | Wasted Read Tokens | Useful Output Tokens | Wasted Output Tokens | Eff Score Read | Eff Score Output | Eff Score Total | Accuracy By Character (%) | Useful Read Tokens (Acc By Char) | Wasted Read Tokens (Acc By Char) | Useful Output Tokens (Acc By Char) | Wasted Output Tokens (Acc By Char) | Eff Score Read (Acc By Char) | Eff Score Output (Acc By Char) | Eff Score Total (Acc By Char) |

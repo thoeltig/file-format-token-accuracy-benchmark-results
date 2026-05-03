@@ -13,17 +13,13 @@ This benchmark evaluates token efficiency and information accuracy across 7 file
 
 ### Key Findings
 
-<ADD_CONTENT_HERE>Insert 5-7 key findings from analysis</ADD_CONTENT_HERE>
-
-1. Finding 1
-
-2. Finding 2
-
-3. Finding 3
-
-4. Finding 4
-
-5. Finding 5
+1. No format produced catastrophically wrong answers and accuracy by character stayed above 99.69% for every format and variant combination. Complete answer accuracy ranged from 96.24% (**XML_COMPACT** optional) to 99.46% (**JSON_PRETTY** mandatory). This means most errors were small character level mistakes rather than fully wrong answers so format choice affects token cost far more than answer correctness at this scale.
+2. **TOON_DEFAULT** wins total token efficiency on dense mandatory data. It produced the lowest total token count (31606) and the highest weighted efficiency score for total tokens used (87.24). **TOON** uses adaptive encoding that shifts between a **CSV** like tabular layout for dense records and a **YAML** like key value layout for sparse records. On the optional variant this shift triggers and read tokens grow by 24.85% (from 6798 to 8487) which lands it close to **YAML** (8696). The tabular advantage is therefore specific to dense data and the format accepts a higher cost on sparse data in exchange for unambiguous per record representation.
+3. The read tokens of **JSON_COMPACT** dropped by 37.20% from mandatory to optional (9027 to 5669) because absent fields can be omitted from each object while the structure stays parseable. The resulting total efficiency score of 98.71 is the highest value measured across any format or variant in this benchmark.
+4. **XML_PRETTY** mandatory consumed 13087 read tokens which is 93.94% more than **CSV** while delivering the lowest mandatory accuracy at 97.04%. **XML_COMPACT** optional produced the lowest overall accuracy (96.24%) and the highest count of wasted output tokens (1002).
+5. Pretty-printed formats like **JSON_PRETTY** (+67%) and **XML_PRETTY** (+94% to +97%) consume a more read tokens than **CSV** while their accuracy by character only differs by 0.08% to 0.10%. Their is no real benefit in using pretty-printed formats in any agentic workflow because they requiere more tokens and fill up the context faster. If users choose to use pretty-printed formats they pay the extra cost just for their own ability to read the data easier.
+6. Aggregation is the weakest question category and degrades the most under sparse data. Every format lost accuracy on aggregation when moving from mandatory to optional with drops ranging from 3.17 percentage points (**CSV**) to 11.11 percentage points (**XML_COMPACT**). Field retrieval by contrast held at or near 100% for every format and both variants.
+7. **CSV**'s complete answer accuracy changed by only 0.28 percentage points between mandatory and optional, its read tokens varied by 3.82% and it produced the lowest count of wasted character tokens on optional data (3). The cost is output efficiency where **CSV** ranks last on mandatory data (output efficiency score 66.00) because the model spends more output tokens reasoning about the tabular layout during answering.
 
 ## 1. Methodology
 
@@ -183,7 +179,10 @@ Especially the accuracy and output tokens results will vary because these values
 
 #### 2.1.4 Conclusion
 
-<ADD_CONTENT_HERE>Analysis here</ADD_CONTENT_HERE>
+- On mandatory data **TOON_DEFAULT** achieves the best total token efficiency score (87.24) by combining compactness close to **CSV** with an explicit schema per record. **JSON_PRETTY** wins on pure output efficiency (99.59) and raw accuracy (99.46%) at the cost of the highest mandatory read token count among non **XML** formats. **JSON_COMPACT** offers the most balanced mandatory profile without leading any single metric.
+- On optional data **JSON_COMPACT** becomes the dominant choice across almost every efficiency metric because it omits absent fields entirely and keeps structure parseable. **TOON** loses its tabular advantage here because its adaptive encoding switches to a **YAML** like key value layout on sparse records which increases read tokens by 24.85% relative to its mandatory variant. **CSV** remains the most predictable format across both variants with the smallest variance in accuracy and token count.
+- The **XML** formats occupy the bottom of both mandatory and optional rankings. They pay the largest read token cost and also produce the weakest accuracy scores especially in the optional variant where **XML_COMPACT** drops to 96.24% complete answer accuracy. **YAML** sits in the middle of both rankings without standing out on any specific metric.
+- Accuracy by character remains above 99.69% for every combination tested so no format produces answers that are fundamentally wrong at this record count. The meaningful tradeoff is therefore tokens spent per correct answer rather than correctness itself. For dense tabular data **TOON_DEFAULT** is the recommended choice, for sparse data with optional fields **JSON_COMPACT** is recommended and **CSV** is the safe default when robustness across unknown data shapes matters more than peak efficiency.
 
 ### 2.2 Comprehensive Benchmark Metrics
 | Format | Variant | Read Tokens | Output Tokens | Total Tokens | Char / Read Token | Output Write Tokens / Answer | Accuracy (%) | Useful Read Tokens | Wasted Read Tokens | Useful Output Tokens | Wasted Output Tokens | Eff Score Read | Eff Score Output | Eff Score Total | Accuracy By Character (%) | Useful Read Tokens (Acc By Char) | Wasted Read Tokens (Acc By Char) | Useful Output Tokens (Acc By Char) | Wasted Output Tokens (Acc By Char) | Eff Score Read (Acc By Char) | Eff Score Output (Acc By Char) | Eff Score Total (Acc By Char) |

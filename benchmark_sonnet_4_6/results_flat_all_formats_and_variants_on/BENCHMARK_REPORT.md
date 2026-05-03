@@ -13,17 +13,13 @@ This benchmark evaluates token efficiency and information accuracy across 7 file
 
 ### Key Findings
 
-<ADD_CONTENT_HERE>Insert 5-7 key findings from analysis</ADD_CONTENT_HERE>
-
-1. Finding 1
-
-2. Finding 2
-
-3. Finding 3
-
-4. Finding 4
-
-5. Finding 5
+1. **TOON_DEFAULT** dominates dense mandatory records with the lowest total tokens (26023) and the highest character accuracy (99.98%). **JSON_COMPACT** dominates sparse optional records with the lowest total tokens (24457) and the top total efficiency score (98.36). The winning format flips entirely depending on whether optional fields are present.
+2. **TOON**'s adaptive encoding has a steep cost on sparse data. On mandatory records **TOON** uses only 3965 read tokens which is effectively tied with **CSV** (3922). On optional records **TOON** jumps to 11320 read tokens which is an increase of 185.50% because the layout shifts from the tabular **CSV** style to the **YAML** style key value form to express missing fields. Total tokens grow by 35.40% across the same transition while every other format except **YAML** stays flatter or even shrinks.
+3. **JSON_PRETTY** consumes 2.26x the read tokens of **JSON_COMPACT** on mandatory data and still loses 0.53 points of answer accuracy on the same variant. **XML_PRETTY** shows the same pattern against **XML_COMPACT**. Added whitespace produces no measurable comprehension benefit for the model and wastes read budget.
+4. Full answer accuracy spans only 1.61 points (97.31% to 98.92%) and character accuracy stays above 99.68% in every cell of the matrix. Format choice should therefore be driven almost entirely by token cost and robustness not by raw correctness.
+5. Errors are typically minor character drift rather than structural misreads. **TOON_DEFAULT** on mandatory data produced one fully incorrect answer but only 2 wrong characters out of 7782. **CSV** on mandatory data produced 3 incorrect answers with 25 wrong characters. The gap between answer accuracy and character accuracy shows that failures are almost always off by a digit or a single word due to a hallucinated or missed field.
+6. Filtering is the weakest and most format sensitive question category. On mandatory data filtering accuracy ranges from 87.30% (**YAML**) to 98.41% (**JSON_COMPACT**) which is a spread of 11.11 points. Field retrieval and structure awareness spread by less than 5 points on the same data. Formats without explicit per field labels on every row (**YAML**, **CSV**) perform worst here when records are dense.
+7. Aggregation regresses on optional data for every format. All seven formats lose between 4.22 and 5.45 points of character accuracy on aggregation questions when moving from mandatory to optional. The regression is driven by null handling rather than by any single format's weakness and represents a cross cutting risk for numeric workloads with sparse inputs.
 
 ## 1. Methodology
 
@@ -183,7 +179,11 @@ Especially the accuracy and output tokens results will vary because these values
 
 #### 2.1.4 Conclusion
 
-<ADD_CONTENT_HERE>Analysis here</ADD_CONTENT_HERE>
+- On mandatory records **TOON_DEFAULT** is the recommended format. It posts the top total efficiency score (95.67), the top character accuracy (99.98%) and reads in only 3965 tokens which is within 1.10% of **CSV**. **CSV** itself is a reasonable second choice when read cost matters more than filtering accuracy but its 88.89% filtering score on mandatory data is a tangible weakness.
+- On optional records **JSON_COMPACT** is the recommended format. It posts the top total efficiency score (98.36), the lowest total tokens (24457) and the lowest output tokens (18788). **TOON_DEFAULT** falls to fourth place on this variant because its encoding switch inflates read tokens by 185.50% relative to its own mandatory baseline.
+- Pretty-printed **JSON** and **XML** should be avoided in token-sensitive pipelines regardless of variant. They cost 2x to 3x more read tokens than their compact siblings and deliver no accuracy advantage.
+- If the density of the incoming data cannot be predicted **JSON_COMPACT** is the safer default. Its penalty on mandatory data is bounded (10.94% below **TOON** on total efficiency score) while **TOON**'s penalty on optional data is severe (25.18% below **JSON_COMPACT** on the same metric).
+- Aggregation over optional numeric fields should be treated as the riskiest operation in this benchmark. Every format regressed by at least 4 points on that subcategory and no format choice solved the problem.
 
 ### 2.2 Comprehensive Benchmark Metrics
 | Format | Variant | Read Tokens | Output Tokens | Total Tokens | Char / Read Token | Output Write Tokens / Answer | Accuracy (%) | Useful Read Tokens | Wasted Read Tokens | Useful Output Tokens | Wasted Output Tokens | Eff Score Read | Eff Score Output | Eff Score Total | Accuracy By Character (%) | Useful Read Tokens (Acc By Char) | Wasted Read Tokens (Acc By Char) | Useful Output Tokens (Acc By Char) | Wasted Output Tokens (Acc By Char) | Eff Score Read (Acc By Char) | Eff Score Output (Acc By Char) | Eff Score Total (Acc By Char) |
