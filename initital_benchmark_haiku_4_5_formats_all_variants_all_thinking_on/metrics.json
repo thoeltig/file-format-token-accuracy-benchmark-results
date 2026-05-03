@@ -202,46 +202,6 @@
                 "readDurationMs": 2234
             },
             {
-                "file": "markdown_with_mandatory_80_records.md",
-                "path": "initital_benchmark_haiku_4_5_formats_all_variants_all_thinking_on\\data\\markdown\\markdown_with_mandatory_80_records.md",
-                "agentId": "a05df7a",
-                "format": "markdown",
-                "variant": "mandatory",
-                "recordCount": 80,
-                "readTokens": 6059,
-                "readDurationMs": 1168
-            },
-            {
-                "file": "markdown_with_mandatory_40_records.md",
-                "path": "initital_benchmark_haiku_4_5_formats_all_variants_all_thinking_on\\data\\markdown\\markdown_with_mandatory_40_records.md",
-                "agentId": "a73a085",
-                "format": "markdown",
-                "variant": "mandatory",
-                "recordCount": 40,
-                "readTokens": 3515,
-                "readDurationMs": 1555
-            },
-            {
-                "file": "markdown_with_optional_80_records.md",
-                "path": "initital_benchmark_haiku_4_5_formats_all_variants_all_thinking_on\\data\\markdown\\markdown_with_optional_80_records.md",
-                "agentId": "a4cdbd4",
-                "format": "markdown",
-                "variant": "optional",
-                "recordCount": 80,
-                "readTokens": 6050,
-                "readDurationMs": 1173
-            },
-            {
-                "file": "markdown_with_optional_40_records.md",
-                "path": "initital_benchmark_haiku_4_5_formats_all_variants_all_thinking_on\\data\\markdown\\markdown_with_optional_40_records.md",
-                "agentId": "a99d528",
-                "format": "markdown",
-                "variant": "optional",
-                "recordCount": 40,
-                "readTokens": 3508,
-                "readDurationMs": 1532
-            },
-            {
                 "file": "yaml_with_mandatory_80_records.yaml",
                 "path": "initital_benchmark_haiku_4_5_formats_all_variants_all_thinking_on\\data\\yaml\\yaml_with_mandatory_80_records.yaml",
                 "agentId": "a214264",
@@ -471,42 +431,6 @@
                 "durationMs": 74487.667,
                 "reasoningTokens": 4928,
                 "outputTokens": 330.333
-            },
-            {
-                "format": "markdown",
-                "variant": "mandatory",
-                "recordCount": 80,
-                "testRuns": 3,
-                "durationMs": 61922,
-                "reasoningTokens": 23,
-                "outputTokens": 583.333
-            },
-            {
-                "format": "markdown",
-                "variant": "mandatory",
-                "recordCount": 40,
-                "testRuns": 3,
-                "durationMs": 67062.667,
-                "reasoningTokens": 19,
-                "outputTokens": 641
-            },
-            {
-                "format": "markdown",
-                "variant": "optional",
-                "recordCount": 80,
-                "testRuns": 3,
-                "durationMs": 56827,
-                "reasoningTokens": 19,
-                "outputTokens": 425.333
-            },
-            {
-                "format": "markdown",
-                "variant": "optional",
-                "recordCount": 40,
-                "testRuns": 3,
-                "durationMs": 53044,
-                "reasoningTokens": 19,
-                "outputTokens": 541.333
             },
             {
                 "format": "yaml",
