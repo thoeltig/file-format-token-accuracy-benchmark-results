@@ -40,7 +40,7 @@ This repository contains **benchmark results and raw data** from experiments eva
 - **JSON_COMPACT** and **JSONL** are interchangeable (~2% gap) and drop 7–9% in tokens when fields become sparse which is the similar to other formats except **TOON**.
 - Token cost scales near linearly with record count (1.94–2.05×) across all formats.
 
-**See [Full Report](./initital_benchmark_haiku_4_5_formats_all_variants_all_thinking_on/BENCHMARK_REPORT.md) for detailed token tables and scaling analysis.**
+**See [Full Report](./benchmark_haiku_4_5_scaling/BENCHMARK_REPORT.md) for detailed token tables and scaling analysis.**
 
 ---
 

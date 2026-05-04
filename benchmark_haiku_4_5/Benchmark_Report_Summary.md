@@ -54,7 +54,7 @@ This requires measuring:
 - **Information Value**: (**Accuracy** % / **Tokens**) * 100
 
 #### 1.3.3 Efficiency Score
-Composite metric balancing accuracy with normalized token count (favour towards accuracy). Each efficieny score has an indicator which token count was used in the calculation.
+Composite metric balancing accuracy with normalized token count (favor towards accuracy). Each efficiency score has an indicator which token count was used in the calculation.
 - **Accuracy To Token Ratio** = 66.67 % to 33.33 %
 - **Normalized Tokens** = (((**Max Tokens** + 10) - **Current Tokens**) / ((**Max Tokens** + 10) - (**Min Tokens** - 10))) * 100
 - **Normalized Tokens** = (((**Max Tokens** + 10) - **Current Tokens**) / ((**Max Tokens** + 10) - (**Min Tokens** - 10))) * 100
@@ -81,7 +81,7 @@ Especially the accuracy and output tokens results will vary because these values
 
 ### 2.1 Flat Structure With Thinking On
 
-[Full report with complete breakdowns](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/benchmark_haiku_4_5/results_flat_all_formats_and_variants_on/BENCHMARK_REPORT.md)
+[Full report with complete breakdowns](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_haiku_4_5/results_flat_all_formats_and_variants_on/BENCHMARK_REPORT.md)
 
 #### Mandatory
 
@@ -110,7 +110,7 @@ Especially the accuracy and output tokens results will vary because these values
 
 ### 2.2 Flat Structure With Thinking Off
 
-[Full report with complete breakdowns](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/benchmark_haiku_4_5/results_flat_all_formats_and_variants_off/BENCHMARK_REPORT.md)
+[Full report with complete breakdowns](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_haiku_4_5/results_flat_all_formats_and_variants_off/BENCHMARK_REPORT.md)
 
 #### Mandatory
 
@@ -139,7 +139,7 @@ Especially the accuracy and output tokens results will vary because these values
 
 ### 2.3 Nested Structure With Thinking On
 
-[Full report with complete breakdowns](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/benchmark_haiku_4_5/results_nested_all_formats_and_variants_on/BENCHMARK_REPORT.md)
+[Full report with complete breakdowns](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_haiku_4_5/results_nested_all_formats_and_variants_on/BENCHMARK_REPORT.md)
 
 *CSV excluded — flat-only format, does not support nested structures.*
 
@@ -168,7 +168,7 @@ Especially the accuracy and output tokens results will vary because these values
 
 ### 2.4 Nested Structure With Thinking Off
 
-[Full report with complete breakdowns](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/benchmark_haiku_4_5/results_nested_all_formats_and_variants_off/BENCHMARK_REPORT.md)
+[Full report with complete breakdowns](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_haiku_4_5/results_nested_all_formats_and_variants_off/BENCHMARK_REPORT.md)
 
 *CSV excluded — flat-only format, does not support nested structures.*
 
@@ -201,7 +201,7 @@ Especially the accuracy and output tokens results will vary because these values
 
 - **CSV** and **TOON_DEFAULT** dominate flat read tokens at approximately 7,000 to 7,500 tokens. **JSON_COMPACT** dominates nested read tokens at approximately 10,000 tokens. The most token-hungry format is **XML_PRETTY** which consumes roughly 2x the read tokens of the leader in every configuration.
 - **JSON_PRETTY** consistently achieves the highest accuracy by answer in flat structures at approximately 81%. **YAML** leads in nested accuracy at 77% to 79% with thinking enabled. Neither format ranks well in efficiency because their token overhead outweighs the accuracy advantage in the composite score.
-- All formats achieve 92% to 98% accuracy by charcter compared to 70% to 81% accuracy by answer. This gap indicates that the majority of incorrect answers differ from the expected answer by only a few characters rather than being entirely wrong. Aggregation and filtering questions are the primary source of complete answer failures because a single wrong digit or mising word invalidates the entire response.
+- All formats achieve 92% to 98% accuracy by character compared to 70% to 81% accuracy by answer. This gap indicates that the majority of incorrect answers differ from the expected answer by only a few characters rather than being entirely wrong. Aggregation and filtering questions are the primary source of complete answer failures because a single wrong digit or missing word invalidates the entire response.
 - The ranking order of formats stays largely stable between thinking on and off. Thinking on occasionally boosts accuracy by 1 to 3 percentage points but the additional reasoning tokens sometimes offset that gain in the efficiency score. The practical impact of thinking mode is smaller than the impact of format choice.
 - For flat mandatory (dense) data **TOON_DEFAULT** matches **CSV** at approximately 7,000 read tokens because its tabular mode places field names once in a header row. For optional (sparse) data **TOON_DEFAULT** jumps to approximately 11,500 read tokens as it falls back to explicit key-value pairs per record to represent missing fields without ambiguity. This adaptive behavior makes **TOON_DEFAULT** competitive with **CSV** on dense data and competitive with **YAML** on sparse data but it does not outperform the specialist in either variant or structure.
 - **JSON_PRETTY** and **XML_PRETTY** consume 1.5x to 2x the read tokens of their compact counterparts. Indentation and newlines add tokens that carry zero informational value for the model and only serve human readability. **JSON_PRETTY** partially compensates through higher accuracy in flat structures but **XML_PRETTY** fails to compensate in any configuration.
@@ -258,14 +258,14 @@ Especially the accuracy and output tokens results will vary because these values
 - **Written by**: [Thore Höltig](https://github.com/thoeltig)
 - **Test run in**: Claude Code 2.1.73
 - **Publication**: Open source research in [GitHub repository](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results)
-- **Licensed under**: [CC BY 4.0](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/LICENSE)
+- **Licensed under**: [CC BY 4.0](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/LICENSE)
 - **Full Benchmark Reports**: 
-   - [Report - flat structure & thinking on](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/benchmark_haiku_4_5/results_flat_all_formats_and_variants_on/BENCHMARK_REPORT.md)
-   - [Report - flat structure & thinking off](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/benchmark_haiku_4_5/results_flat_all_formats_and_variants_off/BENCHMARK_REPORT.md)
-   - [Report - nested structure & thinking on](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/benchmark_haiku_4_5/results_nested_all_formats_and_variants_on/BENCHMARK_REPORT.md)
-   - [Report - nested structure & thinking off](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/benchmark_haiku_4_5/results_nested_all_formats_and_variants_off/BENCHMARK_REPORT.md)
+   - [Report - flat structure & thinking on](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_haiku_4_5/results_flat_all_formats_and_variants_on/BENCHMARK_REPORT.md)
+   - [Report - flat structure & thinking off](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_haiku_4_5/results_flat_all_formats_and_variants_off/BENCHMARK_REPORT.md)
+   - [Report - nested structure & thinking on](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_haiku_4_5/results_nested_all_formats_and_variants_on/BENCHMARK_REPORT.md)
+   - [Report - nested structure & thinking off](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_haiku_4_5/results_nested_all_formats_and_variants_off/BENCHMARK_REPORT.md)
 - **Other Benchmark Reports**:
-   - [Report - Read Token Scaling](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/initital_benchmark_haiku_4_5_formats_all_variants_all_thinking_on/BENCHMARK_REPORT.md)
-   - [Report - Sonnet 4.6 Summary](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/benchmark_sonnet_4_6/Benchmark_Report_Summary.md)
+   - [Report - Read Token Scaling](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_haiku_4_5_scaling/BENCHMARK_REPORT.md)
+   - [Report - Sonnet 4.6 Summary](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_sonnet_4_6/Benchmark_Report_Summary.md)
 - **Format Specifics**: [README](https://github.com/thoeltig/file-format-token-accuracy-benchmark#format-specifics)
 - **Benchmark Tool**: Claude Code Plugin in [GitHub repository](https://github.com/thoeltig/file-format-token-accuracy-benchmark)
