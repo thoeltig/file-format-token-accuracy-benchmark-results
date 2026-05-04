@@ -66,17 +66,6 @@
                     }
                 },
                 {
-                    "format": "markdown",
-                    "allFieldsManadatory": true,
-                    "dataFilePath": "initital_benchmark_haiku_4_5_formats_all_variants_all_thinking_on\\data\\markdown\\markdown_with_mandatory_80_records.md",
-                    "expectedOutputFilePath": "initital_benchmark_haiku_4_5_formats_all_variants_all_thinking_on\\subagent_outputs\\markdown\\answers_with_mandatory_80_records.json",
-                    "metadata": {
-                        "characterCount": 13334,
-                        "avgCharacterCountPerRecord": 166.675,
-                        "avgCharacterCountPerValue": 7.576136363636364
-                    }
-                },
-                {
                     "format": "yaml",
                     "allFieldsManadatory": true,
                     "dataFilePath": "initital_benchmark_haiku_4_5_formats_all_variants_all_thinking_on\\data\\yaml\\yaml_with_mandatory_80_records.yaml",
@@ -151,17 +140,6 @@
                         "characterCount": 13143,
                         "avgCharacterCountPerRecord": 328.575,
                         "avgCharacterCountPerValue": 14.935227272727273
-                    }
-                },
-                {
-                    "format": "markdown",
-                    "allFieldsManadatory": true,
-                    "dataFilePath": "initital_benchmark_haiku_4_5_formats_all_variants_all_thinking_on\\data\\markdown\\markdown_with_mandatory_40_records.md",
-                    "expectedOutputFilePath": "initital_benchmark_haiku_4_5_formats_all_variants_all_thinking_on\\subagent_outputs\\markdown\\answers_with_mandatory_40_records.json",
-                    "metadata": {
-                        "characterCount": 7753,
-                        "avgCharacterCountPerRecord": 193.825,
-                        "avgCharacterCountPerValue": 8.810227272727273
                     }
                 },
                 {
@@ -242,17 +220,6 @@
                     }
                 },
                 {
-                    "format": "markdown",
-                    "allFieldsManadatory": false,
-                    "dataFilePath": "initital_benchmark_haiku_4_5_formats_all_variants_all_thinking_on\\data\\markdown\\markdown_with_optional_80_records.md",
-                    "expectedOutputFilePath": "initital_benchmark_haiku_4_5_formats_all_variants_all_thinking_on\\subagent_outputs\\markdown\\answers_with_optional_80_records.json",
-                    "metadata": {
-                        "characterCount": 13221,
-                        "avgCharacterCountPerRecord": 165.2625,
-                        "avgCharacterCountPerValue": 8.161111111111111
-                    }
-                },
-                {
                     "format": "yaml",
                     "allFieldsManadatory": false,
                     "dataFilePath": "initital_benchmark_haiku_4_5_formats_all_variants_all_thinking_on\\data\\yaml\\yaml_with_optional_80_records.yaml",
@@ -327,17 +294,6 @@
                         "characterCount": 26134,
                         "avgCharacterCountPerRecord": 653.35,
                         "avgCharacterCountPerValue": 32.14514145141452
-                    }
-                },
-                {
-                    "format": "markdown",
-                    "allFieldsManadatory": false,
-                    "dataFilePath": "initital_benchmark_haiku_4_5_formats_all_variants_all_thinking_on\\data\\markdown\\markdown_with_optional_40_records.md",
-                    "expectedOutputFilePath": "initital_benchmark_haiku_4_5_formats_all_variants_all_thinking_on\\subagent_outputs\\markdown\\answers_with_optional_40_records.json",
-                    "metadata": {
-                        "characterCount": 7714,
-                        "avgCharacterCountPerRecord": 192.85,
-                        "avgCharacterCountPerValue": 9.488314883148831
                     }
                 },
                 {

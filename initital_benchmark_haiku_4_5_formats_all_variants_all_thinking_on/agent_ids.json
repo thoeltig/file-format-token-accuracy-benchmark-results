@@ -6,7 +6,6 @@
             "json_pretty",
             "jsonl",
             "toon",
-            "markdown",
             "yaml"
         ],
         "variants": [
@@ -156,34 +155,6 @@
             "variant": "optional",
             "recordCount": 40,
             "agentId": "a680fef",
-            "timestamp": "2025-12-18T04:00:00Z"
-        },
-        {
-            "format": "markdown",
-            "variant": "mandatory",
-            "recordCount": 80,
-            "agentId": "a05df7a",
-            "timestamp": "2025-12-18T04:00:00Z"
-        },
-        {
-            "format": "markdown",
-            "variant": "mandatory",
-            "recordCount": 40,
-            "agentId": "a73a085",
-            "timestamp": "2025-12-18T04:00:00Z"
-        },
-        {
-            "format": "markdown",
-            "variant": "optional",
-            "recordCount": 80,
-            "agentId": "a4cdbd4",
-            "timestamp": "2025-12-18T04:00:00Z"
-        },
-        {
-            "format": "markdown",
-            "variant": "optional",
-            "recordCount": 40,
-            "agentId": "a99d528",
             "timestamp": "2025-12-18T04:00:00Z"
         },
         {
@@ -693,102 +664,6 @@
             "variant": "optional",
             "recordCount": 40,
             "agentId": "a5bbb23",
-            "testRun": 3,
-            "timestamp": "2025-12-18T04:00:00Z"
-        },
-        {
-            "format": "markdown",
-            "variant": "mandatory",
-            "recordCount": 80,
-            "agentId": "a120aa3",
-            "testRun": 1,
-            "timestamp": "2025-12-18T04:00:00Z"
-        },
-        {
-            "format": "markdown",
-            "variant": "mandatory",
-            "recordCount": 80,
-            "agentId": "aa8c32f",
-            "testRun": 2,
-            "timestamp": "2025-12-18T04:00:00Z"
-        },
-        {
-            "format": "markdown",
-            "variant": "mandatory",
-            "recordCount": 80,
-            "agentId": "ac04de5",
-            "testRun": 3,
-            "timestamp": "2025-12-18T04:00:00Z"
-        },
-        {
-            "format": "markdown",
-            "variant": "mandatory",
-            "recordCount": 40,
-            "agentId": "ae960ac",
-            "testRun": 1,
-            "timestamp": "2025-12-18T04:00:00Z"
-        },
-        {
-            "format": "markdown",
-            "variant": "mandatory",
-            "recordCount": 40,
-            "agentId": "aed697c",
-            "testRun": 2,
-            "timestamp": "2025-12-18T04:00:00Z"
-        },
-        {
-            "format": "markdown",
-            "variant": "mandatory",
-            "recordCount": 40,
-            "agentId": "a44588b",
-            "testRun": 3,
-            "timestamp": "2025-12-18T04:00:00Z"
-        },
-        {
-            "format": "markdown",
-            "variant": "optional",
-            "recordCount": 80,
-            "agentId": "adbd6b8",
-            "testRun": 1,
-            "timestamp": "2025-12-18T04:00:00Z"
-        },
-        {
-            "format": "markdown",
-            "variant": "optional",
-            "recordCount": 80,
-            "agentId": "a7db2c1",
-            "testRun": 2,
-            "timestamp": "2025-12-18T04:00:00Z"
-        },
-        {
-            "format": "markdown",
-            "variant": "optional",
-            "recordCount": 80,
-            "agentId": "a675975",
-            "testRun": 3,
-            "timestamp": "2025-12-18T04:00:00Z"
-        },
-        {
-            "format": "markdown",
-            "variant": "optional",
-            "recordCount": 40,
-            "agentId": "abcbd41",
-            "testRun": 1,
-            "timestamp": "2025-12-18T04:00:00Z"
-        },
-        {
-            "format": "markdown",
-            "variant": "optional",
-            "recordCount": 40,
-            "agentId": "a9ef927",
-            "testRun": 2,
-            "timestamp": "2025-12-18T04:00:00Z"
-        },
-        {
-            "format": "markdown",
-            "variant": "optional",
-            "recordCount": 40,
-            "agentId": "adbad08",
             "testRun": 3,
             "timestamp": "2025-12-18T04:00:00Z"
         },
