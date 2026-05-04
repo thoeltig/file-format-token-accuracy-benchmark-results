@@ -273,7 +273,7 @@ The benchmark results highlight three simple rules for production use:
    - [Report - nested structure & thinking off](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_sonnet_4_6/results_nested_all_formats_and_variants_off/BENCHMARK_REPORT.md)
    - [Report - nested structure & thinking on](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_sonnet_4_6/results_nested_all_formats_and_variants_on/BENCHMARK_REPORT.md)
 - **Other Benchmark Reports**:
-   - [Report - Read Token Scaling](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/initital_benchmark_haiku_4_5_formats_all_variants_all_thinking_on/BENCHMARK_REPORT.md)
+   - [Report - Read Token Scaling](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_haiku_4_5_scaling/BENCHMARK_REPORT.md)
    - [Report - Haiku 4.5 Summary](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_haiku_4_5/Benchmark_Report_Summary.md)
 - **Format Specifics**: [README](https://github.com/thoeltig/file-format-token-accuracy-benchmark#format-specifics)
 - **Benchmark Tool**: Claude Code Plugin in [GitHub repository](https://github.com/thoeltig/file-format-token-accuracy-benchmark)
