@@ -55,7 +55,7 @@ This requires measuring:
 - **Information Value**: (**Accuracy** % / **Tokens**) * 100
 
 #### 1.3.3 Efficiency Score
-Composite metric balancing accuracy with normalized token count (favour towards accuracy). Each efficieny score has an indicator which token count was used in the calculation.
+Composite metric balancing accuracy with normalized token count (favor towards accuracy). Each efficiency score has an indicator which token count was used in the calculation.
 - **Accuracy To Token Ratio** = 66.67 % to 33.33 %
 - **Normalized Tokens** = (((**Max Tokens** + 10) - **Current Tokens**) / ((**Max Tokens** + 10) - (**Min Tokens** - 10))) * 100
 - **Normalized Tokens** = (((**Max Tokens** + 10) - **Current Tokens**) / ((**Max Tokens** + 10) - (**Min Tokens** - 10))) * 100
@@ -82,7 +82,7 @@ Especially the accuracy and output tokens results will vary because these values
 
 ### 2.1 Flat Structure With Thinking On
 
-[Full report with complete breakdowns](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/benchmark_sonnet_4_6/results_flat_all_formats_and_variants_on/BENCHMARK_REPORT.md)
+[Full report with complete breakdowns](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_sonnet_4_6/results_flat_all_formats_and_variants_on/BENCHMARK_REPORT.md)
 
 #### Mandatory
 
@@ -111,7 +111,7 @@ Especially the accuracy and output tokens results will vary because these values
 
 ### 2.2 Flat Structure With Thinking Off
 
-[Full report with complete breakdowns](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/benchmark_sonnet_4_6/results_flat_all_formats_and_variants_off/BENCHMARK_REPORT.md)
+[Full report with complete breakdowns](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_sonnet_4_6/results_flat_all_formats_and_variants_off/BENCHMARK_REPORT.md)
 
 #### Mandatory
 
@@ -140,7 +140,7 @@ Especially the accuracy and output tokens results will vary because these values
 
 ### 2.3 Nested Structure With Thinking On
 
-[Full report with complete breakdowns](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/benchmark_sonnet_4_6/results_nested_all_formats_and_variants_on/BENCHMARK_REPORT.md)
+[Full report with complete breakdowns](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_sonnet_4_6/results_nested_all_formats_and_variants_on/BENCHMARK_REPORT.md)
 
 *CSV excluded — flat-only format, does not support nested structures.*
 
@@ -171,7 +171,7 @@ Especially the accuracy and output tokens results will vary because these values
 
 ### 2.4 Nested Structure With Thinking Off
 
-[Full report with complete breakdowns](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/benchmark_sonnet_4_6/results_nested_all_formats_and_variants_off/BENCHMARK_REPORT.md)
+[Full report with complete breakdowns](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_sonnet_4_6/results_nested_all_formats_and_variants_off/BENCHMARK_REPORT.md)
 
 *CSV excluded — flat-only format, does not support nested structures.*
 
@@ -220,7 +220,7 @@ Especially the accuracy and output tokens results will vary because these values
 |---|---|---|---|---|
 | Flat structure, dense mandatory fields | **TOON_DEFAULT** (thinking on) | 95.67 | 98.92% | Matches **CSV** on read tokens at 3965 while producing the lowest total tokens of the run at 26023 |
 | Flat structure, sparse optional fields | **JSON_COMPACT** (thinking on) | 98.36 | 97.58% | **TOON** loses its tabular shape and balloons to 11320 read tokens while **JSON_COMPACT** stays at 5669 |
-| Nested structure, dense mandatory fields | **TOON_DEFAULT** (thinking on) | 94.86 | 99.73% | Highest benchmark accuracy combined with the lowest nested total tokens at 32454. **JSON_COMPACT** trailing close behing it. |
+| Nested structure, dense mandatory fields | **TOON_DEFAULT** (thinking on) | 94.86 | 99.73% | Highest benchmark accuracy combined with the lowest nested total tokens at 32454. **JSON_COMPACT** trailing close behind it. |
 | Nested structure, sparse optional fields | **JSON_COMPACT** (thinking on) | 98.54 | 97.85% | Only format that stays compact and accurate under both sparsity and nesting |
 | Maximum accuracy required, flat structure | **JSON_PRETTY** (thinking off) | 86.89 | 99.46% | Highest measured flat accuracy of the benchmark at the cost of 31801 total tokens |
 | Maximum accuracy required, nested structure | **TOON_DEFAULT** (thinking on) | 94.86 | 99.73% | Overall benchmark ceiling for accuracy paired with competitive token usage |
@@ -266,14 +266,14 @@ The benchmark results highlight three simple rules for production use:
 - **Written by**: [Thore Höltig](https://github.com/thoeltig)
 - **Test run in**: Claude Code 2.1.80
 - **Publication**: Open source research in [GitHub repository](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results)
-- **Licensed under**: [CC BY 4.0](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/LICENSE)
+- **Licensed under**: [CC BY 4.0](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/LICENSE)
 - **Related Benchmark Results**:
-   - [Report - flat structure & thinking off](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/benchmark_sonnet_4_6/results_flat_all_formats_and_variants_off/BENCHMARK_REPORT.md)
-   - [Report - flat structure & thinking on](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/benchmark_sonnet_4_6/results_flat_all_formats_and_variants_on/BENCHMARK_REPORT.md)
-   - [Report - nested structure & thinking off](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/benchmark_sonnet_4_6/results_nested_all_formats_and_variants_off/BENCHMARK_REPORT.md)
-   - [Report - nested structure & thinking on](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/benchmark_sonnet_4_6/results_nested_all_formats_and_variants_on/BENCHMARK_REPORT.md)
+   - [Report - flat structure & thinking off](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_sonnet_4_6/results_flat_all_formats_and_variants_off/BENCHMARK_REPORT.md)
+   - [Report - flat structure & thinking on](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_sonnet_4_6/results_flat_all_formats_and_variants_on/BENCHMARK_REPORT.md)
+   - [Report - nested structure & thinking off](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_sonnet_4_6/results_nested_all_formats_and_variants_off/BENCHMARK_REPORT.md)
+   - [Report - nested structure & thinking on](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_sonnet_4_6/results_nested_all_formats_and_variants_on/BENCHMARK_REPORT.md)
 - **Other Benchmark Reports**:
-   - [Report - Read Token Scaling](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/initital_benchmark_haiku_4_5_formats_all_variants_all_thinking_on/BENCHMARK_REPORT.md)
-   - [Report - Haiku 4.5 Summary](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/benchmark_haiku_4_5/Benchmark_Report_Summary.md)
+   - [Report - Read Token Scaling](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/initital_benchmark_haiku_4_5_formats_all_variants_all_thinking_on/BENCHMARK_REPORT.md)
+   - [Report - Haiku 4.5 Summary](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_haiku_4_5/Benchmark_Report_Summary.md)
 - **Format Specifics**: [README](https://github.com/thoeltig/file-format-token-accuracy-benchmark#format-specifics)
 - **Benchmark Tool**: Claude Code Plugin in [GitHub repository](https://github.com/thoeltig/file-format-token-accuracy-benchmark)

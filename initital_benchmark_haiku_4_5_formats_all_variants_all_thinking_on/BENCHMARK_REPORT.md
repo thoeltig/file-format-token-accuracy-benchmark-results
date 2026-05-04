@@ -207,8 +207,8 @@ For a single read the token costs span almost a factor of three.
 - **Test run in**: Claude Code 2.0.74
 - **Data Source**: `metrics.json` & `metadata.json`
 - **Publication**: Open source research in [GitHub repository](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results)
-- **Licensed under**: [CC BY 4.0](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/LICENSE)
+- **Licensed under**: [CC BY 4.0](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/LICENSE)
 - **Other Benchmark Reports**:
-   - [Report - Haiku 4.5 Summary](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/benchmark_haiku_4_5/Benchmark_Report_Summary.md)
-   - [Report - Sonnet 4.6 Summary](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/benchmark_sonnet_4_6/Benchmark_Report_Summary.md)
+   - [Report - Haiku 4.5 Summary](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_haiku_4_5/Benchmark_Report_Summary.md)
+   - [Report - Sonnet 4.6 Summary](https://github.com/thoeltig/file-format-token-accuracy-benchmark-results/blob/develop/benchmark_sonnet_4_6/Benchmark_Report_Summary.md)
 - **Benchmark Tool**: Claude Code Plugin in [GitHub repository](https://github.com/thoeltig/file-format-token-accuracy-benchmark)
