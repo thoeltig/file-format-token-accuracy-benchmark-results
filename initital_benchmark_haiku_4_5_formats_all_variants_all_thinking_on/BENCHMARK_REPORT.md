@@ -191,7 +191,7 @@ For a single read the token costs span almost a factor of three.
 - With read durations ranging from 1.0 to 2.5 seconds per file the latency differences are too insignificant to justify a format recommendation based on speed alone. Instead the format choice should be driven by token efficiency.
 
 
-## 4. Appendices
+## 4. Appendix
 
 - **Test Date**: 2025-12-19
 - **Model**: Claude Haiku 4.5
