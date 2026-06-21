@@ -384,7 +384,7 @@
       "testCase": "json_pretty_flat_31_optional",
       "format": "json_pretty",
       "variant": "optional",
-      "fullTestRuns": 2,
+      "fullTestRuns": 3,
       "hasOptionalData": true,
       "recordCount": 31,
       "totalValues": 631,

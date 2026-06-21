@@ -268,7 +268,7 @@
                 "structure": "flat",
                 "variant": "optional",
                 "recordCount": 31,
-                "testRuns": 2,
+                "testRuns": 3,
                 "durationBeforeWriteMs": 32553.5,
                 "durationBeforeWriteMsMin": 5548,
                 "durationBeforeWriteMsMax": 59559,
