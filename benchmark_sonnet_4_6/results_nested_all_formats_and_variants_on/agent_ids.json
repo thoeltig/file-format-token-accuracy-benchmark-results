@@ -25,7 +25,8 @@
       "structure": "nested",
       "variant": "optional",
       "recordCount": 31,
-      "timestamp": "2026-03-20T19:42:23.882Z"
+      "timestamp": "2026-03-20T19:42:23.882Z",
+      "testRun": 1
     },
     {
       "agentId": "a15afa67bc24fa1ca",
@@ -33,7 +34,8 @@
       "structure": "nested",
       "variant": "optional",
       "recordCount": 31,
-      "timestamp": "2026-03-20T19:42:23.883Z"
+      "timestamp": "2026-03-20T19:42:23.883Z",
+      "testRun": 1
     },
     {
       "agentId": "a2842bf3af6bb9c24",
@@ -41,7 +43,8 @@
       "structure": "nested",
       "variant": "optional",
       "recordCount": 31,
-      "timestamp": "2026-03-20T19:42:23.884Z"
+      "timestamp": "2026-03-20T19:42:23.884Z",
+      "testRun": 1
     },
     {
       "agentId": "a342b953810c9bc99",
@@ -49,7 +52,8 @@
       "structure": "nested",
       "variant": "mandatory",
       "recordCount": 31,
-      "timestamp": "2026-03-20T19:42:23.887Z"
+      "timestamp": "2026-03-20T19:42:23.887Z",
+      "testRun": 1
     },
     {
       "agentId": "a54981fb5e23834c2",
@@ -57,7 +61,8 @@
       "structure": "nested",
       "variant": "mandatory",
       "recordCount": 31,
-      "timestamp": "2026-03-20T19:42:23.894Z"
+      "timestamp": "2026-03-20T19:42:23.894Z",
+      "testRun": 1
     },
     {
       "agentId": "a6c3f1e8e8c413c95",
@@ -65,7 +70,8 @@
       "structure": "nested",
       "variant": "mandatory",
       "recordCount": 31,
-      "timestamp": "2026-03-20T19:42:23.897Z"
+      "timestamp": "2026-03-20T19:42:23.897Z",
+      "testRun": 1
     },
     {
       "agentId": "a8463e288b656ade8",
@@ -73,7 +79,8 @@
       "structure": "nested",
       "variant": "mandatory",
       "recordCount": 31,
-      "timestamp": "2026-03-20T19:42:23.901Z"
+      "timestamp": "2026-03-20T19:42:23.901Z",
+      "testRun": 1
     },
     {
       "agentId": "a870ddc1e27102e94",
@@ -81,7 +88,8 @@
       "structure": "nested",
       "variant": "optional",
       "recordCount": 31,
-      "timestamp": "2026-03-20T19:42:23.901Z"
+      "timestamp": "2026-03-20T19:42:23.901Z",
+      "testRun": 1
     },
     {
       "agentId": "a9987d99e4dbc7292",
@@ -89,7 +97,8 @@
       "structure": "nested",
       "variant": "mandatory",
       "recordCount": 31,
-      "timestamp": "2026-03-20T19:42:23.902Z"
+      "timestamp": "2026-03-20T19:42:23.902Z",
+      "testRun": 1
     },
     {
       "agentId": "aafe2ef0953dbbbb6",
@@ -97,7 +106,8 @@
       "structure": "nested",
       "variant": "mandatory",
       "recordCount": 31,
-      "timestamp": "2026-03-20T19:42:23.904Z"
+      "timestamp": "2026-03-20T19:42:23.904Z",
+      "testRun": 1
     },
     {
       "agentId": "ab6702ca6f8dec328",
@@ -105,7 +115,8 @@
       "structure": "nested",
       "variant": "optional",
       "recordCount": 31,
-      "timestamp": "2026-03-20T19:42:23.906Z"
+      "timestamp": "2026-03-20T19:42:23.906Z",
+      "testRun": 1
     },
     {
       "agentId": "acbe7594ea4b06bf9",
@@ -113,7 +124,8 @@
       "structure": "nested",
       "variant": "optional",
       "recordCount": 31,
-      "timestamp": "2026-03-20T19:42:23.908Z"
+      "timestamp": "2026-03-20T19:42:23.908Z",
+      "testRun": 1
     },
     {
       "agentId": "acec4b66ffb56d37c",
@@ -121,7 +133,8 @@
       "structure": "nested",
       "variant": "optional",
       "recordCount": 31,
-      "timestamp": "2026-03-20T19:42:23.909Z"
+      "timestamp": "2026-03-20T19:42:23.909Z",
+      "testRun": 1
     },
     {
       "agentId": "af4a737fe74c4565c",
@@ -129,7 +142,8 @@
       "structure": "nested",
       "variant": "mandatory",
       "recordCount": 31,
-      "timestamp": "2026-03-20T19:42:23.913Z"
+      "timestamp": "2026-03-20T19:42:23.913Z",
+      "testRun": 1
     }
   ],
   "fullTests": [
