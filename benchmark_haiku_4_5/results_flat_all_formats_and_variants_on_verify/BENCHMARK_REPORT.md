@@ -216,8 +216,41 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | XML_PRETTY | 16137 | 15076 | -1061 | -6.57 | 304 | 210 | -94 | -30.92 | 9496 | 11270 | +1774 | +18.68 | 9799 | 11478 | +1679 | +17.13 | 25936 | 26554 | +618 | +2.38 |
 | YAML | 12533 | 11742 | -791 | -6.31 | 304 | 308 | +4 | +1.32 | 10772 | 8802 | -1970 | -18.29 | 11076 | 9110 | -1966 | -17.75 | 23609 | 20852 | -2757 | -11.68 |
 
-### 2.4 Performance
-#### 2.4.1 Metrics
+### 2.4 Drift over multiple runs
+
+*Note: Drift = The distance from average to the lowest or highest value. Spread = Distance between lowest to highest value (larger = less predictable results across runs).*
+
+#### 2.4.1 Drift per Format and Variant
+| Format | Variant | Runs | Output Tokens Total | Drift | Spread | Accuracy (%) | Drift (pp) | Spread (pp) | Accuracy By Character (%) | Drift (pp) | Spread (pp) |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| CSV | man | 3 | 11118 | -2081/+3062 | 5143 | 77.69 | -9.69/+5.88 | 15.57 | 97.66 | -1.24/+1.14 | 2.38 |
+| CSV | opt | 3 | 9064 | -3417/+1851 | 5268 | 72.04 | -11.56/+8.59 | 20.15 | 91.95 | -2.83/+4.10 | 6.93 |
+| JSON_COMPACT | man | 3 | 11113 | -2221/+1508 | 3729 | 75.00 | -3.23/+2.15 | 5.38 | 97.53 | -0.03/+0.05 | 0.08 |
+| JSON_COMPACT | opt | 3 | 9070 | -4004/+4016 | 8020 | 76.61 | -9.48/+7.38 | 16.86 | 96.61 | -3.20/+1.61 | 4.81 |
+| JSON_PRETTY | man | 3 | 13328 | -1418/+2564 | 3983 | 79.84 | -1.01/+1.01 | 2.02 | 98.10 | -0.48/+0.37 | 0.85 |
+| JSON_PRETTY | opt | 3 | 10628 | -5356/+6702 | 12058 | 77.42 | -4.17/+4.17 | 8.34 | 97.13 | -1.98/+1.18 | 3.16 |
+| TOON_DEFAULT | man | 3 | 12285 | -2206/+2310 | 4516 | 77.69 | -19.04/+11.07 | 30.11 | 94.84 | -6.44/+4.27 | 10.71 |
+| TOON_DEFAULT | opt | 3 | 11821 | -2681/+2490 | 5171 | 78.90 | -2.90/+4.26 | 7.16 | 98.12 | -0.97/+0.44 | 1.41 |
+| XML_COMPACT | man | 3 | 13453 | -1699/+2272 | 3971 | 77.15 | -2.79/+3.49 | 6.28 | 98.31 | -0.34/+0.51 | 0.85 |
+| XML_COMPACT | opt | 3 | 11402 | -1593/+2749 | 4342 | 77.42 | -3.13/+5.21 | 8.34 | 98.16 | -0.50/+0.98 | 1.48 |
+| XML_PRETTY | man | 3 | 9799 | -1279/+2133 | 3412 | 77.15 | -2.79/+3.49 | 6.28 | 94.33 | -1.47/+2.09 | 3.56 |
+| XML_PRETTY | opt | 3 | 11479 | -2435/+4236 | 6670 | 79.03 | -5.10/+5.10 | 10.20 | 97.35 | -1.48/+1.94 | 3.42 |
+| YAML | man | 3 | 11076 | -1334/+1907 | 3241 | 79.30 | -4.40/+6.78 | 11.18 | 97.41 | -0.74/+0.48 | 1.22 |
+| YAML | opt | 3 | 9110 | -85/+110 | 195 | 72.58 | -5.55/+5.55 | 11.10 | 95.14 | -2.23/+2.92 | 5.15 |
+
+#### 2.4.2 Spread: Mandatory vs Optional
+| Format | Output Tokens Total Spread Man | Output Tokens Total Spread Opt | Diff | Acc Spread Man (pp) | Acc Spread Opt (pp) | Diff (pp) | Acc By Char Spread Man (pp) | Acc By Char Spread Opt (pp) | Diff (pp) |
+|---|---|---|---|---|---|---|---|---|---|
+| CSV | 5143 | 5268 | +125 | 15.57 | 20.15 | +4.58 | 2.38 | 6.93 | +4.55 |
+| JSON_COMPACT | 3729 | 8020 | +4291 | 5.38 | 16.86 | +11.48 | 0.08 | 4.81 | +4.73 |
+| JSON_PRETTY | 3983 | 12058 | +8076 | 2.02 | 8.34 | +6.32 | 0.85 | 3.16 | +2.31 |
+| TOON_DEFAULT | 4516 | 5171 | +654 | 30.11 | 7.16 | -22.95 | 10.71 | 1.41 | -9.30 |
+| XML_COMPACT | 3971 | 4342 | +370 | 6.28 | 8.34 | +2.06 | 0.85 | 1.48 | +0.63 |
+| XML_PRETTY | 3412 | 6670 | +3258 | 6.28 | 10.20 | +3.92 | 3.56 | 3.42 | -0.14 |
+| YAML | 3241 | 195 | -3046 | 11.18 | 11.10 | -0.08 | 1.22 | 5.15 | +3.93 |
+
+### 2.5 Performance
+#### 2.5.1 Metrics
 | Format | Variant | Read (ms) | Read (tokens/ms) | Rate (ms/record) | Output Before Write (ms) | Output Write (ms) | Output Write (tokens/ms) | Rate (ms/question) | Read + Output Write (ms) | Read + Output Write (tokens/ms) | Rate (ms/record+question) | Output (ms) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | man | 12 | 641.25 | 0.39 | 55603 | 34909 | 0.31 | 281.52 | 34921 | 641.56 | 225.30 | 90512 |
@@ -235,7 +268,7 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | YAML | man | 21 | 596.81 | 0.68 | 53707 | 38458 | 0.28 | 310.15 | 38479 | 597.09 | 248.25 | 92165 |
 | YAML | opt | 31 | 378.77 | 1.00 | 39189 | 30155 | 0.29 | 243.19 | 30186 | 379.07 | 194.75 | 69344 |
 
-#### 2.4.2 Mandatory vs Optional
+#### 2.5.2 Mandatory vs Optional
 | Format | Read Man (ms) | Read Opt (ms) | Diff (ms) | Diff (%) | Output Before Write Man (s) | Output Before Write Opt (s) | Diff (s) | Diff (%) | Output Write Man (s) | Output Write Opt (s) | Diff (s) | Diff (%) | Read + Output Write Man (s) | Read + Output Write Opt (s) | Diff (s) | Diff (%) | Output Man (s) | Output Opt (s) | Diff (s) | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 12 | 12 | 0 | 0.00 | 55.60 | 40.47 | -15.13 | -27.22 | 34.91 | 31.56 | -3.35 | -9.60 | 34.92 | 31.57 | -3.35 | -9.60 | 90.51 | 72.02 | -18.49 | -20.42 |
@@ -246,8 +279,8 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | XML_PRETTY | 18 | 17 | -1 | -5.56 | 45.34 | 57.15 | +11.81 | +26.04 | 39.62 | 30.60 | -9.02 | -22.77 | 39.64 | 30.62 | -9.02 | -22.76 | 84.96 | 87.75 | +2.78 | +3.28 |
 | YAML | 21 | 31 | +10 | +47.62 | 53.71 | 39.19 | -14.52 | -27.03 | 38.46 | 30.15 | -8.30 | -21.59 | 38.48 | 30.19 | -8.29 | -21.55 | 92.17 | 69.34 | -22.82 | -24.76 |
 
-### 2.5 Structural Efficiency
-#### 2.5.1 Metrics
+### 2.6 Structural Efficiency
+#### 2.6.1 Metrics
 | Format | Variant | Chars / Read Token | Read Tokens / Value | Read Tokens / Object | Info / Read Token | Info / Output Token | Info / Total Token | Info / Read Token (Acc By Char) | Info / Output Token (Acc By Char) | Info / Total Token (Acc By Char) |
 |---|---|---|---|---|---|---|---|---|---|---|
 | CSV | man | 1.31 | 11.28 | 248.23 | 1.01 | 0.70 | 0.41 | 1.27 | 0.88 | 0.52 |
@@ -265,7 +298,7 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | YAML | man | 1.67 | 18.38 | 404.29 | 0.63 | 0.72 | 0.34 | 0.78 | 0.88 | 0.41 |
 | YAML | opt | 1.65 | 18.61 | 378.77 | 0.62 | 0.80 | 0.35 | 0.81 | 1.04 | 0.46 |
 
-#### 2.5.2 Characters And Values: Mandatory vs Optional
+#### 2.6.2 Characters And Values: Mandatory vs Optional
 | Format | Chars / Read Token Man | Chars / Read Token Opt | Diff | Diff (%) | Read Tokens / Value Man | Read Tokens / Value Opt | Diff | Diff (%) | Read Tokens / Object Man | Read Tokens / Object Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 1.31 | 1.29 | -0.02 | -1.83 | 11.28 | 11.79 | +0.51 | +4.48 | 248.23 | 239.94 | -8.29 | -3.34 |
@@ -276,7 +309,7 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | XML_PRETTY | 1.94 | 1.92 | -0.02 | -0.98 | 23.66 | 23.89 | +0.23 | +0.98 | 520.55 | 486.32 | -34.23 | -6.57 |
 | YAML | 1.67 | 1.65 | -0.01 | -0.78 | 18.38 | 18.61 | +0.23 | +1.26 | 404.29 | 378.77 | -25.52 | -6.31 |
 
-#### 2.5.3 Information: Mandatory vs Optional
+#### 2.6.3 Information: Mandatory vs Optional
 | Format | Info / Read Token Man | Info / Read Token Opt | Diff | Diff (%) | Info / Output Token Man | Info / Output Token Opt | Diff | Diff (%) | Info / Total Token Man | Info / Total Token Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 1.01 | 0.97 | -0.04 | -4.06 | 0.70 | 0.80 | +0.10 | +13.73 | 0.41 | 0.44 | +0.02 | +5.81 |
@@ -287,7 +320,7 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | XML_PRETTY | 0.48 | 0.52 | +0.05 | +9.62 | 0.79 | 0.69 | -0.10 | -12.58 | 0.30 | 0.30 | 0.00 | 0.00 |
 | YAML | 0.63 | 0.62 | -0.02 | -2.37 | 0.72 | 0.80 | +0.08 | +11.31 | 0.34 | 0.35 | +0.01 | +3.57 |
 
-#### 2.5.4 Information (Accuracy By Character): Mandatory vs Optional
+#### 2.6.4 Information (Accuracy By Character): Mandatory vs Optional
 | Format | Info / Read Token (Acc By Char) Man | Info / Read Token (Acc By Char) Opt | Diff | Diff (%) | Info / Output Token (Acc By Char) Man | Info / Output Token (Acc By Char)  Opt | Diff | Diff (%) | Info / Total Token (Acc By Char) Man | Info / Total Token (Acc By Char) Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 1.27 | 1.24 | -0.03 | -2.60 | 0.88 | 1.01 | +0.14 | +15.49 | 0.52 | 0.56 | +0.04 | +7.32 |
@@ -298,8 +331,8 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | XML_PRETTY | 0.59 | 0.65 | +0.06 | +10.43 | 0.96 | 0.85 | -0.11 | -11.94 | 0.36 | 0.37 | 0.00 | 0.00 |
 | YAML | 0.78 | 0.81 | +0.03 | +4.25 | 0.88 | 1.04 | +0.17 | +18.77 | 0.41 | 0.46 | +0.04 | +10.41 |
 
-### 2.6 Token Utilization Efficiency
-#### 2.6.1 Metrics
+### 2.7 Token Utilization Efficiency
+#### 2.7.1 Metrics
 | Format | Variant | Read Tokens | Useful Read Tokens | Wasted Read Tokens | Output Tokens | Useful Output Tokens | Wasted Output Tokens | Total Tokens | Useful Total Tokens | Wasted Total Tokens | Accuracy (%) | Eff Score Read | Eff Score Output | Eff Score Total | Wtd Accuracy (%) | Wtd Eff Score Read | Wtd Eff Score Output | Wtd Eff Score Total |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | man | 7695 | 5978 | 1717 | 11118 | 8637 | 2480 | 18813 | 14616 | 4197 | 77.69 | 82.62 | 71.14 | 78.16 | 76.16 | 81.60 | 70.11 | 77.14 |
@@ -317,7 +350,7 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | YAML | man | 12533 | 9939 | 2594 | 11076 | 8783 | 2293 | 23609 | 18722 | 4887 | 79.30 | 66.05 | 72.49 | 64.83 | 76.94 | 64.47 | 70.92 | 63.25 |
 | YAML | opt | 11742 | 8522 | 3220 | 9110 | 6612 | 2498 | 20852 | 15135 | 5718 | 72.58 | 64.45 | 81.34 | 68.63 | 71.57 | 63.78 | 80.66 | 67.95 |
 
-#### 2.6.2 Read Tokens: Mandatory vs Optional Data
+#### 2.7.2 Read Tokens: Mandatory vs Optional Data
 | Format | Read Tokens Man | Read Tokens Opt | Diff | Diff (%) | Useful Read Tokens Man | Useful Read Tokens Opt | Diff | Diff (%) | Wasted Read Tokens Man | Wasted Read Tokens Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) | Eff Score Read Man | Eff Score Read Opt | Diff | Diff (%) | Wtd Accuracy (%) Man | Wtd Accuracy (%) Opt | Diff (%) | Wtd Eff Score Read Man | Wtd Eff Score Read Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 7695 | 7438 | -257 | -3.34 | 5978 | 5358 | -620 | -10.37 | 1717 | 2080 | +363 | +21.14 | 77.69 | 72.04 | -5.65 | 82.62 | 79.79 | -2.83 | -3.42 | 76.16 | 71.29 | -4.87 | 81.60 | 79.29 | -2.31 | -2.83 |
@@ -328,7 +361,7 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | XML_PRETTY | 16137 | 15076 | -1061 | -6.57 | 12450 | 11915 | -535 | -4.30 | 3687 | 3161 | -526 | -14.26 | 77.15 | 79.03 | +1.88 | 51.47 | 56.59 | +5.12 | +9.95 | 74.97 | 78.62 | +3.65 | 50.02 | 56.32 | +6.30 | +12.60 |
 | YAML | 12533 | 11742 | -791 | -6.31 | 9939 | 8523 | -1416 | -14.25 | 2594 | 3219 | +625 | +24.11 | 79.30 | 72.58 | -6.72 | 66.05 | 64.45 | -1.59 | -2.41 | 76.94 | 71.57 | -5.37 | 64.47 | 63.78 | -0.70 | -1.08 |
 
-#### 2.6.3 Output Tokens: Mandatory vs Optional Data
+#### 2.7.3 Output Tokens: Mandatory vs Optional Data
 | Format | Output Tokens Man | Output Tokens Opt | Diff | Diff (%) | Useful Output Tokens Man | Useful Output Tokens Opt | Diff | Diff (%) | Wasted Output Tokens Man | Wasted Output Tokens Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) | Eff Score Output Man | Eff Score Output Opt | Diff | Diff (%) | Wtd Accuracy (%) Man | Wtd Accuracy (%) Opt | Diff (%) | Wtd Eff Score Output Man | Wtd Eff Score Output Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 11118 | 9064 | -2054 | -18.47 | 8637 | 6529 | -2108 | -24.40 | 2480 | 2534 | +54 | +2.18 | 77.69 | 72.04 | -5.65 | 71.14 | 81.29 | +10.16 | +14.28 | 76.16 | 71.29 | -4.87 | 70.11 | 80.79 | +10.68 | +15.23 |
@@ -339,7 +372,7 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | XML_PRETTY | 9799 | 11478 | +1679 | +17.14 | 7560 | 9071 | +1511 | +19.99 | 2239 | 2407 | +168 | +7.50 | 77.15 | 79.03 | +1.88 | 79.71 | 69.58 | -10.13 | -12.71 | 74.97 | 78.62 | +3.65 | 78.26 | 69.31 | -8.95 | -11.44 |
 | YAML | 11076 | 9110 | -1966 | -17.75 | 8783 | 6612 | -2171 | -24.72 | 2293 | 2498 | +205 | +8.95 | 79.30 | 72.58 | -6.72 | 72.49 | 81.34 | +8.85 | +12.20 | 76.94 | 71.57 | -5.37 | 70.92 | 80.66 | +9.75 | +13.74 |
 
-#### 2.6.4 Total Tokens: Mandatory vs Optional Data
+#### 2.7.4 Total Tokens: Mandatory vs Optional Data
 | Format | Total Tokens Man | Total Tokens Opt | Diff | Diff (%) | Useful Total Tokens Man | Useful Total Tokens Opt | Diff | Diff (%) | Wasted Total Tokens Man | Wasted Total Tokens Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) | Eff Score Total Man | Eff Score Total Opt | Diff | Diff (%) | Wtd Accuracy (%) Man | Wtd Accuracy (%) Opt | Diff (%) | Wtd Eff Score Total Man | Wtd Eff Score Total Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 18813 | 16502 | -2311 | -12.28 | 14616 | 11888 | -2728 | -18.66 | 4197 | 4614 | +417 | +9.93 | 77.69 | 72.04 | -5.65 | 78.16 | 81.33 | +3.17 | +4.06 | 76.16 | 71.29 | -4.87 | 77.14 | 80.83 | +3.69 | +4.79 |
@@ -350,8 +383,8 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | XML_PRETTY | 25936 | 26554 | +618 | +2.38 | 20010 | 20986 | +976 | +4.88 | 5926 | 5568 | -358 | -6.04 | 77.15 | 79.03 | +1.88 | 56.41 | 55.80 | -0.60 | -1.07 | 74.97 | 78.62 | +3.65 | 54.95 | 55.53 | +0.58 | +1.05 |
 | YAML | 23609 | 20852 | -2757 | -11.68 | 18722 | 15135 | -3587 | -19.16 | 4887 | 5718 | +831 | +17.00 | 79.30 | 72.58 | -6.72 | 64.83 | 68.63 | +3.80 | +5.86 | 76.94 | 71.57 | -5.37 | 63.25 | 67.95 | +4.70 | +7.43 |
 
-### 2.7 Token Utilization Efficiency (Accuracy by Character)
-#### 2.7.1 Metrics
+### 2.8 Token Utilization Efficiency (Accuracy by Character)
+#### 2.8.1 Metrics
 | Format | Variant | Read Tokens | Useful Read Tokens | Wasted Read Tokens | Output Tokens | Useful Output Tokens | Wasted Output Tokens | Total Tokens | Useful Total Tokens | Wasted Total Tokens | Accuracy by Character (%) | Eff Score Read | Eff Score Output | Eff Score Total | Wtd Accuracy by Character (%) | Wtd Eff Score Read | Wtd Eff Score Output | Wtd Eff Score Total |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | man | 7695 | 7515 | 180 | 11118 | 10858 | 260 | 18813 | 18372 | 440 | 97.66 | 95.93 | 84.45 | 91.47 | 94.59 | 93.89 | 82.40 | 89.42 |
@@ -369,7 +402,7 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | YAML | man | 12533 | 12208 | 325 | 11076 | 10789 | 287 | 23609 | 22998 | 611 | 97.41 | 78.12 | 84.56 | 76.90 | 95.18 | 76.63 | 83.08 | 75.41 |
 | YAML | opt | 11742 | 11171 | 571 | 9110 | 8668 | 443 | 20852 | 19839 | 1013 | 95.14 | 79.49 | 96.38 | 83.67 | 91.37 | 76.98 | 93.86 | 81.15 |
 
-#### 2.7.2 Read Tokens (Accuracy by Character): Mandatory vs Optional Data
+#### 2.8.2 Read Tokens (Accuracy by Character): Mandatory vs Optional Data
 | Format | Read Tokens Man | Read Tokens Opt | Diff | Diff (%) | Useful Read Tokens Man | Useful Read Tokens Opt | Diff | Diff (%) | Wasted Read Tokens Man | Wasted Read Tokens Opt | Diff | Diff (%) | Accuracy by Character (%) Man | Accuracy by Character (%) Opt | Diff (%) | Eff Score Read Man | Eff Score Read Opt | Diff | Diff (%) | Wtd Accuracy by Character (%) Man | Wtd Accuracy by Character (%) Opt | Diff (%) | Wtd Eff Score Read Man | Wtd Eff Score Read Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 7695 | 7438 | -257 | -3.34 | 7515 | 6839 | -676 | -8.99 | 180 | 599 | +419 | +232.61 | 97.66 | 91.95 | -5.71 | 95.93 | 93.06 | -2.87 | -2.99 | 94.59 | 88.76 | -5.83 | 93.89 | 90.94 | -2.95 | -3.14 |
@@ -380,7 +413,7 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | XML_PRETTY | 16137 | 15076 | -1061 | -6.57 | 15222 | 14676 | -546 | -3.58 | 915 | 400 | -515 | -56.33 | 94.33 | 97.35 | +3.02 | 62.92 | 68.81 | +5.88 | +9.35 | 92.37 | 93.00 | +0.63 | 61.62 | 65.91 | +4.29 | +6.96 |
 | YAML | 12533 | 11742 | -791 | -6.31 | 12208 | 11171 | -1037 | -8.49 | 325 | 571 | +246 | +75.71 | 97.41 | 95.14 | -2.27 | 78.12 | 79.49 | +1.37 | +1.76 | 95.18 | 91.37 | -3.81 | 76.63 | 76.98 | +0.34 | +0.45 |
 
-#### 2.7.3 Output Tokens (Accuracy by Character): Mandatory vs Optional Data
+#### 2.8.3 Output Tokens (Accuracy by Character): Mandatory vs Optional Data
 | Format | Output Tokens Man | Output Tokens Opt | Diff | Diff (%) | Useful Output Tokens Man | Useful Output Tokens Opt | Diff | Diff (%) | Wasted Output Tokens Man | Wasted Output Tokens Opt | Diff | Diff (%) | Accuracy by Character (%) Man | Accuracy by Character (%) Opt | Diff (%) | Eff Score Output Man | Eff Score Output Opt | Diff | Diff (%) | Wtd Accuracy by Character (%) Man | Wtd Accuracy by Character (%) Opt | Diff (%) | Wtd Eff Score Output Man | Wtd Eff Score Output Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 11118 | 9064 | -2054 | -18.47 | 10858 | 8335 | -2523 | -23.24 | 260 | 729 | +469 | +180.58 | 97.66 | 91.95 | -5.71 | 84.45 | 94.57 | +10.12 | +11.98 | 94.59 | 88.76 | -5.83 | 82.40 | 92.44 | +10.04 | +12.18 |
@@ -391,7 +424,7 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | XML_PRETTY | 9799 | 11478 | +1679 | +17.14 | 9244 | 11175 | +1931 | +20.89 | 556 | 305 | -251 | -45.22 | 94.33 | 97.35 | +3.02 | 91.17 | 81.79 | -9.37 | -10.28 | 92.37 | 93.00 | +0.63 | 89.86 | 78.89 | -10.96 | -12.20 |
 | YAML | 11076 | 9110 | -1966 | -17.75 | 10789 | 8667 | -2122 | -19.66 | 287 | 443 | +156 | +54.32 | 97.41 | 95.14 | -2.27 | 84.56 | 96.38 | +11.81 | +13.97 | 95.18 | 91.37 | -3.81 | 83.08 | 93.86 | +10.79 | +12.98 |
 
-#### 2.7.4 Total Tokens (Accuracy by Character): Mandatory vs Optional Data
+#### 2.8.4 Total Tokens (Accuracy by Character): Mandatory vs Optional Data
 | Format | Total Tokens Man | Total Tokens Opt | Diff | Diff (%) | Useful Total Tokens Man | Useful Total Tokens Opt | Diff | Diff (%) | Wasted Total Tokens Man | Wasted Total Tokens Opt | Diff | Diff (%) | Accuracy by Character (%) Man | Accuracy by Character (%) Opt | Diff (%) | Eff Score Total Man | Eff Score Total Opt | Diff | Diff (%) | Wtd Accuracy by Character (%) Man | Wtd Accuracy by Character (%) Opt | Diff (%) | Wtd Eff Score Total Man | Wtd Eff Score Total Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 18813 | 16502 | -2311 | -12.28 | 18372 | 15173 | -3199 | -17.41 | 440 | 1328 | +888 | +201.86 | 97.66 | 91.95 | -5.71 | 91.47 | 94.60 | +3.13 | +3.42 | 94.59 | 88.76 | -5.83 | 89.42 | 92.48 | +3.05 | +3.41 |
@@ -402,8 +435,8 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | XML_PRETTY | 25936 | 26554 | +618 | +2.38 | 24466 | 25851 | +1385 | +5.66 | 1471 | 704 | -767 | -52.13 | 94.33 | 97.35 | +3.02 | 67.86 | 68.02 | +0.16 | +0.23 | 92.37 | 93.00 | +0.63 | 66.55 | 65.11 | -1.44 | -2.16 |
 | YAML | 23609 | 20852 | -2757 | -11.68 | 22998 | 19839 | -3159 | -13.73 | 611 | 1013 | +402 | +65.79 | 97.41 | 95.14 | -2.27 | 76.90 | 83.67 | +6.76 | +8.80 | 95.18 | 91.37 | -3.81 | 75.41 | 81.15 | +5.74 | +7.61 |
 
-### 2.8 Answer Per Format Breakdown
-#### 2.8.1 Metrics
+### 2.9 Answer Per Format Breakdown
+#### 2.9.1 Metrics
 | Format | Variant | Correct Answers | Incorrect Answers | No Answers | Accuracy (%) | Expected Characters | Output Characters | Correct Characters | Incorrect Characters | Accuracy by Character (%) |
 |---|---|---|---|---|---|---|---|---|---|---|
 | CSV | man | 96 | 28 | 0 | 77.69 | 7782 | 7824 | 7640 | 184 | 97.66 |
@@ -421,7 +454,7 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | YAML | man | 98 | 26 | 0 | 79.30 | 7782 | 7843 | 7640 | 203 | 97.41 |
 | YAML | opt | 90 | 34 | 0 | 72.58 | 8451 | 8585 | 8166 | 419 | 95.14 |
 
-#### 2.8.2 Answers: Mandatory vs Optional Data
+#### 2.9.2 Answers: Mandatory vs Optional Data
 | Format | Correct Man | Correct Opt | Diff | Diff (%) | Incorrect Man | Incorrect Opt | Diff | Diff (%) | No Answers Man | No Answers Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 96 | 89 | -7 | -7.29 | 28 | 35 | +7 | +25.00 | 0 | 0 | 0 | 0.00 | 77.69 | 72.04 | -5.65 |
@@ -432,7 +465,7 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | XML_PRETTY | 96 | 98 | +2 | +2.43 | 28 | 26 | -2 | -8.32 | 0 | 0 | 0 | 0.00 | 77.15 | 79.03 | +1.88 |
 | YAML | 98 | 90 | -8 | -8.50 | 26 | 34 | +8 | +32.04 | 0 | 0 | 0 | 0.00 | 79.30 | 72.58 | -6.72 |
 
-#### 2.8.3 Characters: Mandatory vs Optional Data
+#### 2.9.3 Characters: Mandatory vs Optional Data
 | Format | Output Characters Man | Output Characters Opt | Diff | Diff (%) | Correct Characters Man | Correct Characters Opt | Diff | Diff (%) | Incorrect Characters Man | Incorrect Characters Opt | Diff | Diff (%) | Accuracy by Character (%) Man | Accuracy by Character (%) Opt | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 7824 | 8757 | +933 | +11.92 | 7640 | 8048 | +408 | +5.34 | 184 | 709 | +525 | +285.33 | 97.66 | 91.95 | -5.71 |
@@ -443,8 +476,8 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | XML_PRETTY | 7975 | 8541 | +566 | +7.09 | 7521 | 8313 | +792 | +10.53 | 454 | 227 | -227 | -49.93 | 94.33 | 97.35 | 3.02 |
 | YAML | 7843 | 8585 | +742 | +9.46 | 7640 | 8166 | +526 | +6.88 | 203 | 419 | +216 | +106.40 | 97.41 | 95.14 | -2.27 |
 
-### 2.9 Accuracy Per Question Category Analysis
-#### 2.9.1 Metrics
+### 2.10 Accuracy Per Question Category Analysis
+#### 2.10.1 Metrics
 | Format | Variant | Accuracy (%) | Field Retrieval (%) | Structure Awareness (%) | Filtering (%) | Aggregation (%) | Wtd Acc (%) | Wtd Field Retrieval (%) | Wtd Structure Awareness (%) | Wtd Filtering (%) | Wtd Aggregation (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | man | 77.69 | 98.79 | 70.37 | 58.73 | 50.79 | 94.59 | 37.05 | 20.52 | 12.24 | 6.35 |
@@ -462,7 +495,7 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | YAML | man | 79.30 | 97.57 | 61.73 | 68.25 | 65.08 | 95.18 | 36.59 | 18.00 | 14.22 | 8.13 |
 | YAML | opt | 72.58 | 90.30 | 64.20 | 63.49 | 46.03 | 91.37 | 33.87 | 18.72 | 13.23 | 5.76 |
 
-#### 2.9.2 Field Retrieval: Mandatory vs Optional
+#### 2.10.2 Field Retrieval: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -474,7 +507,7 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | XML_PRETTY | 90.91 | 96.97 | +6.06 | 34.09 | 36.36 | +2.27 |
 | YAML | 97.57 | 90.30 | -7.27 | 36.59 | 33.87 | -2.73 |
 
-#### 2.9.3 Structure Awareness: Mandatory vs Optional
+#### 2.10.3 Structure Awareness: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -486,7 +519,7 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | XML_PRETTY | 64.20 | 80.25 | +16.05 | 18.72 | 23.41 | +4.69 |
 | YAML | 61.73 | 64.20 | +2.47 | 18.00 | 18.72 | +0.72 |
 
-#### 2.9.4 Filtering: Mandatory vs Optional
+#### 2.10.4 Filtering: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -498,7 +531,7 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | XML_PRETTY | 63.49 | 61.90 | -1.59 | 13.23 | 12.90 | -0.33 |
 | YAML | 68.25 | 63.49 | -4.76 | 14.22 | 13.23 | -0.99 |
 
-#### 2.9.5 Aggregation: Mandatory vs Optional
+#### 2.10.5 Aggregation: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -510,8 +543,8 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | XML_PRETTY | 71.43 | 47.62 | -23.81 | 8.93 | 5.95 | -2.97 |
 | YAML | 65.08 | 46.03 | -19.04 | 8.13 | 5.76 | -2.38 |
 
-### 2.10 Accuracy By Character Per Question Category Analysis
-#### 2.10.1 Metrics
+### 2.11 Accuracy By Character Per Question Category Analysis
+#### 2.11.1 Metrics
 | Format | Variant | Accuracy By Character (%) | Field Retrieval (%) | Structure Awareness (%) | Filtering (%) | Aggregation (%) | Wtd Acc By Char (%) | Wtd Field Retrieval (%) | Wtd Structure Awareness (%) | Wtd Filtering (%) | Wtd Aggregation (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | man | 97.66 | 99.18 | 97.41 | 91.37 | 79.63 | 94.59 | 37.19 | 28.41 | 19.03 | 9.95 |
@@ -529,7 +562,7 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | YAML | man | 97.41 | 98.40 | 97.31 | 92.26 | 85.39 | 95.18 | 36.90 | 28.38 | 19.22 | 10.67 |
 | YAML | opt | 95.14 | 93.26 | 97.77 | 90.56 | 72.12 | 91.37 | 34.97 | 28.52 | 18.87 | 9.02 |
 
-#### 2.10.2 Field Retrieval: Mandatory vs Optional
+#### 2.11.2 Field Retrieval: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -541,7 +574,7 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | XML_PRETTY | 92.82 | 97.24 | +4.42 | 34.81 | 36.46 | +1.66 |
 | YAML | 98.40 | 93.26 | -5.14 | 36.90 | 34.97 | -1.93 |
 
-#### 2.10.3 Structure Awareness: Mandatory vs Optional
+#### 2.11.3 Structure Awareness: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -553,7 +586,7 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | XML_PRETTY | 95.83 | 98.52 | +2.69 | 27.95 | 28.73 | +0.79 |
 | YAML | 97.31 | 97.77 | +0.46 | 28.38 | 28.52 | +0.13 |
 
-#### 2.10.4 Filtering: Mandatory vs Optional
+#### 2.11.4 Filtering: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -565,7 +598,7 @@ The rankings reveal that no single format dominates across all metrics. The opti
 | XML_PRETTY | 91.07 | 89.09 | -1.98 | 18.97 | 18.56 | -0.41 |
 | YAML | 92.26 | 90.56 | -1.70 | 19.22 | 18.87 | -0.35 |
 
-#### 2.10.5 Aggregation: Mandatory vs Optional
+#### 2.11.5 Aggregation: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -596,7 +629,7 @@ The rankings reveal that no single format dominates across all metrics. The opti
 
 ---
 
-- **Report Generated**: 2026-04-14
+- **Report Generated**: 2026-06-21
 - **Written by**: [Thore Höltig](https://github.com/thoeltig)
 - **Test run in**: Claude Code 2.1.73
 - **Data Source**: `analytics_results.json`

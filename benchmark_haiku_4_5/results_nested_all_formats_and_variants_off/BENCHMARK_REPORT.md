@@ -207,8 +207,38 @@ No single format dominates every metric. The optimal choice depends on the use c
 | XML_PRETTY | 20204 | 19671 | -533 | -2.64 | 302 | 205 | -97 | -32.12 | 9643 | 8097 | -1546 | -16.03 | 9945 | 8302 | -1643 | -16.52 | 30149 | 27973 | -2176 | -7.22 |
 | YAML | 14155 | 14148 | -7 | -0.05 | 213 | 303 | +90 | +42.25 | 9819 | 7786 | -2033 | -20.70 | 10031 | 8088 | -1943 | -19.37 | 24186 | 22236 | -1950 | -8.06 |
 
-### 2.4 Performance
-#### 2.4.1 Metrics
+### 2.4 Drift over multiple runs
+
+*Note: Drift = The distance from average to the lowest or highest value. Spread = Distance between lowest to highest value (larger = less predictable results across runs).*
+
+#### 2.4.1 Drift per Format and Variant
+| Format | Variant | Runs | Output Tokens Total | Drift | Spread | Accuracy (%) | Drift (pp) | Spread (pp) | Accuracy By Character (%) | Drift (pp) | Spread (pp) |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| JSON_COMPACT | man | 5 | 9930 | -1329/+1976 | 3305 | 75.00 | -7.53/+7.53 | 15.06 | 96.23 | -2.38/+2.07 | 4.45 |
+| JSON_COMPACT | opt | 5 | 11789 | -2656/+2881 | 5537 | 76.45 | -7.17/+6.54 | 13.71 | 96.17 | -3.21/+2.51 | 5.72 |
+| JSON_PRETTY | man | 5 | 9243 | -3420/+2624 | 6044 | 73.55 | -4.61/+6.36 | 10.97 | 94.61 | -2.80/+4.42 | 7.22 |
+| JSON_PRETTY | opt | 3 | 11734 | -3176/+3138 | 6314 | 73.92 | -11.63/+10.19 | 21.82 | 91.85 | -10.69/+6.53 | 17.22 |
+| TOON_DEFAULT | man | 3 | 8915 | -5085/+4871 | 9956 | 74.29 | -16.41/+8.56 | 24.97 | 95.31 | -6.23/+3.43 | 9.66 |
+| TOON_DEFAULT | opt | 3 | 11912 | -3591/+4494 | 8086 | 75.12 | -6.60/+7.36 | 13.96 | 96.42 | -2.68/+1.68 | 4.36 |
+| XML_COMPACT | man | 3 | 5295 | -4990/+4250 | 9240 | 75.81 | -11.70/+11.70 | 23.40 | 95.65 | -3.61/+2.74 | 6.35 |
+| XML_COMPACT | opt | 2 | 9288 | -3635/+3635 | 7270 | 74.20 | -13.05/+7.60 | 20.65 | 96.80 | -3.02/+1.56 | 4.58 |
+| XML_PRETTY | man | 4 | 9945 | -4150/+3613 | 7763 | 69.62 | -11.96/+6.56 | 18.52 | 94.18 | -2.00/+2.94 | 4.94 |
+| XML_PRETTY | opt | 3 | 8301 | -3392/+6522 | 9914 | 69.89 | -7.68/+14.24 | 21.92 | 92.34 | -6.06/+6.37 | 12.43 |
+| YAML | man | 3 | 10031 | -1667/+1692 | 3359 | 75.27 | -2.50/+1.78 | 4.28 | 96.43 | -0.91/+1.60 | 2.51 |
+| YAML | opt | 3 | 8089 | -1555/+1010 | 2566 | 65.86 | -3.26/+2.85 | 6.11 | 93.01 | -1.59/+1.66 | 3.25 |
+
+#### 2.4.2 Spread: Mandatory vs Optional
+| Format | Output Tokens Total Spread Man | Output Tokens Total Spread Opt | Diff | Acc Spread Man (pp) | Acc Spread Opt (pp) | Diff (pp) | Acc By Char Spread Man (pp) | Acc By Char Spread Opt (pp) | Diff (pp) |
+|---|---|---|---|---|---|---|---|---|---|
+| JSON_COMPACT | 3305 | 5537 | +2233 | 15.06 | 13.71 | -1.35 | 4.45 | 5.72 | +1.27 |
+| JSON_PRETTY | 6044 | 6314 | +270 | 10.97 | 21.82 | +10.85 | 7.22 | 17.22 | +10.00 |
+| TOON_DEFAULT | 9956 | 8086 | -1870 | 24.97 | 13.96 | -11.01 | 9.66 | 4.36 | -5.30 |
+| XML_COMPACT | 9240 | 7270 | -1970 | 23.40 | 20.65 | -2.75 | 6.35 | 4.58 | -1.77 |
+| XML_PRETTY | 7763 | 9914 | +2151 | 18.52 | 21.92 | +3.40 | 4.94 | 12.43 | +7.49 |
+| YAML | 3359 | 2566 | -794 | 4.28 | 6.11 | +1.83 | 2.51 | 3.25 | +0.74 |
+
+### 2.5 Performance
+#### 2.5.1 Metrics
 | Format | Variant | Read (ms) | Read (tokens/ms) | Rate (ms/record) | Output Before Write (ms) | Output Write (ms) | Output Write (tokens/ms) | Rate (ms/question) | Read + Output Write (ms) | Read + Output Write (tokens/ms) | Rate (ms/record+question) | Output (ms) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | man | 13 | 781.77 | 0.42 | 45912 | 35860 | 0.27 | 289.19 | 35873 | 782.04 | 231.44 | 81772 |
@@ -224,7 +254,7 @@ No single format dominates every metric. The optimal choice depends on the use c
 | YAML | man | 12 | 1179.58 | 0.39 | 48091 | 37690 | 0.26 | 303.95 | 37702 | 1179.84 | 243.24 | 85781 |
 | YAML | opt | 11 | 1286.18 | 0.35 | 31187 | 36048 | 0.22 | 290.71 | 36059 | 1286.40 | 232.64 | 67236 |
 
-#### 2.4.2 Mandatory vs Optional
+#### 2.5.2 Mandatory vs Optional
 | Format | Read Man (ms) | Read Opt (ms) | Diff (ms) | Diff (%) | Output Before Write Man (s) | Output Before Write Opt (s) | Diff (s) | Diff (%) | Output Write Man (s) | Output Write Opt (s) | Diff (s) | Diff (%) | Read + Output Write Man (s) | Read + Output Write Opt (s) | Diff (s) | Diff (%) | Output Man (s) | Output Opt (s) | Diff (s) | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 13 | 9 | -4 | -30.77 | 45.91 | 56.15 | +10.23 | +22.29 | 35.86 | 38.52 | +2.66 | +7.41 | 35.87 | 38.52 | +2.65 | +7.39 | 81.77 | 94.66 | +12.89 | +15.76 |
@@ -234,8 +264,8 @@ No single format dominates every metric. The optimal choice depends on the use c
 | XML_PRETTY | 13 | 6 | -7 | -53.85 | 43.39 | 28.16 | -15.22 | -35.09 | 38.00 | 40.58 | +2.57 | +6.77 | 38.02 | 40.58 | +2.57 | +6.75 | 81.39 | 68.74 | -12.65 | -15.54 |
 | YAML | 12 | 11 | -1 | -8.33 | 48.09 | 31.19 | -16.90 | -35.15 | 37.69 | 36.05 | -1.64 | -4.36 | 37.70 | 36.06 | -1.64 | -4.36 | 85.78 | 67.24 | -18.55 | -21.62 |
 
-### 2.5 Structural Efficiency
-#### 2.5.1 Metrics
+### 2.6 Structural Efficiency
+#### 2.6.1 Metrics
 | Format | Variant | Chars / Read Token | Read Tokens / Value | Read Tokens / Object | Info / Read Token | Info / Output Token | Info / Total Token | Info / Read Token (Acc By Char) | Info / Output Token (Acc By Char) | Info / Total Token (Acc By Char) |
 |---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | man | 2.25 | 14.90 | 327.84 | 0.74 | 0.76 | 0.37 | 0.95 | 0.97 | 0.48 |
@@ -251,7 +281,7 @@ No single format dominates every metric. The optimal choice depends on the use c
 | YAML | man | 1.81 | 20.76 | 456.61 | 0.53 | 0.75 | 0.31 | 0.68 | 0.96 | 0.40 |
 | YAML | opt | 1.79 | 22.42 | 456.39 | 0.47 | 0.81 | 0.30 | 0.66 | 1.15 | 0.42 |
 
-#### 2.5.2 Characters And Values: Mandatory vs Optional
+#### 2.6.2 Characters And Values: Mandatory vs Optional
 | Format | Chars / Read Token Man | Chars / Read Token Opt | Diff | Diff (%) | Read Tokens / Value Man | Read Tokens / Value Opt | Diff | Diff (%) | Read Tokens / Object Man | Read Tokens / Object Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 2.25 | 2.22 | -0.03 | -1.20 | 14.90 | 15.29 | +0.38 | +2.57 | 327.84 | 311.13 | -16.71 | -5.10 |
@@ -261,7 +291,7 @@ No single format dominates every metric. The optimal choice depends on the use c
 | XML_PRETTY | 1.99 | 1.97 | -0.01 | -0.55 | 29.63 | 31.17 | +1.55 | +5.23 | 651.74 | 634.55 | -17.19 | -2.64 |
 | YAML | 1.81 | 1.79 | -0.02 | -1.16 | 20.76 | 22.42 | +1.67 | +8.03 | 456.61 | 456.39 | -0.23 | -0.05 |
 
-#### 2.5.3 Information: Mandatory vs Optional
+#### 2.6.3 Information: Mandatory vs Optional
 | Format | Info / Read Token Man | Info / Read Token Opt | Diff | Diff (%) | Info / Output Token Man | Info / Output Token Opt | Diff | Diff (%) | Info / Total Token Man | Info / Total Token Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 0.74 | 0.79 | +0.06 | +7.45 | 0.76 | 0.65 | -0.11 | -14.17 | 0.37 | 0.36 | -0.02 | -4.29 |
@@ -271,7 +301,7 @@ No single format dominates every metric. The optimal choice depends on the use c
 | XML_PRETTY | 0.35 | 0.36 | +0.01 | +2.90 | 0.70 | 0.84 | +0.14 | +20.29 | 0.23 | 0.25 | +0.02 | +8.23 |
 | YAML | 0.53 | 0.47 | -0.07 | -12.41 | 0.75 | 0.81 | +0.06 | +8.53 | 0.31 | 0.30 | -0.02 | -4.82 |
 
-#### 2.5.4 Information (Accuracy By Character): Mandatory vs Optional
+#### 2.6.4 Information (Accuracy By Character): Mandatory vs Optional
 | Format | Info / Read Token (Acc By Char) Man | Info / Read Token (Acc By Char) Opt | Diff | Diff (%) | Info / Output Token (Acc By Char) Man | Info / Output Token (Acc By Char)  Opt | Diff | Diff (%) | Info / Total Token (Acc By Char) Man | Info / Total Token (Acc By Char) Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 0.95 | 1.00 | +0.05 | +5.28 | 0.97 | 0.82 | -0.15 | -15.79 | 0.48 | 0.45 | -0.03 | -6.26 |
@@ -281,8 +311,8 @@ No single format dominates every metric. The optimal choice depends on the use c
 | XML_PRETTY | 0.47 | 0.47 | 0.00 | 0.00 | 0.95 | 1.11 | +0.17 | +17.42 | 0.31 | 0.33 | +0.02 | +5.77 |
 | YAML | 0.68 | 0.66 | -0.02 | -3.52 | 0.96 | 1.15 | +0.19 | +19.67 | 0.40 | 0.42 | +0.02 | +4.76 |
 
-### 2.6 Token Utilization Efficiency
-#### 2.6.1 Metrics
+### 2.7 Token Utilization Efficiency
+#### 2.7.1 Metrics
 | Format | Variant | Read Tokens | Useful Read Tokens | Wasted Read Tokens | Output Tokens | Useful Output Tokens | Wasted Output Tokens | Total Tokens | Useful Total Tokens | Wasted Total Tokens | Accuracy (%) | Eff Score Read | Eff Score Output | Eff Score Total | Wtd Accuracy (%) | Wtd Eff Score Read | Wtd Eff Score Output | Wtd Eff Score Total |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | man | 10163 | 7622 | 2541 | 9930 | 7447 | 2482 | 20093 | 15070 | 5023 | 75.00 | 81.67 | 65.68 | 77.57 | 72.16 | 79.78 | 63.79 | 75.68 |
@@ -298,7 +328,7 @@ No single format dominates every metric. The optimal choice depends on the use c
 | YAML | man | 14155 | 10654 | 3501 | 10031 | 7551 | 2481 | 24186 | 18205 | 5981 | 75.27 | 69.27 | 65.47 | 66.54 | 73.37 | 68.00 | 64.21 | 65.27 |
 | YAML | opt | 14148 | 9318 | 4830 | 8089 | 5327 | 2761 | 22237 | 14645 | 7592 | 65.86 | 63.02 | 66.58 | 65.61 | 64.97 | 62.43 | 65.99 | 65.01 |
 
-#### 2.6.2 Read Tokens: Mandatory vs Optional Data
+#### 2.7.2 Read Tokens: Mandatory vs Optional Data
 | Format | Read Tokens Man | Read Tokens Opt | Diff | Diff (%) | Useful Read Tokens Man | Useful Read Tokens Opt | Diff | Diff (%) | Wasted Read Tokens Man | Wasted Read Tokens Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) | Eff Score Read Man | Eff Score Read Opt | Diff | Diff (%) | Wtd Accuracy (%) Man | Wtd Accuracy (%) Opt | Diff (%) | Wtd Eff Score Read Man | Wtd Eff Score Read Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 10163 | 9645 | -518 | -5.10 | 7622 | 7373 | -249 | -3.26 | 2541 | 2272 | -269 | -10.60 | 75.00 | 76.45 | +1.45 | 81.67 | 84.27 | +2.60 | +3.18 | 72.16 | 74.27 | +2.11 | 79.78 | 82.81 | +3.04 | +3.81 |
@@ -308,7 +338,7 @@ No single format dominates every metric. The optimal choice depends on the use c
 | XML_PRETTY | 20204 | 19671 | -533 | -2.64 | 14066 | 13748 | -318 | -2.26 | 6138 | 5923 | -215 | -3.50 | 69.62 | 69.89 | +0.27 | 46.44 | 48.30 | +1.86 | +4.00 | 67.86 | 69.01 | +1.15 | 45.27 | 47.72 | +2.45 | +5.40 |
 | YAML | 14155 | 14148 | -7 | -0.05 | 10654 | 9317 | -1337 | -12.55 | 3501 | 4831 | +1330 | +37.98 | 75.27 | 65.86 | -9.41 | 69.27 | 63.02 | -6.25 | -9.03 | 73.37 | 64.97 | -8.40 | 68.00 | 62.43 | -5.58 | -8.20 |
 
-#### 2.6.3 Output Tokens: Mandatory vs Optional Data
+#### 2.7.3 Output Tokens: Mandatory vs Optional Data
 | Format | Output Tokens Man | Output Tokens Opt | Diff | Diff (%) | Useful Output Tokens Man | Useful Output Tokens Opt | Diff | Diff (%) | Wasted Output Tokens Man | Wasted Output Tokens Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) | Eff Score Output Man | Eff Score Output Opt | Diff | Diff (%) | Wtd Accuracy (%) Man | Wtd Accuracy (%) Opt | Diff (%) | Wtd Eff Score Output Man | Wtd Eff Score Output Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 9930 | 11790 | +1860 | +18.73 | 7447 | 9013 | +1566 | +21.02 | 2482 | 2776 | +294 | +11.84 | 75.00 | 76.45 | +1.45 | 65.68 | 59.58 | -6.10 | -9.29 | 72.16 | 74.27 | +2.11 | 63.79 | 58.13 | -5.66 | -8.87 |
@@ -318,7 +348,7 @@ No single format dominates every metric. The optimal choice depends on the use c
 | XML_PRETTY | 9945 | 8302 | -1643 | -16.53 | 6924 | 5802 | -1122 | -16.20 | 3021 | 2499 | -522 | -17.27 | 69.62 | 69.89 | +0.27 | 62.04 | 68.46 | +6.43 | +10.36 | 67.86 | 69.01 | +1.15 | 60.86 | 67.88 | +7.01 | +11.52 |
 | YAML | 10031 | 8088 | -1943 | -19.37 | 7551 | 5328 | -2223 | -29.44 | 2481 | 2762 | +281 | +11.31 | 75.27 | 65.86 | -9.41 | 65.47 | 66.58 | +1.11 | +1.70 | 73.37 | 64.97 | -8.40 | 64.21 | 65.99 | +1.78 | +2.78 |
 
-#### 2.6.4 Total Tokens: Mandatory vs Optional Data
+#### 2.7.4 Total Tokens: Mandatory vs Optional Data
 | Format | Total Tokens Man | Total Tokens Opt | Diff | Diff (%) | Useful Total Tokens Man | Useful Total Tokens Opt | Diff | Diff (%) | Wasted Total Tokens Man | Wasted Total Tokens Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) | Eff Score Total Man | Eff Score Total Opt | Diff | Diff (%) | Wtd Accuracy (%) Man | Wtd Accuracy (%) Opt | Diff (%) | Wtd Eff Score Total Man | Wtd Eff Score Total Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 20093 | 21435 | +1342 | +6.68 | 15070 | 16387 | +1317 | +8.74 | 5023 | 5048 | +25 | +0.49 | 75.00 | 76.45 | +1.45 | 77.57 | 74.86 | -2.71 | -3.49 | 72.16 | 74.27 | +2.11 | 75.68 | 73.41 | -2.27 | -3.00 |
@@ -328,8 +358,8 @@ No single format dominates every metric. The optimal choice depends on the use c
 | XML_PRETTY | 30149 | 27973 | -2176 | -7.22 | 20990 | 19550 | -1440 | -6.86 | 9159 | 8422 | -737 | -8.04 | 69.62 | 69.89 | +0.27 | 46.44 | 52.58 | +6.14 | +13.23 | 67.86 | 69.01 | +1.15 | 45.27 | 52.00 | +6.73 | +14.86 |
 | YAML | 24186 | 22236 | -1950 | -8.06 | 18205 | 14645 | -3560 | -19.55 | 5981 | 7591 | +1610 | +26.92 | 75.27 | 65.86 | -9.41 | 66.54 | 65.61 | -0.93 | -1.40 | 73.37 | 64.97 | -8.40 | 65.27 | 65.01 | -0.26 | -0.40 |
 
-### 2.7 Token Utilization Efficiency (Accuracy by Character)
-#### 2.7.1 Metrics
+### 2.8 Token Utilization Efficiency (Accuracy by Character)
+#### 2.8.1 Metrics
 | Format | Variant | Read Tokens | Useful Read Tokens | Wasted Read Tokens | Output Tokens | Useful Output Tokens | Wasted Output Tokens | Total Tokens | Useful Total Tokens | Wasted Total Tokens | Accuracy by Character (%) | Eff Score Read | Eff Score Output | Eff Score Total | Wtd Accuracy by Character (%) | Wtd Eff Score Read | Wtd Eff Score Output | Wtd Eff Score Total |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | man | 10163 | 9780 | 383 | 9930 | 9555 | 374 | 20093 | 19335 | 757 | 96.23 | 95.82 | 79.83 | 91.73 | 94.06 | 94.38 | 78.39 | 90.28 |
@@ -345,7 +375,7 @@ No single format dominates every metric. The optimal choice depends on the use c
 | YAML | man | 14155 | 13650 | 505 | 10031 | 9673 | 358 | 24186 | 23323 | 863 | 96.43 | 83.38 | 79.58 | 80.65 | 93.40 | 81.36 | 77.56 | 78.63 |
 | YAML | opt | 14148 | 13159 | 989 | 8089 | 7523 | 565 | 22237 | 20682 | 1554 | 93.01 | 81.12 | 84.68 | 83.71 | 89.67 | 78.89 | 82.46 | 81.48 |
 
-#### 2.7.2 Read Tokens (Accuracy by Character): Mandatory vs Optional Data
+#### 2.8.2 Read Tokens (Accuracy by Character): Mandatory vs Optional Data
 | Format | Read Tokens Man | Read Tokens Opt | Diff | Diff (%) | Useful Read Tokens Man | Useful Read Tokens Opt | Diff | Diff (%) | Wasted Read Tokens Man | Wasted Read Tokens Opt | Diff | Diff (%) | Accuracy by Character (%) Man | Accuracy by Character (%) Opt | Diff (%) | Eff Score Read Man | Eff Score Read Opt | Diff | Diff (%) | Wtd Accuracy by Character (%) Man | Wtd Accuracy by Character (%) Opt | Diff (%) | Wtd Eff Score Read Man | Wtd Eff Score Read Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 10163 | 9645 | -518 | -5.10 | 9780 | 9276 | -504 | -5.16 | 383 | 369 | -14 | -3.59 | 96.23 | 96.17 | -0.06 | 95.82 | 97.41 | +1.59 | +1.66 | 94.06 | 93.17 | -0.89 | 94.38 | 95.41 | +1.04 | +1.10 |
@@ -355,7 +385,7 @@ No single format dominates every metric. The optimal choice depends on the use c
 | XML_PRETTY | 20204 | 19671 | -533 | -2.64 | 19028 | 18164 | -864 | -4.54 | 1176 | 1507 | +331 | +28.14 | 94.18 | 92.34 | -1.84 | 62.82 | 63.27 | +0.45 | +0.72 | 90.99 | 88.40 | -2.59 | 60.69 | 60.64 | -0.05 | -0.08 |
 | YAML | 14155 | 14148 | -7 | -0.05 | 13650 | 13159 | -491 | -3.59 | 505 | 989 | +484 | +95.76 | 96.43 | 93.01 | -3.42 | 83.38 | 81.12 | -2.26 | -2.71 | 93.40 | 89.67 | -3.73 | 81.36 | 78.89 | -2.46 | -3.03 |
 
-#### 2.7.3 Output Tokens (Accuracy by Character): Mandatory vs Optional Data
+#### 2.8.3 Output Tokens (Accuracy by Character): Mandatory vs Optional Data
 | Format | Output Tokens Man | Output Tokens Opt | Diff | Diff (%) | Useful Output Tokens Man | Useful Output Tokens Opt | Diff | Diff (%) | Wasted Output Tokens Man | Wasted Output Tokens Opt | Diff | Diff (%) | Accuracy by Character (%) Man | Accuracy by Character (%) Opt | Diff (%) | Eff Score Output Man | Eff Score Output Opt | Diff | Diff (%) | Wtd Accuracy by Character (%) Man | Wtd Accuracy by Character (%) Opt | Diff (%) | Wtd Eff Score Output Man | Wtd Eff Score Output Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 9930 | 11790 | +1860 | +18.73 | 9555 | 11337 | +1782 | +18.65 | 374 | 451 | +77 | +20.64 | 96.23 | 96.17 | -0.06 | 79.83 | 72.72 | -7.11 | -8.90 | 94.06 | 93.17 | -0.89 | 78.39 | 70.72 | -7.66 | -9.77 |
@@ -365,7 +395,7 @@ No single format dominates every metric. The optimal choice depends on the use c
 | XML_PRETTY | 9945 | 8302 | -1643 | -16.53 | 9366 | 7665 | -1701 | -18.16 | 579 | 636 | +57 | +9.86 | 94.18 | 92.34 | -1.84 | 78.41 | 83.43 | +5.02 | +6.40 | 90.99 | 88.40 | -2.59 | 76.28 | 80.80 | +4.52 | +5.93 |
 | YAML | 10031 | 8088 | -1943 | -19.37 | 9673 | 7523 | -2150 | -22.23 | 358 | 565 | +207 | +57.90 | 96.43 | 93.01 | -3.42 | 79.58 | 84.68 | +5.10 | +6.41 | 93.40 | 89.67 | -3.73 | 77.56 | 82.46 | +4.90 | +6.31 |
 
-#### 2.7.4 Total Tokens (Accuracy by Character): Mandatory vs Optional Data
+#### 2.8.4 Total Tokens (Accuracy by Character): Mandatory vs Optional Data
 | Format | Total Tokens Man | Total Tokens Opt | Diff | Diff (%) | Useful Total Tokens Man | Useful Total Tokens Opt | Diff | Diff (%) | Wasted Total Tokens Man | Wasted Total Tokens Opt | Diff | Diff (%) | Accuracy by Character (%) Man | Accuracy by Character (%) Opt | Diff (%) | Eff Score Total Man | Eff Score Total Opt | Diff | Diff (%) | Wtd Accuracy by Character (%) Man | Wtd Accuracy by Character (%) Opt | Diff (%) | Wtd Eff Score Total Man | Wtd Eff Score Total Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 20093 | 21435 | +1342 | +6.68 | 19335 | 20613 | +1278 | +6.61 | 757 | 820 | +63 | +8.38 | 96.23 | 96.17 | -0.06 | 91.73 | 88.01 | -3.72 | -4.05 | 94.06 | 93.17 | -0.89 | 90.28 | 86.01 | -4.27 | -4.73 |
@@ -375,8 +405,8 @@ No single format dominates every metric. The optimal choice depends on the use c
 | XML_PRETTY | 30149 | 27973 | -2176 | -7.22 | 28394 | 25830 | -2564 | -9.03 | 1755 | 2143 | +388 | +22.11 | 94.18 | 92.34 | -1.84 | 62.81 | 67.55 | +4.73 | +7.54 | 90.99 | 88.40 | -2.59 | 60.69 | 64.92 | +4.23 | +6.98 |
 | YAML | 24186 | 22236 | -1950 | -8.06 | 23323 | 20682 | -2641 | -11.32 | 863 | 1554 | +691 | +80.06 | 96.43 | 93.01 | -3.42 | 80.65 | 83.71 | +3.06 | +3.79 | 93.40 | 89.67 | -3.73 | 78.63 | 81.48 | +2.85 | +3.63 |
 
-### 2.8 Answer Per Format Breakdown
-#### 2.8.1 Metrics
+### 2.9 Answer Per Format Breakdown
+#### 2.9.1 Metrics
 | Format | Variant | Correct Answers | Incorrect Answers | No Answers | Accuracy (%) | Expected Characters | Output Characters | Correct Characters | Incorrect Characters | Accuracy by Character (%) |
 |---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | man | 93 | 31 | 0 | 75.00 | 7782 | 7883 | 7585 | 298 | 96.23 |
@@ -392,7 +422,7 @@ No single format dominates every metric. The optimal choice depends on the use c
 | YAML | man | 93 | 31 | 0 | 75.27 | 7782 | 7877 | 7595 | 282 | 96.43 |
 | YAML | opt | 82 | 42 | 0 | 65.86 | 8451 | 8690 | 8082 | 608 | 93.01 |
 
-#### 2.8.2 Answers: Mandatory vs Optional Data
+#### 2.9.2 Answers: Mandatory vs Optional Data
 | Format | Correct Man | Correct Opt | Diff | Diff (%) | Incorrect Man | Incorrect Opt | Diff | Diff (%) | No Answers Man | No Answers Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 93 | 95 | +2 | +1.94 | 31 | 29 | -2 | -5.81 | 0 | 0 | 0 | 0.00 | 75.00 | 76.45 | +1.45 |
@@ -402,7 +432,7 @@ No single format dominates every metric. The optimal choice depends on the use c
 | XML_PRETTY | 86 | 86 | 0 | +0.40 | 38 | 38 | 0 | -0.89 | 0 | 0 | 0 | 0.00 | 69.62 | 69.89 | +0.27 |
 | YAML | 93 | 81 | -12 | -12.54 | 31 | 43 | +12 | +37.61 | 0 | 0 | 0 | 0.00 | 75.27 | 65.86 | -9.41 |
 
-#### 2.8.3 Characters: Mandatory vs Optional Data
+#### 2.9.3 Characters: Mandatory vs Optional Data
 | Format | Output Characters Man | Output Characters Opt | Diff | Diff (%) | Correct Characters Man | Correct Characters Opt | Diff | Diff (%) | Incorrect Characters Man | Incorrect Characters Opt | Diff | Diff (%) | Accuracy by Character (%) Man | Accuracy by Character (%) Opt | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 7883 | 8663 | +780 | +9.90 | 7585 | 8329 | +744 | +9.81 | 298 | 334 | +36 | +12.21 | 96.23 | 96.17 | -0.06 |
@@ -412,8 +442,8 @@ No single format dominates every metric. The optimal choice depends on the use c
 | XML_PRETTY | 7907 | 8742 | +835 | +10.56 | 7446 | 8066 | +620 | +8.32 | 461 | 677 | +216 | +46.78 | 94.18 | 92.34 | -1.84 |
 | YAML | 7877 | 8690 | +813 | +10.32 | 7595 | 8082 | +487 | +6.41 | 282 | 608 | +326 | +115.72 | 96.43 | 93.01 | -3.42 |
 
-### 2.9 Accuracy Per Question Category Analysis
-#### 2.9.1 Metrics
+### 2.10 Accuracy Per Question Category Analysis
+#### 2.10.1 Metrics
 | Format | Variant | Accuracy (%) | Field Retrieval (%) | Structure Awareness (%) | Filtering (%) | Aggregation (%) | Wtd Acc (%) | Wtd Field Retrieval (%) | Wtd Structure Awareness (%) | Wtd Filtering (%) | Wtd Aggregation (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | man | 75.00 | 96.36 | 56.30 | 58.09 | 60.00 | 94.06 | 36.14 | 16.42 | 12.10 | 7.50 |
@@ -429,7 +459,7 @@ No single format dominates every metric. The optimal choice depends on the use c
 | YAML | man | 75.27 | 99.39 | 60.49 | 61.90 | 44.45 | 93.40 | 37.27 | 17.64 | 12.90 | 5.55 |
 | YAML | opt | 65.86 | 82.42 | 55.56 | 61.90 | 39.68 | 89.67 | 30.91 | 16.20 | 12.90 | 4.96 |
 
-#### 2.9.2 Field Retrieval: Mandatory vs Optional
+#### 2.10.2 Field Retrieval: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -440,7 +470,7 @@ No single format dominates every metric. The optimal choice depends on the use c
 | XML_PRETTY | 88.48 | 87.88 | -0.61 | 33.18 | 32.96 | -0.23 |
 | YAML | 99.39 | 82.42 | -16.97 | 37.27 | 30.91 | -6.36 |
 
-#### 2.9.3 Structure Awareness: Mandatory vs Optional
+#### 2.10.3 Structure Awareness: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -451,7 +481,7 @@ No single format dominates every metric. The optimal choice depends on the use c
 | XML_PRETTY | 59.26 | 61.73 | +2.47 | 17.28 | 18.00 | +0.72 |
 | YAML | 60.49 | 55.56 | -4.94 | 17.64 | 16.20 | -1.44 |
 
-#### 2.9.4 Filtering: Mandatory vs Optional
+#### 2.10.4 Filtering: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -462,7 +492,7 @@ No single format dominates every metric. The optimal choice depends on the use c
 | XML_PRETTY | 53.97 | 61.90 | +7.94 | 11.24 | 12.90 | +1.65 |
 | YAML | 61.90 | 61.90 | 0.00 | 12.90 | 12.90 | 0.00 |
 
-#### 2.9.5 Aggregation: Mandatory vs Optional
+#### 2.10.5 Aggregation: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -473,8 +503,8 @@ No single format dominates every metric. The optimal choice depends on the use c
 | XML_PRETTY | 49.21 | 41.27 | -7.93 | 6.15 | 5.16 | -1.00 |
 | YAML | 44.45 | 39.68 | -4.76 | 5.55 | 4.96 | -0.59 |
 
-### 2.10 Accuracy By Character Per Question Category Analysis
-#### 2.10.1 Metrics
+### 2.11 Accuracy By Character Per Question Category Analysis
+#### 2.11.1 Metrics
 | Format | Variant | Accuracy By Character (%) | Field Retrieval (%) | Structure Awareness (%) | Filtering (%) | Aggregation (%) | Wtd Acc By Char (%) | Wtd Field Retrieval (%) | Wtd Structure Awareness (%) | Wtd Filtering (%) | Wtd Aggregation (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | man | 96.23 | 97.08 | 96.22 | 91.61 | 84.08 | 94.06 | 36.40 | 28.06 | 19.08 | 10.51 |
@@ -490,7 +520,7 @@ No single format dominates every metric. The optimal choice depends on the use c
 | YAML | man | 96.43 | 98.69 | 95.76 | 91.07 | 75.93 | 93.40 | 37.01 | 27.93 | 18.97 | 9.49 |
 | YAML | opt | 93.01 | 90.43 | 96.13 | 90.27 | 71.31 | 89.67 | 33.91 | 28.04 | 18.80 | 8.91 |
 
-#### 2.10.2 Field Retrieval: Mandatory vs Optional
+#### 2.11.2 Field Retrieval: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -501,7 +531,7 @@ No single format dominates every metric. The optimal choice depends on the use c
 | XML_PRETTY | 92.47 | 88.64 | -3.82 | 34.67 | 33.24 | -1.43 |
 | YAML | 98.69 | 90.43 | -8.25 | 37.01 | 33.91 | -3.10 |
 
-#### 2.10.3 Structure Awareness: Mandatory vs Optional
+#### 2.11.3 Structure Awareness: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -512,7 +542,7 @@ No single format dominates every metric. The optimal choice depends on the use c
 | XML_PRETTY | 96.13 | 96.65 | +0.52 | 28.04 | 28.19 | +0.16 |
 | YAML | 95.76 | 96.13 | +0.37 | 27.93 | 28.04 | +0.11 |
 
-#### 2.10.4 Filtering: Mandatory vs Optional
+#### 2.11.4 Filtering: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -523,7 +553,7 @@ No single format dominates every metric. The optimal choice depends on the use c
 | XML_PRETTY | 88.69 | 87.02 | -1.67 | 18.48 | 18.13 | -0.35 |
 | YAML | 91.07 | 90.27 | -0.80 | 18.97 | 18.80 | -0.17 |
 
-#### 2.10.5 Aggregation: Mandatory vs Optional
+#### 2.11.5 Aggregation: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -553,7 +583,7 @@ No single format dominates every metric. The optimal choice depends on the use c
 
 ---
 
-- **Report Generated**: 2026-04-14
+- **Report Generated**: 2026-06-21
 - **Written by**: [Thore Höltig](https://github.com/thoeltig)
 - **Test run in**: Claude Code 2.1.73
 - **Data Source**: `analytics_results.json`

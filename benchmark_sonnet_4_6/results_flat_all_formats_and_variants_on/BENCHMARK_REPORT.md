@@ -213,8 +213,41 @@ Especially the accuracy and output tokens results will vary because these values
 | XML_PRETTY | 13087 | 12018 | -1069 | -8.17 | 295 | 296 | +1 | +0.34 | 24176 | 20823 | -3353 | -13.87 | 24471 | 21119 | -3352 | -13.70 | 37558 | 33137 | -4421 | -11.77 |
 | YAML | 9479 | 11522 | +2043 | +21.55 | 292 | 292 | 0 | 0.00 | 22956 | 25740 | +2784 | +12.13 | 23247 | 26031 | +2784 | +11.98 | 32726 | 37553 | +4827 | +14.75 |
 
-### 2.4 Performance
-#### 2.4.1 Metrics
+### 2.4 Drift over multiple runs
+
+*Note: Drift = The distance from average to the lowest or highest value. Spread = Distance between lowest to highest value (larger = less predictable results across runs).*
+
+#### 2.4.1 Drift per Format and Variant
+| Format | Variant | Runs | Output Tokens Total | Drift | Spread | Accuracy (%) | Drift (pp) | Spread (pp) | Accuracy By Character (%) | Drift (pp) | Spread (pp) |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| CSV | man | 3 | 24510 | -2267/+2392 | 4659 | 97.58 | -0.83/+0.83 | 1.66 | 99.68 | -0.53/+0.29 | 0.82 |
+| CSV | opt | 3 | 27835 | -1937/+3076 | 5013 | 97.31 | -1.38/+1.11 | 2.49 | 99.87 | -0.04/+0.02 | 0.06 |
+| JSON_COMPACT | man | 3 | 24394 | -2783/+2747 | 5530 | 98.92 | -0.54/+0.27 | 0.81 | 99.88 | -0.16/+0.08 | 0.24 |
+| JSON_COMPACT | opt | 3 | 18788 | -18490/+10852 | 29342 | 97.58 | -0.83/+0.83 | 1.66 | 99.88 | -0.01/+0.01 | 0.02 |
+| JSON_PRETTY | man | 3 | 21004 | -3474/+2201 | 5675 | 98.39 | 0.00/0.00 | 0.00 | 99.96 | -0.01/+0.01 | 0.02 |
+| JSON_PRETTY | opt | 3 | 25875 | -2085/+1560 | 3646 | 98.12 | -0.55/+0.28 | 0.83 | 99.88 | -0.01/+0.01 | 0.02 |
+| TOON_DEFAULT | man | 6 | 22058 | -21754/+5709 | 27462 | 98.92 | -2.98/+1.09 | 4.07 | 99.98 | -0.04/+0.02 | 0.06 |
+| TOON_DEFAULT | opt | 6 | 23916 | -2298/+2251 | 4549 | 97.45 | -2.35/+1.79 | 4.14 | 99.87 | -0.18/+0.11 | 0.29 |
+| XML_COMPACT | man | 3 | 26531 | -828/+822 | 1650 | 98.92 | -0.54/+0.27 | 0.81 | 99.71 | -0.53/+0.28 | 0.81 |
+| XML_COMPACT | opt | 3 | 25943 | -389/+693 | 1082 | 97.85 | -1.10/+0.55 | 1.65 | 99.77 | -0.25/+0.12 | 0.37 |
+| XML_PRETTY | man | 3 | 24471 | -4052/+2374 | 6426 | 98.66 | -0.27/+0.54 | 0.81 | 99.97 | -0.02/+0.02 | 0.04 |
+| XML_PRETTY | opt | 3 | 21119 | -1295/+849 | 2144 | 97.58 | -0.83/+0.83 | 1.66 | 99.87 | -0.01/+0.02 | 0.03 |
+| YAML | man | 3 | 23247 | -3713/+2704 | 6416 | 97.58 | -1.65/+2.48 | 4.13 | 99.95 | -0.04/+0.05 | 0.09 |
+| YAML | opt | 3 | 26031 | -1151/+692 | 1843 | 97.31 | -0.55/+0.28 | 0.83 | 99.75 | -0.22/+0.12 | 0.34 |
+
+#### 2.4.2 Spread: Mandatory vs Optional
+| Format | Output Tokens Total Spread Man | Output Tokens Total Spread Opt | Diff | Acc Spread Man (pp) | Acc Spread Opt (pp) | Diff (pp) | Acc By Char Spread Man (pp) | Acc By Char Spread Opt (pp) | Diff (pp) |
+|---|---|---|---|---|---|---|---|---|---|
+| CSV | 4659 | 5013 | +354 | 1.66 | 2.49 | +0.83 | 0.82 | 0.06 | -0.76 |
+| JSON_COMPACT | 5530 | 29342 | +23812 | 0.81 | 1.66 | +0.85 | 0.24 | 0.02 | -0.22 |
+| JSON_PRETTY | 5675 | 3646 | -2029 | 0.00 | 0.83 | +0.83 | 0.02 | 0.02 | 0.00 |
+| TOON_DEFAULT | 27462 | 4549 | -22913 | 4.07 | 4.14 | +0.07 | 0.06 | 0.29 | +0.23 |
+| XML_COMPACT | 1650 | 1082 | -568 | 0.81 | 1.65 | +0.84 | 0.81 | 0.37 | -0.44 |
+| XML_PRETTY | 6426 | 2144 | -4283 | 0.81 | 1.66 | +0.85 | 0.04 | 0.03 | -0.01 |
+| YAML | 6416 | 1843 | -4573 | 4.13 | 0.83 | -3.30 | 0.09 | 0.34 | +0.25 |
+
+### 2.5 Performance
+#### 2.5.1 Metrics
 | Format | Variant | Read (ms) | Read (tokens/ms) | Rate (ms/record) | Output Before Write (ms) | Output Write (ms) | Output Write (tokens/ms) | Rate (ms/question) | Read + Output Write (ms) | Read + Output Write (tokens/ms) | Rate (ms/record+question) | Output (ms) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | man | 17 | 230.71 | 0.55 | 270125 | 68588 | 0.35 | 553.13 | 68605 | 231.06 | 442.61 | 338713 |
@@ -232,7 +265,7 @@ Especially the accuracy and output tokens results will vary because these values
 | YAML | man | 27 | 351.07 | 0.87 | 237535 | 71728 | 0.32 | 578.45 | 71755 | 351.39 | 462.94 | 309263 |
 | YAML | opt | 30 | 384.07 | 0.97 | 278291 | 61643 | 0.42 | 497.12 | 61673 | 384.49 | 397.89 | 339934 |
 
-#### 2.4.2 Mandatory vs Optional
+#### 2.5.2 Mandatory vs Optional
 | Format | Read Man (ms) | Read Opt (ms) | Diff (ms) | Diff (%) | Output Before Write Man (s) | Output Before Write Opt (s) | Diff (s) | Diff (%) | Output Write Man (s) | Output Write Opt (s) | Diff (s) | Diff (%) | Read + Output Write Man (s) | Read + Output Write Opt (s) | Diff (s) | Diff (%) | Output Man (s) | Output Opt (s) | Diff (s) | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 17 | 24 | +7 | +41.18 | 270.13 | 309.46 | +39.33 | +14.56 | 68.59 | 68.35 | -0.24 | -0.35 | 68.60 | 68.37 | -0.23 | -0.34 | 338.71 | 377.81 | +39.10 | +11.54 |
@@ -243,8 +276,8 @@ Especially the accuracy and output tokens results will vary because these values
 | XML_PRETTY | 69 | 27 | -42 | -60.87 | 246.32 | 207.10 | -39.22 | -15.92 | 70.47 | 58.25 | -12.23 | -17.35 | 70.54 | 58.27 | -12.27 | -17.39 | 316.79 | 265.34 | -51.45 | -16.24 |
 | YAML | 27 | 30 | +3 | +11.11 | 237.53 | 278.29 | +40.76 | +17.16 | 71.73 | 61.64 | -10.09 | -14.06 | 71.76 | 61.67 | -10.08 | -14.05 | 309.26 | 339.93 | +30.67 | +9.92 |
 
-### 2.5 Structural Efficiency
-#### 2.5.1 Metrics
+### 2.6 Structural Efficiency
+#### 2.6.1 Metrics
 | Format | Variant | Chars / Read Token | Read Tokens / Value | Read Tokens / Object | Info / Read Token | Info / Output Token | Info / Total Token | Info / Read Token (Acc By Char) | Info / Output Token (Acc By Char) | Info / Total Token (Acc By Char) |
 |---|---|---|---|---|---|---|---|---|---|---|
 | CSV | man | 2.57 | 5.75 | 126.52 | 2.49 | 0.40 | 0.34 | 2.54 | 0.41 | 0.35 |
@@ -262,7 +295,7 @@ Especially the accuracy and output tokens results will vary because these values
 | YAML | man | 2.20 | 13.90 | 305.77 | 1.03 | 0.42 | 0.30 | 1.05 | 0.43 | 0.31 |
 | YAML | opt | 1.68 | 18.26 | 371.68 | 0.85 | 0.37 | 0.26 | 0.87 | 0.38 | 0.27 |
 
-#### 2.5.2 Characters And Values: Mandatory vs Optional
+#### 2.6.2 Characters And Values: Mandatory vs Optional
 | Format | Chars / Read Token Man | Chars / Read Token Opt | Diff | Diff (%) | Read Tokens / Value Man | Read Tokens / Value Opt | Diff | Diff (%) | Read Tokens / Object Man | Read Tokens / Object Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 2.57 | 2.64 | +0.06 | +2.41 | 5.75 | 5.76 | +0.01 | +0.12 | 126.52 | 117.19 | -9.32 | -7.37 |
@@ -273,7 +306,7 @@ Especially the accuracy and output tokens results will vary because these values
 | XML_PRETTY | 2.39 | 2.41 | +0.02 | +0.75 | 19.19 | 19.05 | -0.14 | -0.75 | 422.16 | 387.68 | -34.48 | -8.17 |
 | YAML | 2.20 | 1.68 | -0.52 | -23.56 | 13.90 | 18.26 | +4.36 | +31.38 | 305.77 | 371.68 | +65.90 | +21.55 |
 
-#### 2.5.3 Information: Mandatory vs Optional
+#### 2.6.3 Information: Mandatory vs Optional
 | Format | Info / Read Token Man | Info / Read Token Opt | Diff | Diff (%) | Info / Output Token Man | Info / Output Token Opt | Diff | Diff (%) | Info / Total Token Man | Info / Total Token Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 2.49 | 2.68 | +0.19 | +7.68 | 0.40 | 0.35 | -0.05 | -12.06 | 0.34 | 0.31 | -0.03 | -9.91 |
@@ -284,7 +317,7 @@ Especially the accuracy and output tokens results will vary because these values
 | XML_PRETTY | 0.75 | 0.81 | +0.06 | +7.69 | 0.40 | 0.46 | +0.06 | +14.64 | 0.26 | 0.29 | +0.03 | +11.79 |
 | YAML | 1.03 | 0.85 | -0.18 | -17.88 | 0.42 | 0.37 | -0.05 | -10.95 | 0.30 | 0.26 | -0.04 | -13.09 |
 
-#### 2.5.4 Information (Accuracy By Character): Mandatory vs Optional
+#### 2.6.4 Information (Accuracy By Character): Mandatory vs Optional
 | Format | Info / Read Token (Acc By Char) Man | Info / Read Token (Acc By Char) Opt | Diff | Diff (%) | Info / Output Token (Acc By Char) Man | Info / Output Token (Acc By Char)  Opt | Diff | Diff (%) | Info / Total Token (Acc By Char) Man | Info / Total Token (Acc By Char) Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 2.54 | 2.75 | +0.21 | +8.14 | 0.41 | 0.36 | -0.05 | -11.79 | 0.35 | 0.32 | -0.03 | -9.69 |
@@ -295,8 +328,8 @@ Especially the accuracy and output tokens results will vary because these values
 | XML_PRETTY | 0.76 | 0.83 | +0.07 | +8.77 | 0.41 | 0.47 | +0.06 | +15.65 | 0.27 | 0.30 | +0.03 | +13.16 |
 | YAML | 1.05 | 0.87 | -0.19 | -17.84 | 0.43 | 0.38 | -0.05 | -10.93 | 0.31 | 0.27 | -0.04 | -12.79 |
 
-### 2.6 Token Utilization Efficiency
-#### 2.6.1 Metrics
+### 2.7 Token Utilization Efficiency
+#### 2.7.1 Metrics
 | Format | Variant | Read Tokens | Useful Read Tokens | Wasted Read Tokens | Output Tokens | Useful Output Tokens | Wasted Output Tokens | Total Tokens | Useful Total Tokens | Wasted Total Tokens | Accuracy (%) | Eff Score Read | Eff Score Output | Eff Score Total | Wtd Accuracy (%) | Wtd Eff Score Read | Wtd Eff Score Output | Wtd Eff Score Total |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | man | 3922 | 3827 | 95 | 24510 | 23917 | 593 | 28432 | 27744 | 688 | 97.58 | 97.43 | 77.31 | 89.26 | 97.26 | 97.22 | 77.10 | 89.05 |
@@ -314,7 +347,7 @@ Especially the accuracy and output tokens results will vary because these values
 | YAML | man | 9479 | 9250 | 229 | 23247 | 22685 | 563 | 32726 | 31934 | 792 | 97.58 | 79.65 | 81.96 | 79.43 | 97.15 | 79.37 | 81.67 | 79.14 |
 | YAML | opt | 11522 | 11212 | 310 | 26031 | 25331 | 700 | 37553 | 36543 | 1010 | 97.31 | 72.94 | 71.54 | 68.19 | 97.56 | 73.11 | 71.71 | 68.36 |
 
-#### 2.6.2 Read Tokens: Mandatory vs Optional Data
+#### 2.7.2 Read Tokens: Mandatory vs Optional Data
 | Format | Read Tokens Man | Read Tokens Opt | Diff | Diff (%) | Useful Read Tokens Man | Useful Read Tokens Opt | Diff | Diff (%) | Wasted Read Tokens Man | Wasted Read Tokens Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) | Eff Score Read Man | Eff Score Read Opt | Diff | Diff (%) | Wtd Accuracy (%) Man | Wtd Accuracy (%) Opt | Diff (%) | Wtd Eff Score Read Man | Wtd Eff Score Read Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 3922 | 3633 | -289 | -7.37 | 3827 | 3535 | -292 | -7.63 | 95 | 98 | +3 | +2.96 | 97.58 | 97.31 | -0.27 | 97.43 | 98.17 | +0.75 | +0.76 | 97.26 | 97.56 | +0.30 | 97.22 | 98.34 | +1.12 | +1.16 |
@@ -325,7 +358,7 @@ Especially the accuracy and output tokens results will vary because these values
 | XML_PRETTY | 13087 | 12018 | -1069 | -8.17 | 12912 | 11728 | -1184 | -9.17 | 175 | 290 | +115 | +65.98 | 98.66 | 97.58 | -1.08 | 68.83 | 71.53 | +2.70 | +3.92 | 98.48 | 97.76 | -0.72 | 68.71 | 71.65 | +2.94 | +4.28 |
 | YAML | 9479 | 11522 | +2043 | +21.55 | 9250 | 11212 | +1962 | +21.22 | 229 | 310 | +81 | +35.17 | 97.58 | 97.31 | -0.27 | 79.65 | 72.94 | -6.71 | -8.43 | 97.15 | 97.56 | +0.41 | 79.37 | 73.11 | -6.26 | -7.89 |
 
-#### 2.6.3 Output Tokens: Mandatory vs Optional Data
+#### 2.7.3 Output Tokens: Mandatory vs Optional Data
 | Format | Output Tokens Man | Output Tokens Opt | Diff | Diff (%) | Useful Output Tokens Man | Useful Output Tokens Opt | Diff | Diff (%) | Wasted Output Tokens Man | Wasted Output Tokens Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) | Eff Score Output Man | Eff Score Output Opt | Diff | Diff (%) | Wtd Accuracy (%) Man | Wtd Accuracy (%) Opt | Diff (%) | Wtd Eff Score Output Man | Wtd Eff Score Output Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 24510 | 27835 | +3325 | +13.57 | 23917 | 27086 | +3169 | +13.25 | 593 | 749 | +156 | +26.24 | 97.58 | 97.31 | -0.27 | 77.31 | 64.91 | -12.40 | -16.04 | 97.26 | 97.56 | +0.30 | 77.10 | 65.08 | -12.02 | -15.60 |
@@ -336,7 +369,7 @@ Especially the accuracy and output tokens results will vary because these values
 | XML_PRETTY | 24471 | 21119 | -3352 | -13.70 | 24143 | 20608 | -3535 | -14.64 | 328 | 511 | +183 | +55.84 | 98.66 | 97.58 | -1.08 | 78.18 | 89.78 | +11.60 | +14.84 | 98.48 | 97.76 | -0.72 | 78.06 | 89.90 | +11.85 | +15.17 |
 | YAML | 23247 | 26031 | +2784 | +11.98 | 22685 | 25331 | +2646 | +11.67 | 563 | 701 | +138 | +24.45 | 97.58 | 97.31 | -0.27 | 81.96 | 71.54 | -10.42 | -12.71 | 97.15 | 97.56 | +0.41 | 81.67 | 71.71 | -9.96 | -12.20 |
 
-#### 2.6.4 Total Tokens: Mandatory vs Optional Data
+#### 2.7.4 Total Tokens: Mandatory vs Optional Data
 | Format | Total Tokens Man | Total Tokens Opt | Diff | Diff (%) | Useful Total Tokens Man | Useful Total Tokens Opt | Diff | Diff (%) | Wasted Total Tokens Man | Wasted Total Tokens Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) | Eff Score Total Man | Eff Score Total Opt | Diff | Diff (%) | Wtd Accuracy (%) Man | Wtd Accuracy (%) Opt | Diff (%) | Wtd Eff Score Total Man | Wtd Eff Score Total Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 28432 | 31468 | +3036 | +10.68 | 27744 | 30622 | +2878 | +10.37 | 688 | 846 | +158 | +23.03 | 97.58 | 97.31 | -0.27 | 89.26 | 82.13 | -7.13 | -7.99 | 97.26 | 97.56 | +0.30 | 89.05 | 82.29 | -6.75 | -7.58 |
@@ -347,8 +380,8 @@ Especially the accuracy and output tokens results will vary because these values
 | XML_PRETTY | 37558 | 33137 | -4421 | -11.77 | 37055 | 32335 | -4720 | -12.74 | 503 | 802 | +299 | +59.37 | 98.66 | 97.58 | -1.08 | 69.08 | 78.49 | +9.41 | +13.61 | 98.48 | 97.76 | -0.72 | 68.96 | 78.61 | +9.64 | +13.99 |
 | YAML | 32726 | 37553 | +4827 | +14.75 | 31934 | 36543 | +4609 | +14.43 | 792 | 1010 | +218 | +27.55 | 97.58 | 97.31 | -0.27 | 79.43 | 68.19 | -11.23 | -14.14 | 97.15 | 97.56 | +0.41 | 79.14 | 68.36 | -10.78 | -13.62 |
 
-### 2.7 Token Utilization Efficiency (Accuracy by Character)
-#### 2.7.1 Metrics
+### 2.8 Token Utilization Efficiency (Accuracy by Character)
+#### 2.8.1 Metrics
 | Format | Variant | Read Tokens | Useful Read Tokens | Wasted Read Tokens | Output Tokens | Useful Output Tokens | Wasted Output Tokens | Total Tokens | Useful Total Tokens | Wasted Total Tokens | Accuracy by Character (%) | Eff Score Read | Eff Score Output | Eff Score Total | Wtd Accuracy by Character (%) | Wtd Eff Score Read | Wtd Eff Score Output | Wtd Eff Score Total |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | man | 3922 | 3909 | 13 | 24510 | 24432 | 78 | 28432 | 28341 | 91 | 99.68 | 98.83 | 78.71 | 90.66 | 99.23 | 98.53 | 78.41 | 90.36 |
@@ -366,7 +399,7 @@ Especially the accuracy and output tokens results will vary because these values
 | YAML | man | 9479 | 9474 | 5 | 23247 | 23236 | 12 | 32726 | 32710 | 16 | 99.95 | 81.23 | 83.54 | 81.01 | 99.43 | 80.89 | 83.19 | 80.66 |
 | YAML | opt | 11522 | 11493 | 29 | 26031 | 25966 | 65 | 37553 | 37459 | 94 | 99.75 | 74.57 | 73.17 | 69.82 | 99.11 | 74.14 | 72.74 | 69.39 |
 
-#### 2.7.2 Read Tokens (Accuracy by Character): Mandatory vs Optional Data
+#### 2.8.2 Read Tokens (Accuracy by Character): Mandatory vs Optional Data
 | Format | Read Tokens Man | Read Tokens Opt | Diff | Diff (%) | Useful Read Tokens Man | Useful Read Tokens Opt | Diff | Diff (%) | Wasted Read Tokens Man | Wasted Read Tokens Opt | Diff | Diff (%) | Accuracy by Character (%) Man | Accuracy by Character (%) Opt | Diff (%) | Eff Score Read Man | Eff Score Read Opt | Diff | Diff (%) | Wtd Accuracy by Character (%) Man | Wtd Accuracy by Character (%) Opt | Diff (%) | Wtd Eff Score Read Man | Wtd Eff Score Read Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 3922 | 3633 | -289 | -7.37 | 3909 | 3628 | -281 | -7.19 | 13 | 5 | -8 | -60.21 | 99.68 | 99.87 | +0.19 | 98.83 | 99.88 | +1.05 | +1.06 | 99.23 | 99.20 | -0.03 | 98.53 | 99.43 | +0.91 | +0.92 |
@@ -377,7 +410,7 @@ Especially the accuracy and output tokens results will vary because these values
 | XML_PRETTY | 13087 | 12018 | -1069 | -8.17 | 13083 | 12002 | -1081 | -8.26 | 4 | 16 | +12 | +292.42 | 99.97 | 99.87 | -0.10 | 69.71 | 73.06 | +3.35 | +4.81 | 99.68 | 99.25 | -0.43 | 69.51 | 72.65 | +3.13 | +4.51 |
 | YAML | 9479 | 11522 | +2043 | +21.55 | 9474 | 11493 | +2019 | +21.31 | 5 | 29 | +24 | +481.32 | 99.95 | 99.75 | -0.20 | 81.23 | 74.57 | -6.67 | -8.21 | 99.43 | 99.11 | -0.32 | 80.89 | 74.14 | -6.75 | -8.34 |
 
-#### 2.7.3 Output Tokens (Accuracy by Character): Mandatory vs Optional Data
+#### 2.8.3 Output Tokens (Accuracy by Character): Mandatory vs Optional Data
 | Format | Output Tokens Man | Output Tokens Opt | Diff | Diff (%) | Useful Output Tokens Man | Useful Output Tokens Opt | Diff | Diff (%) | Wasted Output Tokens Man | Wasted Output Tokens Opt | Diff | Diff (%) | Accuracy by Character (%) Man | Accuracy by Character (%) Opt | Diff (%) | Eff Score Output Man | Eff Score Output Opt | Diff | Diff (%) | Wtd Accuracy by Character (%) Man | Wtd Accuracy by Character (%) Opt | Diff (%) | Wtd Eff Score Output Man | Wtd Eff Score Output Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 24510 | 27835 | +3325 | +13.57 | 24432 | 27799 | +3367 | +13.78 | 78 | 36 | -42 | -54.16 | 99.68 | 99.87 | +0.19 | 78.71 | 66.62 | -12.10 | -15.37 | 99.23 | 99.20 | -0.03 | 78.41 | 66.17 | -12.25 | -15.62 |
@@ -388,7 +421,7 @@ Especially the accuracy and output tokens results will vary because these values
 | XML_PRETTY | 24471 | 21119 | -3352 | -13.70 | 24464 | 21092 | -3372 | -13.79 | 7 | 27 | +20 | +287.33 | 99.97 | 99.87 | -0.10 | 79.05 | 91.31 | +12.26 | +15.51 | 99.68 | 99.25 | -0.43 | 78.86 | 90.90 | +12.04 | +15.27 |
 | YAML | 23247 | 26031 | +2784 | +11.98 | 23236 | 25967 | +2731 | +11.75 | 12 | 65 | +53 | +445.45 | 99.95 | 99.75 | -0.20 | 83.54 | 73.17 | -10.37 | -12.41 | 99.43 | 99.11 | -0.32 | 83.19 | 72.74 | -10.45 | -12.56 |
 
-#### 2.7.4 Total Tokens (Accuracy by Character): Mandatory vs Optional Data
+#### 2.8.4 Total Tokens (Accuracy by Character): Mandatory vs Optional Data
 | Format | Total Tokens Man | Total Tokens Opt | Diff | Diff (%) | Useful Total Tokens Man | Useful Total Tokens Opt | Diff | Diff (%) | Wasted Total Tokens Man | Wasted Total Tokens Opt | Diff | Diff (%) | Accuracy by Character (%) Man | Accuracy by Character (%) Opt | Diff (%) | Eff Score Total Man | Eff Score Total Opt | Diff | Diff (%) | Wtd Accuracy by Character (%) Man | Wtd Accuracy by Character (%) Opt | Diff (%) | Wtd Eff Score Total Man | Wtd Eff Score Total Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 28432 | 31468 | +3036 | +10.68 | 28341 | 31427 | +3086 | +10.89 | 91 | 41 | -50 | -55.03 | 99.68 | 99.87 | +0.19 | 90.66 | 83.83 | -6.83 | -7.53 | 99.23 | 99.20 | -0.03 | 90.36 | 83.39 | -6.97 | -7.72 |
@@ -399,8 +432,8 @@ Especially the accuracy and output tokens results will vary because these values
 | XML_PRETTY | 37558 | 33137 | -4421 | -11.77 | 37547 | 33094 | -4453 | -11.86 | 11 | 43 | +32 | +289.19 | 99.97 | 99.87 | -0.10 | 69.95 | 80.01 | +10.06 | +14.38 | 99.68 | 99.25 | -0.43 | 69.76 | 79.60 | +9.84 | +14.10 |
 | YAML | 32726 | 37553 | +4827 | +14.75 | 32710 | 37459 | +4749 | +14.52 | 16 | 94 | +78 | +484.50 | 99.95 | 99.75 | -0.20 | 81.01 | 69.82 | -11.19 | -13.81 | 99.43 | 99.11 | -0.32 | 80.66 | 69.39 | -11.27 | -13.97 |
 
-### 2.8 Answer Per Format Breakdown
-#### 2.8.1 Metrics
+### 2.9 Answer Per Format Breakdown
+#### 2.9.1 Metrics
 | Format | Variant | Correct Answers | Incorrect Answers | No Answers | Accuracy (%) | Expected Characters | Output Characters | Correct Characters | Incorrect Characters | Accuracy by Character (%) |
 |---|---|---|---|---|---|---|---|---|---|---|
 | CSV | man | 121 | 3 | 0 | 97.58 | 7782 | 7790 | 7765 | 25 | 99.68 |
@@ -418,7 +451,7 @@ Especially the accuracy and output tokens results will vary because these values
 | YAML | man | 121 | 3 | 0 | 97.58 | 7782 | 7782 | 7778 | 4 | 99.95 |
 | YAML | opt | 121 | 3 | 0 | 97.31 | 8451 | 8462 | 8441 | 21 | 99.75 |
 
-#### 2.8.2 Answers: Mandatory vs Optional Data
+#### 2.9.2 Answers: Mandatory vs Optional Data
 | Format | Correct Man | Correct Opt | Diff | Diff (%) | Incorrect Man | Incorrect Opt | Diff | Diff (%) | No Answers Man | No Answers Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 121 | 121 | 0 | -0.27 | 3 | 3 | 0 | +11.00 | 0 | 0 | 0 | 0.00 | 97.58 | 97.31 | -0.27 |
@@ -429,7 +462,7 @@ Especially the accuracy and output tokens results will vary because these values
 | XML_PRETTY | 122 | 121 | -1 | -1.09 | 2 | 3 | +1 | +66.50 | 0 | 0 | 0 | 0.00 | 98.66 | 97.58 | -1.08 |
 | YAML | 121 | 121 | 0 | -0.27 | 3 | 3 | 0 | +11.00 | 0 | 0 | 0 | 0.00 | 97.58 | 97.31 | -0.27 |
 
-#### 2.8.3 Characters: Mandatory vs Optional Data
+#### 2.9.3 Characters: Mandatory vs Optional Data
 | Format | Output Characters Man | Output Characters Opt | Diff | Diff (%) | Correct Characters Man | Correct Characters Opt | Diff | Diff (%) | Incorrect Characters Man | Incorrect Characters Opt | Diff | Diff (%) | Accuracy by Character (%) Man | Accuracy by Character (%) Opt | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | 7790 | 8452 | +662 | +8.50 | 7765 | 8441 | +676 | +8.70 | 25 | 11 | -14 | -54.67 | 99.68 | 99.87 | 0.19 |
@@ -440,8 +473,8 @@ Especially the accuracy and output tokens results will vary because these values
 | XML_PRETTY | 7782 | 8452 | +670 | +8.61 | 7780 | 8442 | +662 | +8.50 | 2 | 10 | +8 | +416.70 | 99.97 | 99.87 | -0.10 |
 | YAML | 7782 | 8462 | +680 | +8.74 | 7778 | 8441 | +663 | +8.52 | 4 | 21 | +17 | +433.32 | 99.95 | 99.75 | -0.20 |
 
-### 2.9 Accuracy Per Question Category Analysis
-#### 2.9.1 Metrics
+### 2.10 Accuracy Per Question Category Analysis
+#### 2.10.1 Metrics
 | Format | Variant | Accuracy (%) | Field Retrieval (%) | Structure Awareness (%) | Filtering (%) | Aggregation (%) | Wtd Acc (%) | Wtd Field Retrieval (%) | Wtd Structure Awareness (%) | Wtd Filtering (%) | Wtd Aggregation (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | man | 97.58 | 99.39 | 100.00 | 88.89 | 98.41 | 99.23 | 37.27 | 29.17 | 18.52 | 12.30 |
@@ -459,7 +492,7 @@ Especially the accuracy and output tokens results will vary because these values
 | YAML | man | 97.58 | 100.00 | 100.00 | 87.30 | 98.41 | 99.43 | 37.50 | 29.17 | 18.18 | 12.30 |
 | YAML | opt | 97.31 | 100.00 | 97.53 | 98.41 | 88.89 | 99.11 | 37.50 | 28.45 | 20.50 | 11.11 |
 
-#### 2.9.2 Field Retrieval: Mandatory vs Optional
+#### 2.10.2 Field Retrieval: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -471,7 +504,7 @@ Especially the accuracy and output tokens results will vary because these values
 | XML_PRETTY | 100.00 | 100.00 | 0.00 | 37.50 | 37.50 | 0.00 |
 | YAML | 100.00 | 100.00 | 0.00 | 37.50 | 37.50 | 0.00 |
 
-#### 2.9.3 Structure Awareness: Mandatory vs Optional
+#### 2.10.3 Structure Awareness: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -483,7 +516,7 @@ Especially the accuracy and output tokens results will vary because these values
 | XML_PRETTY | 100.00 | 97.53 | -2.47 | 29.17 | 28.45 | -0.72 |
 | YAML | 100.00 | 97.53 | -2.47 | 29.17 | 28.45 | -0.72 |
 
-#### 2.9.4 Filtering: Mandatory vs Optional
+#### 2.10.4 Filtering: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -495,7 +528,7 @@ Especially the accuracy and output tokens results will vary because these values
 | XML_PRETTY | 93.65 | 98.41 | +4.76 | 19.51 | 20.50 | +0.99 |
 | YAML | 87.30 | 98.41 | +11.11 | 18.18 | 20.50 | +2.32 |
 
-#### 2.9.5 Aggregation: Mandatory vs Optional
+#### 2.10.5 Aggregation: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -507,8 +540,8 @@ Especially the accuracy and output tokens results will vary because these values
 | XML_PRETTY | 98.41 | 90.48 | -7.93 | 12.30 | 11.31 | -0.99 |
 | YAML | 98.41 | 88.89 | -9.52 | 12.30 | 11.11 | -1.19 |
 
-### 2.10 Accuracy By Character Per Question Category Analysis
-#### 2.10.1 Metrics
+### 2.11 Accuracy By Character Per Question Category Analysis
+#### 2.11.1 Metrics
 | Format | Variant | Accuracy By Character (%) | Field Retrieval (%) | Structure Awareness (%) | Filtering (%) | Aggregation (%) | Wtd Acc By Char (%) | Wtd Field Retrieval (%) | Wtd Structure Awareness (%) | Wtd Filtering (%) | Wtd Aggregation (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | CSV | man | 99.68 | 99.31 | 100.00 | 97.91 | 99.38 | 99.23 | 37.24 | 29.17 | 20.40 | 12.42 |
@@ -526,7 +559,7 @@ Especially the accuracy and output tokens results will vary because these values
 | YAML | man | 99.95 | 100.00 | 100.00 | 97.62 | 99.38 | 99.43 | 37.50 | 29.17 | 20.34 | 12.42 |
 | YAML | opt | 99.75 | 100.00 | 99.76 | 99.71 | 93.94 | 99.11 | 37.50 | 29.10 | 20.77 | 11.74 |
 
-#### 2.10.2 Field Retrieval: Mandatory vs Optional
+#### 2.11.2 Field Retrieval: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -538,7 +571,7 @@ Especially the accuracy and output tokens results will vary because these values
 | XML_PRETTY | 100.00 | 100.00 | 0.00 | 37.50 | 37.50 | 0.00 |
 | YAML | 100.00 | 100.00 | 0.00 | 37.50 | 37.50 | 0.00 |
 
-#### 2.10.3 Structure Awareness: Mandatory vs Optional
+#### 2.11.3 Structure Awareness: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -550,7 +583,7 @@ Especially the accuracy and output tokens results will vary because these values
 | XML_PRETTY | 100.00 | 99.97 | -0.03 | 29.17 | 29.16 | -0.01 |
 | YAML | 100.00 | 99.76 | -0.24 | 29.17 | 29.10 | -0.07 |
 
-#### 2.10.4 Filtering: Mandatory vs Optional
+#### 2.11.4 Filtering: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -562,7 +595,7 @@ Especially the accuracy and output tokens results will vary because these values
 | XML_PRETTY | 98.81 | 99.71 | +0.90 | 20.59 | 20.77 | +0.18 |
 | YAML | 97.62 | 99.71 | +2.09 | 20.34 | 20.77 | +0.43 |
 
-#### 2.10.5 Aggregation: Mandatory vs Optional
+#### 2.11.5 Aggregation: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -593,7 +626,7 @@ Especially the accuracy and output tokens results will vary because these values
 
 ---
 
-- **Report Generated**: 2026-04-20
+- **Report Generated**: 2026-06-21
 - **Written by**: [Thore Höltig](https://github.com/thoeltig)
 - **Test run in**: Claude Code 2.1.80
 - **Data Source**: `analytics_results.json`

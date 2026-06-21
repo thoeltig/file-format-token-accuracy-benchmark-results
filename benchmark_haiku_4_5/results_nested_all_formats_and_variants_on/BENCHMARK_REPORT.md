@@ -207,8 +207,38 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | XML_PRETTY | 20114 | 19583 | -531 | -2.64 | 342 | 344 | +2 | +0.58 | 7175 | 9356 | +2181 | +30.40 | 7518 | 9701 | +2183 | +29.04 | 27632 | 29284 | +1652 | +5.98 |
 | YAML | 14306 | 14053 | -253 | -1.77 | 338 | 336 | -2 | -0.59 | 10767 | 12561 | +1794 | +16.66 | 11104 | 12896 | +1792 | +16.14 | 25410 | 26949 | +1539 | +6.06 |
 
-### 2.4 Performance
-#### 2.4.1 Metrics
+### 2.4 Drift over multiple runs
+
+*Note: Drift = The distance from average to the lowest or highest value. Spread = Distance between lowest to highest value (larger = less predictable results across runs).*
+
+#### 2.4.1 Drift per Format and Variant
+| Format | Variant | Runs | Output Tokens Total | Drift | Spread | Accuracy (%) | Drift (pp) | Spread (pp) | Accuracy By Character (%) | Drift (pp) | Spread (pp) |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| JSON_COMPACT | man | 3 | 8131 | -2258/+1868 | 4126 | 74.19 | -5.43/+8.71 | 14.14 | 90.62 | -4.14/+3.13 | 7.27 |
+| JSON_COMPACT | opt | 3 | 8462 | -8127/+11145 | 19272 | 76.61 | -6.32/+4.22 | 10.54 | 95.21 | -4.48/+3.62 | 8.10 |
+| JSON_PRETTY | man | 3 | 10771 | -1084/+936 | 2020 | 75.54 | -8.19/+6.76 | 14.95 | 96.67 | -2.66/+1.92 | 4.58 |
+| JSON_PRETTY | opt | 3 | 9659 | -733/+1359 | 2092 | 70.97 | -10.23/+10.23 | 20.46 | 94.14 | -1.02/+0.74 | 1.76 |
+| TOON_DEFAULT | man | 3 | 8685 | -1464/+2550 | 4014 | 72.71 | -10.16/+12.02 | 22.18 | 94.51 | -4.66/+3.62 | 8.28 |
+| TOON_DEFAULT | opt | 2 | 12191 | -3373/+3008 | 6381 | 78.09 | -14.28/+7.40 | 21.68 | 96.71 | -7.33/+1.75 | 9.08 |
+| XML_COMPACT | man | 3 | 8966 | -3378/+6514 | 9892 | 73.39 | -11.00/+17.58 | 28.58 | 92.88 | -3.97/+6.86 | 10.83 |
+| XML_COMPACT | opt | 3 | 7356 | -1520/+953 | 2474 | 74.73 | -1.79/+3.60 | 5.39 | 94.51 | -2.99/+3.46 | 6.45 |
+| XML_PRETTY | man | 3 | 7518 | -2009/+3696 | 5704 | 72.04 | -14.92/+16.42 | 31.34 | 94.26 | -3.53/+4.37 | 7.90 |
+| XML_PRETTY | opt | 2 | 9701 | -1162/+1162 | 2324 | 72.85 | -8.11/+8.48 | 16.59 | 93.69 | -3.35/+3.02 | 6.37 |
+| YAML | man | 3 | 11104 | -2643/+2375 | 5018 | 77.42 | -5.21/+4.17 | 9.38 | 96.27 | -3.91/+2.86 | 6.77 |
+| YAML | opt | 3 | 12896 | -4264/+6616 | 10879 | 79.03 | -10.20/+10.21 | 20.41 | 98.14 | -1.51/+1.36 | 2.87 |
+
+#### 2.4.2 Spread: Mandatory vs Optional
+| Format | Output Tokens Total Spread Man | Output Tokens Total Spread Opt | Diff | Acc Spread Man (pp) | Acc Spread Opt (pp) | Diff (pp) | Acc By Char Spread Man (pp) | Acc By Char Spread Opt (pp) | Diff (pp) |
+|---|---|---|---|---|---|---|---|---|---|
+| JSON_COMPACT | 4126 | 19272 | +15146 | 14.14 | 10.54 | -3.60 | 7.27 | 8.10 | +0.83 |
+| JSON_PRETTY | 2020 | 2092 | +73 | 14.95 | 20.46 | +5.51 | 4.58 | 1.76 | -2.82 |
+| TOON_DEFAULT | 4014 | 6381 | +2367 | 22.18 | 21.68 | -0.50 | 8.28 | 9.08 | +0.80 |
+| XML_COMPACT | 9892 | 2474 | -7418 | 28.58 | 5.39 | -23.19 | 10.83 | 6.45 | -4.38 |
+| XML_PRETTY | 5704 | 2324 | -3380 | 31.34 | 16.59 | -14.75 | 7.90 | 6.37 | -1.53 |
+| YAML | 5018 | 10879 | +5861 | 9.38 | 20.41 | +11.03 | 6.77 | 2.87 | -3.90 |
+
+### 2.5 Performance
+#### 2.5.1 Metrics
 | Format | Variant | Read (ms) | Read (tokens/ms) | Rate (ms/record) | Output Before Write (ms) | Output Write (ms) | Output Write (tokens/ms) | Rate (ms/question) | Read + Output Write (ms) | Read + Output Write (tokens/ms) | Rate (ms/record+question) | Output (ms) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | man | 24 | 429.79 | 0.77 | 31018 | 38410 | 0.20 | 309.76 | 38434 | 429.99 | 247.96 | 69429 |
@@ -224,7 +254,7 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | YAML | man | 12 | 1192.17 | 0.39 | 54849 | 36643 | 0.29 | 295.51 | 36655 | 1192.46 | 236.48 | 91492 |
 | YAML | opt | 8 | 1756.63 | 0.26 | 61846 | 32619 | 0.39 | 263.06 | 32627 | 1757.01 | 210.50 | 94465 |
 
-#### 2.4.2 Mandatory vs Optional
+#### 2.5.2 Mandatory vs Optional
 | Format | Read Man (ms) | Read Opt (ms) | Diff (ms) | Diff (%) | Output Before Write Man (s) | Output Before Write Opt (s) | Diff (s) | Diff (%) | Output Write Man (s) | Output Write Opt (s) | Diff (s) | Diff (%) | Read + Output Write Man (s) | Read + Output Write Opt (s) | Diff (s) | Diff (%) | Output Man (s) | Output Opt (s) | Diff (s) | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 24 | 9 | -15 | -62.50 | 31.02 | 48.43 | +17.41 | +56.13 | 38.41 | 39.50 | +1.09 | +2.82 | 38.43 | 39.50 | +1.07 | +2.78 | 69.43 | 87.92 | +18.49 | +26.64 |
@@ -234,8 +264,8 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | XML_PRETTY | 11 | 11 | 0 | 0.00 | 23.31 | 42.23 | +18.92 | +81.14 | 47.63 | 35.18 | -12.45 | -26.14 | 47.64 | 35.19 | -12.45 | -26.13 | 70.94 | 77.41 | +6.47 | +9.12 |
 | YAML | 12 | 8 | -4 | -33.33 | 54.85 | 61.85 | +7.00 | +12.76 | 36.64 | 32.62 | -4.02 | -10.98 | 36.66 | 32.63 | -4.03 | -10.99 | 91.49 | 94.47 | +2.97 | +3.25 |
 
-### 2.5 Structural Efficiency
-#### 2.5.1 Metrics
+### 2.6 Structural Efficiency
+#### 2.6.1 Metrics
 | Format | Variant | Chars / Read Token | Read Tokens / Value | Read Tokens / Object | Info / Read Token | Info / Output Token | Info / Total Token | Info / Read Token (Acc By Char) | Info / Output Token (Acc By Char) | Info / Total Token (Acc By Char) |
 |---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | man | 2.21 | 15.13 | 332.74 | 0.72 | 0.91 | 0.40 | 0.88 | 1.11 | 0.49 |
@@ -251,7 +281,7 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | YAML | man | 1.79 | 20.98 | 461.48 | 0.54 | 0.70 | 0.31 | 0.67 | 0.87 | 0.38 |
 | YAML | opt | 1.80 | 22.27 | 453.32 | 0.56 | 0.61 | 0.29 | 0.70 | 0.76 | 0.36 |
 
-#### 2.5.2 Characters And Values: Mandatory vs Optional
+#### 2.6.2 Characters And Values: Mandatory vs Optional
 | Format | Chars / Read Token Man | Chars / Read Token Opt | Diff | Diff (%) | Read Tokens / Value Man | Read Tokens / Value Opt | Diff | Diff (%) | Read Tokens / Object Man | Read Tokens / Object Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 2.21 | 2.19 | -0.03 | -1.22 | 15.13 | 15.51 | +0.39 | +2.56 | 332.74 | 315.74 | -17.00 | -5.11 |
@@ -261,7 +291,7 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | XML_PRETTY | 1.99 | 1.98 | -0.01 | -0.55 | 29.49 | 31.04 | +1.54 | +5.23 | 648.84 | 631.71 | -17.13 | -2.64 |
 | YAML | 1.79 | 1.80 | +0.01 | +0.56 | 20.98 | 22.27 | +1.29 | +6.17 | 461.48 | 453.32 | -8.16 | -1.77 |
 
-#### 2.5.3 Information: Mandatory vs Optional
+#### 2.6.3 Information: Mandatory vs Optional
 | Format | Info / Read Token Man | Info / Read Token Opt | Diff | Diff (%) | Info / Output Token Man | Info / Output Token Opt | Diff | Diff (%) | Info / Total Token Man | Info / Total Token Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 0.72 | 0.78 | +0.06 | +8.90 | 0.91 | 0.91 | -0.01 | -0.77 | 0.40 | 0.42 | +0.02 | +4.48 |
@@ -271,7 +301,7 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | XML_PRETTY | 0.36 | 0.37 | +0.01 | +3.91 | 0.96 | 0.75 | -0.21 | -21.61 | 0.26 | 0.25 | -0.01 | -4.60 |
 | YAML | 0.54 | 0.56 | +0.02 | +3.88 | 0.70 | 0.61 | -0.08 | -12.05 | 0.31 | 0.29 | -0.01 | -3.93 |
 
-#### 2.5.4 Information (Accuracy By Character): Mandatory vs Optional
+#### 2.6.4 Information (Accuracy By Character): Mandatory vs Optional
 | Format | Info / Read Token (Acc By Char) Man | Info / Read Token (Acc By Char) Opt | Diff | Diff (%) | Info / Output Token (Acc By Char) Man | Info / Output Token (Acc By Char)  Opt | Diff | Diff (%) | Info / Total Token (Acc By Char) Man | Info / Total Token (Acc By Char) Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 0.88 | 0.97 | +0.09 | +10.69 | 1.11 | 1.13 | +0.01 | +0.99 | 0.49 | 0.52 | +0.03 | +6.31 |
@@ -281,8 +311,8 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | XML_PRETTY | 0.47 | 0.48 | +0.01 | +1.92 | 1.25 | 0.97 | -0.29 | -22.97 | 0.34 | 0.32 | -0.02 | -6.16 |
 | YAML | 0.67 | 0.70 | +0.02 | +3.71 | 0.87 | 0.76 | -0.11 | -12.23 | 0.38 | 0.36 | -0.02 | -3.96 |
 
-### 2.6 Token Utilization Efficiency
-#### 2.6.1 Metrics
+### 2.7 Token Utilization Efficiency
+#### 2.7.1 Metrics
 | Format | Variant | Read Tokens | Useful Read Tokens | Wasted Read Tokens | Output Tokens | Useful Output Tokens | Wasted Output Tokens | Total Tokens | Useful Total Tokens | Wasted Total Tokens | Accuracy (%) | Eff Score Read | Eff Score Output | Eff Score Total | Wtd Accuracy (%) | Wtd Eff Score Read | Wtd Eff Score Output | Wtd Eff Score Total |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | man | 10315 | 7653 | 2662 | 8131 | 6033 | 2099 | 18446 | 13685 | 4761 | 74.19 | 81.06 | 79.40 | 82.17 | 72.28 | 79.79 | 78.13 | 80.90 |
@@ -298,7 +328,7 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | YAML | man | 14306 | 11076 | 3230 | 11104 | 8597 | 2507 | 25410 | 19673 | 5738 | 77.42 | 70.36 | 68.72 | 63.32 | 75.06 | 68.78 | 67.15 | 61.75 |
 | YAML | opt | 14053 | 11106 | 2947 | 12896 | 10192 | 2704 | 26949 | 21298 | 5651 | 79.03 | 72.25 | 62.06 | 59.76 | 77.25 | 71.06 | 60.87 | 58.57 |
 
-#### 2.6.2 Read Tokens: Mandatory vs Optional Data
+#### 2.7.2 Read Tokens: Mandatory vs Optional Data
 | Format | Read Tokens Man | Read Tokens Opt | Diff | Diff (%) | Useful Read Tokens Man | Useful Read Tokens Opt | Diff | Diff (%) | Wasted Read Tokens Man | Wasted Read Tokens Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) | Eff Score Read Man | Eff Score Read Opt | Diff | Diff (%) | Wtd Accuracy (%) Man | Wtd Accuracy (%) Opt | Diff (%) | Wtd Eff Score Read Man | Wtd Eff Score Read Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 10315 | 9788 | -527 | -5.11 | 7653 | 7499 | -154 | -2.01 | 2662 | 2289 | -373 | -14.01 | 74.19 | 76.61 | +2.42 | 81.06 | 84.37 | +3.31 | +4.09 | 72.28 | 75.55 | +3.27 | 79.79 | 83.67 | +3.88 | +4.86 |
@@ -308,7 +338,7 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | XML_PRETTY | 20114 | 19583 | -531 | -2.64 | 14490 | 14266 | -224 | -1.55 | 5624 | 5317 | -307 | -5.46 | 72.04 | 72.85 | +0.81 | 48.06 | 50.31 | +2.25 | +4.68 | 70.13 | 71.55 | +1.42 | 46.79 | 49.44 | +2.66 | +5.68 |
 | YAML | 14306 | 14053 | -253 | -1.77 | 11076 | 11106 | +30 | +0.27 | 3230 | 2947 | -283 | -8.77 | 77.42 | 79.03 | +1.61 | 70.36 | 72.25 | +1.89 | +2.68 | 75.06 | 77.25 | +2.19 | 68.78 | 71.06 | +2.27 | +3.31 |
 
-#### 2.6.3 Output Tokens: Mandatory vs Optional Data
+#### 2.7.3 Output Tokens: Mandatory vs Optional Data
 | Format | Output Tokens Man | Output Tokens Opt | Diff | Diff (%) | Useful Output Tokens Man | Useful Output Tokens Opt | Diff | Diff (%) | Wasted Output Tokens Man | Wasted Output Tokens Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) | Eff Score Output Man | Eff Score Output Opt | Diff | Diff (%) | Wtd Accuracy (%) Man | Wtd Accuracy (%) Opt | Diff (%) | Wtd Eff Score Output Man | Wtd Eff Score Output Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 8131 | 8462 | +331 | +4.07 | 6033 | 6483 | +450 | +7.46 | 2099 | 1980 | -119 | -5.69 | 74.19 | 76.61 | +2.42 | 79.40 | 79.59 | +0.19 | +0.23 | 72.28 | 75.55 | +3.27 | 78.13 | 78.88 | +0.75 | +0.96 |
@@ -318,7 +348,7 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | XML_PRETTY | 7518 | 9701 | +2183 | +29.03 | 5416 | 7067 | +1651 | +30.49 | 2102 | 2634 | +532 | +25.30 | 72.04 | 72.85 | +0.81 | 80.62 | 71.73 | -8.88 | -11.02 | 70.13 | 71.55 | +1.42 | 79.34 | 70.87 | -8.48 | -10.68 |
 | YAML | 11104 | 12896 | +1792 | +16.14 | 8597 | 10192 | +1595 | +18.55 | 2507 | 2704 | +197 | +7.86 | 77.42 | 79.03 | +1.61 | 68.72 | 62.06 | -6.66 | -9.70 | 75.06 | 77.25 | +2.19 | 67.15 | 60.87 | -6.28 | -9.35 |
 
-#### 2.6.4 Total Tokens: Mandatory vs Optional Data
+#### 2.7.4 Total Tokens: Mandatory vs Optional Data
 | Format | Total Tokens Man | Total Tokens Opt | Diff | Diff (%) | Useful Total Tokens Man | Useful Total Tokens Opt | Diff | Diff (%) | Wasted Total Tokens Man | Wasted Total Tokens Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) | Eff Score Total Man | Eff Score Total Opt | Diff | Diff (%) | Wtd Accuracy (%) Man | Wtd Accuracy (%) Opt | Diff (%) | Wtd Eff Score Total Man | Wtd Eff Score Total Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 18446 | 18250 | -196 | -1.06 | 13685 | 13981 | +296 | +2.16 | 4761 | 4269 | -492 | -10.34 | 74.19 | 76.61 | +2.42 | 82.17 | 84.38 | +2.21 | +2.68 | 72.28 | 75.55 | +3.27 | 80.90 | 83.67 | +2.77 | +3.43 |
@@ -328,8 +358,8 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | XML_PRETTY | 27632 | 29284 | +1652 | +5.98 | 19906 | 21333 | +1427 | +7.17 | 7726 | 7951 | +225 | +2.91 | 72.04 | 72.85 | +0.81 | 53.04 | 48.60 | -4.44 | -8.38 | 70.13 | 71.55 | +1.42 | 51.76 | 47.73 | -4.03 | -7.79 |
 | YAML | 25410 | 26949 | +1539 | +6.06 | 19673 | 21298 | +1625 | +8.26 | 5738 | 5652 | -86 | -1.51 | 77.42 | 79.03 | +1.61 | 63.32 | 59.76 | -3.57 | -5.63 | 75.06 | 77.25 | +2.19 | 61.75 | 58.57 | -3.18 | -5.15 |
 
-### 2.7 Token Utilization Efficiency (Accuracy by Character)
-#### 2.7.1 Metrics
+### 2.8 Token Utilization Efficiency (Accuracy by Character)
+#### 2.8.1 Metrics
 | Format | Variant | Read Tokens | Useful Read Tokens | Wasted Read Tokens | Output Tokens | Useful Output Tokens | Wasted Output Tokens | Total Tokens | Useful Total Tokens | Wasted Total Tokens | Accuracy by Character (%) | Eff Score Read | Eff Score Output | Eff Score Total | Wtd Accuracy by Character (%) | Wtd Eff Score Read | Wtd Eff Score Output | Wtd Eff Score Total |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | man | 10315 | 9347 | 968 | 8131 | 7369 | 763 | 18446 | 16716 | 1730 | 90.62 | 92.02 | 90.35 | 93.12 | 89.11 | 91.01 | 89.35 | 92.12 |
@@ -345,7 +375,7 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | YAML | man | 14306 | 13772 | 534 | 11104 | 10690 | 414 | 25410 | 24463 | 948 | 96.27 | 82.92 | 81.29 | 75.89 | 93.67 | 81.19 | 79.55 | 74.16 |
 | YAML | opt | 14053 | 13792 | 261 | 12896 | 12656 | 240 | 26949 | 26448 | 501 | 98.14 | 84.99 | 74.80 | 72.50 | 95.00 | 82.89 | 72.70 | 70.40 |
 
-#### 2.7.2 Read Tokens (Accuracy by Character): Mandatory vs Optional Data
+#### 2.8.2 Read Tokens (Accuracy by Character): Mandatory vs Optional Data
 | Format | Read Tokens Man | Read Tokens Opt | Diff | Diff (%) | Useful Read Tokens Man | Useful Read Tokens Opt | Diff | Diff (%) | Wasted Read Tokens Man | Wasted Read Tokens Opt | Diff | Diff (%) | Accuracy by Character (%) Man | Accuracy by Character (%) Opt | Diff (%) | Eff Score Read Man | Eff Score Read Opt | Diff | Diff (%) | Wtd Accuracy by Character (%) Man | Wtd Accuracy by Character (%) Opt | Diff (%) | Wtd Eff Score Read Man | Wtd Eff Score Read Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 10315 | 9788 | -527 | -5.11 | 9347 | 9319 | -28 | -0.30 | 968 | 469 | -499 | -51.52 | 90.62 | 95.21 | +4.59 | 92.02 | 96.77 | +4.76 | +5.17 | 89.11 | 92.81 | +3.70 | 91.01 | 95.17 | +4.16 | +4.58 |
@@ -355,7 +385,7 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | XML_PRETTY | 20114 | 19583 | -531 | -2.64 | 18959 | 18347 | -612 | -3.23 | 1155 | 1236 | +81 | +7.03 | 94.26 | 93.69 | -0.57 | 62.87 | 64.20 | +1.33 | +2.12 | 91.16 | 91.02 | -0.14 | 60.81 | 62.42 | +1.62 | +2.66 |
 | YAML | 14306 | 14053 | -253 | -1.77 | 13772 | 13791 | +19 | +0.14 | 534 | 262 | -272 | -50.98 | 96.27 | 98.14 | +1.87 | 82.92 | 84.99 | +2.06 | +2.49 | 93.67 | 95.00 | +1.33 | 81.19 | 82.89 | +1.70 | +2.10 |
 
-#### 2.7.3 Output Tokens (Accuracy by Character): Mandatory vs Optional Data
+#### 2.8.3 Output Tokens (Accuracy by Character): Mandatory vs Optional Data
 | Format | Output Tokens Man | Output Tokens Opt | Diff | Diff (%) | Useful Output Tokens Man | Useful Output Tokens Opt | Diff | Diff (%) | Wasted Output Tokens Man | Wasted Output Tokens Opt | Diff | Diff (%) | Accuracy by Character (%) Man | Accuracy by Character (%) Opt | Diff (%) | Eff Score Output Man | Eff Score Output Opt | Diff | Diff (%) | Wtd Accuracy by Character (%) Man | Wtd Accuracy by Character (%) Opt | Diff (%) | Wtd Eff Score Output Man | Wtd Eff Score Output Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 8131 | 8462 | +331 | +4.07 | 7369 | 8057 | +688 | +9.34 | 763 | 406 | -357 | -46.84 | 90.62 | 95.21 | +4.59 | 90.35 | 91.99 | +1.63 | +1.81 | 89.11 | 92.81 | +3.70 | 89.35 | 90.39 | +1.04 | +1.16 |
@@ -365,7 +395,7 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | XML_PRETTY | 7518 | 9701 | +2183 | +29.03 | 7086 | 9088 | +2002 | +28.26 | 432 | 613 | +181 | +41.80 | 94.26 | 93.69 | -0.57 | 95.43 | 85.63 | -9.80 | -10.27 | 91.16 | 91.02 | -0.14 | 93.36 | 83.85 | -9.52 | -10.19 |
 | YAML | 11104 | 12896 | +1792 | +16.14 | 10690 | 12656 | +1966 | +18.39 | 414 | 240 | -174 | -42.11 | 96.27 | 98.14 | +1.87 | 81.29 | 74.80 | -6.49 | -7.98 | 93.67 | 95.00 | +1.33 | 79.55 | 72.70 | -6.85 | -8.61 |
 
-#### 2.7.4 Total Tokens (Accuracy by Character): Mandatory vs Optional Data
+#### 2.8.4 Total Tokens (Accuracy by Character): Mandatory vs Optional Data
 | Format | Total Tokens Man | Total Tokens Opt | Diff | Diff (%) | Useful Total Tokens Man | Useful Total Tokens Opt | Diff | Diff (%) | Wasted Total Tokens Man | Wasted Total Tokens Opt | Diff | Diff (%) | Accuracy by Character (%) Man | Accuracy by Character (%) Opt | Diff (%) | Eff Score Total Man | Eff Score Total Opt | Diff | Diff (%) | Wtd Accuracy by Character (%) Man | Wtd Accuracy by Character (%) Opt | Diff (%) | Wtd Eff Score Total Man | Wtd Eff Score Total Opt | Diff | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 18446 | 18250 | -196 | -1.06 | 16716 | 17376 | +660 | +3.95 | 1730 | 874 | -856 | -49.49 | 90.62 | 95.21 | +4.59 | 93.12 | 96.78 | +3.65 | +3.92 | 89.11 | 92.81 | +3.70 | 92.12 | 95.18 | +3.06 | +3.32 |
@@ -375,8 +405,8 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | XML_PRETTY | 27632 | 29284 | +1652 | +5.98 | 26046 | 27436 | +1390 | +5.34 | 1586 | 1848 | +262 | +16.50 | 94.26 | 93.69 | -0.57 | 67.85 | 62.49 | -5.36 | -7.90 | 91.16 | 91.02 | -0.14 | 65.78 | 60.71 | -5.07 | -7.71 |
 | YAML | 25410 | 26949 | +1539 | +6.06 | 24463 | 26449 | +1986 | +8.12 | 948 | 501 | -447 | -47.10 | 96.27 | 98.14 | +1.87 | 75.89 | 72.50 | -3.39 | -4.47 | 93.67 | 95.00 | +1.33 | 74.16 | 70.40 | -3.75 | -5.06 |
 
-### 2.8 Answer Per Format Breakdown
-#### 2.8.1 Metrics
+### 2.9 Answer Per Format Breakdown
+#### 2.9.1 Metrics
 | Format | Variant | Correct Answers | Incorrect Answers | No Answers | Accuracy (%) | Expected Characters | Output Characters | Correct Characters | Incorrect Characters | Accuracy by Character (%) |
 |---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | man | 92 | 32 | 0 | 74.19 | 7782 | 8113 | 7349 | 764 | 90.62 |
@@ -392,7 +422,7 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | YAML | man | 96 | 28 | 0 | 77.42 | 7782 | 7896 | 7598 | 298 | 96.27 |
 | YAML | opt | 98 | 26 | 0 | 79.03 | 8451 | 8510 | 8352 | 158 | 98.14 |
 
-#### 2.8.2 Answers: Mandatory vs Optional Data
+#### 2.9.2 Answers: Mandatory vs Optional Data
 | Format | Correct Man | Correct Opt | Diff | Diff (%) | Incorrect Man | Incorrect Opt | Diff | Diff (%) | No Answers Man | No Answers Opt | Diff | Diff (%) | Accuracy (%) Man | Accuracy (%) Opt | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 92 | 95 | +3 | +3.26 | 32 | 29 | -3 | -9.37 | 0 | 0 | 0 | 0.00 | 74.19 | 76.61 | +2.42 |
@@ -402,7 +432,7 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | XML_PRETTY | 89 | 90 | +1 | +1.12 | 35 | 34 | -1 | -2.86 | 0 | 0 | 0 | 0.00 | 72.04 | 72.85 | +0.81 |
 | YAML | 96 | 98 | +2 | +2.08 | 28 | 26 | -2 | -7.14 | 0 | 0 | 0 | 0.00 | 77.42 | 79.03 | +1.61 |
 
-#### 2.8.3 Characters: Mandatory vs Optional Data
+#### 2.9.3 Characters: Mandatory vs Optional Data
 | Format | Output Characters Man | Output Characters Opt | Diff | Diff (%) | Correct Characters Man | Correct Characters Opt | Diff | Diff (%) | Incorrect Characters Man | Incorrect Characters Opt | Diff | Diff (%) | Accuracy by Character (%) Man | Accuracy by Character (%) Opt | Diff (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | 8113 | 8718 | +605 | +7.46 | 7349 | 8295 | +946 | +12.88 | 764 | 423 | -341 | -44.68 | 90.62 | 95.21 | 4.59 |
@@ -412,8 +442,8 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | XML_PRETTY | 7992 | 8721 | +729 | +9.13 | 7530 | 8169 | +639 | +8.48 | 462 | 553 | +91 | +19.62 | 94.26 | 93.69 | -0.57 |
 | YAML | 7896 | 8511 | +615 | +7.78 | 7598 | 8352 | +754 | +9.92 | 298 | 159 | -139 | -46.76 | 96.27 | 98.14 | 1.87 |
 
-### 2.9 Accuracy Per Question Category Analysis
-#### 2.9.1 Metrics
+### 2.10 Accuracy Per Question Category Analysis
+#### 2.10.1 Metrics
 | Format | Variant | Accuracy (%) | Field Retrieval (%) | Structure Awareness (%) | Filtering (%) | Aggregation (%) | Wtd Acc (%) | Wtd Field Retrieval (%) | Wtd Structure Awareness (%) | Wtd Filtering (%) | Wtd Aggregation (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | man | 74.19 | 84.85 | 60.50 | 66.67 | 71.43 | 89.11 | 31.82 | 17.64 | 13.89 | 8.93 |
@@ -429,7 +459,7 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | YAML | man | 77.42 | 97.58 | 62.96 | 60.31 | 60.32 | 93.67 | 36.59 | 18.36 | 12.57 | 7.54 |
 | YAML | opt | 79.03 | 99.39 | 67.90 | 63.49 | 55.56 | 95.00 | 37.27 | 19.81 | 13.23 | 6.94 |
 
-#### 2.9.2 Field Retrieval: Mandatory vs Optional
+#### 2.10.2 Field Retrieval: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -440,7 +470,7 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | XML_PRETTY | 88.48 | 89.09 | +0.61 | 33.18 | 33.41 | +0.23 |
 | YAML | 97.58 | 99.39 | +1.82 | 36.59 | 37.27 | +0.68 |
 
-#### 2.9.3 Structure Awareness: Mandatory vs Optional
+#### 2.10.3 Structure Awareness: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -451,7 +481,7 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | XML_PRETTY | 62.96 | 62.97 | 0.00 | 18.36 | 18.36 | 0.00 |
 | YAML | 62.96 | 67.90 | +4.94 | 18.36 | 19.81 | +1.44 |
 
-#### 2.9.4 Filtering: Mandatory vs Optional
+#### 2.10.4 Filtering: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -462,7 +492,7 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | XML_PRETTY | 53.97 | 63.49 | +9.52 | 11.24 | 13.23 | +1.98 |
 | YAML | 60.31 | 63.49 | +3.18 | 12.57 | 13.23 | +0.66 |
 
-#### 2.9.5 Aggregation: Mandatory vs Optional
+#### 2.10.5 Aggregation: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -473,8 +503,8 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | XML_PRETTY | 58.73 | 52.38 | -6.35 | 7.34 | 6.55 | -0.79 |
 | YAML | 60.32 | 55.56 | -4.76 | 7.54 | 6.94 | -0.60 |
 
-### 2.10 Accuracy By Character Per Question Category Analysis
-#### 2.10.1 Metrics
+### 2.11 Accuracy By Character Per Question Category Analysis
+#### 2.11.1 Metrics
 | Format | Variant | Accuracy By Character (%) | Field Retrieval (%) | Structure Awareness (%) | Filtering (%) | Aggregation (%) | Wtd Acc By Char (%) | Wtd Field Retrieval (%) | Wtd Structure Awareness (%) | Wtd Filtering (%) | Wtd Aggregation (%) |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | JSON_COMPACT | man | 90.62 | 82.39 | 97.00 | 93.75 | 83.13 | 89.11 | 30.89 | 28.29 | 19.53 | 10.39 |
@@ -490,7 +520,7 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | YAML | man | 96.27 | 97.24 | 96.27 | 90.77 | 81.69 | 93.67 | 36.47 | 28.08 | 18.91 | 10.21 |
 | YAML | opt | 98.14 | 99.82 | 97.60 | 92.33 | 78.93 | 95.00 | 37.43 | 28.47 | 19.24 | 9.87 |
 
-#### 2.10.2 Field Retrieval: Mandatory vs Optional
+#### 2.11.2 Field Retrieval: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -501,7 +531,7 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | XML_PRETTY | 92.73 | 91.61 | -1.12 | 34.77 | 34.35 | -0.42 |
 | YAML | 97.24 | 99.82 | +2.58 | 36.47 | 37.43 | +0.97 |
 
-#### 2.10.3 Structure Awareness: Mandatory vs Optional
+#### 2.11.3 Structure Awareness: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -512,7 +542,7 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | XML_PRETTY | 95.99 | 96.29 | +0.29 | 28.00 | 28.08 | +0.08 |
 | YAML | 96.27 | 97.60 | +1.33 | 28.08 | 28.47 | +0.39 |
 
-#### 2.10.4 Filtering: Mandatory vs Optional
+#### 2.11.4 Filtering: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -523,7 +553,7 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 | XML_PRETTY | 87.80 | 90.56 | +2.76 | 18.29 | 18.87 | +0.58 |
 | YAML | 90.77 | 92.33 | +1.56 | 18.91 | 19.24 | +0.33 |
 
-#### 2.10.5 Aggregation: Mandatory vs Optional
+#### 2.11.5 Aggregation: Mandatory vs Optional
 
 | Format | Man (%) | Opt (%) | Diff (%) | Wdt Man (%) | Wdt Opt (%) | Diff (%) |
 |---|---|---|---|---|---|---|
@@ -553,7 +583,7 @@ The rankings reveal a consistent tradeoff between accuracy and token cost that n
 
 ---
 
-- **Report Generated**: 2026-04-14
+- **Report Generated**: 2026-06-21
 - **Written by**: [Thore Höltig](https://github.com/thoeltig)
 - **Test run in**: Claude Code 2.1.73
 - **Data Source**: `analytics_results.json`
